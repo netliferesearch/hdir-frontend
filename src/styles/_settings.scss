@@ -1,0 +1,16 @@
+// Breakpoints
+$mobile: 320px;
+$tablet: 740px;
+$desktop: 980px;
+$wide: 1300px;
+
+// The breakpoints for our media query helper
+$mq-breakpoints: (
+  mobile: $mobile,
+  tablet: $tablet,
+  desktop: $desktop,
+  wide: $wide
+);
+
+// The breakpoints for our grid
+$flexboxgrid-breakpoints: sm $mobile, md $tablet, lg $desktop, xlg $wide;
