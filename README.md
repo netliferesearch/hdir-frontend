@@ -1,3 +1,7 @@
+# Helsedirektoratet frontend
+
+This repository contains the main style and components for the new HDIR content platform
+
 ## :clipboard: Rules
 
 - All styles are written with SCSS (SASS)
