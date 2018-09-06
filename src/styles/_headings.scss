@@ -1,0 +1,27 @@
+$h1: 2rem;
+$h2: 1.5rem;
+$h3: 1.2rem;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.h1 {
+  font-size: $h1;
+  margin-bottom: $h1 / 2;
+  &--thin {
+    font-weight: lighter;
+  }
+}
