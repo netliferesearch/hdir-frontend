@@ -1,7 +1,9 @@
 @import 'normalize-scss/sass/normalize';
 @import 'sass-mq/mq';
 @import 'flexboxgrid-sass/flexboxgrid';
+
 @import './styles/settings';
+@import './styles/variables';
 @import './styles/typography';
 @import './styles/headings';
 
