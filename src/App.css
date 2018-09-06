@@ -1963,6 +1963,36 @@
   .last-lg {
     order: 1; } }
 
-@media (min-width: 20em) and (max-width: 46.24em) {
-  body {
-    background: red; } }
+body {
+  color: black;
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.6; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  padding: 0; }
+
+.h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem; }
+  .h1--thin {
+    font-weight: lighter; }
+
+.box {
+  background: red; }
+
+.box2 {
+  background: blue; }

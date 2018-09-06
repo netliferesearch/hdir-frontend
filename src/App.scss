@@ -1,16 +1,14 @@
 @import 'normalize-scss/sass/normalize';
 @import 'sass-mq/mq';
 @import 'flexboxgrid-sass/flexboxgrid';
+@import './styles/settings';
+@import './styles/typography';
+@import './styles/headings';
 
-$mq-breakpoints: (
-  mobile: 320px,
-  tablet: 740px,
-  desktop: 980px,
-  wide: 1300px
-);
+.box {
+  background: red;
+}
 
-body {
-  @include mq($from: mobile, $until: tablet) {
-    background: red;
-  }
+.box2 {
+  background: blue;
 }
