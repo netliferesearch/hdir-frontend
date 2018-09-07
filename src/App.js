@@ -40,6 +40,12 @@ class App extends Component {
                 list={featureListData}
                 icon="x"
               />
+              <br />
+              <FeatureList
+                heading={featureListHeading}
+                list={featureListData}
+                secondary
+              />
             </div>
           </div>
         </div>
