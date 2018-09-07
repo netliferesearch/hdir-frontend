@@ -1,0 +1,12 @@
+.b-content-label {
+  display: inline-block;
+  color: $brand-color;
+  font-size: $meta-text;
+  font-weight: normal;
+  // border: 1px solid $brand-color;
+  // Makes the line smoother
+  box-shadow: 0 0 0 1px $brand-color;
+  border-radius: 1em;
+  padding: 0.2em 1em;
+  white-space: nowrap;
+}

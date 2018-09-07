@@ -1,0 +1,51 @@
+.b-feature-list {
+  text-align: left;
+  font-size: $big-text;
+  background-color: $light-gray;
+  padding: 1.5em 4em 2em 4em;
+
+  &__items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+
+  &__item {
+    margin: 1em 0;
+  }
+
+  &__item-link {
+    &::after {
+      display: inline-block;
+      content: ' ';
+      height: 1em;
+      width: 1em;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    margin-bottom: 1.5em; // TODO: Bruk en generell spacing klasse for dette?
+    span {
+      align-self: center;
+    }
+  }
+
+  &__icon {
+    content: ' '; // TODO: it should always contain an svg, so remove this when we get the icons
+    display: inline-block;
+    align-self: center;
+    min-width: 3em;
+    min-height: 3em;
+    background-color: $brand-color;
+    border-radius: 100%;
+    margin-left: -0.5em;
+    margin-right: 1.5em;
+  }
+
+  // TODO: This is only experimental
+  &--secondary-state {
+    background-color: #c7c0da;
+  }
+}

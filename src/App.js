@@ -1,28 +1,45 @@
 import React, { Component } from 'react';
 import './App.css';
+import FeatureList from './components/FeatureList';
+
+const featureListHeading = 'Nasjonale faglige rettningslinjer og veiledere';
+const featureListData = [
+  {
+    linkText: 'Bipolare lidingar',
+    url: '#a',
+    contentLabel: 'nasjonal faglig retningslinje'
+  },
+  {
+    linkText: 'Forebygging av selvmord i psykisk helsevern',
+    url: '#b',
+    contentLabel: ''
+  },
+  {
+    linkText: 'Hjemsendelse av alvorlig psykisk syke',
+    url: '#c',
+    contentLabel: ''
+  }
+];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="h1">Rundskriv og veiledere til lov og forskrift</h1>
-        <p>Dette er noe tekst som er under.</p>
+        <br />
+        <br />
+        <br />
         <div className="col-xs">
           <div className="row center-xs">
             <div
               className="col-xs-12
               col-sm-8
-              col-md-6
-              col-lg-4"
+              col-md-6"
             >
-              <div className="box">Responsive</div>
-            </div>
-          </div>
-        </div>
-        <div className="col-xs">
-          <div className="row">
-            <div className="col-xs-12">
-              <div className="box2">Wide</div>
+              <FeatureList
+                heading={featureListHeading}
+                list={featureListData}
+                icon="x"
+              />
             </div>
           </div>
         </div>

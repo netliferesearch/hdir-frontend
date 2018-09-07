@@ -7,10 +7,5 @@
 @import './styles/typography';
 @import './styles/headings';
 
-.box {
-  background: red;
-}
-
-.box2 {
-  background: blue;
-}
+@import './styles/b-content-label';
+@import './styles/b-feature-list';
