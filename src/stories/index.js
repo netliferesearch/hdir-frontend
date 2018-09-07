@@ -6,6 +6,9 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import ContentLabel from '../components/ContentLabel';
+import FeatureList from '../components/FeatureList';
+
+import { featureListHeading, featureListData } from '../testData.js';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />
@@ -18,6 +21,10 @@ storiesOf('ContentLabel', module)
   .addWithStaticMarkup('see markup', () => (
     <ContentLabel>Check out the markup!</ContentLabel>
   ));
+
+storiesOf('FeatureList', module).add('basic', () => (
+  <FeatureList heading={featureListHeading} list={featureListData} icon="x" />
+));
 
 storiesOf('Button', module)
   .add('with text', () => (
