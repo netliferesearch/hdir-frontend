@@ -9,6 +9,7 @@ It should support IE10+ and two versions old or newer for the modern browsers.
 - All styles are written with SCSS (SASS)
 - Follow the airbnb-sass-styleguide: https://github.com/airbnb/css
 - Use the BEM methology: http://getbem.com/
+- All of the React-components has to be functional components (no state), because we will only be using the rendered markup.
 - Follow the WCAG 2.0 guidelines, with DIFI's modifications: https://uu.difi.no/krav-og-regelverk/wcag-20-standarden
 
 ### :package: Our SASS dependencies
