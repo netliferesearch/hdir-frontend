@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
+import { checkA11y } from '@storybook/addon-a11y';
 
 import { Welcome } from '@storybook/react/demo';
 import ContentLabel from '../components/ContentLabel';
@@ -15,6 +16,7 @@ storiesOf('Welcome', module).add('to Storybook', () => (
 
 storiesOf('FeatureList', module)
   .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <FeatureList
       heading={text('Heading', featureListHeading)}
@@ -25,6 +27,7 @@ storiesOf('FeatureList', module)
 
 storiesOf('ContentLabel', module)
   .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <ContentLabel>{text('Text', 'nasjonal faglig retningslinje')}</ContentLabel>
   ));
