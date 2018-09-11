@@ -1,0 +1,14 @@
+// Unfortunally Flexboxgrid adds text-align rules. This snippet makes it left align again.
+@each $breakpoint in $flexboxgrid-breakpoints {
+  $name: nth($breakpoint, 1);
+  .center-#{$name} {
+    text-align: left;
+  }
+  .end-#{$name} {
+    text-align: left;
+  }
+}
+.center-xs,
+.end-xs {
+  text-align: left;
+}
