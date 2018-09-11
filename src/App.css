@@ -1964,7 +1964,7 @@
     order: 1; } }
 
 body {
-  color: black;
+  color: #212121;
   font-size: 20px;
   font-family: "Work Sans", sans-serif;
   font-weight: normal;
@@ -2049,8 +2049,8 @@ h3,
   .b-feature-list__heading {
     display: flex;
     margin-bottom: 1.5em; }
-    .b-feature-list__heading span {
-      align-self: center; }
+  .b-feature-list__heading-text {
+    align-self: center; }
   .b-feature-list__icon {
     content: ' ';
     display: inline-block;
