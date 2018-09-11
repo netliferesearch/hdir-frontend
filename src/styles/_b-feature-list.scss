@@ -28,9 +28,10 @@
   &__heading {
     display: flex;
     margin-bottom: 1.5em; // TODO: Bruk en generell spacing klasse for dette?
-    span {
-      align-self: center;
-    }
+  }
+
+  &__heading-text {
+    align-self: center;
   }
 
   &__icon {

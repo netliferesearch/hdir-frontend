@@ -14,7 +14,7 @@ const FeatureList = props => {
     <section className={parentClasses}>
       <h2 className="h2 h2--thin b-feature-list__heading">
         {props.icon && <div className="b-feature-list__icon" />}
-        <span>{props.heading}</span>
+        <span class="b-feature-list__heading-text">{props.heading}</span>
       </h2>
       <ul className="b-feature-list__items">
         {props.list.map(item => (
