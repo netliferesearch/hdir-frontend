@@ -1,0 +1,46 @@
+.b-input-search {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $brand-color;
+  padding: 2em;
+
+  &__field {
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid $brand-color;
+    padding: 0.8em 0.8em 0.8em 1.2em;
+    border-radius: 4px;
+
+    &--inverted {
+      border-color: white;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    margin-bottom: 1.5em;
+    font-size: 0.9rem;
+    font-weight: lighter;
+
+    &--inverted {
+      color: white;
+    }
+  }
+
+  &__button {
+    padding: 1.5em;
+    margin-left: 1em;
+    color: white;
+    background-color: $brand-color;
+    border: 0;
+    font-size: 1rem;
+    border-radius: 4px;
+
+    &--inverted {
+      color: $brand-color;
+      background-color: white;
+    }
+  }
+}

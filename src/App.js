@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import InputText from './components/InputText';
+import InputSearch from './components/InputSearch';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
@@ -12,10 +12,13 @@ class App extends Component {
           <div className="row center-xs">
             <div
               className="col-xs-12
-              col-sm-8
-              col-md-6"
+              col-sm-10
+              col-md-8"
             >
-              <InputText id="x" label="This is a label" search />
+              <InputSearch
+                id="x"
+                label="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
+              />
             </div>
           </div>
         </div>
