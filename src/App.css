@@ -1963,9 +1963,11 @@
   .last-lg {
     order: 1; } }
 
+html {
+  font-size: 20px; }
+
 body {
   color: #212121;
-  font-size: 20px;
   font-family: "Work Sans", sans-serif;
   font-weight: normal;
   line-height: 1.6; }
@@ -2092,24 +2094,36 @@ h3,
   .b-feature-list--secondary-state {
     background-color: #e9f0ee; }
 
-.b-input-text {
+.b-input-search {
   display: flex;
-  flex-wrap: wrap; }
-  .b-input-text__field {
+  flex-wrap: wrap;
+  background-color: #025169;
+  padding: 2em; }
+  .b-input-search__field {
     flex-grow: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: white;
     border: 2px solid #025169;
-    padding: 0.8em; }
-    .b-input-text__field--big {
-      font-size: 1.2rem; }
-  .b-input-text__label {
-    width: 100%; }
-    .b-input-text__label--big {
-      font-size: 1.2rem; }
-  .b-input-text__button {
-    padding: 0 2em;
+    padding: 0.8em 0.8em 0.8em 1.2em;
+    border-radius: 4px; }
+    .b-input-search__field--inverted {
+      border-color: white; }
+  .b-input-search__label {
+    width: 100%;
+    margin-bottom: 1.5em;
+    font-size: 0.9rem;
+    font-weight: lighter; }
+    .b-input-search__label--inverted {
+      color: white; }
+  .b-input-search__button {
+    padding: 1.5em;
+    margin-left: 1em;
     color: white;
     background-color: #025169;
-    border: 0; }
-    .b-input-text__button--big {
-      font-size: 1.2rem;
-      font-weight: bold; }
+    border: 0;
+    font-size: 1rem;
+    border-radius: 4px; }
+    .b-input-search__button--inverted {
+      color: #025169;
+      background-color: white; }
