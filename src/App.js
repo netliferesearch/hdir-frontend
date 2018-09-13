@@ -15,10 +15,12 @@ class App extends Component {
               col-sm-10
               col-md-8"
             >
-              <InputSearch
-                id="x"
-                label="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
-              />
+              <div className="is-wrapper">
+                <InputSearch
+                  id="x"
+                  label="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
+                />
+              </div>
             </div>
           </div>
         </div>

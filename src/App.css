@@ -2094,36 +2094,61 @@ h3,
   .b-feature-list--secondary-state {
     background-color: #e9f0ee; }
 
+.is-wrapper {
+  padding: 2rem;
+  height: 800px;
+  background-color: #025169; }
+
+.test-icon {
+  content: ' ';
+  background-color: #025169;
+  height: 2em;
+  width: 2em;
+  border-radius: 100%;
+  float: right; }
+
 .b-input-search {
   display: flex;
-  flex-wrap: wrap;
-  background-color: #025169;
-  padding: 2em; }
+  flex-wrap: wrap; }
   .b-input-search__field {
     flex-grow: 1;
     font-size: 1rem;
-    font-weight: bold;
+    color: #025169;
     background-color: white;
-    border: 2px solid #025169;
-    padding: 0.8em 0.8em 0.8em 1.2em;
-    border-radius: 4px; }
-    .b-input-search__field--inverted {
-      border-color: white; }
-  .b-input-search__label {
-    width: 100%;
-    margin-bottom: 1.5em;
-    font-size: 0.9rem;
-    font-weight: lighter; }
-    .b-input-search__label--inverted {
-      color: white; }
-  .b-input-search__button {
-    padding: 1.5em;
-    margin-left: 1em;
-    color: white;
-    background-color: #025169;
     border: 0;
+    padding: 1em 1em 1em 2em;
+    border-radius: 2em; }
+    .b-input-search__field:focus {
+      box-shadow: 0 0 0 4px #ffc900; }
+  .b-input-search__button {
     font-size: 1rem;
-    border-radius: 4px; }
-    .b-input-search__button--inverted {
-      color: #025169;
-      background-color: white; }
+    padding: 1em 1.66em;
+    margin-left: 1rem;
+    color: #025169;
+    background-color: #ffc900;
+    border: 0;
+    border-radius: 100%;
+    background-image: url("./icons/search.svg");
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    background-position: center; }
+
+.react-autosuggest__suggestions-container {
+  background-color: white;
+  border-radius: 4px; }
+
+.react-autosuggest__suggestions-list {
+  overflow: auto;
+  padding: 0;
+  list-style-type: none; }
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #025169;
+  border-radius: 4px; }
+  .react-autosuggest__suggestion--highlighted {
+    border: 1px solid #ffc900;
+    text-decoration: underline;
+    background-color: #fef4ce; }
