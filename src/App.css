@@ -2094,19 +2094,6 @@ h3,
   .b-feature-list--secondary-state {
     background-color: #e9f0ee; }
 
-.is-wrapper {
-  padding: 2rem;
-  height: 800px;
-  background-color: #025169; }
-
-.test-icon {
-  content: ' ';
-  background-color: #025169;
-  height: 2em;
-  width: 2em;
-  border-radius: 100%;
-  float: right; }
-
 .b-input-search {
   display: flex;
   flex-wrap: wrap; }
@@ -2152,3 +2139,16 @@ h3,
     border: 1px solid #ffc900;
     text-decoration: underline;
     background-color: #fef4ce; }
+
+.is-wrapper {
+  padding: 2rem;
+  height: 800px;
+  background-color: #025169; }
+
+.test-icon {
+  content: ' ';
+  background-color: #025169;
+  height: 2em;
+  width: 2em;
+  border-radius: 100%;
+  float: right; }

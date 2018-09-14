@@ -1,0 +1,14 @@
+.is-wrapper {
+  padding: 2rem;
+  height: 800px;
+  background-color: $brand-color;
+}
+
+.test-icon {
+  content: ' ';
+  background-color: $brand-color;
+  height: 2em;
+  width: 2em;
+  border-radius: 100%;
+  float: right;
+}
