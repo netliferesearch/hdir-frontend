@@ -48,9 +48,14 @@ const renderSuggestion = suggestion => (
 const renderInputComponent = inputProps => (
   <div className="b-input-search">
     <input {...inputProps} className="b-input-search__field" />
-    <button className="b-input-search__button" />
+    <button className="b-input-search__button" onClick={triggerSearch} />
   </div>
 );
+
+const triggerSearch = () => {
+  // eslint-disable-next-line
+  location.reload();
+};
 
 class InputSearch extends React.Component {
   constructor(props) {
@@ -106,39 +111,13 @@ class InputSearch extends React.Component {
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        onSuggestionSelected={() => {
-          // eslint-disable-next-line
-          location.reload();
-        }}
+        onSuggestionSelected={triggerSearch}
         renderInputComponent={renderInputComponent}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
         inputProps={inputProps}
       />
     );
-
-    /*
-    return (
-      <div className="b-input-search">
-        {props.label && (
-          <label
-            htmlFor={props.id}
-            className="b-input-search__label b-input-search__label--inverted"
-          >
-            {props.label}
-          </label>
-        )}
-        <input
-          id={props.id}
-          type={props.type}
-          className="b-input-search__field b-input-search__field--inverted"
-        />
-        <button className="b-input-search__button b-input-search__button--inverted">
-          SØK
-        </button>
-      </div>
-    );
-    */
   }
 }
 
