@@ -2054,10 +2054,14 @@ h3,
   color: #025169;
   font-size: 0.7rem;
   font-weight: normal;
-  box-shadow: 0 0 0 1px #025169;
+  border: 1px solid #025169;
   border-radius: 1em;
   padding: 0.2em 1em;
   white-space: nowrap; }
+  .b-content-label--highlighted {
+    background-color: #fef4ce;
+    border: 1px solid #ffc900;
+    border-radius: 2px; }
 
 .b-feature-list {
   text-align: left;
@@ -2136,7 +2140,7 @@ h3,
   border: 1px solid #025169;
   border-radius: 4px; }
   .react-autosuggest__suggestion--highlighted {
-    border: 1px solid #ffc900;
+    border-color: #ffc900;
     text-decoration: underline;
     background-color: #fef4ce; }
 
@@ -2152,3 +2156,7 @@ h3,
   width: 2em;
   border-radius: 100%;
   float: right; }
+
+.suggestion-text {
+  display: inline-block;
+  margin-right: 1rem; }

@@ -69,7 +69,7 @@
       // No style
     }
     &--highlighted {
-      border: 1px solid $yellow;
+      border-color: $yellow;
       text-decoration: underline;
       background-color: $yellow-light;
     }

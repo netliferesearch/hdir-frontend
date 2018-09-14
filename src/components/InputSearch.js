@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 
+import ContentLabel from './ContentLabel';
+
 const languages = [
   {
     name: 'C',
@@ -40,8 +42,11 @@ const getSuggestionValue = suggestion => suggestion.name;
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
   <div>
-    {suggestion.name}
-    <div className="test-icon" />
+    <div>
+      <span className="suggestion-text">{suggestion.name}</span>
+      <div className="test-icon" />
+      <ContentLabel highlight>Tilskudd</ContentLabel>
+    </div>
   </div>
 );
 
