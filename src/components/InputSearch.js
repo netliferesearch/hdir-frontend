@@ -106,6 +106,10 @@ class InputSearch extends React.Component {
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        onSuggestionSelected={() => {
+          // eslint-disable-next-line
+          location.reload();
+        }}
         renderInputComponent={renderInputComponent}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
