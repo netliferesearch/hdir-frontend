@@ -7,13 +7,23 @@
 .test-icon {
   content: ' ';
   background-color: $brand-color;
-  height: 2em;
-  width: 2em;
+  padding-bottom: 1.6em;
+  width: 1.6em;
+  content: ' ';
   border-radius: 100%;
-  float: right;
+  float: left;
+  margin-right: 0.5em;
 }
 
-.suggestion-text {
+.suggestion-title {
   display: inline-block;
-  margin-right: 1rem;
+  margin-top: 0.25rem;
+  font-size: $big-text;
+}
+.suggestion-intro {
+  font-size: $meta-text;
+  margin: 0.5rem 0;
+}
+.suggestion__meta {
+  font-size: $meta-text;
 }

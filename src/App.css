@@ -2062,6 +2062,14 @@ h3,
     background-color: #fef4ce;
     border: 1px solid #ffc900;
     border-radius: 2px; }
+  .b-content-label--gray {
+    display: inline-block;
+    font-size: 0.7rem;
+    margin-right: 1em;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    background-color: #ddd;
+    text-decoration: none; }
 
 .b-feature-list {
   text-align: left;
@@ -2110,6 +2118,7 @@ h3,
     padding: 1em 1em 1em 2em;
     border-radius: 2em; }
     .b-input-search__field:focus {
+      outline: 0;
       box-shadow: 0 0 0 4px #ffc900; }
   .b-input-search__button {
     font-size: 1rem;
@@ -2152,11 +2161,21 @@ h3,
 .test-icon {
   content: ' ';
   background-color: #025169;
-  height: 2em;
-  width: 2em;
+  padding-bottom: 1.6em;
+  width: 1.6em;
+  content: ' ';
   border-radius: 100%;
-  float: right; }
+  float: left;
+  margin-right: 0.5em; }
 
-.suggestion-text {
+.suggestion-title {
   display: inline-block;
-  margin-right: 1rem; }
+  margin-top: 0.25rem;
+  font-size: 1.2rem; }
+
+.suggestion-intro {
+  font-size: 0.7rem;
+  margin: 0.5rem 0; }
+
+.suggestion__meta {
+  font-size: 0.7rem; }

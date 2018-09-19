@@ -2,50 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 
-import ContentLabel from './ContentLabel';
-
-const languages = [
-  {
-    name: 'C',
-    year: 1972
-  },
-  {
-    name: 'C#',
-    year: 2000
-  },
-  {
-    name: 'C#2',
-    year: 2100
-  },
-  {
-    name: 'Elm',
-    year: 2012
-  }
-];
+import searchSuggestions from '../data/searchSuggestions';
 
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
-  const inputLength = inputValue.length;
 
-  return inputLength === 0
+  return inputValue.length < 3
     ? []
-    : languages.filter(
-        lang => lang.name.toLowerCase().slice(0, inputLength) === inputValue
+    : searchSuggestions.filter(lang =>
+        lang.title.toLowerCase().includes(inputValue)
       );
 };
 
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
-const getSuggestionValue = suggestion => suggestion.name;
+const getSuggestionValue = suggestion => suggestion.title;
 
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
   <div>
     <div>
-      <span className="suggestion-text">{suggestion.name}</span>
-      <div className="test-icon" />
-      <ContentLabel highlight>Tilskudd</ContentLabel>
+      <div>
+        <span className="suggestion__meta">{suggestion.type}</span>
+        <div className="test-icon" />
+      </div>
+      <div className="suggestion-title">{suggestion.title}</div>
+      <div className="suggestion-intro">{suggestion.intro}</div>
+      <div>
+        {suggestion.codes.map(code => (
+          <span className="b-content-label--gray">{code}</span>
+        ))}
+      </div>
     </div>
   </div>
 );
@@ -99,7 +87,7 @@ class InputSearch extends React.Component {
   };
 
   render() {
-    const { props } = this;
+    // const { props } = this;
 
     const { value, suggestions } = this.state;
 

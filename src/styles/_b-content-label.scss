@@ -15,4 +15,14 @@
     border: 1px solid $yellow;
     border-radius: 2px;
   }
+
+  &--gray {
+    display: inline-block;
+    font-size: $meta-text;
+    margin-right: 1em;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    background-color: #ddd;
+    text-decoration: none;
+  }
 }
