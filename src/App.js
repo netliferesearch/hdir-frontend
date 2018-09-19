@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
-import { BrowserRouter as HashRouter, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as HashRouter,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom';
 import './App.css';
+
 import FrontPage from './pages/FrontPage';
 import SearchResultPage from './pages/SearchResultPage';
 import ArticlePage from './pages/ArticlePage';
+import NotFound from './pages/NotFound';
+
 import InputSearch from './components/InputSearch';
 
 // import { featureListHeading, featureListData } from './testData.js';
@@ -25,9 +33,12 @@ class App extends Component {
                 <Link to="/artikkel">Artikkel</Link>
               </li>
             </ul>
-            <Route exact path="/" component={FrontPage} />
-            <Route path="/søkeresultat" component={SearchResultPage} />
-            <Route path="/artikkel" component={ArticlePage} />
+            <Switch>
+              <Route exact path="/" component={FrontPage} />
+              <Route path="/søkeresultat" component={SearchResultPage} />
+              <Route path="/artikkel" component={ArticlePage} />
+              <Route component={NotFound} />
+            </Switch>
           </div>
         </HashRouter>
         <div className="col-xs">
