@@ -2179,3 +2179,8 @@ h3,
 
 .suggestion__meta {
   font-size: 0.7rem; }
+
+.some-label {
+  display: inline-block;
+  color: white;
+  padding-left: 1rem; }

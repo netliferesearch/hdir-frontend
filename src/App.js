@@ -16,10 +16,11 @@ class App extends Component {
               col-md-8"
             >
               <div className="is-wrapper">
-                <InputSearch
-                  id="x"
-                  label="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
-                />
+                <p className="some-label">
+                  Søk etter reningslinjer, anbefalinger, lover, statistikk,
+                  tilskudd... (Prøv å skrive "diabetes")
+                </p>
+                <InputSearch id="x" />
               </div>
             </div>
           </div>
