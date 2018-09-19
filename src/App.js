@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as HashRouter,
-  Route,
-  Link,
-  Switch
-} from 'react-router-dom';
+import { HashRouter, Route, Link, Switch } from 'react-router-dom';
 import './App.css';
 
 import FrontPage from './pages/FrontPage';
@@ -20,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <HashRouter hashType="noslash">
+        <HashRouter>
           <div>
             <ul>
               <li>
