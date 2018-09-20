@@ -6,7 +6,6 @@ const FrontPage = () => (
     <div className="l-container">
       <p className="some-label">
         Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd...
-        (Prøv å skrive "diabetes")
       </p>
       <InputSearch id="x" />
     </div>

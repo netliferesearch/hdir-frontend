@@ -50,6 +50,24 @@ const triggerSearch = () => {
   location.reload();
 };
 
+const placeholderSuggestions = [
+  'Søk på tema',
+  'ADHD',
+  'Angst',
+  'Demens',
+  'Søk etter innholdstype',
+  'Statistikk',
+  'Pakkeforløp',
+  'Rundskriv',
+  'Søk på kode (ICD-10 og ICPC2)',
+  'F41.9',
+  'P74',
+  'Søk på navn',
+  'Lars Erik Pedersen',
+  'Leni the Ninja',
+  'Ole i Dole'
+];
+
 class InputSearch extends React.Component {
   constructor(props) {
     super(props);
@@ -61,8 +79,29 @@ class InputSearch extends React.Component {
     // and they are initially empty because the Autosuggest is closed.
     this.state = {
       value: '',
-      suggestions: []
+      suggestions: [],
+      placeholderSuggestionIndex: 0,
+      placeholderInterval: null
     };
+  }
+
+  componentDidMount() {
+    // Goes through the suggestions, and put them in the input search field, as placeholder
+    const interval = setInterval(() => {
+      const index = this.state.placeholderSuggestionIndex;
+      this.setState({
+        placeholderSuggestionIndex:
+          index < placeholderSuggestions.length - 1 ? index + 1 : 0
+      });
+    }, 2000);
+
+    this.setState({
+      placeholderInterval: interval
+    });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.placeholderInterval);
   }
 
   onChange = (event, { newValue }) => {
@@ -92,11 +131,11 @@ class InputSearch extends React.Component {
     const { value, suggestions } = this.state;
 
     // Autosuggest will pass through all these props to the input.
-    const inputProps = {
-      placeholder: 'Søk',
+    const inputProps = placeholder => ({
+      placeholder: placeholder,
       value,
       onChange: this.onChange
-    };
+    });
 
     // Finally, render it!
     return (
@@ -108,7 +147,9 @@ class InputSearch extends React.Component {
         renderInputComponent={renderInputComponent}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
+        inputProps={inputProps(
+          placeholderSuggestions[this.state.placeholderSuggestionIndex]
+        )}
       />
     );
   }
