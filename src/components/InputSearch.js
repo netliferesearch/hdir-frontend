@@ -31,7 +31,12 @@ const renderSuggestion = suggestion => (
       >
         {suggestion.type} {suggestion.type === 'helsenorge.no' && '→'}
       </span>
-      <div className="test-icon" />
+      <div
+        className="test-icon"
+        style={{
+          backgroundColor: suggestion.type === 'helsenorge.no' && '#A35C98'
+        }}
+      />
     </div>
     <div className="suggestion-title">{suggestion.title}</div>
     <div className="suggestion-intro">{suggestion.intro}</div>
