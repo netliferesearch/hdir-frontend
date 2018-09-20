@@ -1,15 +1,31 @@
-$brand-color: #025169;
-$secondary-color: #2568bf;
+$black: #212121;
 
+$dark-grey: #6e6e6e;
 $light-gray: #f3f4f6;
+
+$blue-dark: #025169;
+$blue: #0667c6;
+$blue-light: blue;
 
 $yellow: #ffc900;
 $yellow-light: #fef4ce;
 
-$text-color: #212121;
+// Colors only meant for warnings
+$green-warning: #007a00;
+$yellow-warning: #f0c617;
+$red-warning: #ad0017;
+
+$brand-color: $blue-dark;
+$secondary-color: $blue;
+
+// Base font
 $base-font-size: 20px;
 $base-font-weight: normal;
 $base-font-family: 'Work Sans', sans-serif;
+$text-color: $black;
 
-$big-text: 1.2rem;
-$meta-text: 0.7rem;
+// Font sizes
+$extra-large-text: 3.25rem;
+$large-text: 1.8rem;
+$medium-large-text: 1.2rem;
+$meta-text: 0.8rem;
