@@ -1,0 +1,8 @@
+.l-container {
+  @include mq($from: desktop) {
+    padding: 0 10vw;
+  }
+  @include mq($from: wide) {
+    padding: 0 15vw;
+  }
+}

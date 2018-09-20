@@ -1,0 +1,25 @@
+.b-main-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+
+  &__logo {
+  }
+  &__nav {
+  }
+  &__link {
+    color: $brand-color;
+    text-decoration: none;
+    margin-left: 1rem;
+
+    &:active,
+    &:visited,
+    &:hover {
+      color: $brand-color;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
