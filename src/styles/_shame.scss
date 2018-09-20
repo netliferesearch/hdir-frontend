@@ -1,6 +1,7 @@
 .is-wrapper {
   padding: 2rem;
-  height: 800px;
+  height: 100%;
+  min-height: 400px;
   background-color: $brand-color;
 }
 

@@ -23,17 +23,22 @@ const getSuggestionValue = suggestion => suggestion.title;
 const renderSuggestion = suggestion => (
   <div>
     <div>
-      <div>
-        <span className="suggestion__meta">{suggestion.type}</span>
-        <div className="test-icon" />
-      </div>
-      <div className="suggestion-title">{suggestion.title}</div>
-      <div className="suggestion-intro">{suggestion.intro}</div>
-      <div>
-        {suggestion.codes.map(code => (
-          <span className="b-content-label--gray">{code}</span>
-        ))}
-      </div>
+      <span
+        className="suggestion__meta"
+        style={{
+          color: suggestion.type === 'helsenorge.no' && '#A35C98'
+        }}
+      >
+        {suggestion.type} {suggestion.type === 'helsenorge.no' && '→'}
+      </span>
+      <div className="test-icon" />
+    </div>
+    <div className="suggestion-title">{suggestion.title}</div>
+    <div className="suggestion-intro">{suggestion.intro}</div>
+    <div>
+      {suggestion.codes.map(code => (
+        <span className="b-content-label--gray">{code}</span>
+      ))}
     </div>
   </div>
 );
