@@ -33,3 +33,55 @@
   color: white;
   padding-left: 1rem;
 }
+
+img {
+  max-width: 100%;
+}
+
+.t-intro {
+  font-size: $medium-large-text;
+  font-weight: bold;
+}
+
+.t-image-text {
+  margin: 0rem 0 1rem 0;
+  font-size: $meta-text;
+  color: $grey;
+}
+
+.p {
+  background-image: linear-gradient(#fff3ca, white);
+  background-size: 100% 400px;
+  background-repeat: no-repeat;
+}
+
+.b-breadcrumbs {
+  padding: 2em 0;
+
+  &__link {
+    color: $black;
+    margin-right: 1.5em;
+
+    &:hover,
+    &:active,
+    &:visited {
+      color: $black;
+    }
+
+    &:after {
+      display: inline-block;
+      padding-left: 1.5em;
+      content: ' →';
+    }
+
+    &:last-child {
+      border: 0;
+      margin-right: 0;
+      padding-right: 0;
+
+      &:after {
+        content: '';
+      }
+    }
+  }
+}

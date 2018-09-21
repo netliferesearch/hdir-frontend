@@ -1,0 +1,33 @@
+.b-section-nav {
+  &__heading {
+    border-bottom: 6px solid $black;
+  }
+  &__items {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+  &__item {
+    padding-left: 1.25rem;
+    border-bottom: 1px solid $black;
+  }
+  &__link {
+    width: 100%;
+    padding: 0.75rem 0;
+
+    &:before {
+      content: '↓';
+      color: $secondary-color;
+      display: inline-block;
+      margin-left: -1.25rem;
+      padding-right: 0.75rem;
+    }
+
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
