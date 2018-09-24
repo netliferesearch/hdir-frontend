@@ -30,6 +30,9 @@ h6,
   &--normal {
     font-weight: normal;
   }
+  &--blue {
+    color: $secondary-color;
+  }
 }
 
 // Heading sizes

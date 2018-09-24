@@ -2033,6 +2033,14 @@ h6,
 .h6--normal {
   font-weight: normal; }
 
+.h1--blue,
+.h2--blue,
+.h3--blue,
+.h4--blue,
+.h5--blue,
+.h6--blue {
+  color: #0667c6; }
+
 h1,
 .h1 {
   font-size: 3.25rem; }
@@ -2208,8 +2216,12 @@ h3,
     background-color: white;
     border: 0;
     padding: 1em 1em 1em 2em;
-    border-radius: 2em; }
+    border-radius: 2em;
+    box-shadow: 0 0 0 1px #025169; }
     .b-input-search__field:focus {
+      outline: 0;
+      box-shadow: 0 0 0 4px #025169; }
+    .b-input-search__field--dark:focus {
       outline: 0;
       box-shadow: 0 0 0 4px #ffc900; }
   .b-input-search__button {
@@ -2217,13 +2229,16 @@ h3,
     padding: 1em 1.66em;
     margin-left: 1rem;
     color: #025169;
-    background-color: #ffc900;
+    background-color: transparent;
+    box-shadow: 0 0 0 1px #025169;
     border: 0;
     border-radius: 100%;
     background-image: url("./icons/search.svg");
     background-repeat: no-repeat;
     background-size: 1.2rem;
     background-position: center; }
+    .b-input-search__button--dark {
+      background-color: #ffc900; }
 
 .react-autosuggest__suggestions-container {
   background-color: white;
@@ -2276,7 +2291,7 @@ h3,
   text-decoration: none;
   display: inline-block; }
   .b-section-nav__link:before {
-    content: '↓';
+    content: "↓";
     color: #0667c6;
     display: inline-block;
     margin-left: -1.25rem;
@@ -2303,6 +2318,30 @@ h3,
     .b-article-info__link:after {
       display: inline-block;
       content: ' →'; }
+
+.b-search-sidebar__section {
+  border-bottom: 1px solid #212121;
+  padding: 0.5rem 0; }
+  .b-search-sidebar__section:last-child {
+    border: 0; }
+
+.b-search-sidebar__items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.b-search-sidebar__input {
+  height: 1.5em;
+  width: 1.5em;
+  float: left;
+  margin-top: 0.4em; }
+
+.b-search-sidebar__input-label {
+  display: block;
+  margin-left: 2em;
+  color: #0667c6;
+  font-size: 0.8rem;
+  margin-bottom: 0.5em; }
 
 .is-wrapper {
   padding: 2rem;

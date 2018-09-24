@@ -14,17 +14,16 @@
   &__link {
     width: 100%;
     padding: 0.75rem 0;
+    text-decoration: none;
+    display: inline-block;
 
     &:before {
-      content: '↓';
+      content: "↓";
       color: $secondary-color;
       display: inline-block;
       margin-left: -1.25rem;
       padding-right: 0.75rem;
     }
-
-    text-decoration: none;
-    display: inline-block;
 
     &:hover {
       text-decoration: underline;

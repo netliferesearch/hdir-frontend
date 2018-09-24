@@ -1,0 +1,28 @@
+.b-search-sidebar {
+  &__section {
+    border-bottom: 1px solid $black;
+    padding: 0.5rem 0;
+    &:last-child {
+      border: 0;
+    }
+  }
+  &__items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__input {
+    height: 1.5em;
+    width: 1.5em;
+    float: left;
+    margin-top: 0.4em;
+  }
+  &__input-label {
+    display: block;
+    margin-left: 2em;
+    color: $secondary-color;
+    font-size: $meta-text;
+    margin-bottom: 0.5em;
+  }
+}
