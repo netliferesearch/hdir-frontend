@@ -1,8 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Autosuggest from 'react-autosuggest';
+import React from "react";
+import PropTypes from "prop-types";
+import Autosuggest from "react-autosuggest";
+import classNames from "classnames";
 
-import searchSuggestions from '../data/searchSuggestions';
+import ContentLabel from "./ContentLabel";
+
+import searchSuggestions from "../data/searchSuggestions";
 
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
@@ -26,23 +29,23 @@ const renderSuggestion = suggestion => (
       <span
         className="suggestion__meta"
         style={{
-          color: suggestion.type === 'helsenorge.no' && '#A35C98'
+          color: suggestion.type === "helsenorge.no" && "#A35C98"
         }}
       >
-        {suggestion.type} {suggestion.type === 'helsenorge.no' && '→'}
+        {suggestion.type} {suggestion.type === "helsenorge.no" && "→"}
       </span>
       <div
         className="test-icon"
         style={{
-          backgroundColor: suggestion.type === 'helsenorge.no' && '#A35C98'
+          backgroundColor: suggestion.type === "helsenorge.no" && "#A35C98"
         }}
       />
     </div>
     <div className="suggestion-title">{suggestion.title}</div>
-    <div className="suggestion-intro">{suggestion.intro}</div>}
+    <div className="suggestion-intro">{suggestion.intro}</div>
     <div>
       {suggestion.codes.map(code => (
-        <span className="b-content-label--gray">{code}</span>
+        <ContentLabel code>{code}</ContentLabel>
       ))}
     </div>
   </div>
@@ -50,8 +53,20 @@ const renderSuggestion = suggestion => (
 
 const renderInputComponent = inputProps => (
   <div className="b-input-search">
-    <input {...inputProps} className="b-input-search__field" />
-    <button className="b-input-search__button" onClick={triggerSearch} />
+    <input
+      {...inputProps}
+      className={classNames({
+        "b-input-search__field": true,
+        "b-input-search__field--dark": inputProps.dark
+      })}
+    />
+    <button
+      className={classNames({
+        "b-input-search__button": true,
+        "b-input-search__button--dark": inputProps.dark
+      })}
+      onClick={triggerSearch}
+    />
   </div>
 );
 
@@ -61,21 +76,21 @@ const triggerSearch = () => {
 };
 
 const placeholderSuggestions = [
-  'Søk på tema',
-  'ADHD',
-  'Angst',
-  'Demens',
-  'Søk etter innholdstype',
-  'Statistikk',
-  'Pakkeforløp',
-  'Rundskriv',
-  'Søk på kode (ICD-10 og ICPC2)',
-  'F41.9',
-  'P74',
-  'Søk på navn',
-  'Lars Erik Pedersen',
-  'Leni the Ninja',
-  'Ole i Dole'
+  "Søk på tema",
+  "ADHD",
+  "Angst",
+  "Demens",
+  "Søk etter innholdstype",
+  "Statistikk",
+  "Pakkeforløp",
+  "Rundskriv",
+  "Søk på kode (ICD-10 og ICPC2)",
+  "F41.9",
+  "P74",
+  "Søk på navn",
+  "Lars Erik Pedersen",
+  "Leni the Ninja",
+  "Ole i Dole"
 ];
 
 class InputSearch extends React.Component {
@@ -88,7 +103,7 @@ class InputSearch extends React.Component {
     // Suggestions also need to be provided to the Autosuggest,
     // and they are initially empty because the Autosuggest is closed.
     this.state = {
-      value: '',
+      value: "",
       suggestions: [],
       placeholderSuggestionIndex: 0,
       placeholderInterval: null
@@ -136,13 +151,14 @@ class InputSearch extends React.Component {
   };
 
   render() {
-    // const { props } = this;
+    const { props } = this;
 
     const { value, suggestions } = this.state;
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = placeholder => ({
       placeholder: placeholder,
+      dark: props.dark,
       value,
       onChange: this.onChange
     });
@@ -150,7 +166,7 @@ class InputSearch extends React.Component {
     // Finally, render it!
     return (
       <Autosuggest
-        suggestions={suggestions}
+        suggestions={props.showSuggestions ? suggestions : []}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         onSuggestionSelected={triggerSearch}
@@ -168,12 +184,16 @@ class InputSearch extends React.Component {
 InputSearch.propTypes = {
   id: PropTypes.string.isRequired,
   type: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  dark: PropTypes.bool,
+  showSuggestions: PropTypes.bool
 };
 
 InputSearch.defaultProps = {
-  type: 'search',
-  label: ''
+  type: "search",
+  label: "",
+  dark: false,
+  showSuggestions: true
 };
 
 export default InputSearch;

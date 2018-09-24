@@ -3,7 +3,7 @@ import React from "react";
 const SearchOptions = () => (
   <div className="b-search-sidebar">
     <section className="b-search-sidebar__section">
-      <strong>Vis:</strong>
+      Vis:
       <ul className="b-search-sidebar__items">
         <li>
           <input type="checkbox" className="b-search-sidebar__input" id="alt" />

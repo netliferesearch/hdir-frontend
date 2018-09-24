@@ -24,14 +24,23 @@ h6,
 .h4,
 .h5,
 .h6 {
-  &--thin {
+  &--light {
     font-weight: lighter;
   }
   &--normal {
     font-weight: normal;
   }
-  &--blue {
+  &--bold {
+    font-weight: bold;
+  }
+  &--brand-color {
+    color: $brand-color;
+  }
+  &--secondary-color {
     color: $secondary-color;
+  }
+  &--uppercase {
+    text-transform: uppercase;
   }
 }
 

@@ -9,73 +9,33 @@
 
 // Units for vertical spacing
 // We take 10% of the viewport (window size) width and divide it.
-$tight: 10vw / 10;
-$small: 10vw / 6;
-$medium: 10vw / 4;
-$large: 10vw / 2;
-$x-large: 10vw / 1;
+$space-map: (
+  tight: calc(10vw / 10),
+  small: calc(10vw / 6),
+  medium: calc(10vw / 4),
+  large: calc(10vw / 2),
+  x-large: calc(10vw / 1)
+);
 
+$space-directions: (
+  top: t,
+  right: r,
+  bottom: b,
+  left: l
+);
+
+// Genereates spacing classes like this: l-mt-1
+// mt = margin-top, and the number represents a value from 1-5,
+// where 5 has the largest distance.
 .l {
-  &-mt-1 {
-    margin-top: calc(10vw / 10);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 10 * 1.5);
+  @each $direction, $shortDirection in $space-directions {
+    @each $spaceName, $spaceValue in $space-map {
+      &-m#{$shortDirection}-#{index($space-map, $spaceName $spaceValue)} {
+        margin-#{$direction}: $spaceValue;
+      }
+      @include mq($until: tablet) {
+        margin-#{$direction}: calc($spaceValue * 1.5);
+      }
     }
   }
-  &-mt-2 {
-    margin-top: calc(10vw / 6);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 6 * 1.5);
-    }
-  }
-  &-mt-3 {
-    margin-top: calc(10vw / 4);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 4 * 1.5);
-    }
-  }
-  &-mt-4 {
-    margin-top: calc(10vw / 2);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 2 * 1.5);
-    }
-  }
-  &-mt-5 {
-    margin-top: calc(10vw / 1);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 1 * 1.5);
-    }
-  }
-  /*
-  &-mb-1 {
-    margin-bottom: (10vw / 10);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 10 * 1.5);
-    }
-  }
-  &-mb-2 {
-    margin-bottom: (10vw / 6);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 10 * 1.5);
-    }
-  }
-  &-mb-3 {
-    margin-bottom: (10vw / 4);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 10 * 1.5);
-    }
-  }
-  &-mb-4 {
-    margin-bottom: (10vw / 2);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 10 * 1.5);
-    }
-  }
-  &-mb-5 {
-    margin-bottom: (10vw / 1);
-    @include mq($until: tablet) {
-      margin-top: calc(10vw / 10 * 1.5);
-    }
-  }
-  */
 }

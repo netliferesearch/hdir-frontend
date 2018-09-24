@@ -1,5 +1,5 @@
-import React from 'react';
-import InputSearch from '../components/InputSearch';
+import React from "react";
+import InputSearch from "../components/InputSearch";
 
 const FrontPage = () => (
   <div className="is-wrapper">
@@ -7,7 +7,7 @@ const FrontPage = () => (
       <p className="some-label">
         Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd...
       </p>
-      <InputSearch id="x" />
+      <InputSearch id="x" dark />
     </div>
   </div>
 );
