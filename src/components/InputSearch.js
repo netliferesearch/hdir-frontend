@@ -39,7 +39,7 @@ const renderSuggestion = suggestion => (
       />
     </div>
     <div className="suggestion-title">{suggestion.title}</div>
-    <div className="suggestion-intro">{suggestion.intro}</div>
+    <div className="suggestion-intro">{suggestion.intro}</div>}
     <div>
       {suggestion.codes.map(code => (
         <span className="b-content-label--gray">{code}</span>
