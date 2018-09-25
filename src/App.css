@@ -2330,9 +2330,11 @@ h3,
     .b-input-search__field:focus {
       outline: 0;
       box-shadow: 0 0 0 4px #025169; }
-    .b-input-search__field--dark:focus {
-      outline: 0;
-      box-shadow: 0 0 0 4px #ffc900; }
+    .b-input-search__field--dark {
+      box-shadow: none; }
+      .b-input-search__field--dark:focus {
+        outline: 0;
+        box-shadow: 0 0 0 4px #ffc900; }
   .b-input-search__button {
     font-size: 1rem;
     padding: 1em 1.66em;
@@ -2347,6 +2349,7 @@ h3,
     background-size: 1.2rem;
     background-position: center; }
     .b-input-search__button--dark {
+      box-shadow: none;
       background-color: #ffc900; }
 
 .react-autosuggest__suggestions-container {

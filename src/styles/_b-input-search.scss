@@ -19,6 +19,7 @@
     }
 
     &--dark {
+      box-shadow: none;
       &:focus {
         // Outline doesn't have border-radius, so we use box-shadow instead.
         outline: 0;
@@ -42,6 +43,7 @@
     background-position: center;
 
     &--dark {
+      box-shadow: none;
       background-color: $yellow;
     }
   }
