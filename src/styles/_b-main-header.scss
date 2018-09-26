@@ -8,18 +8,13 @@
   &__nav {
   }
   &__link {
-    color: $brand-color;
     text-decoration: none;
     margin-left: 1rem;
 
-    &:active,
-    &:visited,
-    &:hover {
-      color: $brand-color;
-    }
+    @include link-init($brand-color);
 
     &:hover {
-      text-decoration: underline;
+      @include underline($brand-color);
     }
   }
 }

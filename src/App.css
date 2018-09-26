@@ -1987,7 +1987,7 @@
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 html {
-  font-size: 20px; }
+  font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1440 - 400)); }
 
 body {
   color: #212121;
@@ -2078,6 +2078,10 @@ h2,
 h3,
 .h3 {
   font-size: 1.2rem; }
+
+@media (max-width: 61.24em) {
+  .l-container {
+    padding: 0 4vw; } }
 
 @media (min-width: 61.25em) {
   .l-container {
@@ -2387,33 +2391,52 @@ h3,
     .b-main-header__link:hover {
       box-shadow: 0 1px 0 #025169; }
 
-.b-section-nav__heading {
+.b-nav-list__heading {
   border-bottom: 6px solid #212121; }
 
-.b-section-nav__items {
+.b-nav-list__items {
   list-style-type: none;
   padding: 0;
   margin-top: 0.5rem; }
 
-.b-section-nav__item {
+.b-nav-list__item {
   padding: 1rem 0 1rem 1.25rem;
-  border-bottom: 1px solid #212121; }
+  border-bottom: 1px solid #0667c6; }
+  .b-nav-list__item--anchor {
+    padding: 1rem 0 1rem 0; }
 
-.b-section-nav__link {
+.b-nav-list__more-link:link, .b-nav-list__more-link:hover, .b-nav-list__more-link:visited, .b-nav-list__more-link:active {
+  color: #212121;
+  box-shadow: none;
+  border-bottom: 0;
   text-decoration: none; }
-  .b-section-nav__link:link, .b-section-nav__link:hover, .b-section-nav__link:visited, .b-section-nav__link:active {
-    color: #212121;
-    box-shadow: none;
-    border-bottom: 0;
-    text-decoration: none; }
-  .b-section-nav__link:before {
-    content: '↓';
-    color: #0667c6;
-    display: inline-block;
-    margin-left: -1.25rem;
-    padding-right: 0.75rem; }
-  .b-section-nav__link:hover {
-    box-shadow: 0 1px 0 #0667c6; }
+
+.b-nav-list__more-link:link, .b-nav-list__more-link:active, .b-nav-list__more-link:visited, .b-nav-list__more-link:hover {
+  box-shadow: 0 1px 0 #0667c6; }
+
+.b-nav-list__link:link, .b-nav-list__link:hover, .b-nav-list__link:visited, .b-nav-list__link:active {
+  color: #212121;
+  box-shadow: none;
+  border-bottom: 0;
+  text-decoration: none; }
+
+.b-nav-list__link:hover {
+  box-shadow: 0 1px 0 #0667c6; }
+
+.b-nav-list__link:after {
+  color: #0667c6;
+  content: '→';
+  float: right; }
+
+.b-nav-list__link--anchor:before {
+  content: '↓';
+  color: #0667c6;
+  display: inline-block;
+  margin-left: -1.25rem;
+  padding-right: 0.75rem; }
+
+.b-nav-list__link--anchor:after {
+  content: ''; }
 
 .b-article-info {
   color: #6e6e6e;
@@ -2505,6 +2528,18 @@ h3,
     border-bottom: 0;
     text-decoration: none; }
 
+img {
+  max-width: 100%; }
+
+.t-intro {
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+.t-image-text {
+  margin: 0rem 0 1rem 0;
+  font-size: 0.8rem;
+  color: #6e6e6e; }
+
 .is-wrapper {
   padding: 2rem;
   height: 100%;
@@ -2574,18 +2609,26 @@ h3,
     box-shadow: none;
     border-bottom: 0;
     text-decoration: none; }
+  .b-bleed__link:link, .b-bleed__link:active, .b-bleed__link:active, .b-bleed__link:hover {
+    box-shadow: 0 1px 0 #0667c6; }
+  .b-bleed--blue {
+    color: #e5bdf5;
+    background-color: #025169; }
+  .b-bleed--yellow {
+    color: #212121;
+    background-color: #fef4ce; }
 
 .b-footer {
   padding: 4em 0; }
   .b-footer__link {
-    border: 0;
-    display: inline-block;
     margin-right: 2em; }
     .b-footer__link:link, .b-footer__link:hover, .b-footer__link:visited, .b-footer__link:active {
       color: #025169;
       box-shadow: none;
       border-bottom: 0;
       text-decoration: none; }
+    .b-footer__link:hover {
+      box-shadow: 0 1px 0 #025169; }
 
 .b-article-image__image {
   max-width: 100%;
@@ -2594,3 +2637,36 @@ h3,
 .b-article-image__text {
   font-size: 0.8rem;
   color: #6e6e6e; }
+
+.b-portable-article__text {
+  box-shadow: 0 1px 0 #025169; }
+
+.b-portable-article__button {
+  border: 0;
+  background-color: transparent;
+  color: #025169;
+  font-size: 0.8rem;
+  margin-right: 2em;
+  padding: 0; }
+  .b-portable-article__button--print:before {
+    display: inline-block;
+    content: ' ';
+    height: 1.7em;
+    width: 1.4em;
+    margin-right: 0.5em;
+    margin-bottom: -0.2em;
+    background-image: url("./icons/print.svg");
+    background-size: 1.4em;
+    background-repeat: no-repeat;
+    background-position: 0 0; }
+  .b-portable-article__button--pdf:before {
+    display: inline-block;
+    content: ' ';
+    height: 1.7em;
+    width: 1.4em;
+    margin-right: 0.5em;
+    margin-bottom: -0.2em;
+    background-image: url("./icons/pdf.svg");
+    background-size: 1.4em;
+    background-repeat: no-repeat;
+    background-position: 0 0; }

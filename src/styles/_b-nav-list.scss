@@ -1,0 +1,53 @@
+.b-nav-list {
+  &__heading {
+    border-bottom: 6px solid $black;
+  }
+  &__items {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+  &__item {
+    padding: 1rem 0 1rem 1.25rem;
+    border-bottom: 1px solid $secondary-color;
+
+    &--anchor {
+      padding: 1rem 0 1rem 0;
+    }
+  }
+  &__more-link {
+    @include link-init($black);
+    &:link,
+    &:active,
+    &:visited,
+    &:hover {
+      @include underline($secondary-color);
+    }
+  }
+  &__link {
+    @include link-init($black);
+
+    &:hover {
+      @include underline($secondary-color);
+    }
+
+    &:after {
+      color: $secondary-color;
+      content: '→';
+      float: right;
+    }
+
+    &--anchor {
+      &:before {
+        content: '↓';
+        color: $secondary-color;
+        display: inline-block;
+        margin-left: -1.25rem;
+        padding-right: 0.75rem;
+      }
+      &:after {
+        content: '';
+      }
+    }
+  }
+}

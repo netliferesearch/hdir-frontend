@@ -1,9 +1,10 @@
 import React from 'react';
 
-import SectionNav from '../components/SectionNav';
+import NavList from '../components/NavList';
+import Footer from '../components/Footer';
 
 const ArticlePage = () => (
-  <article className="p">
+  <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
         <a href="#" className="b-breadcrumbs__link">
@@ -40,10 +41,10 @@ const ArticlePage = () => (
         </a>
       </p>
       <div className="row l-mt-4">
-        <aside className="col-xs-3">
-          <SectionNav />
+        <aside className="col-md-3 col-xs-12">
+          <NavList anchor />
         </aside>
-        <article className="col-xs-8 col-xs-offset-1">
+        <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
           <h2>Bakgrunn</h2>
           <p>
             Flertallet av personer med psykiske helseproblemer er i jobb.
@@ -51,9 +52,12 @@ const ArticlePage = () => (
             inn.
           </p>
           <p>
-            Hele 96 prosent svarte at arbeid er viktig for deres psykiske helse
-            i en undersøkelse TNS Gallup har utført for Helsedirektoratet. Bare
-            hjem og nær familie ble ansett som viktigere.
+            Hele 96 prosent svarte at arbeid er{' '}
+            <a href="#">
+              viktig for deres psykiske helse i en undersøkelse TNS Gallup har
+              utført for Helsedirektoratet
+            </a>
+            . Bare hjem og nær familie ble ansett som viktigere.
           </p>
           <p>
             Rundt 15 prosent av det legemeldte sykefraværet i Norge skyldes
@@ -81,10 +85,84 @@ const ArticlePage = () => (
             arbeidsgivere og ansatte/jobbsøkere til å skape et godt
             arbeidsmiljø.
           </p>
+          <h2>Bakgrunn</h2>
+          <p>
+            Flertallet av personer med psykiske helseproblemer er i jobb.
+            Likevel er det mange som står utenfor arbeidslivet og ønsker seg
+            inn.
+          </p>
+          <p>
+            Hele 96 prosent svarte at arbeid er{' '}
+            <a href="#">
+              viktig for deres psykiske helse i en undersøkelse TNS Gallup har
+              utført for Helsedirektoratet
+            </a>
+            . Bare hjem og nær familie ble ansett som viktigere.
+          </p>
+          <p>
+            Rundt 15 prosent av det legemeldte sykefraværet i Norge skyldes
+            psykiske lidelser. Andelen uføretrygdede med en psykisk lidelse er
+            på noe over 30 prosent. Blant personer som faller ut av
+            arbeidslivet, utgjør personer med psykiske lidelser en stor og
+            økende gruppe.
+          </p>
+          <div className="b-bleed b-bleed--blue">
+            Norske og internasjonale studier viser at 30 – 50 prosent av den
+            voksne befolkningen vil få en psykisk lidelse i løpet av livet.
+          </div>
+          <div className="b-bleed b-bleed--yellow l-mt-2">
+            <h2>Ti råd for et inkluderende arbeidsliv</h2>
+            <ol>
+              <li>​Bry deg. Alle trenger å bli sett og verdsatt.</li>
+              <li>Gi tillit. Alle har noe å gi hvis de slipper til.</li>
+              <li>Ikke aksepter mobbing og utfrysing. Stopp rykter.</li>
+              <li>Vær romslig. Verdsett mangfold og ulikheter.</li>
+              <li>Lytt til andre. Vis interesse for andres arbeid.</li>
+              <li>Verdsett åpenhet. Snakk sammen.</li>
+              <li>Skap trygghet og takhøyde. Feil er noe vi kan lære av.</li>
+              <li>Ta ansvar. God tilrettelegging er et samarbeidsprosjekt.</li>
+              <li>Ta problemer på alvor. Finn løsninger sammen.</li>
+              <li>Psykisk helse angår oss alle. Snakk om det.</li>
+            </ol>
+            (Kilde: Rådet for Psykisk Helse)
+          </div>
+
+          <div className="l-mt-4 col-xs-12 col-md-8">
+            <NavList />
+          </div>
+          <div className="l-mt-4 col-xs-12 col-md-8">
+            <NavList />
+          </div>
+
+          <div className="b-portable-article l-mt-4">
+            <button className="b-portable-article__button b-portable-article__button--print">
+              <span className="b-portable-article__text">Print</span>
+            </button>
+            <button className="b-portable-article__button b-portable-article__button--pdf">
+              <span className="b-portable-article__text">Lag PDF</span>
+            </button>
+          </div>
+
+          <div className="b-bleed l-mt-4">
+            <strong>Kontakt:</strong>
+            <br />
+            <a href="#" className="b-bleed__link">
+              spesialisthelsetjenester@helsedir.no
+            </a>
+            <br />
+            <a href="#" className="b-bleed__link">
+              navn.etternavn@helsedir.no
+            </a>
+            <br />
+            <a href="#" className="b-bleed__link">
+              999 99 999
+            </a>
+          </div>
         </article>
       </div>
     </div>
-  </article>
+    <Footer />
+  </div>
 );
 
 export default ArticlePage;

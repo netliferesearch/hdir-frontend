@@ -9,7 +9,11 @@ const ContentLabel = props => {
     'b-content-label--code': props.code
   });
 
-  return <div className={classes}>{props.children}</div>;
+  return (
+    <div className={classes} data-module="ContentLabel">
+      {props.children}
+    </div>
+  );
 };
 
 ContentLabel.propTypes = {

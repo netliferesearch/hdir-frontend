@@ -37,7 +37,7 @@
     box-shadow: 0 0 0 1px $brand-color;
     border: 0;
     border-radius: 100%;
-    background-image: url("./icons/search.svg");
+    background-image: url('./icons/search.svg');
     background-repeat: no-repeat;
     background-size: 1.2rem;
     background-position: center;
@@ -87,7 +87,6 @@
     }
     &--highlighted {
       border-color: $yellow;
-      text-decoration: underline;
       background-color: $yellow-light;
     }
   }

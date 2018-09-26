@@ -34,39 +34,13 @@
   padding-left: 1rem;
 }
 
-img {
-  max-width: 100%;
-}
-
-.t-intro {
-  font-size: $medium-large-text;
-  font-weight: bold;
-}
-
-.t-image-text {
-  margin: 0rem 0 1rem 0;
-  font-size: $meta-text;
-  color: $grey;
-}
-
-.p {
-  background-image: linear-gradient(#fff3ca, white);
-  background-size: 100% 400px;
-  background-repeat: no-repeat;
-}
-
 .b-breadcrumbs {
   padding: 2em 0;
 
   &__link {
-    color: $black;
     margin-right: 1.5em;
 
-    &:hover,
-    &:active,
-    &:visited {
-      color: $black;
-    }
+    @include link-init($black);
 
     &:after {
       display: inline-block;
@@ -81,6 +55,108 @@ img {
 
       &:after {
         content: '';
+      }
+    }
+  }
+}
+
+.full-width {
+  background-color: rgb(122, 197, 122);
+  width: 100%;
+  padding: 2vw 0;
+  overflow: auto;
+  left: 0;
+  position: absolute;
+}
+
+.b-bleed {
+  padding: 2em;
+  background-color: $green-light;
+
+  &__link {
+    @include link-init($black);
+    &:link,
+    &:active,
+    &:active,
+    &:hover {
+      @include underline($secondary-color);
+    }
+  }
+
+  &--blue {
+    color: $purple;
+    background-color: $brand-color;
+  }
+
+  &--yellow {
+    color: $black;
+    background-color: $yellow-light;
+  }
+}
+
+.b-footer {
+  padding: 4em 0;
+
+  &__link {
+    @include link-init($brand-color);
+    margin-right: 2em;
+
+    &:hover {
+      @include underline($brand-color);
+    }
+  }
+}
+
+.b-article-image {
+  &__image {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+  &__text {
+    font-size: $meta-text;
+    color: $grey;
+  }
+}
+
+.b-portable-article {
+  &__text {
+    @include underline($brand-color);
+  }
+
+  &__button {
+    border: 0;
+    background-color: transparent;
+    color: $brand-color;
+    font-size: $meta-text;
+    margin-right: 2em;
+    padding: 0;
+
+    &--print {
+      &:before {
+        display: inline-block;
+        content: ' ';
+        height: 1.7em;
+        width: 1.4em;
+        margin-right: 0.5em;
+        margin-bottom: -0.2em;
+        background-image: url('./icons/print.svg');
+        background-size: 1.4em;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
+    &--pdf {
+      &:before {
+        display: inline-block;
+        content: ' ';
+        height: 1.7em;
+        width: 1.4em;
+        margin-right: 0.5em;
+        margin-bottom: -0.2em;
+        background-image: url('./icons/pdf.svg');
+        background-size: 1.4em;
+        background-repeat: no-repeat;
+        background-position: 0 0;
       }
     }
   }

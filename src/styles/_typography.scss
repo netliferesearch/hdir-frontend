@@ -31,7 +31,10 @@
       url('./fonts/lekton-v8-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+$base-font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1440 - 400));
+
 html {
+  // font-size: $base-font-size;
   font-size: $base-font-size;
 }
 
@@ -43,10 +46,13 @@ body {
 }
 
 a {
-  color: $secondary-color;
+  &:link,
   &:hover,
   &:visited,
   &:active {
     color: $secondary-color;
   }
+
+  text-decoration: none;
+  box-shadow: 0 1px 0 $secondary-color;
 }

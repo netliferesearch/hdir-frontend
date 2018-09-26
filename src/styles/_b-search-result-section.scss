@@ -6,7 +6,7 @@
     border-bottom: 1px solid $secondary-color;
 
     &:after {
-      content: " →";
+      content: ' →';
     }
   }
   &__intro {
@@ -44,12 +44,8 @@
     flex-grow: 1;
   }
   &__subitems-button {
-    color: $black;
-    &:hover,
-    &:active,
-    &:visited {
-      color: $black;
-    }
+    @include link-init($black);
+
     text-decoration: none;
   }
 }
