@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Autosuggest from "react-autosuggest";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Autosuggest from 'react-autosuggest';
+import classNames from 'classnames';
 
-import ContentLabel from "./ContentLabel";
+import ContentLabel from './ContentLabel';
 
-import searchSuggestions from "../data/searchSuggestions";
+import searchSuggestions from '../data/searchSuggestions';
 
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
@@ -29,24 +29,22 @@ const renderSuggestion = suggestion => (
       <span
         className="suggestion__meta"
         style={{
-          color: suggestion.type === "helsenorge.no" && "#A35C98"
+          color: suggestion.type === 'helsenorge.no' && '#A35C98'
         }}
       >
-        {suggestion.type} {suggestion.type === "helsenorge.no" && "→"}
+        {suggestion.type} {suggestion.type === 'helsenorge.no' && '→'}
       </span>
       <div
         className="test-icon"
         style={{
-          backgroundColor: suggestion.type === "helsenorge.no" && "#A35C98"
+          backgroundColor: suggestion.type === 'helsenorge.no' && '#A35C98'
         }}
       />
     </div>
     <div className="suggestion-title">{suggestion.title}</div>
     <div className="suggestion-intro">{suggestion.intro}</div>
     <div>
-      {suggestion.codes.map(code => (
-        <ContentLabel code>{code}</ContentLabel>
-      ))}
+      {suggestion.codes.map(code => <ContentLabel code>{code}</ContentLabel>)}
     </div>
   </div>
 );
@@ -56,14 +54,14 @@ const renderInputComponent = inputProps => (
     <input
       {...inputProps}
       className={classNames({
-        "b-input-search__field": true,
-        "b-input-search__field--dark": inputProps.dark
+        'b-input-search__field': true,
+        'b-input-search__field--dark': inputProps.dark
       })}
     />
     <button
       className={classNames({
-        "b-input-search__button": true,
-        "b-input-search__button--dark": inputProps.dark
+        'b-input-search__button': true,
+        'b-input-search__button--dark': inputProps.dark
       })}
       onClick={triggerSearch}
     />
@@ -76,21 +74,21 @@ const triggerSearch = () => {
 };
 
 const placeholderSuggestions = [
-  "Søk på tema",
-  "ADHD",
-  "Angst",
-  "Demens",
-  "Søk etter innholdstype",
-  "Statistikk",
-  "Pakkeforløp",
-  "Rundskriv",
-  "Søk på kode (ICD-10 og ICPC2)",
-  "F41.9",
-  "P74",
-  "Søk på navn",
-  "Lars Erik Pedersen",
-  "Leni the Ninja",
-  "Ole i Dole"
+  'Søk på tema',
+  'ADHD',
+  'Angst',
+  'Demens',
+  'Søk etter innholdstype',
+  'Statistikk',
+  'Pakkeforløp',
+  'Rundskriv',
+  'Søk på kode (ICD-10 og ICPC2)',
+  'F41.9',
+  'P74',
+  'Søk på navn',
+  'Lars Erik Pedersen',
+  'Leni the Ninja',
+  'Ole i Dole'
 ];
 
 class InputSearch extends React.Component {
@@ -103,7 +101,7 @@ class InputSearch extends React.Component {
     // Suggestions also need to be provided to the Autosuggest,
     // and they are initially empty because the Autosuggest is closed.
     this.state = {
-      value: "",
+      value: '',
       suggestions: [],
       placeholderSuggestionIndex: 0,
       placeholderInterval: null
@@ -190,8 +188,8 @@ InputSearch.propTypes = {
 };
 
 InputSearch.defaultProps = {
-  type: "search",
-  label: "",
+  type: 'search',
+  label: '',
   dark: false,
   showSuggestions: true
 };

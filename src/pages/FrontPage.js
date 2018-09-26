@@ -1,5 +1,5 @@
-import React from "react";
-import InputSearch from "../components/InputSearch";
+import React from 'react';
+import InputSearch from '../components/InputSearch';
 
 const FrontPage = () => (
   <div className="is-wrapper">

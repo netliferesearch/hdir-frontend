@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import InputSearch from "../components/InputSearch";
-import SearchResultSection from "../components/SearchResultSection";
-import SearchOptions from "../components/SearchOptions";
+import InputSearch from '../components/InputSearch';
+import SearchResultSection from '../components/SearchResultSection';
+import SearchOptions from '../components/SearchOptions';
 
 const SearchResultPage = () => (
   <main>

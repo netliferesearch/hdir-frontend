@@ -1,5 +1,5 @@
-import React from "react";
-import ContentLabel from "../components/ContentLabel";
+import React from 'react';
+import ContentLabel from '../components/ContentLabel';
 
 const SearchResultSection = () => (
   <div className="b-search-result-section l-mb-4">

@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import ContentLabel from "./ContentLabel";
+import ContentLabel from './ContentLabel';
 
 const FeatureList = props => {
   const parentClasses = classNames({
-    "b-feature-list": true,
-    "b-feature-list--secondary-state": props.secondary
+    'b-feature-list': true,
+    'b-feature-list--secondary-state': props.secondary
   });
 
   return (
