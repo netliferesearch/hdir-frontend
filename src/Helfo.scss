@@ -1,0 +1,31 @@
+@import 'normalize-scss/sass/normalize';
+@import 'sass-mq/mq';
+@import 'flexboxgrid-sass/flexboxgrid';
+
+@import './styles/settings';
+@import './styles/variables';
+
+@import './styles/mixins';
+
+@import './styles/typography';
+@import './styles/headings';
+@import 'styles/layout';
+
+@import 'styles/misc';
+
+@import './styles/b-content-label';
+@import './styles/b-feature-list';
+@import './styles/b-input-search';
+@import './styles/b-main-header';
+@import './styles/b-nav-list';
+@import './styles/b-article-info';
+@import './styles/b-search-sidebar';
+@import './styles/b-search-result-section';
+@import './styles/b-article-intro';
+
+// Temp styles. Remove your temp-styles after finishing your task.
+@import './styles/shame';
+
+body {
+  background: #bde4f9;
+}
