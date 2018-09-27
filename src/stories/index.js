@@ -1,16 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, object } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
-
-// Article pages
-import { Welcome } from '@storybook/react/demo';
 
 // Components
 import ContentLabel from '../components/ContentLabel';
 import FeatureList from '../components/FeatureList';
+import NavList from '../components/NavList';
 
 // Pages
 import FrontPage from '../pages/FrontPage';
@@ -24,7 +22,20 @@ import InputSearch from '../components/InputSearch';
 import { featureListHeading, featureListData } from '../testData.js';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
-  <Welcome showApp={linkTo('Button')} />
+  <div>
+    <h1 className="h2">
+      Digitial design guide for DIP - Digital Innholdsplattform
+    </h1>
+    <p>Velg stilsett:</p>
+    <ul>
+      <li>
+        <a href="#">Helsedirektoratet</a>
+      </li>
+      <li>
+        <a href="#">Helfo</a>
+      </li>
+    </ul>
+  </div>
 ));
 
 storiesOf('FeatureList', module)
@@ -61,3 +72,32 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Front page', () => <FrontPage />)
   .addWithStaticMarkup('Search result page', () => <SearchResultPage />)
   .addWithStaticMarkup('Article page', () => <ArticlePage />);
+
+storiesOf('NavList', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup(
+    'Basic',
+    withNotes(
+      'The links are an array of objects containing the props "title" and "url" as strings.'
+    )(() => (
+      <NavList
+        anchor={boolean('Anchor links', false)}
+        heading={text('Heading', 'Overskrift')}
+        list={[
+          {
+            title: 'ABC',
+            url: '#'
+          },
+          {
+            title: 'DEF',
+            url: '#'
+          },
+          {
+            title: 'GHI',
+            url: '#'
+          }
+        ]}
+      />
+    ))
+  );

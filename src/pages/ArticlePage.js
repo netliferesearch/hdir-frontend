@@ -42,7 +42,16 @@ const ArticlePage = () => (
       </p>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12">
-          <NavList anchor />
+          <NavList
+            anchor
+            heading="Innhold på denne siden"
+            list={[
+              { title: 'Bakgrunn', url: '#' },
+              { title: 'Forebyggende arbeid', url: '#' },
+              { title: 'Arbeid bidrar til raskere bedring', url: '#' },
+              { title: 'Politisk satsning', url: '#' }
+            ]}
+          />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
           <h2>Bakgrunn</h2>
@@ -128,10 +137,24 @@ const ArticlePage = () => (
           </div>
 
           <div className="l-mt-4 col-xs-12 col-md-8">
-            <NavList />
+            <NavList
+              heading="Rapporter om arbeid og psykisk helse"
+              list={[
+                { title: 'Jobber seg til bedre helse (Uni.no)', url: '#' },
+                { title: 'Omtale av IPS evalueringen (Napha.no)', url: '#' },
+                { title: 'Åtte prinsipper for IPS fra Napha (PDF)', url: '#' }
+              ]}
+            />
           </div>
           <div className="l-mt-4 col-xs-12 col-md-8">
-            <NavList />
+            <NavList
+              heading="Søk tilskudd innen arbeid og psykisk helse"
+              list={[
+                { title: 'Jobber seg til bedre helse (Uni.no)', url: '#' },
+                { title: 'Omtale av IPS evalueringen (Napha.no)', url: '#' },
+                { title: 'Åtte prinsipper for IPS fra Napha (PDF)', url: '#' }
+              ]}
+            />
           </div>
 
           <div className="b-portable-article l-mt-4">
