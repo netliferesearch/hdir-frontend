@@ -1,0 +1,12 @@
+.b-footer {
+  padding: 4em 0;
+
+  &__link {
+    @include link-init($brand-color);
+    margin-right: 2em;
+
+    &:hover {
+      @include underline($brand-color);
+    }
+  }
+}

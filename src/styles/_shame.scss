@@ -1,4 +1,4 @@
-.is-wrapper {
+.frontpage-wrapper {
   padding: 2rem;
   height: 100%;
   min-height: 400px;
@@ -94,19 +94,6 @@
   }
 }
 
-.b-footer {
-  padding: 4em 0;
-
-  &__link {
-    @include link-init($brand-color);
-    margin-right: 2em;
-
-    &:hover {
-      @include underline($brand-color);
-    }
-  }
-}
-
 .b-article-image {
   &__image {
     max-width: 100%;
@@ -115,49 +102,5 @@
   &__text {
     font-size: $meta-text;
     color: $grey;
-  }
-}
-
-.b-portable-article {
-  &__text {
-    @include underline($brand-color);
-  }
-
-  &__button {
-    border: 0;
-    background-color: transparent;
-    color: $brand-color;
-    font-size: $meta-text;
-    margin-right: 2em;
-    padding: 0;
-
-    &--print {
-      &:before {
-        display: inline-block;
-        content: ' ';
-        height: 1.7em;
-        width: 1.4em;
-        margin-right: 0.5em;
-        margin-bottom: -0.2em;
-        background-image: url('./icons/print.svg');
-        background-size: 1.4em;
-        background-repeat: no-repeat;
-        background-position: 0 0;
-      }
-    }
-    &--pdf {
-      &:before {
-        display: inline-block;
-        content: ' ';
-        height: 1.7em;
-        width: 1.4em;
-        margin-right: 0.5em;
-        margin-bottom: -0.2em;
-        background-image: url('./icons/pdf.svg');
-        background-size: 1.4em;
-        background-repeat: no-repeat;
-        background-position: 0 0;
-      }
-    }
   }
 }

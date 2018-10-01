@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import Footer from '../components/Footer';
+import PortableArticle from '../components/PortableArticle';
 
 const ArticlePage = () => (
   <div>
@@ -157,13 +158,8 @@ const ArticlePage = () => (
             />
           </div>
 
-          <div className="b-portable-article l-mt-4">
-            <button className="b-portable-article__button b-portable-article__button--print">
-              <span className="b-portable-article__text">Print</span>
-            </button>
-            <button className="b-portable-article__button b-portable-article__button--pdf">
-              <span className="b-portable-article__text">Lag PDF</span>
-            </button>
+          <div className="l-mt-4">
+            <PortableArticle />
           </div>
 
           <div className="b-bleed l-mt-4">
