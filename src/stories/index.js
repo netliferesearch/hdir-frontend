@@ -10,6 +10,12 @@ import ContentLabel from '../components/ContentLabel';
 import FeatureList from '../components/FeatureList';
 import NavList from '../components/NavList';
 
+import Footer from '../components/Footer';
+import MainHeader from '../components/MainHeader';
+import PortableArticle from '../components/PortableArticle';
+import SearchOptions from '../components/SearchOptions';
+import SearchResultSection from '../components/SearchResultSection';
+
 // Pages
 import FrontPage from '../pages/FrontPage';
 import SearchResultPage from '../pages/SearchResultPage';
@@ -128,3 +134,30 @@ storiesOf('NavList', module)
       />
     ))
   );
+
+/*
+storiesOf('Footer', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <Footer />);
+
+storiesOf('MainHeader', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <MainHeader />);
+*/
+
+storiesOf('PortableArticle', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <PortableArticle />);
+
+storiesOf('SearchOptions', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <SearchOptions />);
+
+storiesOf('SearchResultSection', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <SearchResultSection />);
