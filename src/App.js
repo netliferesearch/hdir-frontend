@@ -4,6 +4,7 @@ import './App.css';
 
 import FrontPage from './pages/FrontPage';
 import SearchResultPage from './pages/SearchResultPage';
+import SimpleSerp from './pages/SimpleSerp';
 import ArticlePage from './pages/ArticlePage';
 import NotFound from './pages/NotFound';
 
@@ -24,6 +25,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={FrontPage} />
                 <Route path="/søkeresultat" component={SearchResultPage} />
+                <Route path="/søkeresultat2" component={SimpleSerp} />
                 <Route path="/artikkel" component={ArticlePage} />
                 <Route component={NotFound} />
               </Switch>

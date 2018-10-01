@@ -1,4 +1,8 @@
 .b-search-result-section {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
   &__header {
     padding: 0.75em 0;
     margin: 0.5em 0;
@@ -16,6 +20,11 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+  &__parent-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $grey-light;
   }
   &__item {
   }

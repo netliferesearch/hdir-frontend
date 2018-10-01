@@ -12,13 +12,16 @@ const ContentLabel = props => {
 
       <nav className="b-main-header__nav">
         <Link to="/" className="b-main-header__link">
-          Menypunkt
+          Forside
         </Link>
         <Link to="/søkeresultat" className="b-main-header__link">
-          Menypunkt
+          SERP
+        </Link>
+        <Link to="/søkeresultat2" className="b-main-header__link">
+          Enkel SERP
         </Link>
         <Link to="/artikkel" className="b-main-header__link">
-          Menypunkt
+          Artikkel
         </Link>
       </nav>
     </div>
