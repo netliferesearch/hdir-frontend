@@ -13,6 +13,14 @@
       content: ' →';
     }
   }
+  &__link {
+    // We want hover to still have underline
+    &:link,
+    &:active,
+    &visited {
+      box-shadow: none;
+    }
+  }
   &__intro {
     font-size: $meta-text;
   }

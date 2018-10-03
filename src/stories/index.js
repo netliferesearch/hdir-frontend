@@ -9,12 +9,12 @@ import { withNotes } from '@storybook/addon-notes';
 import ContentLabel from '../components/ContentLabel';
 import FeatureList from '../components/FeatureList';
 import NavList from '../components/NavList';
-
-import Footer from '../components/Footer';
-import MainHeader from '../components/MainHeader';
+// import Footer from '../components/Footer';
+// import MainHeader from '../components/MainHeader';
 import PortableArticle from '../components/PortableArticle';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
+import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 
 // Pages
 import FrontPage from '../pages/FrontPage';
@@ -161,3 +161,8 @@ storiesOf('SearchResultSection', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => <SearchResultSection />);
+
+storiesOf('SearchResultSectionSimple', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <SearchResultSectionSimple />);

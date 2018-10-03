@@ -2493,6 +2493,8 @@ h3,
     border-bottom: 1px solid #0667c6; }
     .b-search-result-section__header:after {
       content: ' →'; }
+  .b-search-result-section__link:link, .b-search-result-section__link:active, .b-search-result-section__linkvisited {
+    box-shadow: none; }
   .b-search-result-section__intro {
     font-size: 0.8rem; }
   .b-search-result-section__items {

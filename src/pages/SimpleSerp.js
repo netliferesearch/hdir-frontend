@@ -2,7 +2,7 @@ import React from 'react';
 
 import InputSearch from '../components/InputSearch';
 import SearchOptions from '../components/SearchOptions';
-import ContentLabel from '../components/ContentLabel';
+import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 
 const SimpleSerp = () => (
   <main>
@@ -19,88 +19,12 @@ const SimpleSerp = () => (
           <SearchOptions />
         </aside>
         <section className="col-md-8 col-md-offset-1">
-          <ul className="b-search-result-section">
-            <li className="b-search-result-section__parent-item">
-              <h1 className="h2 h2--uppercase">
-                Anbefalinger, Råd og lovfortolkninger
-              </h1>
-              <ul className="b-search-result-section__items">
-                <li className="b-search-result-section__item">
-                  <h2 className="h3 h3--secondary-color b-search-result-section__header">
-                    Nasjonal faglig reningslinje for svangerskapsdiabetes
-                  </h2>
-                  <p className="b-search-result-section__intro">
-                    Svangerskapsdiabetes er diabetes som oppdages eller oppstår
-                    i graviditeten. Det kan gi økt risiko for
-                    svangerskapsforgiftning og føre til komplikasjoner under
-                    fødselen, blant…
-                  </p>
-                </li>
-                <li className="b-search-result-section__item">
-                  <h2 className="h3 h3--secondary-color b-search-result-section__header">
-                    Nasjonal faglig reningslinje for svangerskapsdiabetes
-                  </h2>
-                  <p className="b-search-result-section__intro">
-                    Svangerskapsdiabetes er diabetes som oppdages eller oppstår
-                    i graviditeten. Det kan gi økt risiko for
-                    svangerskapsforgiftning og føre til komplikasjoner under
-                    fødselen, blant…
-                  </p>
-                </li>
-                <li className="b-search-result-section__item">
-                  <h2 className="h3 h3--secondary-color b-search-result-section__header">
-                    Nasjonal faglig reningslinje for svangerskapsdiabetes
-                  </h2>
-                  <p className="b-search-result-section__intro">
-                    Svangerskapsdiabetes er diabetes som oppdages eller oppstår
-                    i graviditeten. Det kan gi økt risiko for
-                    svangerskapsforgiftning og føre til komplikasjoner under
-                    fødselen, blant…
-                  </p>
-                </li>
-              </ul>
-            </li>
-            <li className="b-search-result-section__parent-item">
-              <h1 className="h2 h2--uppercase">
-                Anbefalinger, Råd og lovfortolkninger
-              </h1>
-              <ul className="b-search-result-section__items">
-                <li className="b-search-result-section__item">
-                  <h2 className="h3 h3--secondary-color b-search-result-section__header">
-                    Nasjonal faglig reningslinje for svangerskapsdiabetes
-                  </h2>
-                  <p className="b-search-result-section__intro">
-                    Svangerskapsdiabetes er diabetes som oppdages eller oppstår
-                    i graviditeten. Det kan gi økt risiko for
-                    svangerskapsforgiftning og føre til komplikasjoner under
-                    fødselen, blant…
-                  </p>
-                </li>
-                <li className="b-search-result-section__item">
-                  <h2 className="h3 h3--secondary-color b-search-result-section__header">
-                    Nasjonal faglig reningslinje for svangerskapsdiabetes
-                  </h2>
-                  <p className="b-search-result-section__intro">
-                    Svangerskapsdiabetes er diabetes som oppdages eller oppstår
-                    i graviditeten. Det kan gi økt risiko for
-                    svangerskapsforgiftning og føre til komplikasjoner under
-                    fødselen, blant…
-                  </p>
-                </li>
-                <li className="b-search-result-section__item">
-                  <h2 className="h3 h3--secondary-color b-search-result-section__header">
-                    Nasjonal faglig reningslinje for svangerskapsdiabetes
-                  </h2>
-                  <p className="b-search-result-section__intro">
-                    Svangerskapsdiabetes er diabetes som oppdages eller oppstår
-                    i graviditeten. Det kan gi økt risiko for
-                    svangerskapsforgiftning og føre til komplikasjoner under
-                    fødselen, blant…
-                  </p>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <div className="l-mb-3">
+            <SearchResultSectionSimple />
+          </div>
+          <div className="l-mb-3">
+            <SearchResultSectionSimple />
+          </div>
         </section>
       </div>
     </div>
