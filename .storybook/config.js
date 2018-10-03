@@ -1,6 +1,6 @@
 import { configure, setAddon } from '@storybook/react';
 import staticMarkup from 'react-storybook-addon-static-markup';
-import '../src/App.css';
+import '../src/static/App.css';
 
 setAddon(staticMarkup);
 

@@ -19,6 +19,7 @@ import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 // Pages
 import FrontPage from '../pages/FrontPage';
 import SearchResultPage from '../pages/SearchResultPage';
+import SimpleSerp from '../pages/SimpleSerp';
 import ArticlePage from '../pages/ArticlePage';
 
 // React specific
@@ -76,6 +77,7 @@ storiesOf('Pages', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Front page', () => <FrontPage />)
   .addWithStaticMarkup('Search result page', () => <SearchResultPage />)
+  .addWithStaticMarkup('Simple search result page', () => <SimpleSerp />)
   .addWithStaticMarkup('Article page', () => <ArticlePage />);
 
 storiesOf('FeatureList', module)
