@@ -4,16 +4,15 @@ import { Link } from 'react-router-dom';
 const ContentLabel = props => {
   return (
     <div className="b-main-header">
-      <img
-        src="./logo.svg"
-        alt="Helsedirektoratet"
-        className="b-main-header__logo"
-      />
+      <Link to="/" className="b-main-header__logo-link">
+        <img
+          src="./logo.svg"
+          alt="Helsedirektoratet"
+          className="b-main-header__logo"
+        />
+      </Link>
 
       <nav className="b-main-header__nav">
-        <Link to="/" className="b-main-header__link">
-          Forside
-        </Link>
         <Link to="/søkeresultat" className="b-main-header__link">
           SERP
         </Link>
@@ -22,6 +21,9 @@ const ContentLabel = props => {
         </Link>
         <Link to="/artikkel" className="b-main-header__link">
           Artikkel
+        </Link>
+        <Link to="/normerende-innhold" className="b-main-header__link">
+          Normerende innhold
         </Link>
       </nav>
     </div>
