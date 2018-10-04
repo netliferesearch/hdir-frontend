@@ -16,7 +16,7 @@ const NavList = props => {
   const { list: list = [] } = props;
 
   return (
-    <nav className="b-nav-list">
+    <nav className={`b-nav-list ${props.className}`} id={props.id}>
       <div className="b-nav-list__heading">{props.heading}</div>
       <ul className="b-nav-list__items">
         {list.map(item => (
@@ -46,12 +46,14 @@ NavList.propTypes = {
       url: PropTypes.string.isRequired
     })
   ).isRequired,
-  type: PropTypes.string
+  type: PropTypes.string,
+  id: PropTypes.string
 };
 
 NavList.defaultProps = {
   anchor: false,
-  type: ''
+  type: '',
+  id: ''
 };
 
 export default NavList;

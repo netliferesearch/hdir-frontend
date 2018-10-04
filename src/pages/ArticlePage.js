@@ -42,9 +42,10 @@ const ArticlePage = () => (
         </a>
       </p>
       <div className="row l-mt-4">
-        <aside className="col-md-3 col-xs-12">
+        <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
             anchor
+            className="l-sticky"
             heading="Innhold på denne siden"
             list={[
               { title: 'Bakgrunn', url: '#' },

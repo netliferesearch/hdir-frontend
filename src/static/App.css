@@ -2231,6 +2231,10 @@ h3,
   .l {
     margin-left: calc($spaceValue * 1.5); } }
 
+.l-sticky {
+  position: sticky;
+  top: 2rem; }
+
 .center-sm {
   text-align: left; }
 
