@@ -5,6 +5,9 @@
 
   &__logo {
   }
+  &__logo-link {
+    @include link-init(transparent);
+  }
   &__nav {
   }
   &__link {
