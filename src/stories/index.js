@@ -125,12 +125,43 @@ storiesOf('NavList', module)
             url: '#'
           },
           {
-            title: 'DEF',
+            title:
+              'Behandling og rehabilitering av x og avhengighet. Behandling og rehabilitering av x og avhengighet. Behandling og rehabilitering av x og avhengighet.',
             url: '#'
           },
           {
             title: 'GHI',
             url: '#'
+          }
+        ]}
+      />
+    ))
+  )
+  .addWithStaticMarkup(
+    'With types',
+    withNotes(
+      'The links are an array of objects containing the props "title" and "url" as strings.'
+    )(() => (
+      <NavList
+        anchor={boolean('Anchor links', false)}
+        heading={text('Heading', 'Overskrift')}
+        list={[
+          {
+            title:
+              'Diagnostisk pakkeforløp for pasienter med uspesifikke symptomer på alvorlig sykdom som kan være kreft',
+            url: '#',
+            type: 'nasjonale-faglige-retningslinjer'
+          },
+          {
+            title: 'DEF',
+            url: '#',
+            type: 'rundskriv'
+          },
+          {
+            title:
+              'Behandling og rehabilitering av rusmiddelproblemer og avhengighet. Behandling og rehabilitering av rusmiddelproblemer og avhengighet',
+            url: '#',
+            type: 'nasjonale-faglige-retningslinjer'
           }
         ]}
       />
