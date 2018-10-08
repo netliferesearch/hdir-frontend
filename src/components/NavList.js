@@ -2,14 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const listItemClasses = (anchor, type) =>
+const listItemClasses = (anchor, type, columns) =>
   classNames({
     'b-nav-list__item': true,
     'b-nav-list__item--anchor': anchor,
     'b-nav-list__item--blue': type === 'nasjonale-faglige-retningslinjer',
     'b-nav-list__item--green': type === 'pakkeforløp',
     'b-nav-list__item--orange': type === 'rundskriv',
-    'b-nav-list__item--yellow': type === 'veileder'
+    'b-nav-list__item--yellow': type === 'veileder',
+    'b-nav-list__item--column': columns
+  });
+
+const listItemsClasses = columns =>
+  classNames({
+    'b-nav-list__items': true,
+    'b-nav-list__items--columns': columns
   });
 
 const NavList = props => {
@@ -18,9 +25,11 @@ const NavList = props => {
   return (
     <nav className={`b-nav-list ${props.className}`} id={props.id}>
       <div className="b-nav-list__heading">{props.heading}</div>
-      <ul className="b-nav-list__items">
+      <ul className={listItemsClasses(props.columns)}>
         {list.map(item => (
-          <li className={listItemClasses(props.anchor, item.type)}>
+          <li
+            className={listItemClasses(props.anchor, item.type, props.columns)}
+          >
             <a
               href={item.url}
               className={classNames({
@@ -47,6 +56,7 @@ NavList.propTypes = {
     })
   ).isRequired,
   type: PropTypes.string,
+  columns: PropTypes.bool,
   id: PropTypes.string
 };
 

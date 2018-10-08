@@ -14,7 +14,7 @@ const NormativeContentPage = () => (
           Ipsum
         </a>
         <a href="#" className="b-breadcrumbs__link">
-          Dolor
+          Dolor Dolor Dolor
         </a>
       </nav>
 
@@ -86,65 +86,86 @@ const NormativeContentPage = () => (
       </div>
 
       <article className="l-mt-4">
-        <div className="b-column">
-          <div className="b-column__child l-mb-3">
-            <NavList
-              heading="A"
-              list={[
-                {
-                  title: 'Abort',
-                  url: '#',
-                  type: 'nasjonale-faglige-retningslinjer'
-                },
-                {
-                  title: 'ADHD',
-                  url: '#',
-                  type: 'nasjonale-faglige-retningslinjer'
-                },
-                {
-                  title:
-                    'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
-                  url: '#',
-                  type: 'veileder'
-                }
-              ]}
-            />
-          </div>
-          <div className="b-column__child l-mb-3">
-            <NavList
-              heading="B"
-              list={[
-                {
-                  title: 'Abort',
-                  url: '#',
-                  type: 'nasjonale-faglige-retningslinjer'
-                },
-                {
-                  title: 'ADHD',
-                  url: '#',
-                  type: 'nasjonale-faglige-retningslinjer'
-                }
-              ]}
-            />
-          </div>
-          <div className="b-column__child l-mb-3">
-            <NavList
-              heading="C"
-              list={[
-                {
-                  title: 'ADHD',
-                  url: '#',
-                  type: 'nasjonale-faglige-retningslinjer'
-                },
-                {
-                  title:
-                    'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
-                  url: '#',
-                  type: 'veileder'
-                }
-              ]}
-            />
-          </div>
+        <div className="l-mb-3">
+          <NavList
+            heading="A"
+            columns
+            list={[
+              {
+                title: 'Abort',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              },
+              {
+                title: 'ADHD',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              },
+              {
+                title:
+                  'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
+                url: '#',
+                type: 'veileder'
+              },
+              {
+                title: 'Abort',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              },
+              {
+                title: 'ADHD',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              },
+              {
+                title: 'Abort',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              },
+              {
+                title: 'ADHD',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              }
+            ]}
+          />
+        </div>
+        <div className="l-mb-3">
+          <NavList
+            heading="B"
+            columns
+            list={[
+              {
+                title: 'Abort',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              },
+              {
+                title: 'ADHD',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              }
+            ]}
+          />
+        </div>
+        <div className="l-mb-3">
+          <NavList
+            heading="C"
+            columns
+            list={[
+              {
+                title: 'ADHD',
+                url: '#',
+                type: 'nasjonale-faglige-retningslinjer'
+              },
+              {
+                title:
+                  'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
+                url: '#',
+                type: 'veileder'
+              }
+            ]}
+          />
         </div>
       </article>
     </div>

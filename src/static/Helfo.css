@@ -2409,10 +2409,17 @@ h3,
   list-style-type: none;
   padding: 0;
   margin: 0; }
+  .b-nav-list__items--columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
 
 .b-nav-list__item {
   padding: 1rem 2rem 1rem 0;
   border-bottom: 1px solid #0667c6; }
+  .b-nav-list__item--column {
+    flex: 0 47.5%;
+    box-sizing: border-box; }
   .b-nav-list__item--anchor {
     padding-right: 0;
     padding-left: 1.5rem; }
