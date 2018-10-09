@@ -204,22 +204,27 @@ storiesOf('SearchResultSectionSimple', module)
 storiesOf('ArticleIntro', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => (
-    <ArticleIntro
-      heading={text('Heading', 'Arbeid og psykisk helse')}
-      lead={text(
-        'Lead',
-        'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
-      )}
-      publishDate={text('Publish date', '11.08.2008')}
-      editDate={text('Edit date', '11.08.2018')}
-      image={text(
-        'Image url (empty string will change the layout)',
-        './photo.jpg'
-      )}
-      imageDescription={text('Image description', 'Bildetekst')}
-    />
-  ));
+  .addWithStaticMarkup(
+    'Basic',
+    withNotes(
+      'When the image is not present, it should make the text-section wider.'
+    )(() => (
+      <ArticleIntro
+        heading={text('Heading', 'Arbeid og psykisk helse')}
+        lead={text(
+          'Lead',
+          'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
+        )}
+        publishDate={text('Publish date', '11.08.2008')}
+        editDate={text('Edit date', '11.08.2018')}
+        image={text(
+          'Image url (empty string will change the layout)',
+          './photo.jpg'
+        )}
+        imageDescription={text('Image description', 'Bildetekst')}
+      />
+    ))
+  );
 {
   boolean('Anchor links', false);
 }
