@@ -3,6 +3,7 @@ import React from 'react';
 import NavList from '../components/NavList';
 import Footer from '../components/Footer';
 import PortableArticle from '../components/PortableArticle';
+import ArticleIntro from '../components/ArticleIntro';
 
 const ArticlePage = () => (
   <div>
@@ -18,29 +19,16 @@ const ArticlePage = () => (
           Dolor
         </a>
       </nav>
-      <div className="row l-mt-2">
-        <div className="col-xs-12 col-md-6">
-          <h1>Arbeid og psykisk helse</h1>
-          <p className="t-intro">
-            Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste.
-            Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen,
-            skape tilhørighet og gi økt selvfølelse.
-          </p>
-        </div>
-        <div className="col-xs-12 col-md-6">
-          <img src="./photo.jpg" alt="" />
-          <p className="t-image-text">Bildetekst / forograf</p>
-        </div>
+      <div className="l-mt-2">
+        <ArticleIntro
+          heading="Arbeid og psykisk helse"
+          lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
+          publishDate="11.08.2008"
+          editDate="11.08.2018"
+          image="./photo.jpg"
+          imageDescription="Bildetekst"
+        />
       </div>
-      <p className="b-article-info">
-        <span className="b-article-info__text">
-          Først publisert: 11.08.2008
-        </span>
-        <span className="b-article-info__text">Sist endret: 11.08.2018</span>
-        <a href="#" className="b-article-info__link l-mt-1">
-          Se tidligere utgaver
-        </a>
-      </p>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList

@@ -12,6 +12,7 @@ import NavList from '../components/NavList';
 // import Footer from '../components/Footer';
 // import MainHeader from '../components/MainHeader';
 import PortableArticle from '../components/PortableArticle';
+import ArticleIntro from '../components/ArticleIntro';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
@@ -199,3 +200,29 @@ storiesOf('SearchResultSectionSimple', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => <SearchResultSectionSimple />);
+
+storiesOf('ArticleIntro', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <ArticleIntro
+      heading={text('Heading', 'Arbeid og psykisk helse')}
+      lead={text(
+        'Lead',
+        'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
+      )}
+      publishDate={text('Publish date', '11.08.2008')}
+      editDate={text('Edit date', '11.08.2018')}
+      image={text(
+        'Image url (empty string will change the layout)',
+        './photo.jpg'
+      )}
+      imageDescription={text('Image description', 'Bildetekst')}
+    />
+  ));
+{
+  boolean('Anchor links', false);
+}
+{
+  text('Heading', 'Overskrift');
+}
