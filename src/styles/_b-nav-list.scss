@@ -9,15 +9,19 @@
     padding: 0;
     margin: 0;
     &--columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      @include mq($from: $desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
     }
   }
   &__item {
     &--column {
-      flex: 0 47.5%;
-      box-sizing: border-box;
+      @include mq($from: $desktop) {
+        flex: 0 47.5%;
+        box-sizing: border-box;
+      }
     }
     padding: 1rem 2rem 1rem 0;
     border-bottom: 1px solid $secondary-color;
