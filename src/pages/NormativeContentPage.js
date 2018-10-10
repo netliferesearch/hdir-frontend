@@ -99,7 +99,7 @@ const NormativeContentPage = () => (
             columns
             list={[
               {
-                title: 'Abort',
+                title: 'Antibiotika',
                 url: '#',
                 type: 'nasjonale-faglige-retningslinjer'
               },
@@ -115,7 +115,7 @@ const NormativeContentPage = () => (
                 type: 'veileder'
               },
               {
-                title: 'Abort',
+                title: 'Antibiotika',
                 url: '#',
                 type: 'nasjonale-faglige-retningslinjer'
               },
@@ -125,7 +125,7 @@ const NormativeContentPage = () => (
                 type: 'nasjonale-faglige-retningslinjer'
               },
               {
-                title: 'Abort',
+                title: 'Antibiotika',
                 url: '#',
                 type: 'nasjonale-faglige-retningslinjer'
               },
@@ -143,7 +143,7 @@ const NormativeContentPage = () => (
             columns
             list={[
               {
-                title: 'Abort',
+                title: 'Antibiotika',
                 url: '#',
                 type: 'nasjonale-faglige-retningslinjer'
               },

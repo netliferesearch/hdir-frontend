@@ -24,7 +24,9 @@ const NavList = props => {
 
   return (
     <nav className={`b-nav-list ${props.className}`} id={props.id}>
-      <div className="b-nav-list__heading">{props.heading}</div>
+      {props.heading && (
+        <div className="b-nav-list__heading">{props.heading}</div>
+      )}
       <ul className={listItemsClasses(props.columns)}>
         {list.map(item => (
           <li
@@ -37,7 +39,12 @@ const NavList = props => {
                 'b-nav-list__link--anchor': props.anchor
               })}
             >
-              {item.title}
+              {item.description && (
+                <div className="b-nav-list__item-description">
+                  {item.description}
+                </div>
+              )}
+              <div className="b-nav-list__link-title">{item.title}</div>
             </a>
           </li>
         ))}
@@ -48,10 +55,11 @@ const NavList = props => {
 
 NavList.propTypes = {
   anchor: PropTypes.bool,
-  heading: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   list: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired
     })
   ).isRequired,

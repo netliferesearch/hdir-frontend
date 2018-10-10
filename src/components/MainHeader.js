@@ -13,6 +13,9 @@ const ContentLabel = props => {
       </Link>
 
       <nav className="b-main-header__nav">
+        <Link to="/produkt" className="b-main-header__link">
+          Produkt
+        </Link>
         <Link to="/søkeresultat" className="b-main-header__link">
           SERP
         </Link>

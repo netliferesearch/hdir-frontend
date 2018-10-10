@@ -2079,6 +2079,10 @@ h3,
 .h3 {
   font-size: 1.2rem; }
 
+h4,
+.h4 {
+  font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1440 - 400)); }
+
 @media (max-width: 61.24em) {
   .l-container {
     padding: 0 4vw; } }
@@ -2416,7 +2420,7 @@ h3,
       justify-content: space-between; } }
 
 .b-nav-list__item {
-  padding: 1rem 2rem 1rem 0;
+  padding: 0 2rem 0 0;
   border-bottom: 1px solid #0667c6; }
   @media (min-width: 61.25em) {
     .b-nav-list__item--column {
@@ -2438,39 +2442,39 @@ h3,
     border-left: 0.25em solid #ffc900;
     padding-left: 1.5em; }
 
-.b-nav-list__more-link:link, .b-nav-list__more-link:hover, .b-nav-list__more-link:visited, .b-nav-list__more-link:active {
-  color: #212121;
-  box-shadow: none;
-  border-bottom: 0;
-  text-decoration: none; }
+.b-nav-list__link {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  height: 100%; }
+  .b-nav-list__link:link, .b-nav-list__link:hover, .b-nav-list__link:visited, .b-nav-list__link:active {
+    color: #212121;
+    box-shadow: none;
+    border-bottom: 0;
+    text-decoration: none; }
+  .b-nav-list__link:hover {
+    color: #0667c6; }
+  .b-nav-list__link:after {
+    color: #0667c6;
+    content: '→';
+    margin-right: -2rem; }
+  .b-nav-list__link--anchor {
+    justify-content: flex-start; }
+    .b-nav-list__link--anchor:before {
+      content: '↓';
+      color: #0667c6;
+      display: inline-block;
+      margin-left: -1.25rem;
+      padding-right: 0.75rem; }
+    .b-nav-list__link--anchor:after {
+      content: ''; }
 
-.b-nav-list__more-link:link, .b-nav-list__more-link:active, .b-nav-list__more-link:visited, .b-nav-list__more-link:hover {
-  box-shadow: 0 1px 0 #0667c6; }
+.b-nav-list__link-title {
+  display: block; }
 
-.b-nav-list__link:link, .b-nav-list__link:hover, .b-nav-list__link:visited, .b-nav-list__link:active {
-  color: #212121;
-  box-shadow: none;
-  border-bottom: 0;
-  text-decoration: none; }
-
-.b-nav-list__link:hover {
-  box-shadow: 0 1px 0 #0667c6; }
-
-.b-nav-list__link:after {
-  color: #0667c6;
-  content: '→';
-  float: right;
-  margin-right: -2rem; }
-
-.b-nav-list__link--anchor:before {
-  content: '↓';
-  color: #0667c6;
-  display: inline-block;
-  margin-left: -1.25rem;
-  padding-right: 0.75rem; }
-
-.b-nav-list__link--anchor:after {
-  content: ''; }
+.b-nav-list__item-description {
+  width: 30%;
+  flex-shrink: 0; }
 
 .b-article-info {
   color: #6e6e6e;

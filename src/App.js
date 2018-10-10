@@ -7,6 +7,7 @@ import SearchResultPage from './pages/SearchResultPage';
 import SimpleSerp from './pages/SimpleSerp';
 import ArticlePage from './pages/ArticlePage';
 import NormativeContentPage from './pages/NormativeContentPage';
+import ProductPage from './pages/ProductPage';
 import NotFound from './pages/NotFound';
 
 import MainHeader from './components/MainHeader';
@@ -25,6 +26,7 @@ class App extends Component {
             <div>
               <Switch>
                 <Route exact path="/" component={FrontPage} />
+                <Route path="/produkt" component={ProductPage} />
                 <Route path="/søkeresultat" component={SearchResultPage} />
                 <Route path="/søkeresultat2" component={SimpleSerp} />
                 <Route path="/artikkel" component={ArticlePage} />
