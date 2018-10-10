@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import Footer from '../components/Footer';
+import FilterList from '../components/FilterList';
 
 const NormativeContentPage = () => (
   <div>
@@ -14,41 +15,47 @@ const NormativeContentPage = () => (
           Ipsum
         </a>
         <a href="#" className="b-breadcrumbs__link">
-          Dolor Dolor Dolor
+          Dolor
         </a>
       </nav>
 
       <div className="l-mt-2">
-        <h1>Arbeid og psykisk helse</h1>
+        <h1>Normerende innhold</h1>
       </div>
-
-      <div className="b-content-filter">
+      <div className="l-mt-4">
         <h2 className="h3 l-mb-1">Velg innholdstype</h2>
-        <ul className="b-content-filter__list">
-          <li className="b-content-filter__list-item">
-            <a href="#">ALT</a>
-          </li>
-          <li className="b-content-filter__list-item b-content-filter__list-item--blue">
-            <a href="#">Nasjonale faglige retningslinjer</a>
-          </li>
-          <li className="b-content-filter__list-item b-content-filter__list-item--green">
-            <a href="#">Pakkeforløp</a>
-          </li>
-          <li className="b-content-filter__list-item b-content-filter__list-item--orange">
-            <a href="#">Rundskriv</a>
-          </li>
-          <li className="b-content-filter__list-item b-content-filter__list-item--yellow">
-            <a href="#">Veileder til lov og forskrift</a>
-          </li>
-        </ul>
+        <FilterList
+          bombasticSelect
+          list={[
+            {
+              name: 'Nasjonale faglige retningslinjer',
+              color: 'blue'
+            },
+            {
+              name: 'Pakkeforløp',
+              color: 'green'
+            },
+            {
+              name: 'Rundskriv',
+              color: 'orange'
+            },
+            {
+              name: 'Veileder til lov og forskrift',
+              color: 'yellow'
+            },
+            {
+              name: 'Høringer',
+              color: 'yellow'
+            }
+          ]}
+        />
       </div>
 
       <div className="l-mt-4">
         <h2 className="h3 l-mb-1">Vis kun</h2>
+
         <ul className="b-content-filter__list">
-          <li className="b-content-filter__list-item">
-            <a href="#">ALT</a>
-          </li>
+          <li className="b-content-filter__list-item">ALT</li>
           <li className="b-content-filter__list-item">
             <a href="#">ABC</a>
           </li>
