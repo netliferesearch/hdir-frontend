@@ -23,7 +23,6 @@
         box-sizing: border-box;
       }
     }
-    padding: 0 2rem 0 0;
     border-bottom: 1px solid $secondary-color;
 
     &--anchor {
@@ -66,7 +65,7 @@
     &:after {
       color: $secondary-color;
       content: '→';
-      margin-right: -2rem;
+      margin-left: 1rem;
     }
 
     &--anchor {
