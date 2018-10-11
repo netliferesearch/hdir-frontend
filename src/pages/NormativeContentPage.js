@@ -22,7 +22,7 @@ const NormativeContentPage = () => (
       <div className="l-mt-2">
         <h1>Normerende innhold</h1>
       </div>
-      <div className="l-mt-4">
+      <div className="l-mt-3">
         <h2 className="h5 h5--thin l-mb-1">Velg innholdstype</h2>
         <FilterList
           list={[

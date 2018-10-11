@@ -11,15 +11,15 @@ const ProductPage = () => (
         </h1>
       </div>
       <div className="col-xs-12 l-mt-4">
-        <div>
-          <div className="col-md-10 col-md-offset-1 l-mt-4">
-            <h2>
-              <div className="h4">Kapittel 1</div>
-              <div className="h2">
-                Diagnostikk og tiltak for å finne uoppdaget diabetes og
-                svangerskapsdiabetes
-              </div>
-            </h2>
+        <div className="col-md-10 col-md-offset-1 l-mt-4">
+          <h2>
+            <div className="h4">Kapittel 1</div>
+            <div className="h2 l-mt-1">
+              Diagnostikk og tiltak for å finne uoppdaget diabetes og
+              svangerskapsdiabetes
+            </div>
+          </h2>
+          <div className="l-mt-3 l-hide-to-md">
             <NavList
               list={[
                 {
