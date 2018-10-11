@@ -2468,9 +2468,6 @@ h4,
     .b-nav-list__link--anchor:after {
       content: ''; }
 
-.b-nav-list__link-title {
-  display: block; }
-
 .b-nav-list__item-description {
   width: 30%;
   flex-shrink: 0; }

@@ -44,7 +44,7 @@ const NavList = props => {
                   {item.description}
                 </div>
               )}
-              <div className="b-nav-list__link-title">{item.title}</div>
+              {item.title}
             </a>
           </li>
         ))}

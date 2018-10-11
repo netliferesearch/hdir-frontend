@@ -48,10 +48,8 @@
     }
   }
   &__link {
-    // &--description {
     display: flex;
     justify-content: space-between;
-    // }
 
     @include link-init($black);
 
@@ -83,9 +81,6 @@
         content: '';
       }
     }
-  }
-  &__link-title {
-    display: block;
   }
   &__item-description {
     width: 30%;
