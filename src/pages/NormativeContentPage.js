@@ -23,73 +23,37 @@ const NormativeContentPage = () => (
         <h1>Normerende innhold</h1>
       </div>
       <div className="l-mt-4">
-        <h2 className="h3 l-mb-1">Velg innholdstype</h2>
+        <h2 className="h5 h5--thin l-mb-1">Velg innholdstype</h2>
         <FilterList
-          bombasticSelect
           list={[
-            {
-              name: 'Nasjonale faglige retningslinjer',
-              color: 'blue'
-            },
-            {
-              name: 'Pakkeforløp',
-              color: 'green'
-            },
-            {
-              name: 'Rundskriv',
-              color: 'orange'
-            },
-            {
-              name: 'Veileder til lov og forskrift',
-              color: 'yellow'
-            },
-            {
-              name: 'Høringer',
-              color: 'yellow'
-            }
+            'Alt',
+            'Nasjonale faglige retningslinjer',
+            'Pakkeforløp',
+            'Rundskriv',
+            'Veileder til lov og forskrift',
+            'Høringer'
           ]}
         />
       </div>
 
-      <div className="l-mt-4">
-        <h2 className="h3 l-mb-1">Vis kun</h2>
-
-        <ul className="b-content-filter__list">
-          <li className="b-content-filter__list-item">ALT</li>
-          <li className="b-content-filter__list-item">
-            <a href="#">ABC</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">DEF</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">GHI</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">JKL</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">MNO</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">PQR</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">STU</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">VWX</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">UZÆ</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">ØÅ</a>
-          </li>
-          <li className="b-content-filter__list-item">
-            <a href="#">0-9</a>
-          </li>
-        </ul>
+      <div className="l-mt-3">
+        <h2 className="h5 h5--thin l-mb-1">Vis kun</h2>
+        <FilterList
+          list={[
+            'Alt',
+            'ABC',
+            'DEF',
+            'GHI',
+            'JKL',
+            'MNO',
+            'PQR',
+            'STU',
+            'VWX',
+            'UZÆ',
+            'ØÅ',
+            '0-9'
+          ]}
+        />
       </div>
 
       <article className="l-mt-4">

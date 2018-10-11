@@ -62,3 +62,12 @@ h4,
 .h4 {
   font-size: $base-font-size;
 }
+h5,
+.h5 {
+  font-size: $meta-text;
+  text-transform: uppercase;
+  font-weight: normal;
+  &--thin {
+    color: $grey;
+  }
+}

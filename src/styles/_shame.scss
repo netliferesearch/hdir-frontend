@@ -106,37 +106,6 @@
 }
 
 .b-content-filter {
-  &__selected {
-    color: $black;
-    padding: 1em;
-    font-size: $medium-large-text;
-    text-transform: uppercase;
-    &--blue {
-      background-color: $blue-light;
-    }
-    &--green {
-      background-color: $green;
-    }
-    &--orange {
-      background-color: $orange;
-    }
-    &--yellow {
-      background-color: $yellow;
-    }
-  }
-  &__unselect-button {
-    padding: 0.5em;
-    font-size: $meta-text;
-    text-transform: uppercase;
-    margin-right: 1rem;
-    background: transparent;
-    border-radius: 1em;
-    border: 2px solid $black;
-    &:active {
-      color: $black;
-      transform: translate(0, 1px);
-    }
-  }
   &__list {
     list-style-type: none;
     margin: 0;
@@ -145,50 +114,12 @@
   &__list-item {
     display: inline-block;
     margin-right: 2em;
-
-    &--blue {
-      &:before {
-        display: inline-block;
-        content: ' ';
-        width: 0.2em;
-        height: 1.4em;
-        margin-bottom: -0.4em;
-        margin-right: 0.3em;
-        background-color: $blue-light;
-      }
-    }
-    &--green {
-      &:before {
-        display: inline-block;
-        content: ' ';
-        width: 0.2em;
-        height: 1.4em;
-        margin-bottom: -0.4em;
-        margin-right: 0.3em;
-        background-color: $green;
-      }
-    }
-    &--orange {
-      &:before {
-        display: inline-block;
-        content: ' ';
-        width: 0.2em;
-        height: 1.4em;
-        margin-bottom: -0.4em;
-        margin-right: 0.3em;
-        background-color: $orange;
-      }
-    }
-    &--yellow {
-      &:before {
-        display: inline-block;
-        content: ' ';
-        width: 0.2em;
-        height: 1.4em;
-        margin-bottom: -0.4em;
-        margin-right: 0.3em;
-        background-color: $yellow;
-      }
+    text-transform: uppercase;
+    font-size: $meta-text;
+  }
+  &__list-item-link {
+    &--active {
+      @include link-init($black);
     }
   }
 }

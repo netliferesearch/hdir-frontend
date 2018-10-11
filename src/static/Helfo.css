@@ -2083,6 +2083,15 @@ h4,
 .h4 {
   font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1440 - 400)); }
 
+h5,
+.h5 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: normal; }
+  h5--thin,
+  .h5--thin {
+    color: #6e6e6e; }
+
 @media (max-width: 61.24em) {
   .l-container {
     padding: 0 4vw; } }
@@ -2663,32 +2672,6 @@ img {
   font-size: 0.8rem;
   color: #6e6e6e; }
 
-.b-content-filter__selected {
-  color: #212121;
-  padding: 1em;
-  font-size: 1.2rem;
-  text-transform: uppercase; }
-  .b-content-filter__selected--blue {
-    background-color: #82b3e2; }
-  .b-content-filter__selected--green {
-    background-color: #95dcca; }
-  .b-content-filter__selected--orange {
-    background-color: #f8a83d; }
-  .b-content-filter__selected--yellow {
-    background-color: #ffc900; }
-
-.b-content-filter__unselect-button {
-  padding: 0.5em;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  margin-right: 1rem;
-  background: transparent;
-  border-radius: 1em;
-  border: 2px solid #212121; }
-  .b-content-filter__unselect-button:active {
-    color: #212121;
-    transform: translate(0, 1px); }
-
 .b-content-filter__list {
   list-style-type: none;
   margin: 0;
@@ -2696,39 +2679,15 @@ img {
 
 .b-content-filter__list-item {
   display: inline-block;
-  margin-right: 2em; }
-  .b-content-filter__list-item--blue:before {
-    display: inline-block;
-    content: ' ';
-    width: 0.2em;
-    height: 1.4em;
-    margin-bottom: -0.4em;
-    margin-right: 0.3em;
-    background-color: #82b3e2; }
-  .b-content-filter__list-item--green:before {
-    display: inline-block;
-    content: ' ';
-    width: 0.2em;
-    height: 1.4em;
-    margin-bottom: -0.4em;
-    margin-right: 0.3em;
-    background-color: #95dcca; }
-  .b-content-filter__list-item--orange:before {
-    display: inline-block;
-    content: ' ';
-    width: 0.2em;
-    height: 1.4em;
-    margin-bottom: -0.4em;
-    margin-right: 0.3em;
-    background-color: #f8a83d; }
-  .b-content-filter__list-item--yellow:before {
-    display: inline-block;
-    content: ' ';
-    width: 0.2em;
-    height: 1.4em;
-    margin-bottom: -0.4em;
-    margin-right: 0.3em;
-    background-color: #ffc900; }
+  margin-right: 2em;
+  text-transform: uppercase;
+  font-size: 0.8rem; }
+
+.b-content-filter__list-item-link--active:link, .b-content-filter__list-item-link--active:hover, .b-content-filter__list-item-link--active:visited, .b-content-filter__list-item-link--active:active {
+  color: #212121;
+  box-shadow: none;
+  border-bottom: 0;
+  text-decoration: none; }
 
 body {
   background: #bde4f9; }
