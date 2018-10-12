@@ -1,0 +1,18 @@
+.b-filter-list {
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__list-item {
+    display: inline-block;
+    margin-right: 2em;
+    text-transform: uppercase;
+    font-size: $meta-text;
+  }
+  &__list-item-link {
+    &--active {
+      @include link-init($black);
+    }
+  }
+}

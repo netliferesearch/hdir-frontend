@@ -1,4 +1,4 @@
-@mixin link-init($color) {
+@mixin link-init($color, $underline: false) {
   &:link,
   &:hover,
   &:visited,
@@ -7,6 +7,10 @@
     box-shadow: none;
     border-bottom: 0;
     text-decoration: none;
+
+    @if $underline == true {
+      box-shadow: 0 1px 0 $color;
+    }
   }
 }
 

@@ -1,0 +1,28 @@
+.b-chapter-heading {
+  position: relative;
+  border-top: 7px solid $black;
+  padding-top: 1rem;
+  padding-right: 1.5em;
+
+  &__link {
+    @include link-init($black);
+    @include underline(transparent);
+    &:hover {
+      color: $blue;
+      @include underline($blue);
+    }
+  }
+  &__main-heading {
+    margin-top: 1rem;
+
+    &:after {
+      content: '→';
+      position: absolute;
+      right: 0;
+
+      // Note: this space should be adjusted relative to the size of sub-heading
+      // if it ever was too be changed.
+      top: 1.9em;
+    }
+  }
+}

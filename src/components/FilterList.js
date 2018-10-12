@@ -26,15 +26,15 @@ class FilterList extends Component {
 
   render() {
     return (
-      <div className="b-content-filter">
-        <ul className="b-content-filter__list">
+      <div className="b-filter-list">
+        <ul className="b-filter-list__list">
           {this.props.list.map(item => (
-            <li className="b-content-filter__list-item">
+            <li className="b-filter-list__list-item">
               <a
                 href="#"
                 className={classNames({
-                  'b-content-filter__list-item-link': true,
-                  'b-content-filter__list-item-link--active':
+                  'b-filter-list__list-item-link': true,
+                  'b-filter-list__list-item-link--active':
                     item === this.state.selected
                 })}
                 onClick={e => {

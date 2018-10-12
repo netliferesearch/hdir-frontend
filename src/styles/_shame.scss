@@ -105,21 +105,19 @@
   }
 }
 
-.b-content-filter {
-  &__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.b-link-springboard {
+  color: #b969a3;
+  border: 1px solid #b969a3;
+  border-radius: 4px;
+  padding: 2rem;
+
+  &__link {
+    @include link-init(#b969a3, true);
+    // @include underline(#b969a3);
   }
-  &__list-item {
-    display: inline-block;
-    margin-right: 2em;
-    text-transform: uppercase;
-    font-size: $meta-text;
-  }
-  &__list-item-link {
-    &--active {
-      @include link-init($black);
-    }
+
+  @include mq($from: $tablet) {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }

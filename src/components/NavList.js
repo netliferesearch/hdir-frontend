@@ -2,14 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const listItemClasses = (anchor, type, columns) =>
+const listItemClasses = (anchor, columns) =>
   classNames({
     'b-nav-list__item': true,
     'b-nav-list__item--anchor': anchor,
-    'b-nav-list__item--blue': type === 'nasjonale-faglige-retningslinjer',
-    'b-nav-list__item--green': type === 'pakkeforløp',
-    'b-nav-list__item--orange': type === 'rundskriv',
-    'b-nav-list__item--yellow': type === 'veileder',
     'b-nav-list__item--column': columns
   });
 
@@ -29,9 +25,7 @@ const NavList = props => {
       )}
       <ul className={listItemsClasses(props.columns)}>
         {list.map(item => (
-          <li
-            className={listItemClasses(props.anchor, item.type, props.columns)}
-          >
+          <li className={listItemClasses(props.anchor, props.columns)}>
             <a
               href={item.url}
               className={classNames({
@@ -44,7 +38,7 @@ const NavList = props => {
                   {item.description}
                 </div>
               )}
-              {item.title}
+              <span className="b-nav-list__item-title">{item.title}</span>
             </a>
           </li>
         ))}
