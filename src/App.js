@@ -8,6 +8,7 @@ import SimpleSerp from './pages/SimpleSerp';
 import ArticlePage from './pages/ArticlePage';
 import NormativeContentPage from './pages/NormativeContentPage';
 import ProductPage from './pages/ProductPage';
+import ChapterPage from './pages/ChapterPage';
 import NotFound from './pages/NotFound';
 
 import MainHeader from './components/MainHeader';
@@ -30,6 +31,7 @@ class App extends Component {
                 <Route path="/søkeresultat" component={SearchResultPage} />
                 <Route path="/søkeresultat2" component={SimpleSerp} />
                 <Route path="/artikkel" component={ArticlePage} />
+                <Route path="/kapittel" component={ChapterPage} />
                 <Route
                   path="/normerende-innhold"
                   component={NormativeContentPage}

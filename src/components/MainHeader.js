@@ -13,6 +13,9 @@ const ContentLabel = props => {
       </Link>
 
       <nav className="b-main-header__nav">
+        <Link to="/kapittel" className="b-main-header__link">
+          Kapittel
+        </Link>
         <Link to="/produkt" className="b-main-header__link">
           Produkt
         </Link>

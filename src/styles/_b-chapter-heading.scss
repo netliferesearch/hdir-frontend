@@ -1,8 +1,15 @@
 .b-chapter-heading {
   position: relative;
   border-top: 7px solid $black;
-  padding-top: 1rem;
+  padding-top: 1em;
   padding-right: 1.5em;
+
+  &--line-bottom {
+    padding-top: 0;
+    border-top: 0;
+    border-bottom: 7px solid $black;
+    padding-bottom: 1em;
+  }
 
   &__link {
     @include link-init($black);
