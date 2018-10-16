@@ -2498,6 +2498,10 @@ h5,
   .b-nav-list__link:after {
     content: '→';
     margin-left: 1rem; }
+  .b-nav-list__link--background {
+    padding: 1rem; }
+    .b-nav-list__link--background:hover {
+      background: #f7f7f7; }
   .b-nav-list__link--anchor {
     justify-content: flex-start; }
     .b-nav-list__link--anchor:before {
@@ -2722,7 +2726,8 @@ img {
 
 .b-collapsible {
   border-bottom: 1px solid #212121;
-  padding-bottom: 2em; }
+  padding-bottom: 2em;
+  padding-left: 2em; }
   .b-collapsible__button {
     position: relative;
     background: none;
@@ -2730,25 +2735,27 @@ img {
     text-align: left;
     padding: 0;
     display: inline;
-    font-size: 1em;
-    padding-right: 2.5em; }
-    .b-collapsible__button:after {
+    font-size: 1em; }
+    .b-collapsible__button:before {
       display: block;
       position: absolute;
       content: ' ';
       width: 1em;
       height: 1em;
-      transform: scaleY(-1);
+      margin-left: -2em;
+      transform: rotate(90deg);
       background-image: url(./icons/chevron_black.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      right: 0;
-      top: 0; }
+      left: 0;
+      top: 0.15em; }
     .b-collapsible__button:active {
       color: #212121; }
-    .b-collapsible__button--active:after {
-      margin-top: 0.5em;
-      transform: scaleY(1); }
+    .b-collapsible__button--active:before {
+      top: 0;
+      transform: rotate(180deg); }
+  .b-collapsible__content {
+    animation: fadeInUp 300ms ease; }
   .b-collapsible__heading {
     display: inline; }
     .b-collapsible__heading:hover {
@@ -2759,6 +2766,20 @@ img {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.8rem; }
+
+.b-hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #6e6e6e; }
+  .b-hr--grey-light {
+    border-color: #d8dada; }
+  .b-hr--grey-lighter {
+    border-color: #f7f7f7; }
+  .b-hr--blue {
+    border-color: #0667c6; }
+  .b-hr--black {
+    border-color: #212121; }
 
 body {
   background: #bde4f9; }

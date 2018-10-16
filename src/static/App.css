@@ -2280,85 +2280,12 @@ h5,
   .l-hide-from-xlg {
     display: none; } }
 
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform: translateY(20px);
-    transform: translateY(20px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0); } }
-
-@-moz-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform: translateY(20px);
-    transform: translateY(20px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0); } }
-
-@-ms-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform: translateY(20px);
-    transform: translateY(20px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0); } }
-
-@-o-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform: translateY(20px);
-    transform: translateY(20px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0); } }
-
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform: translateY(20px);
-    transform: translateY(20px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0); } }
+  from {
+    transform: translateY(1em);
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .center-sm {
   text-align: left; }
@@ -2578,6 +2505,10 @@ h5,
   .b-nav-list__link:after {
     content: '→';
     margin-left: 1rem; }
+  .b-nav-list__link--background {
+    padding: 1rem; }
+    .b-nav-list__link--background:hover {
+      background: #f7f7f7; }
   .b-nav-list__link--anchor {
     justify-content: flex-start; }
     .b-nav-list__link--anchor:before {
@@ -2747,32 +2678,35 @@ img {
       box-shadow: 0 1px 0 #025169; }
 
 .b-chapter-heading {
+  display: block;
   position: relative;
   border-top: 7px solid #212121;
-  padding-top: 1em;
-  padding-right: 1.5em; }
+  padding: 0 3.5em 1em 1em;
+  border-bottom: 1px solid #0667c6;
+  box-shadow: 0 1px 0 transparent; }
+  .b-chapter-heading:link, .b-chapter-heading:hover, .b-chapter-heading:visited, .b-chapter-heading:active {
+    color: #212121;
+    box-shadow: none;
+    border-bottom: 0;
+    text-decoration: none; }
+  .b-chapter-heading:hover {
+    color: #0667c6;
+    background: #f7f7f7; }
+  .b-chapter-heading--overflow {
+    padding-left: 0; }
+    .b-chapter-heading--overflow:hover {
+      margin-left: -1rem;
+      padding-left: 1rem; }
   .b-chapter-heading--line-bottom {
     padding-top: 0;
     border-top: 0;
     border-bottom: 7px solid #212121;
     padding-bottom: 1em; }
-  .b-chapter-heading__link {
-    box-shadow: 0 1px 0 transparent; }
-    .b-chapter-heading__link:link, .b-chapter-heading__link:hover, .b-chapter-heading__link:visited, .b-chapter-heading__link:active {
-      color: #212121;
-      box-shadow: none;
-      border-bottom: 0;
-      text-decoration: none; }
-    .b-chapter-heading__link:hover {
-      color: #0667c6;
-      box-shadow: 0 1px 0 #0667c6; }
-  .b-chapter-heading__main-heading {
-    margin-top: 1rem; }
-    .b-chapter-heading__main-heading:after {
-      content: '→';
-      position: absolute;
-      right: 0;
-      top: 1.9em; }
+  .b-chapter-heading__main-heading:after {
+    content: '→';
+    position: absolute;
+    right: 1rem;
+    top: 1.3em; }
 
 .b-filter-list__list {
   list-style-type: none;
@@ -2892,7 +2826,8 @@ img {
 
 .b-collapsible {
   border-bottom: 1px solid #212121;
-  padding-bottom: 2em; }
+  padding-bottom: 2em;
+  padding-left: 2em; }
   .b-collapsible__button {
     position: relative;
     background: none;
@@ -2900,25 +2835,27 @@ img {
     text-align: left;
     padding: 0;
     display: inline;
-    font-size: 1em;
-    padding-right: 2.5em; }
-    .b-collapsible__button:after {
+    font-size: 1em; }
+    .b-collapsible__button:before {
       display: block;
       position: absolute;
       content: ' ';
       width: 1em;
       height: 1em;
-      transform: scaleY(-1);
+      margin-left: -2em;
+      transform: rotate(90deg);
       background-image: url(./icons/chevron_black.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      right: 0;
-      top: 0; }
+      left: 0;
+      top: 0.15em; }
     .b-collapsible__button:active {
       color: #212121; }
-    .b-collapsible__button--active:after {
-      margin-top: 0.5em;
-      transform: scaleY(1); }
+    .b-collapsible__button--active:before {
+      top: 0;
+      transform: rotate(180deg); }
+  .b-collapsible__content {
+    animation: fadeInUp 300ms ease; }
   .b-collapsible__heading {
     display: inline; }
     .b-collapsible__heading:hover {
@@ -2929,3 +2866,17 @@ img {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.8rem; }
+
+.b-hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #6e6e6e; }
+  .b-hr--grey-light {
+    border-color: #d8dada; }
+  .b-hr--grey-lighter {
+    border-color: #f7f7f7; }
+  .b-hr--blue {
+    border-color: #0667c6; }
+  .b-hr--black {
+    border-color: #212121; }

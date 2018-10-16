@@ -121,6 +121,7 @@
 .b-collapsible {
   border-bottom: 1px solid $black;
   padding-bottom: 2em;
+  padding-left: 2em;
 
   &__button {
     position: relative;
@@ -130,20 +131,20 @@
     padding: 0;
     display: inline;
     font-size: 1em;
-    padding-right: 2.5em;
 
-    &:after {
+    &:before {
       display: block;
       position: absolute;
       content: ' ';
       width: 1em;
       height: 1em;
-      transform: scaleY(-1);
+      margin-left: -2em;
+      transform: rotate(90deg);
       background-image: url(./icons/chevron_black.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      right: 0;
-      top: 0;
+      left: 0;
+      top: 0.15em;
     }
 
     &:active {
@@ -151,14 +152,14 @@
     }
 
     &--active {
-      &:after {
-        margin-top: 0.5em;
-        transform: scaleY(1);
+      &:before {
+        top: 0;
+        transform: rotate(180deg);
       }
     }
   }
   &__content {
-    animation: fadeInUp 250ms ease-out;
+    animation: fadeInUp 300ms ease;
   }
   &__heading {
     display: inline;
@@ -173,5 +174,24 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: $meta-text;
+  }
+}
+
+.b-hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid $grey;
+  &--grey-light {
+    border-color: $grey-light;
+  }
+  &--grey-lighter {
+    border-color: $grey-lighter;
+  }
+  &--blue {
+    border-color: $blue;
+  }
+  &--black {
+    border-color: $black;
   }
 }

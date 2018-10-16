@@ -1,6 +1,9 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import zenscroll from 'zenscroll';
+
 import Heading from './Heading';
 
 const buttonClasses = active =>
@@ -12,6 +15,8 @@ const buttonClasses = active =>
 class Collapsible extends React.Component {
   constructor(props) {
     super(props);
+
+    this.compRef = React.createRef();
 
     this.state = {
       collapsed: false
@@ -25,10 +30,14 @@ class Collapsible extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+    zenscroll.intoView(ReactDOM.findDOMNode(this), 200);
+  }
+
   render() {
     const { props } = this;
     return (
-      <div className="b-collapsible">
+      <div className="b-collapsible lolomg">
         <button
           className={buttonClasses(this.state.collapsed)}
           aria-expanded={this.state.collapsed}

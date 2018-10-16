@@ -10,7 +10,9 @@ const ChapterPage = () => (
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
           lineBottom
+          overflow
         />
+        <hr className="b-hr b-hr--black" />
         <div className="l-mt-3">
           <Collapsible
             heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"

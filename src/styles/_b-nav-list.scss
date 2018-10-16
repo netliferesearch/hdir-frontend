@@ -67,6 +67,14 @@
       margin-left: 1rem;
     }
 
+    &--background {
+      padding: 1rem;
+
+      &:hover {
+        background: $grey-lighter;
+      }
+    }
+
     &--anchor {
       justify-content: flex-start;
 

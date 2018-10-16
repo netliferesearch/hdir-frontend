@@ -15,6 +15,13 @@ const listItemsClasses = columns =>
     'b-nav-list__items--columns': columns
   });
 
+const listLinkClasses = (anchor, background) =>
+  classNames({
+    'b-nav-list__link': true,
+    'b-nav-list__link--anchor': anchor,
+    'b-nav-list__link--background': background
+  });
+
 const NavList = props => {
   const { list: list = [] } = props;
 
@@ -28,10 +35,7 @@ const NavList = props => {
           <li className={listItemClasses(props.anchor, props.columns)}>
             <a
               href={item.url}
-              className={classNames({
-                'b-nav-list__link': true,
-                'b-nav-list__link--anchor': props.anchor
-              })}
+              className={listLinkClasses(props.anchor, props.background)}
             >
               {item.description && (
                 <div className="b-nav-list__item-description">
@@ -59,6 +63,7 @@ NavList.propTypes = {
   ).isRequired,
   type: PropTypes.string,
   columns: PropTypes.bool,
+  background: PropTypes.bool,
   id: PropTypes.string
 };
 

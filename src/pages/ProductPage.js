@@ -16,9 +16,10 @@ const ProductPage = () => (
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
         />
-
-        <div className="l-mt-3 l-hide-to-md">
+        <hr className="b-hr b-hr--blue" />
+        <div className="l-hide-to-md">
           <NavList
+            background
             list={[
               {
                 description: 'SVAK ANBEFALING',
@@ -41,9 +42,10 @@ const ProductPage = () => (
           heading="Diagnostikk og tiltak"
           subheading="kapittel 2"
         />
-
-        <div className="l-mt-3 l-hide-to-md">
+        <hr className="b-hr b-hr--blue" />
+        <div className="l-hide-to-md">
           <NavList
+            background
             list={[
               {
                 description: 'Kapittel 2.1',
