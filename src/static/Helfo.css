@@ -2720,44 +2720,45 @@ img {
     text-decoration: none;
     box-shadow: 0 1px 0 #b969a3; }
 
-.b-collapsible__button {
-  position: relative;
-  background: none;
-  border: 0;
-  text-align: left;
-  padding: 0;
-  display: inline;
-  font-size: 1em;
-  padding-right: 2.5em; }
-  .b-collapsible__button:after {
-    display: block;
-    position: absolute;
-    content: ' ';
-    width: 1.5em;
-    height: 1.5em;
-    transform: scaleY(-1);
-    background-image: url(./icons/chevron_black.svg);
-    background-position: 0 0.25em;
-    background-repeat: no-repeat;
-    background-size: contain;
-    right: 0;
-    top: 0; }
-  .b-collapsible__button:active {
-    color: #212121; }
-  .b-collapsible__button--active:after {
-    transform: scaleY(1); }
-
-.b-collapsible__heading {
-  display: inline; }
-  .b-collapsible__heading:hover {
-    cursor: pointer;
-    box-shadow: 0 1px 0 #212121; }
-
-.b-collapsible__subheading {
-  border-bottom: 1px dotted #0667c6;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.8rem; }
+.b-collapsible {
+  border-bottom: 1px solid #212121;
+  padding-bottom: 2em; }
+  .b-collapsible__button {
+    position: relative;
+    background: none;
+    border: 0;
+    text-align: left;
+    padding: 0;
+    display: inline;
+    font-size: 1em;
+    padding-right: 2.5em; }
+    .b-collapsible__button:after {
+      display: block;
+      position: absolute;
+      content: ' ';
+      width: 1em;
+      height: 1em;
+      transform: scaleY(-1);
+      background-image: url(./icons/chevron_black.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: 0;
+      top: 0; }
+    .b-collapsible__button:active {
+      color: #212121; }
+    .b-collapsible__button--active:after {
+      margin-top: 0.5em;
+      transform: scaleY(1); }
+  .b-collapsible__heading {
+    display: inline; }
+    .b-collapsible__heading:hover {
+      cursor: pointer;
+      box-shadow: 0 1px 0 #212121; }
+  .b-collapsible__subheading {
+    border-bottom: 1px dotted #0667c6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem; }
 
 body {
   background: #bde4f9; }
