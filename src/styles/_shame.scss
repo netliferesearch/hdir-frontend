@@ -158,7 +158,7 @@
     }
   }
   &__content {
-    // @include fadeInUp();
+    animation: fadeInUp 250ms ease-out;
   }
   &__heading {
     display: inline;

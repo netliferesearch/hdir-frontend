@@ -1,0 +1,9 @@
+@keyframes fadeInUp {
+  from {
+    transform: translateY(1em);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
