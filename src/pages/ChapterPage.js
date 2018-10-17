@@ -1,6 +1,7 @@
 import React from 'react';
 import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
+import PageMeta from '../components/PageMeta';
 
 const ChapterPage = () => (
   <div className="l-container">
@@ -82,6 +83,7 @@ const ChapterPage = () => (
             <p>etc.</p>
           </Collapsible>
         </div>
+        <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
       </div>
     </div>
   </div>

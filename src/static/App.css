@@ -2527,22 +2527,22 @@ h5,
 .b-nav-list__item-title {
   width: 100%; }
 
-.b-article-info {
+.b-page-meta {
   color: #6e6e6e;
   font-size: 0.8rem; }
-  .b-article-info__text {
+  .b-page-meta__text {
     display: inline-block;
     border-right: 1px solid #6e6e6e;
     padding-right: 2em;
     margin-right: 2em; }
-  .b-article-info__link {
+  .b-page-meta__link {
     display: inline-block; }
-    .b-article-info__link:link, .b-article-info__link:hover, .b-article-info__link:visited, .b-article-info__link:active {
+    .b-page-meta__link:link, .b-page-meta__link:hover, .b-page-meta__link:visited, .b-page-meta__link:active {
       color: #025169;
       box-shadow: none;
       border-bottom: 0;
       text-decoration: none; }
-    .b-article-info__link:after {
+    .b-page-meta__link:after {
       display: inline-block;
       margin-left: 0.5em;
       content: ' →'; }

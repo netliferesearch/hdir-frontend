@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import PageMeta from './PageMeta';
+
 const imageToggle = image =>
   classNames({
     'col-xs-12': true,
@@ -23,17 +25,7 @@ const ArticleIntro = props => (
         </p>
       </div>
     )}
-    <p className="b-article-info">
-      <span className="b-article-info__text">
-        Først publisert: {props.publishDate}
-      </span>
-      <span className="b-article-info__text">
-        Sist endret: {props.editDate}
-      </span>
-      <a href="#" className="b-article-info__link l-mt-1">
-        Se tidligere utgaver
-      </a>
-    </p>
+    <PageMeta publishDate={props.publishDate} editDate={props.editDate} />
   </div>
 );
 
