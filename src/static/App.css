@@ -2476,7 +2476,7 @@ h5,
       box-sizing: border-box; } }
   .b-nav-list__item--anchor {
     padding-right: 0;
-    padding-left: 1.5rem; }
+    padding-left: 0; }
   .b-nav-list__item--blue {
     border-left: 0.25em solid #82b3e2;
     padding-left: 1.5em; }
@@ -2519,7 +2519,7 @@ h5,
       content: '↓';
       color: #0667c6;
       display: inline-block;
-      margin-left: -1.25rem;
+      margin-left: 0;
       padding-right: 0.75rem; }
     .b-nav-list__link--anchor:after {
       content: ''; }

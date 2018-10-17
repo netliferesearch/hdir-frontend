@@ -27,7 +27,7 @@
 
     &--anchor {
       padding-right: 0;
-      padding-left: 1.5rem;
+      padding-left: 0;
     }
 
     &--blue {
@@ -83,7 +83,7 @@
         content: '↓';
         color: $secondary-color;
         display: inline-block;
-        margin-left: -1.25rem;
+        margin-left: 0;
         padding-right: 0.75rem;
       }
       &:after {

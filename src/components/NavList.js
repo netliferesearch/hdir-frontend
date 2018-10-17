@@ -70,7 +70,7 @@ NavList.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
+      description: PropTypes.string,
       url: PropTypes.string.isRequired
     })
   ).isRequired,
