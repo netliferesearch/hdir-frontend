@@ -15,8 +15,6 @@ class Collapsible extends React.Component {
   constructor(props) {
     super(props);
 
-    this.compRef = React.createRef();
-
     this.state = {
       collapsed: false
     };
