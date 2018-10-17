@@ -2716,15 +2716,21 @@ img {
 
 .b-filter-list__list-item {
   display: inline-block;
-  margin-right: 2em;
+  margin-right: 1em;
   text-transform: uppercase;
   font-size: 0.8rem; }
 
-.b-filter-list__list-item-link--active:link, .b-filter-list__list-item-link--active:hover, .b-filter-list__list-item-link--active:visited, .b-filter-list__list-item-link--active:active {
-  color: #212121;
-  box-shadow: none;
-  border-bottom: 0;
-  text-decoration: none; }
+.b-filter-list__list-item-link {
+  margin: 0.5em; }
+  .b-filter-list__list-item-link--active {
+    background-color: #d9f9d9;
+    margin: 0;
+    padding: 0.5em; }
+    .b-filter-list__list-item-link--active:link, .b-filter-list__list-item-link--active:hover, .b-filter-list__list-item-link--active:visited, .b-filter-list__list-item-link--active:active {
+      color: #212121;
+      box-shadow: none;
+      border-bottom: 0;
+      text-decoration: none; }
 
 .frontpage-wrapper {
   padding: 2rem;

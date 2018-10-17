@@ -6,12 +6,16 @@
   }
   &__list-item {
     display: inline-block;
-    margin-right: 2em;
+    margin-right: 1em;
     text-transform: uppercase;
     font-size: $meta-text;
   }
   &__list-item-link {
+    margin: 0.5em;
     &--active {
+      background-color: #d9f9d9; // TODO: Use a variable for this
+      margin: 0;
+      padding: 0.5em;
       @include link-init($black);
     }
   }
