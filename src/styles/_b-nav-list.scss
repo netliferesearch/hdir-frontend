@@ -47,6 +47,14 @@
       padding-left: 1.5em;
     }
   }
+  &__item-type {
+    font-size: $meta-text;
+    color: $grey;
+
+    &--hide {
+      display: none;
+    }
+  }
   &__link {
     display: flex;
     justify-content: space-between;
@@ -54,25 +62,18 @@
 
     @include link-init($black);
 
-    padding: 1rem 0;
-    height: 100%;
+    padding: 1rem;
+    height: calc(100% - 2rem);
 
     &:hover {
       color: $blue;
+      background: $grey-lighter;
     }
 
     &:after {
       // color: $secondary-color;
       content: '→';
       margin-left: 1rem;
-    }
-
-    &--background {
-      padding: 1rem;
-
-      &:hover {
-        background: $grey-lighter;
-      }
     }
 
     &--anchor {

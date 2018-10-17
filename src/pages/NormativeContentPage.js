@@ -59,44 +59,45 @@ const NormativeContentPage = () => (
       <article className="l-mt-4">
         <div className="l-mb-3">
           <NavList
+            background
             heading="A"
             columns
             list={[
               {
                 title: 'Antibiotika',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               },
               {
                 title:
                   'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
                 url: '#',
-                type: 'veileder'
+                type: 'Veileder'
               },
               {
                 title: 'Antibiotika',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'Antibiotika',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               }
             ]}
           />
@@ -105,16 +106,17 @@ const NormativeContentPage = () => (
           <NavList
             heading="B"
             columns
+            background
             list={[
               {
                 title: 'Antibiotika',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               }
             ]}
           />
@@ -123,17 +125,18 @@ const NormativeContentPage = () => (
           <NavList
             heading="C"
             columns
+            background
             list={[
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'nasjonale-faglige-retningslinjer'
+                type: 'Nasjonale faglige retningslinjer'
               },
               {
                 title:
                   'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
                 url: '#',
-                type: 'veileder'
+                type: 'Veileder'
               }
             ]}
           />

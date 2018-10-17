@@ -30,7 +30,7 @@ class Collapsible extends React.Component {
     super(props);
 
     this.state = {
-      collapsed: true
+      collapsed: false
     };
     this.toggleCollapse = this.toggleCollapse.bind(this);
   }
@@ -42,9 +42,11 @@ class Collapsible extends React.Component {
   }
 
   componentDidMount() {
+    /*
     this.setState({
       collapsed: false
     });
+    */
   }
 
   componentDidUpdate() {

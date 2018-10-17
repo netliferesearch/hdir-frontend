@@ -15,11 +15,16 @@ const listItemsClasses = columns =>
     'b-nav-list__items--columns': columns
   });
 
-const listLinkClasses = (anchor, background) =>
+const listLinkClasses = anchor =>
   classNames({
     'b-nav-list__link': true,
-    'b-nav-list__link--anchor': anchor,
-    'b-nav-list__link--background': background
+    'b-nav-list__link--anchor': anchor
+  });
+
+const itemTypeClasses = hide =>
+  classNames({
+    'b-nav-list__item-type': true,
+    'b-nav-list__item-type--hide': hide
   });
 
 const NavList = props => {
@@ -33,16 +38,20 @@ const NavList = props => {
       <ul className={listItemsClasses(props.columns)}>
         {list.map(item => (
           <li className={listItemClasses(props.anchor, props.columns)}>
-            <a
-              href={item.url}
-              className={listLinkClasses(props.anchor, props.background)}
-            >
+            <a href={item.url} className={listLinkClasses(props.anchor)}>
               {item.description && (
                 <div className="b-nav-list__item-description">
                   {item.description}
                 </div>
               )}
-              <span className="b-nav-list__item-title">{item.title}</span>
+              <div className="b-nav-list__item-title">
+                {item.title}
+                {item.type && (
+                  <div className={itemTypeClasses(props.hideType)}>
+                    {item.type}
+                  </div>
+                )}
+              </div>
             </a>
           </li>
         ))}
@@ -63,8 +72,8 @@ NavList.propTypes = {
   ).isRequired,
   type: PropTypes.string,
   columns: PropTypes.bool,
-  background: PropTypes.bool,
-  id: PropTypes.string
+  id: PropTypes.string,
+  hideType: PropTypes.bool
 };
 
 NavList.defaultProps = {

@@ -14,7 +14,7 @@ const ChapterPage = () => (
           lineBottom
           overflow
         />
-        <div className="l-mt-3">
+        <div className="l-mt-1">
           <Collapsible
             heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
             subheading="STERK ANBEFALING"

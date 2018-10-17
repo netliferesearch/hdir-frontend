@@ -2490,26 +2490,29 @@ h5,
     border-left: 0.25em solid #ffc900;
     padding-left: 1.5em; }
 
+.b-nav-list__item-type {
+  font-size: 0.8rem;
+  color: #6e6e6e; }
+  .b-nav-list__item-type--hide {
+    display: none; }
+
 .b-nav-list__link {
   display: flex;
   justify-content: space-between;
   text-align: left;
-  padding: 1rem 0;
-  height: 100%; }
+  padding: 1rem;
+  height: calc(100% - 2rem); }
   .b-nav-list__link:link, .b-nav-list__link:hover, .b-nav-list__link:visited, .b-nav-list__link:active {
     color: #212121;
     box-shadow: none;
     border-bottom: 0;
     text-decoration: none; }
   .b-nav-list__link:hover {
-    color: #0667c6; }
+    color: #0667c6;
+    background: #f7f7f7; }
   .b-nav-list__link:after {
     content: '→';
     margin-left: 1rem; }
-  .b-nav-list__link--background {
-    padding: 1rem; }
-    .b-nav-list__link--background:hover {
-      background: #f7f7f7; }
   .b-nav-list__link--anchor {
     justify-content: flex-start; }
     .b-nav-list__link--anchor:before {
@@ -2854,7 +2857,7 @@ img {
       height: 1em;
       margin-left: -2em;
       transform: rotate(90deg);
-      background-image: url(./icons/chevron_black.svg);
+      background-image: url(./icons/chevron.svg);
       background-repeat: no-repeat;
       background-size: contain;
       left: 0;
