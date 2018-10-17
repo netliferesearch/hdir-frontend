@@ -15,7 +15,7 @@ const ChapterHeading = props => (
   <a href="#" className={headingClasses(props.lineBottom, props.overflow)}>
     <h2>
       <span className="h4">{props.subheading}</span>
-      <br />
+      <div className="l-mt-1" />
       <span className="h2 b-chapter-heading__main-heading">
         {props.heading}
       </span>
