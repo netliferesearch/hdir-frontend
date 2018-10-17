@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 
 class FilterList extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class FilterList extends Component {
       <div className="b-filter-list">
         <ul className="b-filter-list__list">
           {this.props.list.map(item => (
-            <li className="b-filter-list__list-item">
+            <li className="b-filter-list__list-item" key={shortid.generate()}>
               <a
                 href="#"
                 className={classNames({
@@ -52,7 +53,7 @@ class FilterList extends Component {
 }
 
 FilterList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.object).isRequired
+  list: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default FilterList;

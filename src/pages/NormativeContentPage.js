@@ -66,38 +66,38 @@ const NormativeContentPage = () => (
               {
                 title: 'Antibiotika',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               },
               {
                 title:
                   'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
                 url: '#',
-                type: 'Veileder'
+                meta: 'Veileder'
               },
               {
                 title: 'Antibiotika',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'Antibiotika',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               }
             ]}
           />
@@ -106,17 +106,16 @@ const NormativeContentPage = () => (
           <NavList
             heading="B"
             columns
-            background
             list={[
               {
                 title: 'Antibiotika',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               },
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               }
             ]}
           />
@@ -125,18 +124,17 @@ const NormativeContentPage = () => (
           <NavList
             heading="C"
             columns
-            background
             list={[
               {
                 title: 'ADHD',
                 url: '#',
-                type: 'Nasjonale faglige retningslinjer'
+                meta: 'Nasjonale faglige retningslinjer'
               },
               {
                 title:
                   'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
                 url: '#',
-                type: 'Veileder'
+                meta: 'Veileder'
               }
             ]}
           />

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
+import shortid from 'shortid';
 
 import ContentLabel from './ContentLabel';
 
@@ -44,7 +45,11 @@ const renderSuggestion = suggestion => (
     <div className="suggestion-title">{suggestion.title}</div>
     <div className="suggestion-intro">{suggestion.intro}</div>
     <div>
-      {suggestion.codes.map(code => <ContentLabel code>{code}</ContentLabel>)}
+      {suggestion.codes.map(code => (
+        <ContentLabel code key={shortid.generate()}>
+          {code}
+        </ContentLabel>
+      ))}
     </div>
   </div>
 );

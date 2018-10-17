@@ -151,18 +151,18 @@ storiesOf('NavList', module)
             title:
               'Diagnostisk pakkeforløp for pasienter med uspesifikke symptomer på alvorlig sykdom som kan være kreft',
             url: '#',
-            type: 'nasjonale-faglige-retningslinjer'
+            meta: 'nasjonale-faglige-retningslinjer'
           },
           {
             title: 'DEF',
             url: '#',
-            type: 'rundskriv'
+            meta: 'rundskriv'
           },
           {
             title:
               'Behandling og rehabilitering av rusmiddelproblemer og avhengighet. Behandling og rehabilitering av rusmiddelproblemer og avhengighet',
             url: '#',
-            type: 'nasjonale-faglige-retningslinjer'
+            meta: 'nasjonale-faglige-retningslinjer'
           }
         ]}
       />

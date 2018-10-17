@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import shortid from 'shortid';
 
 import ContentLabel from './ContentLabel';
 
@@ -18,7 +19,7 @@ const FeatureList = props => {
       </h2>
       <ul className="b-feature-list__items">
         {props.list.map(item => (
-          <li className="b-feature-list__item" key={item.url}>
+          <li className="b-feature-list__item" key={shortid.generate()}>
             <a href={item.url} className="b-feature-list__item-link">
               {item.linkText}
             </a>

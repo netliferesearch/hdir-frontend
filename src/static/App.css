@@ -2490,10 +2490,10 @@ h5,
     border-left: 0.25em solid #ffc900;
     padding-left: 1.5em; }
 
-.b-nav-list__item-type {
+.b-nav-list__item-meta {
   font-size: 0.8rem;
   color: #6e6e6e; }
-  .b-nav-list__item-type--hide {
+  .b-nav-list__item-meta--hide {
     display: none; }
 
 .b-nav-list__link {

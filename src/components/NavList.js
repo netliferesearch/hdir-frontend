@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import shortid from 'shortid';
 
 const listItemClasses = (anchor, columns) =>
   classNames({
@@ -21,10 +22,10 @@ const listLinkClasses = anchor =>
     'b-nav-list__link--anchor': anchor
   });
 
-const itemTypeClasses = hide =>
+const itemMetaClasses = hide =>
   classNames({
-    'b-nav-list__item-type': true,
-    'b-nav-list__item-type--hide': hide
+    'b-nav-list__item-meta': true,
+    'b-nav-list__item-meta--hide': hide
   });
 
 const NavList = props => {
@@ -37,7 +38,10 @@ const NavList = props => {
       )}
       <ul className={listItemsClasses(props.columns)}>
         {list.map(item => (
-          <li className={listItemClasses(props.anchor, props.columns)}>
+          <li
+            className={listItemClasses(props.anchor, props.columns)}
+            key={shortid.generate()}
+          >
             <a href={item.url} className={listLinkClasses(props.anchor)}>
               {item.description && (
                 <div className="b-nav-list__item-description">
@@ -46,9 +50,9 @@ const NavList = props => {
               )}
               <div className="b-nav-list__item-title">
                 {item.title}
-                {item.type && (
-                  <div className={itemTypeClasses(props.hideType)}>
-                    {item.type}
+                {item.meta && (
+                  <div className={itemMetaClasses(props.hideMeta)}>
+                    {item.meta}
                   </div>
                 )}
               </div>
@@ -70,15 +74,15 @@ NavList.propTypes = {
       url: PropTypes.string.isRequired
     })
   ).isRequired,
-  type: PropTypes.string,
+  meta: PropTypes.string,
   columns: PropTypes.bool,
   id: PropTypes.string,
-  hideType: PropTypes.bool
+  hideMeta: PropTypes.bool
 };
 
 NavList.defaultProps = {
   anchor: false,
-  type: '',
+  meta: '',
   id: ''
 };
 
