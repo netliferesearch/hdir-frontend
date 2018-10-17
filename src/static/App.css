@@ -2081,7 +2081,8 @@ h3,
 
 h4,
 .h4 {
-  font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1440 - 400)); }
+  font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1440 - 400));
+  font-weight: bold; }
 
 h5,
 .h5 {
@@ -2825,9 +2826,12 @@ img {
     box-shadow: 0 1px 0 #b969a3; }
 
 .b-collapsible {
-  border-bottom: 1px solid #212121;
-  padding-bottom: 2em;
-  padding-left: 2em; }
+  padding-left: 2em;
+  border-top: 7px solid #212121;
+  padding-top: 2em; }
+  .b-collapsible--small {
+    border-width: 1px;
+    padding-left: 2em; }
   .b-collapsible__button {
     position: relative;
     background: none;
@@ -2851,6 +2855,10 @@ img {
       top: 0.15em; }
     .b-collapsible__button:active {
       color: #212121; }
+    .b-collapsible__button--small:before {
+      top: 0.25em;
+      width: 0.66em;
+      height: 0.66em; }
     .b-collapsible__button--active:before {
       top: 0;
       transform: rotate(180deg); }

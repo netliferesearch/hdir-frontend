@@ -2,18 +2,18 @@ import React from 'react';
 import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
+import Footer from '../components/Footer';
 
 const ChapterPage = () => (
   <div className="l-container">
     <div className="row">
-      <div className="col-xs-9 col-xs-offset-3 l-mt-4">
+      <div className="col-md-9 col-md-offset-3 l-mt-4">
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
           lineBottom
           overflow
         />
-        <hr className="b-hr b-hr--black" />
         <div className="l-mt-3">
           <Collapsible
             heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
@@ -81,10 +81,56 @@ const ChapterPage = () => (
               nå behandlingsmålene for glukose
             </p>
             <p>etc.</p>
+            <div className="l-mt-2">
+              <Collapsible
+                heading="Seksjon under: 1"
+                subheading="SVAK ANBEFALING"
+                small
+              >
+                <p>
+                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
+                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
+                  og for å forhindre for stor vektøkning i svangerskapet. Det
+                  anbefales at kostanamnese benyttes i dette arbeidet.
+                </p>
+              </Collapsible>
+            </div>
+            <div className="l-mt-2">
+              <Collapsible
+                heading="Seksjon under: 2"
+                subheading="SVAK ANBEFALING"
+                small
+              >
+                <p>
+                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
+                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
+                  og for å forhindre for stor vektøkning i svangerskapet. Det
+                  anbefales at kostanamnese benyttes i dette arbeidet.
+                </p>
+              </Collapsible>
+            </div>
           </Collapsible>
         </div>
-        <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+        <div className="l-mt-4">
+          <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+        </div>
+        <div className="b-bleed l-mt-5">
+          <strong>Kontakt:</strong>
+          <br />
+          <a href="#" className="b-bleed__link">
+            spesialisthelsetjenester@helsedir.no
+          </a>
+          <br />
+          <a href="#" className="b-bleed__link">
+            navn.etternavn@helsedir.no
+          </a>
+          <br />
+          <a href="#" className="b-bleed__link">
+            999 99 999
+          </a>
+        </div>
       </div>
+      <Footer />
     </div>
   </div>
 );

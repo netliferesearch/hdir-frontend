@@ -119,9 +119,14 @@
 }
 
 .b-collapsible {
-  border-bottom: 1px solid $black;
-  padding-bottom: 2em;
   padding-left: 2em;
+  border-top: 7px solid $black;
+  padding-top: 2em;
+
+  &--small {
+    border-width: 1px;
+    padding-left: 2em;
+  }
 
   &__button {
     position: relative;
@@ -149,6 +154,14 @@
 
     &:active {
       color: $black;
+    }
+
+    &--small {
+      &:before {
+        top: 0.25em;
+        width: 0.66em;
+        height: 0.66em;
+      }
     }
 
     &--active {

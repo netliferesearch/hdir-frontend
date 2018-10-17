@@ -5,10 +5,24 @@ import zenscroll from 'zenscroll';
 
 import Heading from './Heading';
 
-const buttonClasses = active =>
+const buttonClasses = (active, small) =>
   classNames({
     'b-collapsible__button': true,
-    'b-collapsible__button--active': active
+    'b-collapsible__button--active': active,
+    'b-collapsible__button--small': small
+  });
+
+const headingClasses = small =>
+  classNames({
+    'b-collapsible__heading': true,
+    h3: !small,
+    h4: small
+  });
+
+const collapsibleClasses = small =>
+  classNames({
+    'b-collapsible': true,
+    'b-collapsible--small': small
   });
 
 class Collapsible extends React.Component {
@@ -16,7 +30,7 @@ class Collapsible extends React.Component {
     super(props);
 
     this.state = {
-      collapsed: false
+      collapsed: true
     };
     this.toggleCollapse = this.toggleCollapse.bind(this);
   }
@@ -27,6 +41,12 @@ class Collapsible extends React.Component {
     });
   }
 
+  componentDidMount() {
+    this.setState({
+      collapsed: false
+    });
+  }
+
   componentDidUpdate() {
     zenscroll.intoView(this.domNode, 300);
   }
@@ -34,14 +54,17 @@ class Collapsible extends React.Component {
   render() {
     const { props } = this;
     return (
-      <div className="b-collapsible lolomg" ref={ref => (this.domNode = ref)}>
+      <div
+        className={collapsibleClasses(props.small)}
+        ref={ref => (this.domNode = ref)}
+      >
         <button
-          className={buttonClasses(this.state.collapsed)}
+          className={buttonClasses(this.state.collapsed, props.small)}
           aria-expanded={this.state.collapsed}
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
         >
-          <Heading h2 className="b-collapsible__heading h3">
+          <Heading h2 className={headingClasses(props.small)}>
             Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert
             på kostanamnese ved behandling av svangerskapsdiabetes
           </Heading>
@@ -65,7 +88,8 @@ class Collapsible extends React.Component {
 }
 
 Collapsible.propTypes = {
-  heading: PropTypes.string
+  heading: PropTypes.string,
+  small: PropTypes.bool
 };
 
 export default Collapsible;
