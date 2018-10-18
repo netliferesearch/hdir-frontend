@@ -3,11 +3,49 @@ import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
 import Footer from '../components/Footer';
+import NavList from '../components/NavList';
 
 const ChapterPage = () => (
-  <div className="l-container">
+  <div className="l-container l-mt-3">
     <div className="row">
-      <div className="col-md-9 col-md-offset-3 l-mt-4">
+      <div className="col-md-4">
+        <NavList
+          noArrow
+          small
+          list={[
+            {
+              title: 'KAPITTEL 1',
+              url: '#',
+              meta: 'Nasjonale faglige retningslinjer'
+            },
+            {
+              title: 'KAPITTEL 2',
+              url: '#',
+              meta: 'Nasjonale faglige retningslinjer',
+              active: true,
+              children: [
+                {
+                  title: 'Bla bla bla',
+                  url: '#',
+                  meta: '2.1'
+                },
+                {
+                  title: 'Lorum ipsum',
+                  url: '#',
+                  meta: '2.2',
+                  active: true
+                }
+              ]
+            },
+            {
+              title: 'KAPITTEL 3',
+              url: '#',
+              meta: 'Nasjonale faglige retningslinjer'
+            }
+          ]}
+        />
+      </div>
+      <div className="col-md-7 col-md-offset-1">
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"

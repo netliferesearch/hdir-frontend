@@ -42,11 +42,6 @@ $space-directions: (
     }
   }
 
-  &-sticky {
-    position: sticky;
-    top: 2rem;
-  }
-
   // flexboxgrid-breakpoints is in settings.scss
   @each $name, $value in $flexboxgrid-breakpoints {
     &-hide-to-#{$name} {

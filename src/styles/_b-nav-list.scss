@@ -62,8 +62,8 @@
 
     @include link-init($black);
 
-    padding: 1rem;
-    height: calc(100% - 2rem);
+    padding: 1em;
+    height: calc(100% - 2em);
 
     &:hover {
       color: $blue;
@@ -71,9 +71,24 @@
     }
 
     &:after {
-      // color: $secondary-color;
       content: '→';
       margin-left: 1rem;
+    }
+
+    &--active {
+      background-color: #d0ffd0 !important; // We use important here, because we don't have the hover state to override it.
+    }
+    &--active-child {
+      background-color: #91ec91 !important;
+    }
+
+    &--no-arrow {
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
     }
 
     &--anchor {
@@ -98,5 +113,33 @@
   }
   &__item-title {
     width: 100%;
+  }
+  &--small {
+    font-size: $meta-text;
+  }
+  &--sticky {
+    position: sticky;
+    top: 2rem;
+  }
+  &__child-items {
+    padding-left: 2em;
+    list-style-type: none;
+    margin: 0;
+
+    li:last-child {
+      border-bottom: 0;
+    }
+  }
+  &__child-column {
+    display: flex;
+    min-width: 2.5em;
+
+    &:first-child {
+      padding-right: 0.5em;
+    }
+
+    &:last-child {
+      flex-grow: 1;
+    }
   }
 }

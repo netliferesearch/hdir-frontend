@@ -19,7 +19,6 @@ const ProductPage = () => (
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
           <NavList
-            background
             list={[
               {
                 description: 'SVAK ANBEFALING',
@@ -45,7 +44,6 @@ const ProductPage = () => (
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
           <NavList
-            background
             list={[
               {
                 description: 'Kapittel 2.1',

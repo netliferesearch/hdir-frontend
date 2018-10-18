@@ -59,7 +59,6 @@ const NormativeContentPage = () => (
       <article className="l-mt-4">
         <div className="l-mb-3">
           <NavList
-            background
             heading="A"
             columns
             list={[

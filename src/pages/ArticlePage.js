@@ -33,6 +33,7 @@ const ArticlePage = () => (
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
             anchor
+            sticky
             className="l-sticky"
             heading="Innhold på denne siden"
             list={[
