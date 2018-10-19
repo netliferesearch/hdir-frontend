@@ -2819,5 +2819,16 @@ img {
   .b-hr--black {
     border-color: #212121; }
 
+.t-body-text h1,
+.t-body-text h2,
+.t-body-text h3,
+.t-body-text h4,
+.t-body-text h5,
+.t-body-text h6 {
+  margin-top: 1.5em; }
+
+.t-body-text p {
+  margin: 0.75em 0; }
+
 body {
   background: #bde4f9; }

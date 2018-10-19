@@ -19,9 +19,9 @@ const ContentLabel = props => {
         <Link to="/produkt" className="b-main-header__link">
           Produkt
         </Link>
-        <Link to="/søkeresultat" className="b-main-header__link">
+        {/*<Link to="/søkeresultat" className="b-main-header__link">
           SERP
-        </Link>
+        </Link>*/}
         <Link to="/søkeresultat2" className="b-main-header__link">
           Enkel SERP
         </Link>
@@ -29,7 +29,13 @@ const ContentLabel = props => {
           Artikkel
         </Link>
         <Link to="/normerende-innhold" className="b-main-header__link">
-          Normerende innhold
+          Normerende
+        </Link>
+        <Link to="/høring" className="b-main-header__link">
+          Høringer
+        </Link>
+        <Link to="/anbefaling" className="b-main-header__link">
+          Anbefaling
         </Link>
       </nav>
     </div>

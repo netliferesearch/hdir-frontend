@@ -2,7 +2,6 @@ import React from 'react';
 import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
-import Footer from '../components/Footer';
 import NavList from '../components/NavList';
 
 const ChapterPage = () => (
@@ -168,7 +167,6 @@ const ChapterPage = () => (
           </a>
         </div>
       </div>
-      <Footer />
     </div>
   </div>
 );

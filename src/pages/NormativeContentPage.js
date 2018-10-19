@@ -1,7 +1,6 @@
 import React from 'react';
 
 import NavList from '../components/NavList';
-import Footer from '../components/Footer';
 import FilterList from '../components/FilterList';
 
 const NormativeContentPage = () => (
@@ -140,7 +139,6 @@ const NormativeContentPage = () => (
         </div>
       </article>
     </div>
-    <Footer />
   </div>
 );
 

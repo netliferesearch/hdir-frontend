@@ -291,8 +291,6 @@ storiesOf('ArticleIntro', module)
           'Lead',
           'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
         )}
-        publishDate={text('Publish date', '11.08.2008')}
-        editDate={text('Edit date', '11.08.2018')}
         image={text(
           'Image url (empty string will change the layout)',
           './photo.jpg'

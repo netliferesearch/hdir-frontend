@@ -67,15 +67,17 @@ class Collapsible extends React.Component {
           onClick={this.toggleCollapse}
         >
           <Heading h2 className={headingClasses(props.small)}>
-            Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert
-            på kostanamnese ved behandling av svangerskapsdiabetes
+            {props.heading}
           </Heading>
         </button>
-        <div className="l-mt-2">
-          <span className="b-collapsible__subheading">
-            <strong>Sterk</strong> anbefaling
-          </span>
-        </div>
+        {props.subheading && (
+          <div className="l-mt-2">
+            <span className="b-collapsible__subheading">
+              {props.subheading}
+            </span>
+          </div>
+        )}
+
         <div
           id="collapsible-0"
           aria-hidden={!this.state.collapsed}
@@ -91,6 +93,7 @@ class Collapsible extends React.Component {
 
 Collapsible.propTypes = {
   heading: PropTypes.string,
+  subheading: PropTypes.string,
   small: PropTypes.bool
 };
 

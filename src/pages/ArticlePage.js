@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavList from '../components/NavList';
-import Footer from '../components/Footer';
+import PageMeta from '../components/PageMeta';
 import PortableArticle from '../components/PortableArticle';
 import ArticleIntro from '../components/ArticleIntro';
 
@@ -23,8 +23,6 @@ const ArticlePage = () => (
         <ArticleIntro
           heading="Arbeid og psykisk helse"
           lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
-          publishDate="11.08.2008"
-          editDate="11.08.2018"
           image="./photo.jpg"
           imageDescription="Bildetekst"
         />
@@ -152,6 +150,10 @@ const ArticlePage = () => (
             <PortableArticle />
           </div>
 
+          <div className="l-mt-4">
+            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+          </div>
+
           <div className="b-bleed l-mt-4">
             <strong>Kontakt:</strong>
             <br />
@@ -170,7 +172,6 @@ const ArticlePage = () => (
         </article>
       </div>
     </div>
-    <Footer />
   </div>
 );
 
