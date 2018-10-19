@@ -2538,7 +2538,8 @@ h5,
 .b-nav-list__child-items {
   padding-left: 2em;
   list-style-type: none;
-  margin: 0; }
+  margin: 0;
+  border-top: 1px solid #0667c6; }
   .b-nav-list__child-items li:last-child {
     border-bottom: 0; }
 

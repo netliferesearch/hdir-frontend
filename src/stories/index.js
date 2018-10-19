@@ -28,6 +28,7 @@ import InputSearch from '../components/InputSearch';
 
 // Test data
 import { featureListHeading, featureListData } from '../testData.js';
+import { object } from '@storybook/addon-knobs/dist/base';
 
 // TODO: The Storybook-devs are working on an official css toggle addon
 // Also remember to remove the copy function in the NPM storybook building script
@@ -120,7 +121,7 @@ storiesOf('NavList', module)
       <NavList
         anchor={boolean('Anchor links', false)}
         heading={text('Heading', 'Overskrift')}
-        list={[
+        list={object('List', [
           {
             title: 'ABC',
             url: '#'
@@ -134,7 +135,7 @@ storiesOf('NavList', module)
             title: 'GHI',
             url: '#'
           }
-        ]}
+        ])}
       />
     ))
   )
@@ -146,7 +147,7 @@ storiesOf('NavList', module)
       <NavList
         anchor={boolean('Anchor links', false)}
         heading={text('Heading', 'Overskrift')}
-        list={[
+        list={object('List', [
           {
             title:
               'Diagnostisk pakkeforløp for pasienter med uspesifikke symptomer på alvorlig sykdom som kan være kreft',
@@ -164,7 +165,82 @@ storiesOf('NavList', module)
             url: '#',
             meta: 'nasjonale-faglige-retningslinjer'
           }
-        ]}
+        ])}
+      />
+    ))
+  )
+  .addWithStaticMarkup(
+    'Nested list',
+    withNotes(
+      'The links are an array of objects containing the props "title" and "url" as strings.'
+    )(() => (
+      <NavList
+        noArrow
+        small
+        list={object('List', [
+          {
+            title: 'KAPITTEL 1',
+            url: '#',
+            meta: 'Nasjonale faglige retningslinjer'
+          },
+          {
+            title: 'KAPITTEL 2',
+            url: '#',
+            meta: 'Nasjonale faglige retningslinjer',
+            active: true,
+            children: [
+              {
+                title: 'Bla bla bla',
+                url: '#',
+                meta: '2.1'
+              },
+              {
+                title: 'Lorum ipsum',
+                url: '#',
+                meta: '2.2',
+                active: true
+              }
+            ]
+          },
+          {
+            title: 'KAPITTEL 3',
+            url: '#',
+            meta: 'Nasjonale faglige retningslinjer'
+          }
+        ])}
+      />
+    ))
+  )
+  .addWithStaticMarkup(
+    'All properties',
+    withNotes(
+      'The links are an array of objects containing the props "title" and "url" as strings.'
+    )(() => (
+      <NavList
+        heading={text('Heading', '')}
+        anchor={boolean('Anchor', false)}
+        columns={boolean('Columns', false)}
+        hideMeta={boolean('Hide meta', false)}
+        noArrow={boolean('No arrow', false)}
+        small={boolean('Small', false)}
+        sticky={boolean('Sticky', false)}
+        list={object('List', [
+          {
+            title: 'KAPITTEL 1',
+            url: '#',
+            meta: 'Nasjonale faglige retningslinjer'
+          },
+          {
+            title: 'KAPITTEL 2',
+            url: '#',
+            meta: 'Nasjonale faglige retningslinjer'
+          },
+          {
+            title: 'KAPITTEL 3',
+            url: '#',
+            meta: 'Nasjonale faglige retningslinjer'
+          }
+        ])}
       />
     ))
   );
