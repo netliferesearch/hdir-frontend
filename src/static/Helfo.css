@@ -2431,6 +2431,8 @@ h5,
     box-shadow: none;
     border-bottom: 0;
     text-decoration: none; }
+  .b-main-header__nav--small {
+    font-size: 0.8rem; }
   .b-main-header__link {
     text-decoration: none;
     margin-left: 1rem; }
@@ -2829,6 +2831,9 @@ img {
 
 .t-body-text p {
   margin: 0.75em 0; }
+
+.t-body-text > :first-child {
+  margin-top: 0; }
 
 body {
   background: #bde4f9; }

@@ -222,4 +222,8 @@
   p {
     margin: 0.75em 0;
   }
+  // Removes the top margin from the first heading
+  > :first-child {
+    margin-top: 0;
+  }
 }

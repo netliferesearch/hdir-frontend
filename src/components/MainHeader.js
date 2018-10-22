@@ -12,7 +12,7 @@ const ContentLabel = props => {
         />
       </Link>
 
-      <nav className="b-main-header__nav">
+      <nav className="b-main-header__nav b-main-header__nav--small">
         <Link to="/kapittel" className="b-main-header__link">
           Kapittel
         </Link>
@@ -36,6 +36,9 @@ const ContentLabel = props => {
         </Link>
         <Link to="/anbefaling" className="b-main-header__link">
           Anbefaling
+        </Link>
+        <Link to="/memo" className="b-main-header__link">
+          Rundskriv
         </Link>
       </nav>
     </div>

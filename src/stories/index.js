@@ -13,6 +13,7 @@ import NavList from '../components/NavList';
 // import MainHeader from '../components/MainHeader';
 import PortableArticle from '../components/PortableArticle';
 import ArticleIntro from '../components/ArticleIntro';
+import ChapterHeading from '../components/ChapterHeading';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
@@ -29,6 +30,7 @@ import InputSearch from '../components/InputSearch';
 // Test data
 import { featureListHeading, featureListData } from '../testData.js';
 import { object } from '@storybook/addon-knobs/dist/base';
+import { select } from '@storybook/addon-knobs/dist/react';
 
 // TODO: The Storybook-devs are working on an official css toggle addon
 // Also remember to remove the copy function in the NPM storybook building script
@@ -256,6 +258,24 @@ storiesOf('MainHeader', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => <MainHeader />);
 */
+
+storiesOf('ChapterHeading', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <ChapterHeading
+      heading={text('Heading', 'Heading')}
+      subheading={text('Subheading', 'Subheading')}
+      line={select(
+        'Line',
+        { top: 'Top', bottom: 'Bottom', none: 'None' },
+        'top'
+      )}
+      h={select('H', { h1: 'h1', h2: 'h2' }, 'h2')}
+      overflow={boolean('Overflow', false)}
+      url={text('URL', '')}
+    />
+  ));
 
 storiesOf('PortableArticle', module)
   .addDecorator(withKnobs)

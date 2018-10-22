@@ -66,7 +66,7 @@ class Collapsible extends React.Component {
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
         >
-          <Heading h2 className={headingClasses(props.small)}>
+          <Heading h="h2" className={headingClasses(props.small)}>
             {props.heading}
           </Heading>
         </button>

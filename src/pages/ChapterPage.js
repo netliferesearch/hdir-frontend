@@ -48,7 +48,8 @@ const ChapterPage = () => (
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
-          lineBottom
+          line="none"
+          url="#"
           overflow
         />
         <div className="l-mt-1">

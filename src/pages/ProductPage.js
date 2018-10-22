@@ -1,6 +1,7 @@
 import React from 'react';
 import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
+import PageMeta from '../components/PageMeta';
 
 const ProductPage = () => (
   <div className="l-container">
@@ -15,6 +16,7 @@ const ProductPage = () => (
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
+          url="#"
         />
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
@@ -40,6 +42,7 @@ const ProductPage = () => (
         <ChapterHeading
           heading="Diagnostikk og tiltak"
           subheading="kapittel 2"
+          url="#"
         />
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
@@ -60,7 +63,7 @@ const ProductPage = () => (
           />
         </div>
       </div>
-      <div className="b-link-springboard l-mt-4 l-mb-5">
+      <div className="b-link-springboard l-mt-4">
         <div className="col-md-10 col-md-offset-1">
           For å lese om symptomer, kostholdsråd og andre tips ved
           svangerskapsdiabetes, kan du gå til{' '}
@@ -68,6 +71,9 @@ const ProductPage = () => (
             helsenorge.no.
           </a>
         </div>
+      </div>
+      <div className="l-mt-3">
+        <PageMeta publishDate="01.01.2008" editDate="01.01.2018" />
       </div>
     </div>
   </div>

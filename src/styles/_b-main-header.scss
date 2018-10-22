@@ -9,6 +9,9 @@
     @include link-init(transparent);
   }
   &__nav {
+    &--small {
+      font-size: $meta-text;
+    }
   }
   &__link {
     text-decoration: none;

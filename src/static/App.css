@@ -2438,6 +2438,8 @@ h5,
     box-shadow: none;
     border-bottom: 0;
     text-decoration: none; }
+  .b-main-header__nav--small {
+    font-size: 0.8rem; }
   .b-main-header__link {
     text-decoration: none;
     margin-left: 1rem; }
@@ -2708,36 +2710,55 @@ img {
     .b-footer__link:hover {
       box-shadow: 0 1px 0 #025169; }
 
+.b-quote {
+  display: block;
+  border-left: 7px solid #504f4f;
+  padding: 0.1em 0 0.1em 1em;
+  margin: 2em 0; }
+  .b-quote:after, .b-quote:before {
+    content: ''; }
+  .b-quote p {
+    margin: 0 !important;
+    text-indent: 2em; }
+  .b-quote p:first-child {
+    text-indent: 0; }
+
 .b-chapter-heading {
   display: block;
   position: relative;
   border-top: 7px solid #212121;
-  padding: 0 3.5em 1em 1em;
-  border-bottom: 1px solid #0667c6;
+  padding: 0 3.5em 1em 0;
   box-shadow: 0 1px 0 transparent; }
   .b-chapter-heading:link, .b-chapter-heading:hover, .b-chapter-heading:visited, .b-chapter-heading:active {
     color: #212121;
     box-shadow: none;
     border-bottom: 0;
     text-decoration: none; }
-  .b-chapter-heading:hover {
-    color: #0667c6;
-    background: #f7f7f7; }
+  .b-chapter-heading__link {
+    padding: 0 3.5em 1em 1em;
+    border-bottom: 1px solid #0667c6; }
+    .b-chapter-heading__link:hover {
+      color: #0667c6;
+      background: #f7f7f7; }
+    .b-chapter-heading__link:after {
+      content: '→';
+      position: absolute;
+      right: 1rem;
+      font-size: 1.8rem;
+      top: 1.4em; }
   .b-chapter-heading--overflow {
     padding-left: 0; }
     .b-chapter-heading--overflow:hover {
       margin-left: -1rem;
       padding-left: 1rem; }
+  .b-chapter-heading--line-none {
+    border: 0;
+    padding-top: 0; }
   .b-chapter-heading--line-bottom {
     padding-top: 0;
     border-top: 0;
     border-bottom: 7px solid #212121;
     padding-bottom: 1em; }
-  .b-chapter-heading__main-heading:after {
-    content: '→';
-    position: absolute;
-    right: 1rem;
-    top: 1.3em; }
 
 .b-filter-list__list {
   list-style-type: none;
@@ -2935,3 +2956,6 @@ img {
 
 .t-body-text p {
   margin: 0.75em 0; }
+
+.t-body-text > :first-child {
+  margin-top: 0; }

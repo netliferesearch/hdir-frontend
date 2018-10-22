@@ -1,33 +1,70 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Heading from './Heading';
 
-const headingClasses = (lineBottom, overflow) =>
+const headingClasses = (line, overflow, url) =>
   classNames({
     'b-chapter-heading': true,
-    'b-chapter-heading--line-bottom': lineBottom,
+    'b-chapter-heading__link': url,
+    // top is the default
+    'b-chapter-heading--line-bottom': line === 'bottom',
+    'b-chapter-heading--line-none': line === 'none',
     'b-chapter-heading--overflow': overflow
+  });
+
+const bigHeader = h =>
+  classNames({
+    'b-chapter-heading__main-heading': true,
+    h1: h === 'h1',
+    h2: h === 'h2'
+  });
+
+const smallHeader = h =>
+  classNames({
+    h3: h === 'h1',
+    h4: h === 'h2'
   });
 
 // Is H2 as wrapper an OK assumption?
 // TODO: Add the Heading-component instead
 const ChapterHeading = props => (
-  <a href="#" className={headingClasses(props.lineBottom, props.overflow)}>
-    <h2>
-      <span className="h4">{props.subheading}</span>
-      <div className="l-mt-1" />
-      <span className="h2 b-chapter-heading__main-heading">
-        {props.heading}
-      </span>
-    </h2>
-  </a>
+  <Fragment>
+    {props.url ? (
+      <a
+        href={props.url}
+        className={headingClasses(props.line, props.overflow, props.url)}
+      >
+        <Heading h={props.h}>
+          <span className={smallHeader(props.h)}>{props.subheading}</span>
+          <div className="l-mt-1" />
+          <span className={bigHeader(props.h)}>{props.heading}</span>
+        </Heading>
+      </a>
+    ) : (
+      <div className={headingClasses(props.line, props.overflow)}>
+        <Heading h={props.h}>
+          <span className={smallHeader(props.h)}>{props.subheading}</span>
+          <div className="l-mt-1" />
+          <span className={bigHeader(props.h)}>{props.heading}</span>
+        </Heading>
+      </div>
+    )}
+  </Fragment>
 );
 
-ChapterHeading.protoTypes = {
+ChapterHeading.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  lineBottom: PropTypes.bool,
-  overflow: PropTypes.bool
+  line: PropTypes.oneOf(['top', 'bottom', 'none']),
+  h: PropTypes.oneOf(['h1', 'h2']),
+  overflow: PropTypes.bool,
+  url: PropTypes.string
+};
+
+ChapterHeading.defaultTypes = {
+  line: 'top',
+  h: 'h2'
 };
 
 export default ChapterHeading;
