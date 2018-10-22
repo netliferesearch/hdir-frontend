@@ -62,7 +62,7 @@ ChapterHeading.propTypes = {
   url: PropTypes.string
 };
 
-ChapterHeading.defaultTypes = {
+ChapterHeading.defaultProps = {
   line: 'top',
   h: 'h2'
 };

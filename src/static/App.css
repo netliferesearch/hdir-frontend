@@ -2723,6 +2723,11 @@ img {
   .b-quote p:first-child {
     text-indent: 0; }
 
+.b-list--no-style {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .b-chapter-heading {
   display: block;
   position: relative;

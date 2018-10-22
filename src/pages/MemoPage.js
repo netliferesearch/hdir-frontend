@@ -6,7 +6,7 @@ import PortableArticle from '../components/PortableArticle';
 import ChapterHeading from '../components/ChapterHeading';
 import Quote from '../components/Quote';
 
-const ArticlePage = () => (
+const MemoPage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
@@ -188,4 +188,4 @@ const ArticlePage = () => (
   </div>
 );
 
-export default ArticlePage;
+export default MemoPage;

@@ -11,6 +11,7 @@ import ProductPage from './pages/ProductPage';
 import ChapterPage from './pages/ChapterPage';
 import HearingPage from './pages/HearingPage';
 import MemoPage from './pages/MemoPage';
+import ParentMemoPage from './pages/ParentMemoPage';
 import RecommendationPage from './pages/RecommendationPage';
 import NotFound from './pages/NotFound';
 
@@ -37,7 +38,8 @@ class App extends Component {
               <Route path="/kapittel" component={ChapterPage} />
               <Route path="/høring" component={HearingPage} />
               <Route path="/anbefaling" component={RecommendationPage} />
-              <Route path="/memo" component={MemoPage} />
+              <Route path="/rundskriv" component={MemoPage} />
+              <Route path="/rundskriv-forside" component={ParentMemoPage} />
               <Route
                 path="/normerende-innhold"
                 component={NormativeContentPage}
