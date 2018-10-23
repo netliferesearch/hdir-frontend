@@ -2835,6 +2835,14 @@ img {
 .t-body-text h6 {
   margin-top: 1.5em; }
 
+.t-body-text [class^='b-'] h1,
+.t-body-text [class^='b-'] h2,
+.t-body-text [class^='b-'] h3,
+.t-body-text [class^='b-'] h4,
+.t-body-text [class^='b-'] h5,
+.t-body-text [class^='b-'] h6 {
+  margin-top: 0; }
+
 .t-body-text p {
   margin: 0.75em 0; }
 
