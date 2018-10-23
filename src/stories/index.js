@@ -19,10 +19,19 @@ import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 
 // Pages
+import ArticlePage from '../pages/ArticlePage';
+
 import FrontPage from '../pages/FrontPage';
+
 import SearchResultPage from '../pages/SearchResultPage';
 import SimpleSerp from '../pages/SimpleSerp';
-import ArticlePage from '../pages/ArticlePage';
+
+import ChapterPage from '../pages/ChapterPage';
+import HearingPage from '../pages/HearingPage';
+import MemoPage from '../pages/MemoPage';
+import ParentMemoPage from '../pages/ParentMemoPage';
+import ProductPage from '../pages/ProductPage';
+import RecommendationPage from '../pages/RecommendationPage';
 
 // React specific
 import InputSearch from '../components/InputSearch';
@@ -82,7 +91,13 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Front page', () => <FrontPage />)
   .addWithStaticMarkup('Search result page', () => <SearchResultPage />)
   .addWithStaticMarkup('Simple search result page', () => <SimpleSerp />)
-  .addWithStaticMarkup('Article page', () => <ArticlePage />);
+  .addWithStaticMarkup('Article page', () => <ArticlePage />)
+  .addWithStaticMarkup('Chapter page', () => <ChapterPage />)
+  .addWithStaticMarkup('Hearing page', () => <HearingPage />)
+  .addWithStaticMarkup('Memo page', () => <MemoPage />)
+  .addWithStaticMarkup('Parent memo page', () => <ParentMemoPage />)
+  .addWithStaticMarkup('Product page', () => <ProductPage />)
+  .addWithStaticMarkup('Recommendation page', () => <RecommendationPage />);
 
 storiesOf('FeatureList', module)
   .addDecorator(withKnobs)

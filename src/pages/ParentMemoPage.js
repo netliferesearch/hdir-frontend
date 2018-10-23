@@ -91,7 +91,7 @@ const MemoChapterPage = () => (
                 </li>
               </ul>
               <a href="#">
-                <strong>Les hele Kapittel 1</strong>
+                <strong>Les hele Kapittel 2</strong>
               </a>
             </div>
           </div>
@@ -114,7 +114,7 @@ const MemoChapterPage = () => (
                 </li>
               </ul>
               <a href="#">
-                <strong>Les hele Kapittel 1</strong>
+                <strong>Les hele Kapittel 3</strong>
               </a>
             </div>
           </div>
