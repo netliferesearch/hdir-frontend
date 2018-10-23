@@ -2762,57 +2762,6 @@ img {
     text-decoration: none;
     box-shadow: 0 1px 0 #b969a3; }
 
-.b-collapsible {
-  padding-left: 2em;
-  border-top: 7px solid #212121;
-  padding-top: 2em; }
-  .b-collapsible--small {
-    border-width: 1px;
-    padding-left: 2em; }
-  .b-collapsible__button {
-    position: relative;
-    background: none;
-    border: 0;
-    text-align: left;
-    padding: 0;
-    display: inline;
-    font-size: 1em; }
-    .b-collapsible__button:before {
-      display: block;
-      position: absolute;
-      content: ' ';
-      width: 1em;
-      height: 1em;
-      margin-left: -2em;
-      transform: rotate(90deg);
-      background-image: url(./icons/chevron.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      left: 0;
-      top: 0.15em; }
-    .b-collapsible__button:active {
-      color: #212121; }
-    .b-collapsible__button--small:before {
-      top: 0.25em;
-      width: 0.66em;
-      height: 0.66em; }
-    .b-collapsible__button--active:before {
-      top: 0;
-      transform: rotate(180deg); }
-  .b-collapsible__content {
-    animation: fadeInUp 300ms ease;
-    margin-top: 1rem; }
-  .b-collapsible__heading {
-    display: inline; }
-    .b-collapsible__heading:hover {
-      cursor: pointer;
-      box-shadow: 0 1px 0 #212121; }
-  .b-collapsible__subheading {
-    border-bottom: 1px dotted #0667c6;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.8rem; }
-
 .b-hr {
   margin: 0;
   padding: 0;

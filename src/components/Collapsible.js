@@ -5,24 +5,27 @@ import zenscroll from 'zenscroll';
 
 import Heading from './Heading';
 
-const buttonClasses = (active, small) =>
+const buttonClasses = (active, size) =>
   classNames({
     'b-collapsible__button': true,
     'b-collapsible__button--active': active,
-    'b-collapsible__button--small': small
+    'b-collapsible__button--small': size === 'small',
+    'b-collapsible__button--medium': size === 'medium'
   });
 
-const headingClasses = small =>
+const headingClasses = size =>
   classNames({
     'b-collapsible__heading': true,
-    h3: !small,
-    h4: small
+    h3: size === 'large',
+    h4: size === 'medium',
+    normal: size === 'small'
   });
 
-const collapsibleClasses = small =>
+const collapsibleClasses = size =>
   classNames({
     'b-collapsible': true,
-    'b-collapsible--small': small
+    'b-collapsible--medium': size === 'medium',
+    'b-collapsible--small': size === 'small'
   });
 
 class Collapsible extends React.Component {
@@ -57,16 +60,23 @@ class Collapsible extends React.Component {
     const { props } = this;
     return (
       <div
-        className={collapsibleClasses(props.small)}
+        className={collapsibleClasses(props.size)}
         ref={ref => (this.domNode = ref)}
       >
         <button
-          className={buttonClasses(this.state.collapsed, props.small)}
+          className={buttonClasses(this.state.collapsed, props.size)}
           aria-expanded={this.state.collapsed}
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
         >
-          <Heading h="h2" className={headingClasses(props.small)}>
+          <Heading
+            h={
+              (props.size === 'large' && 'h2') ||
+              (props.size === 'medium' && 'h3') ||
+              (props.size === 'small' && 'none')
+            }
+            className={headingClasses(props.size)}
+          >
             {props.heading}
           </Heading>
         </button>
@@ -94,7 +104,11 @@ class Collapsible extends React.Component {
 Collapsible.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  small: PropTypes.bool
+  size: PropTypes.oneOf(['small', 'medium', 'large'])
+};
+
+Collapsible.defaultProps = {
+  size: 'large'
 };
 
 export default Collapsible;

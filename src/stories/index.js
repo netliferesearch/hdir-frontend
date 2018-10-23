@@ -347,7 +347,15 @@ storiesOf('Collapsible', module)
     <Collapsible
       heading={text('Heading', 'Heading')}
       subheading={text('Subheading', 'Subheading')}
-      small={boolean('Small', false)}
+      size={select(
+        'Size',
+        {
+          large: 'large',
+          medium: 'medium',
+          small: 'small'
+        },
+        'large'
+      )}
     >
       {text('Text', 'You can place any text in here.')}
     </Collapsible>

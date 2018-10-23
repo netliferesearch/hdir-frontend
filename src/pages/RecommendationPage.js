@@ -11,7 +11,7 @@ const RecommendationPage = () => (
     </h1>
     <div className="row">
       <div className="col-md-9">
-        <div className="t-body-text">
+        <div className="l-mt-4 t-body-text">
           <h2>Høringsbrev</h2>
           <p>
             Nasjonal faglig retningslinje for svangerskapsdiabetes vil erstatte

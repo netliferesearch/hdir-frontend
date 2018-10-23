@@ -123,7 +123,7 @@ const ChapterPage = () => (
               <Collapsible
                 heading="Seksjon under: 1"
                 subheading="SVAK ANBEFALING"
-                small
+                size="medium"
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -137,7 +137,7 @@ const ChapterPage = () => (
               <Collapsible
                 heading="Seksjon under: 2"
                 subheading="SVAK ANBEFALING"
-                small
+                size="medium"
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
