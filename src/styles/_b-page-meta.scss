@@ -18,4 +18,15 @@
       content: ' →';
     }
   }
+
+  > :last-child {
+    border-right: 0;
+  }
+
+  // Adds some vertical spacing when the line starts breaking under tablet width
+  @include mq($until: $tablet) {
+    > * {
+      margin-top: 0.5em;
+    }
+  }
 }

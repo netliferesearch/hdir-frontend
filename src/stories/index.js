@@ -6,32 +6,41 @@ import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
 
 // Components
-import ContentLabel from '../components/ContentLabel';
-import FeatureList from '../components/FeatureList';
-import NavList from '../components/NavList';
-// import Footer from '../components/Footer';
-// import MainHeader from '../components/MainHeader';
-import PortableArticle from '../components/PortableArticle';
 import ArticleIntro from '../components/ArticleIntro';
 import ChapterHeading from '../components/ChapterHeading';
+import ContentLabel from '../components/ContentLabel';
+
+import FeatureList from '../components/FeatureList';
+
+// import Footer from '../components/Footer';
+
+// import MainHeader from '../components/MainHeader';
+import NavList from '../components/NavList';
+
+import PortableArticle from '../components/PortableArticle';
+
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 
+import Collapsible from '../components/Collapsible';
+import FilterList from '../components/FilterList';
+import Heading from '../components/Heading';
+import PageMeta from '../components/PageMeta';
+import Quote from '../components/Quote';
+
 // Pages
 import ArticlePage from '../pages/ArticlePage';
-
-import FrontPage from '../pages/FrontPage';
-
-import SearchResultPage from '../pages/SearchResultPage';
-import SimpleSerp from '../pages/SimpleSerp';
-
 import ChapterPage from '../pages/ChapterPage';
+import FrontPage from '../pages/FrontPage';
 import HearingPage from '../pages/HearingPage';
 import MemoPage from '../pages/MemoPage';
+import NormativeContentPage from '../pages/NormativeContentPage';
 import ParentMemoPage from '../pages/ParentMemoPage';
 import ProductPage from '../pages/ProductPage';
 import RecommendationPage from '../pages/RecommendationPage';
+import SearchResultPage from '../pages/SearchResultPage';
+import SimpleSerp from '../pages/SimpleSerp';
 
 // React specific
 import InputSearch from '../components/InputSearch';
@@ -86,7 +95,6 @@ storiesOf('Welcome', module).add('Styles', () => (
 ));
 
 storiesOf('Pages', module)
-  .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Front page', () => <FrontPage />)
   .addWithStaticMarkup('Search result page', () => <SearchResultPage />)
@@ -97,7 +105,10 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Memo page', () => <MemoPage />)
   .addWithStaticMarkup('Parent memo page', () => <ParentMemoPage />)
   .addWithStaticMarkup('Product page', () => <ProductPage />)
-  .addWithStaticMarkup('Recommendation page', () => <RecommendationPage />);
+  .addWithStaticMarkup('Recommendation page', () => <RecommendationPage />)
+  .addWithStaticMarkup('Normative content page', () => (
+    <NormativeContentPage />
+  ));
 
 storiesOf('FeatureList', module)
   .addDecorator(withKnobs)
@@ -262,18 +273,6 @@ storiesOf('NavList', module)
     ))
   );
 
-/*
-storiesOf('Footer', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => <Footer />);
-
-storiesOf('MainHeader', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => <MainHeader />);
-*/
-
 storiesOf('ChapterHeading', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -340,3 +339,70 @@ storiesOf('ArticleIntro', module)
 {
   text('Heading', 'Overskrift');
 }
+
+storiesOf('Collapsible', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Collapsible
+      heading={text('Heading', 'Heading')}
+      subheading={text('Subheading', 'Subheading')}
+      small={boolean('Small', false)}
+    >
+      {text('Text', 'You can place any text in here.')}
+    </Collapsible>
+  ));
+
+storiesOf('FilterList', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <FilterList
+      list={object('List', [
+        'Alt',
+        'Retningslinjer',
+        'Pakkeforløp',
+        'Rundskriv'
+      ])}
+    />
+  ));
+
+storiesOf('Heading', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Heading
+      h={select(
+        'H(eading)',
+        {
+          h1: 'h1',
+          h2: 'h2',
+          h3: 'h3',
+          h4: 'h4',
+          h5: 'h5',
+          h6: 'h6'
+        },
+        'h1'
+      )}
+    >
+      {text('Text', 'Heading')}
+    </Heading>
+  ));
+
+storiesOf('PageMeta', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <PageMeta
+      publishDate={text('Publish date', '01.01.2015')}
+      editDate={text('Edit date', '01.01.2018')}
+      url={text('URL', '#')}
+    />
+  ));
+
+storiesOf('Quote', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
+  ));

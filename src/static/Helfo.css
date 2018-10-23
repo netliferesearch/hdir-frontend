@@ -2572,6 +2572,11 @@ h5,
       display: inline-block;
       margin-left: 0.5em;
       content: ' →'; }
+  .b-page-meta > :last-child {
+    border-right: 0; }
+  @media (max-width: 46.25em) {
+    .b-page-meta > * {
+      margin-top: 0.5em; } }
 
 .b-search-sidebar__section {
   border-bottom: 1px solid #d8dada;
@@ -2795,7 +2800,8 @@ img {
       top: 0;
       transform: rotate(180deg); }
   .b-collapsible__content {
-    animation: fadeInUp 300ms ease; }
+    animation: fadeInUp 300ms ease;
+    margin-top: 1rem; }
   .b-collapsible__heading {
     display: inline; }
     .b-collapsible__heading:hover {

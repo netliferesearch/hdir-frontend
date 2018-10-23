@@ -7,15 +7,19 @@ const PageMeta = props => (
       Først publisert: {props.publishDate}
     </span>
     <span className="b-page-meta__text">Sist endret: {props.editDate}</span>
-    <a href="#" className="b-page-meta__link l-mt-1">
-      Se tidligere utgaver
-    </a>
+
+    {props.url && (
+      <a href="#" className="b-page-meta__link">
+        Se tidligere utgaver
+      </a>
+    )}
   </p>
 );
 
 PageMeta.propTypes = {
   publishDate: PropTypes.string,
-  editDate: PropTypes.string
+  editDate: PropTypes.string,
+  url: PropTypes.string
 };
 
 export default PageMeta;
