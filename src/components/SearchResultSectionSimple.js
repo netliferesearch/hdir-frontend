@@ -2,7 +2,7 @@ import React from 'react';
 import ContentLabel from '../components/ContentLabel';
 
 const SearchResultSection = () => (
-  <ul className="b-search-result-section__items">
+  <ul className="b-search-result-section">
     <li className="b-search-result-section__parent-item">
       <h1 className="h2 h2--uppercase">
         Anbefalinger, Råd og lovfortolkninger

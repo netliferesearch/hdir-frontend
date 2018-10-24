@@ -65,6 +65,9 @@ storiesOf('Welcome', module).add('Styles', () => (
     <h1 className="h2">
       Digitial design guide for DIP - Digital Innholdsplattform
     </h1>
+    <p>
+      Press <strong>h</strong> to toggle the component hint helper.
+    </p>
     <p>Velg stilsett:</p>
     <ul>
       <li>
