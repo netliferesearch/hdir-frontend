@@ -2651,17 +2651,17 @@ h5,
       border-bottom: 0;
       text-decoration: none; }
 
-img {
+.b-article-intro__image {
   max-width: 100%; }
 
-.t-intro {
-  font-size: 1.2rem;
-  font-weight: bold; }
-
-.t-image-text {
+.b-article-intro__image-text {
   margin: 0rem 0 1rem 0;
   font-size: 0.8rem;
   color: #504f4f; }
+
+.b-article-intro__intro {
+  font-size: 1.2rem;
+  font-weight: bold; }
 
 .frontpage-wrapper {
   padding: 2rem;
@@ -2811,6 +2811,20 @@ img {
   padding: 0.25em;
   background: #0667c6;
   border-radius: 100%; }
+
+.block-hint [class^='b-']:not([class*='__']) {
+  position: relative; }
+  .block-hint [class^='b-']:not([class*='__']):before {
+    content: attr(class);
+    position: absolute;
+    font-size: 0.7rem;
+    top: -0.25em;
+    color: #991199;
+    font-weight: bold;
+    background: white;
+    border: 1px solid grey;
+    z-index: 2;
+    padding: 0.25em; }
 
 body {
   background: #bde4f9; }

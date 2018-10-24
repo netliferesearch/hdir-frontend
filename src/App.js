@@ -22,6 +22,14 @@ import Footer from './components/Footer';
 // import { featureListHeading, featureListData } from './testData.js';
 
 class App extends Component {
+  componentDidMount() {
+    document.addEventListener('keypress', event => {
+      if (event.key === 'h') {
+        document.querySelector('body').classList.toggle('block-hint');
+      }
+    });
+  }
+
   render() {
     return (
       <div className="App">
