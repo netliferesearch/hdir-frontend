@@ -145,6 +145,16 @@ const ChapterPage = () => (
                   og for å forhindre for stor vektøkning i svangerskapet. Det
                   anbefales at kostanamnese benyttes i dette arbeidet.
                 </p>
+                <Collapsible heading="Seksjon under: 2.2" size="small">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent eget convallis metus. Sed vitae imperdiet enim.
+                    Suspendisse commodo nulla et arcu sodales, et sagittis nisi
+                    fermentum. Integer commodo, ipsum ut vulputate consequat,
+                    dolor risus egestas eros, sed consectetur turpis neque et
+                    magna.
+                  </p>
+                </Collapsible>
               </Collapsible>
             </div>
           </Collapsible>

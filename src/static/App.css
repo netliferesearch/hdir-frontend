@@ -2733,11 +2733,13 @@ img {
   border-top: 7px solid #212121;
   padding-top: 2em; }
   .b-collapsible--medium {
-    border-width: 1px;
-    padding-left: 2em; }
+    border-width: 1px; }
   .b-collapsible--small {
     border-width: 1px;
-    padding-left: 2em; }
+    padding-left: 1.5em;
+    border: 0;
+    padding-top: 0;
+    margin-top: 0; }
   .b-collapsible__button {
     position: relative;
     background: none;
@@ -2765,10 +2767,13 @@ img {
       top: 0.25em;
       width: 0.66em;
       height: 0.66em; }
-    .b-collapsible__button--small:before {
-      top: 0.25em;
-      width: 0.66em;
-      height: 0.66em; }
+    .b-collapsible__button--small {
+      box-shadow: 0 1px 0 #212121; }
+      .b-collapsible__button--small:before {
+        margin-left: -1.5em;
+        top: 0.25em;
+        width: 0.66em;
+        height: 0.66em; }
     .b-collapsible__button--active:before {
       top: 0;
       transform: rotate(180deg); }
