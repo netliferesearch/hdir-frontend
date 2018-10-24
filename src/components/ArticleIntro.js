@@ -9,19 +9,24 @@ const imageToggle = image =>
   });
 
 const ArticleIntro = props => (
-  <div className="row">
-    <div className={imageToggle(props.image)}>
-      <h1>{props.heading}</h1>
-      <p className="t-intro">{props.lead}</p>
-    </div>
-    {props.image && (
-      <div className="col-xs-12 col-md-6">
-        <img src={props.image} aria-labelledby="intro-image-description" />
-        <p className="t-image-text" id="intro-image-description">
-          {props.imageDescription}
-        </p>
+  <div className="b-article-intro">
+    <div className="row">
+      <div className={imageToggle(props.image)}>
+        <h1>{props.heading}</h1>
+        <p className="b-article-intro__intro">{props.lead}</p>
       </div>
-    )}
+      {props.image && (
+        <div className="col-xs-12 col-md-6">
+          <img src={props.image} aria-labelledby="intro-image-description" />
+          <p
+            className="b-article-intro__image-text"
+            id="intro-image-description"
+          >
+            {props.imageDescription}
+          </p>
+        </div>
+      )}
+    </div>
   </div>
 );
 
