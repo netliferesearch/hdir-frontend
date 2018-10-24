@@ -6,7 +6,7 @@ import Heading from './Heading';
 const headingClasses = (line, overflow, url) =>
   classNames({
     'b-chapter-heading': true,
-    'b-chapter-heading__link': url,
+    'b-chapter-heading--link': url,
     // top is the default
     'b-chapter-heading--line-bottom': line === 'bottom',
     'b-chapter-heading--line-none': line === 'none',

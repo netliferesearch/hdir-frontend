@@ -6,7 +6,7 @@
   @include link-init($black);
   @include underline(transparent);
 
-  &__link {
+  &--link {
     padding: 0 3.5em 1em 1em;
     border-bottom: 1px solid $blue;
     &:hover {
