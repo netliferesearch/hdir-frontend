@@ -108,21 +108,25 @@ const ArticlePage = () => (
             Norske og internasjonale studier viser at 30 – 50 prosent av den
             voksne befolkningen vil få en psykisk lidelse i løpet av livet.
           </div>
-          <div className="b-bleed b-bleed--yellow l-mt-2">
-            <h2>Ti råd for et inkluderende arbeidsliv</h2>
-            <ol>
-              <li>​Bry deg. Alle trenger å bli sett og verdsatt.</li>
-              <li>Gi tillit. Alle har noe å gi hvis de slipper til.</li>
-              <li>Ikke aksepter mobbing og utfrysing. Stopp rykter.</li>
-              <li>Vær romslig. Verdsett mangfold og ulikheter.</li>
-              <li>Lytt til andre. Vis interesse for andres arbeid.</li>
-              <li>Verdsett åpenhet. Snakk sammen.</li>
-              <li>Skap trygghet og takhøyde. Feil er noe vi kan lære av.</li>
-              <li>Ta ansvar. God tilrettelegging er et samarbeidsprosjekt.</li>
-              <li>Ta problemer på alvor. Finn løsninger sammen.</li>
-              <li>Psykisk helse angår oss alle. Snakk om det.</li>
-            </ol>
-            (Kilde: Rådet for Psykisk Helse)
+          <div className="l-mt-2">
+            <div className="b-bleed b-bleed--yellow">
+              <h2>Ti råd for et inkluderende arbeidsliv</h2>
+              <ol>
+                <li>​Bry deg. Alle trenger å bli sett og verdsatt.</li>
+                <li>Gi tillit. Alle har noe å gi hvis de slipper til.</li>
+                <li>Ikke aksepter mobbing og utfrysing. Stopp rykter.</li>
+                <li>Vær romslig. Verdsett mangfold og ulikheter.</li>
+                <li>Lytt til andre. Vis interesse for andres arbeid.</li>
+                <li>Verdsett åpenhet. Snakk sammen.</li>
+                <li>Skap trygghet og takhøyde. Feil er noe vi kan lære av.</li>
+                <li>
+                  Ta ansvar. God tilrettelegging er et samarbeidsprosjekt.
+                </li>
+                <li>Ta problemer på alvor. Finn løsninger sammen.</li>
+                <li>Psykisk helse angår oss alle. Snakk om det.</li>
+              </ol>
+              (Kilde: Rådet for Psykisk Helse)
+            </div>
           </div>
 
           <div className="l-mt-4 col-xs-12 col-md-8">
@@ -153,21 +157,22 @@ const ArticlePage = () => (
           <div className="l-mt-4">
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
           </div>
-
-          <div className="b-bleed l-mt-4">
-            <strong>Kontakt:</strong>
-            <br />
-            <a href="#" className="b-bleed__link">
-              spesialisthelsetjenester@helsedir.no
-            </a>
-            <br />
-            <a href="#" className="b-bleed__link">
-              navn.etternavn@helsedir.no
-            </a>
-            <br />
-            <a href="#" className="b-bleed__link">
-              999 99 999
-            </a>
+          <div className="l-mt-4">
+            <div className="b-bleed">
+              <strong>Kontakt:</strong>
+              <br />
+              <a href="#" className="b-bleed__link">
+                spesialisthelsetjenester@helsedir.no
+              </a>
+              <br />
+              <a href="#" className="b-bleed__link">
+                navn.etternavn@helsedir.no
+              </a>
+              <br />
+              <a href="#" className="b-bleed__link">
+                999 99 999
+              </a>
+            </div>
           </div>
         </article>
       </div>

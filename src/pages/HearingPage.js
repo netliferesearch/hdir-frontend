@@ -90,20 +90,22 @@ const HearingPage = () => (
         <div className="l-mt-4">
           <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
         </div>
-        <div className="b-bleed l-mt-4">
-          <strong>Kontakt:</strong>
-          <br />
-          <a href="#" className="b-bleed__link">
-            spesialisthelsetjenester@helsedir.no
-          </a>
-          <br />
-          <a href="#" className="b-bleed__link">
-            navn.etternavn@helsedir.no
-          </a>
-          <br />
-          <a href="#" className="b-bleed__link">
-            999 99 999
-          </a>
+        <div className="l-mt-4">
+          <div className="b-bleed">
+            <strong>Kontakt:</strong>
+            <br />
+            <a href="#" className="b-bleed__link">
+              spesialisthelsetjenester@helsedir.no
+            </a>
+            <br />
+            <a href="#" className="b-bleed__link">
+              navn.etternavn@helsedir.no
+            </a>
+            <br />
+            <a href="#" className="b-bleed__link">
+              999 99 999
+            </a>
+          </div>
         </div>
       </div>
     </div>

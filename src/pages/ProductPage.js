@@ -65,13 +65,15 @@ const ProductPage = () => (
           />
         </div>
       </div>
-      <div className="b-link-springboard l-mt-4">
-        <div className="col-md-10 col-md-offset-1">
-          For å lese om symptomer, kostholdsråd og andre tips ved
-          svangerskapsdiabetes, kan du gå til{' '}
-          <a href="#" className="b-link-springboard__link">
-            helsenorge.no.
-          </a>
+      <div className="l-mt-4">
+        <div className="b-link-springboard">
+          <div className="col-md-10 col-md-offset-1">
+            For å lese om symptomer, kostholdsråd og andre tips ved
+            svangerskapsdiabetes, kan du gå til{' '}
+            <a href="#" className="b-link-springboard__link">
+              helsenorge.no.
+            </a>
+          </div>
         </div>
       </div>
       <div className="l-mt-3">
