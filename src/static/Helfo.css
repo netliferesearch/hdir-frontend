@@ -2798,5 +2798,19 @@ img {
 .t-body-text > :first-child {
   margin-top: 0; }
 
+.b-long-short-heading__sub {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 1rem; }
+
+.b-long-short-heading__sub-icon {
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 1em;
+  margin-bottom: -0.33em;
+  padding: 0.25em;
+  background: #0667c6;
+  border-radius: 100%; }
+
 body {
   background: #bde4f9; }

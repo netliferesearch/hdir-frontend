@@ -9,25 +9,20 @@ import { withNotes } from '@storybook/addon-notes';
 import ArticleIntro from '../components/ArticleIntro';
 import ChapterHeading from '../components/ChapterHeading';
 import ContentLabel from '../components/ContentLabel';
-
+import Collapsible from '../components/Collapsible';
 import FeatureList from '../components/FeatureList';
-
+import FilterList from '../components/FilterList';
 // import Footer from '../components/Footer';
-
+import Heading from '../components/Heading';
+import LongShortHeading from '../components/LongShortHeading';
 // import MainHeader from '../components/MainHeader';
 import NavList from '../components/NavList';
-
+import PageMeta from '../components/PageMeta';
 import PortableArticle from '../components/PortableArticle';
-
+import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
-
-import Collapsible from '../components/Collapsible';
-import FilterList from '../components/FilterList';
-import Heading from '../components/Heading';
-import PageMeta from '../components/PageMeta';
-import Quote from '../components/Quote';
 
 // Pages
 import ArticlePage from '../pages/ArticlePage';
@@ -405,6 +400,20 @@ storiesOf('PageMeta', module)
       publishDate={text('Publish date', '01.01.2015')}
       editDate={text('Edit date', '01.01.2018')}
       url={text('URL', '#')}
+    />
+  ));
+
+storiesOf('LongShortHeading', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <LongShortHeading
+      long={text(
+        'Long heading',
+        'Nasjonal faglig retningslinje for svangerskapsdiabetes'
+      )}
+      short={text('Short heading', 'Svangerskapsdiabetes')}
+      icon={text('Icon path', 'https://placehold.it/64x64')}
     />
   ));
 

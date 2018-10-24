@@ -2,15 +2,17 @@ import React from 'react';
 import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
+import LongShortHeading from '../components/LongShortHeading';
 
 const ProductPage = () => (
   <div className="l-container">
     <div className="row">
       <div className="col-md-8 l-mt-3">
-        <h1>
-          Behandling og rehabilitering av rusmiddelproblemer og avhengighet –
-          Nasjonal faglig retningslinje
-        </h1>
+        <LongShortHeading
+          long="Nasjonal faglig retningslinje for svangerskapsdiabetes"
+          short="Svangerskapsdiabetes"
+          icon={'https://placehold.it/64x64'}
+        />
       </div>
       <div className="col-xs-12 l-mt-4">
         <ChapterHeading

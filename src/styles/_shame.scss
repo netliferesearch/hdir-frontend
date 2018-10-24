@@ -166,3 +166,20 @@
     margin-top: 0;
   }
 }
+
+.b-long-short-heading {
+  &__sub {
+    font-weight: bold;
+    font-size: $meta-text;
+    margin-top: 1rem;
+  }
+  &__sub-icon {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 1em;
+    margin-bottom: -0.33em;
+    padding: 0.25em;
+    background: $blue;
+    border-radius: 100%;
+  }
+}
