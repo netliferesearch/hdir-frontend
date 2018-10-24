@@ -31,7 +31,10 @@ const ContentLabel = props => {
         <Link to="/normerende-innhold" className="b-main-header__link">
           Normerende
         </Link>
-        <Link to="/høring" className="b-main-header__link">
+        <Link to="/høringer-forside" className="b-main-header__link">
+          Høringer forside
+        </Link>
+        <Link to="/høringer" className="b-main-header__link">
           Høringer
         </Link>
         <Link to="/anbefaling" className="b-main-header__link">

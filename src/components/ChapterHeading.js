@@ -15,7 +15,6 @@ const headingClasses = (line, overflow, url) =>
 
 const bigHeader = h =>
   classNames({
-    'b-chapter-heading__main-heading': true,
     h1: h === 'h1',
     h2: h === 'h2'
   });

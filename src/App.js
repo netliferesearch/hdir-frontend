@@ -10,6 +10,7 @@ import NormativeContentPage from './pages/NormativeContentPage';
 import ProductPage from './pages/ProductPage';
 import ChapterPage from './pages/ChapterPage';
 import HearingPage from './pages/HearingPage';
+import ParentHearingPage from './pages/ParentHearingPage';
 import MemoPage from './pages/MemoPage';
 import ParentMemoPage from './pages/ParentMemoPage';
 import RecommendationPage from './pages/RecommendationPage';
@@ -36,7 +37,8 @@ class App extends Component {
               <Route path="/søkeresultat2" component={SimpleSerp} />
               <Route path="/artikkel" component={ArticlePage} />
               <Route path="/kapittel" component={ChapterPage} />
-              <Route path="/høring" component={HearingPage} />
+              <Route path="/høringer" component={HearingPage} />
+              <Route path="/høringer-forside" component={ParentHearingPage} />
               <Route path="/anbefaling" component={RecommendationPage} />
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />

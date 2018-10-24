@@ -41,7 +41,7 @@ import SimpleSerp from '../pages/SimpleSerp';
 import InputSearch from '../components/InputSearch';
 
 // Test data
-import { featureListHeading, featureListData } from '../testData.js';
+// import { featureListHeading, featureListData } from '../testData.js';
 import { object } from '@storybook/addon-knobs/dist/base';
 import { select } from '@storybook/addon-knobs/dist/react';
 
@@ -104,20 +104,6 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Normative content page', () => (
     <NormativeContentPage />
   ));
-
-storiesOf('FeatureList', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup(
-    'Basic',
-    withNotes('A very simple component')(() => (
-      <FeatureList
-        heading={text('Heading', featureListHeading)}
-        list={featureListData}
-        icon={boolean('Show icon', true)}
-      />
-    ))
-  );
 
 storiesOf('ContentLabel', module)
   .addDecorator(withKnobs)
@@ -352,7 +338,7 @@ storiesOf('Collapsible', module)
         'large'
       )}
     >
-      {text('Text', 'You can place any text in here.')}
+      {text('Text', 'You can place any content in here.')}
     </Collapsible>
   ));
 

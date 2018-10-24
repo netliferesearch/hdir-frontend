@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 const ContentLabel = props => {
   return (
     <h1 class="b-long-short-heading">
-      {props.short && <span aria-hidden="true">{props.short}</span>}
+      {props.short && (
+        <span aria-hidden={Boolean(props.long).toString()}>{props.short}</span>
+      )}
       {props.short &&
         props.long && (
           <div className="b-long-short-heading__sub">

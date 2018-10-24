@@ -45,8 +45,10 @@
     border-top: 0;
     border-bottom: 7px solid $black;
     padding-bottom: 1em;
-  }
 
-  &__main-heading {
+    &:hover {
+      // Makes sure the link css rule doesn't override this
+      border-bottom: 7px solid $black;
+    }
   }
 }

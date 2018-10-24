@@ -2832,6 +2832,8 @@ img {
     border-top: 0;
     border-bottom: 7px solid #212121;
     padding-bottom: 1em; }
+    .b-chapter-heading--line-bottom:hover {
+      border-bottom: 7px solid #212121; }
 
 .b-filter-list__list {
   list-style-type: none;
