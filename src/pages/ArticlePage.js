@@ -5,12 +5,20 @@ import PageMeta from '../components/PageMeta';
 import PortableArticle from '../components/PortableArticle';
 import ArticleIntro from '../components/ArticleIntro';
 
-const selector = () => {
- let parent = document.querySelectorAll('.t-body-text > h2');
+window.onload = function () {
+ //let parent = document.getElementsByClassName('t-body-text')[0];
+// let x = parent.querySelectorAll('h2')
+// x gets one more h2 tag for some reason, in the article "ti råd" is added
 
 
- console.log("what")
- console.log("Funksjon selector " + parent.length)
+  let x = document.querySelectorAll('.t-body-text > h2')
+
+ console.log("what now " + x.length );
+ for (var i = 0; i < x.length; i++) {
+ var item = x[i];
+ x[i].style.position = 'sticky';
+console.log(item)
+};
 
 };
 
