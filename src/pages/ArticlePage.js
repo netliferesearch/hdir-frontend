@@ -17,7 +17,8 @@ window.onload = function () {
  for (var i = 0; i < x.length; i++) {
  var item = x[i];
  x[i].style.position = 'sticky';
-console.log(item)
+ 
+ console.log(item)
 };
 
 };
