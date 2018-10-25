@@ -5,6 +5,15 @@ import PageMeta from '../components/PageMeta';
 import PortableArticle from '../components/PortableArticle';
 import ArticleIntro from '../components/ArticleIntro';
 
+const selector = () => {
+  //let x = document.getElementsByClassName("t-body-text").querySelectorAll("h2")[0];
+  let x = document.querySelectorAll("h2.t-body-text")
+
+  console.log("Funksjon selector" + x)
+};
+
+selector();
+
 const ArticlePage = () => (
   <div>
     <div className="l-container">
