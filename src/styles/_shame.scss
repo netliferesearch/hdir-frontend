@@ -110,7 +110,6 @@
   border: 1px solid #b969a3;
   border-radius: 4px;
   padding: 2rem;
-  width: 100%;
 
   &__link {
     @include link-init(#b969a3, true);
@@ -199,5 +198,36 @@
       z-index: 2;
       padding: 0.25em;
     }
+  }
+}
+
+.b-select-inline {
+  &__label {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  &__select {
+    appearance: none;
+    position: relative;
+    font-size: $base-font-size;
+    border: 1px solid orange;
+    background: white;
+    padding: 1em;
+
+    &:after {
+      position: aboslute;
+      color: red;
+      display: inline-block;
+      height: 1em;
+      width: 1em;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      background: red;
+      content: 'V';
+    }
+  }
+  &__option {
+    font-size: $meta-text;
   }
 }

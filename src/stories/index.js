@@ -18,6 +18,7 @@ import LongShortHeading from '../components/LongShortHeading';
 // import MainHeader from '../components/MainHeader';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
+import SelectInline from '../components/SelectInline';
 import PortableArticle from '../components/PortableArticle';
 import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
@@ -411,4 +412,25 @@ storiesOf('Quote', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
+  ));
+
+storiesOf('SelectInline', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <SelectInline
+      label="Tilpass siden til meg"
+      placeholder="Velg"
+      options={[
+        'Lege',
+        'Kommune',
+        'Fysioterapaut',
+        'Apotek/bandasjist',
+        'Psykolog',
+        'Logoped',
+        'Kiropraktor',
+        'Sykehus/poliklinikk',
+        'Tannpleier'
+      ]}
+    />
   ));

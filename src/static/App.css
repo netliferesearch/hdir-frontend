@@ -2948,8 +2948,7 @@ h5,
   color: #b969a3;
   border: 1px solid #b969a3;
   border-radius: 4px;
-  padding: 2rem;
-  width: 100%; }
+  padding: 2rem; }
   .b-link-springboard__link:link, .b-link-springboard__link:hover, .b-link-springboard__link:visited, .b-link-springboard__link:active {
     color: #b969a3;
     box-shadow: none;
@@ -3020,3 +3019,29 @@ h5,
     border: 1px solid grey;
     z-index: 2;
     padding: 0.25em; }
+
+.b-select-inline__label {
+  display: inline-block;
+  margin-right: 1em; }
+
+.b-select-inline__select {
+  appearance: none;
+  position: relative;
+  font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1440 - 400));
+  border: 1px solid orange;
+  background: white;
+  padding: 1em; }
+  .b-select-inline__select:after {
+    position: aboslute;
+    color: red;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background: red;
+    content: 'V'; }
+
+.b-select-inline__option {
+  font-size: 0.8rem; }
