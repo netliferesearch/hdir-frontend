@@ -6,15 +6,23 @@ import PortableArticle from '../components/PortableArticle';
 import ArticleIntro from '../components/ArticleIntro';
 
 const selector = () => {
-  //let x = document.getElementsByClassName("t-body-text").querySelectorAll("h2")[0];
-  let x = document.querySelectorAll("h2.t-body-text")
+ let parent = document.querySelectorAll('.t-body-text > h2');
 
-  console.log("Funksjon selector" + x)
+
+ console.log("what")
+ console.log("Funksjon selector " + parent.length)
+
 };
 
-selector();
+
+
+
+
+
+
 
 const ArticlePage = () => (
+
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
