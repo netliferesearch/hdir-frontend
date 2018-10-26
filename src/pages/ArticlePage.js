@@ -5,33 +5,64 @@ import PageMeta from '../components/PageMeta';
 import PortableArticle from '../components/PortableArticle';
 import ArticleIntro from '../components/ArticleIntro';
 
-window.onload = function () {
- //let parent = document.getElementsByClassName('t-body-text')[0];
-// let x = parent.querySelectorAll('h2')
-// x gets one more h2 tag for some reason, in the article "ti råd" is added
+window.onload = function() {
+  let x = document.querySelectorAll('.t-body-text > h2');
 
+  console.log('what now ' + x.length);
+  for (var i = 0; i < x.length; i++) {
+    var item = x[i];
+    x[i].style.position = 'sticky';
 
-  let x = document.querySelectorAll('.t-body-text > h2')
-
- console.log("what now " + x.length );
- for (var i = 0; i < x.length; i++) {
- var item = x[i];
- x[i].style.position = 'sticky';
- 
- console.log(item)
+    console.log(item);
+  }
 };
+// start
+window.onScroll = function() {
+  const getElementsInArea = (function(docElm) {
+    let viewportHeight = docElm.clientHeight;
 
+    return function(e, opts) {
+      let found = [],
+        i;
+
+      if (e && e.type == 'highlight') viewportHeight = docElm.clientHeight;
+
+      for (i = opts.elements.length; i--; ) {
+        let elm = opts.elements[i],
+          pos = elm.getBoundingClientRect(),
+          topPerc = (pos.top / viewportHeight) * 100,
+          bottomPerc = (pos.bottom / viewportHeight) * 100,
+          middle = (topPerc + bottomPerc) / 2,
+          inViewport = middle > opts.zone[1] && middle < 100 - opts.zone[1];
+
+        elm.classList.toggle(opts.markedClass, inViewport);
+
+        if (inViewport) found.push(elm);
+      }
+    };
+  })(document.documentElement);
+
+  //testing
+
+  window.addEventListener('scroll', f);
+  window.addEventListener('highlight', f);
+
+  function f(e) {
+    getElementsInArea(e, {
+      elements: document.querySelectorAll('.t-body-text > h2'),
+      markedClass: 'highlight--1',
+      zone: [20, 20] // avstand i prosent fra top og bunn
+    });
+
+    getElementsInArea(e, {
+      elements: document.querySelectorAll('.t-body-text > h2'),
+      markedClass: 'highlight--2',
+      zone: [40, 40] // avstand i prosent fra top og bunn
+    });
+  }
 };
-
-
-
-
-
-
-
 
 const ArticlePage = () => (
-
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
