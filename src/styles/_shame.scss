@@ -135,6 +135,9 @@
   &--black {
     border-color: $black;
   }
+  &--thick {
+    border-width: 7px;
+  }
 }
 
 // The CSS meant for the content from the rich text in Enonic
