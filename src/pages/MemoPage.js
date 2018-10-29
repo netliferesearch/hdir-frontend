@@ -2,7 +2,7 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-import PortableArticle from '../components/PortableArticle';
+import LinkWithIcon from '../components/LinkWithIcon';
 import ChapterHeading from '../components/ChapterHeading';
 import Quote from '../components/Quote';
 
@@ -160,7 +160,9 @@ const MemoPage = () => (
           </p>
 
           <div className="l-mt-4">
-            <PortableArticle />
+            <LinkWithIcon href="#" icon="./icons/print.svg">Om metode og prosess</LinkWithIcon>
+            <br />
+            <LinkWithIcon href="#" icon="./icons/method.svg">Om metode og prosess</LinkWithIcon>
           </div>
 
           <div className="l-mt-4">
