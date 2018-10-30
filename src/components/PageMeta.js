@@ -9,7 +9,7 @@ const PageMeta = props => (
     <span className="b-page-meta__text">Sist endret: {props.editDate}</span>
 
     {props.url && (
-      <a href="#" className="b-page-meta__link">
+      <a href={props.url} className="b-page-meta__link">
         Se tidligere utgaver
       </a>
     )}

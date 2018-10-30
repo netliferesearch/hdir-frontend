@@ -280,8 +280,8 @@ storiesOf('LinkWithIcon', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () =>
-    <LinkWithIcon href={text('href', '#')} icon="./icons/method.svg">
-      {text('Content', 'Sktiv ut')}
+    <LinkWithIcon href={text('href', '#')} icon="./icons/method.svg" small={boolean('Small', false)}>
+      {text('Content', 'Skriv ut')}
     </LinkWithIcon>
   );
 
