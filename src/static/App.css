@@ -2625,10 +2625,11 @@ h5,
   .b-page-meta__link {
     display: inline-block; }
     .b-page-meta__link:link, .b-page-meta__link:hover, .b-page-meta__link:visited, .b-page-meta__link:active {
-      color: #025169;
+      color: #212121;
       box-shadow: none;
       border-bottom: 0;
-      text-decoration: none; }
+      text-decoration: none;
+      box-shadow: 0 1px 0 #0667c6; }
     .b-page-meta__link:after {
       display: inline-block;
       margin-left: 0.5em;
@@ -2739,6 +2740,9 @@ h5,
   content: ' →';
   box-shadow: 0 1px 0 transparent;
   color: #0667c6; }
+
+.b-link-with-icon__small {
+  font-size: 0.8rem; }
 
 .b-footer {
   padding: 4em 0; }
