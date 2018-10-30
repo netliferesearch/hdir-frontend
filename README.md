@@ -1,5 +1,10 @@
 # Helsedirektoratet frontend
 
+To install dependencies, write `npm install` in terminal.
+Then run the app by running `npm run`.
+
+To open storybook, run `npm start stoybook`.
+
 This repository contains the main style and components for the new HDIR content platform.
 
 It should support IE10+ and two versions old or newer for the modern browsers.

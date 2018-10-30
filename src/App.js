@@ -15,9 +15,11 @@ import MemoPage from './pages/MemoPage';
 import ParentMemoPage from './pages/ParentMemoPage';
 import RecommendationPage from './pages/RecommendationPage';
 import NotFound from './pages/NotFound';
-
+import LisSpeciality from './pages/LisSpeciality';
 import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
+import LisLearning from './pages/LisLearning';
+import LisFrontPage from './pages/LisFrontPage';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
