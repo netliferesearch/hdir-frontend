@@ -68,7 +68,7 @@ const ProductPage = () => (
           />
         </div>
       </div>
-      <div className="l-mt-4">
+      <div className="col-xs-12 l-mt-4">
         <div className="b-link-springboard">
           <div className="col-md-10 col-md-offset-1">
             For å lese om symptomer, kostholdsråd og andre tips ved
@@ -85,11 +85,14 @@ const ProductPage = () => (
       </div>
 
       <div className="col-xs-12 l-mt-4">
-        <LinkWithIcon href="#" small icon="./icons/method.svg">Om metode og prosess</LinkWithIcon>
+        <LinkWithIcon href="#" small icon="./icons/method.svg">
+          Om metode og prosess
+        </LinkWithIcon>
         <br />
-        <LinkWithIcon href="#" small icon="./icons/print.svg">Skriv ut hele retningslinjen</LinkWithIcon>
+        <LinkWithIcon href="#" small icon="./icons/print.svg">
+          Skriv ut hele retningslinjen
+        </LinkWithIcon>
       </div>
-
     </div>
   </div>
 );
