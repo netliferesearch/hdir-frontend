@@ -18,6 +18,7 @@ import NotFound from './pages/NotFound';
 import LisSpeciality from './pages/LisSpeciality';
 import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
+import LisLearning from './pages/LisLearning';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
