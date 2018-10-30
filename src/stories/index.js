@@ -284,11 +284,15 @@ storiesOf('ChapterHeading', module)
 storiesOf('LinkWithIcon', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () =>
-    <LinkWithIcon href={text('href', '#')} icon="./icons/method.svg" small={boolean('Small', false)}>
+  .addWithStaticMarkup('Basic', () => (
+    <LinkWithIcon
+      href={text('href', '#')}
+      icon="./icons/method.svg"
+      small={boolean('Small', false)}
+    >
       {text('Content', 'Skriv ut')}
     </LinkWithIcon>
-  );
+  ));
 
 storiesOf('SearchOptions', module)
   .addDecorator(withKnobs)
@@ -340,8 +344,10 @@ storiesOf('Collapsible', module)
   .addWithStaticMarkup('Basic', () => (
     <Collapsible
       heading={text('Heading', 'Heading')}
-      subheading={text('Subheading', 'Subheading')}
+      subheading={text('Subheading', 'SVAK ANBEFALING')}
+      subheadingContent={text('Subheading Content', 'Bla bla bla bla')}
       subtle={boolean('Subtle', false)}
+      smallContent={boolean('Small content', false)}
       size={select(
         'Size',
         {

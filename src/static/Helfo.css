@@ -2808,7 +2808,8 @@ h5,
   color: #b969a3;
   border: 1px solid #b969a3;
   border-radius: 4px;
-  padding: 2rem; }
+  padding: 2rem;
+  font-size: 0.8rem; }
   .b-link-springboard__link:link, .b-link-springboard__link:hover, .b-link-springboard__link:visited, .b-link-springboard__link:active {
     color: #b969a3;
     box-shadow: none;

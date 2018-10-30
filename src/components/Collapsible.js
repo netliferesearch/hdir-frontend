@@ -30,10 +30,11 @@ const collapsibleClasses = (size, subtle) =>
     'b-collapsible--small': size === 'small'
   });
 
-const contentClasses = smallContent => classNames({
-  'b-collapsible__content': true,
-  'b-collapsible__content--small': smallContent
-});
+const contentClasses = smallContent =>
+  classNames({
+    'b-collapsible__content': true,
+    'b-collapsible__content--small': smallContent
+  });
 
 class Collapsible extends React.Component {
   constructor(props) {
@@ -71,7 +72,11 @@ class Collapsible extends React.Component {
         ref={ref => (this.domNode = ref)}
       >
         <button
-          className={buttonClasses(this.state.collapsed, props.size, props.subtle)}
+          className={buttonClasses(
+            this.state.collapsed,
+            props.size,
+            props.subtle
+          )}
           aria-expanded={this.state.collapsed}
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
@@ -87,13 +92,23 @@ class Collapsible extends React.Component {
             {props.heading}
           </Heading>
         </button>
-        {props.subheading && (
-          <div className="l-mt-1">
-            <span className="b-collapsible__subheading">
-              {props.subheading}
-            </span>
-          </div>
-        )}
+        {props.subheading &&
+          !props.subheadingContent && (
+            <div className="b-collapsible__subheading">{props.subheading}</div>
+          )}
+        {props.subheading &&
+          props.subheadingContent && (
+            <div className="b-collapsible__subheading-collapsible">
+              <Collapsible
+                heading={props.subheading}
+                subtle
+                size="small"
+                smallContent
+              >
+                <p>{props.subheadingContent}</p>
+              </Collapsible>
+            </div>
+          )}
 
         <div
           id="collapsible-0"
@@ -111,6 +126,7 @@ class Collapsible extends React.Component {
 Collapsible.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
+  subheadingContent: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool

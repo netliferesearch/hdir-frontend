@@ -7,7 +7,7 @@ import NavList from '../components/NavList';
 const ChapterPage = () => (
   <div className="l-container l-mt-3">
     <div className="row">
-      <div className="col-md-4 l-hide-to-lg l-bleed-right">
+      <aside className="col-md-4 l-hide-to-lg l-bleed-right">
         <NavList
           noArrow
           small
@@ -43,7 +43,16 @@ const ChapterPage = () => (
             }
           ]}
         />
-      </div>
+        <div class="l-mt-4">
+          <div className="b-link-springboard">
+            For å lese om symptomer, kostholdsråd og andre tips ved
+            svangerskapsdiabetes, kan du gå til{' '}
+            <a href="#" className="b-link-springboard__link">
+              helsenorge.no.
+            </a>
+          </div>
+        </div>
+      </aside>
       <div className="col-md-7 col-md-offset-1 l-bleed-left">
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
@@ -56,6 +65,7 @@ const ChapterPage = () => (
           <Collapsible
             heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
             subheading="STERK ANBEFALING"
+            subheadingContent="Dette er en beskrivelse av sterk anbefaling"
           >
             <p>
               Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
@@ -79,6 +89,7 @@ const ChapterPage = () => (
           <Collapsible
             heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
             subheading="STERK ANBEFALING"
+            subheadingContent="Dette er en beskrivelse av sterk anbefaling"
           >
             <p>
               Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
@@ -102,6 +113,7 @@ const ChapterPage = () => (
           <Collapsible
             heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
             subheading="STERK ANBEFALING"
+            subheadingContent="Dette er en beskrivelse av sterk anbefaling"
           >
             <p>
               Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
@@ -145,7 +157,11 @@ const ChapterPage = () => (
                   og for å forhindre for stor vektøkning i svangerskapet. Det
                   anbefales at kostanamnese benyttes i dette arbeidet.
                 </p>
-                <Collapsible heading="Seksjon under: 2.2" size="medium" smallContent>
+                <Collapsible
+                  heading="Seksjon under: 2.2"
+                  size="small"
+                  smallContent
+                >
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Praesent eget convallis metus. Sed vitae imperdiet enim.

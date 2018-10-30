@@ -2781,7 +2781,7 @@ h5,
     padding-top: 0;
     margin-top: 0; }
   .b-collapsible--subtle {
-    padding-left: 0; }
+    margin-left: -1.5em; }
   .b-collapsible__button {
     position: relative;
     background: none;
@@ -2805,8 +2805,10 @@ h5,
       top: 0.15em; }
     .b-collapsible__button:active {
       color: #212121; }
-    .b-collapsible__button--subtle:before {
-      display: none; }
+    .b-collapsible__button--subtle {
+      font-size: 0.8rem; }
+      .b-collapsible__button--subtle:before {
+        display: none; }
     .b-collapsible__button--medium:before {
       top: 0.25em;
       width: 0.66em;
@@ -2823,17 +2825,17 @@ h5,
       transform: rotate(180deg); }
   .b-collapsible__content {
     animation: fadeInUp 300ms ease;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-left: -1.5em; }
     .b-collapsible__content--small {
-      font-size: 0.8rem; }
+      font-size: 0.8rem;
+      margin-left: 0; }
   .b-collapsible__heading {
     display: inline; }
     .b-collapsible__heading:hover {
       cursor: pointer;
       box-shadow: 0 1px 0 #212121; }
   .b-collapsible__subheading {
-    border-bottom: 1px dashed #0667c6;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.8rem; }
@@ -2995,7 +2997,8 @@ h5,
   color: #b969a3;
   border: 1px solid #b969a3;
   border-radius: 4px;
-  padding: 2rem; }
+  padding: 2rem;
+  font-size: 0.8rem; }
   .b-link-springboard__link:link, .b-link-springboard__link:hover, .b-link-springboard__link:visited, .b-link-springboard__link:active {
     color: #b969a3;
     box-shadow: none;

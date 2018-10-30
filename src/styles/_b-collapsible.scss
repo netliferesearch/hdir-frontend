@@ -16,7 +16,7 @@
   }
 
   &--subtle {
-    padding-left: 0;
+    margin-left: -$left-space;
   }
 
   &__button {
@@ -48,6 +48,8 @@
     }
 
     &--subtle {
+      font-size: $meta-text;
+
       &:before {
         display: none;
       }
@@ -79,11 +81,12 @@
   }
   &__content {
     animation: fadeInUp 300ms ease;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-left: -$left-space;
 
     &--small {
       font-size: $meta-text;
+      margin-left: 0;
     }
   }
   &__heading {
@@ -95,7 +98,7 @@
     }
   }
   &__subheading {
-    border-bottom: 1px dashed $blue;
+    // border-bottom: 1px dashed $blue;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: $meta-text;
