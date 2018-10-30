@@ -2,7 +2,7 @@ import React from 'react';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
 import Collapsible from '../components/Collapsible';
-
+import LinkWithIcon from '../components/LinkWithIcon';
 const RecommendationPage = () => (
   <div className="l-container l-mt-3">
     <h1>
@@ -262,22 +262,65 @@ const RecommendationPage = () => (
               </p>
             </Collapsible>
             <Collapsible heading="Forskningsgrunnlag" size="small">
-              <p>
-                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
-                tilfredsstillende blodsukker fastende og etter måltider, og for
-                å forhindre for stor vektøkning i svangerskapet. Det anbefales
-                at kostanamnese benyttes i dette arbeidet.
-              </p>
-              <p>
-                Kostrådene baseres på kostanamnesen og styres etter
-                glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                5.3 mmol/l, 2 timer etter måltid: {'<'}
-                6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                Kvinnen kan rådes til å følge et kosthold med en
-                karbohydratkvalitet og -mengde per måltid som gjør det enklere å
-                nå behandlingsmålene for glukose
-              </p>
-              <p>etc.</p>
+              <div className="col-md-4" />
+
+              <div className="row l-mb-2">
+                <h4 className="col-xs-12 col-md-4 top-xs">Populasjon</h4>
+                <div className="col-xs-12 col-md-8">
+                  Kvinner med svangerskapsdiabetes
+                </div>
+              </div>
+              <div className="row l-mb-2">
+                <h4 className="col-xs-12 col-md-4 top-xs">Intervensjon</h4>
+                <div className="col-xs-12 col-md-8">Lav-GI kosthold</div>
+              </div>
+              <div className="row l-mb-2">
+                <h4 className="col-xs-12 col-md-4 top-xs">Komparator</h4>
+                <div className="col-xs-12 col-md-8">
+                  Standard kostveiledning
+                </div>
+              </div>
+              <div className="row l-mb-2">
+                <h4 className="col-xs-12 col-md-4 top-xs">Utfall</h4>
+                <div className="col-xs-12 col-md-8">
+                  Vektøkning (mor), Fødselsvekt (gram), Keisersnitt, Bruk av
+                  insulin, Makrosomi (fødselsvekt >4kg), Barn med fødselsvekt
+                </div>
+              </div>
+              <div className="l-mt-4 l-mb-4">
+                <LinkWithIcon href="#" small icon="./icons/method.svg">
+                  Om metode og prosess
+                </LinkWithIcon>
+                <br />
+                <LinkWithIcon href="#" small icon="./icons/print.svg">
+                  Skriv ut hele retningslinjen
+                </LinkWithIcon>
+              </div>
+              <div className="col-md-4" />
+
+              <div className="row l-mb-2">
+                <h4 className="col-xs-12 col-md-4 top-xs">Populasjon</h4>
+                <div className="col-xs-12 col-md-8">
+                  Kvinner med svangerskapsdiabetes
+                </div>
+              </div>
+              <div className="row l-mb-2">
+                <h4 className="col-xs-12 col-md-4 top-xs">Intervensjon</h4>
+                <div className="col-xs-12 col-md-8">Lavkarbo kosthold</div>
+              </div>
+              <div className="row l-mb-2">
+                <h4 className="col-xs-12 col-md-4 top-xs">Komparator</h4>
+                <div className="col-xs-12 col-md-8">
+                  Standard kostveiledning
+                </div>
+              </div>
+              <div className="row l-mb-2">
+                <h4 className="col-xs-12 col-md-4 top-xs">Utfall</h4>
+                <div className="col-xs-12 col-md-8">
+                  Vektøkning (mor), Fødselsvekt (gram), Keisersnitt, Bruk av
+                  insulin, Makrosomi (fødselsvekt >4kg), Barn med fødselsvekt
+                </div>
+              </div>
             </Collapsible>
             <Collapsible heading="Referanser" size="small">
               <p>
