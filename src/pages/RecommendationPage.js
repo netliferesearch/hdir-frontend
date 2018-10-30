@@ -175,7 +175,6 @@ const RecommendationPage = () => (
                 for en energirestriktiv kost eller en lavkarbohydratkost i
                 forhold til kontrollkost
               </p>
-              <p>etc.</p>
               <h3>Kvalitet på dokumentasjonen</h3>
               <p>
                 <b>For samlet behandling:</b>
@@ -185,31 +184,34 @@ const RecommendationPage = () => (
                 fastsittende skulder, makrosomi og barn som er store for
                 gestasjonsalder (LGA). Vi har lav eller veldig lav tillit til
                 effektestimatene for øvrige utfall. For kostråd om
-                karbohydratkvalitet og -mengde:
-                <ul>
-                  Det er Lav tillit til effektestimatene for kvinner med
-                  svangerskapsdiabetes som følger en lavglykemisk kost for
-                  utfall som
-                  <li>- Andel kvinner som trenger insulin</li>
-                  <li>- Fødselsvekt </li>
-                  <li>- Andel SGA barn </li>
-                  <p>
-                    Det er Svært lav tillitt til effektestimatene for kvinner
-                    med svangerskapsdiabetes som følger en energirestriktiv kost
-                    for utfall som
-                  </p>
-                  <li>- Makrosomi</li>
-                  <li>- Neonatal hypoglykemi</li>
-                  <li>- Keisersnitt</li>
-                  <p>
-                    Det er Lav tillitt til effektestimatene for kvinner med
-                    svangerskapsdiabetes som følger en lavkarbohydratkost for
-                    utfall som
-                  </p>
-                  <li>- Andel kvinner som trenger insulin</li>
-                  <li>- Keisersnitt</li>
-                </ul>
+                karbohydratkvalitet og -mengde: Det er Lav tillit til
+                effektestimatene for kvinner med svangerskapsdiabetes som følger
+                en lavglykemisk kost for utfall som
               </p>
+              <ul>
+                <li> Andel kvinner som trenger insulin</li>
+                <li> Fødselsvekt </li>
+                <li> Andel SGA barn </li>
+              </ul>
+              <p>
+                Det er Svært lav tillitt til effektestimatene for kvinner med
+                svangerskapsdiabetes som følger en energirestriktiv kost for
+                utfall som
+              </p>
+              <ul>
+                <li> Makrosomi</li>
+                <li> Neonatal hypoglykemi</li>
+                <li> Keisersnitt</li>
+              </ul>
+              <p>
+                Det er Lav tillitt til effektestimatene for kvinner med
+                svangerskapsdiabetes som følger en lavkarbohydratkost for utfall
+                som
+              </p>
+              <ul>
+                <li> Andel kvinner som trenger insulin</li>
+                <li> Keisersnitt</li>
+              </ul>
               <h3>Verdier og preferanser</h3>
               <p>
                 <b>
@@ -283,19 +285,22 @@ const RecommendationPage = () => (
               <div className="row l-mb-2">
                 <h4 className="col-xs-12 col-md-4 top-xs">Utfall</h4>
                 <div className="col-xs-12 col-md-8">
-                  Vektøkning (mor), Fødselsvekt (gram), Keisersnitt, Bruk av
-                  insulin, Makrosomi (fødselsvekt >4kg), Barn med fødselsvekt
+                  <p>
+                    Vektøkning (mor), Fødselsvekt (gram), Keisersnitt, Bruk av
+                    insulin, Makrosomi (fødselsvekt >4kg), Barn med fødselsvekt
+                  </p>
+                  <div className="l-mt-4 l-mb-4">
+                    <LinkWithIcon href="#" small icon="./icons/method.svg">
+                      Om metode og prosess
+                    </LinkWithIcon>
+                    <br />
+                    <LinkWithIcon href="#" small icon="./icons/print.svg">
+                      Skriv ut hele retningslinjen
+                    </LinkWithIcon>
+                  </div>
                 </div>
               </div>
-              <div className="l-mt-4 l-mb-4">
-                <LinkWithIcon href="#" small icon="./icons/method.svg">
-                  Om metode og prosess
-                </LinkWithIcon>
-                <br />
-                <LinkWithIcon href="#" small icon="./icons/print.svg">
-                  Skriv ut hele retningslinjen
-                </LinkWithIcon>
-              </div>
+
               <div className="col-md-4" />
 
               <div className="row l-mb-2">
@@ -336,7 +341,7 @@ const RecommendationPage = () => (
                 Force and the National Institutes of Health Office of Medical
                 Applications of Research.. Annals of Internal Medicine 2013;
                 Pubmed Journal
-              </p>{' '}
+              </p>
               <p>
                 <b>Horvath K, Koch K, Jeitler K et al </b>: Effects of treatment
                 in women with gestational diabetes mellitus: systematic review
@@ -344,7 +349,6 @@ const RecommendationPage = () => (
                 Journal
               </p>
               <p>
-                {' '}
                 <b>Falavigna M, Schmidt MI, Trujillo J et al</b> : Effectiveness
                 of gestational diabetes treatment: a systematic review with
                 quality of evidence assessment.. Diabetes Research and Clinical
@@ -371,6 +375,7 @@ const RecommendationPage = () => (
             </Collapsible>
           </Collapsible>
         </div>
+        <hr />
         <div className="l-mt-4">
           <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
         </div>
