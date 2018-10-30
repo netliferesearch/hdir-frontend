@@ -2,7 +2,7 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-import PortableArticle from '../components/PortableArticle';
+
 import ChapterHeading from '../components/ChapterHeading';
 import Quote from '../components/Quote';
 import FilterList from '../components/FilterList';
