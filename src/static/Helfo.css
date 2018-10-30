@@ -2478,6 +2478,8 @@ h5,
   display: flex;
   justify-content: space-between;
   padding: 2rem 0; }
+  .b-main-header__logo {
+    max-width: calc(8rem + 4vw); }
   .b-main-header__logo-link:link, .b-main-header__logo-link:hover, .b-main-header__logo-link:visited, .b-main-header__logo-link:active {
     color: transparent;
     box-shadow: none;
@@ -2849,19 +2851,26 @@ h5,
 .t-body-text > :first-child {
   margin-top: 0; }
 
-.b-long-short-heading__sub {
-  font-weight: bold;
-  font-size: 0.8rem;
-  margin-top: 1rem; }
-
-.b-long-short-heading__sub-icon {
-  height: 1.5em;
-  width: 1.5em;
-  margin-right: 1em;
-  margin-bottom: -0.33em;
-  padding: 0.25em;
-  background: #0667c6;
-  border-radius: 100%; }
+.b-long-short-heading {
+  position: relative;
+  width: 100%; }
+  .b-long-short-heading__sub {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 1rem; }
+  .b-long-short-heading__sub-icon {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 1em;
+    margin-bottom: -0.33em;
+    padding: 0.25em;
+    background: #0667c6;
+    border-radius: 100%; }
+  .b-long-short-heading__link {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
 
 .block-hint [class^='b-']:not([class*='__']) {
   position: relative; }
@@ -2901,6 +2910,9 @@ h5,
     content: 'V'; }
 
 .b-select-inline__option {
+  font-size: 0.8rem; }
+
+small {
   font-size: 0.8rem; }
 
 body {

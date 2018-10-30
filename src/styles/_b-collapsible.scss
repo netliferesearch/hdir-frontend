@@ -1,5 +1,7 @@
 .b-collapsible {
-  padding-left: 2em;
+  $left-space: 1.5em;
+
+  padding-left: $left-space;
   border-top: 7px solid $black;
   padding-top: 2em;
 
@@ -8,10 +10,13 @@
   }
   &--small {
     border-width: 1px;
-    padding-left: 1.5em;
     border: 0;
     padding-top: 0;
     margin-top: 0;
+  }
+
+  &--subtle {
+    padding-left: 0;
   }
 
   &__button {
@@ -27,9 +32,9 @@
       display: block;
       position: absolute;
       content: ' ';
-      width: 1em;
-      height: 1em;
-      margin-left: -2em;
+      width: 0.75em;
+      height: 0.75em;
+      margin-left: -$left-space;
       transform: rotate(90deg);
       background-image: url(./icons/chevron.svg);
       background-repeat: no-repeat;
@@ -42,6 +47,12 @@
       color: $black;
     }
 
+    &--subtle {
+      &:before {
+        display: none;
+      }
+    }
+
     &--medium {
       &:before {
         top: 0.25em;
@@ -52,7 +63,7 @@
     &--small {
       @include underline($black);
       &:before {
-        margin-left: -1.5em;
+        margin-left: -$left-space;
         top: 0.25em;
         width: 0.66em;
         height: 0.66em;
@@ -69,6 +80,11 @@
   &__content {
     animation: fadeInUp 300ms ease;
     margin-top: 1rem;
+    margin-left: -$left-space;
+
+    &--small {
+      font-size: $meta-text;
+    }
   }
   &__heading {
     display: inline;
@@ -79,7 +95,7 @@
     }
   }
   &__subheading {
-    border-bottom: 1px dotted $blue;
+    border-bottom: 1px dashed $blue;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: $meta-text;

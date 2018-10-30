@@ -2485,6 +2485,8 @@ h5,
   display: flex;
   justify-content: space-between;
   padding: 2rem 0; }
+  .b-main-header__logo {
+    max-width: calc(8rem + 4vw); }
   .b-main-header__logo-link:link, .b-main-header__logo-link:hover, .b-main-header__logo-link:visited, .b-main-header__logo-link:active {
     color: transparent;
     box-shadow: none;
@@ -2733,6 +2735,11 @@ h5,
   background-size: contain;
   background-position: 0 center; }
 
+.b-link-with-icon__arrow:after {
+  content: ' →';
+  box-shadow: 0 1px 0 transparent;
+  color: #0667c6; }
+
 .b-footer {
   padding: 4em 0; }
   .b-footer__link {
@@ -2759,17 +2766,18 @@ h5,
     text-indent: 0; }
 
 .b-collapsible {
-  padding-left: 2em;
+  padding-left: 1.5em;
   border-top: 7px solid #212121;
   padding-top: 2em; }
   .b-collapsible--medium {
     border-width: 1px; }
   .b-collapsible--small {
     border-width: 1px;
-    padding-left: 1.5em;
     border: 0;
     padding-top: 0;
     margin-top: 0; }
+  .b-collapsible--subtle {
+    padding-left: 0; }
   .b-collapsible__button {
     position: relative;
     background: none;
@@ -2782,9 +2790,9 @@ h5,
       display: block;
       position: absolute;
       content: ' ';
-      width: 1em;
-      height: 1em;
-      margin-left: -2em;
+      width: 0.75em;
+      height: 0.75em;
+      margin-left: -1.5em;
       transform: rotate(90deg);
       background-image: url(./icons/chevron.svg);
       background-repeat: no-repeat;
@@ -2793,6 +2801,8 @@ h5,
       top: 0.15em; }
     .b-collapsible__button:active {
       color: #212121; }
+    .b-collapsible__button--subtle:before {
+      display: none; }
     .b-collapsible__button--medium:before {
       top: 0.25em;
       width: 0.66em;
@@ -2809,14 +2819,17 @@ h5,
       transform: rotate(180deg); }
   .b-collapsible__content {
     animation: fadeInUp 300ms ease;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    margin-left: -1.5em; }
+    .b-collapsible__content--small {
+      font-size: 0.8rem; }
   .b-collapsible__heading {
     display: inline; }
     .b-collapsible__heading:hover {
       cursor: pointer;
       box-shadow: 0 1px 0 #212121; }
   .b-collapsible__subheading {
-    border-bottom: 1px dotted #0667c6;
+    border-bottom: 1px dashed #0667c6;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.8rem; }
@@ -3022,19 +3035,26 @@ h5,
 .t-body-text > :first-child {
   margin-top: 0; }
 
-.b-long-short-heading__sub {
-  font-weight: bold;
-  font-size: 0.8rem;
-  margin-top: 1rem; }
-
-.b-long-short-heading__sub-icon {
-  height: 1.5em;
-  width: 1.5em;
-  margin-right: 1em;
-  margin-bottom: -0.33em;
-  padding: 0.25em;
-  background: #0667c6;
-  border-radius: 100%; }
+.b-long-short-heading {
+  position: relative;
+  width: 100%; }
+  .b-long-short-heading__sub {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 1rem; }
+  .b-long-short-heading__sub-icon {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 1em;
+    margin-bottom: -0.33em;
+    padding: 0.25em;
+    background: #0667c6;
+    border-radius: 100%; }
+  .b-long-short-heading__link {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
 
 .block-hint [class^='b-']:not([class*='__']) {
   position: relative; }
@@ -3074,4 +3094,7 @@ h5,
     content: 'V'; }
 
 .b-select-inline__option {
+  font-size: 0.8rem; }
+
+small {
   font-size: 0.8rem; }

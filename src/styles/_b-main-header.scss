@@ -4,6 +4,7 @@
   padding: 2rem 0;
 
   &__logo {
+    max-width: calc(8rem + 4vw);
   }
   &__logo-link {
     @include link-init(transparent);

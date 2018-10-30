@@ -7,7 +7,7 @@ import NavList from '../components/NavList';
 const ChapterPage = () => (
   <div className="l-container l-mt-3">
     <div className="row">
-      <div className="col-md-4">
+      <div className="col-md-4 l-hide-to-lg l-bleed-right">
         <NavList
           noArrow
           small
@@ -44,7 +44,7 @@ const ChapterPage = () => (
           ]}
         />
       </div>
-      <div className="col-md-7 col-md-offset-1">
+      <div className="col-md-7 col-md-offset-1 l-bleed-left">
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
@@ -145,7 +145,7 @@ const ChapterPage = () => (
                   og for å forhindre for stor vektøkning i svangerskapet. Det
                   anbefales at kostanamnese benyttes i dette arbeidet.
                 </p>
-                <Collapsible heading="Seksjon under: 2.2" size="small">
+                <Collapsible heading="Seksjon under: 2.2" size="medium" smallContent>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Praesent eget convallis metus. Sed vitae imperdiet enim.
