@@ -10,6 +10,7 @@
 @import './styles/typography';
 @import './styles/headings';
 @import 'styles/layout';
+@import 'styles/animation';
 
 @import 'styles/misc';
 
@@ -22,10 +23,13 @@
 @import './styles/b-search-sidebar';
 @import './styles/b-search-result-section';
 @import './styles/b-article-intro';
+@import './styles/b-link-with-icon';
+@import './styles/b-footer';
+@import './styles/b-quote';
+@import './styles/b-collapsible';
+@import './styles/b-list';
+@import './styles/b-chapter-heading';
+@import './styles/b-filter-list';
 
 // Temp styles. Remove your temp-styles after finishing your task.
 @import './styles/shame';
-
-body {
-  background: #bde4f9;
-}
