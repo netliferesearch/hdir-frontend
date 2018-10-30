@@ -167,6 +167,9 @@
 }
 
 .b-long-short-heading {
+  position: relative;
+  width: 100%;
+
   &__sub {
     font-weight: bold;
     font-size: $meta-text;
@@ -180,6 +183,12 @@
     padding: 0.25em;
     background: $blue;
     border-radius: 100%;
+  }
+  &__link {
+    font-size: $meta-text;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -230,4 +239,8 @@
   &__option {
     font-size: $meta-text;
   }
+}
+
+small {
+  font-size: $meta-text;
 }

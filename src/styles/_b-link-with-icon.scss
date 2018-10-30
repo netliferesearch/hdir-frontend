@@ -10,4 +10,11 @@
     background-size: contain;
     background-position: 0 center;
   }
+  &__arrow {
+    &:after {
+      content: ' →';
+      box-shadow: 0 1px 0 transparent;
+      color: $blue;
+    }
+  }
 }

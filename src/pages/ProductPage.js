@@ -7,11 +7,13 @@ import LongShortHeading from '../components/LongShortHeading';
 const ProductPage = () => (
   <div className="l-container">
     <div className="row">
-      <div className="col-md-8 l-mt-3">
+      <div className="col-xs-12 l-mt-3">
         <LongShortHeading
           long="Nasjonal faglig retningslinje for svangerskapsdiabetes"
           short="Svangerskapsdiabetes"
           icon={'https://placehold.it/64x64'}
+          url="#"
+          linkText="Hva er nasjonal faglig retningslinje"
         />
       </div>
       <div className="col-xs-12 l-mt-4">
