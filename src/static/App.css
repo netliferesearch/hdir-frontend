@@ -3016,6 +3016,10 @@ h5,
     border-color: #0667c6; }
   .b-hr--black {
     border-color: #212121; }
+  .b-hr--thick {
+    border-width: 7px; }
+  .b-hr--less-thick {
+    border-width: 4px; }
 
 .t-body-text h1,
 .t-body-text h2,
