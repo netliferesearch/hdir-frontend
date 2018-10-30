@@ -324,48 +324,49 @@ const RecommendationPage = () => (
             </Collapsible>
             <Collapsible heading="Referanser" size="small">
               <p>
-                Thangaratinam S, Rogozinska E, Jolly K et al : Effects of
+                <b>Thangaratinam S, Rogozinska E, Jolly K et al</b> : Effects of
                 interventions in pregnancy on maternal weight and obstetric
                 outcomes: meta-analysis of randomised evidence.. BMJ (British
                 Medical Journal) 2012; Pubmed Journal
               </p>{' '}
               <p>
-                Hartling L, Dryden DM, Guthrie A et al : Benefits and harms of
-                treating gestational diabetes mellitus: a systematic review and
-                meta-analysis for the U.S. Preventive Services Task Force and
-                the National Institutes of Health Office of Medical Applications
-                of Research.. Annals of Internal Medicine 2013; Pubmed Journal
+                <b>Hartling L, Dryden DM, Guthrie A et al</b> : Benefits and
+                harms of treating gestational diabetes mellitus: a systematic
+                review and meta-analysis for the U.S. Preventive Services Task
+                Force and the National Institutes of Health Office of Medical
+                Applications of Research.. Annals of Internal Medicine 2013;
+                Pubmed Journal
               </p>{' '}
               <p>
-                Horvath K, Koch K, Jeitler K et al : Effects of treatment in
-                women with gestational diabetes mellitus: systematic review and
-                meta-analysis.. BMJ (British Medical Journal) 2010; Pubmed
+                <b>Horvath K, Koch K, Jeitler K et al </b>: Effects of treatment
+                in women with gestational diabetes mellitus: systematic review
+                and meta-analysis.. BMJ (British Medical Journal) 2010; Pubmed
                 Journal
               </p>
               <p>
                 {' '}
-                Falavigna M, Schmidt MI, Trujillo J et al : Effectiveness of
-                gestational diabetes treatment: a systematic review with quality
-                of evidence assessment.. Diabetes Research and Clinical Practice
-                2012; Pubmed Journal
+                <b>Falavigna M, Schmidt MI, Trujillo J et al</b> : Effectiveness
+                of gestational diabetes treatment: a systematic review with
+                quality of evidence assessment.. Diabetes Research and Clinical
+                Practice 2012; Pubmed Journal
               </p>{' '}
               <p>
-                Prutsky GJ, Domecq JP, Wang Z et al : Glucose targets in
+                <b>Prutsky GJ, Domecq JP, Wang Z et al </b>: Glucose targets in
                 pregnant women with diabetes: a systematic review and
                 meta-analysis.. JCEM (The Journal of Clinical Endocrinology &
                 Metabolism) 2013; Pubmed Journal
               </p>{' '}
               <p>
-                Porter H, Lookinland S, Belfort MA : Evaluation of a new
+                <b>Porter H, Lookinland S, Belfort MA</b> : Evaluation of a new
                 real-time blood continuous glucose monitoring system in pregnant
                 women without gestational diabetes. A pilot study.. The Journal
                 of Perinatal & Neonatal Nursing 2004; Pubmed
               </p>{' '}
               <p>
-                Crowther CA, Hiller JE, Moss JR et al : Linn: slett! Effect of
-                treatment of gestational diabetes mellitus on pregnancy
-                outcomes.. NEJM (The New England Journal of Medicine) 2005;
-                Pubmed
+                <b>Crowther CA, Hiller JE, Moss JR et al</b> : Linn: slett!
+                Effect of treatment of gestational diabetes mellitus on
+                pregnancy outcomes.. NEJM (The New England Journal of Medicine)
+                2005; Pubmed
               </p>
             </Collapsible>
           </Collapsible>
