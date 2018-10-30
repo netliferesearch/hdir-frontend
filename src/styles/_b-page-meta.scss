@@ -10,7 +10,7 @@
   }
   &__link {
     display: inline-block;
-    @include link-init($brand-color);
+    @include link-init($black, true, $blue);
 
     &:after {
       display: inline-block;

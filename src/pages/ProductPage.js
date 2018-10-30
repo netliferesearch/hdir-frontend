@@ -2,16 +2,19 @@ import React from 'react';
 import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
+import LinkWithIcon from '../components/LinkWithIcon';
 import LongShortHeading from '../components/LongShortHeading';
 
 const ProductPage = () => (
   <div className="l-container">
     <div className="row">
-      <div className="col-md-8 l-mt-3">
+      <div className="col-xs-12 l-mt-3">
         <LongShortHeading
           long="Nasjonal faglig retningslinje for svangerskapsdiabetes"
           short="Svangerskapsdiabetes"
           icon={'https://placehold.it/64x64'}
+          url="#"
+          linkText="Hva er nasjonal faglig retningslinje"
         />
       </div>
       <div className="col-xs-12 l-mt-4">
@@ -76,9 +79,17 @@ const ProductPage = () => (
           </div>
         </div>
       </div>
-      <div className="l-mt-3">
-        <PageMeta publishDate="01.01.2008" editDate="01.01.2018" />
+
+      <div className="col-xs-12 l-mt-3">
+        <PageMeta publishDate="01.01.2008" editDate="01.01.2018" url="#" />
       </div>
+
+      <div className="col-xs-12 l-mt-4">
+        <LinkWithIcon href="#" small icon="./icons/method.svg">Om metode og prosess</LinkWithIcon>
+        <br />
+        <LinkWithIcon href="#" small icon="./icons/print.svg">Skriv ut hele retningslinjen</LinkWithIcon>
+      </div>
+
     </div>
   </div>
 );

@@ -52,7 +52,7 @@ import { select } from '@storybook/addon-knobs/dist/react';
 // Also remember to remove the copy function in the NPM storybook building script
 const changeStyle = name => {
   const style = document.getElementById('main-style');
-  console.log('click my dude');
+
   if (name === 'hdir') style.setAttribute('href', 'static/hdir.css');
   else if (name === 'helfo') style.setAttribute('href', 'static/helfo.css');
   else {
@@ -285,8 +285,8 @@ storiesOf('LinkWithIcon', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () =>
-    <LinkWithIcon href={text('href', '#')} icon="./icons/method.svg">
-      {text('Content', 'Sktiv ut')}
+    <LinkWithIcon href={text('href', '#')} icon="./icons/method.svg" small={boolean('Small', false)}>
+      {text('Content', 'Skriv ut')}
     </LinkWithIcon>
   );
 
@@ -341,6 +341,7 @@ storiesOf('Collapsible', module)
     <Collapsible
       heading={text('Heading', 'Heading')}
       subheading={text('Subheading', 'Subheading')}
+      subtle={boolean('Subtle', false)}
       size={select(
         'Size',
         {

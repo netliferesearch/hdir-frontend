@@ -5,9 +5,19 @@
     height: 1.6em;
     width: 1.2em;
     margin-right: 0.6em;
-    margin-bottom: -0.6em;
+    margin-bottom: -0.5em;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0 0;
+    background-position: 0 center;
+  }
+  &__arrow {
+    &:after {
+      content: ' →';
+      box-shadow: 0 1px 0 transparent;
+      color: $blue;
+    }
+  }
+  &__small {
+    font-size: $meta-text;
   }
 }

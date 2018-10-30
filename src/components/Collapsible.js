@@ -5,10 +5,11 @@ import zenscroll from 'zenscroll';
 
 import Heading from './Heading';
 
-const buttonClasses = (active, size) =>
+const buttonClasses = (active, size, subtle) =>
   classNames({
     'b-collapsible__button': true,
     'b-collapsible__button--active': active,
+    'b-collapsible__button--subtle': subtle,
     'b-collapsible__button--small': size === 'small',
     'b-collapsible__button--medium': size === 'medium'
   });
@@ -21,12 +22,18 @@ const headingClasses = size =>
     normal: size === 'small'
   });
 
-const collapsibleClasses = size =>
+const collapsibleClasses = (size, subtle) =>
   classNames({
     'b-collapsible': true,
+    'b-collapsible--subtle': subtle,
     'b-collapsible--medium': size === 'medium',
     'b-collapsible--small': size === 'small'
   });
+
+const contentClasses = smallContent => classNames({
+  'b-collapsible__content': true,
+  'b-collapsible__content--small': smallContent
+});
 
 class Collapsible extends React.Component {
   constructor(props) {
@@ -60,11 +67,11 @@ class Collapsible extends React.Component {
     const { props } = this;
     return (
       <div
-        className={collapsibleClasses(props.size)}
+        className={collapsibleClasses(props.size, props.subtle)}
         ref={ref => (this.domNode = ref)}
       >
         <button
-          className={buttonClasses(this.state.collapsed, props.size)}
+          className={buttonClasses(this.state.collapsed, props.size, props.subtle)}
           aria-expanded={this.state.collapsed}
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
@@ -81,7 +88,7 @@ class Collapsible extends React.Component {
           </Heading>
         </button>
         {props.subheading && (
-          <div className="l-mt-2">
+          <div className="l-mt-1">
             <span className="b-collapsible__subheading">
               {props.subheading}
             </span>
@@ -92,7 +99,7 @@ class Collapsible extends React.Component {
           id="collapsible-0"
           aria-hidden={!this.state.collapsed}
           hidden={!this.state.collapsed}
-          className="b-collapsible__content"
+          className={contentClasses(props.smallContent)}
         >
           {props.children}
         </div>
@@ -104,7 +111,9 @@ class Collapsible extends React.Component {
 Collapsible.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  smallContent: PropTypes.bool,
+  subtle: PropTypes.bool
 };
 
 Collapsible.defaultProps = {

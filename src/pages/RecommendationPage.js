@@ -26,14 +26,13 @@ const RecommendationPage = () => (
             </p>
             <p>
               Kostrådene baseres på kostanamnesen og styres etter glukoseverdier
-              ved egenmåling. Mål: Fastende: {'<'}
-              5.3 mmol/l, 2 timer etter måltid: {'<'}
+              ved egenmåling. Mål: Fastende: 5.3 mmol/l, 2 timer etter måltid:
               6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
               Kvinnen kan rådes til å følge et kosthold med en
               karbohydratkvalitet og -mengde per måltid som gjør det enklere å
               nå behandlingsmålene for glukose
             </p>
-            <p>etc.</p>
+
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
           </Collapsible>
           <Collapsible
