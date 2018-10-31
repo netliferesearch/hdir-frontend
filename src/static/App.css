@@ -2484,7 +2484,8 @@ h5,
 .b-main-header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  overflow: scroll; }
   .b-main-header__logo {
     max-width: calc(8rem + 4vw); }
   .b-main-header__logo-link:link, .b-main-header__logo-link:hover, .b-main-header__logo-link:visited, .b-main-header__logo-link:active {
