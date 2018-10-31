@@ -16,6 +16,24 @@ const LisFrontPage = () => (
           lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
         />
       </div>
+      <div>
+        <NavList
+          list={[
+            {
+              title: 'Akutt og mottaksmedisin',
+              url: '#'
+            },
+            {
+              title: 'Allmenmedisin',
+              url: '#'
+            },
+            {
+              title: 'Anestesiologi',
+              url: '#'
+            }
+          ]}
+        />
+      </div>
       <div className="l-mt-3">
         <hr className="b-hr b-hr--less-thick b-hr--black" />
         <NavList list={[{ title: 'LIS del 1', url: '#' }]} />
@@ -120,24 +138,24 @@ const LisFrontPage = () => (
         <div className="l-mt-4">
           <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
         </div>
-        <div className="l-mt-4">
-          <div className="b-bleed">
-            <strong>Kontakt:</strong>
-            <br />
-            <a href="#" className="b-bleed__link">
-              spesialisthelsetjenester@helsedir.no
-            </a>
-            <br />
-            <a href="#" className="b-bleed__link">
-              navn.etternavn@helsedir.no
-            </a>
-            <br />
-            <a href="#" className="b-bleed__link">
-              999 99 999
-            </a>
-          </div>
-        </div>
       </article>
+    </div>
+    <div className="l-mt-4">
+      <div className="b-bleed">
+        <strong>Kontakt:</strong>
+        <br />
+        <a href="#" className="b-bleed__link">
+          spesialisthelsetjenester@helsedir.no
+        </a>
+        <br />
+        <a href="#" className="b-bleed__link">
+          navn.etternavn@helsedir.no
+        </a>
+        <br />
+        <a href="#" className="b-bleed__link">
+          999 99 999
+        </a>
+      </div>
     </div>
   </div>
 );
