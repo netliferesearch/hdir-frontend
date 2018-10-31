@@ -162,7 +162,7 @@ const ChapterPage = () => (
             <div className="l-mt-2">
               <Collapsible
                 heading="Seksjon under: 1"
-                subheading="SVAK ANBEFALING"
+                subheading="SUBHEADING UTEN INNHOLD"
                 size="medium"
               >
                 <p>
@@ -176,7 +176,7 @@ const ChapterPage = () => (
             <div className="l-mt-2">
               <Collapsible
                 heading="Seksjon under: 2"
-                subheading="SVAK ANBEFALING"
+                subheading="SUBHEADING UTEN INNHOLD"
                 size="medium"
               >
                 <p>
