@@ -8,6 +8,12 @@ const ChapterPage = () => (
   <div className="l-container l-mt-3">
     <div className="row">
       <aside className="col-md-4 l-hide-to-lg l-bleed-right">
+        <div className="b-sidebar-heading">
+          Nasjonal faglig retningslinje for svangerskapsdiabetes
+        </div>
+        <div className="l-mt-1">
+          <hr className="b-hr b-hr--blue" />
+        </div>
         <NavList
           noArrow
           small

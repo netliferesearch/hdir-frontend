@@ -2781,7 +2781,7 @@ h5,
     padding-top: 0;
     margin-top: 0; }
   .b-collapsible--subtle {
-    padding-left: 0; }
+    margin-left: -1.5em; }
   .b-collapsible__button {
     position: relative;
     background: none;
@@ -2805,8 +2805,10 @@ h5,
       top: 0.15em; }
     .b-collapsible__button:active {
       color: #212121; }
-    .b-collapsible__button--subtle:before {
-      display: none; }
+    .b-collapsible__button--subtle {
+      font-size: 0.8rem; }
+      .b-collapsible__button--subtle:before {
+        display: none; }
     .b-collapsible__button--medium:before {
       top: 0.25em;
       width: 0.66em;
@@ -2823,17 +2825,17 @@ h5,
       transform: rotate(180deg); }
   .b-collapsible__content {
     animation: fadeInUp 300ms ease;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-left: -1.5em; }
     .b-collapsible__content--small {
-      font-size: 0.8rem; }
+      font-size: 0.8rem;
+      margin-left: 0; }
   .b-collapsible__heading {
     display: inline; }
     .b-collapsible__heading:hover {
       cursor: pointer;
       box-shadow: 0 1px 0 #212121; }
   .b-collapsible__subheading {
-    border-bottom: 1px dashed #0667c6;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.8rem; }
@@ -3107,3 +3109,26 @@ h5,
 
 small {
   font-size: 0.8rem; }
+
+.b-sidebar-heading {
+  position: relative;
+  font-size: 0.8rem;
+  width: calc(100% - 2.5em);
+  margin-left: 3.5em;
+  font-weight: bold; }
+  .b-sidebar-heading:before {
+    position: absolute;
+    left: -3.5em;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    height: 2.5em;
+    width: 2.5em;
+    content: ' ';
+    background-image: url("./icons/search.svg");
+    background-size: 1.25em 1.25em;
+    background-position: 0.625em 0.625em;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-color: #95dcca; }

@@ -3109,3 +3109,26 @@ h5,
 
 small {
   font-size: 0.8rem; }
+
+.b-sidebar-heading {
+  position: relative;
+  font-size: 0.8rem;
+  width: calc(100% - 2.5em);
+  margin-left: 3.5em;
+  font-weight: bold; }
+  .b-sidebar-heading:before {
+    position: absolute;
+    left: -3.5em;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    height: 2.5em;
+    width: 2.5em;
+    content: ' ';
+    background-image: url("./icons/search.svg");
+    background-size: 1.25em 1.25em;
+    background-position: 0.625em 0.625em;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-color: #95dcca; }
