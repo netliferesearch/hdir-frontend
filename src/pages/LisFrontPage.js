@@ -16,25 +16,42 @@ const LisFrontPage = () => (
           lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
         />
       </div>
-      <div>
-        <NavList
-          list={[
-            {
-              title: 'Akutt og mottaksmedisin',
-              url: '#'
-            },
-            {
-              title: 'Allmenmedisin',
-              url: '#'
-            },
-            {
-              title: 'Anestesiologi',
-              url: '#'
-            }
-          ]}
-        />
+      <div className="row">
+        <div className="col-md-4">
+          <ChapterHeading
+            heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
+            url="#"
+            overflow
+            h="h2"
+          />
+          <p>
+            WoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooop
+          </p>
+        </div>
+        <div className="col-md-4">
+          <ChapterHeading
+            heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
+            url="#"
+            overflow
+            h="h2"
+          />
+          <p>
+            WoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooop
+          </p>
+        </div>
+        <div className="col-md-4">
+          <ChapterHeading
+            heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
+            url="#"
+            overflow
+            h="h2"
+          />
+          <p>
+            WoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooop
+          </p>
+        </div>
       </div>
-      <div className="l-mt-3">
+      <div className="l-mt-5">
         <hr className="b-hr b-hr--less-thick b-hr--black" />
         <NavList list={[{ title: 'LIS del 1', url: '#' }]} />
       </div>
