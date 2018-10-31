@@ -197,6 +197,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    @include mq($until: $tablet) {
+      position: static;
+      margin-top: 1em;
+    }
   }
 }
 

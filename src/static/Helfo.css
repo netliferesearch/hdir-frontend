@@ -3067,6 +3067,10 @@ h5,
     position: absolute;
     bottom: 0;
     right: 0; }
+    @media (max-width: 46.25em) {
+      .b-long-short-heading__link {
+        position: static;
+        margin-top: 1em; } }
 
 .block-hint [class^='b-']:not([class*='__']) {
   position: relative; }
