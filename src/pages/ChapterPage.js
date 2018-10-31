@@ -5,8 +5,14 @@ import PageMeta from '../components/PageMeta';
 import NavList from '../components/NavList';
 
 const ChapterPage = () => (
-  <div className="l-container l-mt-3">
-    <div className="row">
+  <div className="l-container l-mt-1">
+    <ChapterHeading
+      heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
+      subheading="KAPITTEL 2.2"
+      H="h1"
+      line="none"
+    />
+    <div className="l-mt-3 row">
       <aside className="col-md-4 l-hide-to-lg l-bleed-right">
         <div className="b-sidebar-heading">
           Nasjonal faglig retningslinje for svangerskapsdiabetes
@@ -60,13 +66,29 @@ const ChapterPage = () => (
         </div>
       </aside>
       <div className="col-md-7 col-md-offset-1 l-bleed-left">
-        <ChapterHeading
-          heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
-          subheading="kapittel 1"
-          line="none"
-          url="#"
-          overflow
-        />
+        <Collapsible
+          heading="Om behandling av svangerskapsdiabetes"
+          size="small"
+          smallContent
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+        </Collapsible>
+        <div className="l-mt-2">
+          <hr className="b-hr b-hr--black b-hr--thick" />
+        </div>
+        <div className="l-mt-1">
+          <ChapterHeading
+            heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
+            subheading="kapittel 1"
+            line="none"
+            url="#"
+            overflow
+          />
+        </div>
         <div className="l-mt-1">
           <Collapsible
             heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
