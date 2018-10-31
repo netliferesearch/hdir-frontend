@@ -76,10 +76,10 @@
     }
 
     &--active {
-      background-color: #d0ffd0 !important; // We use important here, because we don't have the hover state to override it.
+      background-color: $green-light !important; // We use important here, because we don't have the hover state to override it.
     }
     &--active-child {
-      background-color: #91ec91 !important;
+      background-color: $green-light !important;
     }
 
     &--no-arrow {
