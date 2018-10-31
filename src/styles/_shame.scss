@@ -197,6 +197,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    @include mq($until: $tablet) {
+      position: static;
+      margin-top: 1em;
+    }
   }
 }
 
@@ -251,4 +255,30 @@
 
 small {
   font-size: $meta-text;
+}
+
+.b-sidebar-heading {
+  position: relative;
+  font-size: $meta-text;
+  width: calc(100% - 2.5em);
+  margin-left: 3.5em;
+  font-weight: bold;
+
+  &:before {
+    position: absolute;
+    left: -3.5em;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    height: 2.5em;
+    width: 2.5em;
+    content: ' ';
+    background-image: url('./icons/search.svg');
+    background-size: 1.25em 1.25em;
+    background-position: 0.625em 0.625em;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-color: $green;
+  }
 }

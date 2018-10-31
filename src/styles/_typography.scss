@@ -34,7 +34,6 @@
 $base-font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1440 - 400));
 
 html {
-  // font-size: $base-font-size;
   font-size: $base-font-size;
 }
 
@@ -43,6 +42,13 @@ body {
   font-family: $base-font-family;
   font-weight: normal;
   line-height: 1.6;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
 }
 
 a {

@@ -5,10 +5,11 @@ import LinkWithIcon from './LinkWithIcon';
 const ContentLabel = props => {
   return (
     <div className="b-long-short-heading">
-
       <h1>
         {props.short && (
-          <span aria-hidden={Boolean(props.long).toString()}>{props.short}</span>
+          <span aria-hidden={Boolean(props.long).toString()}>
+            {props.short}
+          </span>
         )}
         {props.short &&
           props.long && (
@@ -27,7 +28,9 @@ const ContentLabel = props => {
         {!props.short && <span>{props.long}</span>}
       </h1>
       <div className="b-long-short-heading__link">
-        <LinkWithIcon href={props.url} arrow>{props.linkText}</LinkWithIcon>
+        <LinkWithIcon href={props.url} arrow>
+          {props.linkText}
+        </LinkWithIcon>
       </div>
     </div>
   );
