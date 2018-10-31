@@ -3,7 +3,7 @@
 To install dependencies, write `npm install` in terminal.
 Then run the app by running `npm run`.
 
-To open storybook, run `npm start stoybook`.
+To open storybook, run `npm start storybook`.
 
 This repository contains the main style and components for the new HDIR content platform.
 
