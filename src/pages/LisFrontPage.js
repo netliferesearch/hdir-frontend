@@ -23,9 +23,12 @@ const LisFrontPage = () => (
             url="#"
             overflow
             h="h2"
+            line="none"
           />
           <p>
-            WoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooop
+            Woooo ooooo ooopWoooo ooooo ooop Woooo oooooo oopW ooooooooo
+            ooopWooo ooooo oooopW oooo oooo ooopWo ooooooo oooo pWoooooo oooooop
+            Wooo oooooo ooop
           </p>
         </div>
         <div className="col-md-4">
@@ -34,9 +37,11 @@ const LisFrontPage = () => (
             url="#"
             overflow
             h="h2"
+            line="none"
           />
           <p>
-            WoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooop
+            Woooooo oooooop Woooooooooooop Wooooo oooo ooopWoooooo oooooopWooo
+            ooooo oooopWoo oo oo oooooopWo oooo ooooo oopWo ooo ooo ooooop
           </p>
         </div>
         <div className="col-md-4">
@@ -45,9 +50,12 @@ const LisFrontPage = () => (
             url="#"
             overflow
             h="h2"
+            line="none"
           />
           <p>
-            WoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooopWoooooooooooop
+            Woo oooooo ooo opWoo ooooooo ooopWoooo ooooo ooo pWooo ooooo oo o
+            opW ooooo ooooo oop Wooo oooo ooooop Wooo ooo oooo oopWoo oooo oo
+            oooo pWoo oooo ooooo opWooo oooo oooo opW oooooo ooo ooop
           </p>
         </div>
       </div>
