@@ -2549,6 +2549,11 @@ h5,
     border-left: 0.25em solid #ffc900;
     padding-left: 1.5em; }
 
+.b-nav-list__item-info {
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  padding-left: 1rem; }
+
 .b-nav-list__item-meta {
   font-size: 0.8rem;
   color: #504f4f; }
@@ -2568,7 +2573,7 @@ h5,
     text-decoration: none; }
   .b-nav-list__link:hover {
     color: #0667c6;
-    background: #f7f7f7; }
+    background: rgba(0, 0, 0, 0.05); }
   .b-nav-list__link:after {
     content: '→';
     margin-left: 1rem; }
@@ -2742,6 +2747,11 @@ h5,
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 center; }
+
+.b-link-with-icon__download:after {
+  content: ' ↓';
+  box-shadow: 0 1px 0 transparent;
+  color: #0667c6; }
 
 .b-link-with-icon__arrow:after {
   content: ' →';
@@ -3145,3 +3155,12 @@ small {
     border-radius: 100%;
     background-repeat: no-repeat;
     background-color: #95dcca; }
+
+.b-box {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border: 1px solid #d8dada;
+  border-radius: 4px; }
+  .b-box--green {
+    background-color: #d4f1d4;
+    border: 1px solid #95dcca; }

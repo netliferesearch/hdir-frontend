@@ -282,3 +282,15 @@ small {
     background-color: $green;
   }
 }
+
+.b-box {
+  padding: 2rem;
+  background-color: $grey-lighter;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+
+  &--green {
+    background-color: $green-light;
+    border: 1px solid $green;
+  }
+}
