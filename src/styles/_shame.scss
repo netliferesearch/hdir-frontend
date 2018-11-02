@@ -289,6 +289,10 @@ small {
   border: 1px solid $grey-light;
   border-radius: 4px;
 
+  @include mq($until: $tablet) {
+    padding: 1rem;
+  }
+
   &--green {
     background-color: $green-light;
     border: 1px solid $green;

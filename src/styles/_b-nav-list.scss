@@ -51,6 +51,10 @@
     font-size: $meta-text;
     flex-shrink: 0;
     padding-left: 1rem;
+    @include mq($until: $tablet) {
+      width: calc(100% - 2em);
+      padding: 0;
+    }
   }
   &__item-meta {
     font-size: $meta-text;
@@ -65,6 +69,11 @@
     justify-content: space-between;
     text-align: left;
 
+    @include mq($until: $tablet) {
+      display: block;
+      position: relative;
+    }
+
     @include link-init($black);
 
     padding: 1em;
@@ -78,6 +87,12 @@
     &:after {
       content: '→';
       margin-left: 1rem;
+
+      @include mq($until: $tablet) {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+      }
     }
 
     &--active {
@@ -115,9 +130,15 @@
   &__item-description {
     width: 30%;
     flex-shrink: 0;
+    @include mq($until: $tablet) {
+      width: calc(100% - 2em);
+    }
   }
   &__item-title {
     width: 100%;
+    @include mq($until: $tablet) {
+      width: calc(100% - 2em);
+    }
   }
   &--small {
     font-size: $meta-text;
