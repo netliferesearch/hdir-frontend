@@ -111,7 +111,7 @@ const LisLearning = () => (
                 <p>etc.</p>
               </Collapsible>
             </div>
-            <div className="l-mt-3">
+            <div className="l-mt-3 l-mb-2">
               <Collapsible
                 heading="Vaskulære malformasjoner"
                 subheading="LÆRINGSMÅL"
@@ -132,7 +132,6 @@ const LisLearning = () => (
                   karbohydratkvalitet og -mengde per måltid som gjør det enklere
                   å nå behandlingsmålene for glukose
                 </p>
-                <p>etc.</p>
               </Collapsible>
             </div>
             <hr className="b-hr b-hr--less-thick b-hr--black" />
@@ -164,7 +163,6 @@ const LisLearning = () => (
                 karbohydratkvalitet og -mengde per måltid som gjør det enklere å
                 nå behandlingsmålene for glukose
               </p>
-              <p>etc.</p>
             </Collapsible>
             <Collapsible heading="Utdypende tekst" size="medium">
               <p>
