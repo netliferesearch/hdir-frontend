@@ -298,3 +298,72 @@ small {
     border: 1px solid $green;
   }
 }
+
+.b-alert {
+  padding: 1em;
+  border-left: 7px solid $grey;
+  display: flex;
+  justify-content: space-between;
+  &--success {
+    border-color: $green;
+    background-color: $green-light;
+  }
+  &--warning {
+    border-color: $yellow;
+    background-color: $yellow-light;
+  }
+  &--danger {
+    border-color: $red;
+    background-color: $red-light;
+  }
+  &--info {
+    border-color: $blue;
+    background-color: $blue-light;
+  }
+  &__icon {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    background-color: $black;
+    color: white;
+    margin-right: 1em;
+    flex-shrink: 0;
+    &--success {
+      background-color: $green-dark;
+      &:before {
+        color: $green-light;
+      }
+    }
+    &--warning {
+      background-color: $yellow-dark;
+      &:before {
+        color: $yellow-light;
+      }
+    }
+    &--danger {
+      background-color: $red-dark;
+      &:before {
+        color: $red-light;
+      }
+    }
+    &--info {
+      background-color: $blue-dark;
+      &:before {
+        color: $blue-light;
+      }
+    }
+    &:before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      content: '!';
+    }
+  }
+  &__content {
+    margin-top: 0.25em;
+    text-align: left;
+    flex-grow: 1;
+  }
+}

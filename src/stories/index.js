@@ -6,6 +6,7 @@ import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
 
 // Components
+import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import ChapterHeading from '../components/ChapterHeading';
 import ContentLabel from '../components/ContentLabel';
@@ -449,4 +450,25 @@ storiesOf('SelectInline', module)
         'Tannpleier'
       ]}
     />
+  ));
+
+storiesOf('Alert', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Alert
+      status={select(
+        'Status',
+        {
+          none: 'none',
+          success: 'success',
+          warning: 'warning',
+          danger: 'danger',
+          info: 'info'
+        },
+        'success'
+      )}
+    >
+      {text('Content', 'This is some content, it can be anything')}
+    </Alert>
   ));
