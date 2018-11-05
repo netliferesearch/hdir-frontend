@@ -56,6 +56,7 @@ class App extends Component {
                 path="/normerende-innhold"
                 component={NormativeContentPage}
               />
+              <Route path="/LIS-spesialitet" component={LisSpeciality} />
               <Route component={NotFound} />
             </Switch>
             <Footer />
