@@ -3186,3 +3186,6 @@ small {
   .b-box--green {
     background-color: #d4f1d4;
     border: 1px solid #95dcca; }
+  .b-box--white {
+    background-color: white;
+    border: 1px solid #504f4f; }
