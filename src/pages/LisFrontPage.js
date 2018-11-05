@@ -3,9 +3,9 @@ import React from 'react';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
-import Quote from '../components/Quote';
 import Collapsible from '../components/Collapsible';
 import ArticleIntro from '../components/ArticleIntro';
+import Box from '../components/Box';
 
 const LisFrontPage = () => (
   <div>
@@ -17,47 +17,47 @@ const LisFrontPage = () => (
         />
       </div>
       <div className="row">
-        <div className="col-md-4">
-          <ChapterHeading
-            heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
-            url="#"
-            overflow
-            h="h2"
-            line="none"
-          />
-          <p>
-            Woooo ooooo ooopWoooo ooooo ooop Woooo oooooo oopW ooooooooo
-            ooopWooo ooooo oooopW oooo oooo ooopWo ooooooo oooo pWoooooo oooooop
-            Wooo oooooo ooop
-          </p>
-        </div>
-        <div className="col-md-4">
-          <ChapterHeading
-            heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
-            url="#"
-            overflow
-            h="h2"
-            line="none"
-          />
-          <p>
-            Woooooo oooooop Woooooooooooop Wooooo oooo ooopWoooooo oooooopWooo
-            ooooo oooopWoo oo oo oooooopWo oooo ooooo oopWo ooo ooo ooooop
-          </p>
-        </div>
-        <div className="col-md-4">
-          <ChapterHeading
-            heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
-            url="#"
-            overflow
-            h="h2"
-            line="none"
-          />
-          <p>
-            Woo oooooo ooo opWoo ooooooo ooopWoooo ooooo ooo pWooo ooooo oo o
-            opW ooooo ooooo oop Wooo oooo ooooop Wooo ooo oooo oopWoo oooo oo
-            oooo pWoo oooo ooooo opWooo oooo oooo opW oooooo ooo ooop
-          </p>
-        </div>
+        <a href="#" className="col-md-4">
+          <Box color="white">
+            <h2>
+              Diagnostikk og tiltak for å finne uoppdaget diabetes og
+              svangerskapsdiabetes
+            </h2>
+
+            <p>
+              Woooo ooooo ooopWoooo ooooo ooop Woooo oooooo oopW ooooooooo
+              ooopWooo ooooo oooopW oooo oooo ooopWo ooooooo oooo pWoooooo
+              oooooop Wooo oooooo ooop
+            </p>
+          </Box>
+        </a>
+        <a href="#" className="col-md-4">
+          <Box color="white">
+            <h2>
+              Diagnostikk og tiltak for å finne uoppdaget diabetes og
+              svangerskapsdiabetes
+            </h2>
+
+            <p>
+              Woooooo oooooop Woooooooooooop Wooooo oooo ooopWoooooo oooooopWooo
+              ooooo oooopWoo oo oo oooooopWo oooo ooooo oopWo ooo ooo ooooop
+            </p>
+          </Box>
+        </a>
+        <a href="#" className="col-md-4">
+          <Box color="white">
+            <h2>
+              Diagnostikk og tiltak for å finne uoppdaget diabetes og
+              svangerskapsdiabetes
+            </h2>
+
+            <p>
+              Woo oooooo ooo opWoo ooooooo ooopWoooo ooooo ooo pWooo ooooo oo o
+              opW ooooo ooooo oop Wooo oooo ooooop Wooo ooo oooo oopWoo oooo oo
+              oooo pWoo oooo ooooo opWooo oooo oooo opW oooooo ooo ooop
+            </p>
+          </Box>
+        </a>
       </div>
       <div className="l-mt-5">
         <hr className="b-hr b-hr--less-thick b-hr--black" />
