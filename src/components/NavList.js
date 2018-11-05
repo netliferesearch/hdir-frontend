@@ -78,6 +78,9 @@ const NavList = props => {
                   </div>
                 )}
               </div>
+              {item.infoText && (
+                <div className="b-nav-list__item-info">{item.infoText}</div>
+              )}
             </a>
             {item.children && (
               <ul className="b-nav-list__child-items">
@@ -121,6 +124,7 @@ NavList.propTypes = {
       description: PropTypes.string,
       url: PropTypes.string.isRequired,
       active: PropTypes.bool,
+      infoText: PropTypes.string,
       children: PropTypes.arrayOf(
         PropTypes.shape({
           title: PropTypes.string.isRequired,

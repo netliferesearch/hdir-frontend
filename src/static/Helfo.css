@@ -2549,6 +2549,15 @@ h5,
     border-left: 0.25em solid #ffc900;
     padding-left: 1.5em; }
 
+.b-nav-list__item-info {
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  padding-left: 1rem; }
+  @media (max-width: 46.25em) {
+    .b-nav-list__item-info {
+      width: calc(100% - 2em);
+      padding: 0; } }
+
 .b-nav-list__item-meta {
   font-size: 0.8rem;
   color: #504f4f; }
@@ -2561,6 +2570,10 @@ h5,
   text-align: left;
   padding: 1em;
   height: calc(100% - 2em); }
+  @media (max-width: 46.25em) {
+    .b-nav-list__link {
+      display: block;
+      position: relative; } }
   .b-nav-list__link:link, .b-nav-list__link:hover, .b-nav-list__link:visited, .b-nav-list__link:active {
     color: #212121;
     box-shadow: none;
@@ -2568,10 +2581,15 @@ h5,
     text-decoration: none; }
   .b-nav-list__link:hover {
     color: #0667c6;
-    background: #f7f7f7; }
+    background: rgba(0, 0, 0, 0.05); }
   .b-nav-list__link:after {
     content: '→';
     margin-left: 1rem; }
+    @media (max-width: 46.25em) {
+      .b-nav-list__link:after {
+        position: absolute;
+        top: 1em;
+        right: 1em; } }
   .b-nav-list__link--active {
     background-color: #d4f1d4 !important; }
   .b-nav-list__link--active-child {
@@ -2594,9 +2612,15 @@ h5,
 .b-nav-list__item-description {
   width: 30%;
   flex-shrink: 0; }
+  @media (max-width: 46.25em) {
+    .b-nav-list__item-description {
+      width: calc(100% - 2em); } }
 
 .b-nav-list__item-title {
   width: 100%; }
+  @media (max-width: 46.25em) {
+    .b-nav-list__item-title {
+      width: calc(100% - 2em); } }
 
 .b-nav-list--small {
   font-size: 0.8rem; }
@@ -2743,6 +2767,11 @@ h5,
   background-size: contain;
   background-position: 0 center; }
 
+.b-link-with-icon__download:after {
+  content: ' ↓';
+  box-shadow: 0 1px 0 transparent;
+  color: #0667c6; }
+
 .b-link-with-icon__arrow:after {
   content: ' →';
   box-shadow: 0 1px 0 transparent;
@@ -2813,7 +2842,9 @@ h5,
     .b-collapsible__button:active {
       color: #212121; }
     .b-collapsible__button--subtle {
-      font-size: 0.8rem; }
+      font-size: 0.8rem;
+      box-shadow: none !important;
+      border-bottom: 1px dashed #212121; }
       .b-collapsible__button--subtle:before {
         display: none; }
     .b-collapsible__button--medium:before {
@@ -3143,3 +3174,15 @@ small {
     border-radius: 100%;
     background-repeat: no-repeat;
     background-color: #95dcca; }
+
+.b-box {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border: 1px solid #d8dada;
+  border-radius: 4px; }
+  @media (max-width: 46.25em) {
+    .b-box {
+      padding: 1rem; } }
+  .b-box--green {
+    background-color: #d4f1d4;
+    border: 1px solid #95dcca; }
