@@ -20,7 +20,7 @@ import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 import LisLearning from './pages/LisLearning';
 import LisFrontPage from './pages/LisFrontPage';
-
+import LisLearningActivities from './pages/LisLearningActivities';
 // import { featureListHeading, featureListData } from './testData.js';
 
 class App extends Component {

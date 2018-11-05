@@ -40,6 +40,7 @@ import SimpleSerp from '../pages/SimpleSerp';
 import LisSpeciality from '../pages/LisSpeciality';
 import LisLearning from '../pages/LisLearning';
 import LisFrontPage from '../pages/LisFrontPage';
+import LisLearningActivities from '../pages/LisLearningActivities';
 // React specific
 import InputSearch from '../components/InputSearch';
 
@@ -104,6 +105,7 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('LIS speciality', () => <LisSpeciality />)
   .addWithStaticMarkup('LIS learning', () => <LisLearning />)
   .addWithStaticMarkup('LIS front page', () => <LisFrontPage />)
+  .addWithStaticMarkup('LISLearningActivities', () => <LisLearningActivities />)
   .addWithStaticMarkup('Chapter page', () => <ChapterPage />)
   .addWithStaticMarkup('Hearing page', () => <HearingPage />)
   .addWithStaticMarkup('Memo page', () => <MemoPage />)
