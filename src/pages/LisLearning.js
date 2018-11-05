@@ -22,7 +22,7 @@ const LisLearning = () => (
           Dolor
         </a>
       </nav>
-      <h1>Læringsmål.</h1>
+
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
@@ -42,6 +42,7 @@ const LisLearning = () => (
           />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
+          <h1 className="l-mb-3">Læringsmål.</h1>
           <FilterList
             list={[
               'Alt',
