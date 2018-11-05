@@ -32,7 +32,8 @@ const LisLearning = () => (
             heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
             list={[
               {
-                title: 'Læringsmål'
+                title: 'Læringsmål',
+                active: true
               },
               {
                 title: 'Læringsaktiviteter'
@@ -84,7 +85,6 @@ const LisLearning = () => (
                   karbohydratkvalitet og -mengde per måltid som gjør det enklere
                   å nå behandlingsmålene for glukose
                 </p>
-                <p>etc.</p>
               </Collapsible>
             </div>
             <div className="l-mt-3">
