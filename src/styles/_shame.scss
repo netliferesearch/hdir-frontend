@@ -297,4 +297,8 @@ small {
     background-color: $green-light;
     border: 1px solid $green;
   }
+  &--white {
+    background-color: white;
+    border: 1px solid $grey;
+  }
 }
