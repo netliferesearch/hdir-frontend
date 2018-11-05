@@ -101,7 +101,7 @@ class Collapsible extends React.Component {
             <div className="b-collapsible__subheading-collapsible">
               <Collapsible
                 heading={props.subheading}
-                subtle
+                subtle={props.subheadingContent}
                 size="small"
                 smallContent
               >

@@ -2,6 +2,7 @@ import React from 'react';
 import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
+import Box from '../components/Box';
 import LinkWithIcon from '../components/LinkWithIcon';
 import LongShortHeading from '../components/LongShortHeading';
 
@@ -68,6 +69,59 @@ const ProductPage = () => (
           />
         </div>
       </div>
+
+      <div className="col-xs-12 l-mt-3">
+        <Box>
+          <ChapterHeading subheading="RELATERTE PRODUKTER" line="none" />
+          <NavList
+            list={[
+              {
+                description: 'Svangerskapsomsorgen',
+                title: 'Nasjonale faglige retningslinjer',
+                url: '#'
+              },
+              {
+                description: 'BROSJYRE (PDF)',
+                title:
+                  'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                url: '#'
+              }
+            ]}
+          />
+        </Box>
+      </div>
+      <div className="col-xs-12 l-mt-3">
+        <Box color="green">
+          <ChapterHeading
+            heading="Materiell til helsekontorer"
+            subheading="LAST NED TRYKKSAKER"
+            line="none"
+          />
+          <NavList
+            list={[
+              {
+                description: 'PLAKAT (PDF)',
+                title: 'Det foreslås at HbA1c tas ved',
+                url: '#',
+                infoText: 'PDF (4,5 MB)'
+              },
+              {
+                description: 'BROSJYRE (PDF)',
+                title:
+                  'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
+                url: '#',
+                infoText: 'PDF (501 KB)'
+              }
+            ]}
+          />
+          <div className="l-mt-2">
+            <LinkWithIcon href="#" arrow>
+              Last ned alle (2 MB)
+            </LinkWithIcon>
+          </div>
+        </Box>
+      </div>
+
       <div className="col-xs-12 l-mt-4">
         <div className="b-link-springboard">
           <div className="col-md-10 col-md-offset-1">

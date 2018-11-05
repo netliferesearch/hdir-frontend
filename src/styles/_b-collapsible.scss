@@ -49,6 +49,8 @@
 
     &--subtle {
       font-size: $meta-text;
+      box-shadow: none !important;
+      border-bottom: 1px dashed $black;
 
       &:before {
         display: none;
