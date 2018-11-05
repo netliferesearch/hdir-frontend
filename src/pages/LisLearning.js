@@ -7,6 +7,7 @@ import ChapterHeading from '../components/ChapterHeading';
 import Quote from '../components/Quote';
 import FilterList from '../components/FilterList';
 import Collapsible from '../components/Collapsible';
+import Alert from '../components/Alert';
 
 const LisLearning = () => (
   <div>
@@ -133,6 +134,11 @@ const LisLearning = () => (
                   å nå behandlingsmålene for glukose
                 </p>
               </Collapsible>
+              <div className="l-mt-2">
+                <Alert status="success">
+                  Vær oppmerksom på at dette atomet er på høring
+                </Alert>
+              </div>
             </div>
             <hr className="b-hr b-hr--less-thick b-hr--black" />
           </div>
@@ -144,7 +150,7 @@ const LisLearning = () => (
               h="h2"
             />
             <Collapsible
-              heading="Vaskulære malformasjoner"
+              heading="Barnehelse og barnets plass i familien"
               subheading="LÆRINGSMÅL"
               size="large"
             >
@@ -164,6 +170,12 @@ const LisLearning = () => (
                 nå behandlingsmålene for glukose
               </p>
             </Collapsible>
+            <div className="l-mt-2">
+              <Alert status="success">
+                Vær oppmerksom på at dette atomet er på høring, og det er veldig
+                viktig å få med seg
+              </Alert>
+            </div>
             <Collapsible heading="Utdypende tekst" size="medium">
               <p>
                 Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
