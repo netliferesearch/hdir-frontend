@@ -8,9 +8,11 @@ const Footer = () => (
       <a href="#" className="b-footer__link">
         Menypunkt
       </a>
+      <br />
       <a href="#" className="b-footer__link">
         Menypunkt
       </a>
+      <br />
       <a href="#" className="b-footer__link">
         Menypunkt
       </a>

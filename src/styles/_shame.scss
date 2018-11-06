@@ -74,6 +74,8 @@
   background-color: $green-light;
 
   &__link {
+    word-wrap: break-word;
+
     @include link-init($black);
     &:link,
     &:active,
