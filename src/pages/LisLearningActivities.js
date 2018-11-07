@@ -2,10 +2,7 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-
 import ChapterHeading from '../components/ChapterHeading';
-import Quote from '../components/Quote';
-import FilterList from '../components/FilterList';
 import Collapsible from '../components/Collapsible';
 
 const LisLearningActivities = () => (
