@@ -3,6 +3,7 @@ import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
 import NavList from '../components/NavList';
+import Alert from '../components/Alert';
 
 const ChapterPage = () => (
   <div className="l-container l-mt-1">
@@ -95,6 +96,9 @@ const ChapterPage = () => (
             subheading="STERK ANBEFALING"
             subheadingContent="Dette er en beskrivelse av sterk anbefaling"
           >
+            <Alert status="success">
+              Vær oppmerksom på at dette atomet er på høring.
+            </Alert>
             <p>
               Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
               tilfredsstillende blodsukker fastende og etter måltider, og for å
