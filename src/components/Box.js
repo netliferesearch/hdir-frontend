@@ -14,7 +14,7 @@ const Box = props => (
 );
 
 Box.propTypes = {
-  color: PropTypes.oneOf('green', 'blue')
+  color: PropTypes.oneOf(['green', 'blue'])
 };
 
 export default Box;
