@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const boxClasses = status =>
+const chapterNavigationClasses = status =>
   classNames({
     'b-alert': true,
     'b-alert--success': status === 'success',
@@ -14,21 +14,18 @@ const boxClasses = status =>
 const boxIconClasses = status =>
   classNames({
     'b-alert__icon': true,
-    'b-alert__icon--success': status === 'success',
-    'b-alert__icon--warning': status === 'warning',
-    'b-alert__icon--danger': status === 'danger',
-    'b-alert__icon--info': status === 'info'
+    'b-alert__icon--success': status === 'success'
   });
 
-const Alert = props => (
-  <section className={boxClasses(props.status)}>
+const ChapterNavigation = props => (
+  <section className={chapterNavigationClasses(props.status)}>
     <div className={boxIconClasses(props.status)} />
     <div className="b-alert__content">{props.children}</div>
   </section>
 );
 
-Alert.propTypes = {
-  status: PropTypes.oneOf('none', 'success', 'warning', 'danger', 'info')
+ChapterNavigation.propTypes = {
+  status: PropTypes.oneOf('firstChapter', 'lastChapter', 'middleChapter')
 };
 
-export default Alert;
+export default ChapterNavigation;
