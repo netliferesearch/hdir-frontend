@@ -20,6 +20,7 @@ import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 import LisLearning from './pages/LisLearning';
 import LisFrontPage from './pages/LisFrontPage';
+import ReportPage from './pages/ReportPage';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
@@ -52,6 +53,7 @@ class App extends Component {
               <Route path="/anbefaling" component={RecommendationPage} />
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
+              <Route path="/rapport" component={ReportPage} />
               <Route
                 path="/normerende-innhold"
                 component={NormativeContentPage}

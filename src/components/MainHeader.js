@@ -46,6 +46,9 @@ const ContentLabel = props => {
         <Link to="/rundskriv-forside" className="b-main-header__link">
           Rundskriv forside
         </Link>
+        <Link to="/rapport" className="b-main-header__link">
+          Rapport
+        </Link>
       </nav>
     </div>
   );

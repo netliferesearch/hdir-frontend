@@ -29,9 +29,14 @@ const ArticleIntro = props => (
           role="img"
           aria-labelledby="intro-image-description"
         />
-        <p className="b-article-intro__image-text" id="intro-image-description">
-          {props.imageDescription}
-        </p>
+        {!props.feature && (
+          <p
+            className="b-article-intro__image-text"
+            id="intro-image-description"
+          >
+            {props.imageDescription}
+          </p>
+        )}
       </div>
     )}
   </div>
