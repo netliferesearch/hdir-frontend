@@ -22,6 +22,8 @@ import LisLearning from './pages/LisLearning';
 import LisFrontPage from './pages/LisFrontPage';
 import LisLearningActivities from './pages/LisLearningActivities';
 import ChapterPageReport from './pages/ChapterPageReport';
+import ReportPage from './pages/ReportPage';
+
 // import { featureListHeading, featureListData } from './testData.js';
 
 class App extends Component {
@@ -53,11 +55,19 @@ class App extends Component {
               <Route path="/anbefaling" component={RecommendationPage} />
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
+              <Route path="/rapport" component={ReportPage} />
               <Route
                 path="/normerende-innhold"
                 component={NormativeContentPage}
               />
-              <Route path="/LIS-spesialitet" component={LisSpeciality} />
+              <Route path="/lis-spesialitet" component={LisSpeciality} />
+              <Route path="/lis-læringsmål" component={LisLearning} />
+              <Route path="/lis-forside" component={LisFrontPage} />
+              <Route
+                path="/lis-læringsaktiviteter"
+                component={LisLearningActivities}
+              />
+              <Route path="/rapport-kapittel" component={ChapterPageReport} />
               <Route component={NotFound} />
             </Switch>
             <Footer />
