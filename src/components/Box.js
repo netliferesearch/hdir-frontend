@@ -6,9 +6,7 @@ const boxClasses = color =>
   classNames({
     'b-box': true,
     'b-box--green': color === 'green',
-
     'b-box--white': color === 'white',
-
     'b-box--blue': color === 'blue'
   });
 

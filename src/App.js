@@ -60,7 +60,14 @@ class App extends Component {
                 path="/normerende-innhold"
                 component={NormativeContentPage}
               />
-              <Route path="/LIS-spesialitet" component={LisSpeciality} />
+              <Route path="/lis-spesialitet" component={LisSpeciality} />
+              <Route path="/lis-læringsmål" component={LisLearning} />
+              <Route path="/lis-forside" component={LisFrontPage} />
+              <Route
+                path="/lis-læringsaktiviteter"
+                component={LisLearningActivities}
+              />
+              <Route path="/rapport-kapittel" component={ChapterPageReport} />
               <Route component={NotFound} />
             </Switch>
             <Footer />
