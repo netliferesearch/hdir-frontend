@@ -6,7 +6,10 @@ const boxClasses = color =>
   classNames({
     'b-box': true,
     'b-box--green': color === 'green',
-    'b-box--white': color === 'white'
+
+    'b-box--white': color === 'white',
+
+    'b-box--blue': color === 'blue'
   });
 
 const Box = props => (
@@ -14,7 +17,7 @@ const Box = props => (
 );
 
 Box.propTypes = {
-  color: PropTypes.oneOf('green', 'white')
+  color: PropTypes.oneOf('green', 'white', 'blue')
 };
 
 export default Box;
