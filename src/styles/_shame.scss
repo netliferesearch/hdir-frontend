@@ -312,6 +312,17 @@ small {
 }
 /* CSS for new ChapterNavigation component, can rename */
 .b-chapter-navigation {
+  padding: 1em;
+  justify-content: space-between;
+  display: flex;
+  &__card {
+    &--next {
+      content: '→';
+    }
+    &--prev {
+      content: '←';
+    }
+  }
 }
 .b-alert {
   padding: 1em;
