@@ -304,16 +304,15 @@ small {
     background-color: white;
     border: 1px solid $grey;
   }
-}
 
-/* CSS for new ChapterNavigation component, can rename */
-.b-chapter-navigation {
   &--blue {
     background-color: $blue-lighter;
     border: 1px solid $blue-light;
   }
 }
-
+/* CSS for new ChapterNavigation component, can rename */
+.b-chapter-navigation {
+}
 .b-alert {
   padding: 1em;
   border-left: 7px solid $grey;

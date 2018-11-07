@@ -4,17 +4,10 @@ import classNames from 'classnames';
 
 const chapterNavigationClasses = status =>
   classNames({
-    'b-alert': true,
-    'b-alert--success': status === 'success',
-    'b-alert--warning': status === 'warning',
-    'b-alert--danger': status === 'danger',
-    'b-alert--info': status === 'info'
-  });
-
-const boxIconClasses = status =>
-  classNames({
-    'b-alert__icon': true,
-    'b-alert__icon--success': status === 'success'
+    'b-chapter-navigation': true,
+    'b-chapter-navigation__first': chapter === 'first',
+    'b-chapter-navigation__last': chapter === 'last',
+    'b-chapter-navigation__middle': chapter === 'middle'
   });
 
 const ChapterNavigation = props => (
@@ -25,7 +18,7 @@ const ChapterNavigation = props => (
 );
 
 ChapterNavigation.propTypes = {
-  status: PropTypes.oneOf('firstChapter', 'lastChapter', 'middleChapter')
+  status: PropTypes.oneOf('first', 'last', 'middle')
 };
 
 export default ChapterNavigation;
