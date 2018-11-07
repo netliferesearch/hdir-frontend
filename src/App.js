@@ -20,7 +20,6 @@ import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 import LisLearning from './pages/LisLearning';
 import LisFrontPage from './pages/LisFrontPage';
-
 import LisLearningActivities from './pages/LisLearningActivities';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ReportPage from './pages/ReportPage';
