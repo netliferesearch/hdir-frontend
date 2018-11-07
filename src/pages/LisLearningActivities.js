@@ -115,7 +115,7 @@ const LisLearningActivities = () => (
                 <p>etc.</p>
               </Collapsible>
             </div>
-            <hr className="b-hr b-hr--less-thick b-hr--black" />
+            <hr className="b-hr b-hr--less-thick b-hr--black l-mt-2" />
           </div>
           <div className="l-mt-5">
             <ChapterHeading
