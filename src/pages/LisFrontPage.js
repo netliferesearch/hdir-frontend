@@ -17,7 +17,15 @@ const LisFrontPage = () => (
           lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
         />
       </div>
-      <Alert status="success"> wf</Alert>
+      <div className="l-mb-3">
+        <Alert status="success">
+          Dette er den nye ordningen som erstatter den gamle, den kan være
+          <br />
+          større
+          <br />
+          med linker
+        </Alert>
+      </div>
       <div className="row">
         <a href="#" className="col-md-4">
           <Box color="white">
