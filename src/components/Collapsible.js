@@ -94,11 +94,13 @@ class Collapsible extends React.Component {
         </button>
         {props.subheading &&
           !props.subheadingContent && (
-            <div className="b-collapsible__subheading">{props.subheading}</div>
+            <div className="b-collapsible__subheading l-mt-1">
+              {props.subheading}
+            </div>
           )}
         {props.subheading &&
           props.subheadingContent && (
-            <div className="b-collapsible__subheading-collapsible">
+            <div className="b-collapsible__subheading-collapsible l-mt-1">
               <Collapsible
                 heading={props.subheading}
                 subtle={props.subheadingContent}
