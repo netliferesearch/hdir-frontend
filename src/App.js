@@ -23,6 +23,7 @@ import LisFrontPage from './pages/LisFrontPage';
 import LisLearningActivities from './pages/LisLearningActivities';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ReportPage from './pages/ReportPage';
+import ProfessionSelector from './pages/ProfessionSelector';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
