@@ -6,6 +6,7 @@ import ChapterHeading from '../components/ChapterHeading';
 import Collapsible from '../components/Collapsible';
 import ArticleIntro from '../components/ArticleIntro';
 import Box from '../components/Box';
+import Alert from '../components/Alert';
 
 const LisFrontPage = () => (
   <div>
@@ -16,6 +17,7 @@ const LisFrontPage = () => (
           lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
         />
       </div>
+      <Alert status="success"> wf</Alert>
       <div className="row">
         <a href="#" className="col-md-4">
           <Box color="white">
