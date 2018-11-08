@@ -316,12 +316,6 @@ small {
   justify-content: space-between;
   display: flex;
   &__card {
-    &--next {
-      content: '→';
-    }
-    &--prev {
-      content: '←';
-    }
   }
 }
 .b-alert {
@@ -329,6 +323,10 @@ small {
   border-left: 7px solid $grey;
   display: flex;
   justify-content: space-between;
+
+  &--small {
+  }
+
   &--success {
     border-color: $green;
     background-color: $green-light;
