@@ -118,6 +118,9 @@ const LisLearning = () => (
                 subheading="LÆRINGSMÅL"
                 size="medium"
               >
+                <Alert status="success">
+                  Vær oppmerksom på at dette atomet er på høring
+                </Alert>
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
                   oppnå tilfredsstillende blodsukker fastende og etter måltider,
@@ -133,9 +136,6 @@ const LisLearning = () => (
                   karbohydratkvalitet og -mengde per måltid som gjør det enklere
                   å nå behandlingsmålene for glukose
                 </p>
-                <Alert status="success">
-                  Vær oppmerksom på at dette atomet er på høring
-                </Alert>
               </Collapsible>
               <div className="l-mt-2" />
             </div>
