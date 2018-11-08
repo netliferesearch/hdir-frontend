@@ -4,6 +4,7 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import LinkWithIcon from '../components/LinkWithIcon';
 import ArticleIntro from '../components/ArticleIntro';
+import ChapterHeading from '../components/ChapterHeading';
 
 const ChapterPageReport = () => (
   <div>
@@ -20,7 +21,7 @@ const ChapterPageReport = () => (
         </a>
       </nav>
       <div className="l-mt-2 b-bleed">
-        <ArticleIntro heading="Ventetid" />
+        <ChapterHeading heading="Ventetid" line="none" overflow h="h2" />
       </div>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
