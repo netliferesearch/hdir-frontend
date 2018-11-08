@@ -133,12 +133,11 @@ const LisLearning = () => (
                   karbohydratkvalitet og -mengde per måltid som gjør det enklere
                   å nå behandlingsmålene for glukose
                 </p>
-              </Collapsible>
-              <div className="l-mt-2">
                 <Alert status="success">
                   Vær oppmerksom på at dette atomet er på høring
                 </Alert>
-              </div>
+              </Collapsible>
+              <div className="l-mt-2" />
             </div>
             <hr className="b-hr b-hr--less-thick b-hr--black" />
           </div>
