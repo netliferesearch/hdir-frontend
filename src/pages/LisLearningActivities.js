@@ -146,7 +146,11 @@ const LisLearningActivities = () => (
               </p>
               <p>etc.</p>
             </Collapsible>
-            <Collapsible heading="Utdypende tekst" size="medium">
+            <Collapsible
+              className="l-mt-2"
+              heading="Utdypende tekst"
+              size="medium"
+            >
               <p>
                 Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
                 tilfredsstillende blodsukker fastende og etter måltider, og for
