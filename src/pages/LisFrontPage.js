@@ -169,7 +169,7 @@ const LisFrontPage = () => (
           />
         </div>
       </article>
-      <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
+      <article className="col-md-8 col-xs-12 t-body-text">
         <div className="l-mt-4">
           <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
         </div>
