@@ -177,19 +177,21 @@ const LisFrontPage = () => (
     </div>
     <div className="l-mt-4">
       <div className="b-bleed">
-        <strong>Kontakt:</strong>
-        <br />
-        <a href="#" className="b-bleed__link">
-          spesialisthelsetjenester@helsedir.no
-        </a>
-        <br />
-        <a href="#" className="b-bleed__link">
-          navn.etternavn@helsedir.no
-        </a>
-        <br />
-        <a href="#" className="b-bleed__link">
-          999 99 999
-        </a>
+        <div className="l-container">
+          <strong>Kontakt:</strong>
+          <br />
+          <a href="#" className="b-bleed__link">
+            spesialisthelsetjenester@helsedir.no
+          </a>
+          <br />
+          <a href="#" className="b-bleed__link">
+            navn.etternavn@helsedir.no
+          </a>
+          <br />
+          <a href="#" className="b-bleed__link">
+            999 99 999
+          </a>
+        </div>
       </div>
     </div>
   </div>
