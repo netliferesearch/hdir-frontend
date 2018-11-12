@@ -69,6 +69,7 @@ class App extends Component {
                 component={LisLearningActivities}
               />
               <Route path="/rapport-kapittel" component={ChapterPageReport} />
+              <Route path="/yrke-velger" component={ProfessionSelector} />
               <Route component={NotFound} />
             </Switch>
             <Footer />
