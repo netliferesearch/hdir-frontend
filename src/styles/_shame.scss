@@ -389,3 +389,48 @@ small {
     flex-grow: 1;
   }
 }
+
+.b-card {
+  border-radius: 4px;
+  border: 1px solid $grey-light;
+  &__feature {
+    background: $brand-color;
+    color: white;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__link {
+    display: block;
+    position: relative;
+    padding: 1rem 2rem 1rem 1rem;
+    box-shadow: none;
+
+    &:hover {
+      .b-card__heading {
+        color: $blue;
+        @include underline($blue);
+      }
+    }
+
+    &:after {
+      content: '→';
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-size: $medium-large-text;
+    }
+  }
+  &__heading {
+    display: inline;
+    color: $black;
+  }
+  &__text {
+    font-size: $meta-text;
+    color: $grey;
+    margin-top: 1em;
+    // This text should ignore the extra padding, made for the heading and arrow.
+    width: calc(100% + 1rem);
+  }
+}

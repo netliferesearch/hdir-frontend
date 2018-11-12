@@ -26,6 +26,7 @@ import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import ChapterNavigation from '../components/ChapterNavigation';
+import Card from '../components/Card';
 
 // Pages
 import ArticlePage from '../pages/ArticlePage';
@@ -510,4 +511,20 @@ storiesOf('ChapterNavigation', module)
       {text('Header', 'This is some content, it can be anything')}
       {text('Text', 'nasjonal faglig retningslinje')}
     </ChapterNavigation>
+  ));
+
+storiesOf('Card', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Card
+      heading={text('Heading', 'This is a heading')}
+      text={text('Text', 'This is some text')}
+      url={text('URL', '#')}
+    >
+      {text(
+        'Content',
+        'This is some content, it can be anything, even an image'
+      )}
+    </Card>
   ));
