@@ -250,6 +250,7 @@ storiesOf('NavList', module)
         noArrow={boolean('No arrow', false)}
         small={boolean('Small', false)}
         sticky={boolean('Sticky', false)}
+        ordered={boolean('Ordered', false)}
         list={object('List', [
           {
             title: 'KAPITTEL 1',
