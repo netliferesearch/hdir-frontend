@@ -117,6 +117,7 @@ const LisLearning = () => (
                 heading="Vaskulære malformasjoner "
                 subheading="LÆRINGSMÅL"
                 size="medium"
+                alert="Some alert"
               >
                 <Alert status="success">
                   Vær oppmerksom på at dette atomet er på høring
@@ -139,7 +140,7 @@ const LisLearning = () => (
               </Collapsible>
               <div className="l-mt-2" />
             </div>
-            <hr className="b-hr b-hr--less-thick b-hr--black" />
+            <hr className="b-hr b-hr--black" />
           </div>
           <div className="l-mt-5">
             <ChapterHeading

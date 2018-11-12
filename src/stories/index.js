@@ -374,6 +374,7 @@ storiesOf('Collapsible', module)
         },
         'large'
       )}
+      alert={text('Alert', '')}
     >
       {text('Text', 'You can place any content in here.')}
     </Collapsible>

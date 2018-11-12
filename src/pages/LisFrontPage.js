@@ -70,7 +70,7 @@ const LisFrontPage = () => (
         </a>
       </div>
       <div className="l-mt-5">
-        <hr className="b-hr b-hr--less-thick b-hr--black" />
+        <hr className="b-hr b-hr--black" />
         <NavList list={[{ title: 'LIS del 1', url: '#' }]} />
       </div>
 
