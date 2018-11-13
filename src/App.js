@@ -21,6 +21,7 @@ import Footer from './components/Footer';
 import LisLearning from './pages/LisLearning';
 import LisFrontPage from './pages/LisFrontPage';
 import LisLearningActivities from './pages/LisLearningActivities';
+import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ReportPage from './pages/ReportPage';
 import ProfessionSelector from './pages/ProfessionSelector';
@@ -73,6 +74,10 @@ class App extends Component {
               />
               <Route path="/rapport-kapittel" component={ChapterPageReport} />
               <Route path="/yrke-velger" component={ProfessionSelector} />
+              <Route
+                path="/autorisasjon-forside"
+                component={AuthorizationFrontPage}
+              />
               <Route component={NotFound} />
             </Switch>
             <Footer />

@@ -162,11 +162,14 @@
     }
   }
   p {
-    margin: 0.75em 0;
+    margin: 1em 0;
   }
   // Removes the top margin from the first heading
   > :first-child {
     margin-top: 0;
+  }
+  ul {
+    margin-top: 0.5em;
   }
 }
 

@@ -67,6 +67,9 @@ const ContentLabel = props => {
         <Link to="/yrke-velger" className="b-main-header__link">
           Yrke velger
         </Link>
+        <Link to="/autorisasjon-forside" className="b-main-header__link">
+          Autorisasjon forside
+        </Link>
       </nav>
     </div>
   );
