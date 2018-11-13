@@ -28,6 +28,7 @@ const LisLearning = () => (
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
             sticky
+            small
             className="l-sticky"
             noArrow
             heading="SPESIALUTDANNING INNEN BARNEKIRURGI"

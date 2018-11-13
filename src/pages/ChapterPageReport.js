@@ -28,6 +28,7 @@ const ChapterPageReport = () => (
           <NavList
             anchor
             sticky
+            small
             className="l-sticky"
             heading="Innhold på denne siden"
             list={[

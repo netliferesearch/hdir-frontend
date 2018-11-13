@@ -25,17 +25,19 @@ const LisLearningActivities = () => (
           <NavList
             sticky
             className="l-sticky"
-            noArrow
+            anchor
+            small
             heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
             list={[
               {
-                title: 'Læringsmål'
+                title: 'Læringsmål',
+                url: '#'
               },
               {
                 title: 'Læringsaktiviteter',
-                active: true
+                url: '#'
               },
-              { title: 'Link til annen fritekst' }
+              { title: 'Link til annen fritekst', url: '#' }
             ]}
           />
         </aside>
