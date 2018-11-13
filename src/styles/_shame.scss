@@ -35,8 +35,6 @@
 }
 
 .b-breadcrumbs {
-  padding: 2em 0;
-
   &__link {
     margin-right: 1.5em;
 
@@ -140,10 +138,6 @@
   &--thick {
     border-width: 7px;
   }
-
-  &--less-thick {
-    border-width: 4px;
-  }
 }
 
 // The CSS meant for the content from the rich text in Enonic
@@ -226,14 +220,15 @@
 
 .b-select-inline {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   &:after {
     position: absolute;
     color: orange;
     display: block;
     height: 1em;
     width: 1em;
-    top: 1em;
+    top: 0.66em;
     right: 0.5em;
     z-index: -1;
     content: '↓';
@@ -243,13 +238,15 @@
     display: inline-block;
     margin-right: 1em;
     color: rgb(224, 129, 3);
+    flex-shrink: 0;
   }
   &__select {
     appearance: none;
-    font-size: $base-font-size;
+    font-size: $meta-text;
     border: 1px solid orange;
     background-color: transparent;
     padding: 1em 2.5em 1em 1em;
+    width: 100%;
   }
   &__option {
     font-size: 2px;
@@ -300,17 +297,35 @@ small {
     background-color: $green-light;
     border: 1px solid $green;
   }
+  &--white {
+    background-color: white;
+    border: 1px solid $grey;
+  }
+
   &--blue {
     background-color: $blue-lighter;
     border: 1px solid $blue-light;
   }
 }
-
+/* CSS for new ChapterNavigation component, can rename */
+.b-chapter-navigation {
+  padding: 1em;
+  justify-content: space-between;
+  display: flex;
+  &__card {
+  }
+}
 .b-alert {
   padding: 1em;
   border-left: 7px solid $grey;
   display: flex;
   justify-content: space-between;
+
+  &--small {
+    font-size: $meta-text;
+    padding: 0.5em;
+  }
+
   &--success {
     border-color: $green;
     background-color: $green-light;
@@ -372,5 +387,50 @@ small {
     margin-top: 0.25em;
     text-align: left;
     flex-grow: 1;
+  }
+}
+
+.b-card {
+  border-radius: 4px;
+  border: 1px solid $grey-light;
+  &__feature {
+    background: $brand-color;
+    color: white;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__link {
+    display: block;
+    position: relative;
+    padding: 1rem 2rem 1rem 1rem;
+    box-shadow: none;
+
+    &:hover {
+      .b-card__heading {
+        color: $blue;
+        @include underline($blue);
+      }
+    }
+
+    &:after {
+      content: '→';
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-size: $medium-large-text;
+    }
+  }
+  &__heading {
+    display: inline;
+    color: $black;
+  }
+  &__text {
+    font-size: $meta-text;
+    color: $grey;
+    margin-top: 1em;
+    // This text should ignore the extra padding, made for the heading and arrow.
+    width: calc(100% + 1rem);
   }
 }

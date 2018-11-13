@@ -25,6 +25,8 @@ import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
+import ChapterNavigation from '../components/ChapterNavigation';
+import Card from '../components/Card';
 
 // Pages
 import ArticlePage from '../pages/ArticlePage';
@@ -41,6 +43,9 @@ import SimpleSerp from '../pages/SimpleSerp';
 import LisSpeciality from '../pages/LisSpeciality';
 import LisLearning from '../pages/LisLearning';
 import LisFrontPage from '../pages/LisFrontPage';
+import LisLearningActivities from '../pages/LisLearningActivities';
+import ChapterPageReport from '../pages/ChapterPageReport';
+import ProfessionSelector from '../pages/ProfessionSelector';
 // React specific
 import InputSearch from '../components/InputSearch';
 
@@ -105,7 +110,10 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('LIS speciality', () => <LisSpeciality />)
   .addWithStaticMarkup('LIS learning', () => <LisLearning />)
   .addWithStaticMarkup('LIS front page', () => <LisFrontPage />)
+  .addWithStaticMarkup('ProfessionSelector', () => <ProfessionSelector />)
+  .addWithStaticMarkup('LISLearningActivities', () => <LisLearningActivities />)
   .addWithStaticMarkup('Chapter page', () => <ChapterPage />)
+  .addWithStaticMarkup('ChapterPageReport', () => <ChapterPageReport />)
   .addWithStaticMarkup('Hearing page', () => <HearingPage />)
   .addWithStaticMarkup('Memo page', () => <MemoPage />)
   .addWithStaticMarkup('Parent memo page', () => <ParentMemoPage />)
@@ -243,6 +251,7 @@ storiesOf('NavList', module)
         noArrow={boolean('No arrow', false)}
         small={boolean('Small', false)}
         sticky={boolean('Sticky', false)}
+        ordered={boolean('Ordered', false)}
         list={object('List', [
           {
             title: 'KAPITTEL 1',
@@ -366,6 +375,7 @@ storiesOf('Collapsible', module)
         },
         'large'
       )}
+      alert={text('Alert', '')}
     >
       {text('Text', 'You can place any content in here.')}
     </Collapsible>
@@ -479,4 +489,42 @@ storiesOf('Alert', module)
     >
       {text('Content', 'This is some content, it can be anything')}
     </Alert>
+  ));
+
+storiesOf('ChapterNavigation', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <ChapterNavigation
+      status={select(
+        'Status',
+        {
+          none: 'none',
+          success: 'success',
+          warning: 'warning',
+          danger: 'danger',
+          info: 'info'
+        },
+        'success'
+      )}
+    >
+      {text('Header', 'This is some content, it can be anything')}
+      {text('Text', 'nasjonal faglig retningslinje')}
+    </ChapterNavigation>
+  ));
+
+storiesOf('Card', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Card
+      heading={text('Heading', 'This is a heading')}
+      text={text('Text', 'This is some text')}
+      url={text('URL', '#')}
+    >
+      {text(
+        'Content',
+        'This is some content, it can be anything, even an image'
+      )}
+    </Card>
   ));

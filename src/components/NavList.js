@@ -10,7 +10,7 @@ const listClasses = (small, sticky) =>
     'b-nav-list--sticky': sticky
   });
 
-const listItemClasses = (anchor, columns) =>
+const listItemClasses = (anchor, columns, ordered) =>
   classNames({
     'b-nav-list__item': true,
     'b-nav-list__item--anchor': anchor,
@@ -23,18 +23,14 @@ const listItemsClasses = columns =>
     'b-nav-list__items--columns': columns
   });
 
-const listLinkClasses = (
-  anchor,
-  noArrow,
-  active = false,
-  activeChild = false
-) =>
+const listLinkClasses = (anchor, noArrow, active, activeChild, ordered) =>
   classNames({
     'b-nav-list__link': true,
     'b-nav-list__link--anchor': anchor,
     'b-nav-list__link--no-arrow': noArrow,
     'b-nav-list__link--active': active,
-    'b-nav-list__link--active-child': activeChild
+    'b-nav-list__link--active-child': activeChild,
+    'b-nav-list__link--ordered': ordered
   });
 
 const itemMetaClasses = hideMeta =>
@@ -62,7 +58,9 @@ const NavList = props => {
               className={listLinkClasses(
                 props.anchor,
                 props.noArrow,
-                item.active
+                item.active,
+                item.activeChild,
+                props.ordered
               )}
             >
               {item.description && (
@@ -139,7 +137,8 @@ NavList.propTypes = {
   hideMeta: PropTypes.bool,
   noArrow: PropTypes.bool,
   small: PropTypes.bool,
-  sticky: PropTypes.bool
+  sticky: PropTypes.bool,
+  ordered: PropTypes.bool
 };
 
 export default NavList;

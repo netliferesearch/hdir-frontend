@@ -10,7 +10,7 @@ const SelectInline = props => (
     <select name="contentCustomizer" className="b-select-inline__select">
       {/* This value is suppose to be empty.
           It should also have the attribute selected. defaultValue should be value.
-          JSX requires we write it this way. 
+          JSX requires we write it this way.
       */}
       <option defaultValue="" disabled className="b-select-inline__option">
         {props.placeholder}
