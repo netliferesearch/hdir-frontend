@@ -57,6 +57,25 @@ const AuthorizationFrontPage = () => (
             </form>
           </article>
         </div>
+        <div className="col-xs-12 l-mt-4">
+          <h2>Dine svar:</h2>
+          <div className="row l-mt-1 l-mb-1">
+            <div className="col-xs-6">Er du helseutdannet i Norge?</div>
+            <div className="col-xs-3">Ja</div>
+            <div className="col-xs-3 t-right">
+              <a href="#">Endre svar</a>
+            </div>
+          </div>
+          <hr className="b-hr b-hr--grey-light" />
+          <div className="row l-mt-1 l-mb-1">
+            <div className="col-xs-6">Er du helseutdannet i Norge?</div>
+            <div className="col-xs-3">Ja</div>
+            <div className="col-xs-3 t-right">
+              <a href="#">Endre svar</a>
+            </div>
+          </div>
+          <hr className="b-hr b-hr--grey-light" />
+        </div>
       </div>
     </div>
     <div className="l-mt-4">
