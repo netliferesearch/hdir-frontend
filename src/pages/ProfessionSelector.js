@@ -3,7 +3,7 @@ import React from 'react';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ArticleIntro from '../components/ArticleIntro';
-import SelectInline from '../components/SelectInline';
+import Select from '../components/Select';
 
 const ProfessionSelector = () => (
   <div className="l-container">
@@ -22,7 +22,7 @@ const ProfessionSelector = () => (
         </nav>
       </div>
       <div className="col-xs-12 col-md-6">
-        <SelectInline
+        <Select
           label="Tilpass siden til meg"
           placeholder="Velg"
           options={[

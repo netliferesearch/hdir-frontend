@@ -19,7 +19,7 @@ import LongShortHeading from '../components/LongShortHeading';
 // import MainHeader from '../components/MainHeader';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-import SelectInline from '../components/SelectInline';
+import Select from '../components/Select';
 import Link from '../components/Link';
 import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
@@ -449,14 +449,15 @@ storiesOf('Quote', module)
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
   ));
 
-storiesOf('SelectInline', module)
+storiesOf('Select', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <SelectInline
-      label="Tilpass siden til meg"
-      placeholder="Velg"
-      options={[
+    <Select
+      label={text('Label', 'Tilpass siden til meg')}
+      placeholder={text('Placeholder', 'Velg')}
+      stacked={boolean('stacked', false)}
+      options={object('Options', [
         'Lege',
         'Kommune',
         'Fysioterapaut',
@@ -466,7 +467,7 @@ storiesOf('SelectInline', module)
         'Kiropraktor',
         'Sykehus/poliklinikk',
         'Tannpleier'
-      ]}
+      ])}
     />
   ));
 

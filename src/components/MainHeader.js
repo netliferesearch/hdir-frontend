@@ -70,6 +70,9 @@ const ContentLabel = props => {
         <Link to="/autorisasjon-forside" className="b-main-header__link">
           Autorisasjon forside
         </Link>
+        <Link to="/autorisasjon-steg" className="b-main-header__link">
+          Autorisasjon steg
+        </Link>
       </nav>
     </div>
   );

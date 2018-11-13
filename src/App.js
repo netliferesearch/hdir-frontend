@@ -25,6 +25,7 @@ import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ReportPage from './pages/ReportPage';
 import ProfessionSelector from './pages/ProfessionSelector';
+import AuthorizationStepPage from './pages/AuthorizationStepPage';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
@@ -77,6 +78,10 @@ class App extends Component {
               <Route
                 path="/autorisasjon-forside"
                 component={AuthorizationFrontPage}
+              />
+              <Route
+                path="/autorisasjon-steg"
+                component={AuthorizationStepPage}
               />
               <Route component={NotFound} />
             </Switch>
