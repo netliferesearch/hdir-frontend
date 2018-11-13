@@ -20,7 +20,7 @@ import LongShortHeading from '../components/LongShortHeading';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import SelectInline from '../components/SelectInline';
-import LinkWithIcon from '../components/LinkWithIcon';
+import Link from '../components/Link';
 import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
@@ -292,17 +292,17 @@ storiesOf('ChapterHeading', module)
     />
   ));
 
-storiesOf('LinkWithIcon', module)
+storiesOf('Link', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <LinkWithIcon
+    <Link
       href={text('href', '#')}
       icon="./icons/method.svg"
       small={boolean('Small', false)}
     >
       {text('Content', 'Skriv ut')}
-    </LinkWithIcon>
+    </Link>
   ));
 
 storiesOf('SearchOptions', module)

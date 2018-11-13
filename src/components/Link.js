@@ -4,16 +4,16 @@ import classNames from 'classnames';
 
 const linkClasses = (arrow, small) =>
   classNames({
-    'b-link-with-icon__link': true,
-    'b-link-with-icon__arrow': arrow,
-    'b-link-with-icon__small': small
+    'b-link__link': true,
+    'b-link__arrow': arrow,
+    'b-link__small': small
   });
 
-const LinkWithIcon = props => (
-  <div className="b-link-with-icon">
+const Link = props => (
+  <div className="b-link">
     {props.icon && (
       <div
-        className="b-link-with-icon__icon"
+        className="b-link__icon"
         style={{ backgroundImage: `url(${props.icon})` }}
       />
     )}
@@ -23,11 +23,11 @@ const LinkWithIcon = props => (
   </div>
 );
 
-LinkWithIcon.propTypes = {
+Link.propTypes = {
   href: PropTypes.string.isRequired,
   icon: PropTypes.string,
   arrow: PropTypes.bool,
   small: PropTypes.bool
 };
 
-export default LinkWithIcon;
+export default Link;
