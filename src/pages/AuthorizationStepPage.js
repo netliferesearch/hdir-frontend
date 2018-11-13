@@ -3,7 +3,7 @@ import React from 'react';
 import Link from '../components/Link';
 import Select from '../components/Select';
 
-const AuthorizationFrontPage = () => (
+const AuthorizationStepPage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
@@ -104,4 +104,4 @@ const AuthorizationFrontPage = () => (
   </div>
 );
 
-export default AuthorizationFrontPage;
+export default AuthorizationStepPage;
