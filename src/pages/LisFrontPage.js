@@ -5,7 +5,6 @@ import PageMeta from '../components/PageMeta';
 import ArticleIntro from '../components/ArticleIntro';
 import Card from '../components/Card';
 import Alert from '../components/Alert';
-import '../../src/static/Helfo.css';
 
 const LisFrontPage = () => (
   <div>

@@ -4,7 +4,6 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ArticleIntro from '../components/ArticleIntro';
 import SelectInline from '../components/SelectInline';
-import '../../src/static/Helfo.css';
 
 const ProfessionSelector = () => (
   <div className="l-container">
