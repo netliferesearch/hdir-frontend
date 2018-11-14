@@ -25,6 +25,7 @@ import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ReportPage from './pages/ReportPage';
 import ProfessionSelector from './pages/ProfessionSelector';
+import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 
@@ -56,6 +57,10 @@ class App extends Component {
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/søkeresultat2" component={SimpleSerp} />
               <Route path="/artikkel" component={ArticlePage} />
+              <Route
+                path="/rapportside-uten-bilde"
+                component={ReportPageWithoutImage}
+              />
               <Route path="/kapittel" component={ChapterPage} />
               <Route path="/høringer" component={HearingPage} />
               <Route path="/høringer-forside" component={ParentHearingPage} />
