@@ -522,6 +522,7 @@ storiesOf('Card', module)
       heading={text('Heading', 'This is a heading')}
       text={text('Text', 'This is some text')}
       url={text('URL', '#')}
+      leftArrow={boolean('Left arrow', false)}
     >
       {text(
         'Content',

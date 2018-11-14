@@ -3,8 +3,7 @@ import React from 'react';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
-import ArticleIntro from '../components/ArticleIntro';
-import ChapterHeading from '../components/ChapterHeading';
+import Card from '../components/Card';
 
 const ChapterPageReport = () => (
   <div>
@@ -20,9 +19,13 @@ const ChapterPageReport = () => (
           Dolor
         </a>
       </nav>
-      <div className="l-mt-2 b-bleed">
-        <ChapterHeading heading="Ventetid" line="none" overflow h="h2" />
+    </div>
+    <div className="l-mt-2 b-bleed">
+      <div className="l-container">
+        <h1>Ventetid</h1>
       </div>
+    </div>
+    <div className="l-container">
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
@@ -81,6 +84,24 @@ const ChapterPageReport = () => (
             lang tid det tar før 90 prosent av pasientene har avsluttet
             ventetiden, mens 10 prosent venter lengre.
           </p>
+
+          <div className="l-mt-3 row">
+            <div className="col-xs-12 col-md-6 l-mt-2 first-md">
+              <Card
+                heading="Forrige kapittel"
+                text="Den første samtalen i svangerskapet – forbeggung av svangerskaps-diabetes."
+                url="#"
+                leftArrow={true}
+              />
+            </div>
+            <div className="col-xs-12 col-md-6 l-mt-2 first-xs">
+              <Card
+                heading="Neste kapittel"
+                text="Den første samtalen i svangerskapet – forbeggung av svangerskaps-diabetes."
+                url="#"
+              />
+            </div>
+          </div>
 
           <div className="l-mt-4">
             <Link href="#" small icon="./icons/method.svg">
