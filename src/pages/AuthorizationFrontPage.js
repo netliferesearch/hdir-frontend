@@ -57,7 +57,7 @@ const AuthorizationFrontPage = () => (
             </Link>
             <br />
             <p>
-              <Collapsible heading="Jeg har søkt – hva skjer nå?" size="medium">
+              <Collapsible heading="Jeg har søkt – hva skjer nå?" size="small">
                 This is some other content, and it includes{' '}
                 <a href="#">a link</a>
               </Collapsible>
