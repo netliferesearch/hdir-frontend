@@ -9,32 +9,39 @@ import SelectInline from '../components/Select';
 const ProfessionSelector = () => (
   <div>
     <div className="l-container">
-      <SelectInline
-        label="Tilpass siden til meg"
-        placeholder="Velg"
-        options={[
-          'Lege',
-          'Kommune',
-          'Fysioterapaut',
-          'Apotek/bandasjist',
-          'Psykolog',
-          'Logoped',
-          'Kiropraktor',
-          'Sykehus/poliklinikk',
-          'Tannpleier'
-        ]}
-      />
-      <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <div className="row middle-xs">
+        <div className="col-xs-12 col-md-6  l-mt-1">
+          <nav className="b-breadcrumbs">
+            <a href="#" className="b-breadcrumbs__link">
+              Lorum
+            </a>
+            <a href="#" className="b-breadcrumbs__link">
+              Ipsum
+            </a>
+            <a href="#" className="b-breadcrumbs__link">
+              Dolor
+            </a>
+          </nav>
+        </div>
+        <div className="col-xs-12 col-md-6 l-mt-1">
+          <SelectInline
+            label="Tilpass siden til meg:"
+            placeholder="Velg"
+            options={[
+              'Lege',
+              'Kommune',
+              'Fysioterapaut',
+              'Apotek/bandasjist',
+              'Psykolog',
+              'Logoped',
+              'Kiropraktor',
+              'Sykehus/poliklinikk',
+              'Tannpleier'
+            ]}
+          />
+        </div>
+      </div>
+
       <div className="l-mt-2">
         <ArticleIntro
           heading="Refusjon og oppgjør"
