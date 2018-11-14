@@ -2,7 +2,7 @@ import React from 'react';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
 import Collapsible from '../components/Collapsible';
-import LinkWithIcon from '../components/LinkWithIcon';
+import Link from '../components/Link';
 const RecommendationPage = () => (
   <div className="l-container l-mt-3">
     <h1>
@@ -322,21 +322,13 @@ const RecommendationPage = () => (
                             med fødselsvekt
                           </p>
                           <div className="l-mt-4 l-mb-4">
-                            <LinkWithIcon
-                              href="#"
-                              small
-                              icon="./icons/method.svg"
-                            >
+                            <Link href="#" small icon="./icons/method.svg">
                               Om metode og prosess
-                            </LinkWithIcon>
+                            </Link>
                             <br />
-                            <LinkWithIcon
-                              href="#"
-                              small
-                              icon="./icons/print.svg"
-                            >
+                            <Link href="#" small icon="./icons/print.svg">
                               Skriv ut hele retningslinjen
-                            </LinkWithIcon>
+                            </Link>
                           </div>
                         </div>
                       </div>

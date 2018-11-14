@@ -9,6 +9,14 @@ const FrontPage = () => (
       </p>
       <InputSearch id="x" dark />
     </div>
+    <br />
+    <br />
+    <br />
+    <h3 className="some-label">
+      Press 'h' to toggle block/component hints.
+      <br />
+      Press 'j' to add Helfo styling. Refresh page to undo.
+    </h3>
   </div>
 );
 

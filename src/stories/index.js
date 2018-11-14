@@ -19,13 +19,14 @@ import LongShortHeading from '../components/LongShortHeading';
 // import MainHeader from '../components/MainHeader';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-import SelectInline from '../components/SelectInline';
-import LinkWithIcon from '../components/LinkWithIcon';
+import Select from '../components/Select';
+import Link from '../components/Link';
 import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import ChapterNavigation from '../components/ChapterNavigation';
+import Card from '../components/Card';
 
 // Pages
 import ArticlePage from '../pages/ArticlePage';
@@ -252,6 +253,7 @@ storiesOf('NavList', module)
         noArrow={boolean('No arrow', false)}
         small={boolean('Small', false)}
         sticky={boolean('Sticky', false)}
+        ordered={boolean('Ordered', false)}
         list={object('List', [
           {
             title: 'KAPITTEL 1',
@@ -292,17 +294,17 @@ storiesOf('ChapterHeading', module)
     />
   ));
 
-storiesOf('LinkWithIcon', module)
+storiesOf('Link', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <LinkWithIcon
+    <Link
       href={text('href', '#')}
       icon="./icons/method.svg"
       small={boolean('Small', false)}
     >
       {text('Content', 'Skriv ut')}
-    </LinkWithIcon>
+    </Link>
   ));
 
 storiesOf('SearchOptions', module)
@@ -375,6 +377,7 @@ storiesOf('Collapsible', module)
         },
         'large'
       )}
+      alert={text('Alert', '')}
     >
       {text('Text', 'You can place any content in here.')}
     </Collapsible>
@@ -448,14 +451,15 @@ storiesOf('Quote', module)
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
   ));
 
-storiesOf('SelectInline', module)
+storiesOf('Select', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <SelectInline
-      label="Tilpass siden til meg"
-      placeholder="Velg"
-      options={[
+    <Select
+      label={text('Label', 'Tilpass siden til meg')}
+      placeholder={text('Placeholder', 'Velg')}
+      stacked={boolean('stacked', false)}
+      options={object('Options', [
         'Lege',
         'Kommune',
         'Fysioterapaut',
@@ -465,7 +469,7 @@ storiesOf('SelectInline', module)
         'Kiropraktor',
         'Sykehus/poliklinikk',
         'Tannpleier'
-      ]}
+      ])}
     />
   ));
 
@@ -510,4 +514,21 @@ storiesOf('ChapterNavigation', module)
       {text('Header', 'This is some content, it can be anything')}
       {text('Text', 'nasjonal faglig retningslinje')}
     </ChapterNavigation>
+  ));
+
+storiesOf('Card', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Card
+      heading={text('Heading', 'This is a heading')}
+      text={text('Text', 'This is some text')}
+      url={text('URL', '#')}
+      leftArrow={boolean('Left arrow', false)}
+    >
+      {text(
+        'Content',
+        'This is some content, it can be anything, even an image'
+      )}
+    </Card>
   ));

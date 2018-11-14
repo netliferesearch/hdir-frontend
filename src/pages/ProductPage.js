@@ -3,7 +3,7 @@ import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
-import LinkWithIcon from '../components/LinkWithIcon';
+import Link from '../components/Link';
 import LongShortHeading from '../components/LongShortHeading';
 
 const ProductPage = () => (
@@ -115,9 +115,9 @@ const ProductPage = () => (
             ]}
           />
           <div className="l-mt-2">
-            <LinkWithIcon href="#" arrow>
+            <Link href="#" arrow>
               Last ned alle (2 MB)
-            </LinkWithIcon>
+            </Link>
           </div>
         </Box>
       </div>
@@ -139,13 +139,13 @@ const ProductPage = () => (
       </div>
 
       <div className="col-xs-12 l-mt-4">
-        <LinkWithIcon href="#" small icon="./icons/method.svg">
+        <Link href="#" small icon="./icons/method.svg">
           Om metode og prosess
-        </LinkWithIcon>
+        </Link>
         <br />
-        <LinkWithIcon href="#" small icon="./icons/print.svg">
+        <Link href="#" small icon="./icons/print.svg">
           Skriv ut hele retningslinjen
-        </LinkWithIcon>
+        </Link>
       </div>
     </div>
   </div>

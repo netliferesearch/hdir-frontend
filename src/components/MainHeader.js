@@ -64,6 +64,21 @@ const ContentLabel = props => {
         <Link to="/rapport-kapittel" className="b-main-header__link">
           Rapport kapittel
         </Link>
+        <Link to="/yrke-velger" className="b-main-header__link">
+          Yrke velger
+        </Link>
+        <Link to="/autorisasjon-forside" className="b-main-header__link">
+          Autorisasjon forside
+        </Link>
+        <Link to="/autorisasjon-steg" className="b-main-header__link">
+          Autorisasjon steg
+        </Link>
+        <Link to="/autorisasjon-steg-2" className="b-main-header__link">
+          Autorisasjon steg 2
+        </Link>
+        <Link to="/rapportside-uten-bilde" className="b-main-header__link">
+          Rapportside uten bilde
+        </Link>
       </nav>
     </div>
   );

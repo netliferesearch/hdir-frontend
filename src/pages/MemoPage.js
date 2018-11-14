@@ -2,7 +2,7 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-import LinkWithIcon from '../components/LinkWithIcon';
+import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Quote from '../components/Quote';
 
@@ -31,6 +31,7 @@ const MemoPage = () => (
           <NavList
             anchor
             sticky
+            small
             className="l-sticky"
             heading="Innhold på denne siden"
             list={[
@@ -160,13 +161,13 @@ const MemoPage = () => (
           </p>
 
           <div className="l-mt-4">
-            <LinkWithIcon href="#" small icon="./icons/method.svg">
+            <Link href="#" small icon="./icons/method.svg">
               Om metode og prosess
-            </LinkWithIcon>
+            </Link>
             <br />
-            <LinkWithIcon href="#" small icon="./icons/print.svg">
+            <Link href="#" small icon="./icons/print.svg">
               Skriv ut hele retningslinjen
-            </LinkWithIcon>
+            </Link>
           </div>
 
           <div className="l-mt-4">

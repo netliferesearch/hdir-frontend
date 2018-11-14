@@ -1,0 +1,53 @@
+$black: #212121;
+
+$grey: #504f4f;
+$grey-light: #d8dada;
+$grey-lighter: #f7f7f7;
+
+$blue-dark: #003057;
+$blue: #71c5e8;
+$blue-light: #82b3e2;
+$blue-lighter: #e6f3ff;
+
+$yellow-dark: #d39000;
+$yellow: #ed8b00;
+$yellow-light: #fff4e6;
+
+$red-dark: #8b0a0a;
+$red: #e03c31;
+$red-light: #f3bebe;
+
+$orange-dark: #e45300;
+$orange: #f8a83d;
+
+$green-dark: #366558;
+$green: #95dcca;
+$green-light: #d4f1d4;
+
+$purple-dark: #a83d72;
+$purple: #865e9c;
+
+// Colors only meant for warnings
+$green-warning: #007a00;
+$yellow-warning: #f0c617;
+$red-warning: #ad0017;
+
+$brand-color: $orange-dark;
+$secondary-color: $blue;
+
+// Base font
+$base-font-size: 20px;
+$base-font-weight: normal;
+$base-font-family: 'Work Sans', sans-serif;
+$text-color: $black;
+
+// Font sizes
+$extra-large-text: 2.5rem;
+$large-text: 1.8rem;
+$medium-large-text: 1.2rem;
+$meta-text: 0.8rem;
+
+// Layout
+$container-small: 4vw;
+$container-medium: 6vw;
+$container-large: 14vw;

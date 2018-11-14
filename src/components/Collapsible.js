@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import zenscroll from 'zenscroll';
+import Alert from './Alert';
 
 import Heading from './Heading';
 
@@ -111,6 +112,14 @@ class Collapsible extends React.Component {
               </Collapsible>
             </div>
           )}
+        {!this.state.collapsed &&
+          props.alert && (
+            <div className="l-mt-1">
+              <Alert status="success" small>
+                {props.alert}
+              </Alert>
+            </div>
+          )}
 
         <div
           id="collapsible-0"
@@ -131,7 +140,8 @@ Collapsible.propTypes = {
   subheadingContent: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   smallContent: PropTypes.bool,
-  subtle: PropTypes.bool
+  subtle: PropTypes.bool,
+  alert: PropTypes.string
 };
 
 Collapsible.defaultProps = {
