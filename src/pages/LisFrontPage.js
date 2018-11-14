@@ -2,209 +2,174 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-
-import ChapterHeading from '../components/ChapterHeading';
-import Quote from '../components/Quote';
-import FilterList from '../components/FilterList';
-import Collapsible from '../components/Collapsible';
+import ArticleIntro from '../components/ArticleIntro';
+import Card from '../components/Card';
+import Alert from '../components/Alert';
 
 const LisFrontPage = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
-      <h1>Læringsmål.</h1>
-      <div className="row l-mt-4">
-        <aside className="col-md-3 col-xs-12 l-mb-4">
+      <div className="l-mt-2">
+        <ArticleIntro
+          heading="Spesialistutdanning for leger"
+          lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
+        />
+      </div>
+      <div className="l-mb-3">
+        <Alert status="success">
+          Dette er den nye ordningen som erstatter den gamle, den kan være
+          <br />
+          større
+          <br />
+          med linker
+        </Alert>
+      </div>
+      <div className="row">
+        <div className="col-xs-12 col-md-4">
+          <Card
+            heading="Generell informasjon om ny spesialistutdanning for leger"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
+            url="#"
+          />
+        </div>
+        <div className="col-xs-12 col-md-4">
+          <Card
+            heading="Overgangsordning - spesialutdanning for leger"
+            text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
+            url="#"
+          />
+        </div>
+        <div className="col-xs-12 col-md-4">
+          <Card
+            heading="Godkjenning av utdannings-virksomhet for leger i sepsialiering"
+            text="Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur."
+            url="#"
+          />
+        </div>
+      </div>
+      <div className="l-mt-5">
+        <hr className="b-hr b-hr--black" />
+        <NavList list={[{ title: 'LIS del 1', url: '#' }]} />
+      </div>
+
+      <article className="l-mt-4">
+        <div className="l-mb-3">
+          <h2 className="l-mb-3">Velg spesialitet</h2>
           <NavList
-            sticky
-            className="l-sticky"
-            noArrow
-            heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
+            heading="A"
+            columns
             list={[
               {
-                title: 'Læringsmål'
+                title: 'Akutt og mottaksmedisin',
+                url: '#'
               },
               {
-                title: 'Læringsaktiviteter'
+                title: 'Allmenmedisin',
+                url: '#'
               },
-              { title: 'Link til annen fritekst' }
+              {
+                title: 'Anestesiologi',
+                url: '#'
+              },
+              {
+                title: 'Arbeidsmedisin',
+                url: '#'
+              }
             ]}
           />
-        </aside>
-        <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
-          <FilterList
+        </div>
+        <div className="l-mb-3">
+          <NavList
+            heading="B"
+            columns
             list={[
-              'Alt',
-              'Nyfødtkirurgi',
-              'Perioperativ behandling',
-              'Gatrokirurgi',
-              'Urologi',
-              'Torakskirurgi',
-              'Mini-invasiv kirurgi (MIS)',
-              'Onkologi',
-              'Generell kirurgi og traume',
-              'FKM'
+              {
+                title: 'Barne- og ungdomspsykiatri',
+                url: '#'
+              },
+              {
+                title: 'Barnekirurgi',
+                url: '#'
+              },
+              {
+                title: 'Barnesykdommer',
+                url: '#'
+              }
             ]}
           />
-          <div className="l-mt-5">
-            <ChapterHeading
-              heading="Nyfødtkirurgi"
-              line="none"
-              overflow
-              h="h2"
-            />
-            <div className="l-mt-3">
-              <Collapsible
-                heading="Urogenitale tilstander hos nyfødte"
-                subheading="LÆRINGSMÅL"
-              >
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                  5.3 mmol/l, 2 timer etter måltid: {'<'}
-                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                  Kvinnen kan rådes til å følge et kosthold med en
-                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
-                  å nå behandlingsmålene for glukose
-                </p>
-                <p>etc.</p>
-              </Collapsible>
-            </div>
-            <div className="l-mt-3">
-              <Collapsible
-                heading="Lyskebrokk hos nyfødte"
-                subheading="LÆRINGSMÅL"
-                size="medium"
-              >
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                  5.3 mmol/l, 2 timer etter måltid: {'<'}
-                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                  Kvinnen kan rådes til å følge et kosthold med en
-                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
-                  å nå behandlingsmålene for glukose
-                </p>
-                <p>etc.</p>
-              </Collapsible>
-            </div>
-            <div className="l-mt-3">
-              <Collapsible
-                heading="Vaskulære malformasjoner"
-                subheading="LÆRINGSMÅL"
-                size="medium"
-              >
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                  5.3 mmol/l, 2 timer etter måltid: {'<'}
-                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                  Kvinnen kan rådes til å følge et kosthold med en
-                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
-                  å nå behandlingsmålene for glukose
-                </p>
-                <p>etc.</p>
-              </Collapsible>
-            </div>
-            <hr className="b-hr b-hr--less-thick b-hr--black" />
-          </div>
-          <div className="l-mt-5">
-            <ChapterHeading
-              heading="Perioperativ behandling"
-              line="none"
-              overflow
-              h="h2"
-            />
-            <Collapsible
-              heading="Vaskulære malformasjoner"
-              subheading="LÆRINGSMÅL"
-              size="large"
-            >
-              <p>
-                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
-                tilfredsstillende blodsukker fastende og etter måltider, og for
-                å forhindre for stor vektøkning i svangerskapet. Det anbefales
-                at kostanamnese benyttes i dette arbeidet.
-              </p>
-              <p>
-                Kostrådene baseres på kostanamnesen og styres etter
-                glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                5.3 mmol/l, 2 timer etter måltid: {'<'}
-                6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                Kvinnen kan rådes til å følge et kosthold med en
-                karbohydratkvalitet og -mengde per måltid som gjør det enklere å
-                nå behandlingsmålene for glukose
-              </p>
-              <p>etc.</p>
-            </Collapsible>
-            <Collapsible heading="Utdypende tekst" size="medium">
-              <p>
-                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
-                tilfredsstillende blodsukker fastende og etter måltider, og for
-                å forhindre for stor vektøkning i svangerskapet. Det anbefales
-                at kostanamnese benyttes i dette arbeidet.
-              </p>
-              <p>
-                Kostrådene baseres på kostanamnesen og styres etter
-                glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                5.3 mmol/l, 2 timer etter måltid: {'<'}
-                6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                Kvinnen kan rådes til å følge et kosthold med en
-                karbohydratkvalitet og -mengde per måltid som gjør det enklere å
-                nå behandlingsmålene for glukose
-              </p>
-              <p>etc.</p>
-            </Collapsible>
-          </div>
-          <div className="l-mt-4">
-            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
-          </div>
-          <div className="l-mt-4">
-            <div className="b-bleed">
-              <strong>Kontakt:</strong>
-              <br />
-              <a href="#" className="b-bleed__link">
-                spesialisthelsetjenester@helsedir.no
-              </a>
-              <br />
-              <a href="#" className="b-bleed__link">
-                navn.etternavn@helsedir.no
-              </a>
-              <br />
-              <a href="#" className="b-bleed__link">
-                999 99 999
-              </a>
-            </div>
-          </div>
-        </article>
+        </div>
+        <div className="l-mb-3">
+          <NavList
+            heading="G"
+            columns
+            list={[
+              {
+                title: 'Gastrosentrisk kirurgi',
+                url: '#'
+              },
+              {
+                title: 'Geriatri',
+                url: '#'
+              }
+            ]}
+          />
+        </div>
+        <div className="l-mb-3">
+          <NavList
+            heading="H"
+            columns
+            list={[
+              {
+                title: 'Hjertesykdommer',
+                url: '#'
+              },
+              {
+                title: 'Hud- og veneriske sykdommer',
+                url: '#'
+              }
+            ]}
+          />
+        </div>
+        <div className="l-mb-3">
+          <NavList
+            heading="I"
+            columns
+            list={[
+              {
+                title: 'Immunologi og transfusjonsmedisin',
+                url: '#'
+              },
+              {
+                title: 'Indremedisin',
+                url: '#'
+              }
+            ]}
+          />
+        </div>
+      </article>
+      <article className="col-md-8 col-xs-12 t-body-text">
+        <div className="l-mt-4">
+          <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+        </div>
+      </article>
+    </div>
+    <div className="l-mt-4">
+      <div className="b-bleed">
+        <div className="l-container">
+          <strong>Kontakt:</strong>
+          <br />
+          <a href="#" className="b-bleed__link">
+            spesialisthelsetjenester@helsedir.no
+          </a>
+          <br />
+          <a href="#" className="b-bleed__link">
+            navn.etternavn@helsedir.no
+          </a>
+          <br />
+          <a href="#" className="b-bleed__link">
+            999 99 999
+          </a>
+        </div>
       </div>
     </div>
   </div>

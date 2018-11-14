@@ -6,6 +6,7 @@ import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
 
 // Components
+import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import ChapterHeading from '../components/ChapterHeading';
 import ContentLabel from '../components/ContentLabel';
@@ -18,12 +19,14 @@ import LongShortHeading from '../components/LongShortHeading';
 // import MainHeader from '../components/MainHeader';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-import SelectInline from '../components/SelectInline';
-import LinkWithIcon from '../components/LinkWithIcon';
+import Select from '../components/Select';
+import Link from '../components/Link';
 import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
+import ChapterNavigation from '../components/ChapterNavigation';
+import Card from '../components/Card';
 
 // Pages
 import ArticlePage from '../pages/ArticlePage';
@@ -40,6 +43,9 @@ import SimpleSerp from '../pages/SimpleSerp';
 import LisSpeciality from '../pages/LisSpeciality';
 import LisLearning from '../pages/LisLearning';
 import LisFrontPage from '../pages/LisFrontPage';
+import LisLearningActivities from '../pages/LisLearningActivities';
+import ChapterPageReport from '../pages/ChapterPageReport';
+import ProfessionSelector from '../pages/ProfessionSelector';
 // React specific
 import InputSearch from '../components/InputSearch';
 
@@ -104,7 +110,10 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('LIS speciality', () => <LisSpeciality />)
   .addWithStaticMarkup('LIS learning', () => <LisLearning />)
   .addWithStaticMarkup('LIS front page', () => <LisFrontPage />)
+  .addWithStaticMarkup('ProfessionSelector', () => <ProfessionSelector />)
+  .addWithStaticMarkup('LISLearningActivities', () => <LisLearningActivities />)
   .addWithStaticMarkup('Chapter page', () => <ChapterPage />)
+  .addWithStaticMarkup('ChapterPageReport', () => <ChapterPageReport />)
   .addWithStaticMarkup('Hearing page', () => <HearingPage />)
   .addWithStaticMarkup('Memo page', () => <MemoPage />)
   .addWithStaticMarkup('Parent memo page', () => <ParentMemoPage />)
@@ -242,6 +251,7 @@ storiesOf('NavList', module)
         noArrow={boolean('No arrow', false)}
         small={boolean('Small', false)}
         sticky={boolean('Sticky', false)}
+        ordered={boolean('Ordered', false)}
         list={object('List', [
           {
             title: 'KAPITTEL 1',
@@ -256,6 +266,7 @@ storiesOf('NavList', module)
           {
             title: 'KAPITTEL 3',
             url: '#',
+            infoText: 'This is infoText: more text in another column',
             meta: 'Nasjonale faglige retningslinjer'
           }
         ])}
@@ -281,17 +292,17 @@ storiesOf('ChapterHeading', module)
     />
   ));
 
-storiesOf('LinkWithIcon', module)
+storiesOf('Link', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <LinkWithIcon
+    <Link
       href={text('href', '#')}
       icon="./icons/method.svg"
       small={boolean('Small', false)}
     >
       {text('Content', 'Skriv ut')}
-    </LinkWithIcon>
+    </Link>
   ));
 
 storiesOf('SearchOptions', module)
@@ -315,20 +326,27 @@ storiesOf('ArticleIntro', module)
   .addWithStaticMarkup(
     'Basic',
     withNotes(
-      'When the image is not present, it should make the text-section wider.'
+      'The row and col classes are used here to show of the "feature" property breaking out of the grid'
     )(() => (
-      <ArticleIntro
-        heading={text('Heading', 'Arbeid og psykisk helse')}
-        lead={text(
-          'Lead',
-          'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
-        )}
-        image={text(
-          'Image url (empty string will change the layout)',
-          './photo.jpg'
-        )}
-        imageDescription={text('Image description', 'Bildetekst')}
-      />
+      <div className="l-container">
+        <div className="row">
+          <div className="col-xs-12">
+            <ArticleIntro
+              heading={text('Heading', 'Arbeid og psykisk helse')}
+              lead={text(
+                'Lead',
+                'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
+              )}
+              image={text(
+                'Image url (empty string will change the layout)',
+                './photo.jpg'
+              )}
+              imageDescription={text('Image description', 'Bildetekst')}
+              feature={boolean('Feature', false)}
+            />
+          </div>
+        </div>
+      </div>
     ))
   );
 {
@@ -357,6 +375,7 @@ storiesOf('Collapsible', module)
         },
         'large'
       )}
+      alert={text('Alert', '')}
     >
       {text('Text', 'You can place any content in here.')}
     </Collapsible>
@@ -430,14 +449,15 @@ storiesOf('Quote', module)
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
   ));
 
-storiesOf('SelectInline', module)
+storiesOf('Select', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <SelectInline
-      label="Tilpass siden til meg"
-      placeholder="Velg"
-      options={[
+    <Select
+      label={text('Label', 'Tilpass siden til meg')}
+      placeholder={text('Placeholder', 'Velg')}
+      stacked={boolean('stacked', false)}
+      options={object('Options', [
         'Lege',
         'Kommune',
         'Fysioterapaut',
@@ -447,6 +467,65 @@ storiesOf('SelectInline', module)
         'Kiropraktor',
         'Sykehus/poliklinikk',
         'Tannpleier'
-      ]}
+      ])}
     />
+  ));
+
+storiesOf('Alert', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Alert
+      status={select(
+        'Status',
+        {
+          none: 'none',
+          success: 'success',
+          warning: 'warning',
+          danger: 'danger',
+          info: 'info'
+        },
+        'success'
+      )}
+    >
+      {text('Content', 'This is some content, it can be anything')}
+    </Alert>
+  ));
+
+storiesOf('ChapterNavigation', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <ChapterNavigation
+      status={select(
+        'Status',
+        {
+          none: 'none',
+          success: 'success',
+          warning: 'warning',
+          danger: 'danger',
+          info: 'info'
+        },
+        'success'
+      )}
+    >
+      {text('Header', 'This is some content, it can be anything')}
+      {text('Text', 'nasjonal faglig retningslinje')}
+    </ChapterNavigation>
+  ));
+
+storiesOf('Card', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Card
+      heading={text('Heading', 'This is a heading')}
+      text={text('Text', 'This is some text')}
+      url={text('URL', '#')}
+    >
+      {text(
+        'Content',
+        'This is some content, it can be anything, even an image'
+      )}
+    </Card>
   ));

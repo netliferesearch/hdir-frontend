@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import zenscroll from 'zenscroll';
+import Alert from './Alert';
 
 import Heading from './Heading';
 
@@ -92,23 +93,30 @@ class Collapsible extends React.Component {
             {props.heading}
           </Heading>
         </button>
-        {props.subheading &&
-          !props.subheadingContent && (
-            <div className="b-collapsible__subheading">{props.subheading}</div>
-          )}
-        {props.subheading &&
-          props.subheadingContent && (
-            <div className="b-collapsible__subheading-collapsible">
-              <Collapsible
-                heading={props.subheading}
-                subtle={props.subheadingContent}
-                size="small"
-                smallContent
-              >
-                <p>{props.subheadingContent}</p>
-              </Collapsible>
-            </div>
-          )}
+        {props.subheading && !props.subheadingContent && (
+          <div className="b-collapsible__subheading l-mt-1">
+            {props.subheading}
+          </div>
+        )}
+        {props.subheading && props.subheadingContent && (
+          <div className="b-collapsible__subheading-collapsible l-mt-1">
+            <Collapsible
+              heading={props.subheading}
+              subtle={props.subheadingContent}
+              size="small"
+              smallContent
+            >
+              <p>{props.subheadingContent}</p>
+            </Collapsible>
+          </div>
+        )}
+        {!this.state.collapsed && props.alert && (
+          <div className="l-mt-1">
+            <Alert status="success" small>
+              {props.alert}
+            </Alert>
+          </div>
+        )}
 
         <div
           id="collapsible-0"
@@ -129,7 +137,8 @@ Collapsible.propTypes = {
   subheadingContent: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   smallContent: PropTypes.bool,
-  subtle: PropTypes.bool
+  subtle: PropTypes.bool,
+  alert: PropTypes.string
 };
 
 Collapsible.defaultProps = {

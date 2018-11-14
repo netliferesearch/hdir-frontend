@@ -35,8 +35,6 @@
 }
 
 .b-breadcrumbs {
-  padding: 2em 0;
-
   &__link {
     margin-right: 1.5em;
 
@@ -74,6 +72,8 @@
   background-color: $green-light;
 
   &__link {
+    word-wrap: break-word;
+
     @include link-init($black);
     &:link,
     &:active,
@@ -138,10 +138,6 @@
   &--thick {
     border-width: 7px;
   }
-
-  &--less-thick {
-    border-width: 4px;
-  }
 }
 
 // The CSS meant for the content from the rich text in Enonic
@@ -166,12 +162,25 @@
     }
   }
   p {
-    margin: 0.75em 0;
+    margin: 1em 0;
   }
   // Removes the top margin from the first heading
   > :first-child {
     margin-top: 0;
   }
+  ul {
+    margin-top: 0.5em;
+  }
+}
+
+.t-right {
+  text-align: right;
+}
+.t-left {
+  text-align: left;
+}
+.t-center {
+  text-align: center;
 }
 
 .b-long-short-heading {
@@ -222,37 +231,6 @@
   }
 }
 
-.b-select-inline {
-  &__label {
-    display: inline-block;
-    margin-right: 1em;
-  }
-  &__select {
-    appearance: none;
-    position: relative;
-    font-size: $base-font-size;
-    border: 1px solid orange;
-    background: white;
-    padding: 1em;
-
-    &:after {
-      position: aboslute;
-      color: red;
-      display: inline-block;
-      height: 1em;
-      width: 1em;
-      top: 0;
-      right: 0;
-      z-index: 2;
-      background: red;
-      content: 'V';
-    }
-  }
-  &__option {
-    font-size: $meta-text;
-  }
-}
-
 small {
   font-size: $meta-text;
 }
@@ -296,5 +274,141 @@ small {
   &--green {
     background-color: $green-light;
     border: 1px solid $green;
+  }
+  &--white {
+    background-color: white;
+    border: 1px solid $grey;
+  }
+
+  &--blue {
+    background-color: $blue-lighter;
+    border: 1px solid $blue-light;
+  }
+}
+/* CSS for new ChapterNavigation component, can rename */
+.b-chapter-navigation {
+  padding: 1em;
+  justify-content: space-between;
+  display: flex;
+  &__card {
+  }
+}
+.b-alert {
+  padding: 1em;
+  border-left: 7px solid $grey;
+  display: flex;
+  justify-content: space-between;
+
+  &--small {
+    font-size: $meta-text;
+    padding: 0.5em;
+  }
+
+  &--success {
+    border-color: $green;
+    background-color: $green-light;
+  }
+  &--warning {
+    border-color: $yellow;
+    background-color: $yellow-light;
+  }
+  &--danger {
+    border-color: $red;
+    background-color: $red-light;
+  }
+  &--info {
+    border-color: $blue;
+    background-color: $blue-light;
+  }
+  &__icon {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    background-color: $black;
+    color: white;
+    margin-right: 1em;
+    flex-shrink: 0;
+    &--success {
+      background-color: $green-dark;
+      &:before {
+        color: $green-light;
+      }
+    }
+    &--warning {
+      background-color: $yellow-dark;
+      &:before {
+        color: $yellow-light;
+      }
+    }
+    &--danger {
+      background-color: $red-dark;
+      &:before {
+        color: $red-light;
+      }
+    }
+    &--info {
+      background-color: $blue-dark;
+      &:before {
+        color: $blue-light;
+      }
+    }
+    &:before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      content: '!';
+    }
+  }
+  &__content {
+    margin-top: 0.25em;
+    text-align: left;
+    flex-grow: 1;
+  }
+}
+
+.b-card {
+  border-radius: 4px;
+  border: 1px solid $grey-light;
+  &__feature {
+    background: $brand-color;
+    color: white;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__link {
+    display: block;
+    position: relative;
+    padding: 1rem 2rem 1rem 1rem;
+    box-shadow: none;
+
+    &:hover {
+      .b-card__heading {
+        color: $blue;
+        @include underline($blue);
+      }
+    }
+
+    &:after {
+      content: '→';
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-size: $medium-large-text;
+    }
+  }
+  &__heading {
+    display: inline;
+    color: $black;
+  }
+  &__text {
+    font-size: $meta-text;
+    color: $grey;
+    margin-top: 1em;
+    // This text should ignore the extra padding, made for the heading and arrow.
+    width: calc(100% + 1rem);
   }
 }
