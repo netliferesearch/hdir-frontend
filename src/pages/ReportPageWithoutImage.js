@@ -6,7 +6,7 @@ import ChapterHeading from '../components/ChapterHeading';
 import ArticleIntro from '../components/ArticleIntro';
 import Box from '../components/Box';
 
-const ReportPage = () => (
+const ReportPageWithoutImage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
@@ -108,4 +108,4 @@ const ReportPage = () => (
   </div>
 );
 
-export default ReportPage;
+export default ReportPageWithoutImage;

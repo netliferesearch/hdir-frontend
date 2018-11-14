@@ -45,6 +45,7 @@ import LisFrontPage from '../pages/LisFrontPage';
 import LisLearningActivities from '../pages/LisLearningActivities';
 import ChapterPageReport from '../pages/ChapterPageReport';
 import ProfessionSelector from '../pages/ProfessionSelector';
+import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
 // React specific
 import InputSearch from '../components/InputSearch';
 
@@ -106,6 +107,7 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Search result page', () => <SearchResultPage />)
   .addWithStaticMarkup('Simple search result page', () => <SimpleSerp />)
   .addWithStaticMarkup('Article page', () => <ArticlePage />)
+  .addWithStaticMarkup('ReportWithoutImage', () => <ReportPageWithoutImage />)
   .addWithStaticMarkup('LIS speciality', () => <LisSpeciality />)
   .addWithStaticMarkup('LIS learning', () => <LisLearning />)
   .addWithStaticMarkup('LIS front page', () => <LisFrontPage />)

@@ -24,6 +24,7 @@ import LisLearningActivities from './pages/LisLearningActivities';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ReportPage from './pages/ReportPage';
 import ProfessionSelector from './pages/ProfessionSelector';
+import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
@@ -50,6 +51,10 @@ class App extends Component {
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/søkeresultat2" component={SimpleSerp} />
               <Route path="/artikkel" component={ArticlePage} />
+              <Route
+                path="/ReportPageWithoutImage"
+                component={ReportPageWithoutImage}
+              />
               <Route path="/kapittel" component={ChapterPage} />
               <Route path="/høringer" component={HearingPage} />
               <Route path="/høringer-forside" component={ParentHearingPage} />
