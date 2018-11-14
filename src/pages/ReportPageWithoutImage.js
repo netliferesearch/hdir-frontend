@@ -21,7 +21,7 @@ const ReportPageWithoutImage = () => (
         </a>
       </nav>
       <div className="l-mt-2 b-bleed">
-        <div className="b-bleed b-bleed--blue">
+        <div className="b-bleed b-bleed--blue b-bleed--white-font">
           <ChapterHeading
             subheading="Rapport"
             heading="Ventetider og pasientrettigheter 2017"
