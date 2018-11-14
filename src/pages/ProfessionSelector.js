@@ -2,9 +2,9 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-import LinkWithIcon from '../components/LinkWithIcon';
+import LinkWithIcon from '../components/Link';
 import ArticleIntro from '../components/ArticleIntro';
-import SelectInline from '../components/SelectInline';
+import SelectInline from '../components/Select';
 
 const ProfessionSelector = () => (
   <div>
