@@ -11,19 +11,20 @@ const ContentLabel = props => {
             {props.short}
           </span>
         )}
-        {props.short && props.long && (
-          <div className="b-long-short-heading__sub">
-            {props.icon && (
-              <img
-                src={props.icon}
-                alt="icon"
-                aria-hidden="true"
-                className="b-long-short-heading__sub-icon"
-              />
-            )}
-            {props.long}
-          </div>
-        )}
+        {props.short &&
+          props.long && (
+            <div className="b-long-short-heading__sub">
+              {props.icon && (
+                <img
+                  src={props.icon}
+                  alt="icon"
+                  aria-hidden="true"
+                  className="b-long-short-heading__sub-icon"
+                />
+              )}
+              {props.long}
+            </div>
+          )}
         {!props.short && <span>{props.long}</span>}
       </h1>
       <div className="b-long-short-heading__link">
