@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 
 const RadioButtonGroup = props => (
   <div className="b-radio-button-group">
@@ -10,7 +11,7 @@ const RadioButtonGroup = props => (
     )}
     {props.options.map(option => {
       return (
-        <label className="b-radio-button-group__label">
+        <label className="b-radio-button-group__label" key={shortid.generate()}>
           <input
             name={props.name}
             type="radio"
@@ -19,7 +20,7 @@ const RadioButtonGroup = props => (
             disabled={option.disabled}
           />
           {option.label}
-          <i class="b-radio-button-group__indicator" />
+          <i className="b-radio-button-group__indicator" />
         </label>
       );
     })}
