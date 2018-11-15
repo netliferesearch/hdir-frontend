@@ -261,30 +261,6 @@ small {
   }
 }
 
-.b-box {
-  padding: 2rem;
-  background-color: $grey-lighter;
-  border: 1px solid $grey-light;
-  border-radius: 4px;
-
-  @include mq($until: $tablet) {
-    padding: 1rem;
-  }
-
-  &--green {
-    background-color: $green-light;
-    border: 1px solid $green;
-  }
-  &--white {
-    background-color: white;
-    border: 1px solid $grey;
-  }
-
-  &--blue {
-    background-color: $blue-lighter;
-    border: 1px solid $blue-light;
-  }
-}
 /* CSS for new ChapterNavigation component, can rename */
 .b-chapter-navigation {
   padding: 1em;
