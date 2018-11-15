@@ -133,19 +133,21 @@ const MemoChapterPage = () => (
           <div className="l-mt-4">
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#" />
           </div>
-          <div className="l-mt-4">
-            <Box color="green" square>
-              <strong>Kontakt:</strong>
-              <br />
-              <a href="#">spesialisthelsetjenester@helsedir.no</a>
-              <br />
-              <a href="#">navn.etternavn@helsedir.no</a>
-              <br />
-              <a href="#">999 99 999</a>
-            </Box>
-          </div>
         </article>
       </div>
+    </div>
+    <div className="l-mt-4">
+      <Box color="green" square noPadding>
+        <div className="l-container">
+          <strong>Kontakt:</strong>
+          <br />
+          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <br />
+          <a href="#">navn.etternavn@helsedir.no</a>
+          <br />
+          <a href="#">999 99 999</a>
+        </div>
+      </Box>
     </div>
   </div>
 );

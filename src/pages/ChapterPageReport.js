@@ -121,7 +121,7 @@ const ChapterPageReport = () => (
       </div>
     </div>
     <div className="l-mt-4">
-      <Box color="green" square>
+      <Box color="green" square noPadding>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
