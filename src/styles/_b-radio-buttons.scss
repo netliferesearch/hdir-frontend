@@ -31,7 +31,6 @@
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
         background: $brand-color;
-
         transition: background 0.3s ease;
       }
     }
@@ -69,7 +68,7 @@
     width: 22px;
     height: 22px;
     transition: border-color 0.3s ease, max-height 0.3s ease,
-      transform 0.3s ease;
+    transform 0.3s ease;
 
     &::after {
       content: '';

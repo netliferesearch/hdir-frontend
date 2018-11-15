@@ -1,5 +1,7 @@
 import React from 'react';
 import RadioButtons from '../components/RadioButtons';
+import Button from '../components/Button';
+import Box from '../components/Box';
 
 const AuthorizationStepPage2 = () => (
   <div>
@@ -58,7 +60,7 @@ const AuthorizationStepPage2 = () => (
                 />
               </p>
               <p>
-                <button className="b-link b-link__link--button">Neste</button>
+                <Button>Neste</Button>
               </p>
             </form>
           </article>
@@ -85,27 +87,21 @@ const AuthorizationStepPage2 = () => (
       </div>
     </div>
     <div className="l-mt-4">
-      <div className="b-bleed">
+      <Box color="green" square noPadding>
         <div className="l-container">
           <div className="row">
             <div className="col-xs-12">
               <strong>Kontakt:</strong>
               <br />
-              <a href="#" className="b-bleed__link">
-                spesialisthelsetjenester@helsedir.no
-              </a>
+              <a href="#">spesialisthelsetjenester@helsedir.no</a>
               <br />
-              <a href="#" className="b-bleed__link">
-                navn.etternavn@helsedir.no
-              </a>
+              <a href="#">navn.etternavn@helsedir.no</a>
               <br />
-              <a href="#" className="b-bleed__link">
-                999 99 999
-              </a>
+              <a href="#">999 99 999</a>
             </div>
           </div>
         </div>
-      </div>
+      </Box>
     </div>
   </div>
 );

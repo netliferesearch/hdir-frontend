@@ -1,0 +1,40 @@
+.b-box {
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  padding: 2rem;
+  background-color: $grey-lighter;
+
+  @include mq($until: $tablet) {
+    padding: 1rem;
+  }
+
+  &--square {
+    border-radius: 0;
+    border: 0 !important;
+  }
+  &--no-padding {
+    padding: 2rem 0;
+  }
+
+  &--green {
+    background-color: $green-light;
+    border: 1px solid $green;
+  }
+  &--white {
+    background-color: white;
+    border: 1px solid $grey-light;
+  }
+  &--blue {
+    background-color: $blue-lighter;
+    border: 1px solid $blue-light;
+  }
+  &--blue-dark {
+    color: $purple;
+    background-color: $blue-dark;
+    border: 1px solid $blue-light;
+  }
+  &--yellow {
+    color: $black;
+    background-color: $yellow-light;
+  }
+}

@@ -4,6 +4,7 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ArticleIntro from '../components/ArticleIntro';
 import Card from '../components/Card';
+import Box from '../components/Box';
 import Alert from '../components/Alert';
 
 const LisFrontPage = () => (
@@ -154,23 +155,17 @@ const LisFrontPage = () => (
       </article>
     </div>
     <div className="l-mt-4">
-      <div className="b-bleed">
+      <Box color="green" square noPadding>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#" className="b-bleed__link">
-            spesialisthelsetjenester@helsedir.no
-          </a>
+          <a href="#">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#" className="b-bleed__link">
-            navn.etternavn@helsedir.no
-          </a>
+          <a href="#">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#" className="b-bleed__link">
-            999 99 999
-          </a>
+          <a href="#">999 99 999</a>
         </div>
-      </div>
+      </Box>
     </div>
   </div>
 );

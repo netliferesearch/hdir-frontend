@@ -11,7 +11,6 @@ import ArticleIntro from '../components/ArticleIntro';
 import ChapterHeading from '../components/ChapterHeading';
 import ContentLabel from '../components/ContentLabel';
 import Collapsible from '../components/Collapsible';
-import FeatureList from '../components/FeatureList';
 import FilterList from '../components/FilterList';
 // import Footer from '../components/Footer';
 import Heading from '../components/Heading';
@@ -21,11 +20,12 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
+import Box from '../components/Box';
+import Button from '../components/Button';
 import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
-import ChapterNavigation from '../components/ChapterNavigation';
 import Card from '../components/Card';
 
 // Pages
@@ -51,7 +51,6 @@ import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
 import InputSearch from '../components/InputSearch';
 
 // Test data
-// import { featureListHeading, featureListData } from '../testData.js';
 import { object } from '@storybook/addon-knobs/dist/base';
 import { select } from '@storybook/addon-knobs/dist/react';
 
@@ -307,6 +306,15 @@ storiesOf('Link', module)
     </Link>
   ));
 
+storiesOf('Button', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Button arrow={boolean('Arrow', false)} small={boolean('Small', false)}>
+      {text('Content', 'Submit')}
+    </Button>
+  ));
+
 storiesOf('SearchOptions', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -451,6 +459,29 @@ storiesOf('Quote', module)
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
   ));
 
+storiesOf('Box', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Box
+      color={select(
+        'Color',
+        {
+          none: 'None',
+          green: 'Green',
+          white: 'White',
+          blue: 'Blue',
+          blueDark: 'Blue dark',
+          yellow: 'Yellow'
+        },
+        'none'
+      )}
+      square={boolean('Square', false)}
+    >
+      {text('Text', 'Here is some content, even HTML')}
+    </Box>
+  ));
+
 storiesOf('Select', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -492,28 +523,6 @@ storiesOf('Alert', module)
     >
       {text('Content', 'This is some content, it can be anything')}
     </Alert>
-  ));
-
-storiesOf('ChapterNavigation', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => (
-    <ChapterNavigation
-      status={select(
-        'Status',
-        {
-          none: 'none',
-          success: 'success',
-          warning: 'warning',
-          danger: 'danger',
-          info: 'info'
-        },
-        'success'
-      )}
-    >
-      {text('Header', 'This is some content, it can be anything')}
-      {text('Text', 'nasjonal faglig retningslinje')}
-    </ChapterNavigation>
   ));
 
 storiesOf('Card', module)

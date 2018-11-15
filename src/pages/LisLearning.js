@@ -2,7 +2,7 @@ import React from 'react';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
-import Quote from '../components/Quote';
+import Box from '../components/Box';
 import FilterList from '../components/FilterList';
 import Collapsible from '../components/Collapsible';
 import Alert from '../components/Alert';
@@ -201,21 +201,17 @@ const LisLearning = () => (
     </div>
 
     <div className="l-mt-4">
-      <div className="b-bleed">
-        <strong>Kontakt:</strong>
-        <br />
-        <a href="#" className="b-bleed__link">
-          spesialisthelsetjenester@helsedir.no
-        </a>
-        <br />
-        <a href="#" className="b-bleed__link">
-          navn.etternavn@helsedir.no
-        </a>
-        <br />
-        <a href="#" className="b-bleed__link">
-          999 99 999
-        </a>
-      </div>
+      <Box color="green" square noPadding>
+        <div className="l-container">
+          <strong>Kontakt:</strong>
+          <br />
+          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <br />
+          <a href="#">navn.etternavn@helsedir.no</a>
+          <br />
+          <a href="#">999 99 999</a>
+        </div>
+      </Box>
     </div>
   </div>
 );

@@ -67,33 +67,6 @@
   position: absolute;
 }
 
-.b-bleed {
-  padding: 2em;
-  background-color: $green-light;
-
-  &__link {
-    word-wrap: break-word;
-
-    @include link-init($black);
-    &:link,
-    &:active,
-    &:active,
-    &:hover {
-      @include underline($secondary-color);
-    }
-  }
-
-  &--blue {
-    color: $purple;
-    background-color: $brand-color;
-  }
-
-  &--yellow {
-    color: $black;
-    background-color: $yellow-light;
-  }
-}
-
 .b-article-image {
   &__image {
     max-width: 100%;
@@ -261,38 +234,6 @@ small {
   }
 }
 
-.b-box {
-  padding: 2rem;
-  background-color: $grey-lighter;
-  border: 1px solid $grey-light;
-  border-radius: 4px;
-
-  @include mq($until: $tablet) {
-    padding: 1rem;
-  }
-
-  &--green {
-    background-color: $green-light;
-    border: 1px solid $green;
-  }
-  &--white {
-    background-color: white;
-    border: 1px solid $grey;
-  }
-
-  &--blue {
-    background-color: $blue-lighter;
-    border: 1px solid $blue-light;
-  }
-}
-/* CSS for new ChapterNavigation component, can rename */
-.b-chapter-navigation {
-  padding: 1em;
-  justify-content: space-between;
-  display: flex;
-  &__card {
-  }
-}
 .b-alert {
   padding: 1em;
   border-left: 7px solid $grey;

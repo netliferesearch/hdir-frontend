@@ -3,6 +3,7 @@ import React from 'react';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
+import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 
 const ArticlePage = () => (
@@ -105,12 +106,12 @@ const ArticlePage = () => (
             arbeidslivet, utgjør personer med psykiske lidelser en stor og
             økende gruppe.
           </p>
-          <div className="b-bleed b-bleed--blue">
+          <Box color="blueDark" square>
             Norske og internasjonale studier viser at 30 – 50 prosent av den
             voksne befolkningen vil få en psykisk lidelse i løpet av livet.
-          </div>
+          </Box>
           <div className="l-mt-2">
-            <div className="b-bleed b-bleed--yellow">
+            <Box color="yellow" square>
               <h2>Ti råd for et inkluderende arbeidsliv</h2>
               <ol>
                 <li>​Bry deg. Alle trenger å bli sett og verdsatt.</li>
@@ -127,7 +128,7 @@ const ArticlePage = () => (
                 <li>Psykisk helse angår oss alle. Snakk om det.</li>
               </ol>
               (Kilde: Rådet for Psykisk Helse)
-            </div>
+            </Box>
           </div>
 
           <div className="l-mt-4 col-xs-12 col-md-8">
@@ -164,25 +165,21 @@ const ArticlePage = () => (
           <div className="l-mt-4">
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
           </div>
-          <div className="l-mt-4">
-            <div className="b-bleed">
-              <strong>Kontakt:</strong>
-              <br />
-              <a href="#" className="b-bleed__link">
-                spesialisthelsetjenester@helsedir.no
-              </a>
-              <br />
-              <a href="#" className="b-bleed__link">
-                navn.etternavn@helsedir.no
-              </a>
-              <br />
-              <a href="#" className="b-bleed__link">
-                999 99 999
-              </a>
-            </div>
-          </div>
         </article>
       </div>
+    </div>
+    <div className="l-mt-4">
+      <Box color="green" square noPadding>
+        <div className="l-container">
+          <strong>Kontakt:</strong>
+          <br />
+          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <br />
+          <a href="#">navn.etternavn@helsedir.no</a>
+          <br />
+          <a href="#">999 99 999</a>
+        </div>
+      </Box>
     </div>
   </div>
 );

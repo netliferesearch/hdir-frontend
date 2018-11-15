@@ -3,6 +3,7 @@ import React from 'react';
 import Link from '../components/Link';
 import Card from '../components/Card';
 import Collapsible from '../components/Collapsible';
+import Box from '../components/Box';
 
 const AuthorizationFrontPage = () => (
   <div>
@@ -89,27 +90,21 @@ const AuthorizationFrontPage = () => (
       </div>
     </div>
     <div className="l-mt-4">
-      <div className="b-bleed">
+      <Box color="green" square noPadding>
         <div className="l-container">
           <div className="row">
             <div className="col-xs-12">
               <strong>Kontakt:</strong>
               <br />
-              <a href="#" className="b-bleed__link">
-                spesialisthelsetjenester@helsedir.no
-              </a>
+              <a href="#">spesialisthelsetjenester@helsedir.no</a>
               <br />
-              <a href="#" className="b-bleed__link">
-                navn.etternavn@helsedir.no
-              </a>
+              <a href="#">navn.etternavn@helsedir.no</a>
               <br />
-              <a href="#" className="b-bleed__link">
-                999 99 999
-              </a>
+              <a href="#">999 99 999</a>
             </div>
           </div>
         </div>
-      </div>
+      </Box>
     </div>
   </div>
 );

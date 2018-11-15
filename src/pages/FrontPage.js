@@ -17,7 +17,7 @@ const FrontPage = () => (
       <h3 className="some-label">
         Press 'h' to toggle block/component hints.
         <br />
-        Press 'j' to add Helfo styling. Refresh page to undo.
+        <s>Press 'j' to add Helfo styling. Refresh page to undo.</s>
       </h3>
     </div>
     <div className="l-container l-mt-3">
