@@ -83,6 +83,9 @@ const FrontPage = () => (
       <p>
         <Link to="/rapport-kapittel">Rapport kapittel</Link>
       </p>
+      <p>
+        <Link to="/abonnement-tilpassing">Abonnement Tilpassing</Link>
+      </p>
 
       <p>
         <Link to="/yrke-velger">Yrke velger</Link>

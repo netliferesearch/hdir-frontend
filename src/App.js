@@ -28,6 +28,7 @@ import ProfessionSelector from './pages/ProfessionSelector';
 import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
+import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
@@ -92,6 +93,10 @@ class App extends Component {
               <Route
                 path="/autorisasjon-steg-2"
                 component={AuthorizationStepPage2}
+              />
+              <Route
+                path="/abonnement-tilpassing"
+                component={SubscriptionSettingsPage}
               />
               <Route component={NotFound} />
             </Switch>
