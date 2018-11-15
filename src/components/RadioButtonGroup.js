@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const RadioButtons = props => (
-  <div className="b-radio-buttons">
+const RadioButtonGroup = props => (
+  <div className="b-radio-button-group">
     {props.heading && (
       <div>
         <strong>{props.heading}</strong>
@@ -10,23 +10,23 @@ const RadioButtons = props => (
     )}
     {props.options.map(option => {
       return (
-        <label className="b-radio-buttons__label">
+        <label className="b-radio-button-group__label">
           <input
             name={props.name}
             type="radio"
-            className="b-radio-buttons__input"
+            className="b-radio-button-group__input"
             value={option.value}
             disabled={option.disabled}
           />
           {option.label}
-          <i class="b-radio-buttons__indicator" />
+          <i class="b-radio-button-group__indicator" />
         </label>
       );
     })}
   </div>
 );
 
-RadioButtons.propTypes = {
+RadioButtonGroup.propTypes = {
   heading: PropTypes.string,
   name: PropTypes.string,
   options: PropTypes.arrayOf(
@@ -38,4 +38,4 @@ RadioButtons.propTypes = {
   )
 };
 
-export default RadioButtons;
+export default RadioButtonGroup;

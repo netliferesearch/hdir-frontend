@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioButtons from '../components/RadioButtons';
+import RadioButtonGroup from '../components/RadioButtonGroup';
 import Button from '../components/Button';
 import Box from '../components/Box';
 
@@ -32,7 +32,7 @@ const AuthorizationStepPage2 = () => (
                 ingress for spørsmålet.
               </p>
               <p>
-                <RadioButtons
+                <RadioButtonGroup
                   heading="This is a heading"
                   name="someName"
                   options={[
