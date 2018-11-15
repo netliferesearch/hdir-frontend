@@ -21,6 +21,7 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
+import Button from '../components/Button';
 import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
@@ -305,6 +306,15 @@ storiesOf('Link', module)
     >
       {text('Content', 'Skriv ut')}
     </Link>
+  ));
+
+storiesOf('Button', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Button arrow={boolean('Arrow', false)} small={boolean('Small', false)}>
+      {text('Content', 'Submit')}
+    </Button>
   ));
 
 storiesOf('SearchOptions', module)

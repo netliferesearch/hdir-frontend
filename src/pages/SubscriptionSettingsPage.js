@@ -1,8 +1,6 @@
 import React from 'react';
 
-import NavList from '../components/NavList';
-import PageMeta from '../components/PageMeta';
-import Link from '../components/Link';
+import Button from '../components/Button';
 import ArticleIntro from '../components/ArticleIntro';
 import CheckboxGroup from '../components/CheckboxGroup';
 
@@ -60,7 +58,7 @@ const SubscriptionSettingsPage = () => (
           />
           <div className="l-mt-2">
             <div className="b-link">
-              <button className="b-link__link--button">Lagre endringer</button>
+              <Button>Lagre endringer</Button>
             </div>
           </div>
         </form>

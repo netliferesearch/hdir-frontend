@@ -1,5 +1,6 @@
 import React from 'react';
 import RadioButtons from '../components/RadioButtons';
+import Button from '../components/Button';
 
 const AuthorizationStepPage2 = () => (
   <div>
@@ -58,7 +59,7 @@ const AuthorizationStepPage2 = () => (
                 />
               </p>
               <p>
-                <button className="b-link b-link__link--button">Neste</button>
+                <Button>Neste</Button>
               </p>
             </form>
           </article>

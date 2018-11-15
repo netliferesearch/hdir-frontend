@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Link from '../components/Link';
+import Button from '../components/Button';
 import Select from '../components/Select';
 
 const AuthorizationStepPage = () => (
@@ -52,7 +52,7 @@ const AuthorizationStepPage = () => (
                 ]}
               />
               <p>
-                <button className="b-link b-link__link--button">Neste</button>
+                <Button>Neste</Button>
               </p>
             </form>
           </article>
