@@ -38,9 +38,6 @@ class App extends Component {
       if (event.key === 'h') {
         document.querySelector('body').classList.toggle('block-hint');
       }
-      if (event.key === 'j') {
-        require('./static/Helfo.css');
-      }
     });
   }
 
