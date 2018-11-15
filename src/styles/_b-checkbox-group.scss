@@ -1,0 +1,79 @@
+.b-checkbox-group {
+  display: inline-block;
+  position: relative;
+
+  &__input {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    vertical-align: middle;
+
+    &:disabled ~ .b-checkbox-group__indicator {
+      background: $grey-light;
+      border-color: $grey !important;
+      cursor: not-allowed;
+    }
+
+    &:hover ~ .b-checkbox-group__indicator {
+      border-color: $blue;
+    }
+
+    &:checked ~ .b-checkbox-group__indicator {
+      border-color: $blue;
+      background-color: $blue;
+      transition: background 0.3s ease;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        background-image: url('./icons/check.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 1px;
+      }
+    }
+
+    &:focus ~ .b-checkbox-group__indicator {
+      border-color: $black;
+
+      &::after {
+        border-color: $black;
+      }
+    }
+  }
+  &__label {
+    display: block;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+  &__indicator {
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin-top: 0;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    border: 2px solid $grey;
+    background: white;
+    width: 22px;
+    height: 22px;
+    transition: border-color 0.3s ease, max-height 0.3s ease,
+      transform 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      background: transparent;
+    }
+  }
+}

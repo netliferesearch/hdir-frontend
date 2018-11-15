@@ -32,7 +32,7 @@ const AuthorizationStepPage2 = () => (
               <p>
                 <RadioButtons
                   heading="This is a heading"
-                  radioGroupName="someName"
+                  name="someName"
                   options={[
                     {
                       value: '1a',
