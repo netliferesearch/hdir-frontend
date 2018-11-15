@@ -3,7 +3,6 @@ import React from 'react';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
-import ArticleIntro from '../components/ArticleIntro';
 import Box from '../components/Box';
 
 const ReportPageWithoutImage = () => (
@@ -20,15 +19,13 @@ const ReportPageWithoutImage = () => (
           Dolor
         </a>
       </nav>
-      <div className="l-mt-2 b-bleed">
-        <div className="b-bleed b-bleed--blue b-bleed--white-font">
-          <ChapterHeading
-            subheading="Rapport"
-            heading="Ventetider og pasientrettigheter 2017"
-            line="none"
-            h="h1"
-          />
-        </div>
+      <div className="l-mt-2 b-bleed b-bleed--blue">
+        <ChapterHeading
+          subheading="Rapport"
+          heading="Ventetider og pasientrettigheter 2017"
+          line="none"
+          h="h1"
+        />
       </div>
       <div className="row l-mt-4">
         <div className="col-xs-12 l-mb-4">

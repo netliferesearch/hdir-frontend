@@ -1,0 +1,86 @@
+.b-radio-buttons {
+  display: inline-block;
+  position: relative;
+
+  &__input {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    vertical-align: middle;
+
+    &:disabled ~ .b-radio-buttons__indicator {
+      background: $grey-light;
+      border-color: $grey !important;
+      cursor: not-allowed;
+    }
+
+    &:hover ~ .b-radio-buttons__indicator {
+      border-color: $brand-color;
+    }
+
+    &:checked ~ .b-radio-buttons__indicator {
+      border-color: $brand-color;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        background: $brand-color;
+
+        transition: background 0.3s ease;
+      }
+    }
+
+    &:focus ~ .b-radio-buttons__indicator {
+      border-color: $black;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        background: $black;
+      }
+    }
+  }
+  &__label {
+    display: block;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+  &__indicator {
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin-top: 0;
+    margin-right: 0.5rem;
+    border: 2px solid $grey;
+    border-radius: 50%;
+    background: white;
+    width: 22px;
+    height: 22px;
+    transition: border-color 0.3s ease, max-height 0.3s ease,
+      transform 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      background: transparent;
+    }
+  }
+}

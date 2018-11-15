@@ -21,10 +21,13 @@ import Footer from './components/Footer';
 import LisLearning from './pages/LisLearning';
 import LisFrontPage from './pages/LisFrontPage';
 import LisLearningActivities from './pages/LisLearningActivities';
+import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ReportPage from './pages/ReportPage';
 import ProfessionSelector from './pages/ProfessionSelector';
 import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
+import AuthorizationStepPage from './pages/AuthorizationStepPage';
+import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 
 // import { featureListHeading, featureListData } from './testData.js';
 
@@ -33,6 +36,9 @@ class App extends Component {
     document.addEventListener('keypress', event => {
       if (event.key === 'h') {
         document.querySelector('body').classList.toggle('block-hint');
+      }
+      if (event.key === 'j') {
+        require('./static/Helfo.css');
       }
     });
   }
@@ -52,7 +58,7 @@ class App extends Component {
               <Route path="/søkeresultat2" component={SimpleSerp} />
               <Route path="/artikkel" component={ArticlePage} />
               <Route
-                path="/ReportPageWithoutImage"
+                path="/rapportside-uten-bilde"
                 component={ReportPageWithoutImage}
               />
               <Route path="/kapittel" component={ChapterPage} />
@@ -74,6 +80,19 @@ class App extends Component {
                 component={LisLearningActivities}
               />
               <Route path="/rapport-kapittel" component={ChapterPageReport} />
+              <Route path="/yrke-velger" component={ProfessionSelector} />
+              <Route
+                path="/autorisasjon-forside"
+                component={AuthorizationFrontPage}
+              />
+              <Route
+                path="/autorisasjon-steg"
+                component={AuthorizationStepPage}
+              />
+              <Route
+                path="/autorisasjon-steg-2"
+                component={AuthorizationStepPage2}
+              />
               <Route component={NotFound} />
             </Switch>
             <Footer />

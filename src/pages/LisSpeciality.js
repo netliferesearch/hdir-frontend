@@ -3,7 +3,7 @@ import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
 import Collapsible from '../components/Collapsible';
 import NavList from '../components/NavList';
-import LinkWithIcon from '../components/LinkWithIcon';
+import Link from '../components/Link';
 
 const LisSpeciality = () => (
   <div className="l-container l-mt-3">
@@ -26,13 +26,13 @@ const LisSpeciality = () => (
       <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#" />
     </div>
     <div className="l-mt-4">
-      <LinkWithIcon href="#" small icon="./icons/method.svg">
+      <Link href="#" small icon="./icons/method.svg">
         Om metode og prosess
-      </LinkWithIcon>
+      </Link>
       <br />
-      <LinkWithIcon href="#" small icon="./icons/print.svg">
+      <Link href="#" small icon="./icons/print.svg">
         Skriv ut hele retningslinjen
-      </LinkWithIcon>
+      </Link>
     </div>
     <div className="l-mt-4">
       <div className="b-bleed">

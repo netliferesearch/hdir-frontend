@@ -1,8 +1,6 @@
 import React from 'react';
-
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-
 import ChapterHeading from '../components/ChapterHeading';
 import Quote from '../components/Quote';
 import FilterList from '../components/FilterList';
@@ -23,11 +21,12 @@ const LisLearning = () => (
           Dolor
         </a>
       </nav>
-
+      <h1>Læringsmål</h1>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
             sticky
+            small
             className="l-sticky"
             noArrow
             heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
@@ -117,6 +116,7 @@ const LisLearning = () => (
                 heading="Vaskulære malformasjoner "
                 subheading="LÆRINGSMÅL"
                 size="medium"
+                alert="Some alert"
               >
                 <Alert status="success">
                   Vær oppmerksom på at dette atomet er på høring
@@ -139,7 +139,7 @@ const LisLearning = () => (
               </Collapsible>
               <div className="l-mt-2" />
             </div>
-            <hr className="b-hr b-hr--less-thick b-hr--black" />
+            <hr className="b-hr b-hr--black" />
           </div>
           <div className="l-mt-5">
             <ChapterHeading
@@ -196,24 +196,25 @@ const LisLearning = () => (
           <div className="l-mt-4">
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
           </div>
-          <div className="l-mt-4">
-            <div className="b-bleed">
-              <strong>Kontakt:</strong>
-              <br />
-              <a href="#" className="b-bleed__link">
-                spesialisthelsetjenester@helsedir.no
-              </a>
-              <br />
-              <a href="#" className="b-bleed__link">
-                navn.etternavn@helsedir.no
-              </a>
-              <br />
-              <a href="#" className="b-bleed__link">
-                999 99 999
-              </a>
-            </div>
-          </div>
         </article>
+      </div>
+    </div>
+
+    <div className="l-mt-4">
+      <div className="b-bleed">
+        <strong>Kontakt:</strong>
+        <br />
+        <a href="#" className="b-bleed__link">
+          spesialisthelsetjenester@helsedir.no
+        </a>
+        <br />
+        <a href="#" className="b-bleed__link">
+          navn.etternavn@helsedir.no
+        </a>
+        <br />
+        <a href="#" className="b-bleed__link">
+          999 99 999
+        </a>
       </div>
     </div>
   </div>

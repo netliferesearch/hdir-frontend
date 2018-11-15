@@ -46,6 +46,19 @@
       border-left: 0.25em solid $yellow;
       padding-left: 1.5em;
     }
+
+    @for $i from 1 through 100 {
+      &:nth-child(#{$i}) {
+        .b-nav-list__link--ordered {
+          &:before {
+            display: block;
+            content: '#{$i}';
+            padding-right: 1em;
+            color: $brand-color;
+          }
+        }
+      }
+    }
   }
   &__item-info {
     font-size: $meta-text;

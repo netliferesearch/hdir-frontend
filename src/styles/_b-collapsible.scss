@@ -65,7 +65,7 @@
       }
     }
     &--small {
-      @include underline($black);
+      padding-bottom: 1px;
       &:before {
         margin-left: -$left-space;
         top: 0.25em;

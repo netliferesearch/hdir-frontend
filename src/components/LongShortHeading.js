@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LinkWithIcon from './LinkWithIcon';
+import Link from './Link';
 
 const ContentLabel = props => {
   return (
@@ -28,9 +28,9 @@ const ContentLabel = props => {
         {!props.short && <span>{props.long}</span>}
       </h1>
       <div className="b-long-short-heading__link">
-        <LinkWithIcon href={props.url} arrow>
+        <Link href={props.url} arrow>
           {props.linkText}
-        </LinkWithIcon>
+        </Link>
       </div>
     </div>
   );
