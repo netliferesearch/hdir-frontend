@@ -103,14 +103,14 @@ const ProductPage = () => (
                 description: 'PLAKAT (PDF)',
                 title: 'Det foreslås at HbA1c tas ved',
                 url: '#',
-                infoText: 'PDF (4,5 MB)'
+                infoText: 'PDF'
               },
               {
                 description: 'BROSJYRE (PDF)',
                 title:
                   'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
                 url: '#',
-                infoText: 'PDF (501 KB)'
+                infoText: 'PDF'
               }
             ]}
           />
