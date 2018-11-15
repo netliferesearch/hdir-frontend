@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import zenscroll from 'zenscroll';
-
+import Collapsible from './Collapsible';
 import Heading from './Heading';
 
-const buttonClasses = (active, size, subtle) =>
+const buttonClasses = (active, size) =>
   classNames({
     'b-collapsible__button': true,
     'b-collapsible__button--active': active,
-    'b-collapsible__button--subtle': subtle,
+
     'b-collapsible__button--small': size === 'small',
     'b-collapsible__button--medium': size === 'medium'
   });
@@ -22,10 +22,10 @@ const headingClasses = size =>
     normal: size === 'small'
   });
 
-const collapsibleClasses = (size, subtle) =>
+const collapsibleClasses = size =>
   classNames({
     'b-collapsible': true,
-    'b-collapsible--subtle': subtle,
+
     'b-collapsible--medium': size === 'medium',
     'b-collapsible--small': size === 'small'
   });
@@ -36,7 +36,7 @@ const contentClasses = smallContent =>
     'b-collapsible__content--small': smallContent
   });
 
-class Collapsible extends React.Component {
+class Subscribe extends React.Component {
   constructor(props) {
     super(props);
 
@@ -68,41 +68,30 @@ class Collapsible extends React.Component {
     const { props } = this;
     return (
       <div
-        className={collapsibleClasses(props.size, props.subtle)}
+        className={collapsibleClasses(props.size)}
         ref={ref => (this.domNode = ref)}
       >
         <button
-          className={buttonClasses(
-            this.state.collapsed,
-            props.size,
-            props.subtle
-          )}
+          className={buttonClasses(this.state.collapsed, props.size)}
           aria-expanded={this.state.collapsed}
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
         >
-          <p>
-            Abonner på endinger - Nasjonal retningslinje for
-            svangerskapsdiabetes
-          </p>
+          <Heading
+            h={
+              (props.size === 'large' && 'h2') ||
+              (props.size === 'medium' && 'h3') ||
+              (props.size === 'small' && 'none')
+            }
+            className={headingClasses(props.size)}
+          >
+            {props.heading}
+          </Heading>
         </button>
         {props.subheading &&
           !props.subheadingContent && (
             <div className="b-collapsible__subheading l-mt-1">
               {props.subheading}
-            </div>
-          )}
-        {props.subheading &&
-          props.subheadingContent && (
-            <div className="b-collapsible__subheading-collapsible l-mt-1">
-              <Collapsible
-                heading={props.subheading}
-                subtle={props.subheadingContent}
-                size="small"
-                smallContent
-              >
-                <p>{props.subheadingContent}</p>
-              </Collapsible>
             </div>
           )}
 
@@ -112,7 +101,16 @@ class Collapsible extends React.Component {
           hidden={!this.state.collapsed}
           className={contentClasses(props.smallContent)}
         >
-          {props.children}
+          <form
+            action="mailto:someone@example.com"
+            method="post"
+            enctype="text/plain"
+          >
+            Fyll inn e-postadressen din for å motta varsler om endringer.<br />
+            <input type="text" name="mail" />
+            <br />
+            <input type="submit" value="Send" />
+          </form>
         </div>
       </div>
     );
@@ -124,12 +122,11 @@ Subscribe.propTypes = {
   subheading: PropTypes.string,
   subheadingContent: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  smallContent: PropTypes.bool,
-  subtle: PropTypes.bool
+  smallContent: PropTypes.bool
 };
 
-Subscribe.defaultProps = {
+Collapsible.defaultProps = {
   size: 'large'
 };
 
-export default Subs;
+export default Subscribe;
