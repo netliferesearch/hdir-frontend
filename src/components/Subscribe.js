@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import zenscroll from 'zenscroll';
-import Alert from './Alert';
 
 import Heading from './Heading';
 
@@ -82,16 +81,10 @@ class Collapsible extends React.Component {
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
         >
-          <Heading
-            h={
-              (props.size === 'large' && 'h2') ||
-              (props.size === 'medium' && 'h3') ||
-              (props.size === 'small' && 'none')
-            }
-            className={headingClasses(props.size)}
-          >
-            {props.heading}
-          </Heading>
+          <p>
+            Abonner på endinger - Nasjonal retningslinje for
+            svangerskapsdiabetes
+          </p>
         </button>
         {props.subheading &&
           !props.subheadingContent && (
@@ -112,14 +105,6 @@ class Collapsible extends React.Component {
               </Collapsible>
             </div>
           )}
-        {!this.state.collapsed &&
-          props.alert && (
-            <div className="l-mt-1">
-              <Alert status="success" small>
-                {props.alert}
-              </Alert>
-            </div>
-          )}
 
         <div
           id="collapsible-0"
@@ -134,18 +119,17 @@ class Collapsible extends React.Component {
   }
 }
 
-Collapsible.propTypes = {
+Subscribe.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   subheadingContent: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   smallContent: PropTypes.bool,
-  subtle: PropTypes.bool,
-  alert: PropTypes.string
+  subtle: PropTypes.bool
 };
 
-Collapsible.defaultProps = {
+Subscribe.defaultProps = {
   size: 'large'
 };
 
-export default Collapsible;
+export default Subs;
