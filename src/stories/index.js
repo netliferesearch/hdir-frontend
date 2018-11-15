@@ -27,7 +27,6 @@ import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
-import ChapterNavigation from '../components/ChapterNavigation';
 import Card from '../components/Card';
 
 // Pages
@@ -526,28 +525,6 @@ storiesOf('Alert', module)
     >
       {text('Content', 'This is some content, it can be anything')}
     </Alert>
-  ));
-
-storiesOf('ChapterNavigation', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => (
-    <ChapterNavigation
-      status={select(
-        'Status',
-        {
-          none: 'none',
-          success: 'success',
-          warning: 'warning',
-          danger: 'danger',
-          info: 'info'
-        },
-        'success'
-      )}
-    >
-      {text('Header', 'This is some content, it can be anything')}
-      {text('Text', 'nasjonal faglig retningslinje')}
-    </ChapterNavigation>
   ));
 
 storiesOf('Card', module)
