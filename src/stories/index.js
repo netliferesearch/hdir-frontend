@@ -11,7 +11,6 @@ import ArticleIntro from '../components/ArticleIntro';
 import ChapterHeading from '../components/ChapterHeading';
 import ContentLabel from '../components/ContentLabel';
 import Collapsible from '../components/Collapsible';
-import FeatureList from '../components/FeatureList';
 import FilterList from '../components/FilterList';
 // import Footer from '../components/Footer';
 import Heading from '../components/Heading';
@@ -52,7 +51,6 @@ import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
 import InputSearch from '../components/InputSearch';
 
 // Test data
-// import { featureListHeading, featureListData } from '../testData.js';
 import { object } from '@storybook/addon-knobs/dist/base';
 import { select } from '@storybook/addon-knobs/dist/react';
 

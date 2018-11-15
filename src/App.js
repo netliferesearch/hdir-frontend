@@ -30,8 +30,6 @@ import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 
-// import { featureListHeading, featureListData } from './testData.js';
-
 class App extends Component {
   componentDidMount() {
     document.addEventListener('keypress', event => {
