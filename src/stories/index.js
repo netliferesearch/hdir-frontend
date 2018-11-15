@@ -21,6 +21,7 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
+import Box from '../components/Box';
 import Button from '../components/Button';
 import Quote from '../components/Quote';
 import SearchOptions from '../components/SearchOptions';
@@ -459,6 +460,29 @@ storiesOf('Quote', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
+  ));
+
+storiesOf('Box', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Box
+      color={select(
+        'Color',
+        {
+          none: 'None',
+          green: 'Green',
+          white: 'White',
+          blue: 'Blue',
+          blueDark: 'Blue dark',
+          yellow: 'Yellow'
+        },
+        'none'
+      )}
+      square={boolean('Square', false)}
+    >
+      {text('Text', 'Here is some content, even HTML')}
+    </Box>
   ));
 
 storiesOf('Select', module)

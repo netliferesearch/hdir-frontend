@@ -3,6 +3,7 @@ import React from 'react';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
+import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';
 
 const LisLearningActivities = () => (
@@ -181,21 +182,15 @@ const LisLearningActivities = () => (
       </div>
     </div>
     <div className="l-mt-4">
-      <div className="b-bleed">
+      <Box color="green" square>
         <strong>Kontakt:</strong>
         <br />
-        <a href="#" className="b-bleed__link">
-          spesialisthelsetjenester@helsedir.no
-        </a>
+        <a href="#">spesialisthelsetjenester@helsedir.no</a>
         <br />
-        <a href="#" className="b-bleed__link">
-          navn.etternavn@helsedir.no
-        </a>
+        <a href="#">navn.etternavn@helsedir.no</a>
         <br />
-        <a href="#" className="b-bleed__link">
-          999 99 999
-        </a>
-      </div>
+        <a href="#">999 99 999</a>
+      </Box>
     </div>
   </div>
 );

@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
+import Box from '../components/Box';
 import LinkWithIcon from '../components/Link';
 import ArticleIntro from '../components/ArticleIntro';
 import SelectInline from '../components/Select';
@@ -126,12 +127,12 @@ const ProfessionSelector = () => (
             arbeidslivet, utgjør personer med psykiske lidelser en stor og
             økende gruppe.
           </p>
-          <div className="b-bleed b-bleed--blue">
+          <Box color="blueDark" square>
             Norske og internasjonale studier viser at 30 – 50 prosent av den
             voksne befolkningen vil få en psykisk lidelse i løpet av livet.
-          </div>
+          </Box>
           <div className="l-mt-2">
-            <div className="b-bleed b-bleed--yellow">
+            <Box color="yellow" square>
               <h2>Ti råd for et inkluderende arbeidsliv</h2>
               <ol>
                 <li>​Bry deg. Alle trenger å bli sett og verdsatt.</li>
@@ -148,7 +149,7 @@ const ProfessionSelector = () => (
                 <li>Psykisk helse angår oss alle. Snakk om det.</li>
               </ol>
               (Kilde: Rådet for Psykisk Helse)
-            </div>
+            </Box>
           </div>
 
           <div className="l-mt-4 col-xs-12 col-md-8">
@@ -156,8 +157,14 @@ const ProfessionSelector = () => (
               heading="Rapporter om arbeid og psykisk helse"
               list={[
                 { title: 'Jobber seg til bedre helse (Uni.no)', url: '#' },
-                { title: 'Omtale av IPS evalueringen (Napha.no)', url: '#' },
-                { title: 'Åtte prinsipper for IPS fra Napha (PDF)', url: '#' }
+                {
+                  title: 'Omtale av IPS evalueringen (Napha.no)',
+                  url: '#'
+                },
+                {
+                  title: 'Åtte prinsipper for IPS fra Napha (PDF)',
+                  url: '#'
+                }
               ]}
             />
           </div>
@@ -166,8 +173,14 @@ const ProfessionSelector = () => (
               heading="Søk tilskudd innen arbeid og psykisk helse"
               list={[
                 { title: 'Jobber seg til bedre helse (Uni.no)', url: '#' },
-                { title: 'Omtale av IPS evalueringen (Napha.no)', url: '#' },
-                { title: 'Åtte prinsipper for IPS fra Napha (PDF)', url: '#' }
+                {
+                  title: 'Omtale av IPS evalueringen (Napha.no)',
+                  url: '#'
+                },
+                {
+                  title: 'Åtte prinsipper for IPS fra Napha (PDF)',
+                  url: '#'
+                }
               ]}
             />
           </div>
@@ -186,21 +199,15 @@ const ProfessionSelector = () => (
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
           </div>
           <div className="l-mt-4">
-            <div className="b-bleed">
+            <Box color="green" square>
               <strong>Kontakt:</strong>
               <br />
-              <a href="#" className="b-bleed__link">
-                spesialisthelsetjenester@helsedir.no
-              </a>
+              <a href="#">spesialisthelsetjenester@helsedir.no</a>
               <br />
-              <a href="#" className="b-bleed__link">
-                navn.etternavn@helsedir.no
-              </a>
+              <a href="#">navn.etternavn@helsedir.no</a>
               <br />
-              <a href="#" className="b-bleed__link">
-                999 99 999
-              </a>
-            </div>
+              <a href="#">999 99 999</a>
+            </Box>
           </div>
         </article>
       </div>

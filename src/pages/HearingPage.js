@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
+import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';
 import NavList from '../components/NavList';
 
@@ -92,21 +93,15 @@ const HearingPage = () => (
           <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
         </div>
         <div className="l-mt-4">
-          <div className="b-bleed">
+          <Box color="green" square>
             <strong>Kontakt:</strong>
             <br />
-            <a href="#" className="b-bleed__link">
-              spesialisthelsetjenester@helsedir.no
-            </a>
+            <a href="#">spesialisthelsetjenester@helsedir.no</a>
             <br />
-            <a href="#" className="b-bleed__link">
-              navn.etternavn@helsedir.no
-            </a>
+            <a href="#">navn.etternavn@helsedir.no</a>
             <br />
-            <a href="#" className="b-bleed__link">
-              999 99 999
-            </a>
-          </div>
+            <a href="#">999 99 999</a>
+          </Box>
         </div>
       </div>
     </div>

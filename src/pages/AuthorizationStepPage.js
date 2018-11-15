@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '../components/Button';
 import Select from '../components/Select';
+import Box from '../components/Box';
 
 const AuthorizationStepPage = () => (
   <div>
@@ -71,27 +72,21 @@ const AuthorizationStepPage = () => (
       </div>
     </div>
     <div className="l-mt-4">
-      <div className="b-bleed">
+      <Box color="green" square>
         <div className="l-container">
           <div className="row">
             <div className="col-xs-12">
               <strong>Kontakt:</strong>
               <br />
-              <a href="#" className="b-bleed__link">
-                spesialisthelsetjenester@helsedir.no
-              </a>
+              <a href="#">spesialisthelsetjenester@helsedir.no</a>
               <br />
-              <a href="#" className="b-bleed__link">
-                navn.etternavn@helsedir.no
-              </a>
+              <a href="#">navn.etternavn@helsedir.no</a>
               <br />
-              <a href="#" className="b-bleed__link">
-                999 99 999
-              </a>
+              <a href="#">999 99 999</a>
             </div>
           </div>
         </div>
-      </div>
+      </Box>
     </div>
   </div>
 );

@@ -67,33 +67,6 @@
   position: absolute;
 }
 
-.b-bleed {
-  padding: 2em;
-  background-color: $green-light;
-
-  &__link {
-    word-wrap: break-word;
-
-    @include link-init($black);
-    &:link,
-    &:active,
-    &:active,
-    &:hover {
-      @include underline($secondary-color);
-    }
-  }
-
-  &--blue {
-    color: $purple;
-    background-color: $brand-color;
-  }
-
-  &--yellow {
-    color: $black;
-    background-color: $yellow-light;
-  }
-}
-
 .b-article-image {
   &__image {
     max-width: 100%;
