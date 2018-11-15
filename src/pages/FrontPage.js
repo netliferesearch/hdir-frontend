@@ -21,6 +21,9 @@ const FrontPage = () => (
       </h3>
     </div>
     <div className="l-container l-mt-3">
+      <p>
+        <a href="/storybook">Go to Storybook</a>
+      </p>
       <h2>Pages</h2>
       <p>
         <Link to="/artikkel">Artikkel</Link>
