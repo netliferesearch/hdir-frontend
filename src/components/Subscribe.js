@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import zenscroll from 'zenscroll';
 import Collapsible from './Collapsible';
 import Heading from './Heading';
-
+import Quote from './Quote';
 const buttonClasses = (active, size) =>
   classNames({
     'b-collapsible__button': true,
@@ -16,8 +16,7 @@ const buttonClasses = (active, size) =>
 const headingClasses = size =>
   classNames({
     'b-collapsible__heading': true,
-    h3: size === 'large',
-    h4: size === 'medium',
+
     normal: size === 'small'
   });
 
@@ -85,16 +84,10 @@ class Subscribe extends React.Component {
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
         >
-          <Heading
-            h={
-              (props.size === 'large' && 'h2') ||
-              (props.size === 'medium' && 'h3') ||
-              (props.size === 'small' && 'none')
-            }
-            className={headingClasses(props.size)}
-          >
-            {props.heading}
-          </Heading>
+          <p>
+            Abonner på endringer i Nasjonal faglig retningslinje for
+            svangerskapsdiabetes.
+          </p>
         </button>
         {props.subheading &&
           !props.subheadingContent && (
@@ -109,7 +102,7 @@ class Subscribe extends React.Component {
           hidden={!this.state.collapsed}
           className={contentClasses(props.smallContent)}
         >
-          <div hidden={!this.state.toggled}>
+          <div hidden={this.state.toggled}>
             <form
               action="mailto:someone@example.com"
               method="post"
@@ -128,6 +121,13 @@ class Subscribe extends React.Component {
                 Abonner
               </button>
             </form>
+          </div>
+          <div hidden={!this.state.toggled}>
+            <Quote>
+              <p>
+                Abonnementet ditt er registrert. Du får straks e-post fra oss.
+              </p>
+            </Quote>
           </div>
         </div>
       </div>
