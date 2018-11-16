@@ -50,7 +50,7 @@ class Subscribe extends React.Component {
 
   toggleSubmit() {
     this.setState({
-      submitted: !this.state.submitted
+      submitted: this.state.submitted
     });
   }
 
@@ -104,7 +104,7 @@ class Subscribe extends React.Component {
           className={contentClasses(props.smallContent)}
         >
           <div hidden={this.state.toggled}>
-            <form action="#" enctype="text/plain">
+            <form enctype="text/plain">
               Fyll inn e-postadressen din for å motta varsler om endringer.<br />
               <input type="text" name="mail" />
               <br />
@@ -119,7 +119,7 @@ class Subscribe extends React.Component {
               </Button>
             </form>
           </div>
-          <div hidden={!this.state.toggled}>
+          <div>
             <Quote>
               <p>
                 Abonnementet ditt er registrert. Du får straks e-post fra oss.
