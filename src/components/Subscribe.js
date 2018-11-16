@@ -10,8 +10,7 @@ const buttonClasses = (active, size) =>
     'b-collapsible__button': true,
     'b-collapsible__button--active': active,
 
-    'b-collapsible__button--small': size === 'small',
-    'b-collapsible__button--medium': size === 'medium'
+    'b-collapsible__button--small': size === 'small'
   });
 
 const headingClasses = size =>
@@ -25,8 +24,6 @@ const headingClasses = size =>
 const collapsibleClasses = size =>
   classNames({
     'b-collapsible': true,
-
-    'b-collapsible--medium': size === 'medium',
     'b-collapsible--small': size === 'small'
   });
 
@@ -44,6 +41,17 @@ class Subscribe extends React.Component {
       collapsed: false
     };
     this.toggleCollapse = this.toggleCollapse.bind(this);
+
+    this.state = {
+      submitted: false
+    };
+    this.toggleSubmit = this.toggleSubmit.bind(this);
+  }
+
+  toggleSubmit() {
+    this.setState({
+      submitted: !this.state.submitted
+    });
   }
 
   toggleCollapse() {
@@ -110,10 +118,10 @@ class Subscribe extends React.Component {
             <input type="text" name="mail" />
             <br />
             <button
-              className={buttonClasses(this.state.collapsed, props.size)}
+              className={buttonClasses(this.state.submit, props.size)}
               aria-expanded={this.state.collapsed}
               aria-controls="collapsible-0"
-              onClick={this.toggleCollapse}
+              onClick={this.toggleSubmit}
               small
             >
               Abonner
