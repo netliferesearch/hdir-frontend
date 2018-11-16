@@ -20,6 +20,7 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
+import PressRelease from '../components/PressRelease';
 import Box from '../components/Box';
 import Button from '../components/Button';
 import Quote from '../components/Quote';
@@ -27,6 +28,7 @@ import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import Card from '../components/Card';
+import SquareImage from '../components/SquareImage';
 
 import CheckboxGroup from '../components/CheckboxGroup';
 import RadioButtonGroup from '../components/RadioButtonGroup';
@@ -433,6 +435,46 @@ storiesOf('PageMeta', module)
     />
   ));
 
+storiesOf('PressRelease', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <div className="row">
+      <div className="col-xs-12 col-md-6">
+        <PressRelease
+          title={text(
+            'Title',
+            'Barns miljø og sikkerhet / når barnet skader seg'
+          )}
+          info={text('Info', 'Plakat (pdf)')}
+          releaseDate={text('Release date', '01.06.2009')}
+          url={text('url', '#')}
+          image={text(
+            'Image',
+            'https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png'
+          )}
+          imageAlt={text('Image alt', 'Some monster that looks scary')}
+        />
+      </div>
+      <div className="col-xs-12 col-md-6">
+        <PressRelease
+          title={text(
+            'Title',
+            'Barns miljø og sikkerhet / når barnet skader seg'
+          )}
+          info={text('Info', 'Plakat (pdf)')}
+          releaseDate={text('Release date', '01.06.2009')}
+          url={text('url', '#')}
+          image={text(
+            'Image',
+            'https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png'
+          )}
+          imageAlt={text('Image alt', 'Some monster that looks scary')}
+        />
+      </div>
+    </div>
+  ));
+
 storiesOf('LongShortHeading', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -452,6 +494,19 @@ storiesOf('Quote', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
+  ));
+
+storiesOf('SquareImage', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <SquareImage
+      src={text(
+        'src',
+        'https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png'
+      )}
+      alt={text('alt', 'Picture of some monster dude')}
+    />
   ));
 
 storiesOf('Box', module)
