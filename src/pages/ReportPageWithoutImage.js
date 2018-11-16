@@ -4,6 +4,7 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
+import Subscribe from '../components/Subscribe';
 
 const ReportPageWithoutImage = () => (
   <div>
@@ -100,6 +101,7 @@ const ReportPageWithoutImage = () => (
             />
           </Box>
         </div>
+        <Subscribe />
         <PageMeta publishDate="11.08.2017" editDate="12.09.2018" />
       </div>
     </div>
