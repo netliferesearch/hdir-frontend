@@ -109,24 +109,26 @@ class Subscribe extends React.Component {
           hidden={!this.state.collapsed}
           className={contentClasses(props.smallContent)}
         >
-          <form
-            action="mailto:someone@example.com"
-            method="post"
-            enctype="text/plain"
-          >
-            Fyll inn e-postadressen din for å motta varsler om endringer.<br />
-            <input type="text" name="mail" />
-            <br />
-            <button
-              className={buttonClasses(this.state.submit, props.size)}
-              aria-expanded={this.state.collapsed}
-              aria-controls="collapsible-0"
-              onClick={this.toggleSubmit}
-              small
+          <div hidden={!this.state.toggled}>
+            <form
+              action="mailto:someone@example.com"
+              method="post"
+              enctype="text/plain"
             >
-              Abonner
-            </button>
-          </form>
+              Fyll inn e-postadressen din for å motta varsler om endringer.<br />
+              <input type="text" name="mail" />
+              <br />
+              <button
+                className={buttonClasses(this.state.submit, props.size)}
+                aria-expanded={this.state.collapsed}
+                aria-controls="collapsible-0"
+                onClick={this.toggleSubmit}
+                small
+              >
+                Abonner
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     );
