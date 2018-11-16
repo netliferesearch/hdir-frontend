@@ -5,6 +5,7 @@ import zenscroll from 'zenscroll';
 import Collapsible from './Collapsible';
 import Heading from './Heading';
 import Quote from './Quote';
+import Button from './Button';
 const buttonClasses = (active, size) =>
   classNames({
     'b-collapsible__button': true,
@@ -103,15 +104,11 @@ class Subscribe extends React.Component {
           className={contentClasses(props.smallContent)}
         >
           <div hidden={this.state.toggled}>
-            <form
-              action="mailto:someone@example.com"
-              method="post"
-              enctype="text/plain"
-            >
+            <form action="#" enctype="text/plain">
               Fyll inn e-postadressen din for å motta varsler om endringer.<br />
               <input type="text" name="mail" />
               <br />
-              <button
+              <Button
                 className={buttonClasses(this.state.submit, props.size)}
                 aria-expanded={this.state.collapsed}
                 aria-controls="collapsible-0"
@@ -119,7 +116,7 @@ class Subscribe extends React.Component {
                 small
               >
                 Abonner
-              </button>
+              </Button>
             </form>
           </div>
           <div hidden={!this.state.toggled}>
@@ -139,7 +136,7 @@ Subscribe.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   subheadingContent: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small']),
   smallContent: PropTypes.bool
 };
 
