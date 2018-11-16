@@ -109,7 +109,15 @@ class Subscribe extends React.Component {
             Fyll inn e-postadressen din for å motta varsler om endringer.<br />
             <input type="text" name="mail" />
             <br />
-            <input type="submit" value="Send" />
+            <button
+              className={buttonClasses(this.state.collapsed, props.size)}
+              aria-expanded={this.state.collapsed}
+              aria-controls="collapsible-0"
+              onClick={this.toggleCollapse}
+              small
+            >
+              Abonner
+            </button>
           </form>
         </div>
       </div>
@@ -126,7 +134,7 @@ Subscribe.propTypes = {
 };
 
 Collapsible.defaultProps = {
-  size: 'large'
+  size: 'small'
 };
 
 export default Subscribe;
