@@ -1,4 +1,4 @@
-.b-radio-buttons {
+.b-radio-button-group {
   display: inline-block;
   position: relative;
 
@@ -8,17 +8,17 @@
     clip: rect(1px, 1px, 1px, 1px);
     vertical-align: middle;
 
-    &:disabled ~ .b-radio-buttons__indicator {
+    &:disabled ~ .b-radio-button-group__indicator {
       background: $grey-light;
       border-color: $grey !important;
       cursor: not-allowed;
     }
 
-    &:hover ~ .b-radio-buttons__indicator {
+    &:hover ~ .b-radio-button-group__indicator {
       border-color: $brand-color;
     }
 
-    &:checked ~ .b-radio-buttons__indicator {
+    &:checked ~ .b-radio-button-group__indicator {
       border-color: $brand-color;
 
       &::after {
@@ -35,7 +35,7 @@
       }
     }
 
-    &:focus ~ .b-radio-buttons__indicator {
+    &:focus ~ .b-radio-button-group__indicator {
       border-color: $black;
 
       &::after {
@@ -68,7 +68,7 @@
     width: 22px;
     height: 22px;
     transition: border-color 0.3s ease, max-height 0.3s ease,
-    transform 0.3s ease;
+      transform 0.3s ease;
 
     &::after {
       content: '';

@@ -28,6 +28,9 @@ import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import Card from '../components/Card';
 
+import CheckboxGroup from '../components/CheckboxGroup';
+import RadioButtonGroup from '../components/RadioButtonGroup';
+
 // Pages
 import ArticlePage from '../pages/ArticlePage';
 import ChapterPage from '../pages/ChapterPage';
@@ -57,16 +60,8 @@ import { select } from '@storybook/addon-knobs/dist/react';
 // TODO: The Storybook-devs are working on an official css toggle addon
 // Also remember to remove the copy function in the NPM storybook building script
 const changeStyle = name => {
-  const style = document.getElementById('main-style');
-
-  if (name === 'hdir') style.setAttribute('href', 'static/hdir.css');
-  else if (name === 'helfo') style.setAttribute('href', 'static/helfo.css');
-  else {
-    console.log('Undefined style name');
-    return;
-  }
-  document.querySelector('head style') &&
-    document.querySelector('head style').remove();
+  if (name === 'helfo') require('../static/Helfo.css');
+  else if (name === 'hdir') require('../static/App.css');
 };
 
 storiesOf('Welcome', module).add('Styles', () => (
@@ -540,4 +535,66 @@ storiesOf('Card', module)
         'This is some content, it can be anything, even an image'
       )}
     </Card>
+  ));
+
+storiesOf('CheckboxGroup', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <CheckboxGroup
+      heading={text('Heading', 'Heading')}
+      name={text('Name', 'usedForForms')}
+      options={object('Options', [
+        {
+          value: 'a',
+          label: 'A',
+          disabled: false
+        },
+        {
+          value: 'b',
+          label: 'B',
+          disabled: true
+        },
+        {
+          value: 'c',
+          label: 'C',
+          disabled: false
+        },
+        {
+          value: 'd',
+          label: 'D'
+        }
+      ])}
+    />
+  ));
+
+storiesOf('RadioButtonGroup', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <RadioButtonGroup
+      heading={text('Heading', 'Heading')}
+      name={text('Name', 'usedForForms')}
+      options={object('Options', [
+        {
+          value: 'a',
+          label: 'A',
+          disabled: false
+        },
+        {
+          value: 'b',
+          label: 'B',
+          disabled: true
+        },
+        {
+          value: 'c',
+          label: 'C',
+          disabled: false
+        },
+        {
+          value: 'd',
+          label: 'D'
+        }
+      ])}
+    />
   ));

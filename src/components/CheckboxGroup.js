@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 
 const CheckboxGroup = props => (
   <div className="b-checkbox-group">
@@ -10,7 +11,7 @@ const CheckboxGroup = props => (
     )}
     {props.options.map(option => {
       return (
-        <label className="b-checkbox-group__label">
+        <label className="b-checkbox-group__label" key={shortid.generate()}>
           <input
             name={props.name}
             type="checkbox"
@@ -19,7 +20,7 @@ const CheckboxGroup = props => (
             disabled={option.disabled}
           />
           {option.label}
-          <i class="b-checkbox-group__indicator" />
+          <i className="b-checkbox-group__indicator" />
         </label>
       );
     })}

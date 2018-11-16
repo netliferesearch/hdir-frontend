@@ -58,7 +58,7 @@ const ChapterPage = () => (
               }
             ]}
           />
-          <div class="l-mt-4">
+          <div className="l-mt-4">
             <div className="b-link-springboard">
               For å lese om symptomer, kostholdsråd og andre tips ved
               svangerskapsdiabetes, kan du gå til{' '}
