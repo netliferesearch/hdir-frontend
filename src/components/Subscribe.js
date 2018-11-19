@@ -6,25 +6,13 @@ import Collapsible from './Collapsible';
 import Heading from './Heading';
 import Quote from './Quote';
 import Button from './Button';
+
 const buttonClasses = (active, size) =>
   classNames({
     'b-collapsible__button': true,
     'b-collapsible__button--active': active,
 
     'b-collapsible__button--small': size === 'small'
-  });
-
-const headingClasses = size =>
-  classNames({
-    'b-collapsible__heading': true,
-
-    normal: size === 'small'
-  });
-
-const collapsibleClasses = size =>
-  classNames({
-    'b-collapsible': true,
-    'b-collapsible--small': size === 'small'
   });
 
 const contentClasses = smallContent =>
@@ -76,7 +64,7 @@ class Subscribe extends React.Component {
     const { props } = this;
     return (
       <div
-        className={collapsibleClasses(props.size)}
+        className="b-collapsible__content b-collapsible__content--small "
         ref={ref => (this.domNode = ref)}
       >
         <button
@@ -85,10 +73,7 @@ class Subscribe extends React.Component {
           aria-controls="collapsible-0"
           onClick={this.toggleCollapse}
         >
-          <p>
-            Abonner på endringer i Nasjonal faglig retningslinje for
-            svangerskapsdiabetes.
-          </p>
+          <p>{props.subheading}</p>
         </button>
         {props.subheading &&
           !props.subheadingContent && (
@@ -102,6 +87,7 @@ class Subscribe extends React.Component {
           aria-hidden={!this.state.collapsed}
           hidden={!this.state.collapsed}
           className={contentClasses(props.smallContent)}
+          className="l-ml-1"
         >
           <div hidden={this.state.toggled}>
             <form enctype="text/plain">
@@ -121,16 +107,16 @@ class Subscribe extends React.Component {
                 aria-expanded={this.state.collapsed}
                 aria-controls="collapsible-0"
                 onClick={this.toggleSubmit}
-                small
               >
                 Abonner
               </Button>
             </form>
           </div>
-          <div>
+          <div className="b-subscribe__quote">
             <Quote>
               <p>
                 Abonnementet ditt er registrert. Du får straks e-post fra oss.
+                <br />
               </p>
             </Quote>
           </div>

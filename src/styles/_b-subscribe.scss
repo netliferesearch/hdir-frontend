@@ -1,4 +1,8 @@
 .b-subscribe {
+  $left-space: 1.5em;
+  padding-left: $left-space;
+  padding-top: 2em;
+  display: flex;
   &__field {
     flex-grow: 1;
     font-size: 1rem;
@@ -6,7 +10,13 @@
     background-color: white;
     border-color: black;
     padding: 1em 1em 1em 2em;
+    width: 70%;
 
     box-shadow: 0 0 0 1px $brand-color;
+  }
+
+  &__quote {
+    background-color: #ffdb4d;
+    min-height: 40%;
   }
 }
