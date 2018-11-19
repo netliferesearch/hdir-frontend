@@ -1,0 +1,12 @@
+.b-subscribe {
+  &__field {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: $brand-color;
+    background-color: white;
+    border-color: black;
+    padding: 1em 1em 1em 2em;
+
+    box-shadow: 0 0 0 1px $brand-color;
+  }
+}

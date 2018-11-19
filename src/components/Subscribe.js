@@ -106,8 +106,16 @@ class Subscribe extends React.Component {
           <div hidden={this.state.toggled}>
             <form enctype="text/plain">
               Fyll inn e-postadressen din for å motta varsler om endringer.<br />
-              <input type="text" name="mail" />
+              <input
+                className="b-subscribe__field l-mb-2 l-mt-1"
+                type="text"
+                name="mail"
+              />
               <br />
+              <p>
+                Du får straks en e-post som bekrefter ditt abonnement. Der
+                finner du også mulighet til å melde deg selv av
+              </p>
               <Button
                 className={buttonClasses(this.state.submit, props.size)}
                 aria-expanded={this.state.collapsed}
