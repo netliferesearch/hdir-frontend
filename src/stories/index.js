@@ -28,6 +28,7 @@ import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import Card from '../components/Card';
+import Statistics from '../components/Statistics';
 import SquareImage from '../components/SquareImage';
 
 import CheckboxGroup from '../components/CheckboxGroup';
@@ -399,6 +400,17 @@ storiesOf('FilterList', module)
         'Pakkeforløp',
         'Rundskriv'
       ])}
+    />
+  ));
+
+storiesOf('Statistics', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Statistics
+      bigText="99.9%"
+      smallText="This is some text that is smaller, and it doesn't really make any sense here. This is some more text to make it longer."
+      icon="./icons/pie.svg"
     />
   ));
 
