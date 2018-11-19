@@ -408,9 +408,12 @@ storiesOf('Statistics', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <Statistics
-      bigText="99.9%"
-      smallText="This is some text that is smaller, and it doesn't really make any sense here. This is some more text to make it longer."
-      icon="./icons/pie.svg"
+      bigText={text('Big text', '99.9%')}
+      smallText={text(
+        'Small text',
+        "This is some text that is smaller, and it doesn't really make any sense here. This is some more text to make it longer."
+      )}
+      icon={text('Icon', './icons/pie.svg')}
     />
   ));
 
@@ -601,6 +604,23 @@ storiesOf('Card', module)
         'Content',
         'This is some content, it can be anything, even an image'
       )}
+    </Card>
+  ))
+  .addWithStaticMarkup('With statistics', () => (
+    <Card
+      heading={text('Heading', 'This is a heading')}
+      text={text('Text', 'This is some text')}
+      url={text('URL', '#')}
+      leftArrow={boolean('Left arrow', false)}
+    >
+      <Statistics
+        bigText={text('Statistics: Big text', '99.9%')}
+        smallText={text(
+          'Statistics: Small text',
+          "This is some text that is smaller, and it doesn't really make any sense here. This is some more text to make it longer."
+        )}
+        icon={text('Statistics: Icon', './icons/pie.svg')}
+      />
     </Card>
   ));
 
