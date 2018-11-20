@@ -1,0 +1,31 @@
+.b-statistics {
+  display: flex;
+  padding: 2rem;
+  background-color: $blue-dark;
+
+  @include mq($until: $tablet) {
+    padding: 1rem;
+  }
+
+  &__icon {
+    height: auto;
+    max-width: 25%;
+    width: 4rem;
+    margin: 1rem 3rem 1rem 1rem;
+    flex-shrink: 0;
+    @include mq($until: $tablet) {
+      margin: 0.5rem 1.5rem 0.5rem 0;
+    }
+  }
+  &__text-wrapper {
+    width: calc(100% - 5rem);
+  }
+  &__big-text {
+    font-size: $extra-large-text;
+    color: $purple;
+  }
+  &__small-text {
+    font-size: $meta-text;
+    color: $purple;
+  }
+}

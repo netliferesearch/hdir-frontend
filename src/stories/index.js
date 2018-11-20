@@ -28,6 +28,7 @@ import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import Card from '../components/Card';
+import Statistics from '../components/Statistics';
 import SquareImage from '../components/SquareImage';
 
 import CheckboxGroup from '../components/CheckboxGroup';
@@ -402,6 +403,20 @@ storiesOf('FilterList', module)
     />
   ));
 
+storiesOf('Statistics', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Statistics
+      bigText={text('Big text', '99.9%')}
+      smallText={text(
+        'Small text',
+        "This is some text that is smaller, and it doesn't really make any sense here. This is some more text to make it longer."
+      )}
+      icon={text('Icon', './icons/pie.svg')}
+    />
+  ));
+
 storiesOf('Heading', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -589,6 +604,23 @@ storiesOf('Card', module)
         'Content',
         'This is some content, it can be anything, even an image'
       )}
+    </Card>
+  ))
+  .addWithStaticMarkup('With statistics', () => (
+    <Card
+      heading={text('Heading', 'This is a heading')}
+      text={text('Text', 'This is some text')}
+      url={text('URL', '#')}
+      leftArrow={boolean('Left arrow', false)}
+    >
+      <Statistics
+        bigText={text('Statistics: Big text', '99.9%')}
+        smallText={text(
+          'Statistics: Small text',
+          "This is some text that is smaller, and it doesn't really make any sense here. This is some more text to make it longer."
+        )}
+        icon={text('Statistics: Icon', './icons/pie.svg')}
+      />
     </Card>
   ));
 

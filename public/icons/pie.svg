@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="95px" viewBox="0 0 96 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero-statistikk" transform="translate(-51.000000, -111.000000)">
+            <g id="Group" transform="translate(0.000000, -2.000000)">
+                <g id="Group-4" transform="translate(56.000000, 118.000000)">
+                    <path d="M39.5,27 C28.7304474,27 20,35.7304474 20,46.5 C20,57.2695526 28.7304474,66 39.5,66 C50.2695526,66 59,57.2695526 59,46.5" id="Path" stroke="#EFC51A" stroke-width="10"></path>
+                    <path d="M68,47 C68,30.9837423 55.0162577,18 39,18" id="Path" stroke="#EFC51A" stroke-width="10"></path>
+                    <path d="M86,47 C86,21.0426168 64.9573832,0 39,0" id="Path" stroke="#E5BDF6" stroke-width="9"></path>
+                    <path d="M38.5,8 C17.2370371,8 0,25.2370371 0,46.5 C0,67.7629629 17.2370371,85 38.5,85 C59.7629629,85 77,67.7629629 77,46.5" id="Path" stroke="#E5BDF6" stroke-width="9"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
