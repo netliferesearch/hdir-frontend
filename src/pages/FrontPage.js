@@ -26,6 +26,9 @@ const FrontPage = () => (
       </p>
       <h2>Pages</h2>
       <p>
+        <Link to="/abonnement-tilpassing">Abonnement Tilpassing</Link>
+      </p>
+      <p>
         <Link to="/artikkel">Artikkel</Link>
       </p>
       <p>
@@ -87,9 +90,8 @@ const FrontPage = () => (
         <Link to="/rapport-kapittel">Rapport kapittel</Link>
       </p>
       <p>
-        <Link to="/abonnement-tilpassing">Abonnement Tilpassing</Link>
+        <Link to="/statistikk">Statistikk</Link>
       </p>
-
       <p>
         <Link to="/yrke-velger">Yrke velger</Link>
       </p>

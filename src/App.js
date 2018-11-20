@@ -24,6 +24,7 @@ import LisLearningActivities from './pages/LisLearningActivities';
 import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ReportPage from './pages/ReportPage';
+import StatisticsPage from './pages/StatisticsPage';
 import ProfessionSelector from './pages/ProfessionSelector';
 import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
@@ -89,6 +90,7 @@ class App extends Component {
                 path="/autorisasjon-steg-2"
                 component={AuthorizationStepPage2}
               />
+              <Route path="/statistikk" component={StatisticsPage} />
               <Route
                 path="/abonnement-tilpassing"
                 component={SubscriptionSettingsPage}
