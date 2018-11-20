@@ -14,6 +14,15 @@
     content: '↓';
   }
 
+  &--simple {
+    font-size: $meta-text;
+
+    &:after {
+      right: 0;
+      top: 0.2em;
+    }
+  }
+
   &--stacked {
     // Width can't be reset, so we use display: table to create a reset behaviour
     display: table;
@@ -36,6 +45,17 @@
     background-color: transparent;
     padding: 1em 2.5em 1em 1em;
     width: 100%;
+
+    &--simple {
+      // Width can't be reset, so we use display: table to create a reset behaviour
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid $blue;
+      padding: 0;
+      padding: 0.5em 1.5em 0.2em 0.2em;
+      margin-top: -0.1em;
+      text-transform: uppercase;
+    }
   }
   &__option {
     font-size: 2px;
