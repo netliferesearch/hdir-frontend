@@ -8,17 +8,17 @@
     clip: rect(1px, 1px, 1px, 1px);
     vertical-align: middle;
 
-    &:disabled ~ .b-radio-button-group__indicator {
+    &:disabled + .b-radio-button-group__indicator {
       background: $grey-light;
       border-color: $grey !important;
       cursor: not-allowed;
     }
 
-    &:hover ~ .b-radio-button-group__indicator {
+    &:hover + .b-radio-button-group__indicator {
       border-color: $brand-color;
     }
 
-    &:checked ~ .b-radio-button-group__indicator {
+    &:checked + .b-radio-button-group__indicator {
       border-color: $brand-color;
 
       &::after {
@@ -35,7 +35,7 @@
       }
     }
 
-    &:focus ~ .b-radio-button-group__indicator {
+    &:focus + .b-radio-button-group__indicator {
       border-color: $black;
 
       &::after {
@@ -52,13 +52,15 @@
     }
   }
   &__label {
-    display: block;
+    display: flex;
+    align-content: flex-start;
+
     margin-top: 0.5rem;
+    font-size: $meta-text;
     cursor: pointer;
   }
   &__indicator {
-    display: inline-block;
-    float: left;
+    flex-shrink: 0;
     position: relative;
     margin-top: 0;
     margin-right: 0.5rem;
