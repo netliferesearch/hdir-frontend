@@ -87,7 +87,7 @@ class Subscribe extends React.Component {
           aria-hidden={!this.state.collapsed}
           hidden={!this.state.collapsed}
           className={contentClasses(props.smallContent)}
-          className="l-ml-1"
+          className="l-mt-1"
         >
           <div hidden={this.state.toggled}>
             <form enctype="text/plain">

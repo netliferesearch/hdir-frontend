@@ -29,6 +29,7 @@ import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
+import FrontPageHelfo from './pages/FrontPageHelfo';
 
 class App extends Component {
   componentDidMount() {
@@ -53,6 +54,7 @@ class App extends Component {
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/søkeresultat2" component={SimpleSerp} />
               <Route path="/artikkel" component={ArticlePage} />
+              <Route path="/Forsidehelfo" component={FrontPageHelfo} />
               <Route
                 path="/rapportside-uten-bilde"
                 component={ReportPageWithoutImage}
