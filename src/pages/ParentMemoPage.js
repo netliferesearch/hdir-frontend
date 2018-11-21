@@ -5,6 +5,7 @@ import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
+import LongShortHeading from '../components/LongShortHeading';
 
 const MemoChapterPage = () => (
   <div>
@@ -21,11 +22,17 @@ const MemoChapterPage = () => (
         </a>
       </nav>
       <div className="l-mt-3">
-        <ChapterHeading
-          heading="Helsepersonelloven med kommentarer"
-          line="none"
-          h="h1"
-        />
+        <div className="row">
+          <div className="col-xs-12">
+            <LongShortHeading
+              long="Helsepersonelloven med kommentarer"
+              short="Helsepersonelloven med kommentarer"
+              icon={'https://placehold.it/64x64'}
+              url="#"
+              linkText="Hva er nasjonal faglig retningslinje"
+            />
+          </div>
+        </div>
       </div>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
