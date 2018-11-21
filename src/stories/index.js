@@ -375,8 +375,12 @@ storiesOf('Link', module)
   .addWithStaticMarkup('Basic', () => (
     <Link
       href={text('href', '#')}
-      icon="./icons/method.svg"
+      icon={text('Icon', './icons/method.svg')}
+      button={boolean('Button', false)}
       small={boolean('Small', false)}
+      arrow={boolean('Arrow', false)}
+      purple={boolean('Purple', false)}
+      wideButton={boolean('Wide button', false)}
     >
       {text('Content', 'Skriv ut')}
     </Link>

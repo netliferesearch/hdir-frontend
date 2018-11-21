@@ -18,17 +18,20 @@
     }
   }
   &__link {
+    position: relative;
+
     &--arrow {
       &:after {
         content: ' →';
         box-shadow: 0 1px 0 transparent;
         color: $blue;
+        margin-left: 0.5em;
+        position: absolute;
+        top: -0.1em;
       }
     }
-    &--small {
-      font-size: $meta-text;
-    }
     &--button {
+      box-sizing: border-box;
       display: inline-block;
       color: white !important;
       background-color: $blue;
@@ -37,6 +40,30 @@
       border: 0;
       font-size: $base-font-size;
       cursor: pointer;
+      @include underline(transparent);
+      &:after {
+        top: 1px;
+        color: white;
+        position: relative;
+      }
+    }
+    &--button-wide {
+      @extend .b-link__link--button;
+      width: 100%;
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+      &:after {
+        position: absolute;
+        right: 1em;
+        top: 1.5em;
+      }
+    }
+    &--small {
+      font-size: $meta-text;
+    }
+    &--purple {
+      background-color: $purple-dark;
+      color: white;
     }
   }
 }

@@ -78,19 +78,6 @@
   }
 }
 
-.b-link-springboard {
-  color: #b969a3;
-  border: 1px solid #b969a3;
-  border-radius: 4px;
-  padding: 2rem;
-  font-size: $meta-text;
-
-  &__link {
-    @include link-init(#b969a3, true);
-    // @include underline(#b969a3);
-  }
-}
-
 .b-hr {
   margin: 0;
   padding: 0;
