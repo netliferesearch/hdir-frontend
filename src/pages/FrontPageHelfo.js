@@ -37,19 +37,20 @@ const FrontPageHelfo = () => (
             Mye text Mye text Mye text Mye text Mye text Mye text Mye text Mye
             text Mye text Mye text Mye text{' '}
           </p>
-          <NavList
-            className="col-md-4"
-            list={[
-              { title: 'Refusjonskrav', url: '#' },
-              { title: 'Utbetaling og vedtak', url: '#' },
-              { title: 'Arbeid bidrar til raskere bedring', url: '#' }
-            ]}
-          />
+          <div className="col-md-5">
+            <NavList
+              list={[
+                { title: 'Refusjonskrav', url: '#' },
+                { title: 'Utbetaling og vedtak', url: '#' },
+                { title: 'Arbeid bidrar til raskere bedring', url: '#' }
+              ]}
+            />
+          </div>
         </div>
       </div>
       <div className="l-mt-5 col-md-8">
         <Box color="blueDark">
-          <div className="l-container">
+          <div>
             <a href="#">
               Henvis pasienten til helsenorge.no for mer informasjon
             </a>
@@ -57,7 +58,7 @@ const FrontPageHelfo = () => (
         </Box>
       </div>
 
-      <div className="col-xs-12 l-mt-5">
+      <div className="col-xs-12 l-mt-5 l-mb-4">
         <Heading h="h2">Bruk riktig takst og regelverk</Heading>
         <hr className="b-hr b-hr--thick" />
         <div className="row">
@@ -65,17 +66,18 @@ const FrontPageHelfo = () => (
             Mye text Mye text Mye text Mye text Mye text Mye text Mye text Mye
             text Mye text Mye text Mye text{' '}
           </p>
-          <NavList
-            className=" col-md-12 l-"
-            list={[
-              { title: 'Refusjonskrav', url: '#' },
-              { title: 'Utbetaling og vedtak', url: '#' },
-              { title: 'Arbeid bidrar til raskere bedring', url: '#' }
-            ]}
-          />
+          <div className="col-md-5">
+            <NavList
+              list={[
+                { title: 'Refusjonskrav', url: '#' },
+                { title: 'Utbetaling og vedtak', url: '#' },
+                { title: 'Arbeid bidrar til raskere bedring', url: '#' }
+              ]}
+            />
+          </div>
         </div>
       </div>
-      <div className="col-xs-12 l-mt-5">
+      <div className="col-xs-12 l-mt-5 l-mb-4">
         <Heading h="h2">Bruk riktig takst og regelverk</Heading>
         <hr className="b-hr b-hr--thick" />
         <div className="row">
@@ -83,14 +85,15 @@ const FrontPageHelfo = () => (
             Mye text Mye text Mye text Mye text Mye text Mye text Mye text Mye
             text Mye text Mye text Mye text{' '}
           </p>
-          <NavList
-            className=" col-md-12"
-            list={[
-              { title: 'Refusjonskrav', url: '#' },
-              { title: 'Utbetaling og vedtak', url: '#' },
-              { title: 'Arbeid bidrar til raskere bedring', url: '#' }
-            ]}
-          />
+          <div className="col-md-5">
+            <NavList
+              list={[
+                { title: 'Refusjonskrav', url: '#' },
+                { title: 'Utbetaling og vedtak', url: '#' },
+                { title: 'Arbeid bidrar til raskere bedring', url: '#' }
+              ]}
+            />
+          </div>
         </div>
       </div>
 
