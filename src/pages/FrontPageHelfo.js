@@ -96,20 +96,51 @@ const FrontPageHelfo = () => (
           </div>
         </div>
       </div>
+    </div>
 
-      <div className="col-xs-12 l-mt-3">
-        <PageMeta publishDate="01.01.2008" editDate="01.01.2018" url="#" />
+    <div className="col-xs-12 l-mt-5 l-mb-4">
+      <hr className="b-hr b-hr--grey-light" />
+      <div className="col-md-8 l-mt-2">
+        <Heading h="h2">
+          Legemidler på blå resept - når må du søke og når kan du forskrive
+          direkte?
+        </Heading>
+        <p className="l-mt-1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in.
+        </p>
+        <Link>Lenke videre</Link>
       </div>
-
-      <div className="col-xs-12 l-mt-4">
-        <Link href="#" small icon="./icons/method.svg">
-          Om metode og prosess
-        </Link>
-        <br />
-        <Link href="#" small icon="./icons/print.svg">
-          Skriv ut hele retningslinjen
-        </Link>
+    </div>
+    <div className="col-xs-12 l-mt-5 l-mb-4">
+      <hr className="b-hr b-hr--grey-light" />
+      <div className="row">
+        <div className="col-md-5">
+          <NavList
+            small
+            list={[
+              { title: 'Refusjonskrav', url: '#' },
+              { title: 'Utbetaling og vedtak', url: '#' }
+            ]}
+          />
+        </div>
       </div>
+    </div>
+    <div className="l-mt-4">
+      <Box color="yellow" square noPadding>
+        <div className="l-container">
+          <strong>Kontakt:</strong>
+          <br />
+          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <br />
+          <a href="#">navn.etternavn@helsedir.no</a>
+          <br />
+          <a href="#">999 99 999</a>
+        </div>
+      </Box>
     </div>
   </div>
 );
