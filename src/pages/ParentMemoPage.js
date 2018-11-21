@@ -25,11 +25,11 @@ const MemoChapterPage = () => (
         <div className="row">
           <div className="col-xs-12">
             <LongShortHeading
-              long="Helsepersonelloven med kommentarer"
+              long="Rundskriv for helsepersonelloven med kommentarer"
               short="Helsepersonelloven med kommentarer"
               icon={'https://placehold.it/64x64'}
               url="#"
-              linkText="Hva er nasjonal faglig retningslinje"
+              linkText="Hva er rundskriv?"
             />
           </div>
         </div>
