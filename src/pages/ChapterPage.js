@@ -5,6 +5,7 @@ import PageMeta from '../components/PageMeta';
 import NavList from '../components/NavList';
 import Alert from '../components/Alert';
 import Box from '../components/Box';
+import Link from '../components/Link';
 
 const ChapterPage = () => (
   <div>
@@ -59,13 +60,9 @@ const ChapterPage = () => (
             ]}
           />
           <div className="l-mt-4">
-            <div className="b-link-springboard">
-              For å lese om symptomer, kostholdsråd og andre tips ved
-              svangerskapsdiabetes, kan du gå til{' '}
-              <a href="#" className="b-link-springboard__link">
-                helsenorge.no.
-              </a>
-            </div>
+            <Link button arrow>
+              Henvis pasienten til helenorge.no for mer informasjon
+            </Link>
           </div>
         </aside>
         <div className="col-md-7 col-md-offset-1 l-bleed-left">
