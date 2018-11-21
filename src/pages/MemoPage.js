@@ -21,12 +21,14 @@ const MemoPage = () => (
           Dolor
         </a>
       </nav>
-      <ChapterHeading
-        heading="Særskilte regler i tilknytning til autorisasjon, krav om politattest m.v."
-        subheading="KAPITTEL 1"
-        line="none"
-        h="h1"
-      />
+      <div className="l-mt-3">
+        <ChapterHeading
+          heading="Særskilte regler i tilknytning til autorisasjon, krav om politattest m.v."
+          subheading="KAPITTEL 4"
+          line="none"
+          h="h1"
+        />
+      </div>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
