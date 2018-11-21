@@ -49,13 +49,9 @@ const FrontPageHelfo = () => (
         </div>
       </div>
       <div className="l-mt-5 col-md-8">
-        <Box color="blueDark">
-          <div>
-            <a href="#">
-              Henvis pasienten til helsenorge.no for mer informasjon
-            </a>
-          </div>
-        </Box>
+        <Link href="#" wideButton purple>
+          Henvis pasienten til helsenorge.no for mer informasjon
+        </Link>
       </div>
 
       <div className="col-xs-12 l-mt-5 l-mb-4">
