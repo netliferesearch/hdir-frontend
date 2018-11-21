@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
+import { HashRouter } from 'react-router-dom';
 
 // Components
 import Alert from '../components/Alert';
@@ -103,26 +104,100 @@ storiesOf('Welcome', module).add('Styles', () => (
 
 storiesOf('Pages', module)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup('Front page', () => <FrontPage />)
-  .addWithStaticMarkup('Search result page', () => <SearchResultPage />)
-  .addWithStaticMarkup('Simple search result page', () => <SimpleSerp />)
-  .addWithStaticMarkup('Article page', () => <ArticlePage />)
-  .addWithStaticMarkup('FrontPageHelfo', () => <FrontPageHelfo />)
-  .addWithStaticMarkup('ReportWithoutImage', () => <ReportPageWithoutImage />)
-  .addWithStaticMarkup('LIS speciality', () => <LisSpeciality />)
-  .addWithStaticMarkup('LIS learning', () => <LisLearning />)
-  .addWithStaticMarkup('LIS front page', () => <LisFrontPage />)
-  .addWithStaticMarkup('ProfessionSelector', () => <ProfessionSelector />)
-  .addWithStaticMarkup('LISLearningActivities', () => <LisLearningActivities />)
-  .addWithStaticMarkup('Chapter page', () => <ChapterPage />)
-  .addWithStaticMarkup('ChapterPageReport', () => <ChapterPageReport />)
-  .addWithStaticMarkup('Hearing page', () => <HearingPage />)
-  .addWithStaticMarkup('Memo page', () => <MemoPage />)
-  .addWithStaticMarkup('Parent memo page', () => <ParentMemoPage />)
-  .addWithStaticMarkup('Product page', () => <ProductPage />)
-  .addWithStaticMarkup('Recommendation page', () => <RecommendationPage />)
+  .addWithStaticMarkup('Front page', () => (
+    <HashRouter>
+      <FrontPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Search result page', () => (
+    <HashRouter>
+      <SearchResultPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Simple search result page', () => (
+    <HashRouter>
+      <SimpleSerp />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Article page', () => (
+    <HashRouter>
+      <ArticlePage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('ReportWithoutImage', () => (
+    <HashRouter>
+      <ReportPageWithoutImage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('LIS speciality', () => (
+    <HashRouter>
+      <LisSpeciality />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('LIS learning', () => (
+    <HashRouter>
+      <LisLearning />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('LIS front page', () => (
+    <HashRouter>
+      <LisFrontPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('ProfessionSelector', () => (
+    <HashRouter>
+      <ProfessionSelector />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('LISLearningActivities', () => (
+    <HashRouter>
+      <LisLearningActivities />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Chapter page', () => (
+    <HashRouter>
+      <ChapterPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('ChapterPageReport', () => (
+    <HashRouter>
+      <ChapterPageReport />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Hearing page', () => (
+    <HashRouter>
+      <HearingPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Memo page', () => (
+    <HashRouter>
+      <MemoPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Parent memo page', () => (
+    <HashRouter>
+      <ParentMemoPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Product page', () => (
+    <HashRouter>
+      <ProductPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Recommendation page', () => (
+    <HashRouter>
+      <RecommendationPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('FrontPageHelfo', () => (
+    <HashRouter>
+      <FrontPageHelfo />
+    </HashRouter>
+  ))
   .addWithStaticMarkup('Normative content page', () => (
-    <NormativeContentPage />
+    <HashRouter>
+      <NormativeContentPage />
+    </HashRouter>
   ));
 
 storiesOf('ContentLabel', module)
