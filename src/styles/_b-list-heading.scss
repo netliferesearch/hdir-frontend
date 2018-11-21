@@ -1,0 +1,9 @@
+.b-list-heading {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 7px solid $black;
+  padding-bottom: 0.75rem;
+  &__heading {
+    text-transform: uppercase;
+  }
+}

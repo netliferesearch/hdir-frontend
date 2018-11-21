@@ -19,8 +19,8 @@ const RadioButtonGroup = props => (
             value={option.value}
             disabled={option.disabled}
           />
-          {option.label}
           <i className="b-radio-button-group__indicator" />
+          {option.label}
         </label>
       );
     })}

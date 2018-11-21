@@ -20,6 +20,7 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
+import ListHeading from '../components/ListHeading';
 import PressRelease from '../components/PressRelease';
 import Box from '../components/Box';
 import Button from '../components/Button';
@@ -405,6 +406,21 @@ storiesOf('FilterList', module)
     />
   ));
 
+storiesOf('ListHeading', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <ListHeading
+      heading={text('Heading', '250 rapporter')}
+      selectLabel={text('Sort', 'SORTÉR')}
+      selectOptions={object('Options', [
+        'Sist publisert',
+        'Først publisert',
+        'Alfabetisk rekkefølge'
+      ])}
+    />
+  ));
+
 storiesOf('Statistics', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -556,7 +572,8 @@ storiesOf('Select', module)
     <Select
       label={text('Label', 'Tilpass siden til meg')}
       placeholder={text('Placeholder', 'Velg')}
-      stacked={boolean('stacked', false)}
+      stacked={boolean('Stacked', false)}
+      simple={boolean('Simple', false)}
       options={object('Options', [
         'Lege',
         'Kommune',
