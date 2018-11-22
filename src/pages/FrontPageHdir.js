@@ -7,11 +7,11 @@ import InputSearch from '../components/InputSearch';
 import Heading from '../components/Heading';
 
 const FrontPageHdir = () => (
-  <div>
-    <div className="l-container l-mt-3">
+  <div className="l-container">
+    <div className="l-container l-mt-3 l-mb-5">
       <div className="row">
-        <div className="col-md-8 col-md-offset-4">
-          <p className="l-mt-3">120 treff på Svangerskaps</p>
+        <div className="col-md-8 col-md-offset-2">
+          <p className="l-mt-3">120 treff på Svangerskap</p>
           <InputSearch id="xx" showSuggestions={false} />
         </div>
       </div>
@@ -49,7 +49,7 @@ const FrontPageHdir = () => (
       </Box>
     </div>
     <div className="l-mt-4 l-mb-4">
-      <Link href="#" wideButton>
+      <Link href="#" wideButton color="purple" arrow>
         Henvis pasienten til helsenorge.no for mer informasjon
       </Link>
     </div>
@@ -82,9 +82,9 @@ const FrontPageHdir = () => (
         />
       </Box>
     </div>
-    <div className="col-xs-12 l-mt-5 l-mb-4">
-      <hr className="b-hr b-hr--grey-light" />
-      <div className="col-md-8 l-mt-2">
+    <div className="col-xs-12 l-mt-5 l-mb-4 col-md-offset-2">
+      <hr className="b-hr b-hr--grey-light col-md-8" />
+      <div className="col-md-8 l-mt-2 ">
         <Heading h="h2">
           Legemidler på blå resept - når må du søke og når kan du forskrive
           direkte?
