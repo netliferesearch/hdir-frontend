@@ -39,8 +39,7 @@ const ArticlePage = () => (
             list={[
               { title: 'Bakgrunn', url: '#' },
               { title: 'Forebyggende arbeid', url: '#' },
-              { title: 'Arbeid bidrar til raskere bedring', url: '#' },
-              { title: 'Politisk satsning', url: '#' }
+              { title: 'Arbeid bidrar til raskere bedring', url: '#' }
             ]}
           />
         </aside>
@@ -85,7 +84,7 @@ const ArticlePage = () => (
             arbeidsgivere og ansatte/jobbsøkere til å skape et godt
             arbeidsmiljø.
           </p>
-          <h2>Bakgrunn</h2>
+          <h2>Arbeid bidrar til raskere bedring</h2>
           <p>
             Flertallet av personer med psykiske helseproblemer er i jobb.
             Likevel er det mange som står utenfor arbeidslivet og ønsker seg
@@ -131,7 +130,7 @@ const ArticlePage = () => (
             </Box>
           </div>
 
-          <div className="l-mt-4 col-xs-12 col-md-8">
+          <div className="l-mt-4 col-xs-12">
             <NavList
               heading="Rapporter om arbeid og psykisk helse"
               list={[
@@ -141,7 +140,7 @@ const ArticlePage = () => (
               ]}
             />
           </div>
-          <div className="l-mt-4 col-xs-12 col-md-8">
+          <div className="l-mt-4 col-xs-12">
             <NavList
               heading="Søk tilskudd innen arbeid og psykisk helse"
               list={[
