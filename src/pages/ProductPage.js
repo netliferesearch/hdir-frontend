@@ -122,16 +122,11 @@ const ProductPage = () => (
         </Box>
       </div>
 
-      <div className="col-xs-12 l-mt-4">
-        <div className="b-link-springboard">
-          <div className="col-md-10 col-md-offset-1">
-            For å lese om symptomer, kostholdsråd og andre tips ved
-            svangerskapsdiabetes, kan du gå til{' '}
-            <a href="#" className="b-link-springboard__link">
-              helsenorge.no.
-            </a>
-          </div>
-        </div>
+      <div className="col-xs-12 col-md-10 col-md-offset-1 l-mt-4">
+        <Link href="#" wideButton arrow color="purple">
+          For å lese om symptomer, kostholdsråd og andre tips ved
+          svangerskapsdiabetes, kan du gå til helsenorge.no.
+        </Link>
       </div>
 
       <div className="col-xs-12 l-mt-3">

@@ -373,7 +373,7 @@ storiesOf('Link', module)
       button={boolean('Button', false)}
       small={boolean('Small', false)}
       arrow={boolean('Arrow', false)}
-      purple={boolean('Purple', false)}
+      color={select('Color', { none: '', purple: 'purple' }, '')}
       wideButton={boolean('Wide button', false)}
     >
       {text('Content', 'Skriv ut')}
