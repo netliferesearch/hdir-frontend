@@ -32,6 +32,7 @@ import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import FrontPageHelfo from './pages/FrontPageHelfo';
 import FrontPageHdir from './pages/FrontPageHdir';
+import HdirTema from './pages/HdirTema';
 
 class App extends Component {
   componentDidMount() {
@@ -56,6 +57,7 @@ class App extends Component {
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/søkeresultat2" component={SimpleSerp} />
               <Route path="/artikkel" component={ArticlePage} />
+              <Route path="/HdirTema" component={HdirTema} />
               <Route path="/ForsideHELFO" component={FrontPageHelfo} />
               <Route path="/ForsideHDIR" component={FrontPageHdir} />
               <Route

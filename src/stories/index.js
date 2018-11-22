@@ -57,6 +57,7 @@ import ProfessionSelector from '../pages/ProfessionSelector';
 import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
 import FrontPageHelfo from '../pages/FrontPageHelfo';
 import FrontPageHdir from '../pages/FrontPageHdir';
+import HdirTema from '../pages/HdirTema';
 // React specific
 import InputSearch from '../components/InputSearch';
 
@@ -123,6 +124,11 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Article page', () => (
     <HashRouter>
       <ArticlePage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Hdir Tema', () => (
+    <HashRouter>
+      <HdirTema />
     </HashRouter>
   ))
   .addWithStaticMarkup('ReportWithoutImage', () => (
