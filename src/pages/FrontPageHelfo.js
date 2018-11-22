@@ -36,8 +36,13 @@ const FrontPageHelfo = () => (
           <div>
             <img src="./icons/print.svg" />
           </div>
-          <div className="col-md 8">
+          <div className="col-md-10">
             <Heading h="h2">Bruk riktig takst og regelverk</Heading>
+          </div>
+          <div classname="col-md-1 t-left">
+            <Link href="#" small arrow>
+              Se alt normerende innhold
+            </Link>
           </div>
         </div>
         <hr className="b-hr b-hr--thick" />
@@ -77,8 +82,13 @@ const FrontPageHelfo = () => (
           <div>
             <img src="./icons/print.svg" />
           </div>
-          <div className="col-md 8">
-            <Heading h="h2">Inngå eller endre en avtale</Heading>
+          <div className="col-md-10">
+            <Heading h="h2">Bruk riktig takst og regelverk</Heading>
+          </div>
+          <div classname="col-md-1 t-left">
+            <Link href="#" small arrow>
+              Se alt normerende innhold
+            </Link>
           </div>
         </div>
         <hr className="b-hr b-hr--thick" />
@@ -110,10 +120,15 @@ const FrontPageHelfo = () => (
       <div className="col-xs-12 l-mt-5 l-mb-4">
         <div className="row">
           <div>
-            <img src="./icons/method.svg" />
+            <img src="./icons/print.svg" />
           </div>
-          <div className="col-md 8">
-            <Heading h="h2">Påvegne av pasienten</Heading>
+          <div className="col-md-10">
+            <Heading h="h2">Bruk riktig takst og regelverk</Heading>
+          </div>
+          <div classname="col-md-1 t-left">
+            <Link href="#" small arrow>
+              Se alt normerende innhold
+            </Link>
           </div>
         </div>
         <hr className="b-hr b-hr--thick" />
