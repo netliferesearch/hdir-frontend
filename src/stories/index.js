@@ -56,6 +56,7 @@ import ChapterPageReport from '../pages/ChapterPageReport';
 import ProfessionSelector from '../pages/ProfessionSelector';
 import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
 import FrontPageHelfo from '../pages/FrontPageHelfo';
+import FrontPageHdir from '../pages/FrontPageHdir';
 // React specific
 import InputSearch from '../components/InputSearch';
 
@@ -132,6 +133,11 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('LIS speciality', () => (
     <HashRouter>
       <LisSpeciality />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('FrontPageHdir', () => (
+    <HashRouter>
+      <FrontPageHdir />
     </HashRouter>
   ))
   .addWithStaticMarkup('LIS learning', () => (
