@@ -49,7 +49,7 @@ const FrontPageHelfo = () => (
         </div>
       </div>
       <div className="l-mt-5 col-md-8">
-        <Link href="#" wideButton purple>
+        <Link href="#" wideButton>
           Henvis pasienten til helsenorge.no for mer informasjon
         </Link>
       </div>
