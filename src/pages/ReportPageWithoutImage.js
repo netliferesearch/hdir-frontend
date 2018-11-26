@@ -101,7 +101,7 @@ const ReportPageWithoutImage = () => (
             />
           </Box>
         </div>
-        <Subscribe />
+        <Subscribe heading="rgwerg" subheading="wefwefweg" />
         <PageMeta publishDate="11.08.2017" editDate="12.09.2018" />
       </div>
     </div>
