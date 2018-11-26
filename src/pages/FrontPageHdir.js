@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
 import NavList from '../components/NavList';
 import Link from '../components/Link';

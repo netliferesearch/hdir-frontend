@@ -1,15 +1,12 @@
 import React from 'react';
 import NavList from '../components/NavList';
-import ChapterHeading from '../components/ChapterHeading';
-import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
 import Link from '../components/Link';
-import LongShortHeading from '../components/LongShortHeading';
 import Select from '../components/Select';
-import Button from '../components/Button';
 import Heading from '../components/Heading';
-import Subscribe from '../components/Subscribe';
+import Collapsible from '../components/Collapsible';
 import Alert from '../components/Alert';
+import Button from '../components/Button';
 
 const FrontPageHelfo = () => (
   <div className="l-container">
@@ -30,53 +27,54 @@ const FrontPageHelfo = () => (
           />
         </form>
       </div>
+    </div>
 
-      <div className="col-xs-12 l-mt-5 l-mb-4">
-        <div className="row">
-          <div>
-            <img src="./icons/print.svg" />
-          </div>
-          <div className="col-md-10">
-            <Heading h="h2">Bruk riktig takst og regelverk</Heading>
-          </div>
-          <div classname="col-md-1 t-left">
-            <Link href="#" small arrow>
-              Se alt normerende innhold
-            </Link>
-          </div>
-        </div>
-        <hr className="b-hr b-hr--thick" />
-        <div className="row">
-          <div className="col-md-7">
-            <p className="l-mb-2">
-              Når du sender refusjonskrav, er det viktig at du kan dokumenterer
-              at refusjonsvilkåra er oppfylte. Då sikrar du at Helfo kan
-              kontrollere om refusjonskravet som er sett fram, er rett.
-            </p>
-            <div classname=" col-md 5 l-mt-3">
-              <Alert small status="warning">
-                Obs Endring i regelverk og takster fra 1. juli
-              </Alert>
-            </div>
-          </div>
+    <div className="row middle-xs">
+      <div className="col-xs-12 col-md-8">
+        <Heading h="h2">Bruk riktig takst og regelverk</Heading>
+      </div>
+      <div className="col-xs-12 col-md-4 t-lg-right">
+        <Link href="#" small>
+          Se alt normerende innhold
+        </Link>
+      </div>
+    </div>
 
-          <div className="col-md-5">
-            <NavList
-              list={[
-                { title: 'Refusjonskrav', url: '#' },
-                { title: 'Utbetaling og vedtak', url: '#' },
-                { title: 'Arbeid bidrar til raskere bedring', url: '#' }
-              ]}
-            />
-          </div>
+    <hr className="b-hr b-hr--thick" />
+
+    <div className="row">
+      <div className="col-md-7">
+        <p>
+          Når du sender refusjonskrav, er det viktig at du kan dokumenterer at
+          refusjonsvilkåra er oppfylte. Då sikrar du at Helfo kan kontrollere om
+          refusjonskravet som er sett fram, er rett.
+        </p>
+        <div classname=" col-md 5 l-mt-3">
+          <Alert small status="warning">
+            Obs Endring i regelverk og takster fra 1. juli
+          </Alert>
         </div>
       </div>
+      <div className="col-md-5">
+        <NavList
+          list={[
+            { title: 'Refusjonskrav', url: '#' },
+            { title: 'Utbetaling og vedtak', url: '#' },
+            { title: 'Arbeid bidrar til raskere bedring', url: '#' }
+          ]}
+        />
+      </div>
+    </div>
+
+    <div className="row">
       <div className="l-mt-5 col-md-8 col-md-offset-2">
         <Link href="#" wideButton color="purple" arrow>
           Henvis pasienten til helsenorge.no for mer informasjon
         </Link>
       </div>
+    </div>
 
+    <div className="row">
       <div className="col-xs-12 l-mt-5 l-mb-4">
         <div className="row">
           <div>
@@ -196,7 +194,31 @@ const FrontPageHelfo = () => (
         </div>
       </Box>
     </div>
-    <Subscribe />
+    <Collapsible heading="Abonnér på endringer – Nasjonal faglig retningslinje for svangerskapsdiabetes">
+      <form>
+        <div className="b-input-text">
+          <label htmlFor="email-subscription" className="b-input-text__label">
+            Fyll inn e-postadressen din for å motta varsler om endringer.
+          </label>
+          <input
+            type="text"
+            name="email-subscription"
+            className="b-input-text__input"
+          />
+          <div className="b-input-text__description">
+            Du får straks en e-post som bekrefter ditt abonnement. Der finner du
+            også melihet til å melde deg av.
+          </div>
+          <div className="b-input-text__error">
+            Skriv inn en gylig epost-adresse.
+          </div>
+          <Button>Abonnér</Button>
+        </div>
+      </form>
+      <Alert status="success">
+        Abonnementet ditt er registrert. Du får straks e-post fra oss.
+      </Alert>
+    </Collapsible>
   </div>
 );
 
