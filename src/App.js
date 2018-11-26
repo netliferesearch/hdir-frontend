@@ -57,9 +57,9 @@ class App extends Component {
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/søkeresultat2" component={SimpleSerp} />
               <Route path="/artikkel" component={ArticlePage} />
-              <Route path="/HdirTema" component={HdirTema} />
-              <Route path="/ForsideHELFO" component={FrontPageHelfo} />
-              <Route path="/ForsideHDIR" component={FrontPageHdir} />
+              <Route path="/hdir-tema" component={HdirTema} />
+              <Route path="/helfo-forside" component={FrontPageHelfo} />
+              <Route path="/hdir-forside" component={FrontPageHdir} />
               <Route
                 path="/rapportside-uten-bilde"
                 component={ReportPageWithoutImage}
