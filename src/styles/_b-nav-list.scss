@@ -109,9 +109,11 @@
 
     &--active {
       background-color: $green-light !important; // We use important here, because we don't have the hover state to override it.
+      transition: background-color 0.3s;
     }
     &--active-child {
       background-color: $green-light !important;
+      transition: background-color 0.3s;
     }
 
     &--no-arrow {
