@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
+import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { HashRouter } from 'react-router-dom';
 
 // Components
