@@ -17,11 +17,11 @@ body {
 // Units for vertical spacing
 // We take 10% of the viewport (window size) width and divide it.
 $space-map: (
-  tight: calc(10vw / 10),
-  small: calc(10vw / 6),
-  medium: calc(10vw / 4),
-  large: calc(10vw / 2),
-  x-large: calc(10vw / 1)
+  xs: calc(10vw / 10),
+  sm: calc(10vw / 6),
+  md: calc(10vw / 4),
+  lg: calc(10vw / 2),
+  xl: calc(10vw / 1)
 );
 $space-directions: (
   top: t,
@@ -29,6 +29,30 @@ $space-directions: (
   bottom: b,
   left: l
 );
+
+// Responsive text alignment
+.t {
+  @each $spaceName, $spaceValue in $flexboxgrid-breakpoints {
+    &-#{$spaceName}-right {
+      text-align: left;
+      @include mq($from: $spaceValue) {
+        text-align: right;
+      }
+    }
+    &-#{$spaceName}-left {
+      text-align: left;
+      @include mq($from: $spaceValue) {
+        text-align: left;
+      }
+    }
+    &-#{$spaceName}-center {
+      text-align: left;
+      @include mq($from: $spaceValue) {
+        text-align: center;
+      }
+    }
+  }
+}
 
 // Genereates spacing classes like this: l-mt-1
 // mt = margin-top, and the number represents a value from 1-5,
@@ -38,9 +62,10 @@ $space-directions: (
     @each $spaceName, $spaceValue in $space-map {
       &-m#{$shortDirection}-#{index($space-map, $spaceName $spaceValue)} {
         margin-#{$direction}: $spaceValue;
-      }
-      @include mq($until: tablet) {
-        margin-#{$direction}: calc($spaceValue * 1.5);
+
+        @include mq($until: tablet) {
+          margin-#{$direction}: calc(#{$spaceValue} * 2);
+        }
       }
     }
   }

@@ -133,16 +133,6 @@
   }
 }
 
-.t-right {
-  text-align: right;
-}
-.t-left {
-  text-align: left;
-}
-.t-center {
-  text-align: center;
-}
-
 .b-long-short-heading {
   position: relative;
   width: 100%;
@@ -294,4 +284,9 @@ small {
     text-align: left;
     flex-grow: 1;
   }
+}
+
+.t-image-wide {
+  width: 100%;
+  height: auto;
 }

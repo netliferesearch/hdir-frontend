@@ -47,6 +47,12 @@
         position: relative;
       }
     }
+    &--button-secondary {
+      @extend .b-link__link--button;
+      border: 2px solid $blue;
+      color: $blue !important;
+      background: white;
+    }
     &--button-wide {
       @extend .b-link__link--button;
       width: 100%;
