@@ -85,7 +85,7 @@ const ChapterPage = () => (
               heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
               subheading="kapittel 1"
               line="none"
-              url="#"
+              url="#a"
               overflow
             />
           </div>
@@ -219,11 +219,11 @@ const ChapterPage = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

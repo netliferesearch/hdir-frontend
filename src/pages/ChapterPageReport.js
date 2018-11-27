@@ -10,13 +10,13 @@ const ChapterPageReport = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
@@ -91,7 +91,7 @@ const ChapterPageReport = () => (
               <Card
                 heading="Forrige kapittel"
                 text="Den første samtalen i svangerskapet – forbeggung av svangerskaps-diabetes."
-                url="#"
+                url="#a"
                 leftArrow={true}
               />
             </div>
@@ -99,17 +99,17 @@ const ChapterPageReport = () => (
               <Card
                 heading="Neste kapittel"
                 text="Den første samtalen i svangerskapet – forbeggung av svangerskaps-diabetes."
-                url="#"
+                url="#a"
               />
             </div>
           </div>
 
           <div className="l-mt-4">
-            <Link href="#" small icon="./icons/method.svg">
+            <Link href="#a" small icon="./icons/method.svg">
               Om metode og prosess
             </Link>
             <br />
-            <Link href="#" small icon="./icons/print.svg">
+            <Link href="#a" small icon="./icons/print.svg">
               Skriv ut hele retningslinjen
             </Link>
           </div>
@@ -125,11 +125,11 @@ const ChapterPageReport = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

@@ -5,15 +5,15 @@ const Footer = () => (
     <div className="b-footer">
       <strong>Helsedirektoratet</strong>
       <br />
-      <a href="#" className="b-footer__link">
+      <a href="#a" className="b-footer__link">
         Menypunkt
       </a>
       <br />
-      <a href="#" className="b-footer__link">
+      <a href="#a" className="b-footer__link">
         Menypunkt
       </a>
       <br />
-      <a href="#" className="b-footer__link">
+      <a href="#a" className="b-footer__link">
         Menypunkt
       </a>
     </div>

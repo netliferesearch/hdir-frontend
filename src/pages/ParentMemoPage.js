@@ -11,13 +11,13 @@ const MemoChapterPage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
@@ -28,7 +28,7 @@ const MemoChapterPage = () => (
               long="Rundskriv for helsepersonelloven med kommentarer"
               short="Helsepersonelloven med kommentarer"
               icon={'https://placehold.it/64x64'}
-              url="#"
+              url="#a"
               linkText="Hva er rundskriv?"
             />
           </div>
@@ -67,16 +67,16 @@ const MemoChapterPage = () => (
             <div className="l-mt-2">
               <ul className="b-list b-list--no-style">
                 <li className="l-mb-1">
-                  <a href="#">§ 1. Lovens formål</a>
+                  <a href="#a">§ 1. Lovens formål</a>
                 </li>
                 <li className="l-mb-1">
-                  <a href="#">§ 2. Lovens virkeområde</a>
+                  <a href="#a">§ 2. Lovens virkeområde</a>
                 </li>
                 <li className="l-mb-1">
-                  <a href="#">§ 3. Definasjoner</a>
+                  <a href="#a">§ 3. Definasjoner</a>
                 </li>
               </ul>
-              <a href="#">
+              <a href="#a">
                 <strong>Les hele Kapittel 1</strong>
               </a>
             </div>
@@ -90,16 +90,16 @@ const MemoChapterPage = () => (
             <div className="l-mt-2">
               <ul className="b-list b-list--no-style">
                 <li className="l-mb-1">
-                  <a href="#">§ 1. Lovens formål</a>
+                  <a href="#a">§ 1. Lovens formål</a>
                 </li>
                 <li className="l-mb-1">
-                  <a href="#">§ 2. Lovens virkeområde</a>
+                  <a href="#a">§ 2. Lovens virkeområde</a>
                 </li>
                 <li className="l-mb-1">
-                  <a href="#">§ 3. Definasjoner</a>
+                  <a href="#a">§ 3. Definasjoner</a>
                 </li>
               </ul>
-              <a href="#">
+              <a href="#a">
                 <strong>Les hele Kapittel 2</strong>
               </a>
             </div>
@@ -113,33 +113,33 @@ const MemoChapterPage = () => (
             <div className="l-mt-2">
               <ul className="b-list b-list--no-style">
                 <li className="l-mb-1">
-                  <a href="#">§ 1. Lovens formål</a>
+                  <a href="#a">§ 1. Lovens formål</a>
                 </li>
                 <li className="l-mb-1">
-                  <a href="#">§ 2. Lovens virkeområde</a>
+                  <a href="#a">§ 2. Lovens virkeområde</a>
                 </li>
                 <li className="l-mb-1">
-                  <a href="#">§ 3. Definasjoner</a>
+                  <a href="#a">§ 3. Definasjoner</a>
                 </li>
               </ul>
-              <a href="#">
+              <a href="#a">
                 <strong>Les hele Kapittel 3</strong>
               </a>
             </div>
           </div>
 
           <div className="l-mt-4">
-            <Link href="#" small icon="./icons/method.svg">
+            <Link href="#a" small icon="./icons/method.svg">
               Om metode og prosess
             </Link>
             <br />
-            <Link href="#" small icon="./icons/print.svg">
+            <Link href="#a" small icon="./icons/print.svg">
               Skriv ut hele retningslinjen
             </Link>
           </div>
 
           <div className="l-mt-4">
-            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#" />
+            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#a" />
           </div>
         </article>
       </div>
@@ -149,11 +149,11 @@ const MemoChapterPage = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

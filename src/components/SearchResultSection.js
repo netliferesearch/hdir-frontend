@@ -52,7 +52,7 @@ const SearchResultSection = () => (
               </div>
             </li>
             <li className="b-search-result-section__subitem">
-              <a href="#" className="b-search-result-section__subitems-button">
+              <a href="#a" className="b-search-result-section__subitems-button">
                 ↓ <strong>Se alle</strong> (29 treff)
               </a>
             </li>

@@ -9,13 +9,13 @@ const AuthorizationFrontPage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
@@ -31,7 +31,7 @@ const AuthorizationFrontPage = () => (
               autorisasjon og/eller lisens fra Helsedirektoratet.
             </p>
             <p>
-              <Link href="#" arrow>
+              <Link href="#a" arrow>
                 In English: How to apply for authorisation or license
               </Link>
             </p>
@@ -53,14 +53,14 @@ const AuthorizationFrontPage = () => (
               </ul>
             </p>
             <br />
-            <Link href="#" button>
+            <Link href="#a" button>
               Start veiviseren
             </Link>
             <br />
             <p>
               <Collapsible heading="Jeg har søkt – hva skjer nå?" size="small">
                 This is some other content, and it includes{' '}
-                <a href="#">a link</a>
+                <a href="#a">a link</a>
               </Collapsible>
             </p>
             <p>
@@ -78,14 +78,14 @@ const AuthorizationFrontPage = () => (
         <div className="col-xs-12 col-md-4 l-mt-2">
           <Card
             heading="Innmeldingsliste –for læresteder og fylkeskommuner"
-            url="#"
+            url="#a"
           />
         </div>
         <div className="col-xs-12 col-md-4 l-mt-2">
-          <Card heading="Finn HPR-nummer i Helsepersonellregisteret" url="#" />
+          <Card heading="Finn HPR-nummer i Helsepersonellregisteret" url="#a" />
         </div>
         <div className="col-xs-12 col-md-4 l-mt-2">
-          <Card heading="Vurderer du å studere helsefag i utlandet?" url="#" />
+          <Card heading="Vurderer du å studere helsefag i utlandet?" url="#a" />
         </div>
       </div>
     </div>
@@ -96,11 +96,11 @@ const AuthorizationFrontPage = () => (
             <div className="col-xs-12">
               <strong>Kontakt:</strong>
               <br />
-              <a href="#">spesialisthelsetjenester@helsedir.no</a>
+              <a href="#a">spesialisthelsetjenester@helsedir.no</a>
               <br />
-              <a href="#">navn.etternavn@helsedir.no</a>
+              <a href="#a">navn.etternavn@helsedir.no</a>
               <br />
-              <a href="#">999 99 999</a>
+              <a href="#a">999 99 999</a>
             </div>
           </div>
         </div>

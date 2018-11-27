@@ -20,7 +20,7 @@ const Heading = props => {
 };
 
 Heading.propTypes = {
-  h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'none']),
+  h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'none']).isRequired,
   className: PropTypes.string
 };
 

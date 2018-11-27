@@ -1,5 +1,4 @@
 import React from 'react';
-import ContentLabel from '../components/ContentLabel';
 
 const SearchResultSection = () => (
   <ul className="b-search-result-section">
@@ -10,7 +9,7 @@ const SearchResultSection = () => (
       <ul className="b-search-result-section__items">
         <li className="b-search-result-section__item">
           <h2 className="h3 h3--secondary-color b-search-result-section__header">
-            <a href="#" className="b-search-result-section__link">
+            <a href="#a" className="b-search-result-section__link">
               Nasjonal faglig reningslinje for svangerskapsdiabetes
             </a>
           </h2>
@@ -22,7 +21,7 @@ const SearchResultSection = () => (
         </li>
         <li className="b-search-result-section__item">
           <h2 className="h3 h3--secondary-color b-search-result-section__header">
-            <a href="#" className="b-search-result-section__link">
+            <a href="#a" className="b-search-result-section__link">
               Nasjonal faglig reningslinje for svangerskapsdiabetes
             </a>
           </h2>
@@ -34,7 +33,7 @@ const SearchResultSection = () => (
         </li>
         <li className="b-search-result-section__item">
           <h2 className="h3 h3--secondary-color b-search-result-section__header">
-            <a href="#" className="b-search-result-section__link">
+            <a href="#a" className="b-search-result-section__link">
               Nasjonal faglig reningslinje for svangerskapsdiabetes
             </a>
           </h2>

@@ -47,6 +47,15 @@ const FrontPage = () => (
         <Link to="/søkeresultat2">Enkel SERP</Link>
       </p>
       <p>
+        <Link to="/helfo-forside">Helfo forside</Link>
+      </p>
+      <p>
+        <Link to="/hdir-forside">Helsedirektoratet forside</Link>
+      </p>
+      <p>
+        <Link to="/hdir-tema">Helsedirektoratet temaside</Link>
+      </p>
+      <p>
         <Link to="/høringer-forside">Høringer forside</Link>
       </p>
       <p>

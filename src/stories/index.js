@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
+import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { HashRouter } from 'react-router-dom';
 
 // Components
@@ -390,6 +391,7 @@ storiesOf('Link', module)
       icon={text('Icon', './icons/method.svg')}
       button={boolean('Button', false)}
       small={boolean('Small', false)}
+      secondary={boolean('Secondary', false)}
       arrow={boolean('Arrow', false)}
       color={select('Color', { none: '', purple: 'purple' }, '')}
       wideButton={boolean('Wide button', false)}

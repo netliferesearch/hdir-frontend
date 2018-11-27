@@ -133,16 +133,6 @@
   }
 }
 
-.t-right {
-  text-align: right;
-}
-.t-left {
-  text-align: left;
-}
-.t-center {
-  text-align: center;
-}
-
 .b-long-short-heading {
   position: relative;
   width: 100%;
@@ -293,5 +283,49 @@ small {
     margin-top: 0.25em;
     text-align: left;
     flex-grow: 1;
+  }
+}
+
+.t-image-wide {
+  width: 100%;
+  height: auto;
+}
+
+.b-input-text {
+  &__label {
+    font-size: $meta-text;
+  }
+  &__input {
+    display: block;
+    width: 25em;
+    max-width: 100%;
+    margin-top: 0.5em;
+    font-size: $base-font-size;
+    padding: 0.5em;
+    border-radius: 4px;
+    border: 2px solid $brand-color;
+    background: white;
+  }
+  &__error {
+    color: $red;
+    font-size: $meta-text;
+    margin-bottom: 1em;
+  }
+}
+
+.b-image {
+  &--16-9 {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 }

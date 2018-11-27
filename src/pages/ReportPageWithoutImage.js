@@ -4,19 +4,18 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
-import Subscribe from '../components/Subscribe';
 
 const ReportPageWithoutImage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
@@ -35,7 +34,7 @@ const ReportPageWithoutImage = () => (
               heading="Ventetid"
               subheading="Kapittel 1"
               line="none"
-              url="#"
+              url="#a"
             />
             <hr className="b-hr b-hr--blue" />
             <NavList
@@ -71,7 +70,7 @@ const ReportPageWithoutImage = () => (
               heading="Nyhenviste, avviklede og ventende"
               subheading="Kapittel 2"
               line="none"
-              url="#"
+              url="#a"
             />
             <hr className="b-hr b-hr--blue" />
             <NavList
@@ -101,7 +100,6 @@ const ReportPageWithoutImage = () => (
             />
           </Box>
         </div>
-        <Subscribe heading="rgwerg" subheading="wefwefweg" />
         <PageMeta publishDate="11.08.2017" editDate="12.09.2018" />
       </div>
     </div>
