@@ -4,6 +4,8 @@ import Box from '../components/Box';
 import Heading from '../components/Heading';
 import ArticleIntro from '../components/ArticleIntro';
 import Card from '../components/Card';
+import Link from '../components/Link';
+import Image from '../components/Image';
 import Statistics from '../components/Statistics';
 import PressRelease from '../components/PressRelease';
 
@@ -48,7 +50,7 @@ const HdirTema = () => (
 
     <div className="l-container">
       <div className="row">
-        <div className="col-xs-12 l-mt-5 l-mb-4">
+        <div className="col-xs-12 l-mt-5">
           <h2>Tilskudd</h2>
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
@@ -87,14 +89,14 @@ const HdirTema = () => (
       </div>
 
       <div className="row">
-        <div className="col-xs-12 l-mt-4">
+        <div className="col-xs-12 l-mt-5">
           <h2>Statistikk</h2>
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
           <div className="l-mt-3">
             <Heading h="h3" className="h5">
-              Nyeste statistikk
+              Fremhevet statistikk
             </Heading>
           </div>
         </div>
@@ -124,6 +126,144 @@ const HdirTema = () => (
         </div>
       </div>
       <div className="row l-mt-4">
+        <div className="col-xs-12">
+          <Heading h="h3" className="h5">
+            Mer statistikk
+          </Heading>
+          <div className="l-mt-1 l-mb-1">
+            <hr className="b-hr" />
+          </div>
+        </div>
+        <NavList
+          list={[
+            {
+              title:
+                'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn',
+              url: '#'
+            },
+            {
+              title:
+                'Utviklingsstrategi for helsestasjons- og skolehelsetjenesten',
+              url: '#'
+            },
+            {
+              title:
+                'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten',
+              url: '#'
+            }
+          ]}
+        />
+      </div>
+
+      <div className="row">
+        <div className="col-xs-12 l-mt-5">
+          <h2>Rapporter</h2>
+          <div className="l-mt-1">
+            <hr className="b-hr b-hr--thick" />
+          </div>
+          <div className="l-mt-3">
+            <Heading h="h3" className="h5">
+              Fremhevede rapporter
+            </Heading>
+          </div>
+        </div>
+
+        <div className="col-xs-12 col-md-6 l-mt-2">
+          <Card heading="Ventetider og pasientrettigheter 2017" url="#">
+            <Image
+              src="http://placehold.it/500x400"
+              alt="altText"
+              ratio="16:9"
+            />
+          </Card>
+        </div>
+        <div className="col-xs-12 col-md-6 l-mt-2">
+          <Card heading="Ventetider og pasientrettigheter 2017" url="#">
+            <Image
+              src="http://placehold.it/400x400"
+              alt="altText"
+              ratio="16:9"
+            />
+          </Card>
+        </div>
+      </div>
+
+      <div className="row l-mt-4">
+        <div className="col-xs-12">
+          <Heading h="h3" className="h5">
+            Flere rapporter
+          </Heading>
+          <div className="l-mt-1 l-mb-1">
+            <hr className="b-hr" />
+          </div>
+        </div>
+        <NavList
+          list={[
+            {
+              title:
+                'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn',
+              url: '#'
+            },
+            {
+              title:
+                'Utviklingsstrategi for helsestasjons- og skolehelsetjenesten',
+              url: '#'
+            },
+            {
+              title:
+                'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten',
+              url: '#'
+            }
+          ]}
+        />
+      </div>
+
+      <div className="row l-mt-5">
+        <div className="col-xs-12">
+          <h2>Konferanser</h2>
+          <div className="l-mt-1 l-mb-1">
+            <hr className="b-hr b-hr--thick" />
+          </div>
+        </div>
+        <div className="col-xs-12">
+          <NavList
+            list={[
+              {
+                title:
+                  'Lansering av nye nasjonale faglige reninglinjer for helsestasjons og skolehelsetjenester og for spedbarns-ernæring',
+                url: '#b'
+              }
+            ]}
+          />
+        </div>
+      </div>
+
+      <div className="row l-mt-5">
+        <div className="col-xs-12">
+          <h2>Verktøy</h2>
+          <div className="l-mt-1 l-mb-1">
+            <hr className="b-hr b-hr--thick" />
+          </div>
+        </div>
+        <div className="col-xs-12">
+          <NavList
+            list={[
+              {
+                title: 'Kalkulator for estimering av bemanning',
+                url: '#a'
+              }
+            ]}
+          />
+        </div>
+      </div>
+
+      <div className="row l-mt-5">
+        <div className="col-xs-12">
+          <h2>Trykkmateriell</h2>
+          <div className="l-mt-1 l-mb-1">
+            <hr className="b-hr b-hr--thick" />
+          </div>
+        </div>
         <div className="col-xs-12 col-md-6">
           <PressRelease
             title="Barns miljø og sikkerhet / når barnet skader seg"
@@ -147,7 +287,16 @@ const HdirTema = () => (
       </div>
     </div>
 
-    <div className="l-mt-4">
+    <div className="row">
+      <div className="l-mt-5 col-md-8 col-md-offset-2">
+        <Link href="#" wideButton color="purple" arrow>
+          Er det noe på helsenorge.no som er relevant kan man bruke denne
+          modulen
+        </Link>
+      </div>
+    </div>
+
+    <div className="l-mt-5">
       <Box color="green" square noPadding>
         <div className="l-container">
           <strong>Kontakt:</strong>

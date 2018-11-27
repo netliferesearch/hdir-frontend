@@ -159,6 +159,51 @@ const FrontPageHdir = () => (
         </div>
       </div>
 
+      <div className="row middle-xs l-mt-5">
+        <div className="col-xs-12 col-md-8">
+          <Heading h="h2">Tilskudd</Heading>
+        </div>
+        <div className="col-xs-12 col-md-4 t-lg-right">
+          <Link href="#" small>
+            Se alle tilskudd
+          </Link>
+        </div>
+      </div>
+      <div className="l-mt-1">
+        <hr className="b-hr b-hr--thick" />
+      </div>
+      <div className="row l-mt-1">
+        <div className="col-xs-12">
+          <NavList
+            columns
+            list={[
+              {
+                title: 'Helsestasjon- og skolehelsetjenesten',
+                description: 'Søknadsfrist: 19. november',
+                url: '#a'
+              },
+              {
+                title:
+                  'Utvikling av skolehelsetjenesten i den videregående skole',
+                description: 'Søknadsfrist: 15. februar',
+                url: '#a'
+              },
+              {
+                title:
+                  'Styrking og utvikling av helestasjons- og skolehelsetjenesten',
+                description: 'Søknadsfrist: 05. november',
+                url: '#a'
+              },
+              {
+                title: 'Særlig ressurskrevende helse- og omsorgstjenter',
+                description: 'Søknadsfrist: 19. februar',
+                url: '#a'
+              }
+            ]}
+          />
+        </div>
+      </div>
+
       <div className="l-mt-4">
         <NavList
           columns
