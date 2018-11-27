@@ -55,8 +55,8 @@ const ChapterHeading = props => (
 ChapterHeading.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  line: PropTypes.oneOf(['top', 'bottom', 'none']),
-  h: PropTypes.oneOf(['h1', 'h2']),
+  line: PropTypes.oneOf(['top', 'bottom', 'none']).isRequired,
+  h: PropTypes.oneOf(['h1', 'h2']).isRequired,
   overflow: PropTypes.bool,
   url: PropTypes.string
 };
