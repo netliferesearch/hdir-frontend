@@ -1,5 +1,4 @@
 import React from 'react';
-import ContentLabel from '../components/ContentLabel';
 
 const SearchResultSection = () => (
   <ul className="b-search-result-section">

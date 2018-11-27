@@ -78,7 +78,7 @@ const FrontPageHelfo = () => (
       <div className="col-xs-12 l-mt-5 l-mb-4">
         <div className="row">
           <div>
-            <img src="./icons/print.svg" />
+            <img src="./icons/print.svg" alt="icon" />
           </div>
           <div className="col-md-10">
             <Heading h="h2">Bruk riktig takst og regelverk</Heading>
@@ -118,7 +118,7 @@ const FrontPageHelfo = () => (
       <div className="col-xs-12 l-mt-5 l-mb-4">
         <div className="row">
           <div>
-            <img src="./icons/print.svg" />
+            <img src="./icons/print.svg" alt="icon" />
           </div>
           <div className="col-md-10">
             <Heading h="h2">Bruk riktig takst og regelverk</Heading>

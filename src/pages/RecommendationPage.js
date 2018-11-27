@@ -1,6 +1,4 @@
 import React from 'react';
-import ArticleIntro from '../components/ArticleIntro';
-import PageMeta from '../components/PageMeta';
 import Collapsible from '../components/Collapsible';
 import Link from '../components/Link';
 import Box from '../components/Box';
