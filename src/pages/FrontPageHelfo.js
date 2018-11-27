@@ -49,7 +49,7 @@ const FrontPageHelfo = () => (
           refusjonsvilkåra er oppfylte. Då sikrar du at Helfo kan kontrollere om
           refusjonskravet som er sett fram, er rett.
         </p>
-        <div classname=" col-md 5 l-mt-3">
+        <div className=" col-md 5 l-mt-3">
           <Alert small status="warning">
             Obs Endring i regelverk og takster fra 1. juli
           </Alert>
@@ -83,7 +83,7 @@ const FrontPageHelfo = () => (
           <div className="col-md-10">
             <Heading h="h2">Bruk riktig takst og regelverk</Heading>
           </div>
-          <div classname="col-md-1 t-left">
+          <div className="col-md-1 t-left">
             <Link href="#" small arrow>
               Se alt normerende innhold
             </Link>
@@ -98,7 +98,7 @@ const FrontPageHelfo = () => (
               avtale om direkte oppgjør er en personlig og gjensidig
               forpliktende avtale mellom deg og Helfo.
             </p>
-            <div classname=" l-mt-3 col-md-6">
+            <div className=" l-mt-3 col-md-6">
               <Alert small status="warning">
                 Obs Endring i regelverk og takster fra 1. juli
               </Alert>
@@ -123,7 +123,7 @@ const FrontPageHelfo = () => (
           <div className="col-md-10">
             <Heading h="h2">Bruk riktig takst og regelverk</Heading>
           </div>
-          <div classname="col-md-1 t-left">
+          <div className="col-md-1 t-left">
             <Link href="#" small arrow>
               Se alt normerende innhold
             </Link>
