@@ -30,6 +30,9 @@
         top: -0.1em;
       }
     }
+    &--secondary {
+      @include link-init($grey, true, $grey);
+    }
     &--button {
       box-sizing: border-box;
       display: inline-block;

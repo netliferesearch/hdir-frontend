@@ -391,6 +391,7 @@ storiesOf('Link', module)
       icon={text('Icon', './icons/method.svg')}
       button={boolean('Button', false)}
       small={boolean('Small', false)}
+      secondary={boolean('Secondary', false)}
       arrow={boolean('Arrow', false)}
       color={select('Color', { none: '', purple: 'purple' }, '')}
       wideButton={boolean('Wide button', false)}
