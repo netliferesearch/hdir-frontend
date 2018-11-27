@@ -106,7 +106,7 @@ const HdirTema = () => (
           <Card
             heading="Pakkeforløp for brystkreft"
             text="Kvalitetsindikator"
-            url="#"
+            url="#a"
           >
             <Statistics
               bigText="91,3%"
@@ -116,7 +116,7 @@ const HdirTema = () => (
           </Card>
         </div>
         <div className="col-xs-12 col-md-6 l-mt-2">
-          <Card heading="Fastlegestatistikk" text="Kvalitetsindikator" url="#">
+          <Card heading="Fastlegestatistikk" text="Kvalitetsindikator" url="#a">
             <Statistics
               bigText="1106"
               smallText="Antall på en gjennomsnittlig liste for fastleger."
@@ -169,7 +169,7 @@ const HdirTema = () => (
         </div>
 
         <div className="col-xs-12 col-md-6 l-mt-2">
-          <Card heading="Ventetider og pasientrettigheter 2017" url="#">
+          <Card heading="Ventetider og pasientrettigheter 2017" url="#a">
             <Image
               src="http://placehold.it/500x400"
               alt="altText"
@@ -178,7 +178,7 @@ const HdirTema = () => (
           </Card>
         </div>
         <div className="col-xs-12 col-md-6 l-mt-2">
-          <Card heading="Ventetider og pasientrettigheter 2017" url="#">
+          <Card heading="Ventetider og pasientrettigheter 2017" url="#a">
             <Image
               src="http://placehold.it/400x400"
               alt="altText"
@@ -289,7 +289,7 @@ const HdirTema = () => (
 
     <div className="row">
       <div className="l-mt-5 col-md-8 col-md-offset-2">
-        <Link href="#" wideButton color="purple" arrow>
+        <Link href="#a" wideButton color="purple" arrow>
           Er det noe på helsenorge.no som er relevant kan man bruke denne
           modulen
         </Link>
@@ -301,11 +301,11 @@ const HdirTema = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

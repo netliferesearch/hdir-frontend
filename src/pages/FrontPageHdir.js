@@ -26,7 +26,7 @@ const FrontPageHdir = () => (
             <Heading h="h2">"Normerende innhold"</Heading>
           </div>
           <div className="col-xs-12 col-md-4 t-lg-right">
-            <Link href="#" small>
+            <Link href="#a" small>
               Se alt normerende innhold
             </Link>
           </div>
@@ -55,7 +55,7 @@ const FrontPageHdir = () => (
     </Box>
     <div className="l-container">
       <div className="l-mt-4">
-        <Link href="#" wideButton color="purple" arrow>
+        <Link href="#a" wideButton color="purple" arrow>
           Henvis pasienten til helsenorge.no for mer informasjon
         </Link>
       </div>
@@ -68,7 +68,7 @@ const FrontPageHdir = () => (
               <Heading h="h2">Autorisasjon og spesialistutdanning</Heading>
             </div>
             <div className="col-xs-12 col-md-4 t-lg-right">
-              <Link href="#" small>
+              <Link href="#a" small>
                 Se alt innhold
               </Link>
             </div>
@@ -117,7 +117,7 @@ const FrontPageHdir = () => (
           <Heading h="h2">Tilskudd</Heading>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
-          <Link href="#" small>
+          <Link href="#a" small>
             Se alle tilskudd
           </Link>
         </div>
@@ -164,7 +164,7 @@ const FrontPageHdir = () => (
           <Heading h="h2">Tilskudd</Heading>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
-          <Link href="#" small>
+          <Link href="#a" small>
             Se alle tilskudd
           </Link>
         </div>
@@ -254,11 +254,11 @@ const FrontPageHdir = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

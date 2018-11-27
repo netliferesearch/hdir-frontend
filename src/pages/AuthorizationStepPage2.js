@@ -7,13 +7,13 @@ const AuthorizationStepPage2 = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
@@ -71,7 +71,7 @@ const AuthorizationStepPage2 = () => (
             <div className="col-xs-6">Er du helseutdannet i Norge?</div>
             <div className="col-xs-3">Ja</div>
             <div className="col-xs-3 t-right">
-              <a href="#">Endre svar</a>
+              <a href="#a">Endre svar</a>
             </div>
           </div>
           <hr className="b-hr b-hr--grey-light" />
@@ -79,7 +79,7 @@ const AuthorizationStepPage2 = () => (
             <div className="col-xs-6">Er du helseutdannet i Norge?</div>
             <div className="col-xs-3">Ja</div>
             <div className="col-xs-3 t-right">
-              <a href="#">Endre svar</a>
+              <a href="#a">Endre svar</a>
             </div>
           </div>
           <hr className="b-hr b-hr--grey-light" />
@@ -93,11 +93,11 @@ const AuthorizationStepPage2 = () => (
             <div className="col-xs-12">
               <strong>Kontakt:</strong>
               <br />
-              <a href="#">spesialisthelsetjenester@helsedir.no</a>
+              <a href="#a">spesialisthelsetjenester@helsedir.no</a>
               <br />
-              <a href="#">navn.etternavn@helsedir.no</a>
+              <a href="#a">navn.etternavn@helsedir.no</a>
               <br />
-              <a href="#">999 99 999</a>
+              <a href="#a">999 99 999</a>
             </div>
           </div>
         </div>

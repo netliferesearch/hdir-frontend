@@ -44,7 +44,7 @@ const HearingPage = () => (
             <h2>Høringsbrev</h2>
             <p>
               <strong>Les utkast: </strong>
-              <a href="#">
+              <a href="#a">
                 Nasjonal faglig retningslinje for svangerskapsdiabetes (høring)
               </a>
             </p>
@@ -67,7 +67,7 @@ const HearingPage = () => (
               dere ser at det er behov for det. Andre kommentarer kan fylles inn
               under «generelle kommentarer». Vennligst benytt mal for eksterne
               høringsinnspill (DOCX) / mal for eksterne høringsinnspill (DOC).
-              Høringsinnspill sendes til <a href="#">postmottak@helsedir.no</a>{' '}
+              Høringsinnspill sendes til <a href="#a">postmottak@helsedir.no</a>{' '}
               med referanse «16/34843».
             </p>
             <div className="l-mt-3">
@@ -102,11 +102,11 @@ const HearingPage = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

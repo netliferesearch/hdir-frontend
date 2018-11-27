@@ -13,13 +13,13 @@ const StatisticsPage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
@@ -39,7 +39,7 @@ const StatisticsPage = () => (
               <Card
                 heading="Pakkeforløp for brystkreft"
                 text="Kvalitetsindikator"
-                url="#"
+                url="#a"
               >
                 <Statistics
                   bigText="91,3%"
@@ -52,7 +52,7 @@ const StatisticsPage = () => (
               <Card
                 heading="Fastlegestatistikk"
                 text="Kvalitetsindikator"
-                url="#"
+                url="#a"
               >
                 <Statistics
                   bigText="1106"
@@ -131,7 +131,7 @@ const StatisticsPage = () => (
           </div>
           <div className="l-mt-2">
             <small>
-              <a href="#">Nullstill alle filtre</a>
+              <a href="#a">Nullstill alle filtre</a>
             </small>
           </div>
         </aside>

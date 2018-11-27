@@ -32,7 +32,7 @@ class FilterList extends Component {
           {this.props.list.map(item => (
             <li className="b-filter-list__list-item" key={shortid.generate()}>
               <a
-                href="#"
+                href="#a"
                 className={classNames({
                   'b-filter-list__list-item-link': true,
                   'b-filter-list__list-item-link--active':

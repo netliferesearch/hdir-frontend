@@ -10,13 +10,13 @@ const ReportPage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
@@ -36,7 +36,7 @@ const ReportPage = () => (
               heading="Ventetid"
               subheading="Kapittel 1"
               line="none"
-              url="#"
+              url="#a"
             />
             <hr className="b-hr b-hr--blue" />
             <NavList
@@ -72,7 +72,7 @@ const ReportPage = () => (
               heading="Nyhenviste, avviklede og ventende"
               subheading="Kapittel 2"
               line="none"
-              url="#"
+              url="#a"
             />
             <hr className="b-hr b-hr--blue" />
             <NavList

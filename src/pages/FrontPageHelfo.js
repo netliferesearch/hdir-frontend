@@ -34,7 +34,7 @@ const FrontPageHelfo = () => (
         <Heading h="h2">Bruk riktig takst og regelverk</Heading>
       </div>
       <div className="col-xs-12 col-md-4 t-lg-right">
-        <Link href="#" small>
+        <Link href="#a" small>
           Se alt normerende innhold
         </Link>
       </div>
@@ -68,7 +68,7 @@ const FrontPageHelfo = () => (
 
     <div className="row">
       <div className="l-mt-5 col-md-8 col-md-offset-2">
-        <Link href="#" wideButton color="purple" arrow>
+        <Link href="#a" wideButton color="purple" arrow>
           Henvis pasienten til helsenorge.no for mer informasjon
         </Link>
       </div>
@@ -84,7 +84,7 @@ const FrontPageHelfo = () => (
             <Heading h="h2">Bruk riktig takst og regelverk</Heading>
           </div>
           <div className="col-md-1 t-left">
-            <Link href="#" small arrow>
+            <Link href="#a" small arrow>
               Se alt normerende innhold
             </Link>
           </div>
@@ -124,7 +124,7 @@ const FrontPageHelfo = () => (
             <Heading h="h2">Bruk riktig takst og regelverk</Heading>
           </div>
           <div className="col-md-1 t-left">
-            <Link href="#" small arrow>
+            <Link href="#a" small arrow>
               Se alt normerende innhold
             </Link>
           </div>
@@ -186,11 +186,11 @@ const FrontPageHelfo = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

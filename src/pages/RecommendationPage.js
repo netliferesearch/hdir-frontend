@@ -339,11 +339,11 @@ const RecommendationPage = () => (
                               Barn med fødselsvekt
                             </p>
                             <div className="l-mt-4 l-mb-4">
-                              <Link href="#" small icon="./icons/method.svg">
+                              <Link href="#a" small icon="./icons/method.svg">
                                 Om metode og prosess
                               </Link>
                               <br />
-                              <Link href="#" small icon="./icons/print.svg">
+                              <Link href="#a" small icon="./icons/print.svg">
                                 Skriv ut hele retningslinjen
                               </Link>
                             </div>
@@ -449,7 +449,7 @@ const RecommendationPage = () => (
           </div>
           <hr />
           <div className="l-mt-3 t-sm-right">
-            <Link href="#" secondary small>
+            <Link href="#a" secondary small>
               Sist endret: 11.08.2018
             </Link>
           </div>
@@ -461,11 +461,11 @@ const RecommendationPage = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>
