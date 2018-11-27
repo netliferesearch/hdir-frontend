@@ -19,14 +19,18 @@ const ReportPageWithoutImage = () => (
           Dolor
         </a>
       </nav>
-      <div className="l-mt-2 b-bleed b-bleed--blue">
-        <ChapterHeading
-          subheading="Rapport"
-          heading="Ventetider og pasientrettigheter 2017"
-          line="none"
-          h="h1"
-        />
-      </div>
+      <Box color="green">
+        <Box color="blueDark">
+          <div className="l-mt-1 l-mb-1">
+            <ChapterHeading
+              subheading="Rapport"
+              heading="Ventetider og pasientrettigheter 2017"
+              line="none"
+              h="h1"
+            />
+          </div>
+        </Box>
+      </Box>
       <div className="row l-mt-4">
         <div className="col-xs-12 l-mb-4">
           <Box color="blue">
