@@ -3,7 +3,7 @@ import NavList from '../components/NavList';
 import Box from '../components/Box';
 import Link from '../components/Link';
 import Select from '../components/Select';
-import Heading from '../components/Heading';
+
 import Collapsible from '../components/Collapsible';
 import Alert from '../components/Alert';
 import Button from '../components/Button';
