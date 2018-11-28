@@ -13,6 +13,7 @@ import ArticleIntro from '../components/ArticleIntro';
 import ChapterHeading from '../components/ChapterHeading';
 import ContentLabel from '../components/ContentLabel';
 import Collapsible from '../components/Collapsible';
+import AlertBar from '../components/AlertBar';
 import FilterList from '../components/FilterList';
 // import Footer from '../components/Footer';
 import Heading from '../components/Heading';
@@ -390,6 +391,8 @@ storiesOf('Link', module)
       href={text('href', '#')}
       icon={text('Icon', './icons/method.svg')}
       button={boolean('Button', false)}
+      buttonSecondary={boolean('Button secondary', false)}
+      buttonInherit={boolean('Button inherit', false)}
       small={boolean('Small', false)}
       secondary={boolean('Secondary', false)}
       arrow={boolean('Arrow', false)}
@@ -620,6 +623,52 @@ storiesOf('Quote', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
+  ));
+
+storiesOf('AlertBar', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <AlertBar
+      heading={text(
+        'Heading',
+        'WHO erklærer Public Health Emergency of International Concern (PHEIC) i forbindelse med influensautbrudd.'
+      )}
+      lastUpdated={text('Text', 'Mandag 06. oktober 08:15')}
+      alertLevel={select(
+        'Alert level',
+        {
+          high: 'high',
+          medium: 'medium',
+          low: 'low'
+        },
+        'high'
+      )}
+    >
+      {text('Text', 'This is some content, probably from rich text.')}
+    </AlertBar>
+  ))
+  .addWithStaticMarkup('With content', () => (
+    <AlertBar
+      heading={text(
+        'Heading',
+        'WHO erklærer Public Health Emergency of International Concern (PHEIC) i forbindelse med influensautbrudd.'
+      )}
+      lastUpdated={text('Last updated', 'Mandag 06. oktober 08:15')}
+      alertLevel={select(
+        'Alert level',
+        {
+          high: 'high',
+          medium: 'medium',
+          low: 'low'
+        },
+        'high'
+      )}
+    >
+      <Link href="#" buttonInherit>
+        Les mer
+      </Link>
+    </AlertBar>
   ));
 
 storiesOf('SquareImage', module)

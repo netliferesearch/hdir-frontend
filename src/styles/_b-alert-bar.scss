@@ -1,0 +1,24 @@
+.b-alert-bar {
+  border-width: 7px;
+  border-style: solid;
+  background-color: white;
+  &--high {
+    border-color: $red;
+    color: $red;
+    padding: 10vh 0 8vh 0;
+  }
+  &--medium {
+    border-color: $red;
+    color: $red;
+    padding: 6vh 0 4vh 0;
+  }
+  &--low {
+    border-color: $green-dark;
+    color: $green-dark;
+    padding: 1rem 0;
+  }
+  &__date {
+    margin-top: 1em;
+    font-size: $meta-text;
+  }
+}
