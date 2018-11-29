@@ -93,33 +93,30 @@ class Collapsible extends React.Component {
             {props.heading}
           </Heading>
         </button>
-        {props.subheading &&
-          !props.subheadingContent && (
-            <div className="b-collapsible__subheading l-mt-1">
-              {props.subheading}
-            </div>
-          )}
-        {props.subheading &&
-          props.subheadingContent && (
-            <div className="b-collapsible__subheading-collapsible l-mt-1">
-              <Collapsible
-                heading={props.subheading}
-                subtle={props.subheadingContent}
-                size="small"
-                smallContent
-              >
-                <p>{props.subheadingContent}</p>
-              </Collapsible>
-            </div>
-          )}
-        {!this.state.collapsed &&
-          props.alert && (
-            <div className="l-mt-1">
-              <Alert status="success" small>
-                {props.alert}
-              </Alert>
-            </div>
-          )}
+        {props.subheading && !props.subheadingContent && (
+          <div className="b-collapsible__subheading l-mt-1">
+            {props.subheading}
+          </div>
+        )}
+        {props.subheading && props.subheadingContent && (
+          <div className="b-collapsible__subheading-collapsible l-mt-1">
+            <Collapsible
+              heading={props.subheading}
+              subtle={props.subheadingContent}
+              size="small"
+              smallContent
+            >
+              <p>{props.subheadingContent}</p>
+            </Collapsible>
+          </div>
+        )}
+        {!this.state.collapsed && props.alert && (
+          <div className="l-mt-1">
+            <Alert status="success" small>
+              {props.alert}
+            </Alert>
+          </div>
+        )}
 
         <div
           id="collapsible-0"
@@ -138,7 +135,7 @@ Collapsible.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   subheadingContent: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,
   alert: PropTypes.string

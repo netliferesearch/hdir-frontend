@@ -35,7 +35,9 @@ const ChapterHeading = props => (
         className={headingClasses(props.line, props.overflow, props.url)}
       >
         <Heading h={props.h}>
-          <span className={smallHeader(props.h)}>{props.subheading}</span>
+          {props.subheading && (
+            <span className={smallHeader(props.h)}>{props.subheading}</span>
+          )}
           <div className="l-mt-1" />
           <span className={bigHeader(props.h)}>{props.heading}</span>
         </Heading>
@@ -43,7 +45,9 @@ const ChapterHeading = props => (
     ) : (
       <div className={headingClasses(props.line, props.overflow)}>
         <Heading h={props.h}>
-          <span className={smallHeader(props.h)}>{props.subheading}</span>
+          {props.subheading && (
+            <span className={smallHeader(props.h)}>{props.subheading}</span>
+          )}
           <div className="l-mt-1" />
           <span className={bigHeader(props.h)}>{props.heading}</span>
         </Heading>
@@ -55,8 +59,8 @@ const ChapterHeading = props => (
 ChapterHeading.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  line: PropTypes.oneOf(['top', 'bottom', 'none']),
-  h: PropTypes.oneOf(['h1', 'h2']),
+  line: PropTypes.oneOf(['top', 'bottom', 'none']).isRequired,
+  h: PropTypes.oneOf(['h1', 'h2']).isRequired,
   overflow: PropTypes.bool,
   url: PropTypes.string
 };

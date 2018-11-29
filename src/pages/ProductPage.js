@@ -14,7 +14,7 @@ const ProductPage = () => (
           long="Nasjonal faglig retningslinje for svangerskapsdiabetes"
           short="Svangerskapsdiabetes"
           icon={'https://placehold.it/64x64'}
-          url="#"
+          url="#a"
           linkText="Hva er nasjonal faglig retningslinje"
         />
       </div>
@@ -22,7 +22,7 @@ const ProductPage = () => (
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
-          url="#"
+          url="#a"
         />
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
@@ -48,7 +48,7 @@ const ProductPage = () => (
         <ChapterHeading
           heading="Diagnostikk og tiltak"
           subheading="kapittel 2"
-          url="#"
+          url="#a"
         />
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
@@ -103,19 +103,19 @@ const ProductPage = () => (
                 description: 'PLAKAT (PDF)',
                 title: 'Det foreslås at HbA1c tas ved',
                 url: '#',
-                infoText: 'PDF (4,5 MB)'
+                infoText: 'PDF'
               },
               {
                 description: 'BROSJYRE (PDF)',
                 title:
                   'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
                 url: '#',
-                infoText: 'PDF (501 KB)'
+                infoText: 'PDF'
               }
             ]}
           />
           <div className="l-mt-2">
-            <Link href="#" arrow>
+            <Link href="#a" arrow>
               Last ned alle (2 MB)
             </Link>
           </div>
@@ -123,22 +123,22 @@ const ProductPage = () => (
       </div>
 
       <div className="col-xs-12 col-md-10 col-md-offset-1 l-mt-4">
-        <Link href="#" wideButton arrow color="purple">
+        <Link href="#a" wideButton arrow color="purple">
           For å lese om symptomer, kostholdsråd og andre tips ved
           svangerskapsdiabetes, kan du gå til helsenorge.no.
         </Link>
       </div>
 
       <div className="col-xs-12 l-mt-3">
-        <PageMeta publishDate="01.01.2008" editDate="01.01.2018" url="#" />
+        <PageMeta publishDate="01.01.2008" editDate="01.01.2018" url="#a" />
       </div>
 
       <div className="col-xs-12 l-mt-4">
-        <Link href="#" small icon="./icons/method.svg">
+        <Link href="#a" small icon="./icons/method.svg">
           Om metode og prosess
         </Link>
         <br />
-        <Link href="#" small icon="./icons/print.svg">
+        <Link href="#a" small icon="./icons/print.svg">
           Skriv ut hele retningslinjen
         </Link>
       </div>

@@ -7,13 +7,13 @@ const NormativeContentPage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>

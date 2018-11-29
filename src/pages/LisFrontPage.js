@@ -30,21 +30,21 @@ const LisFrontPage = () => (
           <Card
             heading="Generell informasjon om ny spesialistutdanning for leger"
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
-            url="#"
+            url="#a"
           />
         </div>
         <div className="col-xs-12 col-md-4">
           <Card
             heading="Overgangsordning - spesialutdanning for leger"
             text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
-            url="#"
+            url="#a"
           />
         </div>
         <div className="col-xs-12 col-md-4">
           <Card
             heading="Godkjenning av utdannings-virksomhet for leger i sepsialiering"
             text="Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur."
-            url="#"
+            url="#a"
           />
         </div>
       </div>
@@ -159,11 +159,11 @@ const LisFrontPage = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

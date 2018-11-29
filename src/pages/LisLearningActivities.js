@@ -10,13 +10,13 @@ const LisLearningActivities = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
@@ -186,11 +186,11 @@ const LisLearningActivities = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

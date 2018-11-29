@@ -195,7 +195,6 @@ InputSearch.propTypes = {
 InputSearch.defaultProps = {
   type: 'search',
   label: '',
-  dark: false,
   showSuggestions: true
 };
 

@@ -8,7 +8,7 @@ const linkClasses = leftArrow =>
 const Card = props => (
   <div className="b-card">
     {props.children && <div className="b-card__feature">{props.children}</div>}
-    <a href="#" className={linkClasses(props.leftArrow)}>
+    <a href="#a" className={linkClasses(props.leftArrow)}>
       <h3 className="b-card__heading">{props.heading}</h3>
       {props.text && <div className="b-card__text">{props.text}</div>}
     </a>

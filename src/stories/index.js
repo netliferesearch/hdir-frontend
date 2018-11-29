@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
+import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { HashRouter } from 'react-router-dom';
 
 // Components
@@ -12,6 +13,7 @@ import ArticleIntro from '../components/ArticleIntro';
 import ChapterHeading from '../components/ChapterHeading';
 import ContentLabel from '../components/ContentLabel';
 import Collapsible from '../components/Collapsible';
+import AlertBar from '../components/AlertBar';
 import FilterList from '../components/FilterList';
 // import Footer from '../components/Footer';
 import Heading from '../components/Heading';
@@ -55,6 +57,9 @@ import LisLearningActivities from '../pages/LisLearningActivities';
 import ChapterPageReport from '../pages/ChapterPageReport';
 import ProfessionSelector from '../pages/ProfessionSelector';
 import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
+import FrontPageHelfo from '../pages/FrontPageHelfo';
+import FrontPageHdir from '../pages/FrontPageHdir';
+import HdirTema from '../pages/HdirTema';
 // React specific
 import InputSearch from '../components/InputSearch';
 
@@ -123,6 +128,11 @@ storiesOf('Pages', module)
       <ArticlePage />
     </HashRouter>
   ))
+  .addWithStaticMarkup('Hdir Tema', () => (
+    <HashRouter>
+      <HdirTema />
+    </HashRouter>
+  ))
   .addWithStaticMarkup('ReportWithoutImage', () => (
     <HashRouter>
       <ReportPageWithoutImage />
@@ -131,6 +141,11 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('LIS speciality', () => (
     <HashRouter>
       <LisSpeciality />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('FrontPageHdir', () => (
+    <HashRouter>
+      <FrontPageHdir />
     </HashRouter>
   ))
   .addWithStaticMarkup('LIS learning', () => (
@@ -186,6 +201,11 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Recommendation page', () => (
     <HashRouter>
       <RecommendationPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('FrontPageHelfo', () => (
+    <HashRouter>
+      <FrontPageHelfo />
     </HashRouter>
   ))
   .addWithStaticMarkup('Normative content page', () => (
@@ -371,7 +391,10 @@ storiesOf('Link', module)
       href={text('href', '#')}
       icon={text('Icon', './icons/method.svg')}
       button={boolean('Button', false)}
+      buttonSecondary={boolean('Button secondary', false)}
+      buttonInherit={boolean('Button inherit', false)}
       small={boolean('Small', false)}
+      secondary={boolean('Secondary', false)}
       arrow={boolean('Arrow', false)}
       color={select('Color', { none: '', purple: 'purple' }, '')}
       wideButton={boolean('Wide button', false)}
@@ -600,6 +623,52 @@ storiesOf('Quote', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
+  ));
+
+storiesOf('AlertBar', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <AlertBar
+      heading={text(
+        'Heading',
+        'WHO erklærer Public Health Emergency of International Concern (PHEIC) i forbindelse med influensautbrudd.'
+      )}
+      lastUpdated={text('Text', 'Mandag 06. oktober 08:15')}
+      alertLevel={select(
+        'Alert level',
+        {
+          high: 'high',
+          medium: 'medium',
+          low: 'low'
+        },
+        'high'
+      )}
+    >
+      {text('Text', 'This is some content, probably from rich text.')}
+    </AlertBar>
+  ))
+  .addWithStaticMarkup('With content', () => (
+    <AlertBar
+      heading={text(
+        'Heading',
+        'WHO erklærer Public Health Emergency of International Concern (PHEIC) i forbindelse med influensautbrudd.'
+      )}
+      lastUpdated={text('Last updated', 'Mandag 06. oktober 08:15')}
+      alertLevel={select(
+        'Alert level',
+        {
+          high: 'high',
+          medium: 'medium',
+          low: 'low'
+        },
+        'high'
+      )}
+    >
+      <Link href="#" buttonInherit>
+        Les mer
+      </Link>
+    </AlertBar>
   ));
 
 storiesOf('SquareImage', module)

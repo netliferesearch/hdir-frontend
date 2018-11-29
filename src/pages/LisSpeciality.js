@@ -23,14 +23,14 @@ const LisSpeciality = () => (
         </div>
       </div>
       <div className="l-mt-4">
-        <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#" />
+        <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#a" />
       </div>
       <div className="l-mt-4">
-        <Link href="#" small icon="./icons/method.svg">
+        <Link href="#a" small icon="./icons/method.svg">
           Om metode og prosess
         </Link>
         <br />
-        <Link href="#" small icon="./icons/print.svg">
+        <Link href="#a" small icon="./icons/print.svg">
           Skriv ut hele retningslinjen
         </Link>
       </div>
@@ -40,11 +40,11 @@ const LisSpeciality = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

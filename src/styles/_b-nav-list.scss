@@ -99,6 +99,7 @@
     &:after {
       content: '→';
       margin-left: 1rem;
+      color: $blue;
 
       @include mq($until: $tablet) {
         position: absolute;

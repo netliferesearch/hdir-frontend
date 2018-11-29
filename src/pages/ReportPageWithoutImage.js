@@ -9,24 +9,32 @@ const ReportPageWithoutImage = () => (
   <div>
     <div className="l-container">
       <nav className="b-breadcrumbs">
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Lorum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Ipsum
         </a>
-        <a href="#" className="b-breadcrumbs__link">
+        <a href="#a" className="b-breadcrumbs__link">
           Dolor
         </a>
       </nav>
-      <div className="l-mt-2 b-bleed b-bleed--blue">
-        <ChapterHeading
-          subheading="Rapport"
-          heading="Ventetider og pasientrettigheter 2017"
-          line="none"
-          h="h1"
-        />
-      </div>
+    </div>
+    <div className="l-mt-4">
+      <Box color="blueDark" square noPadding>
+        <div className="l-container">
+          <div className="l-mt-1 l-mb-1">
+            <ChapterHeading
+              subheading="Rapport"
+              heading="Ventetider og pasientrettigheter 2017"
+              line="none"
+              h="h1"
+            />
+          </div>
+        </div>
+      </Box>
+    </div>
+    <div className="l-container">
       <div className="row l-mt-4">
         <div className="col-xs-12 l-mb-4">
           <Box color="blue">
@@ -34,7 +42,7 @@ const ReportPageWithoutImage = () => (
               heading="Ventetid"
               subheading="Kapittel 1"
               line="none"
-              url="#"
+              url="#a"
             />
             <hr className="b-hr b-hr--blue" />
             <NavList
@@ -70,7 +78,7 @@ const ReportPageWithoutImage = () => (
               heading="Nyhenviste, avviklede og ventende"
               subheading="Kapittel 2"
               line="none"
-              url="#"
+              url="#a"
             />
             <hr className="b-hr b-hr--blue" />
             <NavList

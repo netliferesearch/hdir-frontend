@@ -1,6 +1,4 @@
 import React from 'react';
-import ArticleIntro from '../components/ArticleIntro';
-import PageMeta from '../components/PageMeta';
 import Collapsible from '../components/Collapsible';
 import Link from '../components/Link';
 import Box from '../components/Box';
@@ -8,91 +6,101 @@ import Box from '../components/Box';
 const RecommendationPage = () => (
   <div>
     <div className="l-container l-mt-3">
-      <h1>
-        Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på
-        kostanamnese ved behandling av svangerskapsdiabetes
-      </h1>
       <div className="row">
-        <div className="col-md-9">
+        <div className="col-xs-12 col-md-9">
+          <h1 className="h2">
+            Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert
+            på kostanamnese ved behandling av svangerskapsdiabetes
+          </h1>
+          <div className="l-mt-1">
+            <Collapsible
+              heading="Sterk anbefaling"
+              subtle
+              size="small"
+              smallContent
+            >
+              <p>...Hva er en sterk anbefaling...</p>
+            </Collapsible>
+          </div>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-xs-12 col-md-9">
           <div className="l-mt-3">
             <div className="l-mb-3">
-              <Collapsible
-                heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på
-            kostanamnese ved behandling av svangerskapsdiabetes"
-                subheading="Sterk anbefaling"
-              >
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: 5.3 mmol/l, 2
-                  timer etter måltid: 6.7 mmol/l (se anbefaling: Opplæring i
-                  egenmåling av glukose). Kvinnen kan rådes til å følge et
-                  kosthold med en karbohydratkvalitet og -mengde per måltid som
-                  gjør det enklere å nå behandlingsmålene for glukose
-                </p>
-                <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
-                <div className="l-mb-3">
-                  <Collapsible
-                    heading="Praktisk"
-                    subheading="Slik følger du anbefalingen"
-                    size="medium"
-                  >
-                    <p>
-                      For å bidra til god blodsukkerregulering, vil kvinner med
-                      svangerskapsdiabetes ha nytte av å innta et kosthold med
-                      lav glykemisk indeks, innta flere og gjerne regelmessige
-                      måltider, fordele inntaket av karbohydrater jevnt mellom
-                      måltidene og begrense inntaket av søte mat- og
-                      drikkevarer. Dette er i samsvar med Helsedirektoratets
-                      kostråd og Helsedirektoratet generelle kostråd for
-                      gravide. Det viktigste er å ha et høyt inntak av fiber og
-                      å unngå hurtigresorberbare karbohydrater, med andre ord en
-                      moderat lav-GI-kost.
-                    </p>{' '}
-                    <p>
-                      {' '}
-                      Glukosestigningen etter et måltid avhenger primært av
-                      mengde og kvalitet av karbohydratene i måltidet. Gravide
-                      kvinner anbefales å innta minimum 175 gram karbohydrat per
-                      dag (IOM 2007, Reader 2007). Enkelte karbohydratrike
-                      matvarer bør begrenses i mengde og heller fordeles over
-                      flere måltider dersom ikke postprandiale glukosemål nås.
-                      Kostrådene tilpasses kvinnens KMI og anbefalte vektøkning.
-                    </p>{' '}
-                    <p>Glykemisk indeks</p>{' '}
-                    <p>
-                      (GI) Begrepet benyttes om matvarer med mye fiber og
-                      langsomt absorberbare karbohydrater. GI er en måte å
-                      inndele karbohydratrike matvarer ut i fra den effekten de
-                      har på glukosenivået. En GI på 0 betyr ingen/svært liten
-                      effekt, mens GI på 100 vil si at matvaren har samme
-                      glukosestigende effekt som glukose.
-                    </p>{' '}
-                    <p>
-                      En kost med lav GI inkluderer matvarer som i hovedsak har
-                      en GI-verdi under 70. Dette er ikke det samme som en
-                      karbohydratredusert kost, der det legges vekt på å
-                      redusere mengden karbohydrat. Kost med lav GI kan ha et
-                      høyt karbohydratinnhold, men kvaliteten på
-                      karbohydratkildene er det viktige.
-                    </p>{' '}
-                    <p>
-                      Typisk vil en kost med lav GI kunne inneholde
-                      karbohydratrike matvarer som belgvekster, hele
-                      korn/sammalt mel, grove brød og kornprodukter,
-                      fullkornspasta/-ris, og det legges også vekt på matvarer
-                      og matretter som er lite bearbeidet (f.eks. kornblandinger
-                      av hele valsede korn og nøtter framfor cornflakes og
-                      lignende frokostblandinger, rå grønnsaker framfor kokte
-                      etc.).
-                    </p>
-                  </Collapsible>
-                </div>
+              <p>
+                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
+                tilfredsstillende blodsukker fastende og etter måltider, og for
+                å forhindre for stor vektøkning i svangerskapet. Det anbefales
+                at kostanamnese benyttes i dette arbeidet.
+              </p>
+              <p>
+                Kostrådene baseres på kostanamnesen og styres etter
+                glukoseverdier ved egenmåling. Mål: Fastende: 5.3 mmol/l, 2
+                timer etter måltid: 6.7 mmol/l (se anbefaling: Opplæring i
+                egenmåling av glukose). Kvinnen kan rådes til å følge et
+                kosthold med en karbohydratkvalitet og -mengde per måltid som
+                gjør det enklere å nå behandlingsmålene for glukose
+              </p>
+
+              <div className="l-mb-3">
+                <Collapsible
+                  heading="Praktisk"
+                  subheading="Slik følger du anbefalingen"
+                  size="medium"
+                >
+                  <p>
+                    For å bidra til god blodsukkerregulering, vil kvinner med
+                    svangerskapsdiabetes ha nytte av å innta et kosthold med lav
+                    glykemisk indeks, innta flere og gjerne regelmessige
+                    måltider, fordele inntaket av karbohydrater jevnt mellom
+                    måltidene og begrense inntaket av søte mat- og drikkevarer.
+                    Dette er i samsvar med Helsedirektoratets kostråd og
+                    Helsedirektoratet generelle kostråd for gravide. Det
+                    viktigste er å ha et høyt inntak av fiber og å unngå
+                    hurtigresorberbare karbohydrater, med andre ord en moderat
+                    lav-GI-kost.
+                  </p>{' '}
+                  <p>
+                    {' '}
+                    Glukosestigningen etter et måltid avhenger primært av mengde
+                    og kvalitet av karbohydratene i måltidet. Gravide kvinner
+                    anbefales å innta minimum 175 gram karbohydrat per dag (IOM
+                    2007, Reader 2007). Enkelte karbohydratrike matvarer bør
+                    begrenses i mengde og heller fordeles over flere måltider
+                    dersom ikke postprandiale glukosemål nås. Kostrådene
+                    tilpasses kvinnens KMI og anbefalte vektøkning.
+                  </p>{' '}
+                  <p>Glykemisk indeks</p>{' '}
+                  <p>
+                    (GI) Begrepet benyttes om matvarer med mye fiber og langsomt
+                    absorberbare karbohydrater. GI er en måte å inndele
+                    karbohydratrike matvarer ut i fra den effekten de har på
+                    glukosenivået. En GI på 0 betyr ingen/svært liten effekt,
+                    mens GI på 100 vil si at matvaren har samme glukosestigende
+                    effekt som glukose.
+                  </p>{' '}
+                  <p>
+                    En kost med lav GI inkluderer matvarer som i hovedsak har en
+                    GI-verdi under 70. Dette er ikke det samme som en
+                    karbohydratredusert kost, der det legges vekt på å redusere
+                    mengden karbohydrat. Kost med lav GI kan ha et høyt
+                    karbohydratinnhold, men kvaliteten på karbohydratkildene er
+                    det viktige.
+                  </p>{' '}
+                  <p>
+                    Typisk vil en kost med lav GI kunne inneholde
+                    karbohydratrike matvarer som belgvekster, hele korn/sammalt
+                    mel, grove brød og kornprodukter, fullkornspasta/-ris, og
+                    det legges også vekt på matvarer og matretter som er lite
+                    bearbeidet (f.eks. kornblandinger av hele valsede korn og
+                    nøtter framfor cornflakes og lignende frokostblandinger, rå
+                    grønnsaker framfor kokte etc.).
+                  </p>
+                </Collapsible>
+              </div>
+              <div className="l-mb-3">
                 <div className="l-mb-3">
                   <Collapsible
                     heading="Begrunnelse"
@@ -329,11 +337,11 @@ const RecommendationPage = () => (
                               Barn med fødselsvekt
                             </p>
                             <div className="l-mt-4 l-mb-4">
-                              <Link href="#" small icon="./icons/method.svg">
+                              <Link href="#a" small icon="./icons/method.svg">
                                 Om metode og prosess
                               </Link>
                               <br />
-                              <Link href="#" small icon="./icons/print.svg">
+                              <Link href="#a" small icon="./icons/print.svg">
                                 Skriv ut hele retningslinjen
                               </Link>
                             </div>
@@ -431,27 +439,19 @@ const RecommendationPage = () => (
                     </div>
                   </Collapsible>
                 </div>
-              </Collapsible>
+                <Collapsible heading="Informasjon til pasienten" size="medium">
+                  <p>Noe innhold</p>
+                </Collapsible>
+              </div>
             </div>
           </div>
           <hr />
-          <div className="l-mt-4">
-            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+          <div className="l-mt-3 t-sm-right">
+            <Link href="#a" secondary small>
+              Sist endret: 11.08.2018
+            </Link>
           </div>
         </div>
-      </div>
-      <div className="l-mt-4">
-        <Box color="green" square noPadding>
-          <div className="l-container">
-            <strong>Kontakt:</strong>
-            <br />
-            <a href="#">spesialisthelsetjenester@helsedir.no</a>
-            <br />
-            <a href="#">navn.etternavn@helsedir.no</a>
-            <br />
-            <a href="#">999 99 999</a>
-          </div>
-        </Box>
       </div>
     </div>
     <div className="l-mt-4">
@@ -459,11 +459,11 @@ const RecommendationPage = () => (
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
-          <a href="#">spesialisthelsetjenester@helsedir.no</a>
+          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
           <br />
-          <a href="#">navn.etternavn@helsedir.no</a>
+          <a href="#a">navn.etternavn@helsedir.no</a>
           <br />
-          <a href="#">999 99 999</a>
+          <a href="#a">999 99 999</a>
         </div>
       </Box>
     </div>

@@ -29,7 +29,7 @@ const Alert = props => (
 );
 
 Alert.propTypes = {
-  status: PropTypes.oneOf('none', 'success', 'warning', 'danger', 'info'),
+  status: PropTypes.oneOf('', 'success', 'warning', 'danger', 'info'),
   small: PropTypes.bool
 };
 
