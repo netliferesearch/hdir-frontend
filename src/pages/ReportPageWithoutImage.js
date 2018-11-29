@@ -19,8 +19,10 @@ const ReportPageWithoutImage = () => (
           Dolor
         </a>
       </nav>
-      <Box color="green">
-        <Box color="blueDark">
+    </div>
+    <div className="l-mt-4">
+      <Box color="blueDark" square noPadding>
+        <div className="l-container">
           <div className="l-mt-1 l-mb-1">
             <ChapterHeading
               subheading="Rapport"
@@ -29,8 +31,10 @@ const ReportPageWithoutImage = () => (
               h="h1"
             />
           </div>
-        </Box>
+        </div>
       </Box>
+    </div>
+    <div className="l-container">
       <div className="row l-mt-4">
         <div className="col-xs-12 l-mb-4">
           <Box color="blue">
