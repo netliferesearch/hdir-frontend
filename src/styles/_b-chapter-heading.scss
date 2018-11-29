@@ -23,7 +23,7 @@
 
       // Note: this space should be adjusted relative to the size of sub-heading
       // if it ever was too be changed.
-      top: 1.4em;
+      bottom: 0.75rem;
     }
   }
 
@@ -38,7 +38,7 @@
 
   &--line-none {
     border: 0;
-    padding-top: 0;
+    padding-top: 0.5rem;
   }
 
   &--line-bottom {
