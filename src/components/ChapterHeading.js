@@ -39,7 +39,9 @@ const ChapterHeading = props => (
             <span className={smallHeader(props.h)}>{props.subheading}</span>
           )}
           <div className="l-mt-1" />
-          <span className={bigHeader(props.h)}>{props.heading}</span>
+          <div className="b-chapter-heading__main-heading">
+            <span className={bigHeader(props.h)}>{props.heading}</span>
+          </div>
         </Heading>
       </a>
     ) : (
@@ -49,7 +51,9 @@ const ChapterHeading = props => (
             <span className={smallHeader(props.h)}>{props.subheading}</span>
           )}
           <div className="l-mt-1" />
-          <span className={bigHeader(props.h)}>{props.heading}</span>
+          <div className="b-chapter-heading__main-heading">
+            <span className={bigHeader(props.h)}>{props.heading}</span>
+          </div>
         </Heading>
       </div>
     )}
