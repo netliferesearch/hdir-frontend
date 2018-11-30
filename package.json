@@ -29,7 +29,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public -o build/storybook && cp ./src/static/App.css ./build/storybook/static/hdir.css && cp ./src/static/Helfo.css ./build/storybook/static/helfo.css"
+    "build-storybook": "build-storybook -s public -o build/storybook"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^3.4.10",
@@ -39,7 +39,25 @@
     "@storybook/addon-notes": "^3.4.10",
     "@storybook/addon-viewport": "^3.4.10",
     "@storybook/react": "^3.4.10",
+    "loki": "^0.14.0",
     "react-storybook-addon-static-markup": "^0.1.0",
     "storybook-addon-smart-knobs": "^3.3.1"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.desktop": {
+        "target": "chrome.app",
+        "width": 1920,
+        "height": 1080,
+        "deviceScaleFactor": 1,
+        "mobile": false,
+        "fitWindow": false,
+        "diffingEngine": "gm"
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }

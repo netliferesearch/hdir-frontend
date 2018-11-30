@@ -675,13 +675,18 @@ storiesOf('SquareImage', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <SquareImage
-      src={text(
-        'src',
-        'https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png'
-      )}
-      alt={text('alt', 'Picture of some monster dude')}
-    />
+    <div style={{ width: '100%', height: '100%' }}>
+      This text and the div-wrapper is not part of the component. It's only here
+      to make the visual regression tester happy, for this component. It's an
+      exception.
+      <SquareImage
+        src={text(
+          'src',
+          'https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png'
+        )}
+        alt={text('alt', 'Picture of some monster dude')}
+      />
+    </div>
   ));
 
 storiesOf('Box', module)
