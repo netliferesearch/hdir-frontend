@@ -10,7 +10,7 @@
   }
   &__link {
     display: inline-block;
-    @include link-init($black, true, $blue);
+    @include link-init($black, true, $link-color);
 
     &:after {
       display: inline-block;

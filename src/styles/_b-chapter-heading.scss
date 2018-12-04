@@ -8,9 +8,9 @@
   &--link {
     @include link-init($black);
     padding: 0 3.5em 1em 1em;
-    border-bottom: 1px solid $blue;
+    border-bottom: 1px solid $link-color;
     &:hover {
-      color: $blue;
+      color: $link-color;
       background: rgba(0, 0, 0, 0.05);
     }
   }
@@ -22,7 +22,7 @@
       position: absolute;
       right: -2.5rem;
       font-size: $large-text;
-      color: $blue;
+      color: $link-color;
 
       // Note: this space should be adjusted relative to the size of sub-heading
       // if it ever was too be changed.

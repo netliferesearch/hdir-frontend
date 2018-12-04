@@ -4,8 +4,8 @@
 
   &:hover {
     .b-press-release__title {
-      color: $blue;
-      @include underline($blue);
+      color: $link-color;
+      @include underline($link-color);
     }
   }
 

@@ -92,14 +92,14 @@
     height: calc(100% - 2em);
 
     &:hover {
-      color: $blue;
+      color: $link-color;
       background: rgba(0, 0, 0, 0.05);
     }
 
     &:after {
       content: '→';
       margin-left: 1rem;
-      color: $blue;
+      color: $link-color;
 
       @include mq($until: $tablet) {
         position: absolute;
@@ -166,7 +166,7 @@
     padding-left: 2em;
     list-style-type: none;
     margin: 0;
-    border-top: 1px solid $blue;
+    border-top: 1px solid $link-color;
 
     li:last-child {
       border-bottom: 0;
