@@ -23,7 +23,7 @@
         box-sizing: border-box;
       }
     }
-    border-bottom: 1px solid $secondary-color;
+    border-bottom: 1px solid $primary-color;
 
     &--anchor {
       padding-right: 0;
@@ -54,7 +54,7 @@
             display: block;
             content: '#{$i}';
             padding-right: 1em;
-            color: $brand-color;
+            color: $secondary-color;
           }
         }
       }
@@ -131,7 +131,7 @@
 
       &:before {
         content: '↓';
-        color: $secondary-color;
+        color: $primary-color;
         display: inline-block;
         margin-left: 0;
         padding-right: 0.75rem;

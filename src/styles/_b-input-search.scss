@@ -5,17 +5,17 @@
   &__field {
     flex-grow: 1;
     font-size: 1rem;
-    color: $brand-color;
+    color: $secondary-color;
     background-color: white;
     border: 0;
     padding: 1em 1em 1em 2em;
     border-radius: 2em;
-    box-shadow: 0 0 0 1px $brand-color;
+    box-shadow: 0 0 0 1px $secondary-color;
 
     &:focus {
       // Outline doesn't have border-radius, so we use box-shadow instead.
       outline: 0;
-      box-shadow: 0 0 0 4px $brand-color;
+      box-shadow: 0 0 0 4px $secondary-color;
     }
 
     &--dark {
@@ -32,9 +32,9 @@
     font-size: 1rem;
     padding: 1em 1.66em;
     margin-left: 1rem;
-    color: $brand-color;
+    color: $secondary-color;
     background-color: transparent;
-    box-shadow: 0 0 0 1px $brand-color;
+    box-shadow: 0 0 0 1px $secondary-color;
     border: 0;
     border-radius: 100%;
     background-image: url('./icons/search.svg');
@@ -80,7 +80,7 @@
     cursor: pointer;
     padding: 1rem;
     margin: 0.5rem;
-    border: 1px solid $brand-color;
+    border: 1px solid $secondary-color;
     border-radius: 4px;
 
     &--first {

@@ -56,9 +56,9 @@ a {
   &:hover,
   &:visited,
   &:active {
-    color: $secondary-color;
+    color: $primary-color;
   }
 
   text-decoration: none;
-  box-shadow: 0 1px 0 $secondary-color;
+  box-shadow: 0 1px 0 $primary-color;
 }

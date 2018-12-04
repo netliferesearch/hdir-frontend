@@ -18,10 +18,10 @@
     text-decoration: none;
     margin-left: 1rem;
 
-    @include link-init($brand-color);
+    @include link-init($secondary-color);
 
     &:hover {
-      @include underline($brand-color);
+      @include underline($secondary-color);
     }
   }
 }

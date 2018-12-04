@@ -76,7 +76,7 @@
       width: 80%;
       padding: 2rem;
       left: 50%;
-      background-color: rgba($brand-color, 0.8);
+      background-color: rgba($secondary-color, 0.8);
       color: white;
       transform: translateX(-50%);
 
@@ -86,7 +86,7 @@
         bottom: 2.5rem;
         position: relative;
         bottom: 0;
-        background-color: rgba($brand-color, 1);
+        background-color: rgba($secondary-color, 1);
       }
     }
   }
