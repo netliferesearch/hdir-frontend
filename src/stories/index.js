@@ -625,6 +625,23 @@ storiesOf('Quote', module)
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
   ));
 
+storiesOf('References', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <ol>
+      <li>
+        <a href="#a">I read it on Wikipedia, so it must be true</a>
+      </li>
+      <li>
+        Some book I don't remember the name of, the IBAN number starts with 5.
+      </li>
+      <li>
+        <a href="#b">Just Google it</a>
+      </li>
+    </ol>
+  ));
+
 storiesOf('AlertBar', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
