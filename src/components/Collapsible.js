@@ -23,12 +23,13 @@ const headingClasses = size =>
     normal: size === 'small'
   });
 
-const collapsibleClasses = (size, subtle) =>
+const collapsibleClasses = (size, subtle, noBorder) =>
   classNames({
     'b-collapsible': true,
     'b-collapsible--subtle': subtle,
     'b-collapsible--medium': size === 'medium',
-    'b-collapsible--small': size === 'small'
+    'b-collapsible--small': size === 'small',
+    'b-collapsible--no-border': noBorder
   });
 
 const contentClasses = smallContent =>
@@ -69,7 +70,7 @@ class Collapsible extends React.Component {
     const { props } = this;
     return (
       <div
-        className={collapsibleClasses(props.size, props.subtle)}
+        className={collapsibleClasses(props.size, props.subtle, props.noBorder)}
         ref={ref => (this.domNode = ref)}
       >
         <button
@@ -91,6 +92,9 @@ class Collapsible extends React.Component {
             className={headingClasses(props.size)}
           >
             {props.heading}
+            {props.code && (
+              <div className="b-collapsible__code">{props.code}</div>
+            )}
           </Heading>
         </button>
         {props.subheading && !props.subheadingContent && (
@@ -138,7 +142,9 @@ Collapsible.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,
-  alert: PropTypes.string
+  noBorder: PropTypes.bool,
+  alert: PropTypes.string,
+  code: PropTypes.string
 };
 
 Collapsible.defaultProps = {

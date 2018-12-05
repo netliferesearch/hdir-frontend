@@ -32,12 +32,13 @@ const LisLearning = () => (
             list={[
               {
                 title: 'Læringsmål',
-                active: true
+                url: '#a'
               },
               {
-                title: 'Læringsaktiviteter'
+                title: 'Læringsaktiviteter',
+                url: '#a'
               },
-              { title: 'Link til annen fritekst' }
+              { title: 'Link til annen fritekst', url: '#a' }
             ]}
           />
         </aside>
@@ -62,34 +63,35 @@ const LisLearning = () => (
           />
           <div className="l-mt-4">
             <ChapterHeading heading="Nyfødtkirurgi" line="bottom" h="h2" />
-            <div className="l-mt-3">
-              <Collapsible
-                heading="Urogenitale tilstander hos nyfødte"
-                subheading="LÆRINGSMÅL"
-                size="medium"
-              >
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                  5.3 mmol/l, 2 timer etter måltid: {'<'}
-                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                  Kvinnen kan rådes til å følge et kosthold med en
-                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
-                  å nå behandlingsmålene for glukose
-                </p>
-              </Collapsible>
-            </div>
+            <Collapsible
+              heading="Urogenitale tilstander hos nyfødte"
+              subheading="LÆRINGSMÅL"
+              size="medium"
+              code="BAK 001"
+              noBorder
+            >
+              <p>
+                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
+                tilfredsstillende blodsukker fastende og etter måltider, og for
+                å forhindre for stor vektøkning i svangerskapet. Det anbefales
+                at kostanamnese benyttes i dette arbeidet.
+              </p>
+              <p>
+                Kostrådene baseres på kostanamnesen og styres etter
+                glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
+                5.3 mmol/l, 2 timer etter måltid: {'<'}
+                6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
+                Kvinnen kan rådes til å følge et kosthold med en
+                karbohydratkvalitet og -mengde per måltid som gjør det enklere å
+                nå behandlingsmålene for glukose
+              </p>
+            </Collapsible>
             <div className="l-mt-3">
               <Collapsible
                 heading="Lyskebrokk hos nyfødte"
                 subheading="LÆRINGSMÅL"
                 size="medium"
+                code="BAK 002"
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -115,6 +117,7 @@ const LisLearning = () => (
                 subheading="LÆRINGSMÅL"
                 size="medium"
                 alert="Some alert"
+                code="BAK 003"
               >
                 <Alert status="success">
                   Vær oppmerksom på at dette atomet er på høring
@@ -135,9 +138,7 @@ const LisLearning = () => (
                   å nå behandlingsmålene for glukose
                 </p>
               </Collapsible>
-              <div className="l-mt-2" />
             </div>
-            <hr className="b-hr b-hr--black" />
           </div>
           <div className="l-mt-4">
             <ChapterHeading
@@ -149,6 +150,7 @@ const LisLearning = () => (
               heading="Barnehelse og barnets plass i familien"
               subheading="LÆRINGSMÅL"
               size="large"
+              code="BAK 004"
             >
               <p>
                 Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
