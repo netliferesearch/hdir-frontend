@@ -378,7 +378,6 @@ storiesOf('ChapterHeading', module)
         'top'
       )}
       h={select('H', { h1: 'h1', h2: 'h2' }, 'h2')}
-      overflow={boolean('Overflow', false)}
       url={text('URL', '')}
     />
   ));

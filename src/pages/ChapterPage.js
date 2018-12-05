@@ -86,7 +86,6 @@ const ChapterPage = () => (
               subheading="kapittel 1"
               line="none"
               url="#a"
-              overflow
             />
           </div>
           <div className="l-mt-1">

@@ -6,21 +6,27 @@
   @include underline(transparent);
 
   &--link {
+    position: relative;
     @include link-init($black);
-    padding: 0 3.5em 1em 1em;
+    padding: 1em;
     border-bottom: 1px solid $link-color;
     &:hover {
       color: $link-color;
       background: rgba(0, 0, 0, 0.05);
+    }
+
+    .b-chapter-heading__main-heading::after {
+      visibility: visible;
     }
   }
 
   &__main-heading {
     position: relative;
     &:after {
+      visibility: hidden;
       content: '→';
       position: absolute;
-      right: -2.5rem;
+      right: 0;
       font-size: $large-text;
       color: $link-color;
 
@@ -31,22 +37,12 @@
     }
   }
 
-  // Lets the background extend outside of its box.
-  &--overflow {
-    padding-left: 0;
-    &:hover {
-      margin-left: -1rem;
-      padding-left: 1rem;
-    }
-  }
-
   &--line-none {
     border: 0;
     padding-top: 0.5rem;
   }
 
   &--line-bottom {
-    padding-top: 0;
     border-top: 0;
     border-bottom: 7px solid $black !important;
     padding-bottom: 1em;

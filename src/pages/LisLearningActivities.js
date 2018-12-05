@@ -46,7 +46,7 @@ const LisLearningActivities = () => (
           <h1>Læringsaktiviteter</h1>
 
           <div className="l-mt-3">
-            <ChapterHeading heading="Kurs" line="none" overflow h="h2" />
+            <ChapterHeading heading="Kurs" line="none" h="h2" />
             <div className="l-mt-3">
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
@@ -123,7 +123,6 @@ const LisLearningActivities = () => (
             <ChapterHeading
               heading="Perioperativ behandling"
               line="none"
-              overflow
               h="h2"
             />
             <div className="l-mt-3">

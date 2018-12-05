@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Heading from './Heading';
 
-const headingClasses = (line, overflow, url) =>
+const headingClasses = (line, url) =>
   classNames({
     'b-chapter-heading': true,
     'b-chapter-heading--link': url,
     // top is the default
     'b-chapter-heading--line-bottom': line === 'bottom',
-    'b-chapter-heading--line-none': line === 'none',
-    'b-chapter-heading--overflow': overflow
+    'b-chapter-heading--line-none': line === 'none'
   });
 
 const bigHeader = h =>
@@ -30,27 +29,22 @@ const smallHeader = h =>
 const ChapterHeading = props => (
   <Fragment>
     {props.url ? (
-      <a
-        href={props.url}
-        className={headingClasses(props.line, props.overflow, props.url)}
-      >
+      <a href={props.url} className={headingClasses(props.line, props.url)}>
         <Heading h={props.h}>
           {props.subheading && (
             <span className={smallHeader(props.h)}>{props.subheading}</span>
           )}
-          <div className="l-mt-1" />
           <div className="b-chapter-heading__main-heading">
             <span className={bigHeader(props.h)}>{props.heading}</span>
           </div>
         </Heading>
       </a>
     ) : (
-      <div className={headingClasses(props.line, props.overflow)}>
+      <div className={headingClasses(props.line)}>
         <Heading h={props.h}>
           {props.subheading && (
             <span className={smallHeader(props.h)}>{props.subheading}</span>
           )}
-          <div className="l-mt-1" />
           <div className="b-chapter-heading__main-heading">
             <span className={bigHeader(props.h)}>{props.heading}</span>
           </div>
@@ -65,7 +59,6 @@ ChapterHeading.propTypes = {
   subheading: PropTypes.string,
   line: PropTypes.oneOf(['top', 'bottom', 'none']).isRequired,
   h: PropTypes.oneOf(['h1', 'h2']).isRequired,
-  overflow: PropTypes.bool,
   url: PropTypes.string
 };
 

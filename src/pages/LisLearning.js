@@ -21,7 +21,6 @@ const LisLearning = () => (
           Dolor
         </a>
       </nav>
-      <h1>Læringsmål</h1>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
@@ -43,7 +42,10 @@ const LisLearning = () => (
           />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
-          <h1 className="l-mb-3">Læringsmål.</h1>
+          <h1>Læringsmål</h1>
+          <div className="l-mt-2 l-mb-1">
+            <h2 className="h5 h5--thin">Velg tema</h2>
+          </div>
           <FilterList
             list={[
               'Alt',
@@ -58,17 +60,13 @@ const LisLearning = () => (
               'FKM'
             ]}
           />
-          <div className="l-mt-5">
-            <ChapterHeading
-              heading="Nyfødtkirurgi"
-              line="none"
-              overflow
-              h="h2"
-            />
+          <div className="l-mt-4">
+            <ChapterHeading heading="Nyfødtkirurgi" line="bottom" h="h2" />
             <div className="l-mt-3">
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
                 subheading="LÆRINGSMÅL"
+                size="medium"
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -141,11 +139,10 @@ const LisLearning = () => (
             </div>
             <hr className="b-hr b-hr--black" />
           </div>
-          <div className="l-mt-5">
+          <div className="l-mt-4">
             <ChapterHeading
               heading="Perioperativ behandling"
               line="none"
-              overflow
               h="h2"
             />
             <Collapsible
@@ -175,23 +172,47 @@ const LisLearning = () => (
                 viktig å få med seg
               </Alert>
             </div>
-            <Collapsible heading="Utdypende tekst" size="medium">
-              <p>
-                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
-                tilfredsstillende blodsukker fastende og etter måltider, og for
-                å forhindre for stor vektøkning i svangerskapet. Det anbefales
-                at kostanamnese benyttes i dette arbeidet.
-              </p>
-              <p>
-                Kostrådene baseres på kostanamnesen og styres etter
-                glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                5.3 mmol/l, 2 timer etter måltid: {'<'}
-                6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                Kvinnen kan rådes til å følge et kosthold med en
-                karbohydratkvalitet og -mengde per måltid som gjør det enklere å
-                nå behandlingsmålene for glukose
-              </p>
-            </Collapsible>
+            <div className="l-mt-3">
+              <Collapsible heading="Utdypende tekst" size="medium">
+                <p>
+                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
+                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
+                  og for å forhindre for stor vektøkning i svangerskapet. Det
+                  anbefales at kostanamnese benyttes i dette arbeidet.
+                </p>
+                <p>
+                  Kostrådene baseres på kostanamnesen og styres etter
+                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
+                  5.3 mmol/l, 2 timer etter måltid: {'<'}
+                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
+                  Kvinnen kan rådes til å følge et kosthold med en
+                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
+                  å nå behandlingsmålene for glukose
+                </p>
+              </Collapsible>
+            </div>
+            <div className="l-mt-3">
+              <Collapsible heading="Anbefalte læringsaktiviteter" size="medium">
+                <p>
+                  Example text: Kvinnen bør få kostveiledning og jevnlig
+                  oppfølging for å oppnå tilfredsstillende blodsukker fastende
+                  og etter måltider, og for å forhindre for stor vektøkning i
+                  svangerskapet. Det anbefales at kostanamnese benyttes i dette
+                  arbeidet.
+                </p>
+              </Collapsible>
+            </div>
+            <div className="l-mt-3">
+              <Collapsible heading="Anbefalte vurderingsformer" size="medium">
+                <p>
+                  Example text: Kvinnen bør få kostveiledning og jevnlig
+                  oppfølging for å oppnå tilfredsstillende blodsukker fastende
+                  og etter måltider, og for å forhindre for stor vektøkning i
+                  svangerskapet. Det anbefales at kostanamnese benyttes i dette
+                  arbeidet.
+                </p>
+              </Collapsible>
+            </div>
           </div>
           <div className="l-mt-4">
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
