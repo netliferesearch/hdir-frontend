@@ -21,31 +21,17 @@ const ListItemType = props => {
       {type === 'conference' && (
         <div className="b-list-item-type">
           {fields.heading && <h2>{fields.heading}</h2>}
-          {() => {
-            if (fields.dateFrom && fields.dateTo) {
-              return (
-                <div className="b-list-item-type__date">
-                  {fields.dateFrom} - {fields.dateTo}
-                </div>
-              );
-            } else if (fields.dateFrom) {
-              return (
-                <div className="b-list-item-type__date">{fields.dateFrom}</div>
-              );
-            } else if (fields.dateTo) {
-              return (
-                <div className="b-list-item-type__date">{fields.dateTo}</div>
-              );
-            }
-          }}
+          {fields.dateFrom && fields.dateTo ? (
+            <div className="b-list-item-type__date">
+              {fields.dateFrom} - {fields.dateTo}
+            </div>
+          ) : (
+            <div className="b-list-item-type__date">{fields.dateTo}</div>
+          )}
+
           {fields.registrationDeadline && (
             <div className="b-list-item-type__deadline">
               {fields.registrationDeadline}
-            </div>
-          )}
-          {fields.publishDate && (
-            <div className="b-list-item-type__address">
-              {fields.publishDate}
             </div>
           )}
           {fields.topic && <div>{fields.topic}</div>}
@@ -76,11 +62,10 @@ const ListItemType = props => {
         <div className="b-list-item-type">
           {fields.heading && <h2>{fields.heading}</h2>}
 
-          {fields.registrationDeadline && (
-            <div className="b-list-item-type__deadline">
-              {fields.registrationDeadline}
-            </div>
+          {fields.deadline && (
+            <div className="b-list-item-type__deadline">{fields.deadline}</div>
           )}
+          {fields.lead && <p>{fields.lead}</p>}
           {fields.topic && <div>{fields.topic}</div>}
         </div>
       )}
