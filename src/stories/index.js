@@ -1,11 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-// import { linkTo } from '@storybook/addon-links';
+
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withNotes } from '@storybook/addon-notes';
-import { withSmartKnobs } from 'storybook-addon-smart-knobs';
-import { HashRouter } from 'react-router-dom';
+import { object } from '@storybook/addon-knobs/dist/base';
+import { select } from '@storybook/addon-knobs/dist/react';
+
+// Stories
+import './pages';
+import './navList';
+import './listItemType';
 
 // Components
 import Alert from '../components/Alert';
@@ -19,7 +24,6 @@ import FilterList from '../components/FilterList';
 import Heading from '../components/Heading';
 import LongShortHeading from '../components/LongShortHeading';
 // import MainHeader from '../components/MainHeader';
-import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
@@ -34,38 +38,9 @@ import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import Card from '../components/Card';
 import Statistics from '../components/Statistics';
 import SquareImage from '../components/SquareImage';
-
 import CheckboxGroup from '../components/CheckboxGroup';
 import RadioButtonGroup from '../components/RadioButtonGroup';
-
-// Pages
-import ArticlePage from '../pages/ArticlePage';
-import ChapterPage from '../pages/ChapterPage';
-import FrontPage from '../pages/FrontPage';
-import HearingPage from '../pages/HearingPage';
-import MemoPage from '../pages/MemoPage';
-import NormativeContentPage from '../pages/NormativeContentPage';
-import ParentMemoPage from '../pages/ParentMemoPage';
-import ProductPage from '../pages/ProductPage';
-import RecommendationPage from '../pages/RecommendationPage';
-import SearchResultPage from '../pages/SearchResultPage';
-import SimpleSerp from '../pages/SimpleSerp';
-import LisSpeciality from '../pages/LisSpeciality';
-import LisLearning from '../pages/LisLearning';
-import LisFrontPage from '../pages/LisFrontPage';
-import LisLearningActivities from '../pages/LisLearningActivities';
-import ChapterPageReport from '../pages/ChapterPageReport';
-import ProfessionSelector from '../pages/ProfessionSelector';
-import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
-import FrontPageHelfo from '../pages/FrontPageHelfo';
-import FrontPageHdir from '../pages/FrontPageHdir';
-import HdirTema from '../pages/HdirTema';
-// React specific
 import InputSearch from '../components/InputSearch';
-
-// Test data
-import { object } from '@storybook/addon-knobs/dist/base';
-import { select } from '@storybook/addon-knobs/dist/react';
 
 // TODO: The Storybook-devs are working on an official css toggle addon
 // Also remember to remove the copy function in the NPM storybook building script
@@ -74,7 +49,7 @@ const changeStyle = name => {
   else if (name === 'hdir') require('../static/App.css');
 };
 
-storiesOf('Welcome', module).add('Styles', () => (
+storiesOf('READ ME!', module).add('Styles', () => (
   <div>
     <h1 className="h2">
       Digitial design guide for DIP - Digital Innholdsplattform
@@ -106,114 +81,6 @@ storiesOf('Welcome', module).add('Styles', () => (
   </div>
 ));
 
-storiesOf('Pages', module)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Front page', () => (
-    <HashRouter>
-      <FrontPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Search result page', () => (
-    <HashRouter>
-      <SearchResultPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Simple search result page', () => (
-    <HashRouter>
-      <SimpleSerp />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Article page', () => (
-    <HashRouter>
-      <ArticlePage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Hdir Tema', () => (
-    <HashRouter>
-      <HdirTema />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('ReportWithoutImage', () => (
-    <HashRouter>
-      <ReportPageWithoutImage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('LIS speciality', () => (
-    <HashRouter>
-      <LisSpeciality />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('FrontPageHdir', () => (
-    <HashRouter>
-      <FrontPageHdir />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('LIS learning', () => (
-    <HashRouter>
-      <LisLearning />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('LIS front page', () => (
-    <HashRouter>
-      <LisFrontPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('ProfessionSelector', () => (
-    <HashRouter>
-      <ProfessionSelector />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('LISLearningActivities', () => (
-    <HashRouter>
-      <LisLearningActivities />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Chapter page', () => (
-    <HashRouter>
-      <ChapterPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('ChapterPageReport', () => (
-    <HashRouter>
-      <ChapterPageReport />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Hearing page', () => (
-    <HashRouter>
-      <HearingPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Memo page', () => (
-    <HashRouter>
-      <MemoPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Parent memo page', () => (
-    <HashRouter>
-      <ParentMemoPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Product page', () => (
-    <HashRouter>
-      <ProductPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Recommendation page', () => (
-    <HashRouter>
-      <RecommendationPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('FrontPageHelfo', () => (
-    <HashRouter>
-      <FrontPageHelfo />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Normative content page', () => (
-    <HashRouter>
-      <NormativeContentPage />
-    </HashRouter>
-  ));
-
 storiesOf('ContentLabel', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -227,143 +94,6 @@ storiesOf('InputSearch', module)
   .addWithStaticMarkup('Basic', () => (
     <InputSearch dark={boolean('Dark mode', false)} />
   ));
-
-storiesOf('NavList', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup(
-    'Basic',
-    withNotes(
-      'The links are an array of objects containing the props "title" and "url" as strings.'
-    )(() => (
-      <NavList
-        anchor={boolean('Anchor links', false)}
-        heading={text('Heading', 'Overskrift')}
-        list={object('List', [
-          {
-            title: 'ABC',
-            url: '#'
-          },
-          {
-            title:
-              'Behandling og rehabilitering av x og avhengighet. Behandling og rehabilitering av x og avhengighet. Behandling og rehabilitering av x og avhengighet.',
-            url: '#'
-          },
-          {
-            title: 'GHI',
-            url: '#'
-          }
-        ])}
-      />
-    ))
-  )
-  .addWithStaticMarkup(
-    'With types',
-    withNotes(
-      'The links are an array of objects containing the props "title" and "url" as strings.'
-    )(() => (
-      <NavList
-        anchor={boolean('Anchor links', false)}
-        heading={text('Heading', 'Overskrift')}
-        list={object('List', [
-          {
-            title:
-              'Diagnostisk pakkeforløp for pasienter med uspesifikke symptomer på alvorlig sykdom som kan være kreft',
-            url: '#',
-            meta: 'nasjonale-faglige-retningslinjer'
-          },
-          {
-            title: 'DEF',
-            url: '#',
-            meta: 'rundskriv'
-          },
-          {
-            title:
-              'Behandling og rehabilitering av rusmiddelproblemer og avhengighet. Behandling og rehabilitering av rusmiddelproblemer og avhengighet',
-            url: '#',
-            meta: 'nasjonale-faglige-retningslinjer'
-          }
-        ])}
-      />
-    ))
-  )
-  .addWithStaticMarkup(
-    'Nested list',
-    withNotes(
-      'The links are an array of objects containing the props "title" and "url" as strings.'
-    )(() => (
-      <NavList
-        noArrow
-        small
-        list={object('List', [
-          {
-            title: 'KAPITTEL 1',
-            url: '#',
-            meta: 'Nasjonale faglige retningslinjer'
-          },
-          {
-            title: 'KAPITTEL 2',
-            url: '#',
-            meta: 'Nasjonale faglige retningslinjer',
-            active: true,
-            children: [
-              {
-                title: 'Bla bla bla',
-                url: '#',
-                meta: '2.1'
-              },
-              {
-                title: 'Lorum ipsum',
-                url: '#',
-                meta: '2.2',
-                active: true
-              }
-            ]
-          },
-          {
-            title: 'KAPITTEL 3',
-            url: '#',
-            meta: 'Nasjonale faglige retningslinjer'
-          }
-        ])}
-      />
-    ))
-  )
-  .addWithStaticMarkup(
-    'All properties',
-    withNotes(
-      'The links are an array of objects containing the props "title" and "url" as strings.'
-    )(() => (
-      <NavList
-        heading={text('Heading', '')}
-        anchor={boolean('Anchor', false)}
-        columns={boolean('Columns', false)}
-        hideMeta={boolean('Hide meta', false)}
-        noArrow={boolean('No arrow', false)}
-        small={boolean('Small', false)}
-        sticky={boolean('Sticky', false)}
-        ordered={boolean('Ordered', false)}
-        list={object('List', [
-          {
-            title: 'KAPITTEL 1',
-            url: '#',
-            meta: 'Nasjonale faglige retningslinjer'
-          },
-          {
-            title: 'KAPITTEL 2',
-            url: '#',
-            meta: 'Nasjonale faglige retningslinjer'
-          },
-          {
-            title: 'KAPITTEL 3',
-            url: '#',
-            infoText: 'This is infoText: more text in another column',
-            meta: 'Nasjonale faglige retningslinjer'
-          }
-        ])}
-      />
-    ))
-  );
 
 storiesOf('ChapterHeading', module)
   .addDecorator(withKnobs)
@@ -455,12 +185,6 @@ storiesOf('ArticleIntro', module)
       </div>
     ))
   );
-{
-  boolean('Anchor links', false);
-}
-{
-  text('Heading', 'Overskrift');
-}
 
 storiesOf('Collapsible', module)
   .addDecorator(withKnobs)
