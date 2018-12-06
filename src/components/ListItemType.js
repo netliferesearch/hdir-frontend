@@ -23,16 +23,22 @@ const ListItemType = props => {
         <div className="b-list-item-type">
           {fields.heading && <h2>{fields.heading}</h2>}
           {fields.dateFrom && fields.dateTo ? (
-            <div className="b-list-item-type__date">
+            <p className="b-list-item-type__date">
               {fields.dateFrom} - {fields.dateTo}
-            </div>
+            </p>
           ) : (
-            <div className="b-list-item-type__date">{fields.dateTo}</div>
+            <p className="b-list-item-type__date">{fields.dateTo}</p>
           )}
 
           {fields.registrationDeadline && (
-            <div className="b-list-item-type__deadline">
+            <p className="b-list-item-type__deadline">
               {fields.registrationDeadline}
+            </p>
+          )}
+          {fields.location && (
+            <div className="b-list-item-type__meta">
+              <strong>Sted: </strong>
+              {fields.location}
             </div>
           )}
           {fields.topic && <div>{fields.topic}</div>}

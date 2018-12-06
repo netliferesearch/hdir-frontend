@@ -51,7 +51,8 @@ storiesOf('List', module)
               'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
             publishDate: '03.12.2018',
             lead:
-              'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.'
+              'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
+            topic: ''
           }
         },
         {
@@ -62,7 +63,8 @@ storiesOf('List', module)
             reverseEmail: 'moc.efilten@nrevots.elo',
             phoneNumber: '+47 123 45 678',
             position: 'Developer',
-            department: 'Oslo'
+            department: 'Oslo',
+            topic: ''
           }
         },
         {
@@ -84,6 +86,18 @@ storiesOf('List', module)
             image:
               'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
             publishDate: '01.01.2003'
+          }
+        },
+        {
+          type: 'conference',
+          url: '#4',
+          fields: {
+            heading: 'Kurs i hendelsesanalyse og pasientsikkerhet',
+            dateFrom: '03.11.1990',
+            dateTo: '06.12.2018',
+            location: 'Clarion The Edge, Tromsø',
+            registrationDeadline: '15. oktober',
+            topic: ''
           }
         }
       ])}
