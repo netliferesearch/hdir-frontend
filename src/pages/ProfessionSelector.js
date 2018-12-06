@@ -74,8 +74,8 @@ const ProfessionSelector = () => (
           />
 
           <div className="l-mt-4">
-            <ChapterHeading url="#c" heading="Hva er vedtak" line="none" />
-            <div>
+            <ChapterHeading url="#c" heading="Hva er vedtak" line="bottom" />
+            <div className="l-mt-2">
               Vedtaket gir opplysninger om hva apoteket eller bandasjisten har
               fått utbetalt i refusjon fra Helfo, og hvilken konto pengene har
               gått inn på.
@@ -86,9 +86,9 @@ const ProfessionSelector = () => (
             <ChapterHeading
               url="#c"
               heading="Kan kravet bli avvist"
-              line="none"
+              line="bottom"
             />
-            <div>
+            <div className="l-mt-2">
               Vedtaket gir opplysninger om hva apoteket eller bandasjisten har
               fått utbetalt i refusjon fra Helfo, og hvilken konto pengene har
               gått inn på.
@@ -108,6 +108,9 @@ const ProfessionSelector = () => (
         <div>
           <div className="l-mt-5 col-xs-12">
             <h2>Alt om refusjon og oppgjør</h2>
+            <div className="l-mt-1">
+              <hr className="b-hr b-hr--thick" />
+            </div>
             <div className="l-mt-1">
               <NavList
                 columns
