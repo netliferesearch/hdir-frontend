@@ -33,12 +33,6 @@ const listLinkClasses = (anchor, noArrow, active, activeChild, ordered) =>
     'b-nav-list__link--ordered': ordered
   });
 
-const itemMetaClasses = hideMeta =>
-  classNames({
-    'b-nav-list__item-meta': true,
-    'b-nav-list__item-meta--hide': hideMeta
-  });
-
 const NavList = props => {
   const { list: list = [] } = props;
 
@@ -71,9 +65,7 @@ const NavList = props => {
               <div className="b-nav-list__item-title">
                 {item.title}
                 {item.meta && (
-                  <div className={itemMetaClasses(props.hideMeta)}>
-                    {item.meta}
-                  </div>
+                  <div className="b-nav-list__item-meta">{item.meta}</div>
                 )}
               </div>
               {item.infoText && (
@@ -134,7 +126,6 @@ NavList.propTypes = {
     })
   ).isRequired,
   columns: PropTypes.bool,
-  hideMeta: PropTypes.bool,
   noArrow: PropTypes.bool,
   small: PropTypes.bool,
   sticky: PropTypes.bool,

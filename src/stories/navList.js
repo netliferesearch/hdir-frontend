@@ -119,7 +119,6 @@ storiesOf('NavList', module)
         heading={text('Heading', '')}
         anchor={boolean('Anchor', false)}
         columns={boolean('Columns', false)}
-        hideMeta={boolean('Hide meta', false)}
         noArrow={boolean('No arrow', false)}
         small={boolean('Small', false)}
         sticky={boolean('Sticky', false)}

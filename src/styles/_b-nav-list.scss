@@ -62,7 +62,6 @@
   }
   &__item-info {
     font-size: $meta-text;
-    flex-shrink: 0;
     padding-left: 1rem;
     @include mq($until: $tablet) {
       width: calc(100% - 2em);
