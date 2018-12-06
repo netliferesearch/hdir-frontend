@@ -11,6 +11,7 @@ import { select } from '@storybook/addon-knobs/dist/react';
 import './pages';
 import './navList';
 import './listItemType';
+import './list';
 
 // Components
 import Alert from '../components/Alert';
@@ -27,6 +28,7 @@ import LongShortHeading from '../components/LongShortHeading';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
+import List from '../components/List';
 import ListHeading from '../components/ListHeading';
 import PressRelease from '../components/PressRelease';
 import Box from '../components/Box';

@@ -1,0 +1,42 @@
+.b-list-item-type {
+  width: 100%;
+
+  &__email {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: left;
+  }
+  &__meta {
+    font-size: $meta-text;
+    color: $grey;
+  }
+  &__topic {
+    font-size: $meta-text;
+    color: $grey;
+  }
+  &__deadline {
+    font-size: $meta-text;
+    color: $red !important;
+  }
+
+  &__flex-wrapper {
+    display: flex;
+  }
+
+  &__image {
+    flex: 1;
+  }
+  &__text {
+    flex: 3;
+    margin-left: 1rem;
+  }
+  &__category {
+    font-size: $meta-text;
+    background-color: $yellow-light;
+    display: inline-block;
+    padding: 0.25em;
+  }
+  &__date {
+    font-size: $meta-text;
+  }
+}

@@ -45,7 +45,7 @@ storiesOf('ListItemType', module)
         fields: object('Fields', {
           heading: 'A new thing happened',
           deadline: '03.12.2018',
-          lead: 'asdsdf'
+          topic: ''
         })
       }}
     />
