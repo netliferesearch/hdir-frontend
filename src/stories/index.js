@@ -28,7 +28,7 @@ import LongShortHeading from '../components/LongShortHeading';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
-import List from '../components/List';
+import Questionnaire from '../components/Questionnaire';
 import ListHeading from '../components/ListHeading';
 import PressRelease from '../components/PressRelease';
 import Box from '../components/Box';
@@ -348,6 +348,18 @@ storiesOf('Quote', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
+  ));
+
+storiesOf('Questionnaire', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <Questionnaire />)
+  .addWithStaticMarkup('With layout', () => (
+    <Box color="grey" square noPadding>
+      <div className="l-container">
+        <Questionnaire />
+      </div>
+    </Box>
   ));
 
 storiesOf('References', module)

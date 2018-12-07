@@ -27,6 +27,33 @@ $secondary-color: $blue-dark;
 $primary-color: $blue;
 $link-color: $primary-color;
 
+// List of colors
+$colors: (
+  black: $black,
+  grey: $grey,
+  grey-light: $grey-light,
+  grey-lighter: $grey-lighter,
+  blue-dark: $blue-dark,
+  blue: $blue,
+  blue-light: $blue-light,
+  blue-lighter: $blue-lighter,
+  yellow-dark: $yellow-dark,
+  yellow: $yellow,
+  yellow-light: $yellow-light,
+  red-dark: $red-dark,
+  red: $red,
+  red-light: $red-light,
+  orange: $orange,
+  green-dark: $green-dark,
+  green: $green,
+  green-light: $green-light,
+  purple: $purple,
+  purple-dark: $purple-dark,
+  green-warning: $green-warning,
+  yellow-warning: $yellow-warning,
+  red-warning: $red-warning
+);
+
 // Base font
 $base-font-size: 20px;
 $base-font-weight: normal;

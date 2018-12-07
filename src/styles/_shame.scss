@@ -329,3 +329,16 @@ small {
     }
   }
 }
+
+.b-questionnaire {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__options {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+  }
+}

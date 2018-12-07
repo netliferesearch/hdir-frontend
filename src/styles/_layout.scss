@@ -30,30 +30,6 @@ $space-directions: (
   left: l
 );
 
-// Responsive text alignment
-.t {
-  @each $spaceName, $spaceValue in $flexboxgrid-breakpoints {
-    &-#{$spaceName}-right {
-      text-align: left;
-      @include mq($from: $spaceValue) {
-        text-align: right;
-      }
-    }
-    &-#{$spaceName}-left {
-      text-align: left;
-      @include mq($from: $spaceValue) {
-        text-align: left;
-      }
-    }
-    &-#{$spaceName}-center {
-      text-align: left;
-      @include mq($from: $spaceValue) {
-        text-align: center;
-      }
-    }
-  }
-}
-
 // Genereates spacing classes like this: l-mt-1
 // mt = margin-top, and the number represents a value from 1-5,
 // where 5 has the largest distance.
