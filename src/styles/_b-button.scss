@@ -26,5 +26,11 @@
     &--small {
       font-size: $meta-text;
     }
+
+    &--secondary {
+      border: 2px solid $link-color;
+      color: $link-color !important;
+      background: white;
+    }
   }
 }
