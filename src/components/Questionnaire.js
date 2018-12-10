@@ -6,10 +6,14 @@ const Questionnaire = () => (
     <strong>Fant Du det du lette etter?</strong>
     <div className="b-questionnaire__options">
       <span className="t--green-warning">
-        <Link buttonInherit>Ja</Link>
+        <Link buttonInherit small>
+          Ja
+        </Link>
       </span>
       <span className="t--red-warning">
-        <Link buttonInherit>Nei</Link>
+        <Link buttonInherit small>
+          Nei
+        </Link>
       </span>
     </div>
   </section>
