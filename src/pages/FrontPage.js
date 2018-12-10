@@ -102,6 +102,9 @@ const FrontPage = () => (
         <Link to="/statistikk">Statistikk</Link>
       </p>
       <p>
+        <Link to="/søkeresultat">Søkeresultat</Link>
+      </p>
+      <p>
         <Link to="/yrke-velger">Yrke velger</Link>
       </p>
       {/*<Link to="/søkeresultat">
