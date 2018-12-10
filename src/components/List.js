@@ -34,9 +34,15 @@ const List = props => {
             className={listItemClasses(props.columns)}
             key={shortid.generate()}
           >
-            <a href={item.url} className={listLinkClasses(item.url)}>
-              <ListItemType itemType={item} />
-            </a>
+            {item.url ? (
+              <a href={item.url} className={listLinkClasses(item.url)}>
+                <ListItemType itemType={item} />
+              </a>
+            ) : (
+              <div className={listLinkClasses(item.url)}>
+                <ListItemType itemType={item} />
+              </div>
+            )}
           </li>
         ))}
       </ul>
