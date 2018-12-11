@@ -8,14 +8,14 @@
     color: $secondary-color;
     background-color: white;
     border: 0;
-    padding: 1em 1em 1em 2em;
-    border-radius: 2em;
+    padding: 1em;
+    border-radius: 4px;
     box-shadow: 0 0 0 1px $secondary-color;
 
     &:focus {
       // Outline doesn't have border-radius, so we use box-shadow instead.
       outline: 0;
-      box-shadow: 0 0 0 4px $secondary-color;
+      box-shadow: 0 0 0 2px $primary-color;
     }
 
     &--dark {
@@ -30,17 +30,27 @@
 
   &__button {
     font-size: 1rem;
-    padding: 1em 1.66em;
+    padding: 1em;
     margin-left: 1rem;
     color: $secondary-color;
-    background-color: transparent;
+    background-color: white;
     box-shadow: 0 0 0 1px $secondary-color;
     border: 0;
-    border-radius: 100%;
-    background-image: url('./icons/search.svg');
-    background-repeat: no-repeat;
-    background-size: 1.2rem;
-    background-position: center;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:after {
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      content: ' ';
+      float: right;
+      margin-left: 0.75em;
+      background-size: 1.2em;
+      background-position: center;
+      background-image: url('./icons/search.svg');
+      background-repeat: no-repeat;
+    }
 
     &--dark {
       box-shadow: none;
@@ -64,30 +74,41 @@
     }
   }
   &__suggestions-container {
-    background-color: white;
-    border-radius: 4px;
+    position: relative;
     &--open {
       // No style
     }
   }
   &__suggestions-list {
     // removes ul default styles
+    position: absolute;
+    background-color: white;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    margin-top: 0.25rem;
+    max-width: 100%;
     overflow: auto;
     padding: 0;
     list-style-type: none;
+    z-index: 2;
   }
   &__suggestion {
     cursor: pointer;
+    border-bottom: 1px solid $primary-color;
     padding: 1rem;
-    margin: 0.5rem;
-    border: 1px solid $secondary-color;
-    border-radius: 4px;
+
+    &:last-child {
+      border: 0;
+      background-color: $blue;
+      color: white;
+      padding: 0.5rem 1rem;
+    }
 
     &--first {
       // No style
     }
     &--highlighted {
-      border-color: $yellow;
+      border-color: $blue-dark;
       background-color: $yellow-light;
     }
   }

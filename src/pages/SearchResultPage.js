@@ -3,12 +3,18 @@ import React from 'react';
 import List from '../components/List';
 import ListHeading from '../components/ListHeading';
 import Button from '../components/Button';
+import InputSearch from '../components/InputSearch';
 import CheckboxGroup from '../components/CheckboxGroup';
 
 const SearchResultPage = () => (
   <main>
     <div className="l-container">
       <div className="row l-mt-4">
+        <div className="col-md-8 col-md-offset-4">
+          <InputSearch id="x" />
+        </div>
+      </div>
+      <div className="row l-mt-5">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <h4>Filtrér søk</h4>
           <div className="l-mt-2">

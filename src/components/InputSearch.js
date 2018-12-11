@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
-import shortid from 'shortid';
-
-import ContentLabel from './ContentLabel';
 
 import searchSuggestions from '../data/searchSuggestions';
 
@@ -13,9 +10,12 @@ const getSuggestions = value => {
 
   return inputValue.length < 3
     ? []
-    : searchSuggestions.filter(lang =>
-        lang.title.toLowerCase().includes(inputValue)
-      );
+    : [
+        ...searchSuggestions.filter(lang =>
+          lang.title.toLowerCase().includes(inputValue)
+        ),
+        { intro: 'Se alle resultater for "Helsestasjon"' }
+      ];
 };
 
 // When suggestion is clicked, Autosuggest needs to populate the input
@@ -26,31 +26,12 @@ const getSuggestionValue = suggestion => suggestion.title;
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
   <div>
-    <div>
-      <span
-        className="suggestion__meta"
-        style={{
-          color: suggestion.type === 'helsenorge.no' && '#A35C98'
-        }}
-      >
-        {suggestion.type} {suggestion.type === 'helsenorge.no' && '→'}
-      </span>
-      <div
-        className="test-icon"
-        style={{
-          backgroundColor: suggestion.type === 'helsenorge.no' && '#A35C98'
-        }}
-      />
-    </div>
-    <div className="suggestion-title">{suggestion.title}</div>
-    <div className="suggestion-intro">{suggestion.intro}</div>
-    <div>
-      {suggestion.codes.map(code => (
-        <ContentLabel code key={shortid.generate()}>
-          {code}
-        </ContentLabel>
-      ))}
-    </div>
+    {suggestion.title && (
+      <div className="suggestion-title">{suggestion.title}</div>
+    )}
+    {suggestion.intro && (
+      <div className="suggestion-intro">{suggestion.intro}</div>
+    )}
   </div>
 );
 
@@ -69,7 +50,9 @@ const renderInputComponent = inputProps => (
         'b-input-search__button--dark': inputProps.dark
       })}
       onClick={triggerSearch}
-    />
+    >
+      Søk
+    </button>
   </div>
 );
 
