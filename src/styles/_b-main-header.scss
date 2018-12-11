@@ -1,6 +1,7 @@
 .b-main-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2rem 0;
 
   &__logo {
@@ -10,13 +11,29 @@
     @include link-init(transparent);
   }
   &__nav {
-    &--small {
-      font-size: $meta-text;
+    display: flex;
+    align-items: center;
+  }
+  &__button {
+    display: flex;
+    margin-left: 1.5rem;
+    background: transparent;
+    border: 1px solid $secondary-color;
+    font-size: $meta-text;
+    color: $secondary-color;
+    border-radius: 4em;
+    align-items: center;
+    padding: 0.5em 1em;
+
+    img {
+      height: 1.5em;
+      width: auto;
+      margin-left: 0.75em;
     }
   }
   &__link {
     text-decoration: none;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 
     @include link-init($secondary-color);
 
