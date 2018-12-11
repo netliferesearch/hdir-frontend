@@ -445,7 +445,7 @@ const RecommendationPage = () => (
               </div>
             </div>
           </div>
-          <hr />
+          <hr className="b-hr" />
           <div className="l-mt-3 t-sm-right">
             <Link href="#a" secondary small>
               Sist endret: 11.08.2018

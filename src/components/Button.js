@@ -21,7 +21,6 @@ const Button = props => (
 );
 
 Button.propTypes = {
-  icon: PropTypes.string,
   arrow: PropTypes.bool,
   small: PropTypes.bool,
   secondary: PropTypes.bool
