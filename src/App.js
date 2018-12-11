@@ -34,6 +34,7 @@ import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import FrontPageHelfo from './pages/FrontPageHelfo';
 import FrontPageHdir from './pages/FrontPageHdir';
 import HdirTema from './pages/HdirTema';
+import Box from './components/Box';
 
 class App extends Component {
   componentDidMount() {
@@ -105,7 +106,11 @@ class App extends Component {
               <Route path="/transportside" component={TransportPage} />
               <Route component={NotFound} />
             </Switch>
-            <Footer />
+            <Box noPadding square color="blueDark">
+              <div className="l-container l-mt-2">
+                <Footer />
+              </div>
+            </Box>
           </div>
         </HashRouter>
       </div>

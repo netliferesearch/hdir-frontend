@@ -1,12 +1,27 @@
 .b-footer {
-  padding: 4em 0;
+  color: white;
 
   &__link {
-    @include link-init($secondary-color);
-    margin-right: 2em;
-
-    &:hover {
-      @include underline($secondary-color);
+    @include link-init(white, true);
+    display: inline-block;
+    margin-bottom: 0.8rem;
+  }
+  &__text {
+    font-size: $meta-text;
+  }
+  &__link-list {
+    font-size: $meta-text;
+    flex: 1;
+  }
+  &__link-matrix {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__matrix-item {
+    flex-basis: 50%;
+    margin-bottom: 0.8rem;
+    @include mq($until: $desktop) {
+      flex-basis: 100%;
     }
   }
 }
