@@ -19,6 +19,7 @@ import LisSpeciality from './pages/LisSpeciality';
 import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 import LisLearning from './pages/LisLearning';
+import TransportPage from './pages/TransportPage';
 import LisFrontPage from './pages/LisFrontPage';
 import LisLearningActivities from './pages/LisLearningActivities';
 import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
@@ -101,6 +102,7 @@ class App extends Component {
                 path="/abonnement-tilpassing"
                 component={SubscriptionSettingsPage}
               />
+              <Route path="/transportside" component={TransportPage} />
               <Route component={NotFound} />
             </Switch>
             <Footer />

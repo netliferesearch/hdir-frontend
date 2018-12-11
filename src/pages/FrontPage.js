@@ -18,6 +18,8 @@ const FrontPage = () => (
         Press 'h' to toggle block/component hints.
         <br />
         <s>Press 'j' to add Helfo styling. Refresh page to undo.</s>
+        <br />
+        To see Helfo-styles: Storybook -> READ ME -> Styles
       </h3>
     </div>
     <div className="l-container l-mt-3">
@@ -103,6 +105,9 @@ const FrontPage = () => (
       </p>
       <p>
         <Link to="/søkeresultat">Søkeresultat</Link>
+      </p>
+      <p>
+        <Link to="/transportside">Transportside</Link>
       </p>
       <p>
         <Link to="/yrke-velger">Yrke velger</Link>
