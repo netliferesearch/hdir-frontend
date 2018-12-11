@@ -6,21 +6,31 @@ import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
 import LongShortHeading from '../components/LongShortHeading';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const MemoChapterPage = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#a" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Konferanse',
+            href: '#a'
+          },
+          {
+            name: 'Arbeid og psykisk helse',
+            href: '#a'
+          },
+          {
+            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+          }
+        ]}
+      />
+
       <div className="l-mt-3">
         <div className="row">
           <div className="col-xs-12">

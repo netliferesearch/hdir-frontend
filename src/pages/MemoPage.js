@@ -6,21 +6,30 @@ import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Quote from '../components/Quote';
 import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const MemoPage = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#a" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Konferanse',
+            href: '#a'
+          },
+          {
+            name: 'Arbeid og psykisk helse',
+            href: '#a'
+          },
+          {
+            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+          }
+        ]}
+      />
       <div className="l-mt-3">
         <ChapterHeading
           heading="Særskilte regler i tilknytning til autorisasjon, krav om politattest m.v."

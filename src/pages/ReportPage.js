@@ -5,21 +5,30 @@ import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
 import ArticleIntro from '../components/ArticleIntro';
 import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const ReportPage = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#a" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Konferanse',
+            href: '#a'
+          },
+          {
+            name: 'Arbeid og psykisk helse',
+            href: '#a'
+          },
+          {
+            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+          }
+        ]}
+      />
       <div className="l-mt-2">
         <ArticleIntro
           heading="Arbeid og psykisk helse"

@@ -4,21 +4,30 @@ import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const ReportPageWithoutImage = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#a" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Konferanse',
+            href: '#a'
+          },
+          {
+            name: 'Arbeid og psykisk helse',
+            href: '#a'
+          },
+          {
+            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+          }
+        ]}
+      />
     </div>
     <div className="l-mt-4">
       <Box color="blueDark" square noPadding>

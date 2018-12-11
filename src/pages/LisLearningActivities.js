@@ -5,21 +5,30 @@ import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const LisLearningActivities = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#a" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Konferanse',
+            href: '#a'
+          },
+          {
+            name: 'Arbeid og psykisk helse',
+            href: '#a'
+          },
+          {
+            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+          }
+        ]}
+      />
 
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">

@@ -5,21 +5,30 @@ import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
 import Box from '../components/Box';
 import Card from '../components/Card';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const ChapterPageReport = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#a" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Konferanse',
+            href: '#a'
+          },
+          {
+            name: 'Arbeid og psykisk helse',
+            href: '#a'
+          },
+          {
+            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+          }
+        ]}
+      />
     </div>
     <div className="l-mt-2 b-bleed">
       <div className="l-container">

@@ -4,21 +4,30 @@ import Link from '../components/Link';
 import Card from '../components/Card';
 import Collapsible from '../components/Collapsible';
 import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const AuthorizationFrontPage = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#a" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Konferanse',
+            href: '#a'
+          },
+          {
+            name: 'Arbeid og psykisk helse',
+            href: '#a'
+          },
+          {
+            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+          }
+        ]}
+      />
       <div className="row">
         <div className="l-mt-2 col-xs-12">
           <h1>Autorisasjoner og lisens</h1>

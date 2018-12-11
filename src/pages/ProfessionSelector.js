@@ -5,23 +5,32 @@ import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 import SelectInline from '../components/Select';
 import ChapterHeading from '../components/ChapterHeading';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const ProfessionSelector = () => (
   <div>
     <div className="l-container">
       <div className="row middle-xs">
         <div className="col-xs-12 col-md-6  l-mt-1">
-          <nav className="b-breadcrumbs">
-            <a href="#a" className="b-breadcrumbs__link">
-              Lorum
-            </a>
-            <a href="#a" className="b-breadcrumbs__link">
-              Ipsum
-            </a>
-            <a href="#a" className="b-breadcrumbs__link">
-              Dolor
-            </a>
-          </nav>
+          <Breadcrumbs
+            paths={[
+              {
+                name: 'Forsiden',
+                href: '#a'
+              },
+              {
+                name: 'Konferanse',
+                href: '#a'
+              },
+              {
+                name: 'Arbeid og psykisk helse',
+                href: '#a'
+              },
+              {
+                name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+              }
+            ]}
+          />
         </div>
         <div className="col-xs-12 col-md-6 l-mt-1">
           <SelectInline

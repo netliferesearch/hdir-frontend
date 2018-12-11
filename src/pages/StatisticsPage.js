@@ -8,21 +8,30 @@ import RadioButtonGroup from '../components/RadioButtonGroup';
 import ListHeading from '../components/ListHeading';
 import ArticleIntro from '../components/ArticleIntro';
 import NavList from '../components/NavList';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const StatisticsPage = () => (
   <div>
     <div className="l-container">
-      <nav className="b-breadcrumbs">
-        <a href="#a" className="b-breadcrumbs__link">
-          Lorum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Ipsum
-        </a>
-        <a href="#a" className="b-breadcrumbs__link">
-          Dolor
-        </a>
-      </nav>
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Konferanse',
+            href: '#a'
+          },
+          {
+            name: 'Arbeid og psykisk helse',
+            href: '#a'
+          },
+          {
+            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+          }
+        ]}
+      />
       <div className="row">
         <div className="col-xs-12 l-mt-4">
           <ArticleIntro
