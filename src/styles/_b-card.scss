@@ -23,8 +23,8 @@
 
     &:hover {
       .b-card__heading {
-        color: $blue;
-        @include underline($blue);
+        color: $link-color;
+        @include underline($link-color);
       }
     }
 

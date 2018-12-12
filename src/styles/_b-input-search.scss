@@ -99,7 +99,7 @@
 
     &:last-child {
       border: 0;
-      background-color: $blue;
+      background-color: $primary-color;
       color: white;
       padding: 0.5rem 1rem;
     }
@@ -108,7 +108,7 @@
       // No style
     }
     &--highlighted {
-      border-color: $blue-dark;
+      border-color: $primary-color;
       background-color: $yellow-light;
     }
   }
