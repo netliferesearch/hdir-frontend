@@ -67,7 +67,7 @@
       border-right: 2px;
     }
     &:nth-child(2) {
-      font-size: 20px;
+      font-size: 1rem;
     }
 
     @include mq($until: desktop) {
