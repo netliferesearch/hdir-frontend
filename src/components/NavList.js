@@ -10,7 +10,13 @@ const listClasses = (small, sticky) =>
     'b-nav-list--sticky': sticky
   });
 
-const listItemClasses = (anchor, columns, ordered) =>
+const itemInfoClasses = file =>
+  classNames({
+    'b-nav-list__item-info': true,
+    'b-nav-list__item-info--file': file
+  });
+
+const listItemClasses = (anchor, columns) =>
   classNames({
     'b-nav-list__item': true,
     'b-nav-list__item--anchor': anchor,
@@ -23,11 +29,11 @@ const listItemsClasses = columns =>
     'b-nav-list__items--columns': columns
   });
 
-const listLinkClasses = (anchor, noArrow, active, activeChild, ordered) =>
+const listLinkClasses = (anchor, noArrow, active, activeChild, ordered, file) =>
   classNames({
     'b-nav-list__link': true,
     'b-nav-list__link--anchor': anchor,
-    'b-nav-list__link--no-arrow': noArrow,
+    'b-nav-list__link--no-arrow': noArrow || file,
     'b-nav-list__link--active': active,
     'b-nav-list__link--active-child': activeChild,
     'b-nav-list__link--ordered': ordered
@@ -54,7 +60,8 @@ const NavList = props => {
                 props.noArrow,
                 item.active,
                 item.activeChild,
-                props.ordered
+                props.ordered,
+                item.file
               )}
             >
               {item.description && (
@@ -69,7 +76,9 @@ const NavList = props => {
                 )}
               </div>
               {item.infoText && (
-                <div className="b-nav-list__item-info">{item.infoText}</div>
+                <div className={itemInfoClasses(item.file)}>
+                  {item.infoText}
+                </div>
               )}
             </a>
             {item.children && (
@@ -82,7 +91,8 @@ const NavList = props => {
                         false,
                         true,
                         false,
-                        child.active
+                        child.active,
+                        child.file
                       )}
                     >
                       {child.meta && (
@@ -114,6 +124,7 @@ NavList.propTypes = {
       description: PropTypes.string,
       url: PropTypes.string.isRequired,
       active: PropTypes.bool,
+      file: PropTypes.bool,
       infoText: PropTypes.string,
       children: PropTypes.arrayOf(
         PropTypes.shape({

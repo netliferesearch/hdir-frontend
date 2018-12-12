@@ -62,12 +62,33 @@
       }
     }
   }
+
   &__item-info {
     font-size: $meta-text;
     padding-left: 1rem;
+    flex-shrink: 0;
     @include mq($until: $tablet) {
       width: calc(100% - 2em);
       padding: 0;
+    }
+
+    &--file {
+      position: relative;
+      color: $black;
+      padding-right: 1rem;
+      padding-left: 0;
+      &:after {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        border-bottom: 1px solid $blue;
+        width: 100%;
+        text-align: right;
+        float: right;
+        content: '↓';
+      }
     }
   }
   &__item-meta {

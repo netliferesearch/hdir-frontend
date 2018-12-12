@@ -132,7 +132,9 @@ storiesOf('NavList', module)
           {
             title: 'KAPITTEL 2',
             url: '#',
-            meta: 'Nasjonale faglige retningslinjer'
+            meta: 'Nasjonale faglige retningslinjer',
+            infoText: 'PDF (3,5 MB)',
+            file: true
           },
           {
             title: 'KAPITTEL 3',
