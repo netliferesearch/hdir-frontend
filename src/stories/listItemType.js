@@ -1,11 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import {
+  withKnobs,
+  text,
+  boolean,
+  object,
+  select
+} from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
-import { withNotes } from '@storybook/addon-notes';
-import { object } from '@storybook/addon-knobs/dist/base';
-import { select } from '@storybook/addon-knobs/dist/react';
 
 import ListItemType from '../components/ListItemType';
 

@@ -1,11 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import {
+  withKnobs,
+  text,
+  boolean,
+  object,
+  select
+} from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
-import { withNotes } from '@storybook/addon-notes';
-import { object } from '@storybook/addon-knobs/dist/base';
-import { select } from '@storybook/addon-knobs/dist/react';
 
 // Stories
 import './pages';
@@ -163,9 +166,7 @@ storiesOf('ArticleIntro', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup(
     'Basic',
-    withNotes(
-      'The row and col classes are used here to show of the "feature" property breaking out of the grid'
-    )(() => (
+    () => (
       <div className="l-container">
         <div className="row">
           <div className="col-xs-12">
@@ -185,7 +186,11 @@ storiesOf('ArticleIntro', module)
           </div>
         </div>
       </div>
-    ))
+    ),
+    {
+      notes:
+        'The row and col classes are used here to show of the "feature" property breaking out of the grid'
+    }
   );
 
 storiesOf('Collapsible', module)

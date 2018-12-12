@@ -1,11 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import {
+  withKnobs,
+  text,
+  boolean,
+  object,
+  select
+} from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
-import { withNotes } from '@storybook/addon-notes';
-import { object } from '@storybook/addon-knobs/dist/base';
-import { select } from '@storybook/addon-knobs/dist/react';
 
 import NavList from '../components/NavList';
 
@@ -14,9 +17,7 @@ storiesOf('NavList', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup(
     'Basic',
-    withNotes(
-      'The links are an array of objects containing the props "title" and "url" as strings.'
-    )(() => (
+    () => (
       <NavList
         anchor={boolean('Anchor links', false)}
         heading={text('Heading', 'Overskrift')}
@@ -36,13 +37,15 @@ storiesOf('NavList', module)
           }
         ])}
       />
-    ))
+    ),
+    {
+      notes:
+        'The links are an array of objects containing the props "title" and "url" as strings.'
+    }
   )
   .addWithStaticMarkup(
     'With types',
-    withNotes(
-      'The links are an array of objects containing the props "title" and "url" as strings.'
-    )(() => (
+    () => (
       <NavList
         anchor={boolean('Anchor links', false)}
         heading={text('Heading', 'Overskrift')}
@@ -66,13 +69,15 @@ storiesOf('NavList', module)
           }
         ])}
       />
-    ))
+    ),
+    {
+      notes:
+        'The links are an array of objects containing the props "title" and "url" as strings.'
+    }
   )
   .addWithStaticMarkup(
     'Nested list',
-    withNotes(
-      'The links are an array of objects containing the props "title" and "url" as strings.'
-    )(() => (
+    () => (
       <NavList
         noArrow
         small
@@ -108,13 +113,15 @@ storiesOf('NavList', module)
           }
         ])}
       />
-    ))
+    ),
+    {
+      notes:
+        'The links are an array of objects containing the props "title" and "url" as strings.'
+    }
   )
   .addWithStaticMarkup(
     'All properties',
-    withNotes(
-      'The links are an array of objects containing the props "title" and "url" as strings.'
-    )(() => (
+    () => (
       <NavList
         heading={text('Heading', '')}
         anchor={boolean('Anchor', false)}
@@ -144,5 +151,9 @@ storiesOf('NavList', module)
           }
         ])}
       />
-    ))
+    ),
+    {
+      notes:
+        'The links are an array of objects containing the props "title" and "url" as strings.'
+    }
   );
