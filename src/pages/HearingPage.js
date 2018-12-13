@@ -4,6 +4,7 @@ import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';
 import NavList from '../components/NavList';
+import Alert from '../components/Alert';
 
 const HearingPage = () => (
   <div>
@@ -12,7 +13,15 @@ const HearingPage = () => (
         heading="Arbeid og psykisk helse"
         lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
       />
-      <div className="row l-mt-3">
+      <p className="t--grey t-small">05. desember 2018 - 06 desember 2018</p>
+      <p className="t--grey t-small">
+        <strong>Sted:</strong> Helsedirektoratets lokaler i Vitaminveien 4 på
+        Storo i Oslo
+      </p>
+      <Alert title="Obs" status="success" small inline>
+        Påmeldingsfrist 02. desember
+      </Alert>
+      <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
             anchor
