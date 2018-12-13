@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start:lambda": "netlify-lambda serve src/faas",
-    "build:lambda": "netlify-lambda build src/faas/build"
+    "build:lambda": "netlify-lambda build src/faas"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^4.0.12",
