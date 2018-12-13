@@ -22,6 +22,3 @@ yarn-error.log*
 
 # built serverless functions / faas
 src/faas/build
-
-# ignore css files in src
-src/styles/*.css
