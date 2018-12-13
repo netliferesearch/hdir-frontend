@@ -111,7 +111,7 @@ const HdirTema = () => (
             <Statistics
               bigText="91,3%"
               smallText="Andel pakkeforløp for brystkreft som er gjennomført innenfor makisemal anbefalt forløstid."
-              icon="./icons/pie.svg"
+              icon="../static/icons/pie.svg"
             />
           </Card>
         </div>
@@ -120,7 +120,7 @@ const HdirTema = () => (
             <Statistics
               bigText="1106"
               smallText="Antall på en gjennomsnittlig liste for fastleger."
-              icon="./icons/pie.svg"
+              icon="../static/icons/pie.svg"
             />
           </Card>
         </div>

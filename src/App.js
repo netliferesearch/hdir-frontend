@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import './static/App.scss';
+import './styles/App.scss';
 
 import FrontPage from './pages/FrontPage';
 import SearchResultPage from './pages/SearchResultPage';

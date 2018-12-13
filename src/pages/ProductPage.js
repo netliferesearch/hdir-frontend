@@ -134,11 +134,11 @@ const ProductPage = () => (
       </div>
 
       <div className="col-xs-12 l-mt-4">
-        <Link href="#a" small icon="./icons/method.svg">
+        <Link href="#a" small icon="../static/icons/method.svg">
           Om metode og prosess
         </Link>
         <br />
-        <Link href="#a" small icon="./icons/print.svg">
+        <Link href="#a" small icon="../static/icons/print.svg">
           Skriv ut hele retningslinjen
         </Link>
       </div>
