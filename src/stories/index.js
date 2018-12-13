@@ -510,6 +510,9 @@ storiesOf('Alert', module)
         },
         'success'
       )}
+      small={boolean('Small', false)}
+      inline={boolean('Inline', false)}
+      title={text('Title', '')}
     >
       {text('Content', 'This is some content, it can be anything')}
     </Alert>

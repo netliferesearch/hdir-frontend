@@ -256,6 +256,11 @@ small {
     padding: 0.5em;
   }
 
+  &--inline {
+    display: inline-flex;
+    padding-right: 1.5em;
+  }
+
   &--success {
     border-color: $green;
     background-color: $green-light;
@@ -313,6 +318,14 @@ small {
       content: '!';
     }
   }
+
+  &__title {
+    flex-shrink: 0;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-top: 0.25em;
+  }
+
   &__content {
     margin-top: 0.25em;
     text-align: left;

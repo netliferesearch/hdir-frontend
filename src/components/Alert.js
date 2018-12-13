@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const boxClasses = (status, small) =>
+const boxClasses = (status, small, inline) =>
   classNames({
     'b-alert': true,
     'b-alert--success': status === 'success',
     'b-alert--warning': status === 'warning',
     'b-alert--danger': status === 'danger',
     'b-alert--info': status === 'info',
-    'b-alert--small': small
+    'b-alert--small': small,
+    'b-alert--inline': inline
   });
 
 const boxIconClasses = status =>
@@ -22,14 +23,18 @@ const boxIconClasses = status =>
   });
 
 const Alert = props => (
-  <section className={boxClasses(props.status, props.small)}>
+  <section className={boxClasses(props.status, props.small, props.inline)}>
     <div className={boxIconClasses(props.status)} />
+    {props.title && <div className="b-alert__title">{props.title}</div>}
     <div className="b-alert__content">{props.children}</div>
   </section>
 );
 
 Alert.propTypes = {
+  title: PropTypes.string,
   status: PropTypes.oneOf('', 'success', 'warning', 'danger', 'info'),
+  toggleIcon: PropTypes.bool,
+  inline: PropTypes.bool,
   small: PropTypes.bool
 };
 
