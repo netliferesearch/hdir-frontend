@@ -16,10 +16,6 @@
 .env.test.local
 .env.production.local
 
-# built css files
-App.css
-Helfo.css
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

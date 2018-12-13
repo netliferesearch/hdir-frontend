@@ -1,20 +1,20 @@
-@import 'normalize-scss/sass/normalize';
-@import 'sass-mq/mq';
-@import 'flexboxgrid-sass/flexboxgrid';
+@import '~normalize-scss/sass/normalize';
+@import '~sass-mq/mq';
+@import '~flexboxgrid-sass/flexboxgrid';
 
-@import './styles/settings';
-@import './styles/variables';
+@import '../styles/settings';
+@import '../styles/variables';
 
-@import './styles/mixins';
+@import '../styles/mixins';
 
-@import './styles/typography';
-@import './styles/headings';
-@import 'styles/layout';
-@import 'styles/animation';
+@import '../styles/typography';
+@import '../styles/headings';
+@import '../styles/layout';
+@import '../styles/animation';
 
-@import 'styles/misc';
+@import '../styles/misc';
 
-@import './styles/blocks';
+@import '../styles/blocks';
 
 // Temp styles. Remove your temp-styles after finishing your task.
-@import './styles/shame';
+@import '../styles/shame';

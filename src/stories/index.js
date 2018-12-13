@@ -50,8 +50,8 @@ import InputSearch from '../components/InputSearch';
 // TODO: The Storybook-devs are working on an official css toggle addon
 // Also remember to remove the copy function in the NPM storybook building script
 const changeStyle = name => {
-  if (name === 'helfo') require('../static/Helfo.css');
-  else if (name === 'hdir') require('../static/App.css');
+  if (name === 'helfo') require('../static/Helfo.scss');
+  else if (name === 'hdir') require('../static/App.scss');
 };
 
 storiesOf('READ ME!', module).add('Styles', () => (
