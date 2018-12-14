@@ -23,6 +23,7 @@ storiesOf('List', module)
           type: 'news',
           url: '#1',
           fields: {
+            category: '',
             heading:
               'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
             publishDate: '03.12.2018',
@@ -34,6 +35,7 @@ storiesOf('List', module)
           type: 'news',
           url: '#1',
           fields: {
+            category: '',
             heading: '– Legg til rette for influensavaksinering',
             publishDate: '03.12.2018',
             lead:
@@ -51,6 +53,7 @@ storiesOf('List', module)
           type: 'news',
           url: '#1',
           fields: {
+            category: '',
             heading:
               'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
             publishDate: '03.12.2018',
@@ -62,6 +65,7 @@ storiesOf('List', module)
         {
           type: 'person',
           fields: {
+            category: '',
             name: 'Ole Magnus Støvern',
             email: 'ole.stovern@netlife.com',
             reverseEmail: 'moc.efilten@nrevots.elo',
@@ -75,6 +79,7 @@ storiesOf('List', module)
           type: 'grantFunding',
           url: '#2',
           fields: {
+            category: '',
             heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
             deadline: 'Søknadsfrist: 11.10.2018',
             topic:
@@ -85,8 +90,8 @@ storiesOf('List', module)
           type: 'pressRelease',
           url: '#3',
           fields: {
-            heading: 'Hvordan sjonglere (illustrert)',
             category: 'Brosjyre',
+            heading: 'Hvordan sjonglere (illustrert)',
             image:
               'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
             publishDate: '01.01.2003'
@@ -96,6 +101,7 @@ storiesOf('List', module)
           type: 'conference',
           url: '#4',
           fields: {
+            category: '',
             heading: 'Kurs i hendelsesanalyse og pasientsikkerhet',
             dateFrom: '03.11.1990',
             dateTo: '06.12.2018',
