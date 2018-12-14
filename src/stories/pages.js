@@ -15,7 +15,6 @@ import ParentMemoPage from '../pages/ParentMemoPage';
 import ProductPage from '../pages/ProductPage';
 import RecommendationPage from '../pages/RecommendationPage';
 import SearchResultPage from '../pages/SearchResultPage';
-import SimpleSerp from '../pages/SimpleSerp';
 import LisSpeciality from '../pages/LisSpeciality';
 import LisLearning from '../pages/LisLearning';
 import LisFrontPage from '../pages/LisFrontPage';
@@ -29,64 +28,19 @@ import HdirTema from '../pages/HdirTema';
 
 storiesOf('Pages', module)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup('Front page', () => (
+  .addWithStaticMarkup('Hdir Front page', () => (
     <HashRouter>
       <FrontPage />
     </HashRouter>
   ))
-  .addWithStaticMarkup('Search result page', () => (
+  .addWithStaticMarkup('Helfo Front page', () => (
     <HashRouter>
-      <SearchResultPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Simple search result page', () => (
-    <HashRouter>
-      <SimpleSerp />
+      <FrontPageHelfo />
     </HashRouter>
   ))
   .addWithStaticMarkup('Article page', () => (
     <HashRouter>
       <ArticlePage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Hdir Tema', () => (
-    <HashRouter>
-      <HdirTema />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('ReportWithoutImage', () => (
-    <HashRouter>
-      <ReportPageWithoutImage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('LIS speciality', () => (
-    <HashRouter>
-      <LisSpeciality />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('FrontPageHdir', () => (
-    <HashRouter>
-      <FrontPageHdir />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('LIS learning', () => (
-    <HashRouter>
-      <LisLearning />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('LIS front page', () => (
-    <HashRouter>
-      <LisFrontPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('ProfessionSelector', () => (
-    <HashRouter>
-      <ProfessionSelector />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('LISLearningActivities', () => (
-    <HashRouter>
-      <LisLearningActivities />
     </HashRouter>
   ))
   .addWithStaticMarkup('Chapter page', () => (
@@ -99,9 +53,39 @@ storiesOf('Pages', module)
       <ChapterPageReport />
     </HashRouter>
   ))
+  .addWithStaticMarkup('FrontPageHdir', () => (
+    <HashRouter>
+      <FrontPageHdir />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Hdir Tema', () => (
+    <HashRouter>
+      <HdirTema />
+    </HashRouter>
+  ))
   .addWithStaticMarkup('Hearing page', () => (
     <HashRouter>
       <HearingPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('LIS front page', () => (
+    <HashRouter>
+      <LisFrontPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('LIS learning', () => (
+    <HashRouter>
+      <LisLearning />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('LIS speciality', () => (
+    <HashRouter>
+      <LisSpeciality />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('LISLearningActivities', () => (
+    <HashRouter>
+      <LisLearningActivities />
     </HashRouter>
   ))
   .addWithStaticMarkup('Memo page', () => (
@@ -109,9 +93,19 @@ storiesOf('Pages', module)
       <MemoPage />
     </HashRouter>
   ))
+  .addWithStaticMarkup('Normative content page', () => (
+    <HashRouter>
+      <NormativeContentPage />
+    </HashRouter>
+  ))
   .addWithStaticMarkup('Parent memo page', () => (
     <HashRouter>
       <ParentMemoPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('ProfessionSelector', () => (
+    <HashRouter>
+      <ProfessionSelector />
     </HashRouter>
   ))
   .addWithStaticMarkup('Product page', () => (
@@ -119,18 +113,18 @@ storiesOf('Pages', module)
       <ProductPage />
     </HashRouter>
   ))
+  .addWithStaticMarkup('ReportWithoutImage', () => (
+    <HashRouter>
+      <ReportPageWithoutImage />
+    </HashRouter>
+  ))
   .addWithStaticMarkup('Recommendation page', () => (
     <HashRouter>
       <RecommendationPage />
     </HashRouter>
   ))
-  .addWithStaticMarkup('FrontPageHelfo', () => (
+  .addWithStaticMarkup('Search result page', () => (
     <HashRouter>
-      <FrontPageHelfo />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Normative content page', () => (
-    <HashRouter>
-      <NormativeContentPage />
+      <SearchResultPage />
     </HashRouter>
   ));
