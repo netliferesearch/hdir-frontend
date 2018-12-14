@@ -21,6 +21,7 @@ import Footer from './components/Footer';
 import LisLearning from './pages/LisLearning';
 import TransportPage from './pages/TransportPage';
 import LisFrontPage from './pages/LisFrontPage';
+import NewsListPage from './pages/NewsListPage';
 import LisLearningActivities from './pages/LisLearningActivities';
 import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import ChapterPageReport from './pages/ChapterPageReport';
@@ -104,6 +105,7 @@ class App extends Component {
                 component={SubscriptionSettingsPage}
               />
               <Route path="/transportside" component={TransportPage} />
+              <Route path="/nyhetsliste" component={NewsListPage} />
               <Route component={NotFound} />
             </Switch>
             <Box noPadding square color="blueDark">

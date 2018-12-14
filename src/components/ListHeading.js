@@ -5,7 +5,9 @@ import Select from './Select';
 const ListHeading = props => (
   <div className="b-list-heading">
     <strong className="b-list-heading__heading">{props.heading}</strong>
-    <Select label={props.selectLabel} options={props.selectOptions} simple />
+    {props.selectLabel && props.selectOptions && (
+      <Select label={props.selectLabel} options={props.selectOptions} simple />
+    )}
   </div>
 );
 
