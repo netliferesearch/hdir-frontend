@@ -80,7 +80,7 @@ const NewsListPage = () => (
               }
             ]}
           />
-          <div className="l-mt-4 t-sm-center l-mb-4">
+          <div className="l-mt-4 t-sm-center">
             <Button secondary>Vis flere nyheter</Button>
           </div>
         </section>
@@ -88,7 +88,7 @@ const NewsListPage = () => (
     </div>
 
     <div className="l-container">
-      <div className="l-mt-4">
+      <div className="l-mt-5">
         <Collapsible heading="Abonnér på endringer – Nasjonal faglig retningslinje for svangerskapsdiabetes">
           <form>
             <div className="b-input-text">
