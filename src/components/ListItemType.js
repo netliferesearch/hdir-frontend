@@ -11,6 +11,9 @@ const ListItemType = props => {
       {type === 'news' && (
         <div className="b-list-item-type">
           {fields.heading && <h2>{fields.heading}</h2>}
+          {fields.category && (
+            <p className="b-list-item-type__category">{fields.category}</p>
+          )}
           {fields.publishDate && (
             <div className="b-list-item-type__date">{fields.publishDate}</div>
           )}
@@ -22,6 +25,9 @@ const ListItemType = props => {
       {type === 'conference' && (
         <div className="b-list-item-type">
           {fields.heading && <h2>{fields.heading}</h2>}
+          {fields.category && (
+            <p className="b-list-item-type__category">{fields.category}</p>
+          )}
           {fields.dateFrom && fields.dateTo ? (
             <p className="b-list-item-type__date">
               {fields.dateFrom} - {fields.dateTo}
@@ -71,6 +77,9 @@ const ListItemType = props => {
       {type === 'grantFunding' && (
         <div className="b-list-item-type">
           {fields.heading && <h2>{fields.heading}</h2>}
+          {fields.category && (
+            <p className="b-list-item-type__category">{fields.category}</p>
+          )}
 
           {fields.deadline && (
             <p className="b-list-item-type__deadline">{fields.deadline}</p>
@@ -84,6 +93,9 @@ const ListItemType = props => {
       {type === 'person' && (
         <div className="b-list-item-type">
           {fields.name && <strong>{fields.name}</strong>}
+          {fields.category && (
+            <p className="b-list-item-type__category">{fields.category}</p>
+          )}
           {fields.reverseEmail && fields.email && (
             <p>
               <a
