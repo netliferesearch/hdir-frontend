@@ -1,15 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 
 const Breadcrumbs = props => (
   <nav className="b-breadcrumbs">
     {props.paths.map(path =>
       path.href ? (
-        <a href={path.href} className="b-breadcrumbs__link">
+        <a
+          href={path.href}
+          className="b-breadcrumbs__link"
+          key={shortid.generate()}
+        >
           {path.name}
         </a>
       ) : (
-        <span className="b-breadcrumbs__location">{path.name}</span>
+        <span className="b-breadcrumbs__location" key={shortid.generate()}>
+          {path.name}
+        </span>
       )
     )}
   </nav>
