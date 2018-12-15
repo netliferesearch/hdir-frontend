@@ -1,48 +1,44 @@
 const allNewsItems = [
   {
-    type: 'news',
-    fields: {
-      heading: 'A new thing happened',
-      publishDate: '03.12.2018',
-      lead: 'asdf'
-    }
+    title: 'A new thing happened',
+    category: 'news',
+    publishDate: '03.12.2018',
+    intro: 'asdf',
+    url: '/#/artikkel'
   },
   {
-    type: 'news',
-    fields: {
-      heading: 'This is news #2',
-      publishDate: '04.11.2018',
-      lead: 'dslfgndsgsdkg diabetes'
-    }
+    title: 'This is news #2',
+    category: 'news',
+    publishDate: '04.11.2018',
+    intro: 'dslfgndsgsdkg diabetes',
+    url: '/#/artikkel'
   },
   {
-    type: 'news',
-    fields: {
-      heading: 'This is news #3',
-      publishDate: '06.06.2017',
-      lead: 'asdf ikke diabetes'
-    }
+    title: 'This is news #3',
+    category: 'news',
+    publishDate: '06.06.2017',
+    intro: 'asdf ikke diabetes',
+    url: '/#/artikkel'
   },
   {
-    type: 'news',
-    fields: {
-      heading: 'This is news #4',
-      publishDate: '02.01.2015',
-      lead: 'Ikke røyk, røyking er ikke bra'
-    }
+    title: 'This is news #4',
+    category: 'news',
+    publishDate: '02.01.2015',
+    intro: 'Ikke røyk, røyking er ikke bra',
+    url: '/#/artikkel'
   },
   {
-    type: 'news',
-    fields: {
-      heading: 'This is news #5',
-      publishDate: '25.07.2018',
-      lead: 'lorem ipsum'
-    }
+    title: 'This is news #5',
+    category: 'news',
+    publishDate: '25.07.2018',
+    intro: 'lorem ipsum',
+    url: '/#/artikkel'
   }
 ];
 
 exports.handler = async (event, context) => {
   const searchQuery = event.queryStringParameters.searchQuery;
+  console.log(searchQuery);
 
   if (!searchQuery)
     return {
@@ -53,10 +49,8 @@ exports.handler = async (event, context) => {
   const search = searchQuery =>
     allNewsItems.filter(
       item =>
-        Object.values(item.fields).filter(prop => prop.includes(searchQuery))
-          .length
+        Object.values(item).filter(prop => prop.includes(searchQuery)).length
     );
-
   const searchResult = search(searchQuery);
 
   if (!searchResult.length)
@@ -67,6 +61,6 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(searchResult.slice(0, 5))
+    body: JSON.stringify(searchResult.slice(0, 4))
   };
 };
