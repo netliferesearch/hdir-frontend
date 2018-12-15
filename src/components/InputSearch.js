@@ -3,21 +3,6 @@ import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
 
-import searchSuggestions from '../data/searchSuggestions';
-
-const getSuggestions = value => {
-  const inputValue = value.trim().toLowerCase();
-
-  return inputValue.length < 3
-    ? []
-    : [
-        ...searchSuggestions.filter(lang =>
-          lang.title.toLowerCase().includes(inputValue)
-        ),
-        { intro: 'Se alle resultater for "Helsestasjon"' }
-      ];
-};
-
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
@@ -49,16 +34,18 @@ const renderInputComponent = inputProps => (
         'b-input-search__button': true,
         'b-input-search__button--dark': inputProps.dark
       })}
-      onClick={triggerSearch}
+      onClick={() => {
+        triggerSearch(inputProps.value);
+      }}
     >
       Søk
     </button>
   </div>
 );
 
-const triggerSearch = () => {
+const triggerSearch = query => {
   // eslint-disable-next-line
-  location.reload();
+  window.location = `/#/søkeresultat?searchquery=${query}`;
 };
 
 const placeholderSuggestions = [
@@ -121,12 +108,30 @@ class InputSearch extends React.Component {
     });
   };
 
+  onSuggestionSelected = (e, { suggestion }) => {
+    window.location = suggestion.url;
+  };
+
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({
-      suggestions: getSuggestions(value)
-    });
+    fetch(
+      `http://localhost:3000/.netlify/functions/simpleSearch?searchQuery=${value}`
+    )
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          suggestions: [
+            ...data,
+            { intro: 'Se alle resultater for "Helsestasjon"' }
+          ]
+        });
+      })
+      .catch(ex => {
+        this.setState({
+          suggestions: []
+        });
+      });
   };
 
   // Autosuggest will call this function every time you need to clear suggestions.
@@ -138,7 +143,6 @@ class InputSearch extends React.Component {
 
   render() {
     const { props } = this;
-
     const { value, suggestions } = this.state;
 
     // Autosuggest will pass through all these props to the input.
@@ -155,7 +159,7 @@ class InputSearch extends React.Component {
         suggestions={props.showSuggestions ? suggestions : []}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        onSuggestionSelected={triggerSearch}
+        onSuggestionSelected={this.onSuggestionSelected}
         renderInputComponent={renderInputComponent}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}

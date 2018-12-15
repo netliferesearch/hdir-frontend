@@ -82,6 +82,7 @@
   &__suggestions-list {
     // removes ul default styles
     position: absolute;
+    width: 100%;
     background-color: white;
     border: 1px solid $primary-color;
     border-radius: 4px;

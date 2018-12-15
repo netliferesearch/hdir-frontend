@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const FrontPage = () => (
   <div>
     <div className="frontpage-wrapper">
-      {/* <div className="l-container">
+      <div className="l-container">
         <p className="some-label">
           Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd...
         </p>
         <InputSearch id="x" dark />
-      </div>*/}
-      <h3 className="some-label">
+      </div>
+      <h3 className="some-label l-mt-4">
         Press 'h' to toggle block/component hints.
         <br />
         To see Helfo-styles: Storybook -> READ ME -> Styles
@@ -39,9 +39,6 @@ const FrontPage = () => (
       </p>
       <p>
         <Link to="/autorisasjon-steg-2">Autorisasjon steg 2</Link>
-      </p>
-      <p>
-        <Link to="/søkeresultat2">Enkel SERP</Link>
       </p>
       <p>
         <Link to="/helfo-forside">Helfo forside</Link>
