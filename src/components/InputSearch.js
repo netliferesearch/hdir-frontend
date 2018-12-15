@@ -115,9 +115,7 @@ class InputSearch extends React.Component {
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
-    fetch(
-      `http://localhost:3000/.netlify/functions/simpleSearch?searchQuery=${value}`
-    )
+    fetch(`/.netlify/functions/simpleSearch?searchQuery=${value}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
