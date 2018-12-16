@@ -20,15 +20,15 @@
   "scripts": {
     "start": "run-p start:**",
     "start:app": "react-scripts start",
-    "build": "run-p build:**",
-    "build:app": "react-scripts build",
     "start:storybook": "start-storybook -p 9009 -s public",
-    "build:storybook": "build-storybook -s public -o build/storybook",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "start:lambda": "netlify-lambda serve src/faas",
+    "build": "npm run build:app && npm run build:storybook && npm run build:lambda && npm run build:sass",
+    "build:app": "react-scripts build",
+    "build:storybook": "build-storybook -s public -o build/storybook",
     "build:lambda": "netlify-lambda build src/faas",
-    "build:sass": "node-sass --output-style compressed src/styles -o build"
+    "build:sass": "node-sass --output-style compressed src/styles -o build",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^4.0.12",
