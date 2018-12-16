@@ -77,12 +77,13 @@ const SearchResultPage = () => (
                 type: 'news',
                 url: '#1',
                 fields: {
+                  category: 'Nyhet',
                   heading:
                     'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
                   publishDate: '03.12.2018',
                   lead:
                     'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
-                  topic: ''
+                  topic: 'Innhold basert på søk, alle kan ha denne'
                 }
               },
               {
@@ -90,11 +91,12 @@ const SearchResultPage = () => (
                 fields: {
                   name: 'Ole Magnus Støvern',
                   email: 'ole.stovern@netlife.com',
+                  category: 'Person',
                   reverseEmail: 'moc.efilten@nrevots.elo',
                   phoneNumber: '+47 123 45 678',
                   position: 'Developer',
                   department: 'Oslo',
-                  topic: ''
+                  topic: 'Innhold basert på søk, alle kan ha denne'
                 }
               },
               {
@@ -102,6 +104,7 @@ const SearchResultPage = () => (
                 url: '#2',
                 fields: {
                   heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
+                  category: 'Tilskudd',
                   deadline: 'Søknadsfrist: 11.10.2018',
                   topic:
                     'If this module is shown on a search page, it might have a text like this for topics'
@@ -115,7 +118,8 @@ const SearchResultPage = () => (
                   category: 'Brosjyre',
                   image:
                     'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01.01.2003'
+                  publishDate: '01.01.2003',
+                  topic: 'Innhold basert på søk, alle kan ha denne'
                 }
               },
               {
@@ -123,11 +127,12 @@ const SearchResultPage = () => (
                 url: '#4',
                 fields: {
                   heading: 'Kurs i hendelsesanalyse og pasientsikkerhet',
+                  category: 'Konferanse',
                   dateFrom: '03.11.1990',
                   dateTo: '06.12.2018',
                   location: 'Clarion The Edge, Tromsø',
                   registrationDeadline: '15. oktober',
-                  topic: ''
+                  topic: 'Innhold basert på søk, alle kan ha denne'
                 }
               }
             ]}

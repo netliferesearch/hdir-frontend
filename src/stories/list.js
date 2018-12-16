@@ -28,7 +28,8 @@ storiesOf('List', module)
               'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
             publishDate: '03.12.2018',
             lead:
-              'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.'
+              'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
+            topic: ''
           }
         },
         {
@@ -39,7 +40,8 @@ storiesOf('List', module)
             heading: '– Legg til rette for influensavaksinering',
             publishDate: '03.12.2018',
             lead:
-              '– Det er viktig at arbeidsgiverne legger til rette for at helsepersonell skal kunne ta influensavaksine, sier helsedirektør Bjørn Guldvog.'
+              '– Det er viktig at arbeidsgiverne legger til rette for at helsepersonell skal kunne ta influensavaksine, sier helsedirektør Bjørn Guldvog.',
+            topic: ''
           }
         }
       ])}
@@ -94,7 +96,8 @@ storiesOf('List', module)
             heading: 'Hvordan sjonglere (illustrert)',
             image:
               'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-            publishDate: '01.01.2003'
+            publishDate: '01.01.2003',
+            topic: ''
           }
         },
         {

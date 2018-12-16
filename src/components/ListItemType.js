@@ -12,13 +12,15 @@ const ListItemType = props => {
         <div className="b-list-item-type">
           {fields.heading && <h2>{fields.heading}</h2>}
           {fields.category && (
-            <p className="b-list-item-type__category">{fields.category}</p>
+            <div className="b-list-item-type__category">{fields.category}</div>
           )}
           {fields.publishDate && (
             <div className="b-list-item-type__date">{fields.publishDate}</div>
           )}
           {fields.lead && <p>{fields.lead}</p>}
-          {fields.topic && <div>{fields.topic}</div>}
+          {fields.topic && (
+            <div className="b-list-item-type__topic">{fields.topic}</div>
+          )}
         </div>
       )}
 
@@ -47,7 +49,9 @@ const ListItemType = props => {
               {fields.location}
             </div>
           )}
-          {fields.topic && <div>{fields.topic}</div>}
+          {fields.topic && (
+            <div className="b-list-item-type__topic">{fields.topic}</div>
+          )}
         </div>
       )}
 
@@ -68,9 +72,11 @@ const ListItemType = props => {
                   {fields.publishDate}
                 </div>
               )}
-              {fields.topic && <div>{fields.topic}</div>}
             </div>
           </div>
+          {fields.topic && (
+            <div className="b-list-item-type__topic">{fields.topic}</div>
+          )}
         </div>
       )}
 
@@ -93,11 +99,12 @@ const ListItemType = props => {
       {type === 'person' && (
         <div className="b-list-item-type">
           {fields.name && <strong>{fields.name}</strong>}
+          <br />
           {fields.category && (
             <p className="b-list-item-type__category">{fields.category}</p>
           )}
           {fields.reverseEmail && fields.email && (
-            <p>
+            <div>
               <a
                 href={`mailto:${fields.email}`}
                 className="b-list-item-type__email"
@@ -105,7 +112,7 @@ const ListItemType = props => {
               >
                 {fields.reverseEmail}
               </a>
-            </p>
+            </div>
           )}
           {fields.phoneNumber && (
             <p>
