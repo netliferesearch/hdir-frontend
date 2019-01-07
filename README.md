@@ -9,6 +9,12 @@ This repository contains the main style and components for the new HDIR content 
 
 It should support IE10+ and two versions old or newer for the modern browsers.
 
+### Building the CSS
+1. `npm install`
+2. `npm run build`
+3. NPM builds all `scss` files that does not start with an underscore, to files with the same name and the file name `css`.
+4. The `css` files are transpiled into the `build` directory. 
+
 ## :clipboard: Rules
 
 - All styles are written with SCSS (SASS)
