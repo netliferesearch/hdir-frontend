@@ -2,10 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: calc(3vw + 1rem) 0;
 
   &__logo {
     max-width: calc(8rem + 4vw);
+
+    &--small {
+      height: 2rem;
+      width: auto;
+    }
   }
   &__logo-link {
     @include link-init(transparent);
@@ -40,5 +45,24 @@
     &:hover {
       @include underline($secondary-color);
     }
+  }
+  &__menu-overlay {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    padding: 0 4vw;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+  }
+  &__menu-overlay-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: calc(3vw + 1rem) 0;
   }
 }

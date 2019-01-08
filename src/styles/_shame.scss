@@ -390,3 +390,27 @@ small {
     justify-content: space-evenly;
   }
 }
+
+.b-search-tray {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-flow: column;
+  padding: calc(3vw + 1rem) 4vw;
+  height: 33vh;
+  margin-top: -33vh;
+  transition: margin-top 350ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+
+  &__item {
+    margin-bottom: 5vh;
+  }
+
+  &--open {
+    margin-top: 0;
+    transition: margin-top 350ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  }
+  &--blue {
+    background-color: $blue-dark;
+    color: white;
+  }
+}

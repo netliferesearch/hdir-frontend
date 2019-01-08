@@ -1,23 +1,14 @@
 import React from 'react';
-import InputSearch from '../components/InputSearch';
 import { Link } from 'react-router-dom';
 
 const FrontPage = () => (
   <div>
-    <div className="frontpage-wrapper">
-      <div className="l-container">
-        <p className="some-label">
-          Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd...
-        </p>
-        <InputSearch id="x" dark />
-      </div>
-      <h3 className="some-label l-mt-4">
-        Press 'h' to toggle block/component hints.
-        <br />
-        To see Helfo-styles: Storybook -> READ ME -> Styles
-      </h3>
+    <div className="l-container l-mt-4">
+      Press 'h' to toggle block/component hints.
+      <br />
+      To see Helfo-styles: Storybook -> READ ME -> Styles
     </div>
-    <div className="l-container l-mt-3">
+    <div className="l-container l-mt-5">
       <p>
         <a href="/storybook">Go to Storybook</a>
       </p>
