@@ -51,9 +51,7 @@ class App extends Component {
       <div className="App">
         <HashRouter>
           <div>
-            <div className="l-container">
-              <MainHeader />
-            </div>
+            <MainHeader />
             <Switch>
               <Route exact path="/" component={FrontPage} />
               <Route path="/produkt" component={ProductPage} />

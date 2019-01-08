@@ -54,14 +54,6 @@ class Collapsible extends React.Component {
     });
   }
 
-  componentDidMount() {
-    /*
-    this.setState({
-      collapsed: false
-    });
-    */
-  }
-
   componentDidUpdate() {
     zenscroll.intoView(this.domNode, 300);
   }
