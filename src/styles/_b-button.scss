@@ -20,7 +20,14 @@
       &:after {
         content: ' →';
         box-shadow: 0 1px 0 transparent;
-        color: white;
+        color: inherit;
+      }
+    }
+    &--arrow-down {
+      &:before {
+        content: '↓ ';
+        box-shadow: 0 1px 0 transparent;
+        color: inherit;
       }
     }
     &--small {
