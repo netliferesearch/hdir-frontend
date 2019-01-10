@@ -14,6 +14,13 @@
     }
     flex-grow: 1;
   }
+  &__topic {
+    display: inline-block;
+    font-size: $meta-text;
+    margin-top: 1rem;
+    padding: 0.25em;
+    background-color: $yellow-light;
+  }
   &__link {
     display: block;
     position: relative;
@@ -56,6 +63,11 @@
   &__heading {
     display: inline;
     color: $black;
+
+    &:after {
+      content: '\A';
+      white-space: pre;
+    }
   }
   &__text {
     font-size: $meta-text;

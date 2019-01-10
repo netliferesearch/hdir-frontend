@@ -14,6 +14,7 @@ const Card = props => (
     {props.children && <div className="b-card__feature">{props.children}</div>}
     <a href="#a" className={linkClasses(props.arrow)}>
       <h3 className="b-card__heading">{props.heading}</h3>
+      {props.topic && <div className="b-card__topic">{props.topic}</div>}
       {props.text && <div className="b-card__text">{props.text}</div>}
     </a>
   </div>
@@ -23,6 +24,7 @@ Card.propTypes = {
   heading: PropTypes.string,
   text: PropTypes.string,
   url: PropTypes.string,
+  topic: PropTypes.string,
   arrow: PropTypes.oneOf(['', 'left', 'right'])
 };
 
