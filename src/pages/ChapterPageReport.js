@@ -101,7 +101,7 @@ const ChapterPageReport = () => (
                 heading="Forrige kapittel"
                 text="Den første samtalen i svangerskapet – forbeggung av svangerskaps-diabetes."
                 url="#a"
-                leftArrow={true}
+                arrow="left"
               />
             </div>
             <div className="col-xs-12 col-md-6 l-mt-2 first-xs">
@@ -109,6 +109,7 @@ const ChapterPageReport = () => (
                 heading="Neste kapittel"
                 text="Den første samtalen i svangerskapet – forbeggung av svangerskaps-diabetes."
                 url="#a"
+                arrow="right"
               />
             </div>
           </div>

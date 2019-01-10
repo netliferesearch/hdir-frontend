@@ -14,21 +14,28 @@ const HdirTema = () => (
     <div className="l-container">
       <div className="l-mt-2">
         <ArticleIntro
-          heading="Arbeid og psykisk helse"
+          heading="Helsestasjons- og skolehelsetjenesten"
           lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
-          image="./photo.jpg"
-          imageDescription="Bildetekst"
         />
       </div>
       <div className="row">
-        <div className="col-xs-12 l-mt-5 l-mb-4">
+        <div className="col-xs-12 l-mt-3 l-mb-4">
           <NavList
             columns
             list={[
-              { title: 'Refusjonskrav', url: '#' },
-              { title: 'Utbetaling og vedtak', url: '#' },
-              { title: 'Arbeid bidrar til raskere bedring', url: '#' }
+              { title: 'Undertema 1', url: '#' },
+              { title: 'undertema 2', url: '#' },
+              { title: 'Undertema 3', url: '#' }
             ]}
+          />
+        </div>
+      </div>
+      <div className="l-mt-3">
+        <div className="col-xs-12 col-md-4">
+          <Card
+            heading="Barns miljø og sikkerhet"
+            url="#"
+            text="Brosjyren Når barnet skader seg – Råd til småbarnsforeldre om førstehjelp"
           />
         </div>
       </div>

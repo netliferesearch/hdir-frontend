@@ -88,13 +88,22 @@ const AuthorizationFrontPage = () => (
           <Card
             heading="Innmeldingsliste –for læresteder og fylkeskommuner"
             url="#a"
+            arrow="right"
           />
         </div>
         <div className="col-xs-12 col-md-4 l-mt-2">
-          <Card heading="Finn HPR-nummer i Helsepersonellregisteret" url="#a" />
+          <Card
+            heading="Finn HPR-nummer i Helsepersonellregisteret"
+            url="#a"
+            arrow="right"
+          />
         </div>
         <div className="col-xs-12 col-md-4 l-mt-2">
-          <Card heading="Vurderer du å studere helsefag i utlandet?" url="#a" />
+          <Card
+            heading="Vurderer du å studere helsefag i utlandet?"
+            url="#a"
+            arrow="right"
+          />
         </div>
       </div>
     </div>

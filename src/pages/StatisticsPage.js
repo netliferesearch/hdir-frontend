@@ -49,6 +49,7 @@ const StatisticsPage = () => (
                 heading="Pakkeforløp for brystkreft"
                 text="Kvalitetsindikator"
                 url="#a"
+                arrow="right"
               >
                 <Statistics
                   bigText="91,3%"
@@ -62,6 +63,7 @@ const StatisticsPage = () => (
                 heading="Fastlegestatistikk"
                 text="Kvalitetsindikator"
                 url="#a"
+                arrow="right"
               >
                 <Statistics
                   bigText="1106"

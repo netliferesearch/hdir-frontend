@@ -221,7 +221,11 @@ storiesOf('Card', module)
       heading={text('Heading', 'This is a heading')}
       text={text('Text', 'This is some text')}
       url={text('URL', '#')}
-      leftArrow={boolean('Left arrow', false)}
+      arrow={select(
+        'Arrow',
+        { none: '', left: 'left', right: 'right' },
+        'right'
+      )}
     >
       {text(
         'Content',
@@ -234,7 +238,11 @@ storiesOf('Card', module)
       heading={text('Heading', 'This is a heading')}
       text={text('Text', 'This is some text')}
       url={text('URL', '#')}
-      leftArrow={boolean('Left arrow', false)}
+      arrow={select(
+        'Arrow',
+        { none: '', left: 'left', right: 'right' },
+        'right'
+      )}
     >
       <Statistics
         bigText={text('Statistics: Big text', '99.9%')}
