@@ -31,22 +31,22 @@ const HdirTema = () => (
           />
         </div>
       </div>
-      <div className="row l-mt-3">
-        <div className="col-xs-12 col-md-4">
+      <div className="row">
+        <div className="col-xs-12 col-md-4 l-mt-2">
           <Card
             heading="Barns miljø og sikkerhet"
             url="#a"
             text="Brosjyren Når barnet skader seg – Råd til småbarnsforeldre om førstehjelp"
           />
         </div>
-        <div className="col-xs-12 col-md-4">
+        <div className="col-xs-12 col-md-4 l-mt-2">
           <Card
             heading="Roller i skolehelsetjenesten"
             url="#a"
             text="Hvem gjør hva i skolehelsetjenesten?"
           />
         </div>
-        <div className="col-xs-12 col-md-4">
+        <div className="col-xs-12 col-md-4 l-mt-2">
           <Card
             heading="Noe annet som er viktig"
             url="#a"
@@ -61,8 +61,124 @@ const HdirTema = () => (
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
-          <div className="l-mt-3">...</div>
+          <NavList
+            list={[
+              {
+                title:
+                  'Råd ved bruk av sosiale medier i helsestasjons- og skolehelsetjenesten',
+                url: '#',
+                topic: 'Nasjonale faglige retningslinjer'
+              }
+            ]}
+          />
         </div>
+      </div>
+      <div className="row">
+        <div className="col-xs-11 col-xs-offset-1 col-md-10 col-md-offset-1">
+          <NavList
+            list={[
+              {
+                title:
+                  'Råd ved bruk av sosiale medier i helsestasjons- og skolehelsetjenesten',
+                url: '#',
+                description: 'KAPITTEL 1'
+              },
+              {
+                title: 'Sosiale medier er ikke i skolehelsetjenesten',
+                url: '#',
+                description: 'KAPITTEL 2'
+              },
+              {
+                title: 'Personvern ved bruk sosiale medier',
+                url: '#',
+                description: 'KAPITTEL 3'
+              },
+              {
+                title:
+                  'Meldeplikt til barnevernet ved bruk av sosiale medier i helsestasjon',
+                url: '#',
+                description: 'KAPITTEL 4'
+              },
+              {
+                title: 'Varslingsplikt i helsestasjons- og skolehelsetjenesten',
+                url: '#',
+                description: 'KAPITTEL 5'
+              },
+              {
+                title:
+                  'Ta kontakt med Kripos hvis du mottar trusler gjennom sosiale medier',
+                url: '#',
+                description: 'KAPITTEL 6'
+              },
+              {
+                title:
+                  'Praktiske tips fra helsesøstre som benytter sosiale medier',
+                url: '#',
+                description: 'KAPITTEL 7'
+              }
+            ]}
+          />
+        </div>
+      </div>
+
+      <div className="row l-mt-5">
+        <div className="col-xs-12">
+          <NavList
+            heading="RELEVANTE RETNINGSLINJER, LOV OG PAKKEFORLØP"
+            list={[
+              {
+                title:
+                  'Råd ved bruk av sosiale medier i helsestasjons- og skolehelsetjenesten',
+                url: '#',
+                topic: 'Nasjonale faglige retningslinjer'
+              },
+              {
+                title: 'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                url: '#',
+                topic: 'Nasjonale faglige retningslinjer'
+              },
+              {
+                title:
+                  'Utvidet rekvireringsrett til helsesøstre og jordmødre for prevansjonsmidler – Helsesøstre og jordmødres administrering av langtidsvirkende, reversibel prevensjon (LARC)',
+                url: '#',
+                topic: 'Nasjonale faglige retningslinjer'
+              }
+            ]}
+          />
+        </div>
+      </div>
+
+      <div className="row l-mt-5">
+        <div className="col-xs-12">
+          <NavList
+            heading="RELEVANTE ANBEFALINGER, KRAV ELLER RÅD"
+            list={[
+              {
+                title: 'Tannhelsetjenester skal ha et og skolehelsetjenesten',
+                url: '#',
+                topic: 'Krav i lov eller forskrift'
+              },
+              {
+                title:
+                  'Barn og unge med høy karierisiko helsestasjons- og skolehelsetjenesten',
+                url: '#',
+                topic: 'Sterk anbefaling'
+              },
+              {
+                title:
+                  'Foresatte til barn med administrering av langtidsvirkende reversibel',
+                url: '#',
+                topic: 'Sterk anbefaling'
+              }
+            ]}
+          />
+        </div>
+      </div>
+
+      <div className="l-mt-2 t-sm-center">
+        <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
+          Vis flere
+        </button>
       </div>
 
       <div className="row">
