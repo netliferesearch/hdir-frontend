@@ -143,7 +143,7 @@ storiesOf('AlertBar', module)
         'high'
       )}
     >
-      <Link href="#" buttonInherit>
+      <Link href="#a" buttonInherit>
         Les mer
       </Link>
     </AlertBar>
