@@ -18,7 +18,10 @@ const imageWrapperClasses = feature =>
 const ArticleIntro = props => (
   <div className="b-article-intro">
     <div className={imageToggle(props.image, props.feature)}>
-      <h1>{props.heading}</h1>
+      <h1>
+        <div className="b-article-intro__topic">{props.topic}</div>
+        {props.heading}
+      </h1>
       <p className="b-article-intro__intro">{props.lead}</p>
     </div>
     {props.image && (
@@ -47,7 +50,8 @@ ArticleIntro.propTypes = {
   lead: PropTypes.string,
   image: PropTypes.string,
   feature: PropTypes.bool,
-  imageDescription: PropTypes.string
+  imageDescription: PropTypes.string,
+  topic: PropTypes.string
 };
 
 export default ArticleIntro;
