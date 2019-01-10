@@ -56,6 +56,12 @@
     font-size: $medium-large-text;
     font-weight: bold;
   }
+  &__topic {
+    font-weight: normal;
+    font-size: $base-font-size;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
   &__text {
     width: 67%;
     @include mq($until: $tablet) {
