@@ -1,7 +1,7 @@
 import React from 'react';
 import NavList from '../components/NavList';
 import Box from '../components/Box';
-import Heading from '../components/Heading';
+import List from '../components/List';
 import ArticleIntro from '../components/ArticleIntro';
 import Card from '../components/Card';
 import Link from '../components/Link';
@@ -14,6 +14,7 @@ const HdirTema = () => (
     <div className="l-container">
       <div className="l-mt-2">
         <ArticleIntro
+          topic="Tema"
           heading="Helsestasjons- og skolehelsetjenesten"
           lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
         />
@@ -30,32 +31,40 @@ const HdirTema = () => (
           />
         </div>
       </div>
-      <div className="l-mt-3">
+      <div className="row l-mt-3">
         <div className="col-xs-12 col-md-4">
           <Card
             heading="Barns miljø og sikkerhet"
-            url="#"
+            url="#a"
             text="Brosjyren Når barnet skader seg – Råd til småbarnsforeldre om førstehjelp"
           />
         </div>
-      </div>
-    </div>
-
-    <Box color="green" square noPadding>
-      <div className="l-container">
-        <div className="row">
-          <div className="col-xs-12">
-            <h2>Normerende innhold</h2>
-            <div className="l-mt-1">
-              <hr className="b-hr b-hr--thick" />
-            </div>
-            <div className="l-mt-3 l-mb-5">Her kommer normerende innhold</div>
-          </div>
+        <div className="col-xs-12 col-md-4">
+          <Card
+            heading="Roller i skolehelsetjenesten"
+            url="#a"
+            text="Hvem gjør hva i skolehelsetjenesten?"
+          />
+        </div>
+        <div className="col-xs-12 col-md-4">
+          <Card
+            heading="Noe annet som er viktig"
+            url="#a"
+            text="og som vi skriver mer om her"
+          />
         </div>
       </div>
-    </Box>
 
-    <div className="l-container">
+      <div className="row l-mt-5">
+        <div className="col-xs-12">
+          <h2>Nasjonale anbefalinger, råd og pakkeforløp</h2>
+          <div className="l-mt-1">
+            <hr className="b-hr b-hr--thick" />
+          </div>
+          <div className="l-mt-3">...</div>
+        </div>
+      </div>
+
       <div className="row">
         <div className="col-xs-12 l-mt-5">
           <h2>Tilskudd</h2>
@@ -64,30 +73,11 @@ const HdirTema = () => (
           </div>
           <div className="l-mt-1">
             <NavList
-              columns
               list={[
                 {
                   title: 'Refusjonskrav Refusjonskrav Refusjonskrav',
                   url: '#',
-                  meta: 'Frist 22.november'
-                },
-                {
-                  title:
-                    'Utbetaling og vedtak Refusjonskrav Refusjonskrav Refusjonskrav Refusjonskrav',
-                  url: '#',
-                  meta: 'Frist 22.november'
-                },
-                {
-                  title:
-                    'Arbeid bidrar til raskere bedring Refusjonskrav Refusjonskrav Refusjonskrav Refusjonskrav Refusjonskrav',
-                  url: '#',
-                  meta: 'Frist 22.november'
-                },
-                {
-                  title:
-                    'Arbeid bidrar til raskere bedring Refusjonskrav Refusjonskrav Refusjonskrav Refusjonskrav Refusjonskrav',
-                  url: '#',
-                  meta: 'Frist 22.november'
+                  meta: 'Søknadsfrist: 22.november'
                 }
               ]}
             />
@@ -101,62 +91,52 @@ const HdirTema = () => (
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
-          <div className="l-mt-3">
-            <Heading h="h3" className="h5">
-              Fremhevet statistikk
-            </Heading>
-          </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row l-mt-2">
         <div className="col-xs-12 col-md-6 l-mt-2">
           <Card
             heading="Pakkeforløp for brystkreft"
-            text="Kvalitetsindikator"
+            topic="Kvalitetsindikator"
             url="#a"
           >
             <Statistics
               bigText="91,3%"
               smallText="Andel pakkeforløp for brystkreft som er gjennomført innenfor makisemal anbefalt forløstid."
-              icon="../static/icons/pie.svg"
+              icon="../icons/pie.svg"
             />
           </Card>
         </div>
         <div className="col-xs-12 col-md-6 l-mt-2">
-          <Card heading="Fastlegestatistikk" text="Kvalitetsindikator" url="#a">
+          <Card heading="Fastlegestatistikk" topic="Rapport" url="#a">
             <Statistics
               bigText="1106"
               smallText="Antall på en gjennomsnittlig liste for fastleger."
-              icon="../static/icons/pie.svg"
+              icon="../icons/pie.svg"
             />
           </Card>
         </div>
       </div>
-      <div className="row l-mt-4">
-        <div className="col-xs-12">
-          <Heading h="h3" className="h5">
-            Mer statistikk
-          </Heading>
-          <div className="l-mt-1 l-mb-1">
-            <hr className="b-hr" />
-          </div>
-        </div>
+      <div className="l-mt-3">
         <NavList
           list={[
             {
               title:
                 'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn',
-              url: '#'
+              url: '#',
+              topic: 'Statistikk'
             },
             {
               title:
                 'Utviklingsstrategi for helsestasjons- og skolehelsetjenesten',
-              url: '#'
+              url: '#',
+              topic: 'Statistikk'
             },
             {
               title:
                 'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten',
-              url: '#'
+              url: '#',
+              topic: 'Statistikk'
             }
           ]}
         />
@@ -168,15 +148,11 @@ const HdirTema = () => (
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
-          <div className="l-mt-3">
-            <Heading h="h3" className="h5">
-              Fremhevede rapporter
-            </Heading>
-          </div>
         </div>
-
+      </div>
+      <div className="row l-mt-2">
         <div className="col-xs-12 col-md-6 l-mt-2">
-          <Card heading="Ventetider og pasientrettigheter 2017" url="#a">
+          <Card heading="Les rapport" url="#a">
             <Image
               src="http://placehold.it/500x400"
               alt="altText"
@@ -197,32 +173,29 @@ const HdirTema = () => (
 
       <div className="row l-mt-4">
         <div className="col-xs-12">
-          <Heading h="h3" className="h5">
-            Flere rapporter
-          </Heading>
-          <div className="l-mt-1 l-mb-1">
-            <hr className="b-hr" />
-          </div>
+          <NavList
+            list={[
+              {
+                title:
+                  'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn',
+                url: '#',
+                topic: 'Rapport'
+              },
+              {
+                title:
+                  'Utviklingsstrategi for helsestasjons- og skolehelsetjenesten',
+                url: '#',
+                topic: 'Rapport'
+              },
+              {
+                title:
+                  'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten',
+                url: '#',
+                topic: 'Rapport'
+              }
+            ]}
+          />
         </div>
-        <NavList
-          list={[
-            {
-              title:
-                'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn',
-              url: '#'
-            },
-            {
-              title:
-                'Utviklingsstrategi for helsestasjons- og skolehelsetjenesten',
-              url: '#'
-            },
-            {
-              title:
-                'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten',
-              url: '#'
-            }
-          ]}
-        />
       </div>
 
       <div className="row l-mt-5">
@@ -233,12 +206,20 @@ const HdirTema = () => (
           </div>
         </div>
         <div className="col-xs-12">
-          <NavList
+          <List
             list={[
               {
-                title:
-                  'Lansering av nye nasjonale faglige reninglinjer for helsestasjons og skolehelsetjenester og for spedbarns-ernæring',
-                url: '#b'
+                type: 'conference',
+                url: '#4',
+                fields: {
+                  category: '',
+                  heading:
+                    'Lansering av nye nasjonale faglige kurs i hendelsesanalyse og pasientsikkerhet',
+                  dateFrom: '03.11.1990',
+                  location: 'The Qube, Gardermoen',
+                  registrationDeadline: '15. oktober',
+                  topic: ''
+                }
               }
             ]}
           />
@@ -271,40 +252,49 @@ const HdirTema = () => (
             <hr className="b-hr b-hr--thick" />
           </div>
         </div>
-        <div className="col-xs-12 col-md-6">
-          <PressRelease
-            title="Barns miljø og sikkerhet / når barnet skader seg"
-            info="PLAKAT (PDF)"
-            releaseDate="Utgitt: 01.06.2009"
-            url="#a"
-            image="https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png"
-            imageAlt="some monster guy"
-          />
-        </div>
-        <div className="col-xs-12 col-md-6">
-          <PressRelease
-            title="Barns miljø og sikkerhet / når barnet skader seg"
-            info="PLAKAT (PDF)"
-            releaseDate="Utgitt: 01.06.2009"
-            url="#a"
-            image="http://www.jemome.com/cdn/2014/07/book-cover-design_1356843.png"
-            imageAlt="some monster guy"
+        <div className="col-xs-12">
+          <List
+            list={[
+              {
+                type: 'pressRelease',
+                url: '#3',
+                fields: {
+                  category: 'Plakat',
+                  heading: 'Barns miljø og sikkerhet / når barnet skader seg',
+                  image:
+                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                  publishDate: '01.06.2009'
+                }
+              },
+              {
+                type: 'pressRelease',
+                url: '#4',
+                fields: {
+                  category: 'Brosjyre (PDF)',
+                  heading:
+                    'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                  image:
+                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                  publishDate: '01.06.2009'
+                }
+              }
+            ]}
           />
         </div>
       </div>
-    </div>
 
-    <div className="row">
-      <div className="l-mt-5 col-md-8 col-md-offset-2">
-        <Link href="#a" wideButton color="purple" arrow>
-          Er det noe på helsenorge.no som er relevant kan man bruke denne
-          modulen
-        </Link>
+      <div className="row">
+        <div className="l-mt-5 col-xs-12 col-md-10 col-md-offset-1">
+          <Link href="#a" wideButton color="purple" arrow>
+            Er det noe på helsenorge.no som er relevant kan man bruke denne
+            modulen
+          </Link>
+        </div>
       </div>
     </div>
 
     <div className="l-mt-5">
-      <Box color="green" square noPadding>
+      <Box square noPadding>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
