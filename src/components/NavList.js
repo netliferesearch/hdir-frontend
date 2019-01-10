@@ -80,6 +80,11 @@ const NavList = props => {
                   {item.infoText}
                 </div>
               )}
+              {item.topic && (
+                <div className="b-nav-list__item-info b-nav-list__item-info--highlight">
+                  {item.topic}
+                </div>
+              )}
             </a>
             {item.children && (
               <ul className="b-nav-list__child-items">
@@ -126,6 +131,7 @@ NavList.propTypes = {
       active: PropTypes.bool,
       file: PropTypes.bool,
       infoText: PropTypes.string,
+      topic: PropTypes.string,
       children: PropTypes.arrayOf(
         PropTypes.shape({
           title: PropTypes.string.isRequired,

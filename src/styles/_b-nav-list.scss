@@ -72,6 +72,14 @@
       padding: 0;
     }
 
+    &--highlight {
+      display: inline-block;
+      height: 1.5em;
+      background-color: $yellow-light;
+      padding: 0.25em;
+      margin-left: 0.5rem;
+    }
+
     &--file {
       position: relative;
       color: $black;
