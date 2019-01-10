@@ -10,7 +10,7 @@ const searchTrayClasses = open =>
   });
 
 const SearchTray = props => (
-  <div className={searchTrayClasses(props.open)}>
+  <div className={searchTrayClasses(props.open)} aria-hidden={!props.open}>
     <div className="b-search-tray__item">{props.children}</div>
   </div>
 );

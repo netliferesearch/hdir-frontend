@@ -170,7 +170,6 @@ class InputSearch extends React.Component {
 }
 
 InputSearch.propTypes = {
-  id: PropTypes.string.isRequired,
   type: PropTypes.string,
   label: PropTypes.string,
   dark: PropTypes.bool,
