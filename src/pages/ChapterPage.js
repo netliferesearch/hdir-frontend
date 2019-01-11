@@ -61,7 +61,7 @@ const ChapterPage = () => (
           />
           <div className="l-mt-4">
             <Link button arrow>
-              Henvis pasienten til helenorge.no for mer informasjon
+              Henvis pasienten til helsenorge.no for mer informasjon
             </Link>
           </div>
         </aside>
