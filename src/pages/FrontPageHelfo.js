@@ -35,7 +35,7 @@ const FrontPageHelfo = () => (
           <h2>Bruk riktig takst og regelverk</h2>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
-          <Link href="#a" small>
+          <Link href="#a" small arrow>
             Se alt innhold
           </Link>
         </div>
@@ -80,7 +80,7 @@ const FrontPageHelfo = () => (
           <h2>Inngå eller endre en avtale</h2>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
-          <Link href="#a" small>
+          <Link href="#a" small arrow>
             Se alt innhold
           </Link>
         </div>
@@ -111,7 +111,7 @@ const FrontPageHelfo = () => (
           <h2>Refusjon og oppgjør</h2>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
-          <Link href="#a" small>
+          <Link href="#a" small arrow>
             Se alt innhold
           </Link>
         </div>
@@ -143,7 +143,7 @@ const FrontPageHelfo = () => (
           <h2>På vegne av pasienten</h2>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
-          <Link href="#a" small>
+          <Link href="#a" small arrow>
             Se alt innhold
           </Link>
         </div>
