@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="43px" viewBox="0 0 50 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design-master" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="SISTE_Helfo-forside---egen-modul-for-pasient-Copy" transform="translate(-60.000000, -2643.000000)" stroke="#E45300" stroke-width="2.5">
+            <g id="Group" transform="translate(62.000000, 2645.000000)">
+                <g id="family-child">
+                    <circle id="Oval" cx="39.125" cy="6.125" r="6.125"></circle>
+                    <path d="M35.1474167,36.4375441 L35.53125,39.5000441 L41.65625,39.5000441 L43.1875,27.2500441 L46.25,27.2500441 L46.25,22.6562941 C46.25,19.7563205 44.6115443,17.1052435 42.0177291,15.8083359 C39.4239139,14.5114283 36.3199789,14.79131 34,16.5312941" id="Shape"></path>
+                    <circle id="Oval" cx="8.125" cy="6.125" r="6.125"></circle>
+                    <path d="M11.1025833,36.4375441 L10.71875,39.5000441 L4.59375,39.5000441 L3.0625,27.2500441 L0,27.2500441 L0,22.6562941 C-2.04003481e-15,19.7563205 1.63845569,17.1052435 4.23227091,15.8083359 C6.82608613,14.5114283 9.93002114,14.79131 12.25,16.5312941" id="Shape"></path>
+                    <circle id="Oval" cx="23.59375" cy="13.59375" r="4.59375"></circle>
+                    <path d="M23.65625,21 C19.4278199,21 16,24.4278199 16,28.65625 L16,30.1875 L19.0625,30.1875 L20.59375,39.375 L23.65625,39.375" id="Shape"></path>
+                    <path d="M23,21 C27.2284301,21 30.65625,24.4278199 30.65625,28.65625 L30.65625,30.1875 L27.59375,30.1875 L26.0625,39.375 L23,39.375" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
