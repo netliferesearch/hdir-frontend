@@ -64,6 +64,12 @@
       color: inherit !important;
       background: white;
     }
+    &--heading {
+      @include link-init($primary-color, true, $primary-color);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
     &--button-wide {
       @extend .b-link__link--button;
       width: 100%;

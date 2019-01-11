@@ -10,7 +10,8 @@ const linkClasses = (
   buttonSecondary,
   buttonInherit,
   color,
-  wideButton
+  wideButton,
+  heading
 ) =>
   classNames({
     'b-link__link': true,
@@ -21,7 +22,8 @@ const linkClasses = (
     'b-link__link--button-secondary': buttonSecondary,
     'b-link__link--button-inherit': buttonInherit,
     'b-link__link--purple': color === 'purple',
-    'b-link__link--button-wide': wideButton
+    'b-link__link--button-wide': wideButton,
+    'b-link__link--heading': heading
   });
 
 const Link = props => (
@@ -42,7 +44,8 @@ const Link = props => (
         props.buttonSecondary,
         props.buttonInherit,
         props.color,
-        props.wideButton
+        props.wideButton,
+        props.heading
       )}
     >
       {props.children}
@@ -60,7 +63,8 @@ Link.propTypes = {
   buttonSecondary: PropTypes.bool,
   buttonInherit: PropTypes.bool,
   color: PropTypes.oneOf(['', 'purple']),
-  wideButton: PropTypes.bool
+  wideButton: PropTypes.bool,
+  heading: PropTypes.bool
 };
 
 export default Link;
