@@ -32,21 +32,21 @@ const HdirTema = () => (
         </div>
       </div>
       <div className="row">
-        <div className="col-xs-12 col-md-4 l-mt-2">
+        <div className="col-xs-12 col-md l-mt-2">
           <Card
             heading="Barns miljø og sikkerhet"
             url="#a"
             text="Brosjyren Når barnet skader seg – Råd til småbarnsforeldre om førstehjelp"
           />
         </div>
-        <div className="col-xs-12 col-md-4 l-mt-2">
+        <div className="col-xs-12 col-md l-mt-2">
           <Card
             heading="Roller i skolehelsetjenesten"
             url="#a"
             text="Hvem gjør hva i skolehelsetjenesten?"
           />
         </div>
-        <div className="col-xs-12 col-md-4 l-mt-2">
+        <div className="col-xs-12 col-md l-mt-2">
           <Card
             heading="Noe annet som er viktig"
             url="#a"
