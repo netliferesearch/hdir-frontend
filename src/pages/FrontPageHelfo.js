@@ -4,13 +4,13 @@ import Box from '../components/Box';
 import Link from '../components/Link';
 import Select from '../components/Select';
 import Alert from '../components/Alert';
-import '../styles/Helfo.scss';
+// import '../styles/Helfo.scss';
 
 const FrontPageHelfo = () => (
   <div>
     <div className="l-container">
       <div className="row">
-        <div className="col-md-6 col-md-offset-3 l-mt-4">
+        <div className="col-md-6 col-md-offset-3 l-mt-3">
           <form action="">
             <Select
               label="Finn yrkesgruppe"
