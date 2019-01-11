@@ -1,5 +1,6 @@
 import React from 'react';
 import Collapsible from '../components/Collapsible';
+import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
 import NavList from '../components/NavList';
@@ -213,6 +214,40 @@ const ChapterPage = () => (
         </div>
       </div>
     </div>
+
+    <div className="l-container">
+      <div className="l-mt-4 l-mb-4">
+        <Collapsible heading="Abonnér på endringer – Nasjonal faglig retningslinje for svangerskapsdiabetes">
+          <form>
+            <div className="b-input-text">
+              <label
+                htmlFor="email-subscription"
+                className="b-input-text__label"
+              >
+                Fyll inn e-postadressen din for å motta varsler om endringer.
+              </label>
+              <input
+                type="text"
+                name="email-subscription"
+                className="b-input-text__input"
+              />
+              <div className="b-input-text__description">
+                Du får straks en e-post som bekrefter ditt abonnement. Der
+                finner du også melihet til å melde deg av.
+              </div>
+              <div className="b-input-text__error">
+                Skriv inn en gylig epost-adresse.
+              </div>
+              <Button>Abonnér</Button>
+            </div>
+          </form>
+          <Alert status="success">
+            Abonnementet ditt er registrert. Du får straks e-post fra oss.
+          </Alert>
+        </Collapsible>
+      </div>
+    </div>
+
     <div className="l-mt-4">
       <Box color="green" square noPadding>
         <div className="l-container">
