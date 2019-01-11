@@ -6,6 +6,7 @@
     "classnames": "^2.2.6",
     "flexboxgrid-sass": "^8.0.5",
     "http-proxy-middleware": "^0.19.1",
+    "loki": "^0.14.2",
     "normalize-scss": "^7.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
@@ -50,5 +51,21 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false,
+        "fitWindow": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
+  }
 }

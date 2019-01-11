@@ -22,3 +22,6 @@ yarn-error.log*
 
 # built serverless functions / faas
 src/faas/build
+
+# loki: visual regression testing
+.loki
