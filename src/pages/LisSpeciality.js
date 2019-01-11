@@ -26,11 +26,11 @@ const LisSpeciality = () => (
         <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#a" />
       </div>
       <div className="l-mt-4">
-        <Link href="#a" small icon="../static/icons/method.svg">
+        <Link href="#a" small icon="../icons/method.svg">
           Om metode og prosess
         </Link>
         <br />
-        <Link href="#a" small icon="../static/icons/print.svg">
+        <Link href="#a" small icon="../icons/print.svg">
           Skriv ut hele retningslinjen
         </Link>
       </div>

@@ -54,7 +54,7 @@ const StatisticsPage = () => (
                 <Statistics
                   bigText="91,3%"
                   smallText="Andel pakkeforløp for brystkreft som er gjennomført innenfor makisemal anbefalt forløstid."
-                  icon="../static/icons/pie.svg"
+                  icon="../icons/pie.svg"
                 />
               </Card>
             </div>
@@ -68,7 +68,7 @@ const StatisticsPage = () => (
                 <Statistics
                   bigText="1106"
                   smallText="Antall på en gjennomsnittlig liste for fastleger."
-                  icon="../static/icons/pie.svg"
+                  icon="../icons/pie.svg"
                 />
               </Card>
             </div>
