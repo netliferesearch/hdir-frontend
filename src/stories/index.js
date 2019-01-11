@@ -40,45 +40,6 @@ import CheckboxGroup from '../components/CheckboxGroup';
 import RadioButtonGroup from '../components/RadioButtonGroup';
 import InputSearch from '../components/InputSearch';
 
-// TODO: The Storybook-devs are working on an official css toggle addon
-// Also remember to remove the copy function in the NPM storybook building script
-const changeStyle = name => {
-  if (name === 'helfo') require('../styles/Helfo.scss');
-  else if (name === 'hdir') require('../styles/App.scss');
-};
-
-storiesOf('READ ME!', module).add('Styles', () => (
-  <div>
-    <h1 className="h2">
-      Digitial design guide for DIP - Digital Innholdsplattform
-    </h1>
-    <p>
-      Press <strong>h</strong> to toggle the component hint helper.
-    </p>
-    <p>Velg stilsett:</p>
-    <ul>
-      <li>
-        <button
-          onClick={() => {
-            changeStyle('hdir');
-          }}
-        >
-          Helsedirektoratet
-        </button>
-      </li>
-      <li>
-        <button
-          onClick={() => {
-            changeStyle('helfo');
-          }}
-        >
-          Helfo
-        </button>
-      </li>
-    </ul>
-  </div>
-));
-
 storiesOf('Alert', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)

@@ -34,6 +34,7 @@
   "devDependencies": {
     "@storybook/addon-a11y": "^4.1.6",
     "@storybook/addon-actions": "^4.1.6",
+    "@storybook/addon-cssresources": "^4.1.6",
     "@storybook/addon-knobs": "^4.1.6",
     "@storybook/addon-links": "^4.1.6",
     "@storybook/addon-notes": "^4.1.6",
