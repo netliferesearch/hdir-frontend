@@ -3,10 +3,8 @@ import NavList from '../components/NavList';
 import Box from '../components/Box';
 import Link from '../components/Link';
 import Select from '../components/Select';
-
-import Collapsible from '../components/Collapsible';
 import Alert from '../components/Alert';
-import Button from '../components/Button';
+import '../styles/Helfo.scss';
 
 const FrontPageHelfo = () => (
   <div>
@@ -32,7 +30,10 @@ const FrontPageHelfo = () => (
 
       <div className="row middle-xs l-mt-5">
         <div className="col-xs-12 col-md-8">
-          <h2>Bruk riktig takst og regelverk</h2>
+          <h2>
+            <img src="./icons/scale.svg" className="b-icon" alt="" />
+            Bruk riktig takst og regelverk
+          </h2>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
           <Link href="#a" small arrow>
@@ -77,7 +78,10 @@ const FrontPageHelfo = () => (
 
       <div className="row middle-xs l-mt-5">
         <div className="col-xs-12 col-md-8">
-          <h2>Inngå eller endre en avtale</h2>
+          <h2>
+            <img src="./icons/firstaid.svg" className="b-icon" alt="" />
+            Inngå eller endre en avtale
+          </h2>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
           <Link href="#a" small arrow>
@@ -108,7 +112,10 @@ const FrontPageHelfo = () => (
 
       <div className="row middle-xs l-mt-5">
         <div className="col-xs-12 col-md-8">
-          <h2>Refusjon og oppgjør</h2>
+          <h2>
+            <img src="./icons/money_bag.svg" className="b-icon" alt="" />
+            Få refusjon og oppgjør
+          </h2>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
           <Link href="#a" small arrow>
@@ -140,7 +147,10 @@ const FrontPageHelfo = () => (
 
       <div className="row middle-xs l-mt-5">
         <div className="col-xs-12 col-md-8">
-          <h2>På vegne av pasienten</h2>
+          <h2>
+            <img src="./icons/people.svg" className="b-icon" alt="" />
+            På vegne av pasienten
+          </h2>
         </div>
         <div className="col-xs-12 col-md-4 t-lg-right">
           <Link href="#a" small arrow>
@@ -173,10 +183,12 @@ const FrontPageHelfo = () => (
       </div>
       <div className="row l-mt-4">
         <div className="col-xs-12 col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-3">
-          <h2>
-            Legemidler på blå resept - når må du søke og når kan du forskrive
-            direkte?
-          </h2>
+          <Link href="#" heading>
+            <h2>
+              Legemidler på blå resept - når må du søke og når kan du forskrive
+              direkte?
+            </h2>
+          </Link>
           <p className="l-mt-1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -184,19 +196,18 @@ const FrontPageHelfo = () => (
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in.
           </p>
-          <Link>Les mer om lorem ipsum</Link>
+          <Link href="#">Les mer om lorem ipsum</Link>
         </div>
       </div>
       <div className="l-mt-4 l-mb-1">
         <hr className="b-hr b-hr--grey col-xs-12" />
       </div>
       <div className="row">
-        <div className="col-xs-12">
+        <div className="col-xs-12 col-md-6">
           <NavList
-            columns
             list={[
-              { title: 'Refusjonskrav', url: '#' },
-              { title: 'Utbetaling og vedtak', url: '#' }
+              { title: 'Nyhetsbrev for helseaktører', url: '#' },
+              { title: 'Bytte fastlege', url: '#' }
             ]}
           />
         </div>
@@ -215,39 +226,6 @@ const FrontPageHelfo = () => (
           <a href="#a">999 99 999</a>
         </div>
       </Box>
-    </div>
-
-    <div className="l-container">
-      <div className="l-mt-4">
-        <Collapsible heading="Abonnér på endringer – Nasjonal faglig retningslinje for svangerskapsdiabetes">
-          <form>
-            <div className="b-input-text">
-              <label
-                htmlFor="email-subscription"
-                className="b-input-text__label"
-              >
-                Fyll inn e-postadressen din for å motta varsler om endringer.
-              </label>
-              <input
-                type="text"
-                name="email-subscription"
-                className="b-input-text__input"
-              />
-              <div className="b-input-text__description">
-                Du får straks en e-post som bekrefter ditt abonnement. Der
-                finner du også melihet til å melde deg av.
-              </div>
-              <div className="b-input-text__error">
-                Skriv inn en gylig epost-adresse.
-              </div>
-              <Button>Abonnér</Button>
-            </div>
-          </form>
-          <Alert status="success">
-            Abonnementet ditt er registrert. Du får straks e-post fra oss.
-          </Alert>
-        </Collapsible>
-      </div>
     </div>
   </div>
 );
