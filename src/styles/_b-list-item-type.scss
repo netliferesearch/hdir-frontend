@@ -26,6 +26,7 @@
 
   &__image {
     flex: 1;
+    max-width: 8rem;
   }
   &__text {
     flex: 3;
@@ -35,8 +36,20 @@
     font-size: $meta-text;
     background-color: $yellow-light;
     display: inline-block;
+    padding: 0.25em;
   }
   &__date {
     font-size: $meta-text;
+  }
+  &__subheading {
+    font-size: $meta-text;
+    > * {
+      &:first-child {
+        font-weight: bold;
+      }
+      &:only-child {
+        font-weight: normal;
+      }
+    }
   }
 }

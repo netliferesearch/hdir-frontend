@@ -10,7 +10,7 @@ const ListItemType = props => {
     <Fragment>
       {type === 'news' && (
         <div className="b-list-item-type">
-          {fields.heading && <h2>{fields.heading}</h2>}
+          {fields.heading && <h2 className="h3">{fields.heading}</h2>}
           {fields.category && (
             <div className="b-list-item-type__category">{fields.category}</div>
           )}
@@ -26,7 +26,7 @@ const ListItemType = props => {
 
       {type === 'conference' && (
         <div className="b-list-item-type">
-          {fields.heading && <h2>{fields.heading}</h2>}
+          {fields.heading && <h2 className="h3">{fields.heading}</h2>}
           {fields.category && (
             <p className="b-list-item-type__category">{fields.category}</p>
           )}
@@ -63,7 +63,7 @@ const ListItemType = props => {
               <SquareImage src={fields.image} alt={fields.heading} />
             </div>
             <div className="b-list-item-type__text">
-              {fields.heading && <h2>{fields.heading}</h2>}
+              {fields.heading && <h2 className="h3">{fields.heading}</h2>}
               {fields.category && (
                 <p className="b-list-item-type__category">{fields.category}</p>
               )}
@@ -83,7 +83,7 @@ const ListItemType = props => {
 
       {type === 'grantFunding' && (
         <div className="b-list-item-type">
-          {fields.heading && <h2>{fields.heading}</h2>}
+          {fields.heading && <h2 className="h3">{fields.heading}</h2>}
           {fields.category && (
             <p className="b-list-item-type__category">{fields.category}</p>
           )}
@@ -93,6 +93,25 @@ const ListItemType = props => {
           )}
           {fields.topic && (
             <div className="b-list-item-type__topic">{fields.topic}</div>
+          )}
+        </div>
+      )}
+
+      {type === 'generic' && (
+        <div className="b-list-item-type">
+          {fields.heading && <h2 className="h3">{fields.heading}</h2>}
+          {fields.category && (
+            <p className="b-list-item-type__category">{fields.category}</p>
+          )}
+
+          {fields.subheading && (
+            <div className="b-list-item-type__subheading">
+              {Array.isArray(fields.subheading) ? (
+                fields.subheading.map(text => <span>{text}</span>)
+              ) : (
+                <span>{fields.subheading}</span>
+              )}
+            </div>
           )}
         </div>
       )}
@@ -148,7 +167,8 @@ ListItemType.propTypes = {
       'conference',
       'pressRelease',
       'grantFunding',
-      'person'
+      'person',
+      'generic'
     ]),
     fields: PropTypes.object
   }).isRequired

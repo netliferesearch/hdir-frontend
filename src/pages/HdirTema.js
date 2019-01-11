@@ -123,25 +123,35 @@ const HdirTema = () => (
 
       <div className="row l-mt-5">
         <div className="col-xs-12">
-          <NavList
+          <List
             heading="RELEVANTE RETNINGSLINJER, LOV OG PAKKEFORLØP"
             list={[
               {
-                title:
-                  'Råd ved bruk av sosiale medier i helsestasjons- og skolehelsetjenesten',
-                url: '#',
-                topic: 'Nasjonale faglige retningslinjer'
+                type: 'generic',
+                url: '#5',
+                fields: {
+                  category: 'Nasjonale faglige retningslinjer',
+                  heading:
+                    'Råd ved bruk av sosiale medier i helsestasjons- og skolehelsetjenesten'
+                }
               },
               {
-                title: 'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                url: '#',
-                topic: 'Nasjonale faglige retningslinjer'
+                type: 'generic',
+                url: '#6',
+                fields: {
+                  category: 'Nasjonale faglige retningslinjer',
+                  heading:
+                    'Dokumentasjon i helsestasjons- og skolehelsetjenesten'
+                }
               },
               {
-                title:
-                  'Utvidet rekvireringsrett til helsesøstre og jordmødre for prevansjonsmidler – Helsesøstre og jordmødres administrering av langtidsvirkende, reversibel prevensjon (LARC)',
-                url: '#',
-                topic: 'Nasjonale faglige retningslinjer'
+                type: 'generic',
+                url: '#7',
+                fields: {
+                  category: 'Nasjonale faglige retningslinjer',
+                  heading:
+                    'Utvidet rekvireringsrett til helsesøstre og jordmødre for prevansjonsmidler – Helsesøstre og jordmødres administrering av langtidsvirkende, reversibel prevensjon (LARC)'
+                }
               }
             ]}
           />
@@ -150,25 +160,35 @@ const HdirTema = () => (
 
       <div className="row l-mt-5">
         <div className="col-xs-12">
-          <NavList
+          <List
             heading="RELEVANTE ANBEFALINGER, KRAV ELLER RÅD"
             list={[
               {
-                title: 'Tannhelsetjenester skal ha et og skolehelsetjenesten',
-                url: '#',
-                topic: 'Krav i lov eller forskrift'
+                type: 'generic',
+                url: '#5',
+                fields: {
+                  category: 'Krav i lov eller forskrift',
+                  heading:
+                    'Tannhelsetjenester skal ha et og skolehelsetjenesten'
+                }
               },
               {
-                title:
-                  'Barn og unge med høy karierisiko helsestasjons- og skolehelsetjenesten',
-                url: '#',
-                topic: 'Sterk anbefaling'
+                type: 'generic',
+                url: '#6',
+                fields: {
+                  category: 'Sterk anbefaling',
+                  heading:
+                    'Barn og unge med høy karierisiko helsestasjons- og skolehelsetjenesten'
+                }
               },
               {
-                title:
-                  'Foresatte til barn med administrering av langtidsvirkende reversibel',
-                url: '#',
-                topic: 'Sterk anbefaling'
+                type: 'generic',
+                url: '#7',
+                fields: {
+                  category: 'Sterk anbefaling',
+                  heading:
+                    'Foresatte til barn med administrering av langtidsvirkende reversibel'
+                }
               }
             ]}
           />
@@ -234,25 +254,34 @@ const HdirTema = () => (
         </div>
       </div>
       <div className="l-mt-3">
-        <NavList
+        <List
           list={[
             {
-              title:
-                'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn',
-              url: '#',
-              topic: 'Statistikk'
+              type: 'generic',
+              url: '#7',
+              fields: {
+                category: 'Statistikk',
+                heading:
+                  'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn'
+              }
             },
             {
-              title:
-                'Utviklingsstrategi for helsestasjons- og skolehelsetjenesten',
-              url: '#',
-              topic: 'Statistikk'
+              type: 'generic',
+              url: '#7',
+              fields: {
+                category: 'Statistikk',
+                heading:
+                  'Utviklingsstrategi for helsestasjons- og skolehelsetjenesten'
+              }
             },
             {
-              title:
-                'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten',
-              url: '#',
-              topic: 'Statistikk'
+              type: 'generic',
+              url: '#7',
+              fields: {
+                category: 'Statistikk',
+                heading:
+                  'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten'
+              }
             }
           ]}
         />
@@ -289,25 +318,34 @@ const HdirTema = () => (
 
       <div className="row l-mt-4">
         <div className="col-xs-12">
-          <NavList
+          <List
             list={[
               {
-                title:
-                  'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn',
-                url: '#',
-                topic: 'Rapport'
+                type: 'generic',
+                url: '#7',
+                fields: {
+                  category: 'Rapport',
+                  heading:
+                    'Kartlegging av forekomst av hørselshemmede i alderen 0-18 år i innvanringbefolkningen med ikke-vestlig bakgrunn'
+                }
               },
               {
-                title:
-                  'Utviklingsstrategi for helsestasjons- og skolehelsetjenesten',
-                url: '#',
-                topic: 'Rapport'
+                type: 'generic',
+                url: '#7',
+                fields: {
+                  category: 'Rapport',
+                  heading:
+                    'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten'
+                }
               },
               {
-                title:
-                  'Utvikling av en bindene bemanningsnorm i helsestasjons- og skolehelsetjenesten',
-                url: '#',
-                topic: 'Rapport'
+                type: 'generic',
+                url: '#7',
+                fields: {
+                  category: 'Rapport',
+                  heading:
+                    'Foresatte til barn med høy karierisiko bør involveres særskilt i behandling av barnet'
+                }
               }
             ]}
           />
