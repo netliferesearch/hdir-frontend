@@ -46,18 +46,20 @@ class MainHeader extends React.Component {
           <div className="b-main-header">
             <Link to="/" className="b-main-header__logo-link">
               <div className="l-hide-to-md">
-                <img
-                  src={this.props.logo}
-                  alt={this.props.name}
+                <div
                   className="b-main-header__logo"
-                />
+                  ariaLabel={this.props.name}
+                >
+                  {this.props.name}
+                </div>
               </div>
               <div className="l-hide-from-md">
-                <img
-                  src={this.props.logoSmall}
+                <div
                   className="b-main-header__logo b-main-header__logo--small"
-                  alt={this.props.name}
-                />
+                  ariaLabel={this.props.name}
+                >
+                  {this.props.name}
+                </div>
               </div>
             </Link>
 
@@ -65,10 +67,9 @@ class MainHeader extends React.Component {
               <div className="l-container">
                 <nav className="b-main-header__menu-overlay">
                   <div className="b-main-header__menu-overlay-header">
-                    <img
-                      src="./hdir_logo_small.svg"
+                    <div
                       className="b-main-header__logo b-main-header__logo--small"
-                      alt={this.props.name}
+                      ariaLabel={this.props.name}
                     />
                     <button
                       className="b-button b-button__button b-button__button--small b-button__button--secondary"

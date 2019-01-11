@@ -5,14 +5,20 @@
   padding: calc(3vw + 1rem) 0;
 
   &__logo {
-    max-width: calc(8rem + 4vw);
+    height: 2rem;
+    width: 100%;
+
+    background-image: url($logo);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: contain;
 
     &--small {
-      height: 2rem;
-      width: auto;
+      background-image: url($logo-small);
     }
   }
   &__logo-link {
+    flex-grow: 1;
     @include link-init(transparent);
   }
   &__nav {

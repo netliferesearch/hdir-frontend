@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import './styles/App.scss';
 import PropTypes from 'prop-types';
+
+import './styles/App.scss';
 
 import FrontPage from './pages/FrontPage';
 import SearchResultPage from './pages/SearchResultPage';
@@ -52,12 +53,7 @@ class App extends Component {
       <div className="App">
         <HashRouter>
           <div>
-            <MainHeader
-              logo={this.props.logo}
-              logoSmall={this.props.logoSmall}
-              name={this.props.name}
-              links={this.props.links}
-            />
+            <MainHeader name={this.props.name} links={this.props.links} />
             <Switch>
               <Route exact path="/" component={FrontPage} />
               <Route path="/produkt" component={ProductPage} />
@@ -126,8 +122,6 @@ class App extends Component {
 
 App.propTypes = {
   name: PropTypes.string,
-  logo: PropTypes.string,
-  logoSmall: PropTypes.string,
   links: PropTypes.string
 };
 
