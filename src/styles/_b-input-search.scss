@@ -36,8 +36,8 @@
     flex-shrink: 0;
     font-size: 1rem;
     padding: 1em 1.5em;
-    color: $secondary-color;
-    background-color: white;
+    color: white;
+    background-color: $secondary-color;
     box-shadow: 0 0 0 1px $secondary-color;
     border: 0;
     border-radius: 2em;
@@ -52,7 +52,7 @@
       margin-left: 0.75em;
       background-size: 1.2em;
       background-position: center;
-      background-image: url('../static/icons/search.svg');
+      background-image: url('../static/icons/search_white.svg');
       background-repeat: no-repeat;
     }
 
