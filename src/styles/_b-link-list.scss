@@ -1,0 +1,62 @@
+.b-link-list {
+  &__item {
+    text-align: center;
+    display: inline-block;
+    width: 47.5%;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    padding: 1rem 4rem;
+    @include link-init($secondary-color, false);
+    border-bottom: 1px solid $secondary-color !important;
+
+    &:hover {
+      background-color: $grey-lighter;
+
+      .b-link-list__text {
+        color: $link-color;
+        @include underline($link-color);
+      }
+    }
+
+    &--active {
+      color: $grey;
+
+      &:hover {
+        background-color: transparent;
+        .b-link-list__text {
+          color: $grey;
+          @include underline(transparent);
+        }
+      }
+    }
+
+    // The items on the left adds a margin on the right side
+    &:nth-child(odd) {
+      margin-right: 5%;
+    }
+
+    // The last item(s) should not add margin bottom
+    &:nth-last-child(1):nth-child(odd),
+    &:nth-last-child(2):nth-child(odd),
+    &:nth-last-child(1):nth-child(even) {
+      margin-bottom: 0;
+    }
+
+    @include mq($until: $tablet) {
+      width: 100%;
+      padding: 1rem;
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__image {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  &__text {
+    font-weight: bold;
+  }
+}
