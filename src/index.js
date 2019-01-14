@@ -8,9 +8,15 @@ const rootElement2 = document.getElementById('root2');
 
 if (rootElement) {
   const name = rootElement.getAttribute('data-name');
+  const hideSearch = Boolean(
+    rootElement.getAttribute('data-hide-search') !== null
+  );
   const links = JSON.parse(rootElement.getAttribute('data-links'));
 
-  ReactDOM.render(<App name={name} links={links} />, rootElement);
+  ReactDOM.render(
+    <App name={name} hideSearch={hideSearch} links={links} />,
+    rootElement
+  );
 }
 if (rootElement2) {
   //

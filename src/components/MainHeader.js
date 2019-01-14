@@ -116,12 +116,14 @@ class MainHeader extends React.Component {
                 >
                   Meny
                 </button>
-                <button
-                  onClick={this.toggleSearch}
-                  className="b-button b-button__button b-button__button--small"
-                >
-                  {this.state.searchButtonText}
-                </button>
+                {!this.props.hideSearch && (
+                  <button
+                    onClick={this.toggleSearch}
+                    className="b-button b-button__button b-button__button--small"
+                  >
+                    {this.state.searchButtonText}
+                  </button>
+                )}
               </nav>
             </div>
           </div>

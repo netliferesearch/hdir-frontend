@@ -53,7 +53,11 @@ class App extends Component {
       <div className="App">
         <HashRouter>
           <div>
-            <MainHeader name={this.props.name} links={this.props.links} />
+            <MainHeader
+              name={this.props.name}
+              links={this.props.links}
+              hideSearch={this.props.hideSearch}
+            />
             <Switch>
               <Route exact path="/" component={FrontPage} />
               <Route path="/produkt" component={ProductPage} />
