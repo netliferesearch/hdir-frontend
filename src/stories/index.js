@@ -395,44 +395,44 @@ storiesOf('LinkList', module)
         {
           href: '#a',
           text: 'Sykdom, tilstand og behandling',
-          image: 'http://placehold.it/120x120',
+          image: 'http://placehold.it/64x64',
           imageAlt: 'image alt text'
         },
         {
           href: '#a',
           text: 'Autorisasjon og spesialistutdanning',
-          image: 'http://placehold.it/120x120',
+          image: 'http://placehold.it/64x64',
           imageAlt: 'image alt text',
           active: true
         },
         {
           href: '#a',
           text: 'Psykisk helse',
-          image: 'http://placehold.it/120x120',
+          image: 'http://placehold.it/64x64',
           imageAlt: 'image alt text'
         },
         {
           href: '#a',
           text: 'Tilskudd og finansiering',
-          image: 'http://placehold.it/120x120',
+          image: 'http://placehold.it/64x64',
           imageAlt: 'image alt text'
         },
         {
           href: '#a',
           text: 'Folkehelse, ernæring og fysisk aktivitet',
-          image: 'http://placehold.it/120x120',
+          image: 'http://placehold.it/64x64',
           imageAlt: 'image alt text'
         },
         {
           href: '#a',
           text: 'Statistikk, registre og rapporter',
-          image: 'http://placehold.it/120x120',
+          image: 'http://placehold.it/64x64',
           imageAlt: 'image alt text'
         },
         {
           href: '#a',
           text: 'Lover og forskrifter',
-          image: 'http://placehold.it/100x100',
+          image: 'http://placehold.it/64x64',
           imageAlt: 'image alt text'
         }
       ])}

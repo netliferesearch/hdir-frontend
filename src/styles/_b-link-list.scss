@@ -1,11 +1,13 @@
 .b-link-list {
+  display: flex;
+  flex-wrap: wrap;
+
   &__item {
     text-align: center;
-    display: inline-block;
-    width: 47.5%;
+    width: 45%;
     box-sizing: border-box;
     margin-bottom: 1.5rem;
-    padding: 1rem 4rem;
+    padding: 1rem;
     @include link-init($secondary-color, false);
     border-bottom: 1px solid $secondary-color !important;
 
@@ -32,7 +34,7 @@
 
     // The items on the left adds a margin on the right side
     &:nth-child(odd) {
-      margin-right: 5%;
+      margin-right: 10%;
     }
 
     // The last item(s) should not add margin bottom
@@ -55,8 +57,11 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 1rem;
+    height: 64px;
+    width: auto;
   }
   &__text {
     font-weight: bold;
+    font-size: $medium-large-text;
   }
 }
