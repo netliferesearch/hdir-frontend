@@ -11,10 +11,10 @@
     background-image: url($logo);
     background-repeat: no-repeat;
     background-position-y: center;
-    background-size: contain;
 
     &--small {
       background-image: url($logo-small);
+      background-size: contain;
     }
   }
   &__logo-link {
