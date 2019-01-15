@@ -5,7 +5,7 @@ import LinkList from '../components/LinkList';
 const TransportPage = () => (
   <>
     <div className="l-container">
-      <div className="l-mt-5">
+      <div className="l-mt-4">
         <h1 className="t-sm-center h2 h2--bold">
           Autorisasjon og spesiallistutdanning
         </h1>
