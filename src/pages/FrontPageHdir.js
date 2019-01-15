@@ -20,6 +20,19 @@ const FrontPageHdir = () => (
     </div>
 
     <div className="l-container">
+      <div className="l-mt-5">
+        <Link href="#a" wideButton color="shadow" arrow>
+          <strong>Nasjonale anbefalinger, råd og pakkeforløp</strong>
+          <div className="l-mt-1 l-mb-1">
+            <hr className="b-hr" />
+          </div>
+          Nasjonale faglise retningslinjer, pakkeforløp, veiledere til lov og
+          forskrift, faglige råd
+        </Link>
+      </div>
+    </div>
+
+    <div className="l-container l-mt-4">
       <div className="row">
         <div className="col-xs col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
           <LinkList

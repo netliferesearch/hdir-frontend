@@ -21,14 +21,12 @@
     position: relative;
 
     &--arrow {
-      margin-right: 1.5em;
-      &:after {
-        content: ' →';
+      &:before {
+        content: '→';
         box-shadow: 0 1px 0 transparent;
-        color: $link-color;
+        float: right;
+        color: inherit !important;
         margin-left: 0.5em;
-        position: absolute;
-        top: -0.1em;
       }
     }
     &--secondary {
@@ -46,11 +44,6 @@
       font-size: $base-font-size;
       cursor: pointer;
       @include underline(transparent);
-      &:after {
-        top: 1px;
-        color: white;
-        position: relative;
-      }
     }
     &--button-secondary {
       @extend .b-link__link--button;
@@ -80,13 +73,27 @@
         right: 1em;
         top: 1.5em;
       }
+      &:hover {
+        text-decoration: underline;
+      }
     }
     &--small {
       font-size: $meta-text;
     }
     &--purple {
-      background-color: $purple-dark;
-      color: white;
+      background-color: white;
+      color: $purple-dark !important;
+      border: 1px solid $purple-dark;
+    }
+    &--white {
+      background-color: white;
+      color: $secondary-color !important;
+      border: 1px solid $secondary-color;
+    }
+    &--shadow {
+      background-color: white;
+      color: $secondary-color !important;
+      box-shadow: 0 1px 5px $grey-light;
     }
   }
 }

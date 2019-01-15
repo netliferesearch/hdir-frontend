@@ -2,7 +2,7 @@
   display: block;
   position: relative;
   border-top: 7px solid $black;
-  padding: 0 3.5em 1em 0;
+  padding: 0 0 1em 0;
   @include underline(transparent);
 
   &--link {
@@ -21,19 +21,15 @@
   }
 
   &__main-heading {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
     &:after {
       visibility: hidden;
+      margin-left: 0.5em;
       content: '→';
-      position: absolute;
-      right: 0;
       font-size: $large-text;
       color: $link-color;
-
-      // Note: this space should be adjusted relative to the size of sub-heading
-      // if it ever was too be changed.
-      top: 0.1em;
-      transform: translateY(0.1em);
+      height: 100%;
     }
   }
 

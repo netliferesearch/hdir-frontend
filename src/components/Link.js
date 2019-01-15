@@ -22,6 +22,8 @@ const linkClasses = (
     'b-link__link--button-secondary': buttonSecondary,
     'b-link__link--button-inherit': buttonInherit,
     'b-link__link--purple': color === 'purple',
+    'b-link__link--white': color === 'white',
+    'b-link__link--shadow': color === 'shadow',
     'b-link__link--button-wide': wideButton,
     'b-link__link--heading': heading
   });
@@ -62,7 +64,7 @@ Link.propTypes = {
   button: PropTypes.bool,
   buttonSecondary: PropTypes.bool,
   buttonInherit: PropTypes.bool,
-  color: PropTypes.oneOf(['', 'purple']),
+  color: PropTypes.oneOf(['', 'purple', 'white', 'shadow']),
   wideButton: PropTypes.bool,
   heading: PropTypes.bool
 };
