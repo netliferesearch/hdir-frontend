@@ -47,8 +47,7 @@ const FrontPageHdir = () => (
                 href: '#a',
                 text: 'Autorisasjon og spesialistutdanning',
                 image: 'http://placehold.it/64x64',
-                imageAlt: 'image alt text',
-                active: true
+                imageAlt: 'image alt text'
               },
               {
                 href: '#a',

@@ -20,33 +20,6 @@ h6,
   line-height: 1.2;
 }
 
-// Heading weights
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  &--light {
-    font-weight: lighter;
-  }
-  &--normal {
-    font-weight: normal;
-  }
-  &--bold {
-    font-weight: bold;
-  }
-  &--brand-color {
-    color: $secondary-color;
-  }
-  &--secondary-color {
-    color: $primary-color;
-  }
-  &--uppercase {
-    text-transform: uppercase;
-  }
-}
-
 // Heading sizes
 h1,
 .h1 {
@@ -73,5 +46,32 @@ h5,
   font-weight: normal;
   &--thin {
     color: $grey;
+  }
+}
+
+// Heading weights
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  &--light {
+    font-weight: lighter;
+  }
+  &--normal {
+    font-weight: normal;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+  &--brand-color {
+    color: $secondary-color;
+  }
+  &--secondary-color {
+    color: $primary-color;
+  }
+  &--uppercase {
+    text-transform: uppercase;
   }
 }
