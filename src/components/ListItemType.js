@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import SquareImage from '../components/SquareImage';
@@ -7,7 +7,7 @@ const ListItemType = props => {
   const { type: type = '', fields: fields = null } = props.itemType;
 
   return (
-    <Fragment>
+    <>
       {type === 'news' && (
         <div className="b-list-item-type">
           {fields.heading && <h2 className="h3">{fields.heading}</h2>}
@@ -156,7 +156,7 @@ const ListItemType = props => {
           )}
         </div>
       )}
-    </Fragment>
+    </>
   );
 };
 

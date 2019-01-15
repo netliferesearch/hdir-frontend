@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Heading from './Heading';
@@ -27,7 +27,7 @@ const smallHeader = h =>
 // Is H2 as wrapper an OK assumption?
 // TODO: Add the Heading-component instead
 const ChapterHeading = props => (
-  <Fragment>
+  <>
     {props.url ? (
       <a href={props.url} className={headingClasses(props.line, props.url)}>
         <Heading h={props.h}>
@@ -51,7 +51,7 @@ const ChapterHeading = props => (
         </Heading>
       </div>
     )}
-  </Fragment>
+  </>
 );
 
 ChapterHeading.propTypes = {
