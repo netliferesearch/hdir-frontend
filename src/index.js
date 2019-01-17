@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import MainHeader from '../src/components/MainHeader';
 
 const rootElement = document.getElementById('root');
-const rootElement2 = document.getElementById('root2');
+const headerElement = document.getElementById('header');
 
 if (rootElement) {
   const name = rootElement.getAttribute('data-name');
@@ -18,6 +19,15 @@ if (rootElement) {
     rootElement
   );
 }
-if (rootElement2) {
-  //
+if (headerElement) {
+  const name = headerElement.getAttribute('data-name');
+  const hideSearch = Boolean(
+    headerElement.getAttribute('data-hide-search') !== null
+  );
+  const links = JSON.parse(headerElement.getAttribute('data-links'));
+
+  ReactDOM.render(
+    <MainHeader name={name} hideSearch={hideSearch} links={links} />,
+    headerElement
+  );
 }

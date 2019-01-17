@@ -5,7 +5,7 @@ import { withNotes } from '@storybook/addon-notes';
 import { withCssResources } from '@storybook/addon-cssresources';
 
 if (process.env.NODE_ENV === 'development') {
-  require('../src/styles/Helfo.scss'); // For dev mode: Toggle between App.scss and Helfo.scss here
+  require('../src/styles/App.scss'); // For dev mode: Toggle between App.scss and Helfo.scss here
 }
 
 setAddon(staticMarkup);
