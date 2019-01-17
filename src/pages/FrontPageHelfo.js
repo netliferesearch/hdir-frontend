@@ -4,7 +4,6 @@ import Box from '../components/Box';
 import Link from '../components/Link';
 import Select from '../components/Select';
 import Alert from '../components/Alert';
-// import '../styles/Helfo.scss';
 
 const FrontPageHelfo = () => (
   <div>
