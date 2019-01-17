@@ -8,7 +8,6 @@
     display: block;
     height: 1em;
     width: 1em;
-    top: 0.66em;
     right: 0.5em;
     z-index: -1;
     content: '↓';
@@ -58,6 +57,5 @@
     }
   }
   &__option {
-    font-size: 2px;
   }
 }
