@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import InputSearch from './InputSearch';
 import SearchTray from './SearchTray';
@@ -44,7 +43,7 @@ class MainHeader extends React.Component {
         </SearchTray>
         <div className="l-container">
           <div className="b-main-header">
-            <Link to="/" className="b-main-header__logo-link">
+            <a href="/" className="b-main-header__logo-link">
               <div className="l-hide-to-md">
                 <div
                   className="b-main-header__logo"
@@ -61,7 +60,7 @@ class MainHeader extends React.Component {
                   {this.props.name}
                 </div>
               </div>
-            </Link>
+            </a>
 
             {this.state.mobileNavOpen && (
               <div className="l-container">
