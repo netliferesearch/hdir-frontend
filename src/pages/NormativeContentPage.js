@@ -87,9 +87,11 @@ const NormativeContentPage = () => (
                 meta: 'Veileder'
               },
               {
-                title: 'Antibiotika',
+                title: 'Fileksempel',
                 url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
+                meta: 'En PDF',
+                infoText: 'PDF (3,5 MB)',
+                file: true
               },
               {
                 title: 'ADHD',
