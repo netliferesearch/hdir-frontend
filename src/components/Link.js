@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 const linkClasses = (
   arrow,
+  arrowLeft,
   small,
   secondary,
   button,
@@ -16,6 +17,7 @@ const linkClasses = (
   classNames({
     'b-link__link': true,
     'b-link__link--arrow': arrow,
+    'b-link__link--arrow-left': arrowLeft,
     'b-link__link--small': small,
     'b-link__link--secondary': secondary,
     'b-link__link--button': button,
@@ -40,6 +42,7 @@ const Link = props => (
       href={props.href}
       className={linkClasses(
         props.arrow,
+        props.arrowLeft,
         props.small,
         props.secondary,
         props.button,
@@ -59,6 +62,7 @@ Link.propTypes = {
   href: PropTypes.string.isRequired,
   icon: PropTypes.string,
   arrow: PropTypes.bool,
+  arrowLeft: PropTypes.bool,
   small: PropTypes.bool,
   secondary: PropTypes.bool,
   button: PropTypes.bool,

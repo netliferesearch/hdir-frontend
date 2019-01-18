@@ -29,6 +29,15 @@
         margin-left: 0.5em;
       }
     }
+    &--arrow-left {
+      &:before {
+        content: '←';
+        box-shadow: 0 1px 0 transparent;
+        float: left;
+        color: inherit !important;
+        margin-right: 0.5em;
+      }
+    }
     &--secondary {
       @include link-init($grey, true, $grey);
     }

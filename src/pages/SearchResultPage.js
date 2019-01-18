@@ -2,7 +2,7 @@ import React from 'react';
 
 import List from '../components/List';
 import ListHeading from '../components/ListHeading';
-import Button from '../components/Button';
+import Link from '../components/Link';
 import InputSearch from '../components/InputSearch';
 import CheckboxGroup from '../components/CheckboxGroup';
 
@@ -62,15 +62,7 @@ const SearchResultPage = () => (
           </div>
         </aside>
         <section className="col-md-8 col-md-offset-1">
-          <ListHeading
-            heading="120 treff på Helsestasjon"
-            selectLabel="SORTÉR"
-            selectOptions={[
-              'Sist publisert',
-              'Først publisert',
-              'Alfabetisk rekkefølge'
-            ]}
-          />
+          <ListHeading heading="120 treff på Helsestasjon" />
           <List
             list={[
               {
@@ -137,8 +129,19 @@ const SearchResultPage = () => (
               }
             ]}
           />
-          <div className="l-mt-4 t-sm-center">
-            <Button secondary>Vis flere treff</Button>
+          <div className="l-mt-4 l-mb-5 t-sm-center">
+            <div className="row between-xs">
+              <div className="col-xs t-sm-left">
+                <Link href="#" arrowLeft>
+                  Forrige side
+                </Link>
+              </div>
+              <div className="col-xs t-sm-right">
+                <Link href="#" arrow>
+                  Neste side
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
       </div>
