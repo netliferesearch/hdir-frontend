@@ -15,49 +15,90 @@ const SearchResultPage = () => (
         </div>
       </div>
       <div className="row l-mt-5">
-        <aside className="col-md-3 col-xs-12 l-mb-4">
+        <aside className="col-md-3 col-xs-12 l-mb-4" id="searchQueries">
           <h4>Filtrér søk</h4>
           <div className="l-mt-2">
             <hr className="b-hr b-hr--thick" />
           </div>
-          <div className="l-mt-2">
+          <form className="l-mt-2">
             <CheckboxGroup
-              heading="Velg normerende produkter"
-              name="statistikktype"
+              name="søkefilter"
               options={[
                 {
-                  value: 'Kommunalt pasient- og brukerregister',
-                  label: 'Kommunalt pasient- og brukerregister'
+                  value: 'Nasjonale faglige retningslinjer',
+                  label: 'Nasjonale faglige retningslinjer'
                 },
                 {
-                  value: 'Kvalitetsindikator',
-                  label: 'Kvalitetsindikator'
+                  value: 'Nasjonale faglige råd',
+                  label: 'Nasjonale faglige råd'
                 },
                 {
-                  value: 'Norsk pasientregister',
-                  label: 'Norsk pasientregister'
+                  value: 'Pakkeforløp',
+                  label: 'Pakkeforløp'
                 },
                 {
-                  value: 'Rapporter og analyser',
-                  label: 'Rapporter og analyser'
+                  value: 'Nasjonale veiledere',
+                  label: 'Nasjonale veiledere'
                 },
                 {
-                  value: 'Samdata',
-                  label: 'Samdata'
+                  value: 'Prioriteringsveiledere',
+                  label: 'Prioriteringsveiledere'
                 },
                 {
-                  value: 'Styringsdata',
-                  label: 'Styringsdata'
+                  value: 'Veiledere til lov og forskrift',
+                  label: 'Veiledere til lov og forskrift'
+                },
+                {
+                  value: 'Rundskriv',
+                  label: 'Rundskriv'
+                },
+                {
+                  value: 'Læringsnotater',
+                  label: 'Læringsnotater'
+                },
+                {
+                  value: 'Tilskudd',
+                  label: 'Tilskudd'
+                },
+                {
+                  value: 'Statistikk',
+                  label: 'Statistikk'
+                },
+                {
+                  value: 'Rapporter',
+                  label: 'Rapporter'
+                },
+                {
+                  value: 'Høringer',
+                  label: 'Høringer'
+                },
+                {
+                  value: 'Trykksaker',
+                  label: 'Trykksaker'
+                },
+                {
+                  value: 'Konferanser',
+                  label: 'Konferanser'
+                },
+                {
+                  value: 'Nyheter',
+                  label: 'Nyheter'
+                },
+                {
+                  value: 'Justeringer SERP',
+                  label: 'Justeringer SERP'
                 }
               ]}
             />
-          </div>
+          </form>
           <div className="l-mt-2">
             <hr className="b-hr" />
           </div>
           <div className="l-mt-2">
             <small>
-              <a href="#a">Nullstill alle filtre</a>
+              <a href="#a" id="#resetFilter">
+                Nullstill alle filtre
+              </a>
             </small>
           </div>
         </aside>
