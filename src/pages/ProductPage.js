@@ -42,6 +42,11 @@ const ProductPage = () => (
               }
             ]}
           />
+          <div className="l-mt-2 t-sm-center">
+            <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
+              Vis alle (3)
+            </button>
+          </div>
         </div>
       </div>
       <div className="col-xs-12 l-mt-4">
@@ -57,37 +62,44 @@ const ProductPage = () => (
               {
                 description: 'Kapittel 2.1',
                 title: 'Det foreslås at HbA1c tas ved',
-                url: '#'
+                url: '#a'
               },
               {
                 description: 'Kapittel 2.2',
                 title:
                   'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
-                url: '#'
+                url: '#a'
               }
             ]}
           />
+          <div className="l-mt-2 t-sm-center">
+            <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
+              Vis alle (7)
+            </button>
+          </div>
         </div>
       </div>
 
-      <div className="col-xs-12 l-mt-3">
+      <div className="col-xs-12 l-mt-4">
         <Box>
-          <ChapterHeading subheading="RELATERTE PRODUKTER" line="none" />
-          <NavList
-            list={[
-              {
-                description: 'Svangerskapsomsorgen',
-                title: 'Nasjonale faglige retningslinjer',
-                url: '#'
-              },
-              {
-                description: 'BROSJYRE (PDF)',
-                title:
-                  'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
-                url: '#'
-              }
-            ]}
-          />
+          <h4>RELATERTE PRODUKTER</h4>
+          <div className="l-mt-1">
+            <NavList
+              list={[
+                {
+                  description: 'Svangerskapsomsorgen',
+                  title: 'Nasjonale faglige retningslinjer',
+                  url: '#'
+                },
+                {
+                  description: 'BROSJYRE (PDF)',
+                  title:
+                    'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                  url: '#'
+                }
+              ]}
+            />
+          </div>
         </Box>
       </div>
       <div className="col-xs-12 l-mt-3">
