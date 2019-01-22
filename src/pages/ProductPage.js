@@ -1,7 +1,7 @@
 import React from 'react';
 import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
-import PageMeta from '../components/PageMeta';
+import Button from '../components/Button';
 import Box from '../components/Box';
 import Link from '../components/Link';
 import LongShortHeading from '../components/LongShortHeading';
@@ -102,7 +102,7 @@ const ProductPage = () => (
           </div>
         </Box>
       </div>
-      <div className="col-xs-12 l-mt-3">
+      <div className="col-xs-12 l-mt-4">
         <Box color="green">
           <ChapterHeading
             heading="Materiell til helsekontorer"
@@ -112,46 +112,32 @@ const ProductPage = () => (
           <NavList
             list={[
               {
-                description: 'PLAKAT (PDF)',
                 title: 'Det foreslås at HbA1c tas ved',
                 url: '#',
-                infoText: 'PDF'
+                meta: 'Plakat',
+                infoText: 'PDF (1,0 MB)',
+                file: true
               },
               {
-                description: 'BROSJYRE (PDF)',
                 title:
                   'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
-                url: '#',
-                infoText: 'PDF'
+                url: '#a',
+                meta: 'Brosjyre',
+                infoText: 'PDF (3,5 MB)',
+                file: true
               }
             ]}
           />
           <div className="l-mt-2">
-            <Link href="#a" arrow>
-              Last ned alle (2 MB)
-            </Link>
+            <Button>Last ned alle</Button>
           </div>
         </Box>
       </div>
 
-      <div className="col-xs-12 col-md-10 col-md-offset-1 l-mt-4">
+      <div className="col-xs-12 l-mt-4 l-mb-5">
         <Link href="#a" wideButton arrow color="purple">
           For å lese om symptomer, kostholdsråd og andre tips ved
           svangerskapsdiabetes, kan du gå til helsenorge.no.
-        </Link>
-      </div>
-
-      <div className="col-xs-12 l-mt-3">
-        <PageMeta publishDate="01.01.2008" editDate="01.01.2018" url="#a" />
-      </div>
-
-      <div className="col-xs-12 l-mt-4">
-        <Link href="#a" small icon="../icons/method.svg">
-          Om metode og prosess
-        </Link>
-        <br />
-        <Link href="#a" small icon="../icons/print.svg">
-          Skriv ut hele retningslinjen
         </Link>
       </div>
     </div>

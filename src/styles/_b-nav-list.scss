@@ -178,7 +178,9 @@
   }
   &__item-title {
     width: 100%;
+    padding-right: 1rem;
     @include mq($until: $tablet) {
+      padding-right: 0;
       width: calc(100% - 2em);
     }
   }
