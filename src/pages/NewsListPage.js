@@ -1,6 +1,7 @@
 import React from 'react';
 
 import List from '../components/List';
+import Link from '../components/Link';
 import ListHeading from '../components/ListHeading';
 import Button from '../components/Button';
 import CheckboxGroup from '../components/CheckboxGroup';
@@ -80,8 +81,19 @@ const NewsListPage = () => (
               }
             ]}
           />
-          <div className="l-mt-4 t-sm-center">
-            <Button secondary>Vis flere nyheter</Button>
+          <div className="l-mt-4 l-mb-5 t-sm-center">
+            <div className="row between-xs">
+              <div className="col-xs t-sm-left">
+                <Link href="#" arrowLeft>
+                  Forrige side
+                </Link>
+              </div>
+              <div className="col-xs t-sm-right">
+                <Link href="#" arrow>
+                  Neste side
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
       </div>
