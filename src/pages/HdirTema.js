@@ -7,7 +7,6 @@ import Card from '../components/Card';
 import Link from '../components/Link';
 import Image from '../components/Image';
 import Statistics from '../components/Statistics';
-import PressRelease from '../components/PressRelease';
 
 const HdirTema = () => (
   <div>
