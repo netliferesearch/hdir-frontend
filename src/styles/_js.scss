@@ -1,0 +1,9 @@
+// These classes are only meant for HTML-elements being affected by javascript.
+// It should be used sparingly.
+
+.js-expand-list {
+  &__extra-item {
+    animation-name: fadeInUp;
+    animation-duration: 0.3s;
+  }
+}
