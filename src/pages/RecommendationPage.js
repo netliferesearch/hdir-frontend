@@ -168,6 +168,7 @@ const RecommendationPage = () => (
                     </div>
                     <div className="l-mb-1">
                       <Collapsible heading="Vurdering" size="small">
+                        <h3>Fordeler og ulemper</h3>
                         <p>
                           <b>
                             Fordeler av den samlede behandlingen, der kostråd
