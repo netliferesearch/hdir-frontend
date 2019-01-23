@@ -104,5 +104,8 @@
       color: $secondary-color !important;
       box-shadow: 0 1px 5px $grey-light;
     }
+    &--no-underline {
+      @include underline(transparent);
+    }
   }
 }

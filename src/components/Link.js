@@ -12,7 +12,8 @@ const linkClasses = (
   buttonInherit,
   color,
   wideButton,
-  heading
+  heading,
+  noUnderline
 ) =>
   classNames({
     'b-link__link': true,
@@ -27,7 +28,8 @@ const linkClasses = (
     'b-link__link--white': color === 'white',
     'b-link__link--shadow': color === 'shadow',
     'b-link__link--button-wide': wideButton,
-    'b-link__link--heading': heading
+    'b-link__link--heading': heading,
+    'b-link__link--no-underline': noUnderline
   });
 
 const Link = props => (
@@ -50,7 +52,8 @@ const Link = props => (
         props.buttonInherit,
         props.color,
         props.wideButton,
-        props.heading
+        props.heading,
+        props.noUnderline
       )}
     >
       {props.children}
@@ -70,7 +73,8 @@ Link.propTypes = {
   buttonInherit: PropTypes.bool,
   color: PropTypes.oneOf(['', 'purple', 'white', 'shadow']),
   wideButton: PropTypes.bool,
-  heading: PropTypes.bool
+  heading: PropTypes.bool,
+  noUnderline: PropTypes.bool
 };
 
 export default Link;

@@ -20,7 +20,9 @@ const ChapterPage = () => (
       <div className="l-mt-3 row">
         <aside className="col-md-4 l-hide-to-lg l-bleed-right">
           <div className="b-sidebar-heading">
-            Nasjonal faglig retningslinje for svangerskapsdiabetes
+            <Link noUnderline href="#">
+              Nasjonal faglig retningslinje for svangerskapsdiabetes
+            </Link>
           </div>
           <div className="l-mt-1">
             <hr className="b-hr b-hr--blue" />
