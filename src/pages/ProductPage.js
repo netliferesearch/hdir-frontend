@@ -26,28 +26,26 @@ const ProductPage = () => (
         />
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
-          <div className="js-expand-list" data-start-limit="1">
-            <NavList
-              list={[
-                {
-                  description: 'SVAK ANBEFALING',
-                  title:
-                    'Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi',
-                  url: '#'
-                },
-                {
-                  description: 'STERK ANBEFALING',
-                  title:
-                    'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
-                  url: '#'
-                }
-              ]}
-            />
-            <div className="l-mt-2 t-sm-center">
-              <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
-                Vis alle (3)
-              </button>
-            </div>
+          <NavList
+            list={[
+              {
+                description: 'SVAK ANBEFALING',
+                title:
+                  'Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi',
+                url: '#'
+              },
+              {
+                description: 'STERK ANBEFALING',
+                title:
+                  'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
+                url: '#'
+              }
+            ]}
+          />
+          <div className="l-mt-2 t-sm-center">
+            <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
+              Vis alle (3)
+            </button>
           </div>
         </div>
       </div>
@@ -59,27 +57,25 @@ const ProductPage = () => (
         />
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
-          <div className="js-expand-list">
-            <NavList
-              list={[
-                {
-                  description: 'Kapittel 2.1',
-                  title: 'Det foreslås at HbA1c tas ved',
-                  url: '#a'
-                },
-                {
-                  description: 'Kapittel 2.2',
-                  title:
-                    'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
-                  url: '#a'
-                }
-              ]}
-            />
-            <div className="l-mt-2 t-sm-center">
-              <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
-                Vis alle (7)
-              </button>
-            </div>
+          <NavList
+            list={[
+              {
+                description: 'Kapittel 2.1',
+                title: 'Det foreslås at HbA1c tas ved',
+                url: '#a'
+              },
+              {
+                description: 'Kapittel 2.2',
+                title:
+                  'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
+                url: '#a'
+              }
+            ]}
+          />
+          <div className="l-mt-2 t-sm-center">
+            <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
+              Vis alle (7)
+            </button>
           </div>
         </div>
       </div>

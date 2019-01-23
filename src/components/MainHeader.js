@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import InputSearch from './InputSearch';
 import SearchTray from './SearchTray';
 import NavList from './NavList';
-import shortid from 'shortid';
 
 class MainHeader extends React.Component {
   constructor(props) {
@@ -48,7 +47,7 @@ class MainHeader extends React.Component {
               <div className="l-hide-to-md">
                 <div
                   className="b-main-header__logo"
-                  aria-label={this.props.name}
+                  ariaLabel={this.props.name}
                 >
                   {this.props.name}
                 </div>
@@ -56,7 +55,7 @@ class MainHeader extends React.Component {
               <div className="l-hide-from-md">
                 <div
                   className="b-main-header__logo b-main-header__logo--small"
-                  aria-label={this.props.name}
+                  ariaLabel={this.props.name}
                 >
                   {this.props.name}
                 </div>
@@ -69,7 +68,7 @@ class MainHeader extends React.Component {
                   <div className="b-main-header__menu-overlay-header">
                     <div
                       className="b-main-header__logo b-main-header__logo--small"
-                      aria-label={this.props.name}
+                      ariaLabel={this.props.name}
                     />
                     <button
                       className="b-button b-button__button b-button__button--small b-button__button--secondary"
@@ -93,11 +92,7 @@ class MainHeader extends React.Component {
             <div className="l-hide-to-lg">
               <nav className="b-main-header__nav">
                 {this.props.links.map(link => (
-                  <a
-                    href={link.href}
-                    className="b-main-header__link"
-                    key={shortid.generate()}
-                  >
+                  <a href={link.href} className="b-main-header__link">
                     {link.name}
                   </a>
                 ))}
@@ -138,9 +133,7 @@ class MainHeader extends React.Component {
 }
 
 MainHeader.propTypes = {
-  hideSearch: PropTypes.bool,
-  name: PropTypes.string,
-  links: PropTypes.arrayOf(PropTypes.object)
+  hideSearch: PropTypes.bool
 };
 
 export default MainHeader;
