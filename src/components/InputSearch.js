@@ -45,7 +45,7 @@ const renderInputComponent = inputProps => (
 
 const triggerSearch = query => {
   // eslint-disable-next-line
-  window.location = `/#/søkeresultat?searchquery=${query}`;
+  window.location = `/søkeresultat?searchquery=${query}`;
 };
 
 const placeholderSuggestions = [

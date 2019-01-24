@@ -4,35 +4,35 @@ const allNewsItems = [
     category: 'news',
     publishDate: '03.12.2018',
     intro: 'asdf',
-    url: '/#/artikkel'
+    url: '/artikkel'
   },
   {
     title: 'This is news #2',
     category: 'news',
     publishDate: '04.11.2018',
     intro: 'dslfgndsgsdkg diabetes',
-    url: '/#/artikkel'
+    url: '/artikkel'
   },
   {
     title: 'This is news #3',
     category: 'news',
     publishDate: '06.06.2017',
     intro: 'asdf ikke diabetes',
-    url: '/#/artikkel'
+    url: '/artikkel'
   },
   {
     title: 'This is news #4',
     category: 'news',
     publishDate: '02.01.2015',
     intro: 'Ikke røyk, røyking er ikke bra',
-    url: '/#/artikkel'
+    url: '/artikkel'
   },
   {
     title: 'This is news #5',
     category: 'news',
     publishDate: '25.07.2018',
     intro: 'lorem ipsum',
-    url: '/#/artikkel'
+    url: '/artikkel'
   }
 ];
 

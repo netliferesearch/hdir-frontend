@@ -22,7 +22,7 @@ const ProductPage = () => (
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
-          url="/#/kapittel"
+          url="/kapittel"
         />
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
@@ -38,7 +38,7 @@ const ProductPage = () => (
                   description: 'STERK ANBEFALING',
                   title:
                     'Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi',
-                  url: '/#/kapittel'
+                  url: '/kapittel'
                 },
                 {
                   description: 'STERK ANBEFALING',
