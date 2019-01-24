@@ -22,23 +22,27 @@ const ProductPage = () => (
         <ChapterHeading
           heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
           subheading="kapittel 1"
-          url="#a"
+          url="/#/kapittel"
         />
         <hr className="b-hr b-hr--blue" />
         <div className="l-hide-to-md">
-          <div className="js-expand-list" data-start-limit="1">
+          <div className="js-expand-list" data-start-limit="2">
             <NavList
               list={[
                 {
-                  description: 'SVAK ANBEFALING',
-                  title:
-                    'Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi',
+                  description: 'STERK ANBEFALING',
+                  title: 'Anbefaling 1',
                   url: '#'
                 },
                 {
                   description: 'STERK ANBEFALING',
                   title:
-                    'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
+                    'Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi',
+                  url: '/#/kapittel'
+                },
+                {
+                  description: 'STERK ANBEFALING',
+                  title: 'Anbefaling 3',
                   url: '#'
                 }
               ]}

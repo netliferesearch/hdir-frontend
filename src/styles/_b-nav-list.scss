@@ -108,6 +108,7 @@
     display: flex;
     justify-content: space-between;
     text-align: left;
+    cursor: pointer;
 
     @include mq($until: $tablet) {
       display: block;
@@ -119,8 +120,10 @@
     height: calc(100% - 2em);
 
     &:hover {
-      color: $link-color;
-      background: rgba(0, 0, 0, 0.05);
+      &[href] {
+        color: $link-color;
+        background: rgba(0, 0, 0, 0.05);
+      }
     }
 
     &:after {
@@ -136,10 +139,12 @@
     }
 
     &--active {
+      cursor: default;
       background-color: $green-light !important; // We use important here, because we don't have the hover state to override it.
       transition: background-color 0.3s;
     }
     &--active-child {
+      cursor: default;
       background-color: $green-light !important;
       transition: background-color 0.3s;
     }

@@ -91,7 +91,7 @@ const NavList = props => {
                 {item.children.map(child => (
                   <li key={shortid.generate()} className="b-nav-list__item">
                     <a
-                      href={item.url}
+                      href={child.url}
                       className={listLinkClasses(
                         false,
                         true,

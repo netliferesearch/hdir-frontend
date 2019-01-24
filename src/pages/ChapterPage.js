@@ -13,7 +13,7 @@ const ChapterPage = () => (
     <div className="l-container l-mt-1">
       <ChapterHeading
         heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
-        subheading="KAPITTEL 2.2"
+        subheading="KAPITTEL 1"
         H="h1"
         line="none"
       />
@@ -33,32 +33,31 @@ const ChapterPage = () => (
             list={[
               {
                 title: 'KAPITTEL 1',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'KAPITTEL 2',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer',
+                // url: '#',
+                meta: 'Kost og fysisk aktivitet ved svangerskaps-diabetes',
                 active: true,
                 children: [
                   {
-                    title: 'Bla bla bla',
+                    title: 'Underkapittel',
                     url: '#',
-                    meta: '2.1'
+                    meta: '1.1'
                   },
                   {
-                    title: 'Lorum ipsum',
+                    title: 'Underkapittel',
                     url: '#',
-                    meta: '2.2',
-                    active: true
+                    meta: '1.2'
                   }
                 ]
               },
               {
+                title: 'KAPITTEL 2',
+                url: '#',
+                meta: 'Diagnostikk og tiltak'
+              },
+              {
                 title: 'KAPITTEL 3',
                 url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
+                meta: 'Nytt kapittel'
               }
             ]}
           />
@@ -80,20 +79,9 @@ const ChapterPage = () => (
               enim ad minim veniam, quis nostrud exercitation ullamco.
             </p>
           </Collapsible>
-          <div className="l-mt-2">
-            <hr className="b-hr b-hr--black b-hr--thick" />
-          </div>
-          <div className="l-mt-1">
-            <ChapterHeading
-              heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
-              subheading="kapittel 1"
-              line="none"
-              url="#a"
-            />
-          </div>
           <div className="l-mt-1">
             <Collapsible
-              heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
+              heading="Anbefaling 1"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
             >
@@ -120,7 +108,7 @@ const ChapterPage = () => (
           </div>
           <div className="l-mt-3">
             <Collapsible
-              heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
+              heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
             >
@@ -144,7 +132,7 @@ const ChapterPage = () => (
           </div>
           <div className="l-mt-3">
             <Collapsible
-              heading="Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning basert på kostanamnese ved behandling av svangerskapsdiabetes"
+              heading="Anbefaling 3"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
             >
@@ -193,7 +181,7 @@ const ChapterPage = () => (
                     dette arbeidet.
                   </p>
                   <Collapsible
-                    heading="Seksjon under: 2.2"
+                    heading="Seksjon under: 1.2"
                     size="small"
                     smallContent
                   >
@@ -209,6 +197,28 @@ const ChapterPage = () => (
                 </Collapsible>
               </div>
             </Collapsible>
+          </div>
+          <div className="l-mt-2">
+            <hr className="b-hr b-hr--black b-hr--thick" />
+          </div>
+          <div className="l-mt-1">
+            <ChapterHeading
+              heading="Underkapittel 1.1"
+              subheading="kapittel 1.1"
+              line="none"
+              url="#a"
+            />
+          </div>
+          <div className="l-mt-2">
+            <hr className="b-hr b-hr--black b-hr--thick" />
+          </div>
+          <div className="l-mt-1">
+            <ChapterHeading
+              heading="Underkapittel 1.2"
+              subheading="kapittel 1.2"
+              line="none"
+              url="#a"
+            />
           </div>
           <div className="l-mt-4">
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
