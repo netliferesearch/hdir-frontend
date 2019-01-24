@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './styles/App.scss';
@@ -51,7 +51,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <HashRouter>
+        <BrowserRouter>
           <div>
             <MainHeader
               name={this.props.name}
@@ -118,7 +118,7 @@ class App extends Component {
               </div>
             </Box>
           </div>
-        </HashRouter>
+        </BrowserRouter>
       </div>
     );
   }
