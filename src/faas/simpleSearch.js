@@ -38,7 +38,6 @@ const allNewsItems = [
 
 exports.handler = async (event, context) => {
   const searchQuery = event.queryStringParameters.searchQuery;
-  console.log(searchQuery);
 
   if (!searchQuery)
     return {
