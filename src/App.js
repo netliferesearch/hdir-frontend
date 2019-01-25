@@ -126,7 +126,7 @@ class App extends Component {
 
 App.propTypes = {
   name: PropTypes.string,
-  links: PropTypes.string
+  links: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default App;
