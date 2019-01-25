@@ -54,6 +54,17 @@ class Collapsible extends React.Component {
     });
   }
 
+  componentDidMount() {
+    if (
+      window.location.hash.slice(1, window.location.hash.length) ===
+      this.props.id
+    ) {
+      this.setState({
+        collapsed: true
+      });
+    }
+  }
+
   componentDidUpdate() {
     zenscroll.intoView(this.domNode, 300);
   }
@@ -72,7 +83,7 @@ class Collapsible extends React.Component {
             props.subtle
           )}
           aria-expanded={this.state.collapsed}
-          aria-controls="collapsible-0"
+          aria-controls={props.id}
           onClick={this.toggleCollapse}
         >
           <Heading
@@ -98,7 +109,7 @@ class Collapsible extends React.Component {
           <div className="b-collapsible__subheading-collapsible l-mt-1">
             <Collapsible
               heading={props.subheading}
-              subtle={props.subheadingContent}
+              subtle={Boolean(props.subheadingContent)}
               size="small"
               smallContent
             >
@@ -115,7 +126,7 @@ class Collapsible extends React.Component {
         )}
 
         <div
-          id="collapsible-0"
+          id={props.id}
           aria-hidden={!this.state.collapsed}
           hidden={!this.state.collapsed}
           className={contentClasses(props.smallContent)}
@@ -136,11 +147,13 @@ Collapsible.propTypes = {
   subtle: PropTypes.bool,
   noBorder: PropTypes.bool,
   alert: PropTypes.string,
-  code: PropTypes.string
+  code: PropTypes.string,
+  id: PropTypes.string
 };
 
 Collapsible.defaultProps = {
-  size: 'large'
+  size: 'large',
+  id: 'changeThis_everyIdShouldBeUnique'
 };
 
 export default Collapsible;

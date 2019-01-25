@@ -72,6 +72,7 @@ const ChapterPage = () => (
             heading="Om behandling av svangerskapsdiabetes"
             size="small"
             smallContent
+            id="someId1"
           >
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -84,6 +85,7 @@ const ChapterPage = () => (
               heading="Anbefaling 1"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
+              id="someId1.1"
             >
               <Alert status="success">
                 Vær oppmerksom på at dette atomet er på høring.
@@ -111,6 +113,7 @@ const ChapterPage = () => (
               heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
+              id="someId2"
             >
               <p>
                 Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
@@ -135,6 +138,7 @@ const ChapterPage = () => (
               heading="Anbefaling 3"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
+              id="someId2.2"
             >
               <p>
                 Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
@@ -172,6 +176,7 @@ const ChapterPage = () => (
                   heading="Seksjon under: 2"
                   subheading="SUBHEADING UTEN INNHOLD"
                   size="medium"
+                  id="someId3"
                 >
                   <p>
                     Kvinnen bør få kostveiledning og jevnlig oppfølging for å
