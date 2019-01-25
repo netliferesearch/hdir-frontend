@@ -62,7 +62,7 @@ const Link = props => (
 );
 
 Link.propTypes = {
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
   icon: PropTypes.string,
   arrow: PropTypes.bool,
   arrowLeft: PropTypes.bool,

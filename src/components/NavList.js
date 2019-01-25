@@ -127,7 +127,7 @@ NavList.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string,
-      url: PropTypes.string.isRequired,
+      url: PropTypes.string,
       active: PropTypes.bool,
       file: PropTypes.bool,
       infoText: PropTypes.string,
@@ -136,7 +136,7 @@ NavList.propTypes = {
         PropTypes.shape({
           title: PropTypes.string.isRequired,
           description: PropTypes.string,
-          url: PropTypes.string.isRequired,
+          url: PropTypes.string,
           active: PropTypes.bool
         })
       )
