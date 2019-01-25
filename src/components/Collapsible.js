@@ -66,7 +66,10 @@ class Collapsible extends React.Component {
   }
 
   componentDidUpdate() {
-    zenscroll.intoView(this.domNode, 300);
+    // Makes sure we don't scroll before the the collapse
+    setTimeout(() => {
+      zenscroll.intoView(this.domNode, 300);
+    }, 0);
   }
 
   render() {

@@ -138,7 +138,7 @@ const ChapterPage = () => (
               heading="Anbefaling 3"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
-              id="someId2.2"
+              id="someId3"
             >
               <p>
                 Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
