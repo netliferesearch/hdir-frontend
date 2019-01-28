@@ -7,12 +7,34 @@ import NavList from '../components/NavList';
 import RadioButtonGroup from '../components/RadioButtonGroup';
 import Card from '../components/Card';
 import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const GrantsPage = () => (
   <main>
     <div className="l-container">
       <div className="row">
         <div className="col-xs-12">
+          <Breadcrumbs
+            paths={[
+              {
+                name: 'Forsiden',
+                href: '#a'
+              },
+              {
+                name: 'Konferanse',
+                href: '#a'
+              },
+              {
+                name: 'Arbeid og psykisk helse',
+                href: '#a'
+              },
+              {
+                name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+              }
+            ]}
+          />
+        </div>
+        <div className="col-xs-12 l-mt-4">
           <h1>Tilskudd</h1>
         </div>
         <div className="col-xs-12 l-mt-3">
