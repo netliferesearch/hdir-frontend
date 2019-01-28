@@ -85,7 +85,7 @@ const ChapterPage = () => (
               heading="Anbefaling 1"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
-              id="someId1.1"
+              id="anbefaling1"
             >
               <Alert status="success">
                 Vær oppmerksom på at dette atomet er på høring.

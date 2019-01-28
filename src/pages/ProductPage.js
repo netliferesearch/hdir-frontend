@@ -38,7 +38,7 @@ const ProductPage = () => (
                   description: 'STERK ANBEFALING',
                   title:
                     'Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi',
-                  url: '/kapittel'
+                  url: '/kapittel#anbefaling1'
                 },
                 {
                   description: 'STERK ANBEFALING',
