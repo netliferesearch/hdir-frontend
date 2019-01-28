@@ -85,7 +85,7 @@ const ChapterPage = () => (
               heading="Anbefaling 1"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
-              id="anbefaling1"
+              id="someId1.1"
             >
               <Alert status="success">
                 Vær oppmerksom på at dette atomet er på høring.
@@ -113,7 +113,7 @@ const ChapterPage = () => (
               heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
               subheading="STERK ANBEFALING"
               subheadingContent="Dette er en beskrivelse av sterk anbefaling"
-              id="someId2"
+              id="anbefaling1"
             >
               <p>
                 Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
