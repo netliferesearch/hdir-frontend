@@ -8,7 +8,7 @@ const FrontPage = () => (
       <br />
       To see Helfo-styles: Storybook -> READ ME -> Styles
     </div>
-    <div className="l-container l-mt-5">
+    <div className="l-container l-mt-5 l-mb-5">
       <p>
         <a href="/storybook">Go to Storybook</a>
       </p>
@@ -95,11 +95,11 @@ const FrontPage = () => (
         <Link to="/transportside">Transportside</Link>
       </p>
       <p>
-        <Link to="/yrke-velger">Yrke velger</Link>
+        <Link to="/yrke-velger">Yrkesvelger</Link>
       </p>
-      {/*<Link to="/søkeresultat">
-          SERP
-        </Link>*/}
+      <p>
+        <Link to="/tilskudd">Tillskuddside</Link>
+      </p>
     </div>
   </div>
 );

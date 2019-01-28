@@ -13,7 +13,7 @@ const Card = props => (
   <div className="b-card">
     {props.children && <div className="b-card__feature">{props.children}</div>}
     <a href="#a" className={linkClasses(props.arrow)}>
-      <h3 className="b-card__heading">{props.heading}</h3>
+      {props.heading && <h3 className="b-card__heading">{props.heading}</h3>}
       {props.topic && <div className="b-card__topic">{props.topic}</div>}
       {props.text && <div className="b-card__text">{props.text}</div>}
     </a>
@@ -21,7 +21,7 @@ const Card = props => (
 );
 
 Card.propTypes = {
-  heading: PropTypes.string,
+  heading: PropTypes.string.isRequired,
   text: PropTypes.string,
   url: PropTypes.string,
   topic: PropTypes.string,

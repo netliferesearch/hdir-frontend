@@ -38,6 +38,7 @@ import FrontPageHelfo from './pages/FrontPageHelfo';
 import FrontPageHdir from './pages/FrontPageHdir';
 import HdirTema from './pages/HdirTema';
 import Box from './components/Box';
+import GrantsPage from './pages/GrantsPage';
 
 class App extends Component {
   componentDidMount() {
@@ -110,6 +111,7 @@ class App extends Component {
               />
               <Route path="/transportside" component={TransportPage} />
               <Route path="/nyhetsliste" component={NewsListPage} />
+              <Route path="/tilskudd" component={GrantsPage} />
               <Route component={NotFound} />
             </Switch>
             <Box noPadding square color="blueDark">

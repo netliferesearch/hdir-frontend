@@ -28,10 +28,17 @@
     padding: 1rem 3rem 1rem 1rem;
     box-shadow: none;
 
+    // Removes the margin, if there is only one child element
+    > * {
+      &:only-child {
+        margin-top: 0;
+      }
+    }
+
     &:hover {
-      .b-card__heading {
+      *:first-child {
         color: $link-color;
-        @include underline($link-color);
+        @include underline(transparent);
       }
     }
 
