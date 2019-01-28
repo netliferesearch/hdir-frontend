@@ -170,7 +170,7 @@ const SearchResultPage = () => (
               }
             ]}
           />
-          <div className="l-mt-4 l-mb-5 t-sm-center">
+          <div className="l-mt-3 l-mb-5 t-sm-center">
             <div className="row between-xs">
               <div className="col-xs t-sm-left">
                 <Link href="#" arrowLeft>
