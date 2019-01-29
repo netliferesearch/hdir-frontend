@@ -24,6 +24,7 @@ import LongShortHeading from '../components/LongShortHeading';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
+import TableExample from '../components/TableExample';
 import Questionnaire from '../components/Questionnaire';
 import ListHeading from '../components/ListHeading';
 import PressRelease from '../components/PressRelease';
@@ -628,3 +629,8 @@ storiesOf('Select', module)
       ])}
     />
   ));
+
+storiesOf('TableExample', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <TableExample />);

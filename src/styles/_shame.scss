@@ -431,3 +431,34 @@ small {
     top: calc(6vw + 5.5rem);
   }
 }
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  tr {
+    &:last-child {
+      td,
+      th {
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+  th,
+  td {
+    padding: 1rem;
+    border: 1px solid $black;
+    border-left: 0;
+    border-bottom: 0;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  th {
+    text-align: left;
+    font-weight: bold;
+    &[scope='row'] {
+      font-weight: normal;
+    }
+  }
+}
