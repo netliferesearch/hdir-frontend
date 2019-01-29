@@ -51,7 +51,7 @@ const LisFrontPage = () => (
           />
         </div>
       </div>
-      <div className="l-mt-5">
+      <div className="l-mt-3">
         <hr className="b-hr b-hr--black" />
         <NavList list={[{ title: 'LIS del 1', url: '#' }]} />
       </div>
