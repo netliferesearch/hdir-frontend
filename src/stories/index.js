@@ -216,6 +216,28 @@ storiesOf('Card', module)
         icon={text('Statistics: Icon', './icons/pie.svg')}
       />
     </Card>
+  ))
+  .addWithStaticMarkup('Horizontal', () => (
+    <Card
+      heading={text('Heading', 'This is a heading')}
+      text={text('Text', 'This is some text')}
+      url={text('URL', '#')}
+      arrow={select(
+        'Arrow',
+        { none: '', left: 'left', right: 'right' },
+        'right'
+      )}
+      horizontal={boolean('Horizontal', true)}
+      content={<p>This is some text</p>}
+    >
+      <Box color="blueDark" square>
+        <img
+          src={text('Statistics: Icon', './icons/pie.svg')}
+          alt=""
+          className="b-icon b-icon--large"
+        />
+      </Box>
+    </Card>
   ));
 
 storiesOf('CheckboxGroup', module)

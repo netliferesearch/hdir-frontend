@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Card from '../components/Card';
-import Statistics from '../components/Statistics';
-import Heading from '../components/Heading';
+import Box from '../components/Box';
+import FilterList from '../components/FilterList';
 import CheckboxGroup from '../components/CheckboxGroup';
 import RadioButtonGroup from '../components/RadioButtonGroup';
 import ListHeading from '../components/ListHeading';
@@ -17,17 +17,6 @@ const StatisticsPage = () => (
         {
           name: 'Forsiden',
           href: '#a'
-        },
-        {
-          name: 'Konferanse',
-          href: '#a'
-        },
-        {
-          name: 'Arbeid og psykisk helse',
-          href: '#a'
-        },
-        {
-          name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
         }
       ]}
     />
@@ -38,183 +27,175 @@ const StatisticsPage = () => (
           lead="Finn statistikk, rapporter og analyser. Hent rådata, lag dine egne rapporter."
         />
         <div className="l-mt-3">
-          <Heading h="h2" className="h5">
-            Nyeste statistikk
-          </Heading>
+          <h2>Utvalgt statistikk</h2>
         </div>
         <div className="row">
           <div className="col-xs-12 col-md-6 l-mt-2">
             <Card
-              heading="Pakkeforløp for brystkreft"
+              heading="Nasjonale styringsmål for spesialisthelsetjenesten"
               text="Kvalitetsindikator"
+              content={
+                <p>Aktuelle styringsindikatorer for spesialisthelsetjenesten</p>
+              }
               url="#a"
               arrow="right"
+              horizontal
             >
-              <Statistics
-                bigText="91,3%"
-                smallText="Andel pakkeforløp for brystkreft som er gjennomført innenfor makisemal anbefalt forløstid."
-                icon="../icons/pie.svg"
-              />
+              <Box color="blueDark" square>
+                <img
+                  src="./icons/pie.svg"
+                  alt=""
+                  className="b-icon b-icon--large"
+                />
+              </Box>
             </Card>
           </div>
           <div className="col-xs-12 col-md-6 l-mt-2">
             <Card
-              heading="Fastlegestatistikk"
-              text="Kvalitetsindikator"
+              heading="Ventetider og pasientrettigheter"
+              text="Norsk pasientregister"
+              content={
+                <p>
+                  Ventetider og fristbrudd for pasienter som har fått påbegynt
+                  helsehjelp.
+                </p>
+              }
               url="#a"
               arrow="right"
+              horizontal
             >
-              <Statistics
-                bigText="1106"
-                smallText="Antall på en gjennomsnittlig liste for fastleger."
-                icon="../icons/pie.svg"
-              />
+              <Box color="blueDark" square>
+                <img
+                  src="../icons/pie.svg"
+                  alt=""
+                  className="b-icon b-icon--large"
+                />
+              </Box>
+            </Card>
+          </div>
+          <div className="col-xs-12 col-md-6 l-mt-2">
+            <Card
+              heading="Nasjonale styringsmål for spesialisthelsetjenesten"
+              text="Kvalitetsindikator"
+              content={
+                <p>Aktuelle styringsindikatorer for spesialisthelsetjenesten</p>
+              }
+              url="#a"
+              arrow="right"
+              horizontal
+            >
+              <Box color="blueDark" square>
+                <img
+                  src="./icons/pie.svg"
+                  alt=""
+                  className="b-icon b-icon--large"
+                />
+              </Box>
+            </Card>
+          </div>
+          <div className="col-xs-12 col-md-6 l-mt-2">
+            <Card
+              heading="Ventetider og pasientrettigheter"
+              text="Norsk pasientregister"
+              content={
+                <p>
+                  Ventetider og fristbrudd for pasienter som har fått påbegynt
+                  helsehjelp.
+                </p>
+              }
+              url="#a"
+              arrow="right"
+              horizontal
+            >
+              <Box color="blueDark" square>
+                <img
+                  src="../icons/pie.svg"
+                  alt=""
+                  className="b-icon b-icon--large"
+                />
+              </Box>
             </Card>
           </div>
         </div>
       </div>
     </div>
-    <div className="col-xs-12 l-mt-4">
-      <h2>All statistikk</h2>
+    <div className="col-xs-12 l-mt-5">
+      <h2>Finn indikatorer</h2>
+    </div>
+    <div className="col-xs-12 l-mt-3">
+      <div className="l-mt-1">
+        <span className="t--small t--grey"> VELG TJENESTE </span>
+        <FilterList
+          list={['Begge', 'Primærhelsetjenesten', 'Spesialisthelsetjenesten']}
+        />
+      </div>
+      <div className="l-mt-2">
+        <span className="t--small">
+          <a href="#">NULLSTILL ALLE FILTRE</a>
+        </span>
+      </div>
     </div>
     <div className="row l-mt-4">
-      <aside className="col-md-3 col-xs-12 l-mb-4">
-        <h4>Filtrer statistikk</h4>
-        <hr className="b-hr b-hr--thick" />
-        <div className="l-mt-2">Velg tema</div>
-        <div className="l-mt-2">
-          <hr className="b-hr" />
-        </div>
-        <div className="l-mt-2">
-          <RadioButtonGroup
-            heading="VELG XX"
-            name="xx"
-            options={[
-              {
-                value: 'Primærhelsetjenesten',
-                label: 'Primærhelsetjenesten'
-              },
-              {
-                value: 'Spesialisthelsetjenesten',
-                label: 'Spesialisthelsetjenesten'
-              }
-            ]}
-          />
-        </div>
-        <div className="l-mt-2">
-          <hr className="b-hr" />
-        </div>
-        <div className="l-mt-2">
-          <CheckboxGroup
-            heading="VIS STATISTIKKTYPE"
-            name="statistikktype"
-            options={[
-              {
-                value: 'Kommunalt pasient- og brukerregister',
-                label: 'Kommunalt pasient- og brukerregister'
-              },
-              {
-                value: 'Kvalitetsindikator',
-                label: 'Kvalitetsindikator'
-              },
-              {
-                value: 'Norsk pasientregister',
-                label: 'Norsk pasientregister'
-              },
-              {
-                value: 'Rapporter og analyser',
-                label: 'Rapporter og analyser'
-              },
-              {
-                value: 'Samdata',
-                label: 'Samdata'
-              },
-              {
-                value: 'Styringsdata',
-                label: 'Styringsdata'
-              }
-            ]}
-          />
-        </div>
-        <div className="l-mt-2">
-          <hr className="b-hr" />
-        </div>
-        <div className="l-mt-2">
-          <small>
-            <a href="#a">Nullstill alle filtre</a>
-          </small>
-        </div>
-      </aside>
-      <div className="col-md-8 col-xs-12 col-md-offset-1">
-        <ListHeading
-          heading="135 statistikksider"
-          selectLabel="SORTÉR"
-          selectOptions={[
-            'Sist publisert',
-            'Først publisert',
-            'Alfabetisk rekkefølge'
-          ]}
-        />
+      <div className="col-xs-12">
+        <strong>250 STATISTIKKSIDER</strong> som passer dine valfte filtre
         <div className="l-mt-3">
           <NavList
+            heading="A"
+            columns
             list={[
               {
-                title: 'KAPITTEL 1',
+                title: 'Antibiotika',
                 url: '#',
                 meta: 'Nasjonale faglige retningslinjer'
               },
               {
-                title: 'KAPITTEL 3',
+                title: 'ADHD',
                 url: '#',
                 meta: 'Nasjonale faglige retningslinjer'
               },
               {
-                title: 'KAPITTEL 1',
+                title:
+                  'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
+                url: '#',
+                meta: 'Veileder'
+              },
+              {
+                title: 'Fileksempel',
+                url: '#',
+                meta: 'En PDF',
+                infoText: 'PDF (3,5 MB)',
+                file: true
+              },
+              {
+                title: 'ADHD',
                 url: '#',
                 meta: 'Nasjonale faglige retningslinjer'
               },
               {
-                title: 'KAPITTEL 3',
+                title: 'Antibiotika',
                 url: '#',
                 meta: 'Nasjonale faglige retningslinjer'
               },
               {
-                title: 'KAPITTEL 1',
+                title: 'ADHD',
+                url: '#',
+                meta: 'Nasjonale faglige retningslinjer'
+              }
+            ]}
+          />
+        </div>
+        <div className="l-mt-3">
+          <NavList
+            heading="B"
+            columns
+            list={[
+              {
+                title: 'Antibiotika',
                 url: '#',
                 meta: 'Nasjonale faglige retningslinjer'
               },
               {
-                title: 'KAPITTEL 3',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'KAPITTEL 1',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'KAPITTEL 3',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'KAPITTEL 1',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'KAPITTEL 3',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'KAPITTEL 1',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'KAPITTEL 3',
+                title: 'ADHD',
                 url: '#',
                 meta: 'Nasjonale faglige retningslinjer'
               }

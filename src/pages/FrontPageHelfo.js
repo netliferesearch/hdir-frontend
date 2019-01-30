@@ -30,7 +30,11 @@ const FrontPageHelfo = () => (
       <div className="row middle-xs l-mt-5">
         <div className="col-xs-12 col-md-8">
           <h2>
-            <img src="./icons/scale.svg" className="b-icon" alt="" />
+            <img
+              src="./icons/scale.svg"
+              className="b-icon b-icon--heading"
+              alt=""
+            />
             Bruk riktig takst og regelverk
           </h2>
         </div>
@@ -78,7 +82,11 @@ const FrontPageHelfo = () => (
       <div className="row middle-xs l-mt-5">
         <div className="col-xs-12 col-md-8">
           <h2>
-            <img src="./icons/firstaid.svg" className="b-icon" alt="" />
+            <img
+              src="./icons/firstaid.svg"
+              className="b-icon b-icon--heading"
+              alt=""
+            />
             Inngå eller endre en avtale
           </h2>
         </div>
@@ -112,7 +120,11 @@ const FrontPageHelfo = () => (
       <div className="row middle-xs l-mt-5">
         <div className="col-xs-12 col-md-8">
           <h2>
-            <img src="./icons/money_bag.svg" className="b-icon" alt="" />
+            <img
+              src="./icons/money_bag.svg"
+              className="b-icon b-icon--heading"
+              alt=""
+            />
             Få refusjon og oppgjør
           </h2>
         </div>
@@ -147,7 +159,11 @@ const FrontPageHelfo = () => (
       <div className="row middle-xs l-mt-5">
         <div className="col-xs-12 col-md-8">
           <h2>
-            <img src="./icons/people.svg" className="b-icon" alt="" />
+            <img
+              src="./icons/people.svg"
+              className="b-icon b-icon--heading"
+              alt=""
+            />
             På vegne av pasienten
           </h2>
         </div>

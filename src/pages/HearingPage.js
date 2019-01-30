@@ -13,8 +13,8 @@ const HearingPage = () => (
         heading="Arbeid og psykisk helse"
         lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
       />
-      <p className="t--grey t-small">05. desember 2018 - 06 desember 2018</p>
-      <p className="t--grey t-small">
+      <p className="t--grey t--small">05. desember 2018 - 06 desember 2018</p>
+      <p className="t--grey t--small">
         <strong>Sted:</strong> Helsedirektoratets lokaler i Vitaminveien 4 på
         Storo i Oslo
       </p>
