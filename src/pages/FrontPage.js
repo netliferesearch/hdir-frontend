@@ -47,6 +47,9 @@ const FrontPage = () => (
         <Link to="/høringer">Høringer</Link>
       </p>
       <p>
+        <Link to="/ledig-stilling">Ledig stilling</Link>
+      </p>
+      <p>
         <Link to="/normerende-innhold">Normerende</Link>
       </p>
       <p>

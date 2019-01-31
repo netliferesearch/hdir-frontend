@@ -36,6 +36,7 @@ import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import FrontPageHelfo from './pages/FrontPageHelfo';
 import FrontPageHdir from './pages/FrontPageHdir';
+import JobPostingPage from './pages/JobPostingPage';
 import HdirTema from './pages/HdirTema';
 import Box from './components/Box';
 import GrantsPage from './pages/GrantsPage';
@@ -53,7 +54,7 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <div>
+          <>
             <MainHeader
               name={this.props.name}
               links={this.props.links}
@@ -112,6 +113,7 @@ class App extends Component {
               <Route path="/transportside" component={TransportPage} />
               <Route path="/nyhetsliste" component={NewsListPage} />
               <Route path="/tilskudd" component={GrantsPage} />
+              <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route component={NotFound} />
             </Switch>
             <Box noPadding square color="blueDark">
@@ -119,7 +121,7 @@ class App extends Component {
                 <Footer />
               </div>
             </Box>
-          </div>
+          </>
         </BrowserRouter>
       </div>
     );

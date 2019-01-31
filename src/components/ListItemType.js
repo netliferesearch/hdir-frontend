@@ -17,7 +17,9 @@ const ListItemType = props => {
           {fields.publishDate && (
             <div className="b-list-item-type__date">{fields.publishDate}</div>
           )}
-          {fields.lead && <p>{fields.lead}</p>}
+          {fields.lead && (
+            <p className="b-list-item-type__lead">{fields.lead}</p>
+          )}
           {fields.topic && (
             <div className="b-list-item-type__topic">{fields.topic}</div>
           )}
@@ -37,10 +39,12 @@ const ListItemType = props => {
           ) : (
             <p className="b-list-item-type__date">{fields.dateTo}</p>
           )}
-
+          {fields.lead && (
+            <p className="b-list-item-type__lead">{fields.lead}</p>
+          )}
           {fields.registrationDeadline && (
             <p className="b-list-item-type__deadline">
-              <strong>Påmeldingsfrist: </strong>
+              <strong>Frist: </strong>
               {fields.registrationDeadline}
             </p>
           )}

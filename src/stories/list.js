@@ -110,6 +110,7 @@ storiesOf('List', module)
             dateTo: '06.12.2018',
             location: 'Clarion The Edge, Tromsø',
             registrationDeadline: '15. oktober',
+            lead: 'This is some text describing the event. It is nice to have.',
             topic: ''
           }
         }

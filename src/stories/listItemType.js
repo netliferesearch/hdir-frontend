@@ -36,7 +36,8 @@ storiesOf('ListItemType', module)
           dateFrom: '02.11.1990',
           dateTo: '03.11.1990',
           registrationDeadline: '03.02.1990',
-          address: 'Dronninggata 28, 3004 Drammen'
+          address: 'Dronninggata 28, 3004 Drammen',
+          lead: 'We can write some stuff in here too'
         })
       }}
     />
