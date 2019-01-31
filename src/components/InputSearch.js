@@ -61,9 +61,7 @@ const placeholderSuggestions = [
   'F41.9',
   'P74',
   'Søk på navn',
-  'Lars Erik Pedersen',
-  'Leni the Ninja',
-  'Ole i Dole'
+  'Lars Erik Pedersen'
 ];
 
 class InputSearch extends React.Component {
