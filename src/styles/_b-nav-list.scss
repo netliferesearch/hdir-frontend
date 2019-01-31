@@ -65,7 +65,7 @@
 
   &__item-info {
     font-size: $meta-text;
-    padding-left: 1rem;
+    padding-right: 1.5rem;
     flex-shrink: 0;
     @include mq($until: $tablet) {
       width: calc(100% - 2em);
@@ -108,33 +108,19 @@
     display: flex;
     justify-content: space-between;
     text-align: left;
+    position: relative;
     cursor: pointer;
 
     @include mq($until: $tablet) {
-      display: block;
-      position: relative;
+      flex-direction: column;
     }
-
     @include link-init($black);
     padding: 1em;
-    height: calc(100% - 2em);
 
     &:hover {
       &[href] {
         color: $link-color;
         background: rgba(0, 0, 0, 0.05);
-      }
-    }
-
-    &:after {
-      content: '→';
-      margin-left: 1rem;
-      color: $link-color;
-
-      @include mq($until: $tablet) {
-        position: absolute;
-        top: 1em;
-        right: 1em;
       }
     }
 
@@ -158,6 +144,19 @@
       }
     }
 
+    &--arrow {
+      &:after {
+        content: '→';
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+    }
+
+    &--no-pointer {
+      cursor: default;
+    }
+
     &--anchor {
       justify-content: flex-start;
 
@@ -171,6 +170,16 @@
       &:after {
         // We use this as a reset, to remove the other arrow
         content: '';
+      }
+
+      @include mq($until: $tablet) {
+        margin-left: 1rem;
+        position: relative;
+        &:before {
+          position: absolute;
+          top: 1rem;
+          left: -0.5rem;
+        }
       }
     }
   }

@@ -121,7 +121,7 @@ const ListItemType = props => {
       )}
 
       {type === 'person' && (
-        <div className="b-list-item-type">
+        <div className="b-list-item-type b-list-item-type--no-arrow">
           {fields.name && <strong>{fields.name}</strong>}
           <br />
           {fields.category && (

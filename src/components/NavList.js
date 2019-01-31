@@ -29,10 +29,19 @@ const listItemsClasses = columns =>
     'b-nav-list__items--columns': columns
   });
 
-const listLinkClasses = (anchor, noArrow, active, activeChild, ordered, file) =>
+const listLinkClasses = (
+  anchor,
+  noArrow,
+  active,
+  activeChild,
+  ordered,
+  file,
+  url
+) =>
   classNames({
     'b-nav-list__link': true,
     'b-nav-list__link--anchor': anchor,
+    'b-nav-list__link--arrow': url,
     'b-nav-list__link--no-arrow': noArrow || file,
     'b-nav-list__link--active': active,
     'b-nav-list__link--active-child': activeChild,
@@ -61,7 +70,8 @@ const NavList = props => {
                 item.active,
                 item.activeChild,
                 props.ordered,
-                item.file
+                item.file,
+                item.url
               )}
             >
               {item.description && (

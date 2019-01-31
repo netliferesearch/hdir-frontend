@@ -1,5 +1,20 @@
 .b-list-item-type {
-  width: 100%;
+  position: relative;
+  width: calc(100% - 1.5rem);
+
+  &:after {
+    content: '→';
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    color: $link-color;
+  }
+
+  &--no-arrow {
+    &:after {
+      display: none;
+    }
+  }
 
   &__email {
     unicode-bidi: bidi-override;

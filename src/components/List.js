@@ -16,12 +16,6 @@ const listItemsClasses = columns =>
     'b-nav-list__items--columns': columns
   });
 
-const listLinkClasses = url =>
-  classNames({
-    'b-nav-list__link': true,
-    'b-nav-list__link--no-arrow': !url
-  });
-
 const List = props => {
   return (
     <nav className="b-nav-list" id={props.id}>
@@ -35,11 +29,11 @@ const List = props => {
             key={shortid.generate()}
           >
             {item.url ? (
-              <a href={item.url} className={listLinkClasses(item.url)}>
+              <a href={item.url} className="b-nav-list__link">
                 <ListItemType itemType={item} />
               </a>
             ) : (
-              <div className={listLinkClasses(item.url)}>
+              <div className="b-nav-list__link b-nav-list__link--no-pointer">
                 <ListItemType itemType={item} />
               </div>
             )}
