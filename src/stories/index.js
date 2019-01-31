@@ -24,6 +24,7 @@ import LongShortHeading from '../components/LongShortHeading';
 import PageMeta from '../components/PageMeta';
 import Select from '../components/Select';
 import Link from '../components/Link';
+import MultiSelector from '../components/MultiSelector';
 import TableExample from '../components/TableExample';
 import Questionnaire from '../components/Questionnaire';
 import ListHeading from '../components/ListHeading';
@@ -475,6 +476,11 @@ storiesOf('LongShortHeading', module)
       icon={text('Icon path', 'https://placehold.it/64x64')}
     />
   ));
+
+storiesOf('MultiSelector', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => <MultiSelector />);
 
 import './navList';
 import './pages';
