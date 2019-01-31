@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 import './styles/App.scss';
 
+import ScrollToTop from './components/ScrollToTop';
+
 import FrontPage from './pages/FrontPage';
 import SearchResultPage from './pages/SearchResultPage';
 import SimpleSerp from './pages/SimpleSerp';
@@ -54,7 +56,7 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <>
+          <ScrollToTop>
             <MainHeader
               name={this.props.name}
               links={this.props.links}
@@ -121,7 +123,7 @@ class App extends Component {
                 <Footer />
               </div>
             </Box>
-          </>
+          </ScrollToTop>
         </BrowserRouter>
       </div>
     );
