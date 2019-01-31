@@ -59,6 +59,10 @@
     &--dark {
       box-shadow: none;
       background-color: white;
+      color: $black;
+      &:after {
+        background-image: url('../static/icons/search.svg');
+      }
     }
   }
 }
