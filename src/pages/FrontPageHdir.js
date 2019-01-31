@@ -40,43 +40,43 @@ const FrontPageHdir = () => (
               {
                 href: '#a',
                 text: 'Sykdom, tilstand og behandling',
-                image: 'http://placehold.it/64x64',
+                image: 'http://placehold.it/128x128',
                 imageAlt: 'image alt text'
               },
               {
                 href: '#a',
                 text: 'Autorisasjon og spesialistutdanning',
-                image: 'http://placehold.it/64x64',
+                image: 'http://placehold.it/128x128',
                 imageAlt: 'image alt text'
               },
               {
                 href: '#a',
                 text: 'Psykisk helse',
-                image: 'http://placehold.it/64x64',
+                image: 'http://placehold.it/128x128',
                 imageAlt: 'image alt text'
               },
               {
                 href: '#a',
                 text: 'Tilskudd og finansiering',
-                image: 'http://placehold.it/64x64',
+                image: './icons/Tilskudd.svg',
                 imageAlt: 'image alt text'
               },
               {
                 href: '#a',
                 text: 'Folkehelse, ernæring og fysisk aktivitet',
-                image: 'http://placehold.it/64x64',
+                image: 'http://placehold.it/128x128',
                 imageAlt: 'image alt text'
               },
               {
                 href: '#a',
                 text: 'Statistikk, registre og rapporter',
-                image: 'http://placehold.it/64x64',
+                image: './icons/Statistikk.svg',
                 imageAlt: 'image alt text'
               },
               {
                 href: '#a',
                 text: 'Lover og forskrifter',
-                image: 'http://placehold.it/64x64',
+                image: './icons/Rundskriv_Veileder_til_lov.svg',
                 imageAlt: 'image alt text'
               }
             ]}
