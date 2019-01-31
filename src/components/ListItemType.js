@@ -12,7 +12,7 @@ const ListItemType = props => {
         <div className="b-list-item-type">
           {fields.heading && <h2 className="h3">{fields.heading}</h2>}
           {fields.category && (
-            <div className="b-list-item-type__category">{fields.category}</div>
+            <p className="b-list-item-type__category">{fields.category}</p>
           )}
           {fields.publishDate && (
             <div className="b-list-item-type__date">{fields.publishDate}</div>
