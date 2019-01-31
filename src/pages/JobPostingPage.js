@@ -31,7 +31,7 @@ const JobPostingPage = () => (
             />
           </div>
         </aside>
-        <section className="col-md-8 col-xs-12 col-md-offset-1">
+        <section className="col-md-8 col-xs-12 col-md-offset-1 l-mb-5">
           <ListHeading heading="Ledige stillinger" />
           <List
             list={[
@@ -74,20 +74,6 @@ const JobPostingPage = () => (
               }
             ]}
           />
-          <div className="l-mt-3 l-mb-5 t-sm-center">
-            <div className="row between-xs">
-              <div className="col-xs t-sm-left">
-                <Link href="#" arrowLeft>
-                  Forrige side
-                </Link>
-              </div>
-              <div className="col-xs t-sm-right">
-                <Link href="#" arrow>
-                  Neste side
-                </Link>
-              </div>
-            </div>
-          </div>
         </section>
       </div>
     </div>
