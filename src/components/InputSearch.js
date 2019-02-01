@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
 
+const searchPageUrl = process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
+  ? process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
+  : '/søkeresultat';
+const searchSuggestionUrl = process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
+  ? process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
+  : '/.netlify/functions/simpleSearch';
+
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
@@ -45,7 +52,7 @@ const renderInputComponent = inputProps => (
 
 const triggerSearch = query => {
   // eslint-disable-next-line
-  window.location = `/søkeresultat?searchquery=${query}`;
+  window.location = `${searchPageUrl}?searchquery=${query}`;
 };
 
 const placeholderSuggestions = [
@@ -113,7 +120,7 @@ class InputSearch extends React.Component {
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
-    fetch(`/.netlify/functions/simpleSearch?searchQuery=${value}`)
+    fetch(`${searchSuggestionUrl}?searchQuery=${value}`)
       .then(res => res.json())
       .then(data => {
         this.setState({

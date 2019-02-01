@@ -13,7 +13,7 @@ const FrontPageHdir = () => (
             <p>
               <strong>Hva leter du etter?</strong>
             </p>
-            <InputSearch id="xx" showSuggestions={false} />
+            <InputSearch id="xx" />
           </div>
         </div>
       </div>
