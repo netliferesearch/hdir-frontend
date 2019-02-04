@@ -159,25 +159,20 @@ const ArticlePage = () => (
               ]}
             />
           </div>
-
           <div className="l-mt-4">
-            <Link href="#a" small icon="../icons/method.svg">
-              Om metode og prosess
-            </Link>
-            <br />
+            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+          </div>
+
+          <div className="l-mt-1">
             <Link href="#a" small icon="../icons/print.svg">
               Skriv ut hele retningslinjen
             </Link>
           </div>
-
-          <div className="l-mt-4">
-            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
-          </div>
         </article>
       </div>
     </div>
-    <div className="l-mt-4">
-      <Box color="green" square noPadding>
+    <div className="l-mt-5">
+      <Box color="grey" square noPadding>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />

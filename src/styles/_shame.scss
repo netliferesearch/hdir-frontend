@@ -132,6 +132,9 @@
   &--thick {
     border-width: 7px;
   }
+  &--link-color {
+    border-color: $link-color;
+  }
 }
 
 // The CSS meant for the content from the rich text in Enonic

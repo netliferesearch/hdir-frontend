@@ -15,13 +15,15 @@ const headingClasses = (line, url) =>
 const bigHeader = h =>
   classNames({
     h1: h === 'h1',
-    h2: h === 'h2'
+    h2: h === 'h2',
+    h3: h === 'h3'
   });
 
 const smallHeader = h =>
   classNames({
     h3: h === 'h1',
-    h4: h === 'h2'
+    h4: h === 'h2',
+    h5: h === 'h3'
   });
 
 // Is H2 as wrapper an OK assumption?
@@ -58,7 +60,7 @@ ChapterHeading.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   line: PropTypes.oneOf(['top', 'bottom', 'none']).isRequired,
-  h: PropTypes.oneOf(['h1', 'h2']).isRequired,
+  h: PropTypes.oneOf(['h1', 'h2', 'h3']).isRequired,
   url: PropTypes.string
 };
 

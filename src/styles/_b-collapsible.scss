@@ -39,6 +39,10 @@
     padding: 0;
     font-size: 1em;
 
+    &:hover {
+      color: $link-color;
+    }
+
     &:before {
       display: block;
       position: absolute;

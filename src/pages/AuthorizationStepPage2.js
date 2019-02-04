@@ -96,7 +96,7 @@ const AuthorizationStepPage2 = () => (
       </div>
     </div>
     <div className="l-mt-4">
-      <Box color="green" square noPadding>
+      <Box color="grey" square noPadding>
         <div className="l-container">
           <div className="row">
             <div className="col-xs-12">

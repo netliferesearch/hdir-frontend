@@ -62,7 +62,7 @@ const ChapterPage = () => (
             ]}
           />
           <div className="l-mt-4">
-            <Link button arrow>
+            <Link wideButton arrow color="purple">
               Henvis pasienten til helsenorge.no for mer informasjon
             </Link>
           </div>
@@ -266,7 +266,7 @@ const ChapterPage = () => (
     </div>
 
     <div className="l-mt-4">
-      <Box color="green" square noPadding>
+      <Box color="grey" square noPadding>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />

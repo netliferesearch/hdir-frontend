@@ -233,7 +233,7 @@ const LisLearning = () => (
     </div>
 
     <div className="l-mt-4">
-      <Box color="green" square noPadding>
+      <Box color="grey" square noPadding>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
