@@ -3,10 +3,11 @@ import React from 'react';
 import NavList from '../components/NavList';
 import FilterList from '../components/FilterList';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Box from '../components/Box';
 
 const NormativeContentPage = () => (
   <div>
-    <div className="l-container">
+    <div className="l-container l-mt-3">
       <Breadcrumbs
         paths={[
           {
@@ -27,7 +28,7 @@ const NormativeContentPage = () => (
         ]}
       />
 
-      <div className="l-mt-2">
+      <div className="l-mt-4">
         <h1>Normerende innhold</h1>
       </div>
       <div className="l-mt-3">

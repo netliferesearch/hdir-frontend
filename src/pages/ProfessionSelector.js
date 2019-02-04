@@ -11,7 +11,7 @@ const ProfessionSelector = () => (
   <div>
     <div className="l-container">
       <div className="row middle-xs">
-        <div className="col-xs-12 col-md-6  l-mt-1">
+        <div className="col-xs-12 col-md-6">
           <Breadcrumbs
             paths={[
               {

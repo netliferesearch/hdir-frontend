@@ -104,9 +104,14 @@ class MainHeader extends React.Component {
                 {!this.props.hideSearch && (
                   <button
                     onClick={this.toggleSearch}
-                    className="b-button b-button__button b-button__button--small"
+                    className="b-button b-button__button b-button__button--secondary b-button__button--small"
                   >
-                    {this.state.searchButtonText}
+                    {this.state.searchButtonText}{' '}
+                    <img
+                      src="./icons/search.svg"
+                      alt=""
+                      className="b-icon b-icon--small"
+                    />
                   </button>
                 )}
               </nav>

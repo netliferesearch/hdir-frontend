@@ -5,6 +5,11 @@
     height: 1em;
     width: auto;
   }
+  &--small {
+    height: 1em;
+    width: auto;
+    margin-bottom: -0.05em;
+  }
   &--large {
     max-width: 3rem;
     width: 100%;

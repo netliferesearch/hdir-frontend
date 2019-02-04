@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: calc(3vw + 1rem) 0;
+  padding: calc(0.5vw + 1rem) 0;
+  border-bottom: 1px solid $grey-light;
+  margin-bottom: calc(0.5vw + 1.75rem);
 
   &__logo {
     height: 2rem;

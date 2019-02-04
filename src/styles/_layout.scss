@@ -18,9 +18,9 @@ body {
 // We take 10% of the viewport (window size) width and divide it.
 $space-map: (
   xs: calc(10vw / 10),
-  sm: calc(10vw / 6),
-  md: calc(10vw / 4),
-  lg: calc(10vw / 2),
+  sm: calc(10vw / 3.5),
+  md: calc(10vw / 2.225),
+  lg: calc(10vw / 1.5),
   xl: calc(10vw / 1)
 );
 $space-directions: (
