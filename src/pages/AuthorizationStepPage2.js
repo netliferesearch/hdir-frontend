@@ -27,7 +27,7 @@ const AuthorizationStepPage2 = () => (
         ]}
       />
       <div className="row">
-        <div className="l-mt-2 col-xs-12">
+        <div className="l-mt-3 col-xs-12">
           <h1>Autorisasjoner og lisens</h1>
           <hr className="b-hr b-hr--thick" />
         </div>

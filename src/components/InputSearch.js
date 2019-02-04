@@ -37,16 +37,11 @@ const renderInputComponent = inputProps => (
       })}
     />
     <button
-      className={classNames({
-        'b-input-search__button': true,
-        'b-input-search__button--dark': inputProps.dark
-      })}
+      className="b-input-search__button"
       onClick={() => {
         triggerSearch(inputProps.value);
       }}
-    >
-      Søk
-    </button>
+    />
   </div>
 );
 

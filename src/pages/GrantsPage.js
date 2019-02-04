@@ -34,10 +34,10 @@ const GrantsPage = () => (
             ]}
           />
         </div>
-        <div className="col-xs-12 l-mt-4">
+        <div className="col-xs-12 l-mt-3">
           <h1>Tilskudd</h1>
         </div>
-        <div className="col-xs-12 l-mt-3">
+        <div className="col-xs-12 l-mt-2">
           <Card text="Søknadsfrist: 15.05.2019" arrow="right">
             <Box square color="yellow">
               <div className="h2 h2--light">
@@ -52,12 +52,12 @@ const GrantsPage = () => (
     </div>
     <div className="l-container l-mt-4">
       <div className="row">
-        <aside className="col-md-3 col-xs-12 l-mb-4">
+        <aside className="col-md-3 col-xs-12 l-mb-3 l-mt-1">
           <h4>Filtrér tilskudd</h4>
-          <div className="l-mt-2">
-            <hr className="b-hr b-hr--thick" />
+          <div className="l-mt-1">
+            <hr className="b-hr" />
           </div>
-          <div className="l-mt-2">
+          <div className="l-mt-1">
             <RadioButtonGroup
               heading="Velg søkergruppe"
               name="sokergruppe"
@@ -82,7 +82,7 @@ const GrantsPage = () => (
             />
           </div>
         </aside>
-        <div className="col-md-8 col-md-offset-1">
+        <div className="col-xs-12 col-md-8 col-md-offset-1">
           <ListHeading heading="250 tilskudd" />
           <List
             list={[

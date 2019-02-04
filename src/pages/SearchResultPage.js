@@ -9,12 +9,12 @@ import CheckboxGroup from '../components/CheckboxGroup';
 const SearchResultPage = () => (
   <main>
     <div className="l-container">
-      <div className="row l-mt-4">
-        <div className="col-md-8 col-md-offset-4">
+      <div className="row l-mt-3">
+        <div className="col-xs-12 col-md-8 col-md-offset-4">
           <InputSearch id="x" />
         </div>
       </div>
-      <div className="row l-mt-5">
+      <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4" id="searchQueries">
           <h4>Filtrér søk</h4>
           <div className="l-mt-2">

@@ -28,7 +28,7 @@ const NormativeContentPage = () => (
         ]}
       />
 
-      <div className="l-mt-4">
+      <div className="l-mt-3">
         <h1>Normerende innhold</h1>
       </div>
       <div className="l-mt-3">

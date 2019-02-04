@@ -10,7 +10,7 @@ import Alert from '../components/Alert';
 const LisFrontPage = () => (
   <div>
     <div className="l-container">
-      <div className="l-mt-2">
+      <div className="l-mt-3">
         <ArticleIntro
           heading="Spesialistutdanning for leger"
           lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."

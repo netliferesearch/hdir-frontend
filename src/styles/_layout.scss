@@ -61,6 +61,14 @@ $space-directions: (
   }
 }
 
+.l-inline-space {
+  margin-left: 1em;
+
+  &--right {
+    margin-right: 1em;
+  }
+}
+
 .l {
   // Makes columns ignore the gutters
   &-bleed-right {

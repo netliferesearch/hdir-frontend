@@ -3,15 +3,12 @@ import React from 'react';
 import Card from '../components/Card';
 import Box from '../components/Box';
 import FilterList from '../components/FilterList';
-import CheckboxGroup from '../components/CheckboxGroup';
-import RadioButtonGroup from '../components/RadioButtonGroup';
-import ListHeading from '../components/ListHeading';
 import ArticleIntro from '../components/ArticleIntro';
 import NavList from '../components/NavList';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const StatisticsPage = () => (
-  <div className="l-container l-mb-5">
+  <div className="l-container">
     <Breadcrumbs
       paths={[
         {
@@ -20,13 +17,13 @@ const StatisticsPage = () => (
         }
       ]}
     />
-    <div className="row">
-      <div className="col-xs-12 l-mt-4">
+    <div className="row l-mt-3">
+      <div className="col-xs-12">
         <ArticleIntro
           heading="Statistikk"
           lead="Finn statistikk, rapporter og analyser. Hent rådata, lag dine egne rapporter."
         />
-        <div className="l-mt-3">
+        <div className="l-mt-2">
           <h2>Utvalgt statistikk</h2>
         </div>
         <div className="row">
@@ -119,12 +116,12 @@ const StatisticsPage = () => (
         </div>
       </div>
     </div>
-    <div className="col-xs-12 l-mt-5">
+    <div className="col-xs-12 l-mt-4">
       <h2>Finn indikatorer</h2>
     </div>
-    <div className="col-xs-12 l-mt-3">
+    <div className="col-xs-12 l-mt-2">
       <div className="l-mt-1">
-        <span className="t--small t--grey"> VELG TJENESTE </span>
+        <strong className="t--small t--grey"> VELG TJENESTE </strong>
         <FilterList
           list={['Begge', 'Primærhelsetjenesten', 'Spesialisthelsetjenesten']}
         />
@@ -135,10 +132,10 @@ const StatisticsPage = () => (
         </span>
       </div>
     </div>
-    <div className="row l-mt-4">
+    <div className="row l-mt-3 l-mb-5">
       <div className="col-xs-12">
         <strong>250 STATISTIKKSIDER</strong> som passer dine valfte filtre
-        <div className="l-mt-3">
+        <div className="l-mt-2">
           <NavList
             heading="A"
             columns

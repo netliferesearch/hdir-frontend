@@ -30,13 +30,13 @@ const ChapterPageReport = () => (
         ]}
       />
     </div>
-    <div className="l-mt-2 b-bleed">
+    <div className="l-mt-3">
       <div className="l-container">
         <h1>Ventetid</h1>
       </div>
     </div>
     <div className="l-container">
-      <div className="row l-mt-4">
+      <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <NavList
             anchor

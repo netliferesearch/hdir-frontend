@@ -8,7 +8,7 @@ import CheckboxGroup from '../components/CheckboxGroup';
 const JobPostingPage = () => (
   <main>
     <div className="l-container">
-      <div className="row l-mt-4">
+      <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <h4>Filtrér søk</h4>
           <div className="l-mt-2">

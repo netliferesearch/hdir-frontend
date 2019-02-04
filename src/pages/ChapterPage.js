@@ -10,7 +10,7 @@ import Link from '../components/Link';
 
 const ChapterPage = () => (
   <div>
-    <div className="l-container l-mt-1">
+    <div className="l-container l-mt-3">
       <ChapterHeading
         heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
         subheading="KAPITTEL 1"

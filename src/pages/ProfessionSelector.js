@@ -51,13 +51,13 @@ const ProfessionSelector = () => (
         </div>
       </div>
 
-      <div className="l-mt-2">
+      <div className="l-mt-3">
         <ArticleIntro
           heading="Refusjon og oppgjør"
           lead="Etter at du som lege har sendt inn eit refusjonskrav til Helfo, og dette er behandla, vil du få eit utbetalingsvedtak. Vedtaket gir opplysningar om kva du har fått utbetalt i refusjon fra Helfo, og kva konto pengane har gått inn på."
         />
       </div>
-      <div className="row l-mt-4">
+      <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-bleed-right l-mb-4">
           <NavList
             anchor
@@ -120,7 +120,7 @@ const ProfessionSelector = () => (
             <div className="l-mt-1">
               <hr className="b-hr b-hr--thick" />
             </div>
-            <div className="l-mt-1">
+            <div className="l-mt-1 l-mb-5">
               <NavList
                 columns
                 list={[
@@ -212,19 +212,17 @@ const ProfessionSelector = () => (
         </div>
       </div>
     </div>
-    <div className="l-mt-4">
-      <Box color="green" square noPadding>
-        <div className="l-container">
-          <strong>Kontakt:</strong>
-          <br />
-          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-          <br />
-          <a href="#a">navn.etternavn@helsedir.no</a>
-          <br />
-          <a href="#a">999 99 999</a>
-        </div>
-      </Box>
-    </div>
+    <Box color="green" square noPadding>
+      <div className="l-container">
+        <strong>Kontakt:</strong>
+        <br />
+        <a href="#a">spesialisthelsetjenester@helsedir.no</a>
+        <br />
+        <a href="#a">navn.etternavn@helsedir.no</a>
+        <br />
+        <a href="#a">999 99 999</a>
+      </div>
+    </Box>
   </div>
 );
 

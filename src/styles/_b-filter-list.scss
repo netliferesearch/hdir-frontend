@@ -12,9 +12,10 @@
   }
   &__list-item-link {
     margin: 0.5em;
-    color: $link-color;
+    color: $link-color !important;
     &--active {
       background-color: $yellow-light;
+      color: $black !important;
       margin: 0;
       padding: 0.5em;
       @include link-init($black);

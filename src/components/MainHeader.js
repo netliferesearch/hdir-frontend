@@ -36,11 +36,13 @@ class MainHeader extends React.Component {
     return (
       <>
         <SearchTray open={this.state.searchOpen}>
-          <p className="t--white">
-            Søk etter reningslinjer, anbefalinger, lover, statistikk,
-            tilskudd...
-          </p>
-          <InputSearch dark />
+          <div className="l-container">
+            <p className="t--white">
+              Søk etter reningslinjer, anbefalinger, lover, statistikk,
+              tilskudd...
+            </p>
+            <InputSearch dark />
+          </div>
         </SearchTray>
         <div className="l-container">
           <div className="b-main-header">
@@ -104,14 +106,16 @@ class MainHeader extends React.Component {
                 {!this.props.hideSearch && (
                   <button
                     onClick={this.toggleSearch}
-                    className="b-button b-button__button b-button__button--secondary b-button__button--small"
+                    className="b-button b-button__button b-button__button--secondary-dark b-button__button--small"
                   >
                     {this.state.searchButtonText}{' '}
-                    <img
-                      src="./icons/search.svg"
-                      alt=""
-                      className="b-icon b-icon--small"
-                    />
+                    {!this.state.searchOpen && (
+                      <img
+                        src="./icons/search.svg"
+                        alt=""
+                        className="b-icon b-icon--small"
+                      />
+                    )}
                   </button>
                 )}
               </nav>
@@ -121,16 +125,24 @@ class MainHeader extends React.Component {
               <nav className="b-main-header__nav">
                 <button
                   onClick={this.toggleMobileNav}
-                  className="b-button b-button__button b-button__button--secondary b-button__button--small"
+                  className="b-button b-button__button b-button__button--secondary-dark b-button__button--small"
                 >
                   Meny
                 </button>
+                <div className="l-inline-space" />
                 {!this.props.hideSearch && (
                   <button
                     onClick={this.toggleSearch}
-                    className="b-button b-button__button b-button__button--small"
+                    className="b-button b-button__button b-button__button--secondary-dark b-button__button--small"
                   >
-                    {this.state.searchButtonText}
+                    {this.state.searchButtonText}{' '}
+                    {!this.state.searchOpen && (
+                      <img
+                        src="./icons/search.svg"
+                        alt=""
+                        className="b-icon b-icon--small"
+                      />
+                    )}
                   </button>
                 )}
               </nav>

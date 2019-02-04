@@ -7,9 +7,7 @@ import Link from '../components/Link';
 const LisSpeciality = () => (
   <div>
     <div className="l-container l-mt-3">
-      <h1 className="b-main-header">Barnekirurgi</h1>
-
-      <hr className="b-hr b-hr--thick b-hr--black" />
+      <h1>Barnekirurgi</h1>
 
       <div className="row l-mt-2">
         <div className="col-md-12">

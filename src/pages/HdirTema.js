@@ -11,7 +11,7 @@ import Statistics from '../components/Statistics';
 const HdirTema = () => (
   <div>
     <div className="l-container">
-      <div className="l-mt-2">
+      <div className="l-mt-3">
         <ArticleIntro
           topic="Tema"
           heading="Helsestasjons- og skolehelsetjenesten"

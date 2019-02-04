@@ -7,9 +7,9 @@ import Link from '../components/Link';
 import LongShortHeading from '../components/LongShortHeading';
 
 const ProductPage = () => (
-  <div className="l-container">
+  <div className="l-container l-mt-3">
     <div className="row">
-      <div className="col-xs-12 l-mt-3">
+      <div className="col-xs-12">
         <LongShortHeading
           long="Nasjonal faglig retningslinje for svangerskapsdiabetes"
           short="Svangerskapsdiabetes"
