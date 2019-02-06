@@ -6,8 +6,8 @@ import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const AuthorizationStepPage = () => (
-  <div>
-    <div className="l-container">
+  <>
+    <div className="l-container l-mb-5">
       <Breadcrumbs
         paths={[
           {
@@ -67,7 +67,7 @@ const AuthorizationStepPage = () => (
             </form>
           </article>
         </div>
-        <div className="col-xs-12 l-mt-4">
+        <div className="col-xs-12 l-mt-3">
           <h2>Dine svar:</h2>
           <div className="row l-mt-1 l-mb-1">
             <div className="col-xs-6">Er du helseutdannet i Norge?</div>
@@ -80,24 +80,22 @@ const AuthorizationStepPage = () => (
         </div>
       </div>
     </div>
-    <div className="l-mt-4">
-      <Box color="grey" square noPadding>
-        <div className="l-container">
-          <div className="row">
-            <div className="col-xs-12">
-              <strong>Kontakt:</strong>
-              <br />
-              <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-              <br />
-              <a href="#a">navn.etternavn@helsedir.no</a>
-              <br />
-              <a href="#a">999 99 999</a>
-            </div>
+    <Box color="grey" square noPadding>
+      <div className="l-container">
+        <div className="row">
+          <div className="col-xs-12">
+            <strong>Kontakt:</strong>
+            <br />
+            <a href="#a">spesialisthelsetjenester@helsedir.no</a>
+            <br />
+            <a href="#a">navn.etternavn@helsedir.no</a>
+            <br />
+            <a href="#a">999 99 999</a>
           </div>
         </div>
-      </Box>
-    </div>
-  </div>
+      </div>
+    </Box>
+  </>
 );
 
 export default AuthorizationStepPage;

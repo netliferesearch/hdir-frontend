@@ -7,8 +7,8 @@ import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const AuthorizationFrontPage = () => (
-  <div>
-    <div className="l-container">
+  <>
+    <div className="l-container l-mb-5">
       <Breadcrumbs
         paths={[
           {
@@ -107,24 +107,22 @@ const AuthorizationFrontPage = () => (
         </div>
       </div>
     </div>
-    <div className="l-mt-4">
-      <Box color="grey" square noPadding>
-        <div className="l-container">
-          <div className="row">
-            <div className="col-xs-12">
-              <strong>Kontakt:</strong>
-              <br />
-              <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-              <br />
-              <a href="#a">navn.etternavn@helsedir.no</a>
-              <br />
-              <a href="#a">999 99 999</a>
-            </div>
+    <Box color="grey" square noPadding>
+      <div className="l-container">
+        <div className="row">
+          <div className="col-xs-12">
+            <strong>Kontakt:</strong>
+            <br />
+            <a href="#a">spesialisthelsetjenester@helsedir.no</a>
+            <br />
+            <a href="#a">navn.etternavn@helsedir.no</a>
+            <br />
+            <a href="#a">999 99 999</a>
           </div>
         </div>
-      </Box>
-    </div>
-  </div>
+      </div>
+    </Box>
+  </>
 );
 
 export default AuthorizationFrontPage;

@@ -8,8 +8,8 @@ import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const ArticlePage = () => (
-  <div>
-    <div className="l-container">
+  <>
+    <div className="l-container l-mb-5">
       <Breadcrumbs
         paths={[
           {
@@ -171,20 +171,18 @@ const ArticlePage = () => (
         </article>
       </div>
     </div>
-    <div className="l-mt-5">
-      <Box color="grey" square noPadding>
-        <div className="l-container">
-          <strong>Kontakt:</strong>
-          <br />
-          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-          <br />
-          <a href="#a">navn.etternavn@helsedir.no</a>
-          <br />
-          <a href="#a">999 99 999</a>
-        </div>
-      </Box>
-    </div>
-  </div>
+    <Box color="grey" square noPadding>
+      <div className="l-container">
+        <strong>Kontakt:</strong>
+        <br />
+        <a href="#a">spesialisthelsetjenester@helsedir.no</a>
+        <br />
+        <a href="#a">navn.etternavn@helsedir.no</a>
+        <br />
+        <a href="#a">999 99 999</a>
+      </div>
+    </Box>
+  </>
 );
 
 export default ArticlePage;
