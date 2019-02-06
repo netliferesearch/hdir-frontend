@@ -30,7 +30,7 @@ Button.propTypes = {
   arrow: PropTypes.bool,
   small: PropTypes.bool,
   secondary: PropTypes.bool,
-  plain: PropTypes.plain
+  plain: PropTypes.bool
 };
 
 export default Button;
