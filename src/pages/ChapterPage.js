@@ -106,6 +106,10 @@ const ChapterPage = () => (
                 nå behandlingsmålene for glukose
               </p>
               <p>etc.</p>
+              <hr className="b-hr b-hr--grey-light b-hr--padded" />
+              <div className="t-sm-right">
+                <PageMeta editDate="11.08.2018" />
+              </div>
             </Collapsible>
           </div>
           <div className="l-mt-3">
@@ -131,6 +135,10 @@ const ChapterPage = () => (
                 nå behandlingsmålene for glukose
               </p>
               <p>etc.</p>
+              <hr className="b-hr b-hr--grey-light b-hr--padded" />
+              <div className="t-sm-right">
+                <PageMeta editDate="11.08.2018" />
+              </div>
             </Collapsible>
           </div>
           <div className="l-mt-3">
@@ -200,6 +208,10 @@ const ChapterPage = () => (
                     </p>
                   </Collapsible>
                 </Collapsible>
+              </div>
+              <hr className="b-hr b-hr--grey-light b-hr--padded" />
+              <div className="t-sm-right">
+                <PageMeta editDate="11.08.2018" />
               </div>
             </Collapsible>
           </div>

@@ -135,6 +135,9 @@
   &--link-color {
     border-color: $link-color;
   }
+  &--padded {
+    margin: 1rem 0;
+  }
 }
 
 // The CSS meant for the content from the rich text in Enonic
@@ -471,6 +474,11 @@ table {
 
 .b-multi-selector {
   margin: 5rem;
+
+  &:focus {
+    background: red;
+  }
+
   &__select {
     height: 1rem;
   }
