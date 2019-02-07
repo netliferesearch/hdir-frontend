@@ -40,19 +40,19 @@ const FrontPageHdir = () => (
               {
                 href: '#a',
                 text: 'Sykdom, tilstand og behandling',
-                image: 'http://placehold.it/128x128',
+                image: './icons/SykdomTilstandBehandling.svg',
                 imageAlt: 'image alt text'
               },
               {
                 href: '#a',
                 text: 'Autorisasjon og spesialistutdanning',
-                image: 'http://placehold.it/128x128',
+                image: './icons/Autorisasjon.svg',
                 imageAlt: 'image alt text'
               },
               {
                 href: '#a',
                 text: 'Psykisk helse',
-                image: 'http://placehold.it/128x128',
+                image: './icons/PsykiskHelse.svg',
                 imageAlt: 'image alt text'
               },
               {
@@ -64,7 +64,7 @@ const FrontPageHdir = () => (
               {
                 href: '#a',
                 text: 'Folkehelse, ernæring og fysisk aktivitet',
-                image: 'http://placehold.it/128x128',
+                image: './icons/FolkehelseErnæring.svg',
                 imageAlt: 'image alt text'
               },
               {
