@@ -1,26 +1,9 @@
 import React from 'react';
 
-const Footer = () => (
+const FooterHelfo = () => (
   <footer className="b-footer">
     <div className="row">
-      <div className="col-lg-3 col-xs-12">
-        <div className="">
-          <a href="#a" className="b-footer__link">
-            Kontakt oss
-          </a>
-          <p className="b-footer__text">
-            Helsedirektoratet
-            <br />
-            Besøk:
-            <br />
-            Vitaminveien 4
-            <br />
-            0483 Oslo
-          </p>
-        </div>
-      </div>
-
-      <div className="col-lg-7 col-sm-8 col-xs-12">
+      <div className="col-lg-7 col-xs-12">
         <div className="b-footer__link-list">
           <div className="row">
             <div className="col-xs-12 col-md-6 col-lg-4">
@@ -53,34 +36,11 @@ const Footer = () => (
                 Personvern
               </a>
             </div>
-            <div className="col-xs-12 col-md-6 col-lg-4">
-              <a href="#a" className="b-footer__link">
-                Personvern
-              </a>
-            </div>
           </div>
-        </div>
-      </div>
-
-      <div className="col-lg-2 col-sm-4 col-xs-12">
-        <div>
-          <a href="#a" className="b-footer__link">
-            Facebook
-          </a>
-        </div>
-        <div>
-          <a href="#a" className="b-footer__link">
-            Twitter
-          </a>
-        </div>
-        <div>
-          <a href="#a" className="b-footer__link">
-            YouTube
-          </a>
         </div>
       </div>
     </div>
   </footer>
 );
 
-export default Footer;
+export default FooterHelfo;

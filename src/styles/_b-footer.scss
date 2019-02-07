@@ -3,25 +3,14 @@
 
   &__link {
     @include link-init(white, true);
-    display: inline-block;
-    margin-bottom: 0.8rem;
+    display: inline;
+    line-height: 2em;
   }
   &__text {
     font-size: $meta-text;
   }
   &__link-list {
-    font-size: $meta-text;
-    flex: 1;
-  }
-  &__link-matrix {
     display: flex;
     flex-wrap: wrap;
-  }
-  &__matrix-item {
-    flex-basis: 50%;
-    margin-bottom: 0.8rem;
-    @include mq($until: $desktop) {
-      flex-basis: 100%;
-    }
   }
 }

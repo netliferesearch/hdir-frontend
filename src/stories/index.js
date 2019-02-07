@@ -17,7 +17,8 @@ import ChapterHeading from '../components/ChapterHeading';
 import Collapsible from '../components/Collapsible';
 import AlertBar from '../components/AlertBar';
 import FilterList from '../components/FilterList';
-// import Footer from '../components/Footer';
+import Footer from '../components/Footer';
+import FooterHelfo from '../components/FooterHelfo';
 import Heading from '../components/Heading';
 import LongShortHeading from '../components/LongShortHeading';
 // import MainHeader from '../components/MainHeader';
@@ -326,6 +327,28 @@ storiesOf('FilterList', module)
         'Rundskriv'
       ])}
     />
+  ));
+
+storiesOf('Footer', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Box square color="blueDark">
+      <div className="l-container">
+        <Footer />
+      </div>
+    </Box>
+  ));
+
+storiesOf('FooterHelfo', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Box square color="blueDark">
+      <div className="l-container">
+        <FooterHelfo />
+      </div>
+    </Box>
   ));
 
 storiesOf('Heading', module)
