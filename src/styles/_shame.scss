@@ -30,6 +30,13 @@
 .suggestion__meta {
   font-size: $meta-text;
 }
+.suggestion-category {
+  display: inline-block;
+  padding: 0.25em;
+  margin-left: 0.25em;
+  font-size: $meta-text;
+  background-color: $yellow-light;
+}
 .some-label {
   display: inline-block;
   color: white;
@@ -474,10 +481,6 @@ table {
 
 .b-multi-selector {
   margin: 5rem;
-
-  &:focus {
-    background: red;
-  }
 
   &__select {
     height: 1rem;

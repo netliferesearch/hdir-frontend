@@ -19,7 +19,12 @@ const getSuggestionValue = suggestion => suggestion.title;
 const renderSuggestion = suggestion => (
   <div>
     {suggestion.title && (
-      <div className="suggestion-title">{suggestion.title}</div>
+      <div className="suggestion-title">
+        {suggestion.title}{' '}
+        {suggestion.category && (
+          <div className="suggestion-category">{suggestion.category}</div>
+        )}
+      </div>
     )}
     {suggestion.intro && (
       <div className="suggestion-intro">{suggestion.intro}</div>
@@ -121,7 +126,10 @@ class InputSearch extends React.Component {
         this.setState({
           suggestions: [
             ...data,
-            { intro: 'Se alle resultater for "Helsestasjon"' }
+            {
+              intro: `Se alle resultater for "${value}"`,
+              url: `${searchPageUrl}?searchquery=${value}`
+            }
           ]
         });
       })
