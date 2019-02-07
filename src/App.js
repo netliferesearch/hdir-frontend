@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import './styles/Helfo.scss';
+import './styles/App.scss';
 
 import ScrollToTop from './components/ScrollToTop';
 
