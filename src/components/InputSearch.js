@@ -5,10 +5,10 @@ import classNames from 'classnames';
 
 const searchPageUrl = process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
   ? process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
-  : '/søkeresultat';
+  : 'http://localhost:3000/søkeresultat';
 const searchSuggestionUrl = process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
   ? process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
-  : '/.netlify/functions/simpleSearch';
+  : 'http://localhost:3000/.netlify/functions/simpleSearch';
 
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
@@ -19,7 +19,12 @@ const getSuggestionValue = suggestion => suggestion.title;
 const renderSuggestion = suggestion => (
   <div>
     {suggestion.title && (
-      <div className="suggestion-title">{suggestion.title}</div>
+      <div className="suggestion-title">
+        {suggestion.title}{' '}
+        {suggestion.category && (
+          <div className="suggestion-category">{suggestion.category}</div>
+        )}
+      </div>
     )}
     {suggestion.intro && (
       <div className="suggestion-intro">{suggestion.intro}</div>
@@ -121,7 +126,10 @@ class InputSearch extends React.Component {
         this.setState({
           suggestions: [
             ...data,
-            { intro: 'Se alle resultater for "Helsestasjon"' }
+            {
+              intro: `Se alle resultater for "${value}"`,
+              url: `${searchPageUrl}?searchquery=${value}`
+            }
           ]
         });
       })
