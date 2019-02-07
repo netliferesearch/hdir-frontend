@@ -9,7 +9,7 @@ const FrontPageHdir = () => (
     <div className="l-container">
       <div className="l-mt-3 l-mb-5">
         <div className="row">
-          <div className="col-xs-12 col-md-8 col-md-offset-2">
+          <div className="col-xs-12 col-md-10 col-md-offset-1">
             <p>
               <strong>Hva leter du etter?</strong>
             </p>
@@ -34,7 +34,7 @@ const FrontPageHdir = () => (
 
     <div className="l-container l-mt-4">
       <div className="row">
-        <div className="col-xs col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <div className="col-xs col-md-10 col-md-offset-1">
           <LinkList
             list={[
               {
@@ -95,7 +95,7 @@ const FrontPageHdir = () => (
 
     <div className="l-container">
       <div className="row l-mt-5 l-mb-5">
-        <div className="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+        <div className="col-xs-12 col-md-10 col-md-offset-1">
           <Link href="#" heading>
             <h2>
               Mange vil slutte å røyke eller snuse, men få bruker hjelpemidler
