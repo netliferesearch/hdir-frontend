@@ -37,7 +37,9 @@
     border: 0;
     text-align: left;
     padding: 0;
+    overflow: visible;
     font-size: 1em;
+    cursor: pointer;
 
     &:hover {
       color: $link-color;
@@ -55,7 +57,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       left: 0;
-      top: 0.15em;
+      top: 0.25em;
     }
 
     &:active {
