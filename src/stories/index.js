@@ -240,6 +240,24 @@ storiesOf('Card', module)
         />
       </Box>
     </Card>
+  ))
+  .addWithStaticMarkup('With image', () => (
+    <Card
+      url={text('URL', '#')}
+      arrow={select(
+        'Arrow',
+        { none: '', left: 'left', right: 'right' },
+        'right'
+      )}
+      mainContent={
+        <>
+          <h3>De minste tåler minst</h3>
+          <p>Hva skjer hvis antibiotika ikke lenger virker?</p>
+        </>
+      }
+    >
+      <img src="http://placehold.it/500x150" alt="alt..." />
+    </Card>
   ));
 
 storiesOf('CheckboxGroup', module)

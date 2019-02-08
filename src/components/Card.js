@@ -23,6 +23,7 @@ const Card = props => (
       {props.topic && <div className="b-card__topic">{props.topic}</div>}
       {props.text && <div className="b-card__text">{props.text}</div>}
       {props.content && <div>{props.content}</div>}
+      {props.mainContent}
     </a>
   </div>
 );
@@ -34,7 +35,8 @@ Card.propTypes = {
   topic: PropTypes.string,
   arrow: PropTypes.oneOf(['', 'left', 'right']),
   horizontal: PropTypes.bool,
-  content: PropTypes.object
+  content: PropTypes.object,
+  mainContent: PropTypes.object
 };
 
 export default Card;
