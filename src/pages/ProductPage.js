@@ -28,6 +28,7 @@ const ProductPage = () => (
         <div className="l-hide-to-md">
           <div className="js-expand-list" data-start-limit="2">
             <NavList
+              small
               list={[
                 {
                   description: 'STERK ANBEFALING',
@@ -65,6 +66,7 @@ const ProductPage = () => (
         <div className="l-hide-to-md">
           <div className="js-expand-list">
             <NavList
+              small
               list={[
                 {
                   description: 'Kapittel 2.1',
@@ -93,6 +95,7 @@ const ProductPage = () => (
           <h4>RELATERTE PRODUKTER</h4>
           <div className="l-mt-1">
             <NavList
+              small
               list={[
                 {
                   description: 'Svangerskapsomsorgen',
@@ -118,6 +121,7 @@ const ProductPage = () => (
             line="none"
           />
           <NavList
+            small
             list={[
               {
                 title: 'Det foreslås at HbA1c tas ved',
