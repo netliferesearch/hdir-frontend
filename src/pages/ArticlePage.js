@@ -6,6 +6,7 @@ import Link from '../components/Link';
 import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SectionSidebar from '../components/SectionSidebar';
 
 const ArticlePage = () => (
   <>
@@ -39,6 +40,39 @@ const ArticlePage = () => (
       </div>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
+          <SectionSidebar
+            heading="RAPPORT, VENTETID OG PASIENTRETTIGHETER"
+            icon="../icons/Konferanser.svg"
+            list={[
+              { title: 'Bakgrunn', url: '#' },
+              {
+                title: 'KAPITTEL 1',
+                url: '#',
+                description: 'Behandling av svangerskapsdiabetes'
+              },
+              {
+                title: 'Arbeid bidrar til raskere bedring',
+                url: '#aa',
+                children: [
+                  {
+                    url: '#a',
+                    prefix: '2.1',
+                    description:
+                      'Tilby informasjon av, koråd, og opplæring i egenmåling av glukose ved diagnosetidspunkt'
+                  },
+                  {
+                    url: '#b',
+                    prefix: '2.2',
+                    description:
+                      'Tilby informasjon av, koråd, og opplæring i egenmåling av glukose ved diagnosetidspunkt'
+                  }
+                ]
+              }
+            ]}
+          />
+          <br />
+          <br />
+          <br />
           <NavList
             anchor
             sticky

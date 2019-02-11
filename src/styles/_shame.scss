@@ -515,3 +515,46 @@ table {
     border-top: 1px solid $grey-light;
   }
 }
+
+.b-section-sidebar {
+  &__heading {
+    display: flex;
+    font-size: $meta-text;
+    border-bottom: 1px solid $primary-color;
+    padding-bottom: 0.75em;
+  }
+  &__icon {
+    height: 3em;
+    width: auto;
+    flex-shrink: 0;
+    margin-right: 1em;
+  }
+  &__link {
+    display: block;
+    padding: 0.75em 0.5em;
+    border-bottom: 1px solid $primary-color;
+    font-size: $meta-text;
+    color: $link-color !important;
+    @include underline(transparent);
+
+    &:hover {
+      background-color: $grey-lighter;
+      color: $black !important;
+    }
+
+    &--small {
+      padding: 0.5em;
+    }
+  }
+  &__title {
+  }
+  &__meta {
+    display: flex;
+  }
+  &__description {
+  }
+  &__prefix {
+    margin-right: 1.5em;
+    flex-shrink: 0;
+  }
+}
