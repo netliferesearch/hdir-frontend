@@ -6,8 +6,17 @@ const SectionSidebar = props => {
   const [headings, setHeadings] = useState([]);
 
   useEffect(() => {
-    setHeadings([...document.querySelectorAll('.t-body-text h2')]);
+    if (props.usePageHeadings) {
+      setHeadings([...document.querySelectorAll('.t-body-text h2')]);
+    }
   }, []);
+
+  const list = props.usePageHeadings
+    ? headings.map(x => ({
+        title: x.innerText,
+        url: '#'
+      }))
+    : props.list;
 
   const ListItem = ({ props }) => {
     const linkClasses = small =>
@@ -55,7 +64,7 @@ const SectionSidebar = props => {
         {props.heading && <span>{props.heading}</span>}
       </div>
       <nav>
-        {props.list.map(item => (
+        {list.map(item => (
           <ListItem props={item} />
         ))}
       </nav>
@@ -72,7 +81,7 @@ SectionSidebar.propTypes = {
       title: PropTypes.string.isRequired,
       description: PropTypes.string,
       prefix: PropTypes.string,
-      url: PropTypes.string,
+      url: PropTypes.string.isRequired,
       active: PropTypes.bool,
       children: PropTypes.arrayOf(
         PropTypes.shape({
@@ -84,7 +93,7 @@ SectionSidebar.propTypes = {
         })
       )
     })
-  ).isRequired
+  )
 };
 
 export default SectionSidebar;

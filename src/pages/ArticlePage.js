@@ -43,6 +43,7 @@ const ArticlePage = () => (
           <SectionSidebar
             heading="RAPPORT, VENTETID OG PASIENTRETTIGHETER"
             icon="../icons/Konferanser.svg"
+            usePageHeadings
             list={[
               { title: 'Bakgrunn', url: '#' },
               {
