@@ -43,48 +43,6 @@ const ArticlePage = () => (
           <SectionSidebar
             heading="RAPPORT, VENTETID OG PASIENTRETTIGHETER"
             icon="../icons/Konferanser.svg"
-            usePageHeadings
-            list={[
-              { title: 'Bakgrunn', url: '#' },
-              {
-                title: 'KAPITTEL 1',
-                url: '#',
-                description: 'Behandling av svangerskapsdiabetes'
-              },
-              {
-                title: 'Arbeid bidrar til raskere bedring',
-                url: '#aa',
-                children: [
-                  {
-                    url: '#a',
-                    prefix: '2.1',
-                    description:
-                      'Tilby informasjon av, koråd, og opplæring i egenmåling av glukose ved diagnosetidspunkt'
-                  },
-                  {
-                    url: '#b',
-                    prefix: '2.2',
-                    description:
-                      'Tilby informasjon av, koråd, og opplæring i egenmåling av glukose ved diagnosetidspunkt'
-                  }
-                ]
-              }
-            ]}
-          />
-          <br />
-          <br />
-          <br />
-          <NavList
-            anchor
-            sticky
-            small
-            className="l-sticky"
-            heading="Innhold på denne siden"
-            list={[
-              { title: 'Bakgrunn', url: '#' },
-              { title: 'Forebyggende arbeid', url: '#' },
-              { title: 'Arbeid bidrar til raskere bedring', url: '#' }
-            ]}
           />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">

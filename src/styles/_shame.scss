@@ -517,6 +517,9 @@ table {
 }
 
 .b-section-sidebar {
+  position: sticky;
+  top: 2rem;
+
   &__heading {
     display: flex;
     font-size: $meta-text;
@@ -544,6 +547,9 @@ table {
 
     &--small {
       padding: 0.5em;
+    }
+    &--active {
+      color: $black !important;
     }
   }
   &__title {
