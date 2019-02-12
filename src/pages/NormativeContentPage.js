@@ -3,7 +3,6 @@ import React from 'react';
 import NavList from '../components/NavList';
 import FilterList from '../components/FilterList';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Box from '../components/Box';
 
 const NormativeContentPage = () => (
   <div>
