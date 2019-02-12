@@ -5,10 +5,10 @@ import classNames from 'classnames';
 
 const searchPageUrl = process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
   ? process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
-  : 'http://localhost:3000/søkeresultat';
+  : '/søkeresultat';
 const searchSuggestionUrl = process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
   ? process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
-  : 'http://localhost:3000/.netlify/functions/simpleSearch';
+  : '/.netlify/functions/simpleSearch';
 
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
