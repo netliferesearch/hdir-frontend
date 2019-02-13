@@ -106,7 +106,8 @@ const SectionSidebar = props => {
   // Creates a list with links with either the headings, or the list it received
   const list = !props.list
     ? headings.map(h => ({
-        title: h.innerText,
+        description: h.innerText,
+        prefix: '↓',
         url: `#${urlKebabCase(h.innerText)}`
       }))
     : props.list;
@@ -128,7 +129,10 @@ const SectionSidebar = props => {
           if (!props.list) {
             return (
               <ListItem
-                props={{ ...item, active: activeHeading === index + 1 }}
+                props={{
+                  ...item,
+                  active: activeHeading === index + 1
+                }}
                 key={shortid.generate()}
               />
             );
@@ -145,17 +149,17 @@ SectionSidebar.propTypes = {
   icon: PropTypes.string,
   list: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string.isRequired,
+      title: PropTypes.string,
       description: PropTypes.string,
       prefix: PropTypes.string,
       url: PropTypes.string.isRequired,
       active: PropTypes.bool,
       children: PropTypes.arrayOf(
         PropTypes.shape({
-          title: PropTypes.string.isRequired,
+          title: PropTypes.string,
           description: PropTypes.string,
           prefix: PropTypes.string,
-          url: PropTypes.string,
+          url: PropTypes.string.isRequired,
           active: PropTypes.bool
         })
       )

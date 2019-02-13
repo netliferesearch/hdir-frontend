@@ -4,10 +4,12 @@ import '@babel/polyfill';
 import App from './App';
 import MainHeader from '../src/components/MainHeader';
 import InputSearch from '../src/components/InputSearch';
+import SectionSidebar from '../src/components/SectionSidebar';
 
 const rootElement = document.getElementById('root');
 const headerElement = document.getElementById('header');
 const searchElement = document.getElementById('search');
+const sectionSidebarElement = document.getElementById('sectionSidebar');
 
 if (rootElement) {
   const name = rootElement.getAttribute('data-name');
@@ -32,7 +34,8 @@ if (headerElement) {
     <MainHeader name={name} hideSearch={hideSearch} links={links} />,
     headerElement
   );
-} else if (searchElement) {
+}
+if (searchElement) {
   const hideSuggestions = Boolean(
     searchElement.getAttribute('data-hide-suggestions') !== null
   );
@@ -42,5 +45,19 @@ if (headerElement) {
   ReactDOM.render(
     <InputSearch hideSuggestions={hideSuggestions} dark={dark} />,
     searchElement
+  );
+}
+
+if (sectionSidebarElement) {
+  const heading = sectionSidebarElement.getAttribute('data-heading');
+  const icon = sectionSidebarElement.getAttribute('data-icon');
+  const list =
+    sectionSidebarElement.getAttribute('data-list') === null
+      ? []
+      : JSON.parse(sectionSidebarElement.getAttribute('data-list'));
+
+  ReactDOM.render(
+    <SectionSidebar heading={heading} icon={icon} list={list} />,
+    sectionSidebarElement
   );
 }

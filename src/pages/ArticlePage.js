@@ -40,10 +40,7 @@ const ArticlePage = () => (
       </div>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
-          <SectionSidebar
-            heading="RAPPORT, VENTETID OG PASIENTRETTIGHETER"
-            icon="../icons/Konferanser.svg"
-          />
+          <SectionSidebar heading="Innhold på denne siden" />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
           <h2>Bakgrunn</h2>

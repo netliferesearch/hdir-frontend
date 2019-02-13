@@ -3,7 +3,7 @@ import Collapsible from '../components/Collapsible';
 import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
-import NavList from '../components/NavList';
+import SectionSidebar from '../components/SectionSidebar';
 import Alert from '../components/Alert';
 import Box from '../components/Box';
 import Link from '../components/Link';
@@ -19,53 +19,41 @@ const ChapterPage = () => (
       />
       <div className="l-mt-3 row">
         <aside className="col-md-4 l-hide-to-lg l-bleed-right">
-          <div className="b-sidebar-heading">
-            <Link noUnderline href="#">
-              Nasjonal faglig retningslinje for svangerskapsdiabetes
-            </Link>
-          </div>
-          <div className="l-mt-1">
-            <hr className="b-hr b-hr--blue" />
-          </div>
-          <NavList
-            noArrow
-            small
+          <SectionSidebar
+            heading="Nasjonal faglig retningslinje for svangerskapsdiabetes"
+            icon="../icons/Konferanser.svg"
             list={[
               {
                 title: 'KAPITTEL 1',
-                // url: '#',
-                meta: 'Kost og fysisk aktivitet ved svangerskaps-diabetes',
-                active: true,
+                url: '#',
+                description:
+                  'Kost og fysisk aktivitet ved svangerskaps-diabetes',
                 children: [
                   {
-                    title: 'Underkapittel',
+                    description: 'Underkapittel',
+                    active: true,
                     url: '#',
-                    meta: '1.1'
+                    prefix: '1.1'
                   },
                   {
-                    title: 'Underkapittel',
+                    description: 'Underkapittel',
                     url: '#',
-                    meta: '1.2'
+                    prefix: '1.2'
                   }
                 ]
               },
               {
                 title: 'KAPITTEL 2',
                 url: '#',
-                meta: 'Diagnostikk og tiltak'
+                description: 'Diagnostikk og tiltak'
               },
               {
                 title: 'KAPITTEL 3',
                 url: '#',
-                meta: 'Nytt kapittel'
+                description: 'Nytt kapittel'
               }
             ]}
           />
-          <div className="l-mt-4">
-            <Link wideButton arrow color="purple">
-              Henvis pasienten til helsenorge.no for mer informasjon
-            </Link>
-          </div>
         </aside>
         <div className="col-md-7 col-md-offset-1 l-bleed-left">
           <Collapsible
@@ -136,6 +124,7 @@ const ChapterPage = () => (
               </p>
               <p>etc.</p>
               <hr className="b-hr b-hr--grey-light b-hr--padded" />
+
               <div className="t-sm-right">
                 <PageMeta editDate="11.08.2018" />
               </div>
@@ -237,7 +226,12 @@ const ChapterPage = () => (
               url="#a"
             />
           </div>
-          <div className="l-mt-4">
+          <div className="l-mt-3">
+            <Link wideButton arrow color="purple">
+              Henvis pasienten til helsenorge.no for mer informasjon
+            </Link>
+          </div>
+          <div className="l-mt-3">
             <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
           </div>
         </div>
