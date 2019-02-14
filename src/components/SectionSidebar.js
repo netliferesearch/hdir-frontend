@@ -18,6 +18,8 @@ function findActiveHeading(headings, scrollPos, setActiveHeading) {
   setActiveHeading(scrolledPastItems.length);
 }
 
+const hasItems = arr => arr && arr.length;
+
 // Makes a URL-safe string
 const urlKebabCase = string =>
   encodeURI(string.replace(/\s+/g, '-').toLowerCase());
@@ -66,13 +68,13 @@ const SectionSidebar = props => {
 
   // Fetches all headings on mount, if we don't have a list
   useEffect(() => {
-    if (!props.list) {
+    if (!hasItems(props.list)) {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
     }
   }, []);
 
   useEffect(() => {
-    if (!props.list) {
+    if (!hasItems(props.list)) {
       // Returns a new function that is a debounce with our function and its arguments
       const createDebounceFunction = (func, ...args) =>
         debounce(() => {
@@ -97,14 +99,14 @@ const SectionSidebar = props => {
   });
 
   // Gives all headings a url-safe id based on its text
-  if (!props.list) {
+  if (!hasItems(props.list)) {
     headings.forEach(item => {
       item.setAttribute('id', urlKebabCase(item.innerText));
     });
   }
 
   // Creates a list with links with either the headings, or the list it received
-  const list = !props.list
+  const list = !hasItems(props.list)
     ? headings.map(h => ({
         description: h.innerText,
         prefix: '↓',
@@ -126,7 +128,7 @@ const SectionSidebar = props => {
       </div>
       <nav>
         {list.map((item, index) => {
-          if (!props.list) {
+          if (!hasItems(props.list)) {
             return (
               <ListItem
                 props={{
