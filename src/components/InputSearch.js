@@ -44,16 +44,11 @@ const renderInputComponent = inputProps => (
     <button
       className="b-input-search__button"
       onClick={() => {
-        triggerSearch(inputProps.value);
+        this.triggerSearch();
       }}
     />
   </div>
 );
-
-const triggerSearch = query => {
-  // eslint-disable-next-line
-  window.location = `${searchPageUrl}?searchquery=${query}`;
-};
 
 const placeholderSuggestions = [
   'Søk på tema',
@@ -86,6 +81,19 @@ class InputSearch extends React.Component {
       placeholderSuggestionIndex: 0,
       placeholderInterval: null
     };
+
+    this.triggerSearch = this.triggerSearch.bind(this);
+    this.triggerSearchEnter = this.triggerSearchEnter.bind(this);
+  }
+
+  triggerSearch() {
+    window.location = `${searchPageUrl}?searchquery=${this.state.value}`;
+  }
+
+  triggerSearchEnter(e) {
+    if (e.keyCode === 13) {
+      this.triggerSearch();
+    }
   }
 
   componentDidMount() {
@@ -101,10 +109,12 @@ class InputSearch extends React.Component {
     this.setState({
       placeholderInterval: interval
     });
+    window.addEventListener('keypress', this.triggerSearchEnter);
   }
 
   componentWillUnmount() {
     clearInterval(this.state.placeholderInterval);
+    window.removeEventListener('keypress', this.triggerSearchEnter);
   }
 
   onChange = (event, { newValue }) => {
