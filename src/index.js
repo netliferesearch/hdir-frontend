@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '@babel/polyfill';
+import 'whatwg-fetch';
 import App from './App';
 import MainHeader from '../src/components/MainHeader';
 import InputSearch from '../src/components/InputSearch';
