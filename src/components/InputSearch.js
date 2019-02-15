@@ -83,17 +83,10 @@ class InputSearch extends React.Component {
     };
 
     this.triggerSearch = this.triggerSearch.bind(this);
-    this.triggerSearchEnter = this.triggerSearchEnter.bind(this);
   }
 
   triggerSearch() {
     window.location = `${searchPageUrl}?searchquery=${this.state.value}`;
-  }
-
-  triggerSearchEnter(e) {
-    if (e.keyCode === 13) {
-      this.triggerSearch();
-    }
   }
 
   componentDidMount() {
@@ -109,12 +102,10 @@ class InputSearch extends React.Component {
     this.setState({
       placeholderInterval: interval
     });
-    window.addEventListener('keypress', this.triggerSearchEnter);
   }
 
   componentWillUnmount() {
     clearInterval(this.state.placeholderInterval);
-    window.removeEventListener('keypress', this.triggerSearchEnter);
   }
 
   onChange = (event, { newValue }) => {
@@ -158,21 +149,26 @@ class InputSearch extends React.Component {
   };
 
   render() {
-    const { props } = this;
-    const { value, suggestions } = this.state;
-
     // Autosuggest will pass through all these props to the input.
     const inputProps = placeholder => ({
       placeholder: placeholder,
-      dark: props.dark,
-      value,
-      onChange: this.onChange
+      dark: this.props.dark,
+      value: this.state.value,
+      onChange: this.onChange,
+      onKeyDown: event => {
+        // 13 = enter key
+        if (event.keyCode === 13) {
+          // If the search query is not equal to any of the suggestions, we go to the SERP
+          if (!this.state.suggestions.some(x => x.title === this.state.value)) {
+            this.triggerSearch();
+          }
+        }
+      }
     });
 
-    // Finally, render it!
     return (
       <Autosuggest
-        suggestions={props.showSuggestions ? suggestions : []}
+        suggestions={this.props.showSuggestions ? this.state.suggestions : []}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         onSuggestionSelected={this.onSuggestionSelected}
