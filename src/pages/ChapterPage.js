@@ -31,12 +31,12 @@ const ChapterPage = () => (
                 children: [
                   {
                     description: 'Underkapittel',
-                    active: true,
                     url: '#',
                     prefix: '1.1'
                   },
                   {
                     description: 'Underkapittel',
+                    active: true,
                     url: '#',
                     prefix: '1.2'
                   }

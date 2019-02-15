@@ -523,8 +523,13 @@ table {
   &__heading {
     display: flex;
     font-size: $meta-text;
-    border-bottom: 1px solid $primary-color;
     padding-bottom: 0.75em;
+
+    &--thick {
+      font-weight: bold;
+      padding-bottom: 0.5em;
+      border-bottom: 7px solid $black;
+    }
   }
   &__icon {
     height: 3em;
@@ -535,7 +540,7 @@ table {
   &__link {
     display: block;
     padding: 0.75em 0.5em;
-    border-bottom: 1px solid $primary-color;
+    border-top: 1px solid $primary-color;
     font-size: $meta-text;
     color: $link-color !important;
     @include underline(transparent);
@@ -546,7 +551,7 @@ table {
     }
 
     &--small {
-      padding: 0.5em;
+      border: 0;
     }
     &--active {
       color: $black !important;

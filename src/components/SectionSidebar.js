@@ -20,21 +20,27 @@ function findActiveHeading(headings, scrollPos, setActiveHeading) {
 
 const hasItems = arr => arr && arr.length;
 
+const activeChild = children =>
+  children ? children.some(x => x.active) : false;
+
 // Makes a URL-safe string
 const urlKebabCase = string =>
   encodeURI(string.replace(/\s+/g, '-').toLowerCase());
 
 // Part of the component as it own component, we also make it use itself.
 const ListItem = ({ props }) => {
-  const linkClasses = (small, active) =>
+  const linkClasses = (small, active, children) =>
     classNames({
       'b-section-sidebar__link': true,
       'b-section-sidebar__link--small': small,
-      'b-section-sidebar__link--active': active
+      'b-section-sidebar__link--active': active || activeChild(children)
     });
   return (
     <>
-      <a href={props.url} className={linkClasses(props.small, props.active)}>
+      <a
+        href={props.url}
+        className={linkClasses(props.small, props.active, props.children)}
+      >
         {props.title && (
           <div className="b-section-sidebar__title">{props.title}</div>
         )}
@@ -116,7 +122,12 @@ const SectionSidebar = props => {
 
   return (
     <div className="b-section-sidebar">
-      <div className="b-section-sidebar__heading">
+      <div
+        className={classNames({
+          'b-section-sidebar__heading': true,
+          'b-section-sidebar__heading--thick': !hasItems(props.list)
+        })}
+      >
         {props.icon && (
           <img
             src={props.icon}
