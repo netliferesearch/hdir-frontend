@@ -34,9 +34,9 @@ The javascript is a collection of apps that can render, and read the data attrib
   - `data-dark` (boolean, remove it to make it false) If the search is placed on a dark background.
   - `data-hide-suggestions` (boolean, remove it to make it false) If we don't want suggestions.
 - `#sectionSidebar`
- - `data-heading` (string) Heading for the sidebar
- - `data-icon` (string) Icon for the sidebar
- - `data-list` (string) JSON representing the links. An array of objects with the props. Example below:
+  - `data-heading` (string) Heading for the sidebar
+  - `data-icon` (string) Icon for the sidebar
+  - `data-list` (string) JSON representing the links. An array of objects with the props. Example below:
  ```
  data-list='[{"title":"KAPITTEL 1","url":"#","description":"Kost og fysisk aktivitet ved svangerskaps-diabetes","children":[{"description":"Underkapittel","active":true,"url":"#","prefix":"1.1"},{"description":"Underkapittel","url":"#","prefix":"1.2"}]},{"title":"KAPITTEL 2","url":"#","description":"Diagnostikk og tiltak"},{"title":"KAPITTEL 3","url":"#","description":"Nytt kapittel"}]'
  ```
