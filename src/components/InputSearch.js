@@ -32,24 +32,6 @@ const renderSuggestion = suggestion => (
   </div>
 );
 
-const renderInputComponent = inputProps => (
-  <div className="b-input-search">
-    <input
-      {...inputProps}
-      className={classNames({
-        'b-input-search__field': true,
-        'b-input-search__field--dark': inputProps.dark
-      })}
-    />
-    <button
-      className="b-input-search__button"
-      onClick={() => {
-        this.triggerSearch();
-      }}
-    />
-  </div>
-);
-
 const placeholderSuggestions = [
   'Søk på tema',
   'ADHD',
@@ -83,6 +65,7 @@ class InputSearch extends React.Component {
     };
 
     this.triggerSearch = this.triggerSearch.bind(this);
+    this.renderInputComponent = this.renderInputComponent.bind(this);
   }
 
   triggerSearch() {
@@ -118,6 +101,24 @@ class InputSearch extends React.Component {
     window.location = suggestion.url;
   };
 
+  renderInputComponent(inputProps) {
+    return (
+      <div className="b-input-search">
+        <input
+          {...inputProps}
+          className={classNames({
+            'b-input-search__field': true,
+            'b-input-search__field--dark': inputProps.dark
+          })}
+        />
+        <button
+          className="b-input-search__button"
+          onClick={this.triggerSearch}
+        />
+      </div>
+    );
+  }
+
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
@@ -127,7 +128,10 @@ class InputSearch extends React.Component {
         this.setState({
           suggestions: [
             ...data,
-            {
+            data.length && {
+              ...data[data.length - 1],
+              title: value,
+              category: '',
               intro: `Se alle resultater for "${value}"`,
               url: `${searchPageUrl}?searchquery=${value}`
             }
@@ -172,7 +176,7 @@ class InputSearch extends React.Component {
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         onSuggestionSelected={this.onSuggestionSelected}
-        renderInputComponent={renderInputComponent}
+        renderInputComponent={this.renderInputComponent}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
         inputProps={inputProps(
