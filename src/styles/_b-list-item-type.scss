@@ -17,9 +17,6 @@
   }
 
   &__email {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    text-align: left;
   }
   &__meta {
     font-size: $meta-text;

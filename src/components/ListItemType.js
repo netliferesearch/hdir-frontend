@@ -127,14 +127,14 @@ const ListItemType = props => {
           {fields.category && (
             <p className="b-list-item-type__category">{fields.category}</p>
           )}
-          {fields.reverseEmail && fields.email && (
+          {fields.email && fields.email && (
             <div>
               <a
                 href={`mailto:${fields.email}`}
                 className="b-list-item-type__email"
                 aria-label={fields.email}
               >
-                {fields.reverseEmail}
+                {fields.email}
               </a>
             </div>
           )}

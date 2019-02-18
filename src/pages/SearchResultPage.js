@@ -125,7 +125,6 @@ const SearchResultPage = () => (
                   name: 'Ole Magnus Støvern',
                   email: 'ole.stovern@netlife.com',
                   category: 'Person',
-                  reverseEmail: 'moc.efilten@nrevots.elo',
                   phoneNumber: '+47 123 45 678',
                   position: 'Developer',
                   department: 'Oslo',

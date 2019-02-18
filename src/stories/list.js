@@ -70,7 +70,6 @@ storiesOf('List', module)
             category: '',
             name: 'Ole Magnus Støvern',
             email: 'ole.stovern@netlife.com',
-            reverseEmail: 'moc.efilten@nrevots.elo',
             phoneNumber: '+47 123 45 678',
             position: 'Developer',
             department: 'Oslo',
