@@ -524,6 +524,7 @@ table {
     display: flex;
     font-size: $meta-text;
     padding-bottom: 0.75em;
+    border-bottom: 1px solid $primary-color;
 
     &--thick {
       font-weight: bold;
@@ -544,6 +545,10 @@ table {
     font-size: $meta-text;
     color: $link-color !important;
     @include underline(transparent);
+
+    &:first-child {
+      border-top: 0;
+    }
 
     &:hover {
       background-color: $grey-lighter;
