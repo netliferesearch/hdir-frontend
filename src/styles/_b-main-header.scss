@@ -4,14 +4,12 @@
   align-items: center;
   padding: calc(0.5vw + 1rem) 0;
   padding-top: calc(1.5vw + 1rem);
-
   border-bottom: 1px solid $grey-light;
   margin-bottom: calc(0.5vw + 1.75rem);
 
   &__logo {
     height: 2rem;
     width: 100%;
-
     background-image: url($logo);
     background-repeat: no-repeat;
     background-position-y: center;
