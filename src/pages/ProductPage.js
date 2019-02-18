@@ -49,8 +49,8 @@ const ProductPage = () => (
               ]}
             />
             <div className="l-mt-2 t-sm-center">
-              <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
-                Vis alle (3)
+              <button className="b-button b-button__button b-button__button--secondary b-button__button--small">
+                ↓ Vis alle (3)
               </button>
             </div>
           </div>
@@ -82,8 +82,8 @@ const ProductPage = () => (
               ]}
             />
             <div className="l-mt-2 t-sm-center">
-              <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
-                Vis alle (7)
+              <button className="b-button b-button__button b-button__button--secondary b-button__button--small ">
+                ↓ Vis alle (7)
               </button>
             </div>
           </div>

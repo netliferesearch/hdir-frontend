@@ -159,45 +159,46 @@ const HdirTema = () => (
 
       <div className="row l-mt-5">
         <div className="col-xs-12">
-          <List
-            heading="RELEVANTE ANBEFALINGER, KRAV ELLER RÅD"
-            list={[
-              {
-                type: 'generic',
-                url: '#5',
-                fields: {
-                  category: 'Krav i lov eller forskrift',
-                  heading:
-                    'Tannhelsetjenester skal ha et og skolehelsetjenesten'
+          <div className="js-expand-list" data-start-limit="2">
+            <List
+              heading="RELEVANTE ANBEFALINGER, KRAV ELLER RÅD"
+              list={[
+                {
+                  type: 'generic',
+                  url: '#5',
+                  fields: {
+                    category: 'Krav i lov eller forskrift',
+                    heading:
+                      'Tannhelsetjenester skal ha et og skolehelsetjenesten'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    category: 'Sterk anbefaling',
+                    heading:
+                      'Barn og unge med høy karierisiko helsestasjons- og skolehelsetjenesten'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#7',
+                  fields: {
+                    category: 'Sterk anbefaling',
+                    heading:
+                      'Foresatte til barn med administrering av langtidsvirkende reversibel'
+                  }
                 }
-              },
-              {
-                type: 'generic',
-                url: '#6',
-                fields: {
-                  category: 'Sterk anbefaling',
-                  heading:
-                    'Barn og unge med høy karierisiko helsestasjons- og skolehelsetjenesten'
-                }
-              },
-              {
-                type: 'generic',
-                url: '#7',
-                fields: {
-                  category: 'Sterk anbefaling',
-                  heading:
-                    'Foresatte til barn med administrering av langtidsvirkende reversibel'
-                }
-              }
-            ]}
-          />
+              ]}
+            />
+            <div className="l-mt-2 t-sm-center">
+              <button className="b-button b-button__button b-button__button--secondary b-button__button--small ">
+                ↓ Vis alle (3)
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="l-mt-2 t-sm-center">
-        <button className="b-button b-button__button b-button__button--secondary b-button__button--small b-button__button--arrow-down">
-          Vis flere
-        </button>
       </div>
 
       <div className="row">
