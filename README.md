@@ -1,18 +1,13 @@
 # Helsedirektoratet frontend
 
-To install dependencies, run `npm install` in terminal.
-To start the development environemnt run `npm run start`.
-This will open the prototype at `localhost:3000` and Storybook (documentation) at `localhost:9009`.
-
-This repository contains the main style and components for the new HDIR content platform.
-
-This repository contains:
+## This repository contains:
   - The main styles for Helsedirektoratet and Helfo.
   - Some javascript for the production webpage (i.e. search, header, scroll position sidebar).
   - Demonstrations of the page layouts.
   - React components, for creating building blocks the pages are built with, and the javascript.
   - Storybook, a tool for documenting, testing and presenting React components.
   - A mock server for HTTP endpoints serving JSON.
+  - It is built with create-react-app
 
 It should support IE11+ and two versions old or newer for the evergreen browsers.
 
@@ -29,6 +24,28 @@ It can also be found published on Netlify: http://hdir-frontend.netlify.com
 3. Builds production-ready code to the `/build` directory
   - Helsedirektoratet CSS: `/build/App.css`, Helfo CSS: `Helfo.css`
   - JavaScript (Helsedirektoratet and Helfo): `/build/static/js/build.js`
+  
+The javascript is a collection of apps that can render, and read the data attributes, to the following containers:
+- `#header`
+  - `data-name` (string) Name of the webpage (used for alt in logo)
+  - `data-hide-search` (boolean, remove it to make it false) Used to hide the search button in the header for the frontpage and search page.
+  - `data-links` (string) JSON representing the links. An array of objects with the props `name` and `href`.
+- `#search`
+  - `data-dark` (boolean, remove it to make it false) If the search is placed on a dark background.
+  - `data-hide-suggestions` (boolean, remove it to make it false) If we don't want suggestions.
+- `#sectionSidebar`
+ - `data-heading` (string) Heading for the sidebar
+ - `data-icon` (string) Icon for the sidebar
+ - `data-list` (string) JSON representing the links. An array of objects with the props. Example below:
+ ```
+ data-list='[{"title":"KAPITTEL 1","url":"#","description":"Kost og fysisk aktivitet ved svangerskaps-diabetes","children":[{"description":"Underkapittel","active":true,"url":"#","prefix":"1.1"},{"description":"Underkapittel","url":"#","prefix":"1.2"}]},{"title":"KAPITTEL 2","url":"#","description":"Diagnostikk og tiltak"},{"title":"KAPITTEL 3","url":"#","description":"Nytt kapittel"}]'
+ ```
+  
+## Development
+1. `npm install`
+2. `npm run start`
+3. This will open the prototype at `localhost:3000` and Storybook (documentation) at `localhost:9009`.
+
 
 ## :clipboard: Rules
 
