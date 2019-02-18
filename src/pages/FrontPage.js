@@ -5,10 +5,8 @@ const FrontPage = () => (
   <div>
     <div className="l-container l-mt-4">
       Press 'h' to toggle block/component hints.
-      <br />
-      To see Helfo-styles: Storybook -> READ ME -> Styles
     </div>
-    <div className="l-container l-mt-5 l-mb-5">
+    <div className="l-container l-mt-4 l-mb-4">
       <p>
         <a href="/storybook">Go to Storybook</a>
       </p>
