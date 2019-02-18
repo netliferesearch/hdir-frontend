@@ -16,10 +16,12 @@
     "react-scripts": "2.1.1",
     "sass-mq": "^5.0.0",
     "shortid": "^2.2.13",
+    "source-map-explorer": "^1.7.0",
     "whatwg-fetch": "^3.0.0",
     "zenscroll": "^4.0.2"
   },
   "scripts": {
+    "analyze": "source-map-explorer build/static/js/build.*",
     "start": "run-p start:**",
     "start:app": "react-app-rewired start",
     "start:storybook": "start-storybook -p 9009 -s public",
@@ -30,7 +32,8 @@
     "build:lambda": "netlify-lambda build src/faas",
     "build:sass": "node-sass --output-style compressed src/styles -o build",
     "build:prefix-css-themes": "npx postcss build/*.css --use autoprefixer -r",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "enonic-build": "REACT_APP_ENONICXP_SEARCH_RESULT_PAGE='/search' REACT_APP_ENONICXP_SEARCH_ENDPOINT='/_/service/helsedirektoratet/autocomplete' REACT_APP_ENONICXP='true' npm run build:app && npm run build:sass"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^4.1.6",

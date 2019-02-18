@@ -12,18 +12,23 @@ const headerElement = document.getElementById('header');
 const searchElement = document.getElementById('search');
 const sectionSidebarElement = document.getElementById('sectionSidebar');
 
-if (rootElement) {
-  const name = rootElement.getAttribute('data-name');
-  const hideSearch = Boolean(
-    rootElement.getAttribute('data-hide-search') !== null
-  );
-  const links = JSON.parse(rootElement.getAttribute('data-links'));
+// If we build for Enonic, we don't want all the content.
+// When publishing to Netlify, we want to show everything in this project.
+if (!process.env.REACT_APP_ENONICXP) {
+  if (rootElement) {
+    const name = rootElement.getAttribute('data-name');
+    const hideSearch = Boolean(
+      rootElement.getAttribute('data-hide-search') !== null
+    );
+    const links = JSON.parse(rootElement.getAttribute('data-links'));
 
-  ReactDOM.render(
-    <App name={name} hideSearch={hideSearch} links={links} />,
-    rootElement
-  );
+    ReactDOM.render(
+      <App name={name} hideSearch={hideSearch} links={links} />,
+      rootElement
+    );
+  }
 }
+
 if (headerElement) {
   const name = headerElement.getAttribute('data-name');
   const hideSearch = Boolean(
