@@ -11,9 +11,9 @@ const ProductPage = () => (
     <div className="row">
       <div className="col-xs-12">
         <LongShortHeading
-          long="Nasjonal faglig retningslinje for svangerskapsdiabetes"
+          long="Nasjonal faglig retningslinje"
           short="Svangerskapsdiabetes"
-          icon={'https://placehold.it/64x64'}
+          icon={'./icons/Retningslinjer_Veiledere_Faglige_råd.svg'}
           url="#a"
           linkText="Hva er nasjonal faglig retningslinje"
         />
