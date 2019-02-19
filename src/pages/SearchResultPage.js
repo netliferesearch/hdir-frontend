@@ -15,7 +15,7 @@ const SearchResultPage = () => (
         </div>
       </div>
       <div className="row l-mt-4">
-        <aside className="col-md-3 col-xs-12 l-mb-4" id="searchQueries">
+        <aside className="col-md-3 col-xs-12 l-mb-4" id="filterToggler">
           <h4>Filtrér søk</h4>
           <div className="l-mt-2">
             <hr className="b-hr b-hr--thick" />
