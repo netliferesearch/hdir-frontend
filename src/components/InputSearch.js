@@ -161,7 +161,7 @@ class InputSearch extends React.Component {
       onChange: this.onChange,
       onKeyDown: event => {
         // 13 = enter key
-        if (event.keyCode === 13) {
+        if (event.keyCode === 13 && this.state.value) {
           // If the search query is not equal to any of the suggestions, we go to the SERP
           if (!this.state.suggestions.some(x => x.title === this.state.value)) {
             this.triggerSearch();
