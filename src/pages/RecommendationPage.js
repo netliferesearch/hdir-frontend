@@ -46,8 +46,7 @@ const RecommendationPage = () => (
 
               <div className="l-mb-3">
                 <Collapsible
-                  heading="Praktisk"
-                  subheading="Slik følger du anbefalingen"
+                  heading="Praktisk – Slik følger du anbefalingen"
                   size="medium"
                 >
                   <p>
@@ -103,8 +102,7 @@ const RecommendationPage = () => (
               <div className="l-mb-3">
                 <div className="l-mb-3">
                   <Collapsible
-                    heading="Begrunnelse"
-                    subheading="Dette er anbefalingen basert på"
+                    heading="Begrunnelse – Dette er anbefalingen basert på"
                     size="medium"
                   >
                     <div className="l-mb-1">
