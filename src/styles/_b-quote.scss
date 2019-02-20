@@ -1,20 +1,24 @@
 .b-quote {
   display: block;
-  border-left: 7px solid $grey;
-  padding: 0.1em 0 0.1em 1em;
+  font-size: $meta-text;
+  padding: 1em 10%;
   margin: 2em 0;
+  background-color: $grey-lighter;
 
-  &:after,
-  &:before {
-    content: '';
+  &__blockquote {
+    &:after,
+    &:before {
+      content: '';
+    }
+  }
+  &__source {
+    text-align: right;
+    font-weight: bold;
   }
 
   // This is coming from the rich text-field in the CMS, so we need to make it non-BEM
   p {
     margin: 0 !important;
     text-indent: 2em;
-  }
-  p:first-child {
-    text-indent: 0;
   }
 }
