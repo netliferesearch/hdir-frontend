@@ -8,7 +8,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 
 const AuthorizationFrontPage = () => (
   <>
-    <div className="l-container l-mb-5">
+    <div className="l-container">
       <Breadcrumbs
         paths={[
           {
@@ -31,16 +31,15 @@ const AuthorizationFrontPage = () => (
       <div className="row">
         <div className="l-mt-3 col-xs-12">
           <h1>Autorisasjoner og lisens</h1>
-          <hr className="b-hr b-hr--thick" />
         </div>
-        <div className="l-mt-4 col-xs-12">
+        <div className="l-mt-2 col-xs-12">
           <article className="t-body-text">
             <p>
               For å kunne jobbe som helsepersonell i Norge trenger du
               autorisasjon og/eller lisens fra Helsedirektoratet.
             </p>
             <p>
-              <Link href="#a" arrow>
+              <Link href="#a">
                 In English: How to apply for authorisation or license
               </Link>
             </p>
@@ -83,27 +82,29 @@ const AuthorizationFrontPage = () => (
           </article>
         </div>
       </div>
-      <div className="row l-mt-2">
-        <div className="col-xs-12 col-md-4 l-mt-2">
-          <Card
-            heading="Innmeldingsliste –for læresteder og fylkeskommuner"
-            url="#a"
-            arrow="right"
-          />
-        </div>
-        <div className="col-xs-12 col-md-4 l-mt-2">
-          <Card
-            heading="Finn HPR-nummer i Helsepersonellregisteret"
-            url="#a"
-            arrow="right"
-          />
-        </div>
-        <div className="col-xs-12 col-md-4 l-mt-2">
-          <Card
-            heading="Vurderer du å studere helsefag i utlandet?"
-            url="#a"
-            arrow="right"
-          />
+      <div className="l-mb-5">
+        <div className="row">
+          <div className="col-xs-12 col-md-4 l-mt-2">
+            <Card
+              heading="Innmeldingsliste –for læresteder og fylkeskommuner"
+              url="#a"
+              arrow="right"
+            />
+          </div>
+          <div className="col-xs-12 col-md-4 l-mt-2">
+            <Card
+              heading="Finn HPR-nummer i Helsepersonellregisteret"
+              url="#a"
+              arrow="right"
+            />
+          </div>
+          <div className="col-xs-12 col-md-4 l-mt-2">
+            <Card
+              heading="Vurderer du å studere helsefag i utlandet?"
+              url="#a"
+              arrow="right"
+            />
+          </div>
         </div>
       </div>
     </div>
