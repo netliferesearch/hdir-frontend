@@ -44,6 +44,30 @@ import RadioButtonGroup from '../components/RadioButtonGroup';
 import InputSearch from '../components/InputSearch';
 import LinkList from '../components/LinkList';
 
+storiesOf('Vertical spacing (example)', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <>
+      <Box>0</Box>
+      <div className="l-mt-1">
+        <Box>1 top</Box>
+      </div>
+      <div className="l-mt-2">
+        <Box>2 top</Box>
+      </div>
+      <div className="l-mt-3">
+        <Box>3 top</Box>
+      </div>
+      <div className="l-mt-4">
+        <Box>4 top</Box>
+      </div>
+      <div className="l-mt-5">
+        <Box>5 top</Box>
+      </div>
+    </>
+  ));
+
 storiesOf('Alert', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
