@@ -137,7 +137,7 @@
     border-color: $black;
   }
   &--thick {
-    border-width: 7px;
+    border-width: 4px;
   }
   &--link-color {
     border-color: $link-color;
@@ -257,7 +257,7 @@ small {
 
 .b-alert {
   padding: 1em;
-  border-left: 7px solid $grey;
+  border-left: 4px solid $grey;
   display: flex;
   justify-content: space-between;
 
@@ -526,7 +526,7 @@ table {
 
     &--thick {
       padding-bottom: 0.5em;
-      border-bottom: 7px solid $black;
+      border-bottom: 4px solid $black;
     }
   }
   &__icon {
