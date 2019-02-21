@@ -22,10 +22,6 @@ const GrantsSubPage = () => (
           <Link href="#a" button>
             Søk på tilskudd (Altinn)
           </Link>
-          <br />
-          <Link href="#a" button>
-            Rapporter på tilskudd (Altinn)
-          </Link>
           <article className="t-body-text l-mt-3">
             <h2 id="m%C3%A5l-for-ordningen">Mål for ordningen</h2>
             <p>Brukerne skal få bedre kvalitet på legevakttjenesten:</p>
