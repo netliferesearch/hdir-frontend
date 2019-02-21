@@ -12,6 +12,8 @@
     // The element which is a child of the feature needs to have 100% height.
     .b-card__feature > * {
       display: flex;
+      // Prevents subpixel issue
+      margin-top: -2px;
     }
 
     .b-card__feature {

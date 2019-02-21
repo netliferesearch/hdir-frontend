@@ -2,6 +2,7 @@ import React from 'react';
 import LinkList from '../components/LinkList';
 import Link from '../components/Link';
 import InputSearch from '../components/InputSearch';
+import Card from '../components/Card';
 
 const FrontPageHdir = () => (
   <>
@@ -94,7 +95,7 @@ const FrontPageHdir = () => (
     </div>
 
     <div className="l-container">
-      <div className="row l-mt-5 l-mb-5">
+      <div className="row l-mt-5">
         <div className="col-xs-12 col-md-10 col-md-offset-1">
           <Link href="#" heading>
             <h2>
@@ -109,6 +110,24 @@ const FrontPageHdir = () => (
           <p>
             <a href="#a">Se flere relaterte saker</a>
           </p>
+        </div>
+      </div>
+      <div className="l-mt-4 l-mb-5">
+        <div className="row">
+          <div className="col-xs-12 col-md-10 col-md-offset-1">
+            <Card
+              url="#a"
+              arrow="right"
+              mainContent={
+                <>
+                  <h3>De minste tåler minst</h3>
+                  <p>Hva skjer hvis antibiotika ikke lenger virker?</p>
+                </>
+              }
+            >
+              <img src="./antibiotika.png" alt="antibiotika" />
+            </Card>
+          </div>
         </div>
       </div>
     </div>
