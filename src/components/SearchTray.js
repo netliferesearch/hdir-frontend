@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -9,14 +9,18 @@ const searchTrayClasses = open =>
     'b-search-tray--open': open
   });
 
-const SearchTray = props => (
-  <div className={searchTrayClasses(props.open)} aria-hidden={!props.open}>
-    <div className="b-search-tray__item">{props.children}</div>
-  </div>
-);
+const SearchTray = props => {
+  const [open, setOpen] = useState(false);
 
-SearchTray.propTypes = {
-  open: PropTypes.bool
+  useEffect(() => {
+    setOpen(true);
+  }, []);
+
+  return (
+    <div className={searchTrayClasses(open)}>
+      <div className="b-search-tray__item">{props.children}</div>
+    </div>
+  );
 };
 
 export default SearchTray;
