@@ -57,7 +57,7 @@ const MemoPage = () => (
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
           <h2>§ 18. Melding om helsepersonells virksomhet</h2>
-          <h3>Lovetekst:</h3>
+          <h3>Lovtekst:</h3>
           <Quote>
             <p>
               Rundt 15 prosent av det legemeldte sykefraværet i Norge skyldes
