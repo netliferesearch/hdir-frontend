@@ -65,7 +65,7 @@ const SubscriptionSettingsPage = () => (
               }
             ]}
           />
-          <div className="l-mt-2">
+          <div className="l-mt-2 l-mb-5">
             <div className="b-link">
               <Button>Lagre endringer</Button>
             </div>
