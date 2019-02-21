@@ -155,8 +155,7 @@ const ChapterPage = () => (
               <p>etc.</p>
               <div className="l-mt-2">
                 <Collapsible
-                  heading="Seksjon under: 1"
-                  subheading="SUBHEADING UTEN INNHOLD"
+                  heading="Seksjon under: 1 – SUBHEADING UTEN INNHOLD"
                   size="medium"
                 >
                   <p>
@@ -170,8 +169,7 @@ const ChapterPage = () => (
               </div>
               <div className="l-mt-2">
                 <Collapsible
-                  heading="Seksjon under: 2"
-                  subheading="SUBHEADING UTEN INNHOLD"
+                  heading="Seksjon under: 2 – SUBHEADING UTEN INNHOLD"
                   size="medium"
                   id="someId3"
                 >
