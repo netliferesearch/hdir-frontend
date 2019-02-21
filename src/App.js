@@ -42,6 +42,7 @@ import JobPostingPage from './pages/JobPostingPage';
 import HdirTema from './pages/HdirTema';
 import Box from './components/Box';
 import GrantsPage from './pages/GrantsPage';
+import GrantsSubPage from './pages/GrantsSubPage';
 
 class App extends Component {
   componentDidMount() {
@@ -115,6 +116,7 @@ class App extends Component {
               <Route path="/transportside" component={TransportPage} />
               <Route path="/nyhetsliste" component={NewsListPage} />
               <Route path="/tilskudd" component={GrantsPage} />
+              <Route path="/tilskudd-underside" component={GrantsSubPage} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route component={NotFound} />
             </Switch>

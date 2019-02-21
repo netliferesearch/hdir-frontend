@@ -24,7 +24,7 @@ const boxIconClasses = status =>
 
 const Alert = props => (
   <section className={boxClasses(props.status, props.small, props.inline)}>
-    <div className={boxIconClasses(props.status)} />
+    {!props.hideIcon && <div className={boxIconClasses(props.status)} />}
     {props.title && <div className="b-alert__title">{props.title}</div>}
     <div className="b-alert__content">{props.children}</div>
   </section>
@@ -33,7 +33,7 @@ const Alert = props => (
 Alert.propTypes = {
   title: PropTypes.string,
   status: PropTypes.oneOf('', 'success', 'warning', 'danger', 'info'),
-  toggleIcon: PropTypes.bool,
+  hideIcon: PropTypes.bool,
   inline: PropTypes.bool,
   small: PropTypes.bool
 };
