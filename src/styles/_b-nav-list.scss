@@ -27,11 +27,6 @@
     }
     border-bottom: 1px solid $primary-color;
 
-    &--anchor {
-      padding-right: 0;
-      padding-left: 0;
-    }
-
     &--blue {
       border-left: 0.25em solid $blue-light;
       padding-left: 1.5em;
@@ -129,11 +124,6 @@
       background-color: $green-light !important; // We use important here, because we don't have the hover state to override it.
       transition: background-color 0.3s;
     }
-    &--active-child {
-      cursor: default;
-      background-color: $green-light !important;
-      transition: background-color 0.3s;
-    }
 
     &--no-arrow {
       &:before {
@@ -199,31 +189,5 @@
   }
   &--small {
     font-size: $meta-text;
-  }
-  &--sticky {
-    position: sticky;
-    top: 2rem;
-  }
-  &__child-items {
-    padding-left: 2em;
-    list-style-type: none;
-    margin: 0;
-    border-top: 1px solid $link-color;
-
-    li:last-child {
-      border-bottom: 0;
-    }
-  }
-  &__child-column {
-    display: flex;
-    min-width: 2.5em;
-
-    &:first-child {
-      padding-right: 0.5em;
-    }
-
-    &:last-child {
-      flex-grow: 1;
-    }
   }
 }

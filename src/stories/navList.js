@@ -19,7 +19,6 @@ storiesOf('NavList', module)
     'Basic',
     () => (
       <NavList
-        anchor={boolean('Anchor links', false)}
         heading={text('Heading', 'Overskrift')}
         list={object('List', [
           {
@@ -47,7 +46,6 @@ storiesOf('NavList', module)
     'With types',
     () => (
       <NavList
-        anchor={boolean('Anchor links', false)}
         heading={text('Heading', 'Overskrift')}
         list={object('List', [
           {
@@ -76,59 +74,13 @@ storiesOf('NavList', module)
     }
   )
   .addWithStaticMarkup(
-    'Nested list',
-    () => (
-      <NavList
-        noArrow
-        small
-        list={object('List', [
-          {
-            title: 'KAPITTEL 1',
-            url: '#',
-            meta: 'Nasjonale faglige retningslinjer'
-          },
-          {
-            title: 'KAPITTEL 2',
-            url: '#',
-            meta: 'Nasjonale faglige retningslinjer',
-            active: true,
-            children: [
-              {
-                title: 'Bla bla bla',
-                url: '#',
-                meta: '2.1'
-              },
-              {
-                title: 'Lorum ipsum',
-                url: '#',
-                meta: '2.2',
-                active: true
-              }
-            ]
-          },
-          {
-            title: 'KAPITTEL 3',
-            url: '#',
-            meta: 'Nasjonale faglige retningslinjer'
-          }
-        ])}
-      />
-    ),
-    {
-      notes:
-        'The links are an array of objects containing the props "title" and "url" as strings.'
-    }
-  )
-  .addWithStaticMarkup(
     'All properties',
     () => (
       <NavList
         heading={text('Heading', '')}
-        anchor={boolean('Anchor', false)}
         columns={boolean('Columns', false)}
         noArrow={boolean('No arrow', false)}
         small={boolean('Small', false)}
-        sticky={boolean('Sticky', false)}
         ordered={boolean('Ordered', false)}
         list={object('List', [
           {

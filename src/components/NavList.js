@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import shortid from 'shortid';
 
-const listClasses = (small, sticky) =>
+const listClasses = small =>
   classNames({
     'b-nav-list': true,
-    'b-nav-list--small': small,
-    'b-nav-list--sticky': sticky
+    'b-nav-list--small': small
   });
 
 const itemInfoClasses = file =>
@@ -16,10 +15,9 @@ const itemInfoClasses = file =>
     'b-nav-list__item-info--file': file
   });
 
-const listItemClasses = (anchor, columns) =>
+const listItemClasses = columns =>
   classNames({
     'b-nav-list__item': true,
-    'b-nav-list__item--anchor': anchor,
     'b-nav-list__item--column': columns
   });
 
@@ -29,22 +27,12 @@ const listItemsClasses = columns =>
     'b-nav-list__items--columns': columns
   });
 
-const listLinkClasses = (
-  anchor,
-  noArrow,
-  active,
-  activeChild,
-  ordered,
-  file,
-  url
-) =>
+const listLinkClasses = (noArrow, active, ordered, file, url) =>
   classNames({
     'b-nav-list__link': true,
-    'b-nav-list__link--anchor': anchor,
     'b-nav-list__link--arrow': url,
     'b-nav-list__link--no-arrow': noArrow || file,
     'b-nav-list__link--active': active,
-    'b-nav-list__link--active-child': activeChild,
     'b-nav-list__link--ordered': ordered
   });
 
@@ -52,23 +40,21 @@ const NavList = props => {
   const { list: list = [] } = props;
 
   return (
-    <nav className={listClasses(props.small, props.sticky)} id={props.id}>
+    <nav className={listClasses(props.small)} id={props.id}>
       {props.heading && (
         <div className="b-nav-list__heading">{props.heading}</div>
       )}
       <ul className={listItemsClasses(props.columns)}>
         {list.map(item => (
           <li
-            className={listItemClasses(props.anchor, props.columns)}
+            className={listItemClasses(props.columns)}
             key={shortid.generate()}
           >
             <a
               href={item.url}
               className={listLinkClasses(
-                props.anchor,
                 props.noArrow,
                 item.active,
-                item.activeChild,
                 props.ordered,
                 item.file,
                 item.url
@@ -96,33 +82,6 @@ const NavList = props => {
                 </div>
               )}
             </a>
-            {item.children && (
-              <ul className="b-nav-list__child-items">
-                {item.children.map(child => (
-                  <li key={shortid.generate()} className="b-nav-list__item">
-                    <a
-                      href={child.url}
-                      className={listLinkClasses(
-                        false,
-                        true,
-                        false,
-                        child.active,
-                        child.file
-                      )}
-                    >
-                      {child.meta && (
-                        <span className="b-nav-list__child-column">
-                          {child.meta}
-                        </span>
-                      )}
-                      <span className="b-nav-list__child-column">
-                        {child.title}
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
           </li>
         ))}
       </ul>
@@ -131,7 +90,6 @@ const NavList = props => {
 };
 
 NavList.propTypes = {
-  anchor: PropTypes.bool,
   heading: PropTypes.string,
   list: PropTypes.arrayOf(
     PropTypes.shape({
@@ -141,21 +99,12 @@ NavList.propTypes = {
       active: PropTypes.bool,
       file: PropTypes.bool,
       infoText: PropTypes.string,
-      topic: PropTypes.string,
-      children: PropTypes.arrayOf(
-        PropTypes.shape({
-          title: PropTypes.string.isRequired,
-          description: PropTypes.string,
-          url: PropTypes.string,
-          active: PropTypes.bool
-        })
-      )
+      topic: PropTypes.string
     })
   ).isRequired,
   columns: PropTypes.bool,
   noArrow: PropTypes.bool,
   small: PropTypes.bool,
-  sticky: PropTypes.bool,
   ordered: PropTypes.bool
 };
 
