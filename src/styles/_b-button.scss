@@ -1,56 +1,56 @@
 .b-button {
-  &__download {
+  display: inline-block;
+  color: white;
+  background-color: $link-color;
+  border: 2px solid $link-color;
+  padding: 0.5em 2em;
+  border-radius: 2em;
+  font-size: $base-font-size;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &--download {
     &:after {
-      content: ' ↓';
+      content: '↓';
+      margin-left: 0.5em;
       box-shadow: 0 1px 0 transparent;
-      color: $link-color;
+      color: inherit;
     }
   }
-  &__button {
-    display: inline-block;
-    color: white;
-    background-color: $link-color;
+
+  &--arrow {
+    &:after {
+      content: ' →';
+      box-shadow: 0 1px 0 transparent;
+      color: inherit;
+    }
+  }
+  &--arrow-down {
+    &:before {
+      content: '↓ ';
+      box-shadow: 0 1px 0 transparent;
+      color: inherit;
+    }
+  }
+  &--small {
+    font-size: $meta-text;
+  }
+
+  &--plain {
+    border: 0;
+    background: transparent;
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &--secondary {
     border: 2px solid $link-color;
-    padding: 0.5em 2em;
-    border-radius: 2em;
-    font-size: $base-font-size;
-    white-space: nowrap;
-    cursor: pointer;
-
-    &--arrow {
-      &:after {
-        content: ' →';
-        box-shadow: 0 1px 0 transparent;
-        color: inherit;
-      }
-    }
-    &--arrow-down {
-      &:before {
-        content: '↓ ';
-        box-shadow: 0 1px 0 transparent;
-        color: inherit;
-      }
-    }
-    &--small {
-      font-size: $meta-text;
-    }
-
-    &--plain {
-      border: 0;
-      background: transparent;
-      color: $black;
-      text-decoration: underline;
-    }
-
-    &--secondary {
-      border: 2px solid $link-color;
-      color: $link-color !important;
-      background: white;
-    }
-    &--secondary-dark {
-      border: 2px solid $secondary-color;
-      color: $secondary-color !important;
-      background: white;
-    }
+    color: $link-color !important;
+    background: white;
+  }
+  &--secondary-dark {
+    border: 2px solid $secondary-color;
+    color: $secondary-color !important;
+    background: white;
   }
 }

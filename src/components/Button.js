@@ -2,32 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const buttonClasses = (arrow, small, secondary, plain) =>
+const buttonClasses = (arrow, download, small, secondary, plain) =>
   classNames({
-    'b-button__button': true,
-    'b-button__button--secondary': secondary,
-    'b-button__button--arrow': arrow,
-    'b-button__button--small': small,
-    'b-button__button--plain': plain
+    'b-button': true,
+    'b-button--download': download,
+    'b-button--secondary': secondary,
+    'b-button--arrow': arrow,
+    'b-button--small': small,
+    'b-button--plain': plain
   });
 
 const Button = props => (
-  <div className="b-button">
-    <button
-      className={buttonClasses(
-        props.arrow,
-        props.small,
-        props.secondary,
-        props.plain
-      )}
-    >
-      {props.children}
-    </button>
-  </div>
+  <button
+    className={buttonClasses(
+      props.arrow,
+      props.download,
+      props.small,
+      props.secondary,
+      props.plain
+    )}
+  >
+    {props.children}
+  </button>
 );
 
 Button.propTypes = {
   arrow: PropTypes.bool,
+  download: PropTypes.bool,
   small: PropTypes.bool,
   secondary: PropTypes.bool,
   plain: PropTypes.bool

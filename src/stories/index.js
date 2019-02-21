@@ -150,7 +150,13 @@ storiesOf('Button', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <Button arrow={boolean('Arrow', false)} small={boolean('Small', false)}>
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
       {text('Content', 'Submit')}
     </Button>
   ));
@@ -593,6 +599,11 @@ storiesOf('Quote', module)
         odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
         voluptatem sequi nesciunt.
       </p>
+      <ul>
+        <li>abc</li>
+        <li>def</li>
+        <li>ghi</li>
+      </ul>
       <p>
         Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
         consectetur, adipisci velit, sed quia non numquam eius modi tempora
@@ -600,6 +611,11 @@ storiesOf('Quote', module)
         ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
         laboriosam, nisi ut aliquid ex ea commodi consequatur?
       </p>
+      <ol>
+        <li>abc</li>
+        <li>def</li>
+        <li>ghi</li>
+      </ol>
       <p>
         Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo

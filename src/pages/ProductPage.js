@@ -49,7 +49,7 @@ const ProductPage = () => (
               ]}
             />
             <div className="l-mt-2 t-sm-center">
-              <button className="b-button b-button__button b-button__button--secondary b-button__button--small">
+              <button className="b-button b-button--secondary b-button--small">
                 ↓ Vis alle (3)
               </button>
             </div>
@@ -82,7 +82,7 @@ const ProductPage = () => (
               ]}
             />
             <div className="l-mt-2 t-sm-center">
-              <button className="b-button b-button__button b-button__button--secondary b-button__button--small ">
+              <button className="b-button b-button--secondary b-button--small ">
                 ↓ Vis alle (7)
               </button>
             </div>

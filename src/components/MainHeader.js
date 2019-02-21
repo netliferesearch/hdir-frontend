@@ -74,7 +74,7 @@ class MainHeader extends React.Component {
                       aria-label={this.props.name}
                     />
                     <button
-                      className="b-button b-button__button b-button__button--small b-button__button--secondary"
+                      className="b-button b-button--small b-button--secondary"
                       onClick={this.toggleMobileNav}
                     >
                       Lukk
@@ -106,7 +106,7 @@ class MainHeader extends React.Component {
                 {!this.props.hideSearch && (
                   <button
                     onClick={this.toggleSearch}
-                    className="b-button b-button__button b-button__button--secondary-dark b-button__button--small"
+                    className="b-button b-button--secondary-dark b-button--small"
                   >
                     {this.state.searchButtonText}{' '}
                     {!this.state.searchOpen && (
@@ -125,7 +125,7 @@ class MainHeader extends React.Component {
               <nav className="b-main-header__nav">
                 <button
                   onClick={this.toggleMobileNav}
-                  className="b-button b-button__button b-button__button--secondary-dark b-button__button--small"
+                  className="b-button b-button--secondary-dark b-button--small"
                 >
                   Meny
                 </button>
@@ -133,7 +133,7 @@ class MainHeader extends React.Component {
                 {!this.props.hideSearch && (
                   <button
                     onClick={this.toggleSearch}
-                    className="b-button b-button__button b-button__button--secondary-dark b-button__button--small"
+                    className="b-button b-button--secondary-dark b-button--small"
                   >
                     {this.state.searchButtonText}{' '}
                     {!this.state.searchOpen && (
