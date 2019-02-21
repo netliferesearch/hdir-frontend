@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavList from '../components/NavList';
+import SectionSidebar from '../components/SectionSidebar';
 import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
@@ -40,11 +40,7 @@ const MemoPage = () => (
       </div>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4">
-          <NavList
-            anchor
-            sticky
-            small
-            className="l-sticky"
+          <SectionSidebar
             heading="Innhold på denne siden"
             list={[
               {

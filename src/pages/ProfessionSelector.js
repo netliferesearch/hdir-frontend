@@ -1,6 +1,7 @@
 import React from 'react';
 
 import NavList from '../components/NavList';
+import SectionSidebar from '../components/SectionSidebar';
 import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 import SelectInline from '../components/Select';
@@ -59,19 +60,7 @@ const ProfessionSelector = () => (
       </div>
       <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-bleed-right l-mb-4">
-          <NavList
-            anchor
-            sticky
-            small
-            className="l-sticky"
-            heading="Innhold på denne siden"
-            list={[
-              { title: 'Refusjonskrav', url: '#', active: 'true' },
-              { title: 'Utbetaling og vedtak', url: '#' },
-              { title: 'Kan kravet bli avvist?', url: '#' },
-              { title: 'Statistikk', url: '#' }
-            ]}
-          />
+          <SectionSidebar heading="innhold på denne siden" />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 l-bleed-left t-body-text">
           <h2>Refusjonskrav</h2>

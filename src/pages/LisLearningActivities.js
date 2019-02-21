@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavList from '../components/NavList';
+import SectionSidebar from '../components/SectionSidebar';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
@@ -32,24 +32,7 @@ const LisLearningActivities = () => (
 
       <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
-          <NavList
-            sticky
-            className="l-sticky"
-            anchor
-            small
-            heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
-            list={[
-              {
-                title: 'Læringsmål',
-                url: '#'
-              },
-              {
-                title: 'Læringsaktiviteter',
-                url: '#'
-              },
-              { title: 'Link til annen fritekst', url: '#' }
-            ]}
-          />
+          <SectionSidebar title="SPESIALUTDANNING INNEN BARNEKIRURGI" />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
           <h1>Læringsaktiviteter</h1>

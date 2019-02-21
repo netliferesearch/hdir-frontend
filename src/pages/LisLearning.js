@@ -1,5 +1,5 @@
 import React from 'react';
-import NavList from '../components/NavList';
+import SectionSidebar from '../components/SectionSidebar';
 import PageMeta from '../components/PageMeta';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
@@ -32,21 +32,11 @@ const LisLearning = () => (
       />
       <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
-          <NavList
-            sticky
-            small
-            className="l-sticky"
-            noArrow
+          <SectionSidebar
             heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
             list={[
-              {
-                title: 'Læringsmål',
-                url: '#a'
-              },
-              {
-                title: 'Læringsaktiviteter',
-                url: '#a'
-              },
+              { title: 'Læringsmål', url: '#a' },
+              { title: 'Læringsaktiviteter', url: '#a' },
               { title: 'Link til annen fritekst', url: '#a' }
             ]}
           />

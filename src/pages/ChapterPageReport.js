@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavList from '../components/NavList';
+import SectionSidebar from '../components/SectionSidebar';
 import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
 import Box from '../components/Box';
@@ -38,11 +38,7 @@ const ChapterPageReport = () => (
     <div className="l-container">
       <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
-          <NavList
-            anchor
-            sticky
-            small
-            className="l-sticky"
+          <SectionSidebar
             heading="Innhold på denne siden"
             list={[
               { title: 'Introduksjon', url: '#', active: true },
@@ -65,6 +61,7 @@ const ChapterPageReport = () => (
           />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
+          <h2>En overskrift</h2>
           <p>
             Dette kapitlet handler om ventetid til oppstart av helsehjelp i
             spesialisthelsetjenesten. Vi viser ventetid for somatiske fagområder
