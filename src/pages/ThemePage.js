@@ -19,7 +19,7 @@ const ThemePage = () => (
         />
       </div>
       <div className="row">
-        <div className="col-xs-12 l-mt-3 l-mb-4">
+        <div className="col-xs-12 l-mt-3">
           <NavList
             columns
             list={[
@@ -30,7 +30,7 @@ const ThemePage = () => (
           />
         </div>
       </div>
-      <div className="row">
+      <div className="row l-mt-2">
         <div className="col-xs-12 col-md l-mt-2">
           <Card
             heading="Barns miljø og sikkerhet"
@@ -54,7 +54,7 @@ const ThemePage = () => (
         </div>
       </div>
 
-      <div className="row l-mt-5">
+      <div className="row l-mt-4">
         <div className="col-xs-12">
           <h2>Nasjonale anbefalinger, råd og pakkeforløp</h2>
           <div className="l-mt-1">
@@ -120,7 +120,7 @@ const ThemePage = () => (
         </div>
       </div>
 
-      <div className="row l-mt-5">
+      <div className="row l-mt-4">
         <div className="col-xs-12">
           <List
             heading="RELEVANTE RETNINGSLINJER, LOV OG PAKKEFORLØP"
@@ -157,7 +157,7 @@ const ThemePage = () => (
         </div>
       </div>
 
-      <div className="row l-mt-5">
+      <div className="row l-mt-4">
         <div className="col-xs-12">
           <div className="js-expand-list" data-start-limit="2">
             <List
@@ -202,7 +202,7 @@ const ThemePage = () => (
       </div>
 
       <div className="row">
-        <div className="col-xs-12 l-mt-5">
+        <div className="col-xs-12 l-mt-4">
           <h2>Tilskudd</h2>
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
@@ -222,7 +222,7 @@ const ThemePage = () => (
       </div>
 
       <div className="row">
-        <div className="col-xs-12 l-mt-5">
+        <div className="col-xs-12 l-mt-4">
           <h2>Statistikk</h2>
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
@@ -288,14 +288,14 @@ const ThemePage = () => (
       </div>
 
       <div className="row">
-        <div className="col-xs-12 l-mt-5">
+        <div className="col-xs-12 l-mt-4">
           <h2>Rapporter</h2>
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
         </div>
       </div>
-      <div className="row l-mt-2">
+      <div className="row">
         <div className="col-xs-12 col-md-6 l-mt-2">
           <Card heading="Les rapport" url="#a">
             <Image
@@ -352,10 +352,10 @@ const ThemePage = () => (
         </div>
       </div>
 
-      <div className="row l-mt-5">
+      <div className="row l-mt-4">
         <div className="col-xs-12">
           <h2>Konferanser</h2>
-          <div className="l-mt-1 l-mb-1">
+          <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
         </div>
@@ -380,10 +380,10 @@ const ThemePage = () => (
         </div>
       </div>
 
-      <div className="row l-mt-5">
+      <div className="row l-mt-4">
         <div className="col-xs-12">
           <h2>Verktøy</h2>
-          <div className="l-mt-1 l-mb-1">
+          <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
         </div>
@@ -399,10 +399,10 @@ const ThemePage = () => (
         </div>
       </div>
 
-      <div className="row l-mt-5">
+      <div className="row l-mt-4">
         <div className="col-xs-12">
           <h2>Trykkmateriell</h2>
-          <div className="l-mt-1 l-mb-1">
+          <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
         </div>
