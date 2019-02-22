@@ -73,6 +73,8 @@ class InputSearch extends React.Component {
   }
 
   componentDidMount() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('searchquery');
     // Goes through the suggestions, and put them in the input search field, as placeholder
     const interval = setInterval(() => {
       const index = this.state.placeholderSuggestionIndex;
@@ -89,7 +91,8 @@ class InputSearch extends React.Component {
     }
 
     this.setState({
-      placeholderInterval: interval
+      placeholderInterval: interval,
+      value: searchQuery ? searchQuery : ''
     });
   }
 
