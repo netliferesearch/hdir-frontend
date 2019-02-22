@@ -8,7 +8,7 @@ import Link from '../components/Link';
 import Image from '../components/Image';
 import Statistics from '../components/Statistics';
 
-const HdirTema = () => (
+const ThemePage = () => (
   <div>
     <div className="l-container">
       <div className="l-mt-3">
@@ -463,4 +463,4 @@ const HdirTema = () => (
   </div>
 );
 
-export default HdirTema;
+export default ThemePage;

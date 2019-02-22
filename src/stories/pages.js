@@ -24,7 +24,7 @@ import ProfessionSelector from '../pages/ProfessionSelector';
 import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
 import FrontPageHelfo from '../pages/FrontPageHelfo';
 import FrontPageHdir from '../pages/FrontPageHdir';
-import HdirTema from '../pages/HdirTema';
+import ThemePage from '../pages/ThemePage';
 
 storiesOf('Pages', module)
   .addDecorator(checkA11y)
@@ -60,7 +60,7 @@ storiesOf('Pages', module)
   ))
   .addWithStaticMarkup('Hdir Tema', () => (
     <HashRouter>
-      <HdirTema />
+      <ThemePage />
     </HashRouter>
   ))
   .addWithStaticMarkup('Hearing page', () => (
