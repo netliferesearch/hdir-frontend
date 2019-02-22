@@ -88,6 +88,12 @@
         width: 100%;
         text-align: right;
         content: '↓';
+        @include mq($until: $tablet) {
+          position: relative;
+          margin-left: 0.5em;
+          border-bottom: 0;
+          width: auto;
+        }
       }
     }
   }
