@@ -1,0 +1,39 @@
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  .b-main-header {
+    display: none;
+  }
+  .b-breadcrumbs {
+    display: none;
+  }
+  .b-footer {
+    display: none;
+  }
+  aside {
+    display: none;
+  }
+  article {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+  body {
+    font-size: 16px;
+    -webkit-print-color-adjust: exact;
+  }
+  .b-article-intro__image-wrapper {
+    display: none;
+  }
+  .b-article-intro__text {
+    width: 100%;
+  }
+  // We assume the search tray and the box for the bottom is on the same level
+  .b-search-tray ~ .b-box {
+    display: none;
+  }
+}
