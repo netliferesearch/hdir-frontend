@@ -28,6 +28,13 @@ const allNewsItems = [
     url: '/artikkel'
   },
   {
+    title: 'æøå',
+    category: 'news',
+    publishDate: '02.01.2015',
+    intro: 'Test av norske bokstaver, æøå',
+    url: 'http://norge.no'
+  },
+  {
     title: 'This is news #5',
     category: 'news',
     publishDate: '25.07.2018',
