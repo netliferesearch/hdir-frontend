@@ -7,6 +7,7 @@ import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SectionSidebar from '../components/SectionSidebar';
+import Statistics from '../components/Statistics';
 
 const ArticlePage = () => (
   <>
@@ -89,6 +90,11 @@ const ArticlePage = () => (
             Likevel er det mange som står utenfor arbeidslivet og ønsker seg
             inn.
           </p>
+          <Statistics
+            flexText
+            bigText="1.4%"
+            smallText="Andel av hofteprotese-operasjonene som endte med infeksjon i operasjonsimrådet i tredje tertial i 2017."
+          />
           <p>
             Hele 96 prosent svarte at arbeid er{' '}
             <a href="#a">
@@ -104,10 +110,10 @@ const ArticlePage = () => (
             arbeidslivet, utgjør personer med psykiske lidelser en stor og
             økende gruppe.
           </p>
-          <Box color="blueDark" square>
-            Norske og internasjonale studier viser at 30 – 50 prosent av den
-            voksne befolkningen vil få en psykisk lidelse i løpet av livet.
-          </Box>
+          <Statistics
+            smallText="Tall for de regionale helseforetakene viser at det er lite variasjon mellom reglene."
+            icon="../icons/pie.svg"
+          />
           <div className="l-mt-2">
             <Box color="yellow" square>
               <h2>Ti råd for et inkluderende arbeidsliv</h2>
