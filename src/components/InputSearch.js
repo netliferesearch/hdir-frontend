@@ -72,6 +72,14 @@ class InputSearch extends React.Component {
     window.location = `${searchPageUrl}?searchquery=${this.state.value}`;
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.autoFocus !== prevProps.autoFocus) {
+      // Find the input field and focus on it.
+      // This is used when we open the search from the header.
+      document.querySelector('.b-input-search__field').focus();
+    }
+  }
+
   componentDidMount() {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
@@ -83,12 +91,6 @@ class InputSearch extends React.Component {
           index < placeholderSuggestions.length - 1 ? index + 1 : 0
       });
     }, 2000);
-
-    if (this.props.autoFocus) {
-      // Find the input field and focus on it.
-      // This is used when we open the search from the header.
-      document.querySelector('.b-input-search__field').focus();
-    }
 
     this.setState({
       placeholderInterval: interval,
@@ -138,6 +140,7 @@ class InputSearch extends React.Component {
           suggestions: [
             ...data,
             data.length && {
+              // This row is the blue (or orange) suggestion at the bottom
               ...data[data.length - 1],
               title: value,
               category: '',

@@ -35,17 +35,15 @@ class MainHeader extends React.Component {
   render() {
     return (
       <>
-        {this.state.searchOpen && (
-          <SearchTray>
-            <div className="l-container">
-              <p className="t--white">
-                Søk etter reningslinjer, anbefalinger, lover, statistikk,
-                tilskudd...
-              </p>
-              <InputSearch dark autoFocus />
-            </div>
-          </SearchTray>
-        )}
+        <SearchTray open={this.state.searchOpen}>
+          <div className="l-container">
+            <p className="t--white">
+              Søk etter reningslinjer, anbefalinger, lover, statistikk,
+              tilskudd...
+            </p>
+            <InputSearch dark autoFocus={this.state.searchOpen} />
+          </div>
+        </SearchTray>
         <div className="l-container">
           <div className="b-main-header">
             <a href="/" className="b-main-header__logo-link">
