@@ -436,6 +436,10 @@ table {
     border-bottom: 1px solid $primary-color;
     font-weight: bold;
 
+    a {
+      @include underline(transparent);
+    }
+
     &--thick {
       padding-bottom: 0.5em;
       border-bottom: 4px solid $black;
@@ -469,6 +473,11 @@ table {
     }
     &--active {
       color: $black !important;
+      cursor: default;
+
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
   &__title {
