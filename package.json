@@ -17,6 +17,7 @@
     "sass-mq": "^5.0.0",
     "shortid": "^2.2.13",
     "source-map-explorer": "^1.7.0",
+    "url-search-params": "^1.1.0",
     "whatwg-fetch": "^3.0.0",
     "zenscroll": "^4.0.2"
   },
