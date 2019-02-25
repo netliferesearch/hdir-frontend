@@ -38,7 +38,7 @@ const ListItem = ({ props }) => {
   return (
     <>
       <a
-        href={props.url}
+        href={!props.active && props.url}
         className={linkClasses(props.small, props.active, props.children)}
       >
         {props.title && (
@@ -135,7 +135,11 @@ const SectionSidebar = props => {
             aria-hidden
           />
         )}
-        {props.heading && <span>{props.heading}</span>}
+        {props.heading && props.headingUrl ? (
+          <a href={props.headingUrl}>{props.heading}</a>
+        ) : (
+          <span>{props.heading}</span>
+        )}
       </div>
       <nav>
         {list.map((item, index) => {
@@ -159,6 +163,7 @@ const SectionSidebar = props => {
 
 SectionSidebar.propTypes = {
   heading: PropTypes.string,
+  headingUrl: PropTypes.string,
   icon: PropTypes.string,
   list: PropTypes.arrayOf(
     PropTypes.shape({

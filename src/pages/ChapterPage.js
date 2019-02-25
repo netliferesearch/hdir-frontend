@@ -21,6 +21,7 @@ const ChapterPage = () => (
         <aside className="col-md-4 l-hide-to-lg l-bleed-right">
           <SectionSidebar
             heading="Nasjonal faglig retningslinje for svangerskapsdiabetes"
+            headingUrl="#a"
             icon="../icons/Konferanser.svg"
             list={[
               {
