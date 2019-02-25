@@ -30,22 +30,36 @@ const ThemePage = () => (
           />
         </div>
       </div>
-      <div className="row l-mt-2">
-        <div className="col-xs-12 col-md l-mt-2">
+      <div className="l-card-grid  l-mt-2">
+        <div className="l-mt-1">
           <Card
             heading="Barns miljø og sikkerhet"
             url="#a"
             text="Brosjyren Når barnet skader seg – Råd til småbarnsforeldre om førstehjelp"
           />
         </div>
-        <div className="col-xs-12 col-md l-mt-2">
+        <div className="l-mt-1">
           <Card
             heading="Roller i skolehelsetjenesten"
             url="#a"
             text="Hvem gjør hva i skolehelsetjenesten?"
           />
         </div>
-        <div className="col-xs-12 col-md l-mt-2">
+        <div className="l-mt-1">
+          <Card
+            heading="Noe annet som er viktig"
+            url="#a"
+            text="og som vi skriver mer om her"
+          />
+        </div>
+        <div className="l-mt-1">
+          <Card
+            heading="Noe annet som er viktig"
+            url="#a"
+            text="og som vi skriver mer om her"
+          />
+        </div>
+        <div className="l-mt-1">
           <Card
             heading="Noe annet som er viktig"
             url="#a"
