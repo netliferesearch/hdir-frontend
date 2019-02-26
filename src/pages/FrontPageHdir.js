@@ -14,7 +14,7 @@ const FrontPageHdir = () => (
             <p>
               <strong>Hva leter du etter?</strong>
             </p>
-            <InputSearch id="xx" />
+            <InputSearch />
           </div>
         </div>
       </div>

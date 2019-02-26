@@ -9,7 +9,7 @@ const SimpleSerp = () => (
     <div className="l-container">
       <div className="row">
         <div className="col-md-6 col-md-offset-4">
-          <InputSearch id="xx" showSuggestions={false} />
+          <InputSearch showSuggestions={false} />
           <p className="l-mt-3">120 treff på Svangerskapsd</p>
         </div>
       </div>

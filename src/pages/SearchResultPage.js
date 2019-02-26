@@ -11,7 +11,7 @@ const SearchResultPage = () => (
     <div className="l-container">
       <div className="row l-mt-3">
         <div className="col-xs-12 col-md-8 col-md-offset-4">
-          <InputSearch id="x" />
+          <InputSearch />
         </div>
       </div>
       <div className="row l-mt-4">
