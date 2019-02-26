@@ -112,7 +112,7 @@ const NewsListPage = () => (
               </label>
               <input
                 type="text"
-                name="email-subscription"
+                id="email-subscription"
                 className="b-input-text__input"
               />
               <div className="b-input-text__description">
