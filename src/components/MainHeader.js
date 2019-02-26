@@ -41,7 +41,11 @@ class MainHeader extends React.Component {
               Søk etter reningslinjer, anbefalinger, lover, statistikk,
               tilskudd...
             </p>
-            <InputSearch dark autoFocus={this.state.searchOpen} />
+            <InputSearch
+              dark
+              autoFocus={this.state.searchOpen}
+              label={this.props.label}
+            />
           </div>
         </SearchTray>
         <div className="l-container">
@@ -112,8 +116,8 @@ class MainHeader extends React.Component {
                     {!this.state.searchOpen && (
                       <img
                         src="./icons/search.svg"
-                        alt=""
                         className="b-icon b-icon--small"
+                        role="presentation"
                       />
                     )}
                   </button>
@@ -139,8 +143,8 @@ class MainHeader extends React.Component {
                     {!this.state.searchOpen && (
                       <img
                         src="./icons/search.svg"
-                        alt=""
                         className="b-icon b-icon--small"
+                        role="presentation"
                       />
                     )}
                   </button>
@@ -157,7 +161,8 @@ class MainHeader extends React.Component {
 MainHeader.propTypes = {
   hideSearch: PropTypes.bool,
   name: PropTypes.string,
-  links: PropTypes.arrayOf(PropTypes.object)
+  links: PropTypes.arrayOf(PropTypes.object),
+  label: PropTypes.string
 };
 
 export default MainHeader;

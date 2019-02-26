@@ -116,7 +116,20 @@ class InputSearch extends React.Component {
   renderInputComponent(inputProps) {
     return (
       <div className="b-input-search">
+        {this.props.label && (
+          <label
+            htmlFor="inputSearch"
+            className={classNames({
+              'b-input-search__label': true,
+              'b-input-search__label--dark': inputProps.dark
+            })}
+          >
+            {this.props.label}
+          </label>
+        )}
         <input
+          title="Søk"
+          id="inputSearch"
           {...inputProps}
           className={classNames({
             'b-input-search__field': true,
@@ -217,7 +230,6 @@ InputSearch.propTypes = {
 
 InputSearch.defaultProps = {
   type: 'search',
-  label: '',
   showSuggestions: true
 };
 

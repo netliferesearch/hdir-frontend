@@ -36,8 +36,15 @@ if (headerElement) {
   );
   const links = JSON.parse(headerElement.getAttribute('data-links'));
 
+  const label = searchElement.getAttribute('data-label') || '';
+
   ReactDOM.render(
-    <MainHeader name={name} hideSearch={hideSearch} links={links} />,
+    <MainHeader
+      name={name}
+      hideSearch={hideSearch}
+      links={links}
+      label={label}
+    />,
     headerElement
   );
 }
@@ -48,8 +55,10 @@ if (searchElement) {
 
   const dark = Boolean(searchElement.getAttribute('data-dark') !== null);
 
+  const label = searchElement.getAttribute('data-label') || '';
+
   ReactDOM.render(
-    <InputSearch hideSuggestions={hideSuggestions} dark={dark} />,
+    <InputSearch hideSuggestions={hideSuggestions} dark={dark} label={label} />,
     searchElement
   );
 }
