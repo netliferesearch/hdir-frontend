@@ -265,7 +265,7 @@ storiesOf('Card', module)
       <Box color="blueDark" square>
         <img
           src={text('Statistics: Icon', './icons/pie.svg')}
-          alt=""
+          alt="Illustrasjon av et kakediagram"
           className="b-icon b-icon--large"
         />
       </Box>
@@ -425,7 +425,7 @@ storiesOf('InputSearch', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <InputSearch dark={boolean('Dark mode', false)} />
+    <InputSearch dark={boolean('Dark mode', false)} label={text('Label', '')} />
   ));
 
 storiesOf('Link', module)

@@ -11,7 +11,11 @@ const textWrapperClasses = flex =>
 const Statistics = props => (
   <div className="b-statistics">
     {props.icon && (
-      <img className="b-statistics__icon" src={props.icon} alt="" />
+      <img
+        className="b-statistics__icon"
+        src={props.icon}
+        role="presentation"
+      />
     )}
     <div className={textWrapperClasses(props.flexText)}>
       {props.bigText && (
