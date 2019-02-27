@@ -66,13 +66,19 @@ if (searchElement) {
 if (sectionSidebarElement) {
   const heading = sectionSidebarElement.getAttribute('data-heading');
   const icon = sectionSidebarElement.getAttribute('data-icon');
+  const headingUrl = sectionSidebarElement.getAttribute('data-heading-url');
   const list =
     sectionSidebarElement.getAttribute('data-list') === null
       ? []
       : JSON.parse(sectionSidebarElement.getAttribute('data-list'));
 
   ReactDOM.render(
-    <SectionSidebar heading={heading} icon={icon} list={list} />,
+    <SectionSidebar
+      heading={heading}
+      icon={icon}
+      list={list}
+      headingUrl={headingUrl}
+    />,
     sectionSidebarElement
   );
 }
