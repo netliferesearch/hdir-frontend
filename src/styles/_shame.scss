@@ -454,7 +454,7 @@ table {
   &__link {
     display: block;
     padding: 0.75em 0.5em;
-    border-top: 1px solid $primary-color;
+    border-top: 1px solid $link-color;
     font-size: $meta-text;
     color: $link-color !important;
     @include underline(transparent);

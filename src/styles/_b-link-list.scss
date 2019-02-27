@@ -8,8 +8,8 @@
     box-sizing: border-box;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    @include link-init($secondary-color, false);
-    border-bottom: 1px solid $secondary-color !important;
+    @include link-init($link-color, false);
+    border-bottom: 1px solid $link-color !important;
 
     &:hover {
       background-color: $grey-lighter;

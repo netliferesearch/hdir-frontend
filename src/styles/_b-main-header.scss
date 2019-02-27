@@ -31,10 +31,10 @@
     text-decoration: none;
     margin-right: 1.5rem;
 
-    @include link-init($secondary-color);
+    @include link-init($link-color);
 
     &:hover {
-      @include underline($secondary-color);
+      @include underline($link-color);
     }
   }
   &__menu-overlay {
