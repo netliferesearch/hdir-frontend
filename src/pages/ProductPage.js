@@ -4,6 +4,7 @@ import ChapterHeading from '../components/ChapterHeading';
 import Button from '../components/Button';
 import Box from '../components/Box';
 import Link from '../components/Link';
+import PageMeta from '../components/PageMeta';
 import LongShortHeading from '../components/LongShortHeading';
 
 const ProductPage = () => (
@@ -144,6 +145,15 @@ const ProductPage = () => (
             <Button>Last ned alle</Button>
           </div>
         </Box>
+
+        <div className="l-mt-4">
+          <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#a" />
+        </div>
+        <div className="l-mt-2">
+          <Link href="#a" small icon="../icons/print.svg">
+            Skriv ut hele retningslinjen
+          </Link>
+        </div>
       </div>
 
       <div className="col-xs-12 l-mt-4 l-mb-5">
