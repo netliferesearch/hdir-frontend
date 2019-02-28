@@ -102,6 +102,9 @@ const FrontPage = () => (
         <Link to="/tilskudd">Tillskuddside</Link>
       </p>
       <p>
+        <Link to="/trykksaker">Trykksaker</Link>
+      </p>
+      <p>
         <Link to="/tilskudd-underside">Tillskudd underside</Link>
       </p>
     </div>

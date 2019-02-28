@@ -16,6 +16,25 @@
     }
   }
 
+  &--download {
+    width: calc(100% - 5.5rem);
+    &:after {
+      content: 'PDF ↓';
+      font-size: $meta-text;
+      right: -5.5rem;
+      @include underline($link-color);
+      @include mq($until: tablet) {
+        top: auto;
+        bottom: 0;
+        margin-left: calc(1% + 0.5rem);
+      }
+    }
+  }
+
+  &__download {
+    float: right;
+  }
+
   &__email {
   }
   &__meta {

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import SquareImage from '../components/SquareImage';
 
@@ -9,7 +10,12 @@ const ListItemType = props => {
   return (
     <>
       {type === 'news' && (
-        <div className="b-list-item-type">
+        <div
+          className={classNames({
+            'b-list-item-type': true,
+            'b-list-item-type--download': fields.download
+          })}
+        >
           {fields.heading && <h2 className="h3">{fields.heading}</h2>}
           {fields.category && (
             <p className="b-list-item-type__category">{fields.category}</p>
@@ -27,7 +33,12 @@ const ListItemType = props => {
       )}
 
       {type === 'conference' && (
-        <div className="b-list-item-type">
+        <div
+          className={classNames({
+            'b-list-item-type': true,
+            'b-list-item-type--download': fields.download
+          })}
+        >
           {fields.heading && <h2 className="h3">{fields.heading}</h2>}
           {fields.category && (
             <p className="b-list-item-type__category">{fields.category}</p>
@@ -61,7 +72,12 @@ const ListItemType = props => {
       )}
 
       {type === 'pressRelease' && (
-        <div className="b-list-item-type">
+        <div
+          className={classNames({
+            'b-list-item-type': true,
+            'b-list-item-type--download': fields.download
+          })}
+        >
           <div className="b-list-item-type__flex-wrapper">
             <div className="b-list-item-type__image">
               <SquareImage src={fields.image} alt={fields.heading} />
@@ -86,7 +102,12 @@ const ListItemType = props => {
       )}
 
       {type === 'grantFunding' && (
-        <div className="b-list-item-type">
+        <div
+          className={classNames({
+            'b-list-item-type': true,
+            'b-list-item-type--download': fields.download
+          })}
+        >
           {fields.heading && <h2 className="h3">{fields.heading}</h2>}
           {fields.category && (
             <p className="b-list-item-type__category">{fields.category}</p>
@@ -102,7 +123,12 @@ const ListItemType = props => {
       )}
 
       {type === 'generic' && (
-        <div className="b-list-item-type">
+        <div
+          className={classNames({
+            'b-list-item-type': true,
+            'b-list-item-type--download': fields.download
+          })}
+        >
           {fields.heading && <h2 className="h3">{fields.heading}</h2>}
           {fields.category && (
             <p className="b-list-item-type__category">{fields.category}</p>
