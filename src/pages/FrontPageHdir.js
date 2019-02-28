@@ -6,6 +6,7 @@ import Card from '../components/Card';
 
 const FrontPageHdir = () => (
   <>
+    <h1 className="visually-hidden">Helsedirektoratet</h1>
     <div className="b-background b-background--hdir" />
     <div className="l-container">
       <div className="l-mt-3 l-mb-5">
@@ -19,7 +20,6 @@ const FrontPageHdir = () => (
         </div>
       </div>
     </div>
-
     <div className="l-container">
       <div className="l-mt-5">
         <Link href="#a" wideButton color="shadow" arrow>
