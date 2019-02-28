@@ -49,7 +49,7 @@ const NewsListPage = () => (
                 fields: {
                   heading:
                     'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
-                  publishDate: '03.12.2018',
+                  publishDate: '3. desember 2018',
                   lead:
                     'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
                   topic: ''
@@ -61,7 +61,7 @@ const NewsListPage = () => (
                 fields: {
                   heading:
                     'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
-                  publishDate: '03.12.2018',
+                  publishDate: '3. desember 2018',
                   lead:
                     'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
                   topic: ''
@@ -73,7 +73,7 @@ const NewsListPage = () => (
                 fields: {
                   heading:
                     'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
-                  publishDate: '03.12.2018',
+                  publishDate: '3. desember 2018',
                   lead:
                     'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
                   topic: ''

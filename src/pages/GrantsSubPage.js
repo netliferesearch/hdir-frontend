@@ -11,7 +11,7 @@ const GrantsSubPage = () => (
       <h1>Oppfølging av akuttmedisinforskriften</h1>
       <div className="l-mt-2">
         <Alert status="success" inline hideIcon>
-          Søknadsfrist 20.02.2019
+          Søknadsfrist 20. februar 2019
         </Alert>
       </div>
       <div className="row l-mt-4">
@@ -102,7 +102,7 @@ const GrantsSubPage = () => (
                 kompetansekravene som stilles i akuttedisinforskriften, avgenset
                 til kr 2000 per vakt. En bakvakt beregnes fra kl. 15.30 – 08.
                 dagen etter (en vakt per døgn). Det gis ikke tilskudd til
-                daglegevakt. Tilskuddet gis kun fram til 1.5.2018.
+                daglegevakt. Tilskuddet gis kun fram til 1. august 2018.
               </li>
               <li>
                 Lønnsdifferanse mellom operatører som har avsluttet

@@ -97,7 +97,7 @@ const ChapterPage = () => (
               <p>etc.</p>
               <hr className="b-hr b-hr--grey-light b-hr--padded" />
               <div className="t-sm-right">
-                <PageMeta editDate="11.08.2018" />
+                <PageMeta editDate="11. august 2018" />
               </div>
             </Collapsible>
           </div>
@@ -127,7 +127,7 @@ const ChapterPage = () => (
               <hr className="b-hr b-hr--grey-light b-hr--padded" />
 
               <div className="t-sm-right">
-                <PageMeta editDate="11.08.2018" />
+                <PageMeta editDate="11. august 2018" />
               </div>
             </Collapsible>
           </div>
@@ -199,7 +199,7 @@ const ChapterPage = () => (
               </div>
               <hr className="b-hr b-hr--grey-light b-hr--padded" />
               <div className="t-sm-right">
-                <PageMeta editDate="11.08.2018" />
+                <PageMeta editDate="11. august 2018" />
               </div>
             </Collapsible>
           </div>
@@ -231,7 +231,10 @@ const ChapterPage = () => (
             </Link>
           </div>
           <div className="l-mt-3">
-            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+            <PageMeta
+              publishDate="11. oktober 2008"
+              editDate="11. august 2018"
+            />
           </div>
         </div>
       </div>

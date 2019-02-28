@@ -26,7 +26,7 @@ storiesOf('List', module)
             category: '',
             heading:
               'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
-            publishDate: '03.12.2018',
+            publishDate: '3. desember 2018',
             lead:
               'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
             topic: ''
@@ -38,7 +38,7 @@ storiesOf('List', module)
           fields: {
             category: '',
             heading: '– Legg til rette for influensavaksinering',
-            publishDate: '03.12.2018',
+            publishDate: '3. desember 2018',
             lead:
               '– Det er viktig at arbeidsgiverne legger til rette for at helsepersonell skal kunne ta influensavaksine, sier helsedirektør Bjørn Guldvog.',
             topic: ''
@@ -58,7 +58,7 @@ storiesOf('List', module)
             category: '',
             heading:
               'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
-            publishDate: '03.12.2018',
+            publishDate: '3. desember 2018',
             lead:
               'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
             topic: ''
@@ -82,7 +82,7 @@ storiesOf('List', module)
           fields: {
             category: '',
             heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
-            deadline: 'Søknadsfrist: 11.10.2018',
+            deadline: 'Søknadsfrist: 11. oktober 2018',
             topic:
               'If this module is shown on a search page, it might have a text like this for topics'
           }
@@ -95,7 +95,7 @@ storiesOf('List', module)
             heading: 'Hvordan sjonglere (illustrert)',
             image:
               'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-            publishDate: '01.01.2003',
+            publishDate: '01. januar 2003',
             topic: ''
           }
         },
@@ -105,8 +105,8 @@ storiesOf('List', module)
           fields: {
             category: '',
             heading: 'Kurs i hendelsesanalyse og pasientsikkerhet',
-            dateFrom: '03.11.1990',
-            dateTo: '06.12.2018',
+            dateFrom: '3. november 1990',
+            dateTo: '6. desember 2018',
             location: 'Clarion The Edge, Tromsø',
             registrationDeadline: '15. oktober',
             lead: 'This is some text describing the event. It is nice to have.',

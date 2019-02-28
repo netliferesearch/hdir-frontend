@@ -145,7 +145,11 @@ const MemoChapterPage = () => (
           </div>
 
           <div className="l-mt-4">
-            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" url="#a" />
+            <PageMeta
+              publishDate="11. august 2008"
+              editDate="11. august 2018"
+              url="#a"
+            />
           </div>
         </article>
       </div>

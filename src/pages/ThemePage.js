@@ -383,7 +383,7 @@ const ThemePage = () => (
                   category: '',
                   heading:
                     'Lansering av nye nasjonale faglige kurs i hendelsesanalyse og pasientsikkerhet',
-                  dateFrom: '03.11.1990',
+                  dateFrom: '3. november 1990',
                   location: 'The Qube, Gardermoen',
                   registrationDeadline: '15. oktober',
                   topic: ''
@@ -431,7 +431,7 @@ const ThemePage = () => (
                   heading: 'Barns miljø og sikkerhet / når barnet skader seg',
                   image:
                     'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01.06.2009'
+                  publishDate: '01. juni 2009'
                 }
               },
               {
@@ -443,7 +443,7 @@ const ThemePage = () => (
                     'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                   image:
                     'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01.06.2009'
+                  publishDate: '01. juni 2009'
                 }
               }
             ]}

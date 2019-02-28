@@ -110,7 +110,10 @@ const ReportPage = () => (
           />
         </Box>
         <div className="l-mt-3 l-mb-5">
-          <PageMeta publishDate="11.08.2017" editDate="12.09.2018" />
+          <PageMeta
+            publishDate="9. september 2017"
+            editDate="12. september 2018"
+          />
         </div>
       </div>
     </div>

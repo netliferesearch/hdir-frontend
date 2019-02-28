@@ -21,7 +21,7 @@ storiesOf('ListItemType', module)
         type: 'news',
         fields: object('Fields', {
           heading: 'A new thing happened',
-          publishDate: '03.12.2018',
+          publishDate: '3. desember 2018',
           lead: 'asdsdf'
         })
       }}
@@ -33,9 +33,9 @@ storiesOf('ListItemType', module)
         type: 'conference',
         fields: object('Fields', {
           heading: 'Christmas 2',
-          dateFrom: '02.11.1990',
-          dateTo: '03.11.1990',
-          registrationDeadline: '03.02.1990',
+          dateFrom: '2. november 1990',
+          dateTo: '3. november 1990',
+          registrationDeadline: '3. februar 1990',
           address: 'Dronninggata 28, 3004 Drammen',
           lead: 'We can write some stuff in here too'
         })
@@ -48,7 +48,7 @@ storiesOf('ListItemType', module)
         type: 'grantFunding',
         fields: object('Fields', {
           heading: 'A new thing happened',
-          deadline: '03.12.2018',
+          deadline: '3. desember 2018',
           topic: ''
         })
       }}
@@ -62,7 +62,7 @@ storiesOf('ListItemType', module)
           heading: 'Hvordan sjonglere (illustrert)',
           category: 'Brosjyre',
           image: 'https://placehold.it/300x300',
-          publishDate: '01.01.2003'
+          publishDate: '1. januar 2003'
         })
       }}
     />

@@ -38,7 +38,7 @@ const GrantsPage = () => (
           <h1>Tilskudd</h1>
         </div>
         <div className="col-xs-12 l-mt-2">
-          <Card text="Søknadsfrist: 15.05.2019" arrow="right">
+          <Card text="Søknadsfrist: 15. mai 2019" arrow="right">
             <Box square color="yellow">
               <div className="h2 h2--light">
                 Jobber du for å redusere omfang og problematisk bruk av
@@ -92,7 +92,7 @@ const GrantsPage = () => (
                 fields: {
                   heading:
                     'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
-                  deadline: 'Søknadsfrist: 03.12.2019'
+                  deadline: 'Søknadsfrist: 15. mai 2019'
                 }
               },
               {
@@ -100,7 +100,7 @@ const GrantsPage = () => (
                 url: '#2',
                 fields: {
                   heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
-                  deadline: 'Søknadsfrist: 11.10.2019'
+                  deadline: 'Søknadsfrist: 15. mai 2019'
                 }
               },
               {
@@ -109,7 +109,7 @@ const GrantsPage = () => (
                 fields: {
                   heading:
                     'Styrking av habilitering og rehabilitering i kommunene',
-                  deadline: 'Søknadsfrist: 03.12.2018'
+                  deadline: 'Søknadsfrist: 15. mai 2019'
                 }
               },
               {
@@ -117,7 +117,7 @@ const GrantsPage = () => (
                 url: '#4',
                 fields: {
                   heading: 'Turnus for leger - tilskudd til kommuner',
-                  deadline: 'Søknadsfrist: 12.01.2019'
+                  deadline: 'Søknadsfrist: 15. mai 2019'
                 }
               },
               {
@@ -126,7 +126,7 @@ const GrantsPage = () => (
                 fields: {
                   heading:
                     'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
-                  deadline: 'Søknadsfrist: 03.12.2019'
+                  deadline: 'Søknadsfrist: 15. mai 2019'
                 }
               },
               {
@@ -134,7 +134,7 @@ const GrantsPage = () => (
                 url: '#2',
                 fields: {
                   heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
-                  deadline: 'Søknadsfrist: 11.10.2019'
+                  deadline: 'Søknadsfrist: 15. mai 2019'
                 }
               },
               {
@@ -143,7 +143,7 @@ const GrantsPage = () => (
                 fields: {
                   heading:
                     'Styrking av habilitering og rehabilitering i kommunene',
-                  deadline: 'Søknadsfrist: 03.12.2018'
+                  deadline: 'Søknadsfrist: 15. mai 2019'
                 }
               },
               {
@@ -151,7 +151,7 @@ const GrantsPage = () => (
                 url: '#4',
                 fields: {
                   heading: 'Turnus for leger - tilskudd til kommuner',
-                  deadline: 'Søknadsfrist: 12.01.2019'
+                  deadline: 'Søknadsfrist: 15. mai 2019'
                 }
               }
             ]}

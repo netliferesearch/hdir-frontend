@@ -41,7 +41,7 @@ const JobPostingPage = () => (
                 fields: {
                   heading:
                     'Rådgiver/ Seniorrådgiver – tilskuddsforvaltning og virkemiddelutvikling',
-                  registrationDeadline: '15.02.2019',
+                  registrationDeadline: '15. mars 2019',
                   address: 'Oslo',
                   lead:
                     'Vi søker seniorrådgiver/rådgiver til 2 spennende og faglig utviklende stillinger innenfor tilskuddsområdet.'
@@ -53,7 +53,7 @@ const JobPostingPage = () => (
                   'https://4343.webcruiter.no/Main/Recruit/Public/4013019975?language=NB&link_source_id=0',
                 fields: {
                   heading: 'Seniorrådgiver/ rådgiver – helserefusjoner',
-                  registrationDeadline: '01.03.2019',
+                  registrationDeadline: '1. mars 2019',
                   address: 'Oslo',
                   lead:
                     'Vi søker jurist til 12 måneders vikariat som seniorrådgiver/rådgiver helserefusjoner med mulighet for forlengelse'
@@ -65,7 +65,7 @@ const JobPostingPage = () => (
                   'https://4010407859.webcruiter.no/Main/Recruit/Public/4015400568?language=NB&link_source_id=0',
                 fields: {
                   heading: 'Seniorrådgiver - Tech Lead/utvikling',
-                  registrationDeadline: '15.03.2019',
+                  registrationDeadline: '15. mars 2019',
                   address: 'Oslo',
                   lead:
                     'Vil du være en spydspiss på ny teknologi og være med på digitaliseringsreisen i Helsedirektoratet?'

@@ -46,7 +46,7 @@ const ArticlePage = () => (
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
           <h2>Bakgrunn</h2>
           <p>
-            Flertallet av personer med psykiske helseproblemer er i jobb.
+            Flertallet av personer med <i>psykiske helseproblemer</i> er i jobb.
             Likevel er det mange som står utenfor arbeidslivet og ønsker seg
             inn.
           </p>
@@ -156,7 +156,10 @@ const ArticlePage = () => (
             />
           </div>
           <div className="l-mt-4">
-            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+            <PageMeta
+              publishDate="11. august 2008"
+              editDate="12. august 2018"
+            />
           </div>
 
           <div className="l-mt-1">

@@ -17,25 +17,25 @@ const ParentHearingPage = () => (
                 {
                   title: 'Prioritering på klinisk nivå ',
                   url: '#',
-                  meta: 'Høringsfrist: 26. okt. 2018'
+                  meta: 'Høringsfrist: 26. oktober 2018'
                 },
                 {
                   title:
                     'Nasjonal faglig retningslinje for veiing og måling i helsestasjons- og skolehelsetjenesten (høring)',
                   url: '#',
-                  meta: 'Høringsfrist: 05. okt. 2018'
+                  meta: 'Høringsfrist: 5. oktober 2018'
                 },
                 {
                   title:
                     'Veileder i vurdering av kompetanse hos leger i spesialisering',
                   url: '#',
-                  meta: 'Høringsfrist: 10. okt. 2018'
+                  meta: 'Høringsfrist: 10. oktober 2018'
                 },
                 {
                   title:
                     'Nasjonal faglig retningslinje for svangerskapsdiabetes (høring)',
                   url: '#',
-                  meta: 'Høringsfrist: 13. nov. 2018'
+                  meta: 'Høringsfrist: 13. november 2018'
                 }
               ]}
             />
@@ -49,26 +49,26 @@ const ParentHearingPage = () => (
                     'Faglige råd for klinisk rettsmedisinske og medisinske undersøkelser i Statens Barnehus (høring)',
                   url: '#',
                   meta:
-                    'Høringsfrist utløpt Forventet ferdigbehandlet 17. nov. 2018'
+                    'Høringsfrist utløpt Forventet ferdigbehandlet 17. november 2018'
                 },
                 {
                   title:
                     'Veileder for helseeffekter i samfunnsøkonomisk analyse',
                   url: '#',
                   meta:
-                    'Høringsfrist utløptForventet ferdigbehandlet31. des. 2018'
+                    'Høringsfrist utløptForventet ferdigbehandlet31. desember 2018'
                 },
                 {
                   title: 'Læringsmål for generell kirurgi del 2 og',
                   url: '#',
                   meta:
-                    'Høringsfrist utløptForventet ferdigbehandlet31. des. 2018'
+                    'Høringsfrist utløptForventet ferdigbehandlet31. desember 2018'
                 },
                 {
                   title: 'Læringsmål for de kliniske fagene i del 1',
                   url: '#',
                   meta:
-                    'Høringsfrist utløptForventet ferdigbehandlet31. des. 2018'
+                    'Høringsfrist utløptForventet ferdigbehandlet31. desember 2018'
                 }
               ]}
             />
@@ -117,7 +117,10 @@ const ParentHearingPage = () => (
         </div>
         <div className="col-xs-12">
           <div className="l-mt-4">
-            <PageMeta publishDate="11.08.2008" editDate="11.08.2018" />
+            <PageMeta
+              publishDate="11. august 2008"
+              editDate="11. august 2018"
+            />
           </div>
         </div>
       </div>

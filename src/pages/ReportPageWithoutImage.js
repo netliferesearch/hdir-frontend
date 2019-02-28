@@ -117,7 +117,10 @@ const ReportPageWithoutImage = () => (
         </Box>
       </div>
       <div className="l-mt-3 l-mb-5">
-        <PageMeta publishDate="11.08.2017" editDate="12.09.2018" />
+        <PageMeta
+          publishDate="11. november 2017"
+          editDate="12. november 2018"
+        />
       </div>
     </div>
   </div>

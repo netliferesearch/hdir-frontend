@@ -561,8 +561,8 @@ storiesOf('PageMeta', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <PageMeta
-      publishDate={text('Publish date', '01.01.2015')}
-      editDate={text('Edit date', '01.01.2018')}
+      publishDate={text('Publish date', '01. januar 2015')}
+      editDate={text('Edit date', '1. januar 2018')}
       url={text('URL', '#')}
     />
   ));
@@ -579,7 +579,7 @@ storiesOf('PressRelease', module)
             'Barns miljø og sikkerhet / når barnet skader seg'
           )}
           info={text('Info', 'Plakat (pdf)')}
-          releaseDate={text('Release date', '01.06.2009')}
+          releaseDate={text('Release date', '01. juni 2009')}
           url={text('url', '#')}
           image={text(
             'Image',
@@ -595,7 +595,7 @@ storiesOf('PressRelease', module)
             'Barns miljø og sikkerhet / når barnet skader seg'
           )}
           info={text('Info', 'Plakat (pdf)')}
-          releaseDate={text('Release date', '01.06.2009')}
+          releaseDate={text('Release date', '01. juni 2009')}
           url={text('url', '#')}
           image={text(
             'Image',
