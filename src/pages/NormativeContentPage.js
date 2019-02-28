@@ -90,7 +90,7 @@ const NormativeContentPage = () => (
                 title: 'Fileksempel',
                 url: '#',
                 meta: 'En PDF',
-                infoText: 'PDF (3,5 MB)',
+                infoText: 'PDF',
                 file: true
               },
               {
