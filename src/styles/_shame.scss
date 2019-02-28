@@ -33,9 +33,15 @@
 .suggestion-category {
   display: inline-block;
   padding: 0.25em;
-  margin-left: 0.25em;
+  margin-left: 0.5em;
   font-size: $meta-text;
   background-color: $yellow-light;
+}
+.suggestion-download {
+  display: inline-block;
+  margin-left: 1em;
+  font-size: $meta-text;
+  @include underline($link-color);
 }
 .some-label {
   display: inline-block;

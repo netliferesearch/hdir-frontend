@@ -25,6 +25,9 @@ const renderSuggestion = suggestion => (
         {suggestion.category && (
           <div className="suggestion-category">{suggestion.category}</div>
         )}
+        {suggestion.file && (
+          <div className="suggestion-download">{suggestion.file} ↓</div>
+        )}
       </div>
     )}
     {suggestion.intro && (
@@ -147,7 +150,7 @@ class InputSearch extends React.Component {
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
-    fetch(`${searchSuggestionUrl}?searchQuery=${value}`)
+    fetch(`${searchSuggestionUrl}?searchQuery=${value.toLowerCase()}`)
       .then(res => res.json())
       .then(data => {
         this.setState({

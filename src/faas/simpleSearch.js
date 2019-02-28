@@ -9,6 +9,7 @@ const allNewsItems = [
   {
     title: 'This is news #2',
     category: 'news',
+    file: 'PDF',
     publishDate: '4. April 2018',
     intro: 'dslfgndsgsdkg diabetes',
     url: '/artikkel'
@@ -23,6 +24,7 @@ const allNewsItems = [
   {
     title: 'This is news #4',
     category: 'news',
+    file: 'PDF',
     publishDate: '2. April 2015',
     intro: 'Ikke røyk, røyking er ikke bra',
     url: '/artikkel'
