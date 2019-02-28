@@ -16,23 +16,13 @@
     }
   }
 
-  &--download {
-    width: calc(100% - 5.5rem);
-    &:after {
-      content: 'PDF ↓';
-      font-size: $meta-text;
-      right: -5.5rem;
-      @include underline($link-color);
-      @include mq($until: tablet) {
-        top: auto;
-        bottom: 0;
-        margin-left: calc(1% + 0.5rem);
-      }
-    }
-  }
-
   &__download {
-    float: right;
+    font-size: $meta-text;
+    text-decoration: underline;
+    color: $link-color;
+    margin-left: 1rem;
+    margin-right: -1rem;
+    flex-shrink: 0;
   }
 
   &__email {
@@ -60,10 +50,14 @@
   &__image {
     flex: 1;
     max-width: 8rem;
+    margin-right: 1rem;
+
+    @include mq($until: tablet) {
+      display: none;
+    }
   }
   &__text {
     flex: 3;
-    margin-left: 1rem;
   }
   &__category {
     font-size: $meta-text;

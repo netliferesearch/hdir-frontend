@@ -13,22 +13,31 @@ const ListItemType = props => {
         <div
           className={classNames({
             'b-list-item-type': true,
-            'b-list-item-type--download': fields.download
+            'b-list-item-type--no-arrow': fields.download
           })}
         >
-          {fields.heading && <h2 className="h3">{fields.heading}</h2>}
-          {fields.category && (
-            <p className="b-list-item-type__category">{fields.category}</p>
-          )}
-          {fields.publishDate && (
-            <div className="b-list-item-type__date">{fields.publishDate}</div>
-          )}
-          {fields.lead && (
-            <p className="b-list-item-type__lead">{fields.lead}</p>
-          )}
-          {fields.topic && (
-            <div className="b-list-item-type__topic">{fields.topic}</div>
-          )}
+          <div className="b-list-item-type__flex-wrapper">
+            <div className="b-list-item-type__text">
+              {fields.heading && <h2 className="h3">{fields.heading}</h2>}
+              {fields.category && (
+                <p className="b-list-item-type__category">{fields.category}</p>
+              )}
+              {fields.publishDate && (
+                <div className="b-list-item-type__date">
+                  {fields.publishDate}
+                </div>
+              )}
+              {fields.lead && (
+                <p className="b-list-item-type__lead">{fields.lead}</p>
+              )}
+              {fields.topic && (
+                <div className="b-list-item-type__topic">{fields.topic}</div>
+              )}
+            </div>
+            {fields.download && (
+              <div className="b-list-item-type__download">PDF ↓</div>
+            )}
+          </div>
         </div>
       )}
 
@@ -36,38 +45,45 @@ const ListItemType = props => {
         <div
           className={classNames({
             'b-list-item-type': true,
-            'b-list-item-type--download': fields.download
+            'b-list-item-type--no-arrow': fields.download
           })}
         >
-          {fields.heading && <h2 className="h3">{fields.heading}</h2>}
-          {fields.category && (
-            <p className="b-list-item-type__category">{fields.category}</p>
-          )}
-          {fields.dateFrom && fields.dateTo ? (
-            <p className="b-list-item-type__date">
-              {fields.dateFrom} - {fields.dateTo}
-            </p>
-          ) : (
-            <p className="b-list-item-type__date">{fields.dateTo}</p>
-          )}
-          {fields.lead && (
-            <p className="b-list-item-type__lead">{fields.lead}</p>
-          )}
-          {fields.registrationDeadline && (
-            <p className="b-list-item-type__deadline">
-              <strong>Frist: </strong>
-              {fields.registrationDeadline}
-            </p>
-          )}
-          {fields.location && (
-            <div className="b-list-item-type__meta">
-              <strong>Sted: </strong>
-              {fields.location}
+          <div className="b-list-item-type__flex-wrapper">
+            <div className="b-list-item-type__text">
+              {fields.heading && <h2 className="h3">{fields.heading}</h2>}
+              {fields.category && (
+                <p className="b-list-item-type__category">{fields.category}</p>
+              )}
+              {fields.dateFrom && fields.dateTo ? (
+                <p className="b-list-item-type__date">
+                  {fields.dateFrom} - {fields.dateTo}
+                </p>
+              ) : (
+                <p className="b-list-item-type__date">{fields.dateTo}</p>
+              )}
+              {fields.lead && (
+                <p className="b-list-item-type__lead">{fields.lead}</p>
+              )}
+              {fields.registrationDeadline && (
+                <p className="b-list-item-type__deadline">
+                  <strong>Frist: </strong>
+                  {fields.registrationDeadline}
+                </p>
+              )}
+              {fields.location && (
+                <div className="b-list-item-type__meta">
+                  <strong>Sted: </strong>
+                  {fields.location}
+                </div>
+              )}
+              {fields.topic && (
+                <div className="b-list-item-type__topic">{fields.topic}</div>
+              )}
             </div>
-          )}
-          {fields.topic && (
-            <div className="b-list-item-type__topic">{fields.topic}</div>
-          )}
+            {fields.download && (
+              <div className="b-list-item-type__download">PDF ↓</div>
+            )}
+          </div>
         </div>
       )}
 
@@ -75,7 +91,7 @@ const ListItemType = props => {
         <div
           className={classNames({
             'b-list-item-type': true,
-            'b-list-item-type--download': fields.download
+            'b-list-item-type--no-arrow': fields.download
           })}
         >
           <div className="b-list-item-type__flex-wrapper">
@@ -94,6 +110,9 @@ const ListItemType = props => {
                 </div>
               )}
             </div>
+            {fields.download && (
+              <div className="b-list-item-type__download">PDF ↓</div>
+            )}
           </div>
           {fields.topic && (
             <div className="b-list-item-type__topic">{fields.topic}</div>
@@ -105,20 +124,27 @@ const ListItemType = props => {
         <div
           className={classNames({
             'b-list-item-type': true,
-            'b-list-item-type--download': fields.download
+            'b-list-item-type--no-arrow': fields.download
           })}
         >
-          {fields.heading && <h2 className="h3">{fields.heading}</h2>}
-          {fields.category && (
-            <p className="b-list-item-type__category">{fields.category}</p>
-          )}
+          <div className="b-list-item-type__flex-wrapper">
+            <div className="b-list-item-type__text">
+              {fields.heading && <h2 className="h3">{fields.heading}</h2>}
+              {fields.category && (
+                <p className="b-list-item-type__category">{fields.category}</p>
+              )}
 
-          {fields.deadline && (
-            <p className="b-list-item-type__deadline">{fields.deadline}</p>
-          )}
-          {fields.topic && (
-            <div className="b-list-item-type__topic">{fields.topic}</div>
-          )}
+              {fields.deadline && (
+                <p className="b-list-item-type__deadline">{fields.deadline}</p>
+              )}
+              {fields.topic && (
+                <div className="b-list-item-type__topic">{fields.topic}</div>
+              )}
+            </div>
+            {fields.download && (
+              <div className="b-list-item-type__download">PDF ↓</div>
+            )}
+          </div>
         </div>
       )}
 
@@ -126,7 +152,7 @@ const ListItemType = props => {
         <div
           className={classNames({
             'b-list-item-type': true,
-            'b-list-item-type--download': fields.download
+            'b-list-item-type--no-arrow': fields.download
           })}
         >
           {fields.heading && <h2 className="h3">{fields.heading}</h2>}

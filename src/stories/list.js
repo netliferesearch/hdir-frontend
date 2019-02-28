@@ -23,6 +23,7 @@ storiesOf('List', module)
           type: 'news',
           url: '#1',
           fields: {
+            download: 'true',
             category: '',
             heading:
               'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
@@ -36,6 +37,7 @@ storiesOf('List', module)
           type: 'news',
           url: '#1',
           fields: {
+            download: 'true',
             category: '',
             heading: '– Legg til rette for influensavaksinering',
             publishDate: '3. desember 2018',
@@ -55,6 +57,7 @@ storiesOf('List', module)
           type: 'news',
           url: '#1',
           fields: {
+            download: 'true',
             category: '',
             heading:
               'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
@@ -67,6 +70,7 @@ storiesOf('List', module)
         {
           type: 'person',
           fields: {
+            download: 'true',
             category: '',
             name: 'Ole Magnus Støvern',
             email: 'ole.stovern@netlife.com',
@@ -80,6 +84,7 @@ storiesOf('List', module)
           type: 'grantFunding',
           url: '#2',
           fields: {
+            download: 'true',
             category: '',
             heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
             deadline: 'Søknadsfrist: 11. oktober 2018',
@@ -91,6 +96,7 @@ storiesOf('List', module)
           type: 'pressRelease',
           url: '#3',
           fields: {
+            download: 'true',
             category: 'Brosjyre',
             heading: 'Hvordan sjonglere (illustrert)',
             image:
@@ -103,6 +109,7 @@ storiesOf('List', module)
           type: 'conference',
           url: '#4',
           fields: {
+            download: 'true',
             category: '',
             heading: 'Kurs i hendelsesanalyse og pasientsikkerhet',
             dateFrom: '3. november 1990',
