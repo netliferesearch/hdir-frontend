@@ -32,7 +32,7 @@ const PressReleasePage = () => (
                 type: 'pressRelease',
                 url: '#4',
                 fields: {
-                  category: 'Brosjyre (PDF)',
+                  category: 'Trykksak (PDF)',
                   heading:
                     'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                   image:
@@ -55,7 +55,7 @@ const PressReleasePage = () => (
                 type: 'pressRelease',
                 url: '#4',
                 fields: {
-                  category: 'Brosjyre (PDF)',
+                  category: 'Trykksak (PDF)',
                   heading:
                     'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                   image:
@@ -78,7 +78,7 @@ const PressReleasePage = () => (
                 type: 'pressRelease',
                 url: '#4',
                 fields: {
-                  category: 'Brosjyre (PDF)',
+                  category: 'Trykksak (PDF)',
                   heading:
                     'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                   image:
