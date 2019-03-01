@@ -67,16 +67,40 @@ const ReportListPage = () => (
               name="statistikktype"
               options={[
                 {
-                  value: 'A tema',
-                  label: 'A tema'
+                  value: 'Abort',
+                  label: 'Abort'
                 },
                 {
-                  value: 'B tema',
-                  label: 'B tema'
+                  value: 'Akuttmedisin',
+                  label: 'Akuttmedisin'
                 },
                 {
-                  value: 'C tema',
-                  label: 'C tema'
+                  value: 'antibiotika',
+                  label: 'antibiotika'
+                },
+                {
+                  value: 'CFS/ME',
+                  label: 'CFS/ME'
+                },
+                {
+                  value: 'Diabetes',
+                  label: 'Diabetes'
+                },
+                {
+                  value: 'Fødsel og barsel',
+                  label: 'Fødsel og barsel'
+                },
+                {
+                  value: 'Hjerneslag',
+                  label: 'Hjerneslag'
+                },
+                {
+                  value: 'Kols',
+                  label: 'Kols'
+                },
+                {
+                  value: 'Overvekt og fedme',
+                  label: 'Overvekt og fedme'
                 }
               ]}
             />
