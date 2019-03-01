@@ -36,7 +36,7 @@ if (headerElement) {
   );
   const links = JSON.parse(headerElement.getAttribute('data-links'));
 
-  const label = searchElement.getAttribute('data-label') || '';
+  const label = headerElement.getAttribute('data-label') || '';
 
   ReactDOM.render(
     <MainHeader
