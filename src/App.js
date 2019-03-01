@@ -44,6 +44,7 @@ import Box from './components/Box';
 import GrantsPage from './pages/GrantsPage';
 import GrantsSubPage from './pages/GrantsSubPage';
 import PressReleasePage from './pages/PressReleasePage';
+import ReportListPage from './pages/ReportListPage';
 
 class App extends Component {
   componentDidMount() {
@@ -117,6 +118,7 @@ class App extends Component {
               <Route path="/transportside" component={TransportPage} />
               <Route path="/nyhetsliste" component={NewsListPage} />
               <Route path="/tilskudd" component={GrantsPage} />
+              <Route path="/rapport-liste" component={ReportListPage} />
               <Route path="/trykksaker" component={PressReleasePage} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
               <Route path="/ledig-stilling" component={JobPostingPage} />

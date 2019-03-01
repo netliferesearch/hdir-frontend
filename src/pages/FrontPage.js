@@ -81,6 +81,9 @@ const FrontPage = () => (
         <Link to="/rapport">Rapport</Link>
       </p>
       <p>
+        <Link to="/rapport-liste">Rapportliste</Link>
+      </p>
+      <p>
         <Link to="/rapportside-uten-bilde">Rapportside uten bilde</Link>
       </p>
       <p>

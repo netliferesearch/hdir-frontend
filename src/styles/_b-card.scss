@@ -100,7 +100,7 @@
   &__text {
     font-size: $meta-text;
     color: $grey;
-    margin-top: 1em;
+    margin-top: 0.5em;
     // This text should ignore the extra padding, made for the heading and arrow.
     width: calc(100% + 1rem);
   }

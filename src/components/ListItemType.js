@@ -155,20 +155,27 @@ const ListItemType = props => {
             'b-list-item-type--no-arrow': fields.download
           })}
         >
-          {fields.heading && <h2 className="h3">{fields.heading}</h2>}
-          {fields.category && (
-            <p className="b-list-item-type__category">{fields.category}</p>
-          )}
+          <div className="b-list-item-type__flex-wrapper">
+            <div className="b-list-item-type__text">
+              {fields.heading && <h2 className="h3">{fields.heading}</h2>}
+              {fields.category && (
+                <p className="b-list-item-type__category">{fields.category}</p>
+              )}
 
-          {fields.subheading && (
-            <div className="b-list-item-type__subheading">
-              {Array.isArray(fields.subheading) ? (
-                fields.subheading.map(text => <span>{text}</span>)
-              ) : (
-                <span>{fields.subheading}</span>
+              {fields.subheading && (
+                <div className="b-list-item-type__subheading">
+                  {Array.isArray(fields.subheading) ? (
+                    fields.subheading.map(text => <span>{text}</span>)
+                  ) : (
+                    <span>{fields.subheading}</span>
+                  )}
+                </div>
               )}
             </div>
-          )}
+            {fields.download && (
+              <div className="b-list-item-type__download">PDF ↓</div>
+            )}
+          </div>
         </div>
       )}
 
