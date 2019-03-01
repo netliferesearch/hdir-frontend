@@ -22,7 +22,7 @@ const ReportListPage = () => (
       </div>
       <div className="row l-mt-2">
         <div className="col-xs-12">
-          <span>Nyeste rapporter</span>
+          <span>NYESTE RAPPORTER</span>
         </div>
         <div className="col-xs-12 col-sm-6 l-mt-1">
           <Card
