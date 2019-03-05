@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  height: 3rem;
 
   &__label {
     display: block;
@@ -17,11 +18,12 @@
     min-width: 0;
     font-size: 1rem;
     flex: 1;
+    height: 100%;
     box-sizing: border-box;
     color: $secondary-color;
     background-color: white;
     border: 0;
-    padding: 1em;
+    padding: 0 1em;
     border-radius: 4px;
     box-shadow: 0 0 0 1px $secondary-color;
     text-overflow: ellipsis;
@@ -45,9 +47,10 @@
   &__button {
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: -1px;
+    bottom: -1px;
     font-size: $meta-text;
-    padding: calc(1rem + 1px);
+    padding: 0 1rem;
     background-color: white;
     border: 0;
     border-radius: 0 4px 4px 0;
