@@ -47,8 +47,8 @@
   &__button {
     position: absolute;
     right: 0;
-    top: -1px;
-    bottom: -1px;
+    top: 0;
+    bottom: 0;
     font-size: $meta-text;
     padding: 0 1rem;
     background-color: white;
