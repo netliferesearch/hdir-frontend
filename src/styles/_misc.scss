@@ -12,3 +12,22 @@
 .end-xs {
   text-align: left;
 }
+
+// Used to the classnames on the blocks
+.block-hint {
+  [class^='b-']:not([class*='__']) {
+    position: relative;
+    &:before {
+      content: attr(class);
+      position: absolute;
+      font-size: 0.7rem;
+      top: -0.25em;
+      color: #991199;
+      font-weight: bold;
+      background: white;
+      border: 1px solid grey;
+      z-index: 2;
+      padding: 0.25em;
+    }
+  }
+}

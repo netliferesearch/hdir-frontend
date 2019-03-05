@@ -103,3 +103,40 @@ a {
 .t--small {
   font-size: $meta-text;
 }
+
+small {
+  font-size: $meta-text;
+}
+
+// The CSS meant for the content from the rich text in Enonic
+.t-body-text {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5em;
+  }
+  // Removes heading styles for blocks
+  [class^='b-'] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+    }
+  }
+  p {
+    margin: 1em 0;
+  }
+  // Removes the top margin from the first heading
+  > :first-child {
+    margin-top: 0;
+  }
+  ul {
+    margin-top: 0.5em;
+  }
+}
