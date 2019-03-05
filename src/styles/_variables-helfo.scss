@@ -12,7 +12,7 @@ $yellow-light: #fff4e6;
 $red-dark: #8b0a0a;
 $red: #e03c31;
 $red-light: #f3bebe;
-$orange-dark: #e45300;
+$orange-dark: #d54201; // Changed from #e45300
 $orange: #f8a83d;
 $green-dark: #366558;
 $green: #95dcca;
@@ -26,7 +26,7 @@ $yellow-warning: #f0c617;
 $red-warning: #ad0017;
 $secondary-color: $blue-dark;
 $primary-color: $orange-dark;
-$link-color: #237e9f;
+$link-color: $orange-dark;
 
 // List of colors
 $colors: (
