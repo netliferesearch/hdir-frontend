@@ -201,19 +201,20 @@
 
 .b-background {
   position: absolute;
-  top: calc(6vw + 4rem);
+  top: calc(3vw + 6rem);
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-size: calc(25% + 20rem);
-  opacity: 0.4;
+  background-size: calc(25% + 25rem);
+  opacity: 0.15;
   background-repeat: repeat-x;
   &--hdir {
     background-image: url('../static/icon_background.svg');
   }
   @include mq($until: $tablet) {
-    top: calc(6vw + 5.5rem);
+    top: calc(7.5rem + 7.5vw);
+    background-size: calc(50% + 20rem);
   }
 }
 
