@@ -1,7 +1,7 @@
 import React from 'react';
 
 import List from '../components/List';
-import Link from '../components/Link';
+import Button from '../components/Button';
 import ListHeading from '../components/ListHeading';
 import CheckboxGroup from '../components/CheckboxGroup';
 import Box from '../components/Box';
@@ -160,19 +160,8 @@ const ReportListPage = () => (
               }
             ]}
           />
-          <div className="l-mt-3 l-mb-5 t-sm-center">
-            <div className="row between-xs">
-              <div className="col-xs t-sm-left">
-                <Link href="#" arrowLeft>
-                  Forrige side
-                </Link>
-              </div>
-              <div className="col-xs t-sm-right">
-                <Link href="#" arrow>
-                  Neste side
-                </Link>
-              </div>
-            </div>
+          <div className="l-mt-2 l-mb-5 t-sm-center">
+            <Button secondary>Vis alt</Button>
           </div>
         </section>
       </div>
