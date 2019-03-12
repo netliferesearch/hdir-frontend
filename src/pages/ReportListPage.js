@@ -107,14 +107,13 @@ const ReportListPage = () => (
           </div>
         </aside>
         <section className="col-md-8 col-md-offset-1">
-          <ListHeading heading="Rapporter" />
+          <ListHeading heading="250 Rapporter" />
           <List
             list={[
               {
                 type: 'generic',
                 url: '#6',
                 fields: {
-                  category: 'Transfusjonsmedisin',
                   download: 'true',
                   heading:
                     'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
@@ -125,7 +124,6 @@ const ReportListPage = () => (
                 type: 'generic',
                 url: '#6',
                 fields: {
-                  category: 'Transfusjonsmedisin',
                   download: 'true',
                   heading:
                     'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
@@ -136,7 +134,6 @@ const ReportListPage = () => (
                 type: 'generic',
                 url: '#6',
                 fields: {
-                  category: 'Transfusjonsmedisin',
                   heading:
                     'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
                   subheading: 'Publisert: 16. januar 2020'
@@ -146,7 +143,6 @@ const ReportListPage = () => (
                 type: 'generic',
                 url: '#6',
                 fields: {
-                  category: 'Transfusjonsmedisin',
                   download: 'true',
                   heading:
                     'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
@@ -157,7 +153,6 @@ const ReportListPage = () => (
                 type: 'generic',
                 url: '#6',
                 fields: {
-                  category: 'Transfusjonsmedisin',
                   heading:
                     'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
                   subheading: 'Publisert: 16. januar 2020'

@@ -67,9 +67,11 @@
   }
   &__date {
     font-size: $meta-text;
+    margin-top: 0.5em;
   }
   &__subheading {
     font-size: $meta-text;
+    margin-top: 0.5em;
     > * {
       &:first-child {
         font-weight: bold;
