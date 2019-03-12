@@ -64,6 +64,20 @@ class App extends Component {
               name={this.props.name}
               links={this.props.links}
               hideSearch={this.props.hideSearch}
+              exampleSuggestions={[
+                'Antibiotika',
+                'Diabetes',
+                'Hjerneslag',
+                'Helsestasjon',
+                'Rus og avhengighet',
+                'Svangerskap',
+                'Navn på ansatt',
+                'Retningslinje',
+                'Pakkeforløp',
+                'Rundskriv',
+                'Statistikk',
+                'Tilskudd'
+              ]}
             />
             <Switch>
               <Route exact path="/" component={FrontPage} />

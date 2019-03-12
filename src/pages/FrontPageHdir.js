@@ -15,7 +15,22 @@ const FrontPageHdir = () => (
             <p>
               <strong>Hva leter du etter?</strong>
             </p>
-            <InputSearch />
+            <InputSearch
+              exampleSuggestions={[
+                'Antibiotika',
+                'Diabetes',
+                'Hjerneslag',
+                'Helsestasjon',
+                'Rus og avhengighet',
+                'Svangerskap',
+                'Navn på ansatt',
+                'Retningslinje',
+                'Pakkeforløp',
+                'Rundskriv',
+                'Statistikk',
+                'Tilskudd'
+              ]}
+            />
           </div>
         </div>
       </div>

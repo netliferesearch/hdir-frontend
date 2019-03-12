@@ -47,6 +47,7 @@ class MainHeader extends React.Component {
               dark
               autoFocus={this.state.searchOpen}
               label={this.props.label}
+              exampleSuggestions={this.props.exampleSuggestions}
             />
           </div>
         </SearchTray>
@@ -164,7 +165,12 @@ MainHeader.propTypes = {
   hideSearch: PropTypes.bool,
   name: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.object),
-  label: PropTypes.string
+  label: PropTypes.string,
+  exampleSuggestions: PropTypes.arrayOf(PropTypes.string)
+};
+
+MainHeader.defaultProps = {
+  exampleSuggestions: []
 };
 
 export default MainHeader;

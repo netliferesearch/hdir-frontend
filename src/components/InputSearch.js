@@ -36,22 +36,6 @@ const renderSuggestion = suggestion => (
   </div>
 );
 
-const placeholderSuggestions = [
-  'Søk på tema',
-  'ADHD',
-  'Angst',
-  'Demens',
-  'Søk etter innholdstype',
-  'Statistikk',
-  'Pakkeforløp',
-  'Rundskriv',
-  'Søk på kode (ICD-10 og ICPC2)',
-  'F41.9',
-  'P74',
-  'Søk på navn',
-  'Lars Erik Pedersen'
-];
-
 class InputSearch extends React.Component {
   constructor(props) {
     super(props);
@@ -92,7 +76,7 @@ class InputSearch extends React.Component {
       const index = this.state.placeholderSuggestionIndex;
       this.setState({
         placeholderSuggestionIndex:
-          index < placeholderSuggestions.length - 1 ? index + 1 : 0
+          index < this.props.exampleSuggestions.length - 1 ? index + 1 : 0
       });
     }, 2000);
 
@@ -216,7 +200,7 @@ class InputSearch extends React.Component {
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
         inputProps={inputProps(
-          placeholderSuggestions[this.state.placeholderSuggestionIndex]
+          this.props.exampleSuggestions[this.state.placeholderSuggestionIndex]
         )}
       />
     );
@@ -228,12 +212,14 @@ InputSearch.propTypes = {
   label: PropTypes.string,
   dark: PropTypes.bool,
   showSuggestions: PropTypes.bool,
-  autoFocus: PropTypes.bool
+  autoFocus: PropTypes.bool,
+  exampleSuggestions: PropTypes.arrayOf(PropTypes.string)
 };
 
 InputSearch.defaultProps = {
   type: 'search',
-  showSuggestions: true
+  showSuggestions: true,
+  exampleSuggestions: []
 };
 
 export default InputSearch;
