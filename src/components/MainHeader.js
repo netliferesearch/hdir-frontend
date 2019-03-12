@@ -5,6 +5,8 @@ import SearchTray from './SearchTray';
 import NavList from './NavList';
 import shortid from 'shortid';
 
+import searchIcon from '../static/icons/search.svg';
+
 class MainHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -115,7 +117,7 @@ class MainHeader extends React.Component {
                     {this.state.searchButtonText}{' '}
                     {!this.state.searchOpen && (
                       <img
-                        src="./icons/search.svg"
+                        src={searchIcon}
                         className="b-icon b-icon--small"
                         role="presentation"
                       />

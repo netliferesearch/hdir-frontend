@@ -68,7 +68,9 @@
       float: right;
       background-size: 1.2em;
       background-position: center;
-      background-image: url('../static/icons/search.svg');
+      background-image: svg-uri(
+        '<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com --><title>search</title><desc>Created with Sketch.</desc><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="search" transform="translate(1.000000, 1.000000)" stroke="#025169"><g id="Interface-Essential__x2F__Search__x2F__search" stroke-width="1.0434"><g id="Group_372"><g id="search"><path d="M8.3,16.7 C12.9,16.7 16.6,13 16.6,8.4 C16.6,3.8 13,0 8.3,0 C3.7,0 0,3.7 0,8.3 C0,12.9 3.7,16.7 8.3,16.7 Z" id="Oval_288"></path><path d="M14.2,14.3 L24,24" id="Shape_1872"></path></g></g></g><path d="M8.5,3 C5.5,3 3,5.5 3,8.5" id="Oval_288_2_"></path></g></g></svg>'
+      );
       background-repeat: no-repeat;
     }
   }
