@@ -17,10 +17,10 @@ const SearchResultPage = () => (
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4" id="filterToggler">
           <h4>Filtrér søk</h4>
-          <div className="l-mt-2">
+          <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
-          <form className="l-mt-2">
+          <form className="l-mt-1">
             <CheckboxGroup
               name="søkefilter"
               options={[
@@ -91,10 +91,10 @@ const SearchResultPage = () => (
               ]}
             />
           </form>
-          <div className="l-mt-2">
+          <div className="l-mt-1">
             <hr className="b-hr" />
           </div>
-          <div className="l-mt-2">
+          <div className="l-mt-1">
             <small>
               <a href="#a" id="#resetFilter">
                 Nullstill alle filtre
@@ -113,10 +113,10 @@ const SearchResultPage = () => (
                   category: 'Nyhet',
                   heading:
                     'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
-                  publishDate: '03.12.2018',
+                  publishDate: '3. desember 2018',
                   lead:
                     'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
-                  topic: 'Innhold basert på søk, alle kan ha denne'
+                  topic: <span>YOYOYO, what up</span>
                 }
               },
               {
@@ -137,7 +137,7 @@ const SearchResultPage = () => (
                 fields: {
                   heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
                   category: 'Tilskudd',
-                  deadline: 'Søknadsfrist: 11.10.2018',
+                  deadline: 'Søknadsfrist: 11. oktober 2018',
                   topic:
                     'If this module is shown on a search page, it might have a text like this for topics'
                 }
@@ -150,7 +150,7 @@ const SearchResultPage = () => (
                   category: 'Brosjyre',
                   image:
                     'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01.01.2003',
+                  publishDate: '1. desember 2003',
                   topic: 'Innhold basert på søk, alle kan ha denne'
                 }
               },
@@ -160,8 +160,8 @@ const SearchResultPage = () => (
                 fields: {
                   heading: 'Kurs i hendelsesanalyse og pasientsikkerhet',
                   category: 'Konferanse',
-                  dateFrom: '03.11.1990',
-                  dateTo: '06.12.2018',
+                  dateFrom: '3. november 1990',
+                  dateTo: '6. desember 2018',
                   location: 'Clarion The Edge, Tromsø',
                   registrationDeadline: '15. oktober',
                   topic: 'Innhold basert på søk, alle kan ha denne'
