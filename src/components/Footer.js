@@ -65,19 +65,19 @@ const Footer = () => (
 
       <div className="col-lg-2 col-sm-4 col-xs-12">
         <div>
-          <Link to="/" className="b-footer__link">
+          <a href="/" className="b-footer__link">
             Facebook
-          </Link>
+          </a>
         </div>
         <div>
-          <Link to="/" className="b-footer__link">
+          <a href="/" className="b-footer__link">
             Twitter
-          </Link>
+          </a>
         </div>
         <div>
-          <Link to="/" className="b-footer__link">
+          <a href="/" className="b-footer__link">
             YouTube
-          </Link>
+          </a>
         </div>
       </div>
     </div>
