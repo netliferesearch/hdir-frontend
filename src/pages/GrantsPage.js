@@ -1,8 +1,9 @@
 import React from 'react';
 
 import List from '../components/List';
-import Link from '../components/Link';
+import Button from '../components/Button';
 import ListHeading from '../components/ListHeading';
+import CheckboxGroup from '../components/CheckboxGroup';
 import NavList from '../components/NavList';
 import RadioButtonGroup from '../components/RadioButtonGroup';
 import Card from '../components/Card';
@@ -77,6 +78,53 @@ const GrantsPage = () => (
                 {
                   value: 'PrivateOgIdeelle',
                   label: 'Private og ideelle'
+                }
+              ]}
+            />
+          </div>
+          <div className="l-mt-1">
+            <hr className="b-hr" />
+          </div>
+          <div className="l-mt-1">
+            <CheckboxGroup
+              heading="Velg tema"
+              name="statistikktype"
+              options={[
+                {
+                  value: 'Abort',
+                  label: 'Abort'
+                },
+                {
+                  value: 'Akuttmedisin',
+                  label: 'Akuttmedisin'
+                },
+                {
+                  value: 'antibiotika',
+                  label: 'antibiotika'
+                },
+                {
+                  value: 'CFS/ME',
+                  label: 'CFS/ME'
+                },
+                {
+                  value: 'Diabetes',
+                  label: 'Diabetes'
+                },
+                {
+                  value: 'Fødsel og barsel',
+                  label: 'Fødsel og barsel'
+                },
+                {
+                  value: 'Hjerneslag',
+                  label: 'Hjerneslag'
+                },
+                {
+                  value: 'Kols',
+                  label: 'Kols'
+                },
+                {
+                  value: 'Overvekt og fedme',
+                  label: 'Overvekt og fedme'
                 }
               ]}
             />
@@ -156,19 +204,8 @@ const GrantsPage = () => (
               }
             ]}
           />
-          <div className="l-mt-3 l-mb-5 t-sm-center">
-            <div className="row between-xs">
-              <div className="col-xs t-sm-left">
-                <Link href="#" arrowLeft>
-                  Forrige side
-                </Link>
-              </div>
-              <div className="col-xs t-sm-right">
-                <Link href="#" arrow>
-                  Neste side
-                </Link>
-              </div>
-            </div>
+          <div className="l-mt-2 t-sm-center">
+            <Button secondary>Vis alt</Button>
           </div>
 
           <div className="l-mt-4">
