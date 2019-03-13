@@ -93,7 +93,10 @@ const FrontPage = () => (
         <Link to="/statistikk">Statistikk</Link>
       </p>
       <p>
-        <Link to="/statistikk-underside">Statistikkunderside</Link>
+        <Link to="/statistikk-underside">Statistikkunderside (bred)</Link>
+      </p>
+      <p>
+        <Link to="/statistikk-underside-2">Statistikkunderside (smal)</Link>
       </p>
       <p>
         <Link to="/søkeresultat">Søkeresultat</Link>

@@ -41,6 +41,7 @@ import FrontPageHelfo from './pages/FrontPageHelfo';
 import FrontPageHdir from './pages/FrontPageHdir';
 import JobPostingPage from './pages/JobPostingPage';
 import StatisticsSubpage from './pages/StatisticsSubpage';
+import StatisticsSubpage2 from './pages/StatisticsSubpage2';
 import ThemePage from './pages/ThemePage';
 import GrantsPage from './pages/GrantsPage';
 import GrantsSubPage from './pages/GrantsSubPage';
@@ -136,6 +137,10 @@ class App extends Component {
               <Route
                 path="/statistikk-underside"
                 component={StatisticsSubpage}
+              />
+              <Route
+                path="/statistikk-underside-2"
+                component={StatisticsSubpage2}
               />
               <Route path="/rapport-liste" component={ReportListPage} />
               <Route path="/trykksaker" component={PressReleasePage} />
