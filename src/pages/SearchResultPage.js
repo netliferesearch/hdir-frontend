@@ -120,6 +120,14 @@ const SearchResultPage = () => (
                 }
               },
               {
+                type: 'generic',
+                url: '#1',
+                fields: {
+                  category: 'Rapport',
+                  heading: 'Aktivitetsdata for avtalespesialister'
+                }
+              },
+              {
                 type: 'news',
                 url: '#1',
                 fields: {
