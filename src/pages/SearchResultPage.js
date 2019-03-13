@@ -107,6 +107,19 @@ const SearchResultPage = () => (
           <List
             list={[
               {
+                type: 'pressRelease',
+                url: '#3',
+                fields: {
+                  heading: 'Hvordan sjonglere (illustrert)',
+                  category: 'Brosjyre',
+                  download: 'PDF ↓',
+                  image:
+                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                  publishDate: '1. desember 2003',
+                  topic: 'Innhold basert på søk, alle kan ha denne'
+                }
+              },
+              {
                 type: 'news',
                 url: '#1',
                 fields: {
@@ -148,19 +161,6 @@ const SearchResultPage = () => (
                 fields: {
                   heading: 'Hvordan sjonglere (illustrert)',
                   category: 'Brosjyre',
-                  image:
-                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '1. desember 2003',
-                  topic: 'Innhold basert på søk, alle kan ha denne'
-                }
-              },
-              {
-                type: 'pressRelease',
-                url: '#3',
-                fields: {
-                  heading: 'Hvordan sjonglere (illustrert)',
-                  category: 'Brosjyre',
-                  download: 'PDF ↓',
                   image:
                     'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
                   publishDate: '1. desember 2003',
