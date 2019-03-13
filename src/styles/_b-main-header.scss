@@ -22,6 +22,9 @@
   &__logo-link {
     flex-grow: 1;
     @include link-init(transparent);
+    @include mq($until: $tablet) {
+      width: 3rem;
+    }
   }
   &__nav {
     display: flex;

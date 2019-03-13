@@ -64,7 +64,9 @@ class InputSearch extends React.Component {
     if (this.props.autoFocus !== prevProps.autoFocus) {
       // Find the input field and focus on it.
       // This is used when we open the search from the header.
-      document.querySelector('.b-input-search__field').focus();
+      this.props.autoFocus
+        ? document.querySelector('.b-input-search__field').focus()
+        : document.querySelector('.b-input-search__field').blur();
     }
   }
 
