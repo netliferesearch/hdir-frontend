@@ -7,36 +7,37 @@ import Card from '../components/Card';
 const FrontPageHdir = () => (
   <>
     <h1 className="visually-hidden">Helsedirektoratet</h1>
-    <div className="b-background b-background--hdir" />
-    <div className="l-container">
-      <div className="l-mt-3 l-mb-5">
-        <div className="row">
-          <div className="col-xs-12 col-md-10 col-md-offset-1">
-            <p>
-              <strong>Hva leter du etter?</strong>
-            </p>
-            <InputSearch
-              exampleSuggestions={[
-                'Antibiotika',
-                'Diabetes',
-                'Hjerneslag',
-                'Helsestasjon',
-                'Rus og avhengighet',
-                'Svangerskap',
-                'Navn på ansatt',
-                'Retningslinje',
-                'Pakkeforløp',
-                'Rundskriv',
-                'Statistikk',
-                'Tilskudd'
-              ]}
-            />
+    <div className="background-wrapper">
+      <div className="l-container">
+        <div className="l-mt-3 l-mb-4">
+          <div className="row">
+            <div className="col-xs-12 col-md-10 col-md-offset-1">
+              <p>
+                <strong>Hva leter du etter?</strong>
+              </p>
+              <InputSearch
+                exampleSuggestions={[
+                  'Antibiotika',
+                  'Diabetes',
+                  'Hjerneslag',
+                  'Helsestasjon',
+                  'Rus og avhengighet',
+                  'Svangerskap',
+                  'Navn på ansatt',
+                  'Retningslinje',
+                  'Pakkeforløp',
+                  'Rundskriv',
+                  'Statistikk',
+                  'Tilskudd'
+                ]}
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div className="l-container">
-      <div className="l-mt-5">
+      <div className="l-mt-4">
         <Link href="#a" wideButton color="shadow" arrow>
           <img
             src="./icons/Normerende.svg"
