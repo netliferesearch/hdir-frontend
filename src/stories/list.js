@@ -149,7 +149,7 @@ storiesOf('List', module)
             heading: 'Kurs i hendelsesanalyse og pasientsikkerhet',
             dateFrom: '3. november 1990',
             dateTo: '6. desember 2018',
-            location: 'Clarion The Edge, Tromsø',
+            location: 'Oslo',
             registrationDeadline: '15. oktober',
             lead: 'This is some text describing the event. It is nice to have.',
             topic: ''

@@ -72,7 +72,7 @@ const ListItemType = props => {
               )}
               {fields.location && (
                 <div className="b-list-item-type__meta">
-                  <strong>Sted: </strong>
+                  <strong>By/region: </strong>
                   {fields.location}
                 </div>
               )}
