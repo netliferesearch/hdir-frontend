@@ -301,9 +301,7 @@ const RecommendationPage = () => (
                     </div>
                     <div className="l-mb-1">
                       <Collapsible heading="Forskningsgrunnlag" size="small">
-                        <div className="col-md-4" />
-
-                        <div className="row l-mb-2">
+                        <div className="row l-mb-2 l-mt-2">
                           <h4 className="col-xs-12 col-md-4 top-xs">
                             Populasjon
                           </h4>
@@ -335,50 +333,127 @@ const RecommendationPage = () => (
                               Bruk av insulin, Makrosomi (fødselsvekt >4kg),
                               Barn med fødselsvekt
                             </p>
-                            <div className="l-mt-4 l-mb-4">
-                              <Link href="#a" small icon="../icons/method.svg">
-                                Om metode og prosess
-                              </Link>
-                              <br />
-                              <Link href="#a" small icon="../icons/print.svg">
-                                Skriv ut hele retningslinjen
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="col-md-4" />
-
-                        <div className="row l-mb-2">
-                          <h4 className="col-xs-12 col-md-4 top-xs">
-                            Populasjon
-                          </h4>
-                          <div className="col-xs-12 col-md-8">
-                            Kvinner med svangerskapsdiabetes
-                          </div>
-                        </div>
-                        <div className="row l-mb-2">
-                          <h4 className="col-xs-12 col-md-4 top-xs">
-                            Intervensjon
-                          </h4>
-                          <div className="col-xs-12 col-md-8">
-                            Lavkarbo kosthold
-                          </div>
-                        </div>
-                        <div className="row l-mb-2">
-                          <h4 className="col-xs-12 col-md-4 top-xs">
-                            Komparator
-                          </h4>
-                          <div className="col-xs-12 col-md-8">
-                            Standard kostveiledning
-                          </div>
-                        </div>
-                        <div className="row l-mb-2">
-                          <h4 className="col-xs-12 col-md-4 top-xs">Utfall</h4>
-                          <div className="col-xs-12 col-md-8">
-                            Vektøkning (mor), Fødselsvekt (gram), Keisersnitt,
-                            Bruk av insulin, Makrosomi (fødselsvekt >4kg), Barn
-                            med fødselsvekt
+                            <p>
+                              <a href="https://app.magicapp.org/public/guideline/aEeerE/pico/nVXR6j/widget?openOnLoad=1">
+                                Evidensprofil
+                              </a>
+                            </p>
+                            <Collapsible
+                              heading="Sammendrag av studie"
+                              size="small"
+                            >
+                              <div>
+                                <p>
+                                  En systematisk oversikt er inkludert i
+                                  kunnskapsgrunnlaget, og belyser om kognitiv
+                                  atferdsterapi har bedre effekt enn andre
+                                  psykoterapier for voksne med bulimi:
+                                </p>
+                                <ul>
+                                  <li>
+                                    Vist, G., Jung, S., Straumann, GH., Ding,
+                                    KY., Reinar, LM. (2016). Cognitive behavior
+                                    therapy compared to other psychotherapy for
+                                    treatment of bulimia. Report from the
+                                    Norwegian Institute of Public Health.
+                                  </li>
+                                </ul>
+                                <p>
+                                  Denne systematiske oversiktsartikkelen
+                                  vurderer også hvilken tillit vi kan ha til
+                                  resultatene ved hjelp av GRADE-metoden.
+                                  Oversikten ble bestilt fra Kunnskapssenteret i
+                                  Folkehelseinstituttet for å oppdatere den
+                                  systematiske oversikten som ble funnet i
+                                  opprinnelig litteratursøk, på spørsmålet om
+                                  kognitiv atferdsterapi har bedre effekt enn
+                                  andre psykoterapier for voksne med bulimi. Den
+                                  systematiske oversikten som ble funnet i
+                                  opprinnelig litteratursøk var denne som er fra
+                                  2009 (se flytdiagram og søkestrategi
+                                  nedenfor):
+                                </p>
+                                <ul>
+                                  <li>
+                                    Hay, PPJ., &amp; Stefano, S. (2009).
+                                    Psychological treatments for bulimia nervosa
+                                    and binging (Review). The Cochrane Library.
+                                  </li>
+                                </ul>
+                                <p>
+                                  I den nye oppdaterte systematiske oversikten
+                                  av Vist at al., (2016) er bare personer over
+                                  16 år inkludert.
+                                </p>
+                                <p>
+                                  Forfatterens konklusjon fra denne oversikten
+                                  (Vist et al., 2016): Kognitiv atferdsterapi
+                                  sammenlignet med annen psykoterapi for
+                                  personer med bulimi fører trolig til at flere
+                                  personer slutter med overspisingsepisoder og
+                                  kompenserende atferd, og skårer bedre på skala
+                                  for bulimisymptomer ved avsluttet behandling.
+                                </p>
+                                <p>
+                                  <strong>
+                                    Resultat for primære utfallsmål:
+                                  </strong>
+                                </p>
+                                <p>
+                                  Kognitiv atferdsterapi sammenlignet med annen
+                                  psykoterapi til personer med bulimi fører
+                                  trolig til at flere personer slutter med
+                                  overspisingsepisoder og kompenserende atferd
+                                  (RR 0.84 (95% KI 0.72 to 0.97)), og skårer
+                                  bedre på skala for bulimisymptomer (SMD -0.23
+                                  (95% KI -0.45 to -0.01)) (moderat kvalitet på
+                                  dokumentasjonen vurdert med GRADE).
+                                </p>
+                                <p>
+                                  <strong>
+                                    Resultat for sekundære utfallsmål:
+                                  </strong>
+                                </p>
+                                <p>
+                                  Kognitiv atferdsterapi sammenlignet med annen
+                                  psykoterapi til personer med bulimi fører til
+                                  at det er lignende antall personer som slutter
+                                  med begge behandlingene (RR 1.11 (95% KI 0.88
+                                  to 1.39)) og lignende vekt/KMI etter endt
+                                  behandling for begge behandlingene (SMD -0.04
+                                  (95% KI -0.13 to 0.22)) (moderat kvalitet på
+                                  dokumentasjonen vurdert med GRADE).
+                                </p>
+                                <p>
+                                  Ved endt behandling med kognitiv atferdsterapi
+                                  er det 494 av 1000 som ikke får remisjon.
+                                </p>
+                                <p>
+                                  Dokumentasjonen er målt til å ha moderat
+                                  kvalitet for fem av 11 utfallsmål og for seks
+                                  av 11 utfallsmål var det lav eller veldig lav
+                                  kvalitet.
+                                </p>
+                                <p>
+                                  Resultattabellen nedenfor viser utfallsmål,
+                                  resultater og kvalitetsvurderinger, vurdert
+                                  med GRADE for de sammenligninger som er
+                                  undersøkt i den oppdaterte systematiske
+                                  oversikten (Vist et al., 2016).
+                                </p>
+                                <p>
+                                  <a href="https://helsedirektoratet.no/PublishingImages/retningslinjer/spiseforstyrrelse/Evidensprofil-Kognitiv%20atferdsterapi%20bulimi.pdf">
+                                    Resultattabell: Kognitiv atferdsterapi-
+                                    bulimi. Vist et al., (2016) (PDF)
+                                  </a>
+                                </p>
+                                <p>
+                                  <a href="https://helsedirektoratet.no/PublishingImages/retningslinjer/spiseforstyrrelse/Flytdiagram%20%204.2%20BN%20og%20kogn.pdf">
+                                    Flytdiagram og søkestrategi (PDF)
+                                  </a>
+                                </p>
+                              </div>
+                            </Collapsible>
                           </div>
                         </div>
                       </Collapsible>
