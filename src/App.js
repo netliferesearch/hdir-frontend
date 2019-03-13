@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import './styles/App.scss';
 
 import ScrollToTop from './components/ScrollToTop';
+import Box from './components/Box';
+import MainHeader from './components/MainHeader';
+import Footer from './components/Footer';
 
 import FrontPage from './pages/FrontPage';
 import SearchResultPage from './pages/SearchResultPage';
@@ -20,8 +23,6 @@ import ParentMemoPage from './pages/ParentMemoPage';
 import RecommendationPage from './pages/RecommendationPage';
 import NotFound from './pages/NotFound';
 import LisSpeciality from './pages/LisSpeciality';
-import MainHeader from './components/MainHeader';
-import Footer from './components/Footer';
 import LisLearning from './pages/LisLearning';
 import TransportPage from './pages/TransportPage';
 import LisFrontPage from './pages/LisFrontPage';
@@ -39,8 +40,8 @@ import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import FrontPageHelfo from './pages/FrontPageHelfo';
 import FrontPageHdir from './pages/FrontPageHdir';
 import JobPostingPage from './pages/JobPostingPage';
+import StatisticsSubpage from './pages/StatisticsSubpage';
 import ThemePage from './pages/ThemePage';
-import Box from './components/Box';
 import GrantsPage from './pages/GrantsPage';
 import GrantsSubPage from './pages/GrantsSubPage';
 import PressReleasePage from './pages/PressReleasePage';
@@ -132,6 +133,10 @@ class App extends Component {
               <Route path="/transportside" component={TransportPage} />
               <Route path="/nyhetsliste" component={NewsListPage} />
               <Route path="/tilskudd" component={GrantsPage} />
+              <Route
+                path="/statistikk-underside"
+                component={StatisticsSubpage}
+              />
               <Route path="/rapport-liste" component={ReportListPage} />
               <Route path="/trykksaker" component={PressReleasePage} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
