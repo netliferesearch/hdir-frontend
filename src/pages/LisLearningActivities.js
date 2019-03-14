@@ -32,7 +32,14 @@ const LisLearningActivities = () => (
 
       <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
-          <SectionSidebar title="SPESIALUTDANNING INNEN BARNEKIRURGI" />
+          <SectionSidebar
+            heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
+            list={[
+              { title: 'Læringsmål', url: '#a' },
+              { title: 'Læringsaktiviteter', url: '#a' },
+              { title: 'Link til annen fritekst', url: '#a' }
+            ]}
+          />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
           <h1>Læringsaktiviteter</h1>
