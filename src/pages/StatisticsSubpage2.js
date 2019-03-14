@@ -23,15 +23,14 @@ const StatisticsSubpage = () => (
             href: '#a'
           },
           {
-            name:
-              'Postoperative infeksjoner etter innsetting av totalprotese (hofte)'
+            name: 'Tvangsmiddelbruk i psykisk helsevern for voksne'
           }
         ]}
       />
       <div className="l-mt-3">
         <ArticleIntro
-          heading="Postoperative infeksjoner etter innsetting av totalprotese (hofte)"
-          lead="Denne indikatoren måler andel innsettinger av hofteproteser. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
+          heading="Tvangsmiddelbruk i psykisk helsevern for voksne"
+          lead="Kvalitetsindikatoren angir antall pasienter med registrerte tvangsmiddelvedtak for pasienter over 16 år i institusjon for døgnopphold i psykisk helsevern for voksne."
         />
       </div>
       <div className="row l-mt-4">
@@ -39,31 +38,43 @@ const StatisticsSubpage = () => (
           <SectionSidebar heading="Innhold på denne siden" />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
-          <h2>Bakgrunn</h2>
+          <h2>Om indikatoren</h2>
           <p>
-            Flertallet av personer med <i>psykiske helseproblemer</i> er i jobb.
-            Likevel er det mange som står utenfor arbeidslivet og ønsker seg
-            inn.
+            ​Denne indikatoren tar for seg tvangsmiddelbruk for pasienter i
+            institusjon for døgnopphold i psykisk helsevern for voksne.
+            Tvangsmiddelvedtak ligger til grunn for bruk av tvangsmidler i
+            psykisk helsevern for voksne. Bruk av tvangsmidler er et svært
+            inngripende virkemiddel som kun kan brukes i akutte situasjoner i
+            det psykiske helsevernet. Det er viktig å overvåke bruken av tvang.
           </p>
           <p>
-            Hele 96 prosent svarte at arbeid er{' '}
-            <a href="#a">
-              viktig for deres psykiske helse i en undersøkelse TNS Gallup har
-              utført for Helsedirektoratet
-            </a>
-            . Bare hjem og nær familie ble ansett som viktigere.
+            Det er et overordnet helsepolitisk mål å redusere og kvalitetssikre
+            bruken av tvang i det psykiske helsevernet.
           </p>
           <p>
-            Rundt 15 prosent av det legemeldte sykefraværet i Norge skyldes
-            psykiske lidelser. Andelen uføretrygdede med en psykisk lidelse er
-            på noe over 30 prosent. Blant personer som faller ut av
-            arbeidslivet, utgjør personer med psykiske lidelser en stor og
-            økende gruppe.
+            Det fremgår i psykisk helsevernlov § 4-8 at tvangsmidler bare skal
+            brukes overfor pasienten når dette er uomgjengelig nødvendig for å
+            hindre vedkommende i å skade seg selv eller andre, eller for å
+            avverge betydelig skade på bygninger, klær, inventar eller andre
+            ting. Tvangsmidler skal bare brukes når lempeligere midler har vist
+            seg å være åpenbart forgjeves eller utilstrekkelige.
           </p>
-          <p>
-            Norske og internasjonale studier viser at 30 – 50 prosent av den
-            voksne befolkningen vil få en psykisk lidelse i løpet av livet.
-          </p>
+          <p>Tvangsmidler som kan anvendes er:</p>
+          <ul>
+            <li>
+              Mekaniske tvangsmidler som hindrer pasientens bevegelsesfrihet,
+              herunder belter og remmer samt skadeforebyggende spesialklær.
+            </li>
+            <li>
+              Kortvarig anbringelse bak låst eller stengt dør uten personale til
+              stede.
+            </li>
+            <li>
+              Enkeltstående bruk av korttidsvirkende legemidler i beroligende
+              eller bedøvende hensikt.
+            </li>
+            <li>Kortvarig fastholding.</li>
+          </ul>
           <p>
             <iframe
               width="100%"
@@ -73,92 +84,59 @@ const StatisticsSubpage = () => (
               allowFullScreen="true"
             />
           </p>
-          <h2>Forebyggende arbeid</h2>
+          <h2>Hovedfunn</h2>
           <p>
-            Dette omfatter tiltak som kan bidra til å forhindre at psykiske
-            plager og lidelser oppstår (primærforebygging).
+            I andre tertial 2018 ble det benyttet tvangsmidler overfor 878*
+            pasienter i døgnbehandling. I samme periode 2017 var antallet 789*.
+          </p>
+          <table>
+            <tr>
+              <th scope="col">RHF</th>
+              <th scope="col">Antall 2. tert. 2017</th>
+              <th scope="col">Antall 2. tert. 2018</th>
+            </tr>
+            <tr>
+              <th scope="row">Helse Sør-Øst RHF</th>
+              <td>437</td>
+              <td>511</td>
+            </tr>
+            <tr>
+              <th scope="row">Helse Vest RHF</th>
+              <td>180</td>
+              <td>201</td>
+            </tr>
+            <tr>
+              <th scope="row">Helse Midt-Norge RHF</th>
+              <td>100</td>
+              <td>114</td>
+            </tr>
+            <tr>
+              <th scope="row">Helse Nord RHF</th>
+              <td>78</td>
+              <td>57</td>
+            </tr>
+          </table>
+          <p>
+            Kun Helse Nord RHF hadde en nedgang i antall pasienter med minst ett
+            tvangsmiddelvedtak.
+          </p>
+          <p>* Stemmer ikke helt overens med summen av RHF antallene.</p>
+          <h2>Forbehold ved tallene</h2>
+          <p>
+            Alle datauttrekk og beregninger gjøres likt for alle tidsserier.
+            Forutsatt at det ikke er endringer i kodepraksis, er det mulig å
+            følge historisk utvikling. Sammenligning på tvers av
+            behandlingssteder bør gjøres med varsomhet. Det kan være stor
+            variasjon i pasientpopulasjoner fra behandlingssted til
+            behandlingssted.
           </p>
           <p>
-            Arbeidsplassen er en sentral arena og arbeidsgivere har en viktig
-            oppgave.
+            Institusjoner som ikke er godkjent for tvunget psykisk helsevern med
+            døgnopphold kan likevel i akutte situasjoner benytte tvangsmidler,
+            jf. Psykisk helsevernsforskrift §24. Disse institusjonene er derfor
+            inkludert i beregningene.
           </p>
-          <p>
-            Gjennom avtalen om et inkluderende arbeidsliv har NAV mange
-            virkemidler og kompetansemiljøer, som nettopp skal bistå
-            arbeidsgivere og ansatte/jobbsøkere til å skape et godt
-            arbeidsmiljø.
-          </p>
-          <h2>Arbeid bidrar til raskere bedring</h2>
-          <p>
-            Flertallet av personer med psykiske helseproblemer er i jobb.
-            Likevel er det mange som står utenfor arbeidslivet og ønsker seg
-            inn.
-          </p>
-          <Statistics
-            flexText
-            bigText="1.4%"
-            smallText="Andel av hofteprotese-operasjonene som endte med infeksjon i operasjonsimrådet i tredje tertial i 2017."
-          />
-          <p>
-            Hele 96 prosent svarte at arbeid er{' '}
-            <a href="#a">
-              viktig for deres psykiske helse i en undersøkelse TNS Gallup har
-              utført for Helsedirektoratet
-            </a>
-            . Bare hjem og nær familie ble ansett som viktigere.
-          </p>
-          <p>
-            Rundt 15 prosent av det legemeldte sykefraværet i Norge skyldes
-            psykiske lidelser. Andelen uføretrygdede med en psykisk lidelse er
-            på noe over 30 prosent. Blant personer som faller ut av
-            arbeidslivet, utgjør personer med psykiske lidelser en stor og
-            økende gruppe.
-          </p>
-          <Statistics
-            smallText="Tall for de regionale helseforetakene viser at det er lite variasjon mellom reglene."
-            icon="../icons/pie.svg"
-          />
-          <div className="l-mt-2">
-            <Box color="yellow" square>
-              <h2>Ti råd for et inkluderende arbeidsliv</h2>
-              <ol>
-                <li>​Bry deg. Alle trenger å bli sett og verdsatt.</li>
-                <li>Gi tillit. Alle har noe å gi hvis de slipper til.</li>
-                <li>Ikke aksepter mobbing og utfrysing. Stopp rykter.</li>
-                <li>Vær romslig. Verdsett mangfold og ulikheter.</li>
-                <li>Lytt til andre. Vis interesse for andres arbeid.</li>
-                <li>Verdsett åpenhet. Snakk sammen.</li>
-                <li>Skap trygghet og takhøyde. Feil er noe vi kan lære av.</li>
-                <li>
-                  Ta ansvar. God tilrettelegging er et samarbeidsprosjekt.
-                </li>
-                <li>Ta problemer på alvor. Finn løsninger sammen.</li>
-                <li>Psykisk helse angår oss alle. Snakk om det.</li>
-              </ol>
-              (Kilde: Rådet for Psykisk Helse)
-            </Box>
-          </div>
 
-          <div className="l-mt-4 col-xs-12">
-            <NavList
-              heading="Rapporter om arbeid og psykisk helse"
-              list={[
-                { title: 'Jobber seg til bedre helse (Uni.no)', url: '#' },
-                { title: 'Omtale av IPS evalueringen (Napha.no)', url: '#' },
-                { title: 'Åtte prinsipper for IPS fra Napha (PDF)', url: '#' }
-              ]}
-            />
-          </div>
-          <div className="l-mt-4 col-xs-12">
-            <NavList
-              heading="Søk tilskudd innen arbeid og psykisk helse"
-              list={[
-                { title: 'Jobber seg til bedre helse (Uni.no)', url: '#' },
-                { title: 'Omtale av IPS evalueringen (Napha.no)', url: '#' },
-                { title: 'Åtte prinsipper for IPS fra Napha (PDF)', url: '#' }
-              ]}
-            />
-          </div>
           <div className="l-mt-4">
             <PageMeta
               publishDate="11. august 2008"
