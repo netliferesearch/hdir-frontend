@@ -1,13 +1,11 @@
 import React from 'react';
 
-import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
 import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SectionSidebar from '../components/SectionSidebar';
-import Statistics from '../components/Statistics';
 
 const StatisticsSubpage = () => (
   <>

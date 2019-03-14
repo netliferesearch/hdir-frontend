@@ -1,13 +1,11 @@
 import React from 'react';
 
-import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
 import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SectionSidebar from '../components/SectionSidebar';
-import Statistics from '../components/Statistics';
 
 const StatisticsSubpage = () => (
   <>
@@ -30,8 +28,8 @@ const StatisticsSubpage = () => (
       />
       <div className="l-mt-3">
         <ArticleIntro
-          heading="Postoperative infeksjoner etter innsetting av totalprotese (hofte)"
-          lead="Denne indikatoren måler andel innsettinger av hofteproteser. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
+          heading="Tvangsmiddelbruk i psykisk helsevern for voksne"
+          lead="Kvalitetsindikatoren angir antall pasienter med registrerte tvangsmiddelvedtak for pasienter over 16 år i institusjon for døgnopphold i psykisk helsevern for voksne."
         />
       </div>
       <div className="row l-mt-2">
