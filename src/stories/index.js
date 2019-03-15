@@ -141,34 +141,27 @@ storiesOf('AlertBar', module)
 storiesOf('ArticleIntro', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup(
-    'Basic',
-    () => (
-      <div className="l-container">
-        <div className="row">
-          <div className="col-xs-12">
-            <ArticleIntro
-              heading={text('Heading', 'Arbeid og psykisk helse')}
-              lead={text(
-                'Lead',
-                'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
-              )}
-              image={text(
-                'Image url (empty string will change the layout)',
-                './photo.jpg'
-              )}
-              imageDescription={text('Image description', 'Bildetekst')}
-              feature={boolean('Feature', false)}
-            />
-          </div>
+  .addWithStaticMarkup('Basic', () => (
+    <div className="l-container">
+      <div className="row">
+        <div className="col-xs-12">
+          <ArticleIntro
+            heading={text('Heading', 'Arbeid og psykisk helse')}
+            lead={text(
+              'Lead',
+              'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
+            )}
+            image={text(
+              'Image url (empty string will change the layout)',
+              './photo.jpg'
+            )}
+            imageDescription={text('Image description', 'Bildetekst')}
+            feature={boolean('Feature', false)}
+          />
         </div>
       </div>
-    ),
-    {
-      notes:
-        'The row and col classes are used here to show of the "feature" property breaking out of the grid'
-    }
-  );
+    </div>
+  ));
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
