@@ -334,7 +334,11 @@ const RecommendationPage = () => (
                               Barn med fødselsvekt
                             </p>
                             <p>
-                              <a href="https://app.magicapp.org/public/guideline/aEeerE/pico/nVXR6j/widget?openOnLoad=1">
+                              <a
+                                href="https://app.magicapp.org/public/guideline/aEeerE/pico/nVXR6j/widget?openOnLoad=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
                                 Evidensprofil
                               </a>
                             </p>
