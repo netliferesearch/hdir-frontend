@@ -12,37 +12,142 @@ import { checkA11y } from '@storybook/addon-a11y';
 
 // Components
 import Alert from '../components/Alert';
-import ArticleIntro from '../components/ArticleIntro';
-import ChapterHeading from '../components/ChapterHeading';
-import Collapsible from '../components/Collapsible';
 import AlertBar from '../components/AlertBar';
+import ArticleIntro from '../components/ArticleIntro';
+import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
+import Button from '../components/Button';
+import Card from '../components/Card';
+import ChapterHeading from '../components/ChapterHeading';
+import CheckboxGroup from '../components/CheckboxGroup';
+import Collapsible from '../components/Collapsible';
+import ContentLabel from '../components/ContentLabel';
 import FilterList from '../components/FilterList';
 import Footer from '../components/Footer';
 import FooterHelfo from '../components/FooterHelfo';
 import Heading from '../components/Heading';
-import LongShortHeading from '../components/LongShortHeading';
-// import MainHeader from '../components/MainHeader';
-import PageMeta from '../components/PageMeta';
-import Select from '../components/Select';
+import Image from '../components/Image';
+import InputSearch from '../components/InputSearch';
 import Link from '../components/Link';
-import MultiSelector from '../components/MultiSelector';
-import TableExample from '../components/TableExample';
-import Questionnaire from '../components/Questionnaire';
+import LinkList from '../components/LinkList';
 import ListHeading from '../components/ListHeading';
+import LongShortHeading from '../components/LongShortHeading';
+import MultiSelector from '../components/MultiSelector';
+import PageMeta from '../components/PageMeta';
 import PressRelease from '../components/PressRelease';
-import Box from '../components/Box';
-import Button from '../components/Button';
+import Questionnaire from '../components/Questionnaire';
 import Quote from '../components/Quote';
+import RadioButtonGroup from '../components/RadioButtonGroup';
 import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
-import Card from '../components/Card';
-import Statistics from '../components/Statistics';
+import SectionSidebar from '../components/SectionSidebar';
+import Select from '../components/Select';
 import SquareImage from '../components/SquareImage';
-import CheckboxGroup from '../components/CheckboxGroup';
-import RadioButtonGroup from '../components/RadioButtonGroup';
-import InputSearch from '../components/InputSearch';
-import LinkList from '../components/LinkList';
+import Statistics from '../components/Statistics';
+import TableExample from '../components/TableExample';
+import TransportBlock from '../components/TransportBlock';
+
+storiesOf('ContentLabel', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <ContentLabel
+      highlight={boolean('Highlight', false)}
+      code={boolean('Code', false)}
+    >
+      Some content
+    </ContentLabel>
+  ));
+
+storiesOf('Image', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <div style={{ overflow: 'hidden' }}>
+      <Image
+        src={text('src', 'http://placehold.it/100x100')}
+        alt={text('alt', 'Some image')}
+        ratio={select('Ratio', ['', '16:9'])}
+      />
+    </div>
+  ));
+
+storiesOf('Breadcrumbs', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <Breadcrumbs
+      paths={object('Paths', [
+        {
+          name: 'Forsiden',
+          href: '#a'
+        },
+        {
+          name: 'Konferanse',
+          href: '#a'
+        },
+        {
+          name: 'Arbeid og psykisk helse',
+          href: '#a'
+        },
+        {
+          name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
+        }
+      ])}
+    />
+  ));
+
+storiesOf('TransportBlock', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <TransportBlock
+      title={text('Title', 'Tittel')}
+      text={text('Text', 'Her er det noe tekst')}
+    />
+  ));
+
+storiesOf('SectionSidebar', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <SectionSidebar
+      heading={text('Heading', 'Some heading')}
+      headingUrl={text('Heading Url', '#a')}
+      icon={text('Icon', 'http://placehold.it/50x50')}
+      list={object('List', [
+        {
+          title: 'KAPITTEL 1',
+          url: '#',
+          description: 'Kost og fysisk aktivitet ved svangerskaps-diabetes',
+          children: [
+            {
+              description: 'Underkapittel',
+              url: '#',
+              prefix: '1.1'
+            },
+            {
+              description: 'Underkapittel',
+              active: true,
+              url: '#',
+              prefix: '1.2'
+            }
+          ]
+        },
+        {
+          title: 'KAPITTEL 2',
+          url: '#',
+          description: 'Diagnostikk og tiltak'
+        },
+        {
+          title: 'KAPITTEL 3',
+          url: '#',
+          description: 'Nytt kapittel'
+        }
+      ])}
+    />
+  ));
 
 storiesOf('Vertical spacing (example)', module)
   .addDecorator(withKnobs)
