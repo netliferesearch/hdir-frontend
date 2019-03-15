@@ -54,7 +54,7 @@ const GrantsPage = () => (
     <div className="l-container l-mt-4">
       <div className="row">
         <aside className="col-md-3 col-xs-12 l-mb-3 l-mt-1">
-          <h4>Filtrér tilskudd</h4>
+          <div className="h4">Filter</div>
           <div className="l-mt-1">
             <hr className="b-hr" />
           </div>
@@ -205,7 +205,7 @@ const GrantsPage = () => (
             ]}
           />
           <div className="l-mt-2 t-sm-center">
-            <Button secondary>Vis alt</Button>
+            <Button secondary>Vis alle</Button>
           </div>
 
           <div className="l-mt-4">

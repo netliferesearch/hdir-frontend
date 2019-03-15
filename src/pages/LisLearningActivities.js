@@ -2,7 +2,6 @@ import React from 'react';
 
 import SectionSidebar from '../components/SectionSidebar';
 import PageMeta from '../components/PageMeta';
-import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -45,8 +44,8 @@ const LisLearningActivities = () => (
           <h1>Læringsaktiviteter</h1>
 
           <div className="l-mt-3">
-            <ChapterHeading heading="Kurs" line="none" h="h2" />
-            <div className="l-mt-3">
+            <h2>Kurs</h2>
+            <div className="l-mt-1">
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
                 subheading="LÆRINGSMÅL"
@@ -119,12 +118,8 @@ const LisLearningActivities = () => (
             </div>
           </div>
           <div className="l-mt-4">
-            <ChapterHeading
-              heading="Perioperativ behandling"
-              line="none"
-              h="h2"
-            />
-            <div className="l-mt-3">
+            <h2>Perioperativ behandling</h2>
+            <div className="l-mt-1">
               <Collapsible
                 heading="Vaskulære malformasjoner"
                 subheading="LÆRINGSMÅL"

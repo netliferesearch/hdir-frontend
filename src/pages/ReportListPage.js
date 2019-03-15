@@ -57,7 +57,7 @@ const ReportListPage = () => (
       </div>
       <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
-          <h4>Filtrér rapporter</h4>
+          <div className="h4">Filter</div>
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
@@ -161,7 +161,7 @@ const ReportListPage = () => (
             ]}
           />
           <div className="l-mt-2 l-mb-5 t-sm-center">
-            <Button secondary>Vis alt</Button>
+            <Button secondary>Vis alle</Button>
           </div>
         </section>
       </div>

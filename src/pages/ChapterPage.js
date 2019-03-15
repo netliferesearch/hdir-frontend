@@ -9,12 +9,12 @@ import Box from '../components/Box';
 import Link from '../components/Link';
 
 const ChapterPage = () => (
-  <div>
-    <div className="l-container l-mt-3">
+  <>
+    <div className="l-container l-mt-2">
       <ChapterHeading
         heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
         subheading="KAPITTEL 1"
-        H="h1"
+        h="h1"
         line="none"
       />
       <div className="l-mt-3 row">
@@ -286,7 +286,7 @@ const ChapterPage = () => (
         </div>
       </Box>
     </div>
-  </div>
+  </>
 );
 
 export default ChapterPage;

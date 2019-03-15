@@ -7,13 +7,14 @@ import CheckboxGroup from '../components/CheckboxGroup';
 const JobPostingPage = () => (
   <main>
     <div className="l-container">
+      <h1>Ledige stilling</h1>
       <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
-          <h4>Filtrér søk</h4>
-          <div className="l-mt-2">
+          <div className="h4">Filter</div>
+          <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
-          <div className="l-mt-2">
+          <div className="l-mt-1">
             <CheckboxGroup
               heading="Filtrer på ansettesform"
               name="statistikktype"
