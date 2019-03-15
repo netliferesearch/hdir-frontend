@@ -10,7 +10,7 @@ const ParentHearingPage = () => (
       <div className="row">
         <div className="col-xs-12">
           <h1>Høringer</h1>
-          <div className="l-mt-4">
+          <div className="l-mt-3">
             <ChapterHeading heading="Ute på høring" line="bottom" />
             <NavList
               list={[
