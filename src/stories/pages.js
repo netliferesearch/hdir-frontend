@@ -2,35 +2,49 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { HashRouter } from 'react-router-dom';
 
-import { checkA11y } from '@storybook/addon-a11y';
-
 // Pages
 import ArticlePage from '../pages/ArticlePage';
+import AuthorizationFrontPage from '../pages/AuthorizationFrontPage';
+import AuthorizationStepPage from '../pages/AuthorizationStepPage';
+import AuthorizationStepPage2 from '../pages/AuthorizationStepPage2';
 import ChapterPage from '../pages/ChapterPage';
-import FrontPage from '../pages/FrontPage';
-import HearingPage from '../pages/HearingPage';
-import MemoPage from '../pages/MemoPage';
-import NormativeContentPage from '../pages/NormativeContentPage';
-import ParentMemoPage from '../pages/ParentMemoPage';
-import ProductPage from '../pages/ProductPage';
-import RecommendationPage from '../pages/RecommendationPage';
-import SearchResultPage from '../pages/SearchResultPage';
-import LisSpeciality from '../pages/LisSpeciality';
-import LisLearning from '../pages/LisLearning';
-import LisFrontPage from '../pages/LisFrontPage';
-import LisLearningActivities from '../pages/LisLearningActivities';
 import ChapterPageReport from '../pages/ChapterPageReport';
-import ProfessionSelector from '../pages/ProfessionSelector';
-import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
-import FrontPageHelfo from '../pages/FrontPageHelfo';
 import FrontPageHdir from '../pages/FrontPageHdir';
+import FrontPageHelfo from '../pages/FrontPageHelfo';
+import GrantsPage from '../pages/GrantsPage';
+import GrantsSubPage from '../pages/GrantsSubPage';
+import HearingPage from '../pages/HearingPage';
+import JobPostingPage from '../pages/JobPostingPage';
+import LisFrontPage from '../pages/LisFrontPage';
+import LisLearning from '../pages/LisLearning';
+import LisLearningActivities from '../pages/LisLearningActivities';
+import LisSpeciality from '../pages/LisSpeciality';
+import MemoPage from '../pages/MemoPage';
+import NewsListPage from '../pages/NewsListPage';
+import NormativeContentPage from '../pages/NormativeContentPage';
+import ParentHearingPage from '../pages/ParentHearingPage';
+import ParentMemoPage from '../pages/ParentMemoPage';
+import PressReleasePage from '../pages/PressReleasePage';
+import ProductPage from '../pages/ProductPage';
+import ProfessionSelector from '../pages/ProfessionSelector';
+import RecommendationPage from '../pages/RecommendationPage';
+import ReportListPage from '../pages/ReportListPage';
+import ReportPage from '../pages/ReportPage';
+import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
+import SearchResultPage from '../pages/SearchResultPage';
+import SimpleSerp from '../pages/SimpleSerp';
+import StatisticsPage from '../pages/StatisticsPage';
+import StatisticsSubpage from '../pages/StatisticsSubpage';
+import StatisticsSubpage2 from '../pages/StatisticsSubpage2';
+import SubscriptionPage from '../pages/SubscriptionPage';
+import SubscriptionSettingsPage from '../pages/SubscriptionSettingsPage';
 import ThemePage from '../pages/ThemePage';
+import TransportPage from '../pages/TransportPage';
 
 storiesOf('Pages', module)
-  .addDecorator(checkA11y)
   .addWithStaticMarkup('Hdir Front page', () => (
     <HashRouter>
-      <FrontPage />
+      <FrontPageHdir />
     </HashRouter>
   ))
   .addWithStaticMarkup('Helfo Front page', () => (
@@ -126,5 +140,96 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Search result page', () => (
     <HashRouter>
       <SearchResultPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('AuthorizationFrontPage', () => (
+    <HashRouter>
+      <AuthorizationFrontPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('AuthorizationStepPage', () => (
+    <HashRouter>
+      <AuthorizationStepPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('AuthorizationStepPage2', () => (
+    <HashRouter>
+      <AuthorizationStepPage2 />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('GrantsPage', () => (
+    <HashRouter>
+      <GrantsPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('GrantsSubPage', () => (
+    <HashRouter>
+      <GrantsSubPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('JobPostingPage', () => (
+    <HashRouter>
+      <JobPostingPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('NewsListPage', () => (
+    <HashRouter>
+      <NewsListPage />
+    </HashRouter>
+  ))
+
+  .addWithStaticMarkup('ParentHearingPage', () => (
+    <HashRouter>
+      <ParentHearingPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('PressReleasePage', () => (
+    <HashRouter>
+      <PressReleasePage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('ReportListPage', () => (
+    <HashRouter>
+      <ReportListPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('ReportPage', () => (
+    <HashRouter>
+      <ReportPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('SimpleSerp', () => (
+    <HashRouter>
+      <SimpleSerp />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('StatisticsPage', () => (
+    <HashRouter>
+      <StatisticsPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('StatisticsSubpage', () => (
+    <HashRouter>
+      <StatisticsSubpage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('StatisticsSubpage2', () => (
+    <HashRouter>
+      <StatisticsSubpage2 />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('SubscriptionPage', () => (
+    <HashRouter>
+      <SubscriptionPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('SubscriptionSettingsPage', () => (
+    <HashRouter>
+      <SubscriptionSettingsPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('TransportPage', () => (
+    <HashRouter>
+      <TransportPage />
     </HashRouter>
   ));
