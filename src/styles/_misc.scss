@@ -31,3 +31,41 @@
     }
   }
 }
+
+/*
+// Shows what element a heading is using. Used for testing.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  &:before {
+    position: absolute;
+    left: -3rem;
+    font-size: 1rem;
+    padding: 0.5em;
+    background: lightgrey;
+  }
+}
+
+h1:before {
+  content: 'h1';
+}
+h2:before {
+  content: 'h2';
+}
+h3:before {
+  content: 'h3';
+}
+h4:before {
+  content: 'h4';
+}
+h5:before {
+  content: 'h5';
+}
+h6:before {
+  content: 'h6';
+}
+*/
