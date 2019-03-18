@@ -4,27 +4,27 @@ import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';
 import SectionSidebar from '../components/SectionSidebar';
 import Alert from '../components/Alert';
+import ArticleIntro from '../components/ArticleIntro';
 
 const GrantsSubPage = () => (
   <>
     <div className="l-container l-mt-3">
-      <h1>Oppfølging av akuttmedisinforskriften</h1>
-      <div className="l-mt-2">
-        <Alert status="success" inline hideIcon>
-          Søknadsfrist 20. februar 2019
-        </Alert>
-      </div>
-      <div className="l-mt-2">
-        <Link href="#a" button>
-          Søk på tilskudd (Altinn)
-        </Link>
-      </div>
+      <ArticleIntro
+        heading="Oppfølging av akuttmedisinforskriften"
+        lead="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      />
+      <Alert status="success" inline hideIcon>
+        Søknadsfrist 20. februar 2019
+      </Alert>
       <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <SectionSidebar heading="Innhold på denne siden" />
         </aside>
         <div className="col-md-7 col-md-offset-1">
-          <article className="t-body-text">
+          <Link href="#a" button>
+            Søk på tilskudd (Altinn)
+          </Link>
+          <article className="t-body-text l-mt-2">
             <h2 id="m%C3%A5l-for-ordningen">Mål for ordningen</h2>
             <p>Brukerne skal få bedre kvalitet på legevakttjenesten:</p>
             <ul>
