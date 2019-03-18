@@ -1,6 +1,29 @@
 .b-checkbox-group {
   display: inline-block;
   position: relative;
+  border: 0;
+  padding: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-after: 0;
+
+  &__legend {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+
+    &--border {
+      width: 100%;
+      padding-bottom: calc(#{map-get($space-map, xs)} - 7px);
+      border-bottom: 4px solid $black;
+      margin-bottom: calc(#{map-get($space-map, xs)} - 7px);
+    }
+  }
 
   &__input {
     position: absolute;

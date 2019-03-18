@@ -36,12 +36,9 @@ const SubscriptionSettingsPage = () => (
       </div>
       <div className="l-mt-3">
         <h2>Disse produktene er du abonnert på</h2>
-        <p>
-          Du kan velge bort enkelte abonnementer ved å fjerne avkryssningen.
-        </p>
-        <form>
+        <form className="l-mt-1">
           <CheckboxGroup
-            radioGroupName="someName"
+            heading="Du kan velge bort enkelte abonnementer ved å fjerne avkryssningen."
             options={[
               {
                 value: '1a',

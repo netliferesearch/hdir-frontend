@@ -17,13 +17,11 @@ const SearchResultPage = () => (
       </div>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4" id="filterToggler">
-          <div className="h4">Filter</div>
-          <div className="l-mt-1">
-            <hr className="b-hr b-hr--thick" />
-          </div>
-          <form className="l-mt-1">
+          <form>
             <CheckboxGroup
               name="søkefilter"
+              heading="Filter"
+              border
               options={[
                 {
                   value: 'Nasjonale faglige retningslinjer',

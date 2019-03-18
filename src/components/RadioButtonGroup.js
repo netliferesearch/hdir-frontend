@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
+import classNames from 'classnames';
+
+const legendClasses = border =>
+  classNames({
+    'b-radio-button-group__legend': true,
+    'b-radio-button-group__legend--border': border
+  });
 
 const RadioButtonGroup = props => (
-  <div className="b-radio-button-group">
+  <fieldset className="b-radio-button-group">
     {props.heading && (
-      <div>
-        <strong>{props.heading}</strong>
-      </div>
+      <legend className="b-radio-button-group__legend">{props.heading}</legend>
     )}
     {props.options.map(option => {
       return (
@@ -24,7 +29,7 @@ const RadioButtonGroup = props => (
         </label>
       );
     })}
-  </div>
+  </fieldset>
 );
 
 RadioButtonGroup.propTypes = {

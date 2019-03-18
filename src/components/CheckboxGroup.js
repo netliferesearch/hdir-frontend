@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
+import classNames from 'classnames';
+
+const legendClasses = border =>
+  classNames({
+    'b-checkbox-group__legend': true,
+    'b-checkbox-group__legend--border': border
+  });
 
 const CheckboxGroup = props => (
-  <div className="b-checkbox-group">
+  <fieldset className="b-checkbox-group">
     {props.heading && (
-      <div>
-        <strong>{props.heading}</strong>
-      </div>
+      <legend className={legendClasses(props.border)}>{props.heading}</legend>
     )}
     {props.options.map(option => {
       return (
@@ -24,12 +29,13 @@ const CheckboxGroup = props => (
         </label>
       );
     })}
-  </div>
+  </fieldset>
 );
 
 CheckboxGroup.propTypes = {
   heading: PropTypes.string,
   name: PropTypes.string,
+  border: PropTypes.bool,
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.string,
