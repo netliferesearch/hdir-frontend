@@ -301,38 +301,38 @@ const RecommendationPage = () => (
                     </div>
                     <div className="l-mb-1">
                       <Collapsible heading="Forskningsgrunnlag" size="small">
-                        <div className="row l-mb-2 l-mt-2">
-                          <h4 className="col-xs-12 col-md-4 top-xs">
+                        <div className="row l-mb-1 l-mt-2">
+                          <h4 className="col-xs-12 col-md-3 top-xs">
                             Populasjon
                           </h4>
-                          <div className="col-xs-12 col-md-8">
+                          <div className="col-xs-12 col-md-9">
                             Kvinner med svangerskapsdiabetes
                           </div>
                         </div>
-                        <div className="row l-mb-2">
-                          <h4 className="col-xs-12 col-md-4 top-xs">
+                        <div className="row l-mb-1">
+                          <h4 className="col-xs-12 col-md-3 top-xs">
                             Intervensjon
                           </h4>
-                          <div className="col-xs-12 col-md-8">
+                          <div className="col-xs-12 col-md-9">
                             Lav-GI kosthold
                           </div>
                         </div>
-                        <div className="row l-mb-2">
-                          <h4 className="col-xs-12 col-md-4 top-xs">
+                        <div className="row l-mb-1">
+                          <h4 className="col-xs-12 col-md-3 top-xs">
                             Komparator
                           </h4>
-                          <div className="col-xs-12 col-md-8">
+                          <div className="col-xs-12 col-md-9">
                             Standard kostveiledning
                           </div>
                         </div>
-                        <div className="row l-mb-2">
-                          <h4 className="col-xs-12 col-md-4 top-xs">Utfall</h4>
-                          <div className="col-xs-12 col-md-8">
-                            <p>
+                        <div className="row l-mb-1">
+                          <h4 className="col-xs-12 col-md-3 top-xs">Utfall</h4>
+                          <div className="col-xs-12 col-md-9">
+                            <div>
                               Vektøkning (mor), Fødselsvekt (gram), Keisersnitt,
                               Bruk av insulin, Makrosomi (fødselsvekt >4kg),
                               Barn med fødselsvekt
-                            </p>
+                            </div>
                             <p>
                               <a
                                 href="https://app.magicapp.org/public/guideline/aEeerE/pico/nVXR6j/widget?openOnLoad=1"
