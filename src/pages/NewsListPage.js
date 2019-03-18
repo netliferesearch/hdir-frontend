@@ -1,7 +1,6 @@
 import React from 'react';
 
 import List from '../components/List';
-import Link from '../components/Link';
 import ListHeading from '../components/ListHeading';
 import Button from '../components/Button';
 import CheckboxGroup from '../components/CheckboxGroup';

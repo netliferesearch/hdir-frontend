@@ -38,7 +38,6 @@ import PressRelease from '../components/PressRelease';
 import Questionnaire from '../components/Questionnaire';
 import Quote from '../components/Quote';
 import RadioButtonGroup from '../components/RadioButtonGroup';
-import SearchOptions from '../components/SearchOptions';
 import SearchResultSection from '../components/SearchResultSection';
 import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import SectionSidebar from '../components/SectionSidebar';
@@ -545,11 +544,6 @@ storiesOf('Link', module)
       {text('Content', 'Skriv ut')}
     </Link>
   ));
-
-storiesOf('SearchOptions', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => <SearchOptions />);
 
 storiesOf('SearchResultSection', module)
   .addDecorator(withKnobs)
