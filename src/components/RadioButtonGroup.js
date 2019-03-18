@@ -12,7 +12,7 @@ const legendClasses = border =>
 const RadioButtonGroup = props => (
   <fieldset className="b-radio-button-group">
     {props.heading && (
-      <legend className="b-radio-button-group__legend">{props.heading}</legend>
+      <legend className={legendClasses(props.border)}>{props.heading}</legend>
     )}
     {props.options.map(option => {
       return (
