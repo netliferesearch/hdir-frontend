@@ -18,6 +18,11 @@
       border-color: $link-color;
     }
 
+    &:focus ~ .b-checkbox-group__indicator {
+      outline: 3px solid $black;
+      border-radius: 0;
+    }
+
     &:checked ~ .b-checkbox-group__indicator {
       border-color: $link-color;
       background-color: $link-color;
@@ -64,7 +69,7 @@
     width: 22px;
     height: 22px;
     transition: border-color 0.3s ease, max-height 0.3s ease,
-    transform 0.3s ease;
+      transform 0.3s ease;
 
     &::after {
       content: '';
