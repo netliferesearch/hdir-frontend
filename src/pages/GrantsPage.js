@@ -53,10 +53,10 @@ const GrantsPage = () => (
     </div>
     <div className="l-container l-mt-4">
       <div className="row">
-        <aside className="col-md-3 col-xs-12 l-mb-3 l-mt-1">
+        <aside className="col-md-3 col-xs-12 l-mb-3">
           <div className="h4">Filter</div>
           <div className="l-mt-1">
-            <hr className="b-hr" />
+            <hr className="b-hr b-hr--thick" />
           </div>
           <div className="l-mt-1">
             <RadioButtonGroup

@@ -53,7 +53,7 @@ const TransportPage = () => (
     </div>
 
     <div className="l-mt-5">
-      <h1 className="t-sm-center h2">Alle temasider</h1>
+      <h2 className="t-sm-center h2">Alle temasider</h2>
     </div>
 
     <div className="l-container l-mt-4 l-mb-5">

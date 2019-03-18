@@ -8,6 +8,7 @@ import CheckboxGroup from '../components/CheckboxGroup';
 
 const SearchResultPage = () => (
   <main>
+    <h1 className="visually-hidden">Søkeresultat</h1>
     <div className="l-container">
       <div className="row l-mt-3">
         <div className="col-xs-12 col-md-8 col-md-offset-4">

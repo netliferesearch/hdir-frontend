@@ -148,7 +148,7 @@ const LisLearning = () => (
             <Collapsible
               heading="Barnehelse og barnets plass i familien"
               subheading="LÆRINGSMÅL"
-              size="large"
+              size="medium"
               code="BAK 004"
             >
               <p>

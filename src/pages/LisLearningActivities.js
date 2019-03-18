@@ -49,6 +49,7 @@ const LisLearningActivities = () => (
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
                 subheading="LÆRINGSMÅL"
+                size="medium"
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -123,7 +124,7 @@ const LisLearningActivities = () => (
               <Collapsible
                 heading="Vaskulære malformasjoner"
                 subheading="LÆRINGSMÅL"
-                size="large"
+                size="medium"
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å

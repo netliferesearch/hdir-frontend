@@ -93,7 +93,7 @@ const ProductPage = () => (
 
       <div className="col-xs-12 l-mt-4">
         <Box>
-          <h4>RELATERTE PRODUKTER</h4>
+          <h3 className="h4">RELATERTE PRODUKTER</h3>
           <div className="l-mt-1">
             <NavList
               small
@@ -119,6 +119,7 @@ const ProductPage = () => (
           <ChapterHeading
             heading="Materiell til helsekontorer"
             subheading="LAST NED TRYKKSAKER"
+            h="h3"
             line="none"
           />
           <NavList
