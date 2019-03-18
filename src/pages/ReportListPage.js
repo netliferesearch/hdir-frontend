@@ -108,60 +108,158 @@ const ReportListPage = () => (
         </aside>
         <section className="col-md-8 col-md-offset-1">
           <ListHeading heading="250 Rapporter" />
-          <List
-            list={[
-              {
-                type: 'generic',
-                url: '#6',
-                fields: {
-                  download: 'true',
-                  heading:
-                    'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                  subheading: 'Publisert: 16. januar 2020'
+          <div className="js-expand-list" data-start-limit="10">
+            <List
+              list={[
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: 'Publisert: 16. januar 2020'
+                  }
                 }
-              },
-              {
-                type: 'generic',
-                url: '#6',
-                fields: {
-                  download: 'true',
-                  heading:
-                    'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                  subheading: 'Publisert: 16. januar 2020'
-                }
-              },
-              {
-                type: 'generic',
-                url: '#6',
-                fields: {
-                  heading:
-                    'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                  subheading: 'Publisert: 16. januar 2020'
-                }
-              },
-              {
-                type: 'generic',
-                url: '#6',
-                fields: {
-                  download: 'true',
-                  heading:
-                    'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                  subheading: 'Publisert: 16. januar 2020'
-                }
-              },
-              {
-                type: 'generic',
-                url: '#6',
-                fields: {
-                  heading:
-                    'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                  subheading: 'Publisert: 16. januar 2020'
-                }
-              }
-            ]}
-          />
-          <div className="l-mt-2 l-mb-5 t-sm-center">
-            <Button secondary>Vis alle</Button>
+              ]}
+            />
+            <div className="l-mt-2 l-mb-5 t-sm-center">
+              <Button secondary>↓ Vis alle</Button>
+            </div>
           </div>
         </section>
       </div>

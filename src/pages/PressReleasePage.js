@@ -65,82 +65,176 @@ const PressReleasePage = () => (
           </div>
         </aside>
         <section className="col-xs-12 col-md-8 col-md-offset-1">
-          <List
-            list={[
-              {
-                type: 'pressRelease',
-                url: '#3',
-                fields: {
-                  category: 'Brosjyrer, plakater og opplæringsmateriell',
-                  heading: 'Barns miljø og sikkerhet / når barnet skader seg',
-                  image:
-                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01. juni 2009',
-                  download: true
+          <div className="js-expand-list" data-start-limit="10">
+            <List
+              list={[
+                {
+                  type: 'pressRelease',
+                  url: '#3',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading: 'Barns miljø og sikkerhet / når barnet skader seg',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009',
+                    download: true
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#4',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading:
+                      'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#3',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading: 'Barns miljø og sikkerhet / når barnet skader seg',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#4',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading:
+                      'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#3',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading: 'Barns miljø og sikkerhet / når barnet skader seg',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#4',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading:
+                      'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#3',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading: 'Barns miljø og sikkerhet / når barnet skader seg',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#4',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading:
+                      'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#3',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading: 'Barns miljø og sikkerhet / når barnet skader seg',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#4',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading:
+                      'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#3',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading: 'Barns miljø og sikkerhet / når barnet skader seg',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#4',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading:
+                      'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#3',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading: 'Barns miljø og sikkerhet / når barnet skader seg',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
+                },
+                {
+                  type: 'pressRelease',
+                  url: '#4',
+                  fields: {
+                    category: 'Brosjyrer, plakater og opplæringsmateriell',
+                    heading:
+                      'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
+                    image:
+                      'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+                    publishDate: '01. juni 2009'
+                  }
                 }
-              },
-              {
-                type: 'pressRelease',
-                url: '#4',
-                fields: {
-                  category: 'Brosjyrer, plakater og opplæringsmateriell',
-                  heading:
-                    'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
-                  image:
-                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01. juni 2009'
-                }
-              },
-              {
-                type: 'pressRelease',
-                url: '#3',
-                fields: {
-                  category: 'Brosjyrer, plakater og opplæringsmateriell',
-                  heading: 'Barns miljø og sikkerhet / når barnet skader seg',
-                  image:
-                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01. juni 2009'
-                }
-              },
-              {
-                type: 'pressRelease',
-                url: '#4',
-                fields: {
-                  category: 'Brosjyrer, plakater og opplæringsmateriell',
-                  heading:
-                    'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
-                  image:
-                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01. juni 2009'
-                }
-              },
-              {
-                type: 'pressRelease',
-                url: '#3',
-                fields: {
-                  category: 'Brosjyrer, plakater og opplæringsmateriell',
-                  heading: 'Barns miljø og sikkerhet / når barnet skader seg',
-                  image:
-                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01. juni 2009'
-                }
-              },
-              {
-                type: 'pressRelease',
-                url: '#4',
-                fields: {
-                  category: 'Brosjyrer, plakater og opplæringsmateriell',
-                  heading:
-                    'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
-                  image:
-                    'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '01. juni 2009'
-                }
-              }
-            ]}
-          />
-          <div className="l-mt-2 l-mb-5 t-sm-center">
-            <Button secondary>Vis alle</Button>
+              ]}
+            />
+            <div className="l-mt-2 l-mb-5 t-sm-center">
+              <Button secondary>↓ Vis alle</Button>
+            </div>
           </div>
         </section>
       </div>
