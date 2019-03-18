@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { default as LinkComp } from '../components/Link';
 
 const FrontPage = () => (
   <div>
-    <div className="l-container l-mt-4">
+    <div className="l-container l-mt-3">
       Press 'h' to toggle block/component hints.
+      <div className="l-mt-2">
+        <LinkComp buttonSecondary href="/storybook">
+          Go to Storybook
+        </LinkComp>
+      </div>
     </div>
-    <div className="l-container l-mt-4 l-mb-4">
-      <p>
-        <a href="/storybook">Go to Storybook</a>
-      </p>
-      <h2>Pages</h2>
+    <div className="l-container l-mt-3 l-mb-5">
+      <h1>Pages</h1>
       <p>
         <Link to="/abonnement-tilpassing">Abonnement Tilpassing</Link>
       </p>
