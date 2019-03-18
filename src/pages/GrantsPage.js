@@ -132,80 +132,116 @@ const GrantsPage = () => (
         </aside>
         <div className="col-xs-12 col-md-8 col-md-offset-1">
           <ListHeading heading="250 tilskudd" />
-          <List
-            list={[
-              {
-                type: 'grantFunding',
-                url: '#1',
-                fields: {
-                  heading:
-                    'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
-                  deadline: 'Søknadsfrist: 15. mai 2019'
+          <div className="js-expand-list" data-start-limit="10">
+            <List
+              list={[
+                {
+                  type: 'grantFunding',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#2',
+                  fields: {
+                    heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#3',
+                  fields: {
+                    heading:
+                      'Styrking av habilitering og rehabilitering i kommunene',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#4',
+                  fields: {
+                    heading: 'Turnus for leger - tilskudd til kommuner',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#2',
+                  fields: {
+                    heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#3',
+                  fields: {
+                    heading:
+                      'Styrking av habilitering og rehabilitering i kommunene',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#4',
+                  fields: {
+                    heading: 'Turnus for leger - tilskudd til kommuner',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#3',
+                  fields: {
+                    heading:
+                      'Styrking av habilitering og rehabilitering i kommunene',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#4',
+                  fields: {
+                    heading: 'Turnus for leger - tilskudd til kommuner',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#3',
+                  fields: {
+                    heading:
+                      'Styrking av habilitering og rehabilitering i kommunene',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                },
+                {
+                  type: 'grantFunding',
+                  url: '#4',
+                  fields: {
+                    heading: 'Turnus for leger - tilskudd til kommuner',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
                 }
-              },
-              {
-                type: 'grantFunding',
-                url: '#2',
-                fields: {
-                  heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
-                  deadline: 'Søknadsfrist: 15. mai 2019'
-                }
-              },
-              {
-                type: 'grantFunding',
-                url: '#3',
-                fields: {
-                  heading:
-                    'Styrking av habilitering og rehabilitering i kommunene',
-                  deadline: 'Søknadsfrist: 15. mai 2019'
-                }
-              },
-              {
-                type: 'grantFunding',
-                url: '#4',
-                fields: {
-                  heading: 'Turnus for leger - tilskudd til kommuner',
-                  deadline: 'Søknadsfrist: 15. mai 2019'
-                }
-              },
-              {
-                type: 'grantFunding',
-                url: '#1',
-                fields: {
-                  heading:
-                    'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
-                  deadline: 'Søknadsfrist: 15. mai 2019'
-                }
-              },
-              {
-                type: 'grantFunding',
-                url: '#2',
-                fields: {
-                  heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
-                  deadline: 'Søknadsfrist: 15. mai 2019'
-                }
-              },
-              {
-                type: 'grantFunding',
-                url: '#3',
-                fields: {
-                  heading:
-                    'Styrking av habilitering og rehabilitering i kommunene',
-                  deadline: 'Søknadsfrist: 15. mai 2019'
-                }
-              },
-              {
-                type: 'grantFunding',
-                url: '#4',
-                fields: {
-                  heading: 'Turnus for leger - tilskudd til kommuner',
-                  deadline: 'Søknadsfrist: 15. mai 2019'
-                }
-              }
-            ]}
-          />
-          <div className="l-mt-2 t-sm-center">
-            <Button secondary>Vis alle</Button>
+              ]}
+            />
+            <div className="l-mt-2 t-sm-center">
+              <Button secondary>Vis alle</Button>
+            </div>
           </div>
 
           <div className="l-mt-4">
