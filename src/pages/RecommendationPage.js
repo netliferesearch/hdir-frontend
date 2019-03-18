@@ -47,7 +47,7 @@ const RecommendationPage = () => (
               <div className="l-mb-3">
                 <Collapsible
                   heading="Praktisk – Slik følger du anbefalingen"
-                  size="medium"
+                  size="large"
                 >
                   <p>
                     For å bidra til god blodsukkerregulering, vil kvinner med
@@ -103,7 +103,7 @@ const RecommendationPage = () => (
                 <div className="l-mb-3">
                   <Collapsible
                     heading="Begrunnelse – Dette er anbefalingen basert på"
-                    size="medium"
+                    size="large"
                   >
                     <div className="l-mb-1">
                       <Collapsible heading="Sammendrag" size="small">
@@ -519,7 +519,7 @@ const RecommendationPage = () => (
                     </div>
                   </Collapsible>
                 </div>
-                <Collapsible heading="Informasjon til pasienten" size="medium">
+                <Collapsible heading="Informasjon til pasienten" size="large">
                   <p>Noe innhold</p>
                 </Collapsible>
               </div>
