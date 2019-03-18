@@ -14,15 +14,17 @@ const GrantsSubPage = () => (
           Søknadsfrist 20. februar 2019
         </Alert>
       </div>
-      <div className="row l-mt-4">
+      <div className="l-mt-2">
+        <Link href="#a" button>
+          Søk på tilskudd (Altinn)
+        </Link>
+      </div>
+      <div className="row l-mt-3">
         <aside className="col-md-3 col-xs-12 l-mb-4">
           <SectionSidebar heading="Innhold på denne siden" />
         </aside>
         <div className="col-md-7 col-md-offset-1">
-          <Link href="#a" button>
-            Søk på tilskudd (Altinn)
-          </Link>
-          <article className="t-body-text l-mt-2">
+          <article className="t-body-text">
             <h2 id="m%C3%A5l-for-ordningen">Mål for ordningen</h2>
             <p>Brukerne skal få bedre kvalitet på legevakttjenesten:</p>
             <ul>
@@ -192,11 +194,6 @@ const GrantsSubPage = () => (
                 diabetes» fra 2009 og foreligger kun i digitalt format.
               </p>
             </Collapsible>
-          </div>
-          <div className="l-mt-4">
-            <Link href="#a" small icon="../icons/print.svg">
-              Skriv ut hele retningslinjen
-            </Link>
           </div>
         </div>
       </div>
