@@ -108,13 +108,13 @@ const FrontPage = () => (
         <Link to="/yrke-velger">Yrkesvelger</Link>
       </p>
       <p>
-        <Link to="/tilskudd">Tillskuddside</Link>
+        <Link to="/tilskudd">Tilskuddside</Link>
+      </p>
+      <p>
+        <Link to="/tilskudd-underside">Tilskudd underside</Link>
       </p>
       <p>
         <Link to="/trykksaker">Trykksaker</Link>
-      </p>
-      <p>
-        <Link to="/tilskudd-underside">Tillskudd underside</Link>
       </p>
     </div>
   </div>
