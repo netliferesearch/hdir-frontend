@@ -206,26 +206,22 @@ const ChapterPage = () => (
           <div className="l-mt-2">
             <hr className="b-hr b-hr--black b-hr--thick" />
           </div>
-          <div className="l-mt-1">
-            <ChapterHeading
-              heading="Underkapittel 1.1"
-              subheading="kapittel 1.1"
-              line="none"
-              url="#a"
-            />
-          </div>
+          <ChapterHeading
+            heading="Underkapittel 1.1"
+            subheading="kapittel 1.1"
+            line="none"
+            url="#a"
+          />
           <div className="l-mt-2">
             <hr className="b-hr b-hr--black b-hr--thick" />
           </div>
-          <div className="l-mt-1">
-            <ChapterHeading
-              heading="Underkapittel 1.2"
-              subheading="kapittel 1.2"
-              line="none"
-              url="#a"
-            />
-          </div>
-          <div className="l-mt-3">
+          <ChapterHeading
+            heading="Underkapittel 1.2"
+            subheading="kapittel 1.2"
+            line="none"
+            url="#a"
+          />
+          <div className="l-mt-2">
             <Link wideButton arrow color="purple">
               Henvis pasienten til helsenorge.no for mer informasjon
             </Link>
