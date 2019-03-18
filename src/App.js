@@ -11,7 +11,6 @@ import Footer from './components/Footer';
 
 import FrontPage from './pages/FrontPage';
 import SearchResultPage from './pages/SearchResultPage';
-import SimpleSerp from './pages/SimpleSerp';
 import ArticlePage from './pages/ArticlePage';
 import NormativeContentPage from './pages/NormativeContentPage';
 import ProductPage from './pages/ProductPage';
@@ -85,7 +84,6 @@ class App extends Component {
               <Route exact path="/" component={FrontPage} />
               <Route path="/produkt" component={ProductPage} />
               <Route path="/søkeresultat" component={SearchResultPage} />
-              <Route path="/søkeresultat2" component={SimpleSerp} />
               <Route path="/artikkel" component={ArticlePage} />
               <Route path="/hdir-tema" component={ThemePage} />
               <Route path="/helfo-forside" component={FrontPageHelfo} />

@@ -32,7 +32,6 @@ import ReportListPage from '../pages/ReportListPage';
 import ReportPage from '../pages/ReportPage';
 import ReportPageWithoutImage from '../pages/ReportPageWithoutImage';
 import SearchResultPage from '../pages/SearchResultPage';
-import SimpleSerp from '../pages/SimpleSerp';
 import StatisticsPage from '../pages/StatisticsPage';
 import StatisticsSubpage from '../pages/StatisticsSubpage';
 import StatisticsSubpage2 from '../pages/StatisticsSubpage2';
@@ -196,11 +195,6 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('ReportPage', () => (
     <HashRouter>
       <ReportPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('SimpleSerp', () => (
-    <HashRouter>
-      <SimpleSerp />
     </HashRouter>
   ))
   .addWithStaticMarkup('StatisticsPage', () => (
