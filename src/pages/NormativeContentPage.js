@@ -26,129 +26,130 @@ const NormativeContentPage = () => (
           }
         ]}
       />
-
-      <div className="l-mt-3">
-        <h1>Normerende innhold</h1>
-      </div>
-      <div className="l-mt-3">
-        <h2 className="h5 h5--thin l-mb-1">Velg innholdstype</h2>
-        <FilterList
-          list={[
-            'Alt',
-            'Nasjonale faglige retningslinjer',
-            'Pakkeforløp',
-            'Rundskriv',
-            'Veileder til lov og forskrift',
-            'Høringer'
-          ]}
-        />
-      </div>
-
-      <div className="l-mt-3">
-        <h2 className="h5 h5--thin l-mb-1">Vis kun</h2>
-        <FilterList
-          list={[
-            'Alt',
-            'ABC',
-            'DEF',
-            'GHI',
-            'JKL',
-            'MNO',
-            'PQR',
-            'STU',
-            'VWX',
-            'UZÆ',
-            'ØÅ',
-            '0-9'
-          ]}
-        />
-      </div>
-
-      <article className="l-mt-4">
-        <div className="l-mb-3">
-          <NavList
-            heading="A"
-            columns
+      <main id="main">
+        <div className="l-mt-3">
+          <h1>Normerende innhold</h1>
+        </div>
+        <div className="l-mt-3">
+          <h2 className="h5 h5--thin l-mb-1">Velg innholdstype</h2>
+          <FilterList
             list={[
-              {
-                title: 'Antibiotika',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'ADHD',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title:
-                  'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
-                url: '#',
-                meta: 'Veileder'
-              },
-              {
-                title: 'Fileksempel',
-                url: '#',
-                meta: 'En PDF',
-                infoText: 'PDF',
-                file: true
-              },
-              {
-                title: 'ADHD',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'Antibiotika',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'ADHD',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              }
+              'Alt',
+              'Nasjonale faglige retningslinjer',
+              'Pakkeforløp',
+              'Rundskriv',
+              'Veileder til lov og forskrift',
+              'Høringer'
             ]}
           />
         </div>
-        <div className="l-mb-3">
-          <NavList
-            heading="B"
-            columns
+
+        <div className="l-mt-3">
+          <h2 className="h5 h5--thin l-mb-1">Vis kun</h2>
+          <FilterList
             list={[
-              {
-                title: 'Antibiotika',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title: 'ADHD',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              }
+              'Alt',
+              'ABC',
+              'DEF',
+              'GHI',
+              'JKL',
+              'MNO',
+              'PQR',
+              'STU',
+              'VWX',
+              'UZÆ',
+              'ØÅ',
+              '0-9'
             ]}
           />
         </div>
-        <div className="l-mb-3">
-          <NavList
-            heading="C"
-            columns
-            list={[
-              {
-                title: 'ADHD',
-                url: '#',
-                meta: 'Nasjonale faglige retningslinjer'
-              },
-              {
-                title:
-                  'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
-                url: '#',
-                meta: 'Veileder'
-              }
-            ]}
-          />
-        </div>
-      </article>
+
+        <article className="l-mt-4">
+          <div className="l-mb-3">
+            <NavList
+              heading="A"
+              columns
+              list={[
+                {
+                  title: 'Antibiotika',
+                  url: '#',
+                  meta: 'Nasjonale faglige retningslinjer'
+                },
+                {
+                  title: 'ADHD',
+                  url: '#',
+                  meta: 'Nasjonale faglige retningslinjer'
+                },
+                {
+                  title:
+                    'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
+                  url: '#',
+                  meta: 'Veileder'
+                },
+                {
+                  title: 'Fileksempel',
+                  url: '#',
+                  meta: 'En PDF',
+                  infoText: 'PDF',
+                  file: true
+                },
+                {
+                  title: 'ADHD',
+                  url: '#',
+                  meta: 'Nasjonale faglige retningslinjer'
+                },
+                {
+                  title: 'Antibiotika',
+                  url: '#',
+                  meta: 'Nasjonale faglige retningslinjer'
+                },
+                {
+                  title: 'ADHD',
+                  url: '#',
+                  meta: 'Nasjonale faglige retningslinjer'
+                }
+              ]}
+            />
+          </div>
+          <div className="l-mb-3">
+            <NavList
+              heading="B"
+              columns
+              list={[
+                {
+                  title: 'Antibiotika',
+                  url: '#',
+                  meta: 'Nasjonale faglige retningslinjer'
+                },
+                {
+                  title: 'ADHD',
+                  url: '#',
+                  meta: 'Nasjonale faglige retningslinjer'
+                }
+              ]}
+            />
+          </div>
+          <div className="l-mb-5">
+            <NavList
+              heading="C"
+              columns
+              list={[
+                {
+                  title: 'ADHD',
+                  url: '#',
+                  meta: 'Nasjonale faglige retningslinjer'
+                },
+                {
+                  title:
+                    'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
+                  url: '#',
+                  meta: 'Veileder'
+                }
+              ]}
+            />
+          </div>
+        </article>
+      </main>
     </div>
   </div>
 );

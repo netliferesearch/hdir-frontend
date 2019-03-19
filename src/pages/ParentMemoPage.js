@@ -9,7 +9,7 @@ import LongShortHeading from '../components/LongShortHeading';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const MemoChapterPage = () => (
-  <div>
+  <>
     <div className="l-container">
       <Breadcrumbs
         paths={[
@@ -30,110 +30,106 @@ const MemoChapterPage = () => (
           }
         ]}
       />
-
-      <div className="l-mt-3">
-        <div className="row">
-          <div className="col-xs-12">
-            <LongShortHeading
-              long="Rundskriv for helsepersonelloven med kommentarer"
-              short="Helsepersonelloven med kommentarer"
-              icon={'https://placehold.it/64x64'}
-              url="#a"
-              linkText="Hva er rundskriv?"
-            />
+      <main id="main">
+        <div className="l-mt-3">
+          <div className="row">
+            <div className="col-xs-12">
+              <LongShortHeading
+                long="Rundskriv for helsepersonelloven med kommentarer"
+                short="Helsepersonelloven med kommentarer"
+                icon={'https://placehold.it/64x64'}
+                url="#a"
+                linkText="Hva er rundskriv?"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="row l-mt-4">
-        <aside className="col-md-3 col-xs-12 l-mb-4">
-          <SectionSidebar
-            heading="Innhold på denne siden"
-            list={[
-              {
-                title: 'Kapittel 1. Lovens formål, virkeområde og definisjoner',
-                url: '#'
-              },
-              {
-                title: 'Kapittel 2. Krav til helsepersonells yrkesutøvelse',
-                url: '#'
-              },
-              {
-                title: 'Kapittel 3. Krav til organisering og virksomhet',
-                url: '#'
-              }
-            ]}
-          />
-        </aside>
-        <article className="col-md-8 col-xs-12 col-md-offset-1">
-          <div className="l-mb-4">
+        <div className="row l-mt-3">
+          <aside className="col-md-3 col-xs-12 l-mb-3">
+            <SectionSidebar
+              heading="Innhold på denne siden"
+              list={[
+                {
+                  title:
+                    'Kapittel 1. Lovens formål, virkeområde og definisjoner',
+                  url: '#'
+                },
+                {
+                  title: 'Kapittel 2. Krav til helsepersonells yrkesutøvelse',
+                  url: '#'
+                },
+                {
+                  title: 'Kapittel 3. Krav til organisering og virksomhet',
+                  url: '#'
+                }
+              ]}
+            />
+          </aside>
+          <article className="col-md-8 col-xs-12 col-md-offset-1">
             <ChapterHeading
               heading="Lovens formål, virkeområde og definasjoner"
               subheading="KAPITTEL 1"
             />
-            <div className="l-mt-2">
-              <ul className="b-list b-list--no-style">
-                <li className="l-mb-1">
-                  <a href="#a">§ 1. Lovens formål</a>
-                </li>
-                <li className="l-mb-1">
-                  <a href="#a">§ 2. Lovens virkeområde</a>
-                </li>
-                <li className="l-mb-1">
-                  <a href="#a">§ 3. Definasjoner</a>
-                </li>
-              </ul>
+            <div className="l-mt-1">
+              <p>
+                <a href="#a">§ 1. Lovens formål</a>
+              </p>
+              <p>
+                <a href="#a">§ 2. Lovens virkeområde</a>
+              </p>
+              <p>
+                <a href="#a">§ 3. Definasjoner</a>
+              </p>
               <a href="#a">
                 <strong>Les hele Kapittel 1</strong>
               </a>
             </div>
-          </div>
-
-          <div className="l-mb-4">
-            <ChapterHeading
-              heading="Krav til helsepersonells yrkesutøvelse"
-              subheading="KAPITTEL 2"
-            />
-            <div className="l-mt-2">
-              <ul className="b-list b-list--no-style">
-                <li className="l-mb-1">
+            <div className="l-mt-3">
+              <ChapterHeading
+                heading="Krav til helsepersonells yrkesutøvelse"
+                subheading="KAPITTEL 2"
+              />
+              <div className="l-mt-1">
+                <p>
                   <a href="#a">§ 1. Lovens formål</a>
-                </li>
-                <li className="l-mb-1">
+                </p>
+                <p>
                   <a href="#a">§ 2. Lovens virkeområde</a>
-                </li>
-                <li className="l-mb-1">
+                </p>
+                <p>
                   <a href="#a">§ 3. Definasjoner</a>
-                </li>
-              </ul>
-              <a href="#a">
-                <strong>Les hele Kapittel 2</strong>
-              </a>
+                </p>
+                <a href="#a">
+                  <strong>Les hele Kapittel 2</strong>
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div className="l-mb-4">
-            <ChapterHeading
-              heading="Krav til organisering og virksomhet"
-              subheading="KAPITTEL 3"
-            />
-            <div className="l-mt-2">
-              <ul className="b-list b-list--no-style">
-                <li className="l-mb-1">
+            <div className="l-mt-3">
+              <ChapterHeading
+                heading="Krav til organisering og virksomhet"
+                subheading="KAPITTEL 3"
+              />
+              <div className="l-mt-1">
+                <p>
                   <a href="#a">§ 1. Lovens formål</a>
-                </li>
-                <li className="l-mb-1">
+                </p>
+                <p>
                   <a href="#a">§ 2. Lovens virkeområde</a>
-                </li>
-                <li className="l-mb-1">
+                </p>
+                <p>
                   <a href="#a">§ 3. Definasjoner</a>
-                </li>
-              </ul>
-              <a href="#a">
-                <strong>Les hele Kapittel 3</strong>
-              </a>
+                </p>
+                <a href="#a">
+                  <strong>Les hele Kapittel 3</strong>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
+        </div>
+      </main>
 
+      <div className="row">
+        <div className="col-md-8 col-xs-12 col-md-offset-4">
           <div className="l-mt-4">
             <Link href="#a" small icon="../icons/method.svg">
               Om metode og prosess
@@ -142,19 +138,18 @@ const MemoChapterPage = () => (
             <Link href="#a" small icon="../icons/print.svg">
               Skriv ut hele retningslinjen
             </Link>
-          </div>
-
-          <div className="l-mt-4">
+            <br />
             <PageMeta
               publishDate="11. august 2008"
               editDate="11. august 2018"
               url="#a"
             />
           </div>
-        </article>
+        </div>
       </div>
     </div>
-    <div className="l-mt-4">
+
+    <div className="l-mt-5">
       <Box color="grey" square noPadding>
         <div className="l-container">
           <strong>Kontakt:</strong>
@@ -167,7 +162,7 @@ const MemoChapterPage = () => (
         </div>
       </Box>
     </div>
-  </div>
+  </>
 );
 
 export default MemoChapterPage;

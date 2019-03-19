@@ -6,7 +6,7 @@ import Select from '../components/Select';
 import Alert from '../components/Alert';
 
 const FrontPageHelfo = () => (
-  <>
+  <main id="main">
     <h1 className="visually-hidden">Helfo</h1>
     <div className="l-container">
       <div className="row">
@@ -243,7 +243,7 @@ const FrontPageHelfo = () => (
         </div>
       </Box>
     </div>
-  </>
+  </main>
 );
 
 export default FrontPageHelfo;

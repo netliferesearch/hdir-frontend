@@ -5,7 +5,7 @@ import ListHeading from '../components/ListHeading';
 import CheckboxGroup from '../components/CheckboxGroup';
 
 const JobPostingPage = () => (
-  <main>
+  <main id="main">
     <div className="l-container">
       <h1>Ledige stilling</h1>
       <div className="row l-mt-3">

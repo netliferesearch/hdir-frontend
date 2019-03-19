@@ -6,7 +6,7 @@ import Box from '../components/Box';
 import CheckboxGroup from '../components/CheckboxGroup';
 
 const PressReleasePage = () => (
-  <main>
+  <main id="main">
     <div className="l-container">
       <div className="row l-mt-3">
         <div className="col-xs-12">

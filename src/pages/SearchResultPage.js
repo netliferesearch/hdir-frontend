@@ -7,7 +7,7 @@ import InputSearch from '../components/InputSearch';
 import CheckboxGroup from '../components/CheckboxGroup';
 
 const SearchResultPage = () => (
-  <main>
+  <main id="main">
     <h1 className="visually-hidden">Søkeresultat</h1>
     <div className="l-container">
       <div className="row l-mt-3">

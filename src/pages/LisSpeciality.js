@@ -5,12 +5,11 @@ import NavList from '../components/NavList';
 import Link from '../components/Link';
 
 const LisSpeciality = () => (
-  <div>
+  <>
     <div className="l-container l-mt-3">
-      <h1>Barnekirurgi</h1>
-
-      <div className="row l-mt-2">
-        <div className="col-md-12">
+      <main id="main">
+        <h1>Barnekirurgi</h1>
+        <div className="l-mt-2">
           <NavList
             list={[
               { title: 'Læringsmål', url: '#' },
@@ -19,15 +18,15 @@ const LisSpeciality = () => (
             ]}
           />
         </div>
-      </div>
-      <div className="l-mt-4">
+      </main>
+      <div className="l-mt-3">
         <PageMeta
           publishDate="11. august 2008"
           editDate="11. august 2018"
           url="#a"
         />
       </div>
-      <div className="l-mt-4">
+      <div className="l-mt-3 l-mb-5">
         <Link href="#a" small icon="../icons/method.svg">
           Om metode og prosess
         </Link>
@@ -37,20 +36,19 @@ const LisSpeciality = () => (
         </Link>
       </div>
     </div>
-    <div className="l-mt-4">
-      <Box color="grey" square noPadding>
-        <div className="l-container">
-          <strong>Kontakt:</strong>
-          <br />
-          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-          <br />
-          <a href="#a">navn.etternavn@helsedir.no</a>
-          <br />
-          <a href="#a">999 99 999</a>
-        </div>
-      </Box>
-    </div>
-  </div>
+
+    <Box color="grey" square noPadding>
+      <div className="l-container">
+        <strong>Kontakt:</strong>
+        <br />
+        <a href="#a">spesialisthelsetjenester@helsedir.no</a>
+        <br />
+        <a href="#a">navn.etternavn@helsedir.no</a>
+        <br />
+        <a href="#a">999 99 999</a>
+      </div>
+    </Box>
+  </>
 );
 
 export default LisSpeciality;

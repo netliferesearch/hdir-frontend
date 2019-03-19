@@ -9,7 +9,7 @@ import Collapsible from '../components/Collapsible';
 import Alert from '../components/Alert';
 
 const NewsListPage = () => (
-  <main>
+  <main id="main">
     <div className="l-container">
       <div className="l-mt-3">
         <h1>Nyheter</h1>

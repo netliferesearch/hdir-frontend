@@ -5,7 +5,7 @@ import InputSearch from '../components/InputSearch';
 import Card from '../components/Card';
 
 const FrontPageHdir = () => (
-  <>
+  <main id="main">
     <h1 className="visually-hidden">Helsedirektoratet</h1>
     <div className="background-wrapper">
       <div className="l-container">
@@ -153,7 +153,7 @@ const FrontPageHdir = () => (
         </div>
       </div>
     </div>
-  </>
+  </main>
 );
 
 export default FrontPageHdir;

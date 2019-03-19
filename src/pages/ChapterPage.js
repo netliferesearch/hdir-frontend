@@ -10,231 +10,233 @@ import Link from '../components/Link';
 
 const ChapterPage = () => (
   <>
-    <div className="l-container l-mt-2">
-      <ChapterHeading
-        heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
-        subheading="KAPITTEL 1"
-        h="h1"
-        line="none"
-      />
-      <div className="l-mt-3 row">
-        <aside className="col-md-4 l-hide-to-lg l-bleed-right">
-          <SectionSidebar
-            heading="Nasjonal faglig retningslinje for svangerskapsdiabetes"
-            headingUrl="#a"
-            icon="../icons/Konferanser.svg"
-            list={[
-              {
-                title: 'KAPITTEL 1',
-                url: '#',
-                description:
-                  'Kost og fysisk aktivitet ved svangerskaps-diabetes',
-                children: [
-                  {
-                    description: 'Underkapittel',
-                    url: '#',
-                    prefix: '1.1'
-                  },
-                  {
-                    description: 'Underkapittel',
-                    active: true,
-                    url: '#',
-                    prefix: '1.2'
-                  }
-                ]
-              },
-              {
-                title: 'KAPITTEL 2',
-                url: '#',
-                description: 'Diagnostikk og tiltak'
-              },
-              {
-                title: 'KAPITTEL 3',
-                url: '#',
-                description: 'Nytt kapittel'
-              }
-            ]}
-          />
-        </aside>
-        <div className="col-md-7 col-md-offset-1 l-bleed-left">
-          <Collapsible
-            heading="Om behandling av svangerskapsdiabetes"
-            size="small"
-            smallContent
-            id="someId1"
-          >
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco.
-            </p>
-          </Collapsible>
-          <div className="l-mt-1">
+    <main id="main">
+      <div className="l-container l-mt-2">
+        <ChapterHeading
+          heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
+          subheading="KAPITTEL 1"
+          h="h1"
+          line="none"
+        />
+        <div className="l-mt-3 row">
+          <aside className="col-md-4 l-hide-to-lg l-bleed-right">
+            <SectionSidebar
+              heading="Nasjonal faglig retningslinje for svangerskapsdiabetes"
+              headingUrl="#a"
+              icon="../icons/Konferanser.svg"
+              list={[
+                {
+                  title: 'KAPITTEL 1',
+                  url: '#',
+                  description:
+                    'Kost og fysisk aktivitet ved svangerskaps-diabetes',
+                  children: [
+                    {
+                      description: 'Underkapittel',
+                      url: '#',
+                      prefix: '1.1'
+                    },
+                    {
+                      description: 'Underkapittel',
+                      active: true,
+                      url: '#',
+                      prefix: '1.2'
+                    }
+                  ]
+                },
+                {
+                  title: 'KAPITTEL 2',
+                  url: '#',
+                  description: 'Diagnostikk og tiltak'
+                },
+                {
+                  title: 'KAPITTEL 3',
+                  url: '#',
+                  description: 'Nytt kapittel'
+                }
+              ]}
+            />
+          </aside>
+          <div className="col-md-7 col-md-offset-1 l-bleed-left">
             <Collapsible
-              heading="Anbefaling 1"
-              subheading="STERK ANBEFALING"
-              subheadingContent="Dette er en beskrivelse av sterk anbefaling"
-              id="someId1.1"
+              heading="Om behandling av svangerskapsdiabetes"
+              size="small"
+              smallContent
+              id="someId1"
             >
-              <Alert status="success">
-                Vær oppmerksom på at dette atomet er på høring.
-              </Alert>
               <p>
-                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
-                tilfredsstillende blodsukker fastende og etter måltider, og for
-                å forhindre for stor vektøkning i svangerskapet. Det anbefales
-                at kostanamnese benyttes i dette arbeidet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
               </p>
-              <p>
-                Kostrådene baseres på kostanamnesen og styres etter
-                glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                5.3 mmol/l, 2 timer etter måltid: {'<'}
-                6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                Kvinnen kan rådes til å følge et kosthold med en
-                karbohydratkvalitet og -mengde per måltid som gjør det enklere å
-                nå behandlingsmålene for glukose
-              </p>
-              <p>etc.</p>
-              <hr className="b-hr b-hr--grey-light b-hr--padded" />
-              <div className="t-sm-right">
-                <PageMeta editDate="11. august 2018" />
-              </div>
             </Collapsible>
-          </div>
-          <div className="l-mt-3">
-            <Collapsible
-              heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
-              subheading="STERK ANBEFALING"
-              subheadingContent="Dette er en beskrivelse av sterk anbefaling"
-              id="anbefaling1"
-            >
-              <p>
-                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
-                tilfredsstillende blodsukker fastende og etter måltider, og for
-                å forhindre for stor vektøkning i svangerskapet. Det anbefales
-                at kostanamnese benyttes i dette arbeidet.
-              </p>
-              <p>
-                Kostrådene baseres på kostanamnesen og styres etter
-                glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                5.3 mmol/l, 2 timer etter måltid: {'<'}
-                6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                Kvinnen kan rådes til å følge et kosthold med en
-                karbohydratkvalitet og -mengde per måltid som gjør det enklere å
-                nå behandlingsmålene for glukose
-              </p>
-              <p>etc.</p>
-              <hr className="b-hr b-hr--grey-light b-hr--padded" />
+            <div className="l-mt-1">
+              <Collapsible
+                heading="Anbefaling 1"
+                subheading="STERK ANBEFALING"
+                subheadingContent="Dette er en beskrivelse av sterk anbefaling"
+                id="someId1.1"
+              >
+                <Alert status="success">
+                  Vær oppmerksom på at dette atomet er på høring.
+                </Alert>
+                <p>
+                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
+                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
+                  og for å forhindre for stor vektøkning i svangerskapet. Det
+                  anbefales at kostanamnese benyttes i dette arbeidet.
+                </p>
+                <p>
+                  Kostrådene baseres på kostanamnesen og styres etter
+                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
+                  5.3 mmol/l, 2 timer etter måltid: {'<'}
+                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
+                  Kvinnen kan rådes til å følge et kosthold med en
+                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
+                  å nå behandlingsmålene for glukose
+                </p>
+                <p>etc.</p>
+                <hr className="b-hr b-hr--grey-light b-hr--padded" />
+                <div className="t-sm-right">
+                  <PageMeta editDate="11. august 2018" />
+                </div>
+              </Collapsible>
+            </div>
+            <div className="l-mt-3">
+              <Collapsible
+                heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
+                subheading="STERK ANBEFALING"
+                subheadingContent="Dette er en beskrivelse av sterk anbefaling"
+                id="anbefaling1"
+              >
+                <p>
+                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
+                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
+                  og for å forhindre for stor vektøkning i svangerskapet. Det
+                  anbefales at kostanamnese benyttes i dette arbeidet.
+                </p>
+                <p>
+                  Kostrådene baseres på kostanamnesen og styres etter
+                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
+                  5.3 mmol/l, 2 timer etter måltid: {'<'}
+                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
+                  Kvinnen kan rådes til å følge et kosthold med en
+                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
+                  å nå behandlingsmålene for glukose
+                </p>
+                <p>etc.</p>
+                <hr className="b-hr b-hr--grey-light b-hr--padded" />
 
-              <div className="t-sm-right">
-                <PageMeta editDate="11. august 2018" />
-              </div>
-            </Collapsible>
-          </div>
-          <div className="l-mt-3">
-            <Collapsible
-              heading="Anbefaling 3"
-              subheading="STERK ANBEFALING"
-              subheadingContent="Dette er en beskrivelse av sterk anbefaling"
-              id="someId3"
-            >
-              <p>
-                Kvinnen bør få kostveiledning og jevnlig oppfølging for å oppnå
-                tilfredsstillende blodsukker fastende og etter måltider, og for
-                å forhindre for stor vektøkning i svangerskapet. Det anbefales
-                at kostanamnese benyttes i dette arbeidet.
-              </p>
-              <p>
-                Kostrådene baseres på kostanamnesen og styres etter
-                glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                5.3 mmol/l, 2 timer etter måltid: {'<'}
-                6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                Kvinnen kan rådes til å følge et kosthold med en
-                karbohydratkvalitet og -mengde per måltid som gjør det enklere å
-                nå behandlingsmålene for glukose
-              </p>
-              <p>etc.</p>
-              <div className="l-mt-2">
-                <Collapsible
-                  heading="Seksjon under: 1 – SUBHEADING UTEN INNHOLD"
-                  size="medium"
-                >
-                  <p>
-                    Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                    oppnå tilfredsstillende blodsukker fastende og etter
-                    måltider, og for å forhindre for stor vektøkning i
-                    svangerskapet. Det anbefales at kostanamnese benyttes i
-                    dette arbeidet.
-                  </p>
-                </Collapsible>
-              </div>
-              <div className="l-mt-2">
-                <Collapsible
-                  heading="Seksjon under: 2 – SUBHEADING UTEN INNHOLD"
-                  size="medium"
-                  id="someId3"
-                >
-                  <p>
-                    Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                    oppnå tilfredsstillende blodsukker fastende og etter
-                    måltider, og for å forhindre for stor vektøkning i
-                    svangerskapet. Det anbefales at kostanamnese benyttes i
-                    dette arbeidet.
-                  </p>
+                <div className="t-sm-right">
+                  <PageMeta editDate="11. august 2018" />
+                </div>
+              </Collapsible>
+            </div>
+            <div className="l-mt-3">
+              <Collapsible
+                heading="Anbefaling 3"
+                subheading="STERK ANBEFALING"
+                subheadingContent="Dette er en beskrivelse av sterk anbefaling"
+                id="someId3"
+              >
+                <p>
+                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
+                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
+                  og for å forhindre for stor vektøkning i svangerskapet. Det
+                  anbefales at kostanamnese benyttes i dette arbeidet.
+                </p>
+                <p>
+                  Kostrådene baseres på kostanamnesen og styres etter
+                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
+                  5.3 mmol/l, 2 timer etter måltid: {'<'}
+                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
+                  Kvinnen kan rådes til å følge et kosthold med en
+                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
+                  å nå behandlingsmålene for glukose
+                </p>
+                <p>etc.</p>
+                <div className="l-mt-2">
                   <Collapsible
-                    heading="Seksjon under: 1.2"
-                    size="small"
-                    smallContent
+                    heading="Seksjon under: 1 – SUBHEADING UTEN INNHOLD"
+                    size="medium"
                   >
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Praesent eget convallis metus. Sed vitae imperdiet enim.
-                      Suspendisse commodo nulla et arcu sodales, et sagittis
-                      nisi fermentum. Integer commodo, ipsum ut vulputate
-                      consequat, dolor risus egestas eros, sed consectetur
-                      turpis neque et magna.
+                      Kvinnen bør få kostveiledning og jevnlig oppfølging for å
+                      oppnå tilfredsstillende blodsukker fastende og etter
+                      måltider, og for å forhindre for stor vektøkning i
+                      svangerskapet. Det anbefales at kostanamnese benyttes i
+                      dette arbeidet.
                     </p>
                   </Collapsible>
-                </Collapsible>
-              </div>
-              <hr className="b-hr b-hr--grey-light b-hr--padded" />
-              <div className="t-sm-right">
-                <PageMeta editDate="11. august 2018" />
-              </div>
-            </Collapsible>
-          </div>
-          <div className="l-mt-2">
-            <hr className="b-hr b-hr--black b-hr--thick" />
-          </div>
-          <ChapterHeading
-            heading="Underkapittel 1.1"
-            subheading="kapittel 1.1"
-            line="none"
-            url="#a"
-          />
-          <div className="l-mt-2">
-            <hr className="b-hr b-hr--black b-hr--thick" />
-          </div>
-          <ChapterHeading
-            heading="Underkapittel 1.2"
-            subheading="kapittel 1.2"
-            line="none"
-            url="#a"
-          />
-          <div className="l-mt-2">
-            <Link wideButton arrow color="purple">
-              Henvis pasienten til helsenorge.no for mer informasjon
-            </Link>
-          </div>
-          <div className="l-mt-3">
-            <PageMeta
-              publishDate="11. oktober 2008"
-              editDate="11. august 2018"
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Seksjon under: 2 – SUBHEADING UTEN INNHOLD"
+                    size="medium"
+                    id="someId3"
+                  >
+                    <p>
+                      Kvinnen bør få kostveiledning og jevnlig oppfølging for å
+                      oppnå tilfredsstillende blodsukker fastende og etter
+                      måltider, og for å forhindre for stor vektøkning i
+                      svangerskapet. Det anbefales at kostanamnese benyttes i
+                      dette arbeidet.
+                    </p>
+                    <Collapsible
+                      heading="Seksjon under: 1.2"
+                      size="small"
+                      smallContent
+                    >
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent eget convallis metus. Sed vitae imperdiet enim.
+                        Suspendisse commodo nulla et arcu sodales, et sagittis
+                        nisi fermentum. Integer commodo, ipsum ut vulputate
+                        consequat, dolor risus egestas eros, sed consectetur
+                        turpis neque et magna.
+                      </p>
+                    </Collapsible>
+                  </Collapsible>
+                </div>
+                <hr className="b-hr b-hr--grey-light b-hr--padded" />
+                <div className="t-sm-right">
+                  <PageMeta editDate="11. august 2018" />
+                </div>
+              </Collapsible>
+            </div>
+            <div className="l-mt-2">
+              <hr className="b-hr b-hr--black b-hr--thick" />
+            </div>
+            <ChapterHeading
+              heading="Underkapittel 1.1"
+              subheading="kapittel 1.1"
+              line="none"
+              url="#a"
             />
+            <div className="l-mt-2">
+              <hr className="b-hr b-hr--black b-hr--thick" />
+            </div>
+            <ChapterHeading
+              heading="Underkapittel 1.2"
+              subheading="kapittel 1.2"
+              line="none"
+              url="#a"
+            />
+            <div className="l-mt-2">
+              <Link wideButton arrow color="purple">
+                Henvis pasienten til helsenorge.no for mer informasjon
+              </Link>
+            </div>
+            <div className="l-mt-3">
+              <PageMeta
+                publishDate="11. oktober 2008"
+                editDate="11. august 2018"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <div className="l-container">
       <div className="l-mt-4 l-mb-4">

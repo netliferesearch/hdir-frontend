@@ -9,7 +9,7 @@ import Card from '../components/Card';
 import ArticleIntro from '../components/ArticleIntro';
 
 const ReportListPage = () => (
-  <main>
+  <main id="main">
     <div className="l-container">
       <div className="row l-mt-3">
         <div className="col-xs-12">

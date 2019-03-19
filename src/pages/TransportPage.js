@@ -3,7 +3,7 @@ import NavList from '../components/NavList';
 import LinkList from '../components/LinkList';
 
 const TransportPage = () => (
-  <>
+  <main id="main">
     <div className="l-container">
       <div className="l-mt-3">
         <h1 className="t-sm-center h2 h2--bold">
@@ -109,7 +109,7 @@ const TransportPage = () => (
         </div>
       </div>
     </div>
-  </>
+  </main>
 );
 
 export default TransportPage;
