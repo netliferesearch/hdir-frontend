@@ -36,9 +36,8 @@ if (headerElement) {
   );
   const links = JSON.parse(headerElement.getAttribute('data-links'));
 
-  const exampleSuggestions = JSON.parse(
-    headerElement.getAttribute('data-example-suggestions')
-  );
+  const exampleSuggestions =
+    JSON.parse(headerElement.getAttribute('data-example-suggestions')) || [];
 
   const label = headerElement.getAttribute('data-label') || '';
 
@@ -62,9 +61,8 @@ if (searchElement) {
 
   const label = searchElement.getAttribute('data-label') || '';
 
-  const exampleSuggestions = JSON.parse(
-    searchElement.getAttribute('data-example-suggestions')
-  );
+  const exampleSuggestions =
+    JSON.parse(headerElement.getAttribute('data-example-suggestions')) || [];
 
   ReactDOM.render(
     <InputSearch
