@@ -15,6 +15,9 @@ const FrontPage = () => (
     <div className="l-container l-mt-3 l-mb-5">
       <h1>Pages</h1>
       <p>
+        <Link to="/abonnementer">Abonnementer</Link>
+      </p>
+      <p>
         <Link to="/abonnement-tilpassing">Abonnement Tilpassing</Link>
       </p>
       <p>

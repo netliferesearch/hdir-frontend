@@ -9,43 +9,44 @@ import Box from './components/Box';
 import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 
-import FrontPage from './pages/FrontPage';
-import SearchResultPage from './pages/SearchResultPage';
 import ArticlePage from './pages/ArticlePage';
-import NormativeContentPage from './pages/NormativeContentPage';
-import ProductPage from './pages/ProductPage';
-import ChapterPage from './pages/ChapterPage';
-import HearingPage from './pages/HearingPage';
-import ParentHearingPage from './pages/ParentHearingPage';
-import MemoPage from './pages/MemoPage';
-import ParentMemoPage from './pages/ParentMemoPage';
-import RecommendationPage from './pages/RecommendationPage';
-import NotFound from './pages/NotFound';
-import LisSpeciality from './pages/LisSpeciality';
-import LisLearning from './pages/LisLearning';
-import TransportPage from './pages/TransportPage';
-import LisFrontPage from './pages/LisFrontPage';
-import NewsListPage from './pages/NewsListPage';
-import LisLearningActivities from './pages/LisLearningActivities';
 import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
-import ChapterPageReport from './pages/ChapterPageReport';
-import ReportPage from './pages/ReportPage';
-import StatisticsPage from './pages/StatisticsPage';
-import ProfessionSelector from './pages/ProfessionSelector';
-import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
-import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
-import FrontPageHelfo from './pages/FrontPageHelfo';
+import ChapterPage from './pages/ChapterPage';
+import ChapterPageReport from './pages/ChapterPageReport';
+import FrontPage from './pages/FrontPage';
 import FrontPageHdir from './pages/FrontPageHdir';
-import JobPostingPage from './pages/JobPostingPage';
-import StatisticsSubpage from './pages/StatisticsSubpage';
-import StatisticsSubpage2 from './pages/StatisticsSubpage2';
-import ThemePage from './pages/ThemePage';
+import FrontPageHelfo from './pages/FrontPageHelfo';
 import GrantsPage from './pages/GrantsPage';
 import GrantsSubPage from './pages/GrantsSubPage';
+import HearingPage from './pages/HearingPage';
+import JobPostingPage from './pages/JobPostingPage';
+import LisFrontPage from './pages/LisFrontPage';
+import LisLearning from './pages/LisLearning';
+import LisLearningActivities from './pages/LisLearningActivities';
+import LisSpeciality from './pages/LisSpeciality';
+import MemoPage from './pages/MemoPage';
+import NewsListPage from './pages/NewsListPage';
+import NormativeContentPage from './pages/NormativeContentPage';
+import NotFound from './pages/NotFound';
+import ParentHearingPage from './pages/ParentHearingPage';
+import ParentMemoPage from './pages/ParentMemoPage';
 import PressReleasePage from './pages/PressReleasePage';
+import ProductPage from './pages/ProductPage';
+import ProfessionSelector from './pages/ProfessionSelector';
+import RecommendationPage from './pages/RecommendationPage';
 import ReportListPage from './pages/ReportListPage';
+import ReportPage from './pages/ReportPage';
+import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
+import SearchResultPage from './pages/SearchResultPage';
+import StatisticsPage from './pages/StatisticsPage';
+import StatisticsSubpage from './pages/StatisticsSubpage';
+import StatisticsSubpage2 from './pages/StatisticsSubpage2';
+import SubscriptionPage from './pages/SubscriptionPage';
+import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
+import ThemePage from './pages/ThemePage';
+import TransportPage from './pages/TransportPage';
 
 class App extends Component {
   componentDidMount() {
@@ -125,6 +126,7 @@ class App extends Component {
                 component={AuthorizationStepPage2}
               />
               <Route path="/statistikk" component={StatisticsPage} />
+              <Route path="/abonnementer" component={SubscriptionPage} />
               <Route
                 path="/abonnement-tilpassing"
                 component={SubscriptionSettingsPage}
