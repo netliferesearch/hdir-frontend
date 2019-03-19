@@ -35,7 +35,6 @@ import SearchResultPage from '../pages/SearchResultPage';
 import StatisticsPage from '../pages/StatisticsPage';
 import StatisticsSubpage from '../pages/StatisticsSubpage';
 import StatisticsSubpage2 from '../pages/StatisticsSubpage2';
-import SubscriptionPage from '../pages/SubscriptionPage';
 import SubscriptionSettingsPage from '../pages/SubscriptionSettingsPage';
 import ThemePage from '../pages/ThemePage';
 import TransportPage from '../pages/TransportPage';
@@ -210,11 +209,6 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('StatisticsSubpage2', () => (
     <HashRouter>
       <StatisticsSubpage2 />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('SubscriptionPage', () => (
-    <HashRouter>
-      <SubscriptionPage />
     </HashRouter>
   ))
   .addWithStaticMarkup('SubscriptionSettingsPage', () => (
