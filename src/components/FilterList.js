@@ -1,56 +1,43 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
-class FilterList extends Component {
-  constructor(props) {
-    super(props);
+const FilterList = props => {
+  const [selected, setSelected] = useState('');
 
-    this.state = {
-      selected: ''
-    };
+  useEffect(() => {
+    setSelected(props.list.length && props.list[0]);
+  }, []);
 
-    this.select = this.select.bind(this);
-  }
-
-  select(event, group) {
+  function select(event, item) {
     event.preventDefault();
-    this.setState({ selected: group });
+    setSelected(item);
   }
 
-  componentDidMount() {
-    this.setState({
-      selected: this.props.list.length && this.props.list[0]
-    });
-  }
-
-  render() {
-    return (
-      <div className="b-filter-list">
-        <ul className="b-filter-list__list">
-          {this.props.list.map(item => (
-            <li className="b-filter-list__list-item" key={shortid.generate()}>
-              <a
-                href="#a"
-                className={classNames({
-                  'b-filter-list__list-item-link': true,
-                  'b-filter-list__list-item-link--active':
-                    item === this.state.selected
-                })}
-                onClick={e => {
-                  this.select(e, item);
-                }}
-              >
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="b-filter-list">
+      <ul className="b-filter-list__list">
+        {props.list.map(item => (
+          <li className="b-filter-list__list-item" key={shortid.generate()}>
+            <a
+              href="#a"
+              className={classNames({
+                'b-filter-list__list-item-link': true,
+                'b-filter-list__list-item-link--active': item === selected
+              })}
+              onClick={e => {
+                select(e, item);
+              }}
+            >
+              {item}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 FilterList.propTypes = {
   list: PropTypes.arrayOf(PropTypes.string).isRequired
