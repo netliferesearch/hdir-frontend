@@ -89,13 +89,8 @@
     }
   }
   &__heading {
-    display: inline;
+    display: block;
     color: $black;
-
-    &:after {
-      content: '\A';
-      white-space: pre;
-    }
   }
   &__text {
     font-size: $meta-text;
