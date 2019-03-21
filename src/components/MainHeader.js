@@ -5,8 +5,6 @@ import SearchTray from './SearchTray';
 import NavList from './NavList';
 import shortid from 'shortid';
 
-import searchIcon from '../static/icons/search.svg';
-
 class MainHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -114,7 +112,7 @@ class MainHeader extends React.Component {
                     {this.state.searchButtonText}{' '}
                     {!this.state.searchOpen && (
                       <img
-                        src={searchIcon}
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjEgKDcyNjMxKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5zZWFyY2g8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJzZWFyY2giIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMDAwMDAwLCAxLjAwMDAwMCkiIHN0cm9rZT0iIzAyNTE2OSI+CiAgICAgICAgICAgIDxnIGlkPSJJbnRlcmZhY2UtRXNzZW50aWFsX194MkZfX1NlYXJjaF9feDJGX19zZWFyY2giIHN0cm9rZS13aWR0aD0iMS4wNDM0Ij4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cF8zNzIiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJzZWFyY2giPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOC4zLDE2LjcgQzEyLjksMTYuNyAxNi42LDEzIDE2LjYsOC40IEMxNi42LDMuOCAxMywwIDguMywwIEMzLjcsMCAwLDMuNyAwLDguMyBDMCwxMi45IDMuNywxNi43IDguMywxNi43IFoiIGlkPSJPdmFsXzI4OCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQuMiwxNC4zIEwyNCwyNCIgaWQ9IlNoYXBlXzE4NzIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTguNSwzIEM1LjUsMyAzLDUuNSAzLDguNSIgaWQ9Ik92YWxfMjg4XzJfIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="
                         className="b-icon b-icon--small"
                         role="presentation"
                       />
@@ -141,7 +139,7 @@ class MainHeader extends React.Component {
                     {this.state.searchButtonText}{' '}
                     {!this.state.searchOpen && (
                       <img
-                        src="./icons/search.svg"
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjEgKDcyNjMxKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5zZWFyY2g8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJzZWFyY2giIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMDAwMDAwLCAxLjAwMDAwMCkiIHN0cm9rZT0iIzAyNTE2OSI+CiAgICAgICAgICAgIDxnIGlkPSJJbnRlcmZhY2UtRXNzZW50aWFsX194MkZfX1NlYXJjaF9feDJGX19zZWFyY2giIHN0cm9rZS13aWR0aD0iMS4wNDM0Ij4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cF8zNzIiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJzZWFyY2giPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOC4zLDE2LjcgQzEyLjksMTYuNyAxNi42LDEzIDE2LjYsOC40IEMxNi42LDMuOCAxMywwIDguMywwIEMzLjcsMCAwLDMuNyAwLDguMyBDMCwxMi45IDMuNywxNi43IDguMywxNi43IFoiIGlkPSJPdmFsXzI4OCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQuMiwxNC4zIEwyNCwyNCIgaWQ9IlNoYXBlXzE4NzIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTguNSwzIEM1LjUsMyAzLDUuNSAzLDguNSIgaWQ9Ik92YWxfMjg4XzJfIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="
                         className="b-icon b-icon--small"
                         role="presentation"
                       />
