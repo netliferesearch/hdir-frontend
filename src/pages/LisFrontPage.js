@@ -1,7 +1,6 @@
 import React from 'react';
 
 import NavList from '../components/NavList';
-import PageMeta from '../components/PageMeta';
 import ArticleIntro from '../components/ArticleIntro';
 import Card from '../components/Card';
 import Box from '../components/Box';
@@ -60,9 +59,9 @@ const LisFrontPage = () => (
           <hr className="b-hr b-hr--link-color" />
         </div>
 
-        <article className="l-mt-4">
-          <div className="l-mb-3">
-            <h2 className="l-mb-3">Velg spesialitet</h2>
+        <article className="l-mt-3">
+          <div className="l-mb-2">
+            <h2 className="l-mb-2">Velg spesialitet</h2>
             <NavList
               heading="A"
               columns
@@ -86,7 +85,7 @@ const LisFrontPage = () => (
               ]}
             />
           </div>
-          <div className="l-mb-3">
+          <div className="l-mb-2">
             <NavList
               heading="B"
               columns
@@ -106,7 +105,7 @@ const LisFrontPage = () => (
               ]}
             />
           </div>
-          <div className="l-mb-3">
+          <div className="l-mb-2">
             <NavList
               heading="G"
               columns
@@ -122,7 +121,7 @@ const LisFrontPage = () => (
               ]}
             />
           </div>
-          <div className="l-mb-3">
+          <div className="l-mb-2">
             <NavList
               heading="H"
               columns
@@ -138,7 +137,7 @@ const LisFrontPage = () => (
               ]}
             />
           </div>
-          <div className="l-mb-3">
+          <div className="l-mb-2">
             <NavList
               heading="I"
               columns
