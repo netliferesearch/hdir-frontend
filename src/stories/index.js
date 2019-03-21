@@ -441,7 +441,7 @@ storiesOf('Collapsible', module)
   .addWithStaticMarkup('Basic', () => (
     <Collapsible
       heading={text('Heading', 'Heading')}
-      subheading={text('Subheading', 'SVAK ANBEFALING')}
+      subheading={text('Subheading', 'Svak anbefaling')}
       subheadingContent={text('Subheading Content', 'Bla bla bla bla')}
       subtle={boolean('Subtle', false)}
       smallContent={boolean('Small content', false)}

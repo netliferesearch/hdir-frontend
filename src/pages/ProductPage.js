@@ -33,18 +33,18 @@ const ProductPage = () => (
                 small
                 list={[
                   {
-                    description: 'STERK ANBEFALING',
+                    description: 'Sterk anbefaling',
                     title: 'Anbefaling 1',
                     url: '#'
                   },
                   {
-                    description: 'STERK ANBEFALING',
+                    description: 'Sterk anbefaling',
                     title:
                       'Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi',
                     url: '/kapittel#anbefaling1'
                   },
                   {
-                    description: 'STERK ANBEFALING',
+                    description: 'Sterk anbefaling',
                     title: 'Anbefaling 3',
                     url: '#'
                   }

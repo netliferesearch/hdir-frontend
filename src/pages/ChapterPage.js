@@ -73,7 +73,7 @@ const ChapterPage = () => (
             <div className="l-mt-1">
               <Collapsible
                 heading="Anbefaling 1"
-                subheading="STERK ANBEFALING"
+                subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="someId1.1"
               >
@@ -105,7 +105,7 @@ const ChapterPage = () => (
             <div className="l-mt-3">
               <Collapsible
                 heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
-                subheading="STERK ANBEFALING"
+                subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="anbefaling1"
               >
@@ -135,7 +135,7 @@ const ChapterPage = () => (
             <div className="l-mt-3">
               <Collapsible
                 heading="Anbefaling 3"
-                subheading="STERK ANBEFALING"
+                subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="someId3"
               >
