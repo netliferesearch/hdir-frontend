@@ -32,6 +32,12 @@
       font-size: 1rem;
     }
 
+    &:last-child {
+      &:after {
+        border-right: 0;
+      }
+    }
+
     @include mq($until: desktop) {
       display: none;
       position: relative;

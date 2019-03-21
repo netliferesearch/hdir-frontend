@@ -19,10 +19,6 @@ const StatisticsSubpage = () => (
           {
             name: 'Statistikk',
             href: '#a'
-          },
-          {
-            name:
-              'Postoperative infeksjoner etter innsetting av totalprotese (hofte)'
           }
         ]}
       />

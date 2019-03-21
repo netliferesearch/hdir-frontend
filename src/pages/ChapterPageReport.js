@@ -23,9 +23,6 @@ const ChapterPageReport = () => (
           {
             name: 'Arbeid og psykisk helse',
             href: '#a'
-          },
-          {
-            name: 'Fastlegekonferansen 2018 - fastlegeordning for fremtiden'
           }
         ]}
       />

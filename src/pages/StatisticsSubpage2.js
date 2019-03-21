@@ -19,9 +19,6 @@ const StatisticsSubpage = () => (
           {
             name: 'Statistikk',
             href: '#a'
-          },
-          {
-            name: 'Tvangsmiddelbruk i psykisk helsevern for voksne'
           }
         ]}
       />
