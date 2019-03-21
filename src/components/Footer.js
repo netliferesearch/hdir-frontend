@@ -52,11 +52,6 @@ const Footer = () => (
               Personvern
             </a>
           </div>
-          <div className="col-xs-12 col-md-6 col-lg-4">
-            <a href="#a" className="b-footer__link">
-              Personvern
-            </a>
-          </div>
         </div>
       </div>
 
