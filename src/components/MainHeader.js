@@ -70,10 +70,12 @@ class MainHeader extends React.Component {
               <div className="l-container">
                 <nav className="b-main-header__menu-overlay">
                   <div className="b-main-header__menu-overlay-header">
-                    <div
+                    <a
+                      href="/"
                       className="b-main-header__logo b-main-header__logo--small"
                       aria-label={this.props.name}
                     />
+
                     <button
                       className="b-button b-button--small b-button--secondary"
                       onClick={this.toggleMobileNav}
@@ -83,10 +85,10 @@ class MainHeader extends React.Component {
                   </div>
                   <div className="b-main-header__menu-overlay-links">
                     <NavList
-                      list={[
-                        { title: 'Om Helsedirektoratet', url: '#' },
-                        { title: 'English', url: '#' }
-                      ]}
+                      list={this.props.links.map(item => ({
+                        title: item.name,
+                        url: item.href
+                      }))}
                     />
                   </div>
                 </nav>
