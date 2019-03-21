@@ -245,7 +245,7 @@ const ThemePage = () => (
             </div>
           </div>
         </div>
-        <div className="row l-mt-2">
+        <div className="row">
           <div className="col-xs-12 col-md-6 l-mt-2">
             <Card
               heading="Pakkeforløp for brystkreft"
@@ -269,7 +269,7 @@ const ThemePage = () => (
             </Card>
           </div>
         </div>
-        <div className="l-mt-3">
+        <div className="l-mt-2">
           <List
             list={[
               {
@@ -332,7 +332,7 @@ const ThemePage = () => (
           </div>
         </div>
 
-        <div className="row l-mt-4">
+        <div className="row l-mt-2">
           <div className="col-xs-12">
             <List
               list={[
