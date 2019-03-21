@@ -32,13 +32,17 @@ const ArticleIntro = props => (
           role="img"
           aria-labelledby="intro-image-description"
         />
-        {!props.feature && (
+        {!props.feature ? (
           <p
             className="b-article-intro__image-text"
             id="intro-image-description"
           >
             {props.imageDescription}
           </p>
+        ) : (
+          <div className="visually-hidden" id="intro-image-description">
+            {props.imageDescription}
+          </div>
         )}
       </div>
     )}
