@@ -57,7 +57,7 @@ const NormativeContentPage = () => (
               'PQR',
               'STU',
               'VWX',
-              'UZÆ',
+              'YZÆ',
               'ØÅ',
               '0-9'
             ]}
