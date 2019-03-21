@@ -39,10 +39,6 @@ class MainHeader extends React.Component {
       <>
         <SearchTray open={this.state.searchOpen}>
           <div className="l-container">
-            <p className="t--white">
-              Søk etter reningslinjer, anbefalinger, lover, statistikk,
-              tilskudd...
-            </p>
             <InputSearch
               dark
               autoFocus={this.state.searchOpen}

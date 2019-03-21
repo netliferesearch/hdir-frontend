@@ -64,6 +64,7 @@ class App extends Component {
             <MainHeader
               name={this.props.name}
               links={this.props.links}
+              label={this.props.inputSearchLabel}
               hideSearch={this.props.hideSearch}
               exampleSuggestions={[
                 'Antibiotika',
@@ -160,7 +161,8 @@ class App extends Component {
 
 App.propTypes = {
   name: PropTypes.string,
-  links: PropTypes.arrayOf(PropTypes.object)
+  links: PropTypes.arrayOf(PropTypes.object),
+  inputSearchLabel: PropTypes.string
 };
 
 export default App;

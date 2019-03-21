@@ -116,19 +116,21 @@ class InputSearch extends React.Component {
             {this.props.label}
           </label>
         )}
-        <input
-          title="Søk"
-          id="inputSearch"
-          {...inputProps}
-          className={classNames({
-            'b-input-search__field': true,
-            'b-input-search__field--dark': inputProps.dark
-          })}
-        />
-        <button
-          className="b-input-search__button"
-          onClick={this.triggerSearch}
-        />
+        <div className="b-input-search__inputs">
+          <input
+            title="Søk"
+            id="inputSearch"
+            {...inputProps}
+            className={classNames({
+              'b-input-search__field': true,
+              'b-input-search__field--dark': inputProps.dark
+            })}
+          />
+          <button
+            className="b-input-search__button"
+            onClick={this.triggerSearch}
+          />
+        </div>
       </div>
     );
   }

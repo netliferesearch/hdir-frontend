@@ -12,10 +12,8 @@ const FrontPageHdir = () => (
         <div className="l-mt-3 l-mb-4">
           <div className="row">
             <div className="col-xs-12 col-md-10 col-md-offset-1">
-              <p>
-                <strong>Hva leter du etter?</strong>
-              </p>
               <InputSearch
+                label="Hva leter du etter?"
                 exampleSuggestions={[
                   'Antibiotika',
                   'Diabetes',

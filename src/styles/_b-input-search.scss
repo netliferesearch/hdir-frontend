@@ -1,8 +1,10 @@
 .b-input-search {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  height: 3rem;
+  &__inputs {
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
   &__label {
     display: block;
@@ -11,6 +13,7 @@
 
     &--dark {
       font-weight: normal;
+      color: white;
     }
   }
 

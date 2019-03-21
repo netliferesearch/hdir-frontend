@@ -23,7 +23,12 @@ if (!process.env.REACT_APP_ENONICXP) {
     const links = JSON.parse(rootElement.getAttribute('data-links'));
 
     ReactDOM.render(
-      <App name={name} hideSearch={hideSearch} links={links} />,
+      <App
+        name={name}
+        hideSearch={hideSearch}
+        links={links}
+        inputSearchLabel="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
+      />,
       rootElement
     );
   }
@@ -46,7 +51,7 @@ if (headerElement) {
       name={name}
       hideSearch={hideSearch}
       links={links}
-      label={label}
+      inputSearchLabel={label}
       exampleSuggestions={exampleSuggestions}
     />,
     headerElement
