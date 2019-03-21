@@ -28,7 +28,7 @@ const FrontPageHelfo = () => (
         </div>
       </div>
 
-      <div className="row middle-xs l-mt-5">
+      <div className="row middle-xs l-mt-4">
         <div className="col-xs-12 col-md-8">
           <h2>
             <img
@@ -80,7 +80,7 @@ const FrontPageHelfo = () => (
         </div>
       </div>
 
-      <div className="row middle-xs l-mt-5">
+      <div className="row middle-xs l-mt-4">
         <div className="col-xs-12 col-md-8">
           <h2>
             <img
@@ -118,7 +118,7 @@ const FrontPageHelfo = () => (
         </div>
       </div>
 
-      <div className="row middle-xs l-mt-5">
+      <div className="row middle-xs l-mt-4">
         <div className="col-xs-12 col-md-8">
           <h2>
             <img
@@ -157,7 +157,7 @@ const FrontPageHelfo = () => (
         </div>
       </div>
 
-      <div className="row middle-xs l-mt-5">
+      <div className="row middle-xs l-mt-4">
         <div className="col-xs-12 col-md-8">
           <h2>
             <img
@@ -194,7 +194,7 @@ const FrontPageHelfo = () => (
           />
         </div>
       </div>
-      <div className="l-mt-5">
+      <div className="l-mt-4">
         <hr className="b-hr b-hr--grey col-xs-12" />
       </div>
       <div className="row l-mt-4">
