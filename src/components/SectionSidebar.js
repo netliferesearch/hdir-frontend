@@ -136,12 +136,14 @@ const SectionSidebar = props => {
           />
         )}
         {props.heading && props.headingUrl ? (
-          <a href={props.headingUrl}>{props.heading}</a>
+          <a href={props.headingUrl} id="section-sidebar-heading">
+            {props.heading}
+          </a>
         ) : (
-          <span>{props.heading}</span>
+          <span id="section-sidebar-heading">{props.heading}</span>
         )}
       </div>
-      <nav>
+      <nav aria-describedby="section-sidebar-heading">
         {list.map((item, index) => {
           if (!hasItems(props.list)) {
             return (

@@ -173,7 +173,7 @@ const ChapterPage = () => (
                   <Collapsible
                     heading="Seksjon under: 2 – SUBHEADING UTEN INNHOLD"
                     size="medium"
-                    id="someId3"
+                    id="someId4"
                   >
                     <p>
                       Kvinnen bør få kostveiledning og jevnlig oppfølging for å

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
 const Breadcrumbs = props => (
-  <nav className="b-breadcrumbs">
+  <nav className="b-breadcrumbs" aria-label="Brødsmulesti">
     {props.paths.map(path =>
       path.href ? (
         <a

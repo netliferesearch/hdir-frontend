@@ -32,6 +32,7 @@ const StatisticsSubpage = () => (
         <div className="row l-mt-2">
           <div className="col-xs-12">
             <iframe
+              title="title of the statistics, editor should add this"
               width="100%"
               height="600"
               src="https://app.powerbi.com/view?r=eyJrIjoiYTllNGYyOTMtNGQyMy00M2QyLTg3MTUtZmJjZTVjYTkwODczIiwidCI6IjZiYTFiZDVjLTc1MGYtNGFkNi1hYmEzLTBmOTU1ODViYzIxZiIsImMiOjh9"

@@ -106,20 +106,20 @@ class InputSearch extends React.Component {
     return (
       <div className="b-input-search">
         {this.props.label && (
-          <label
-            htmlFor="inputSearch"
+          <div
+            id="search-input-label"
             className={classNames({
               'b-input-search__label': true,
               'b-input-search__label--dark': inputProps.dark
             })}
           >
             {this.props.label}
-          </label>
+          </div>
         )}
         <div className="b-input-search__inputs">
           <input
             title="Søk"
-            id="inputSearch"
+            aria-labelledby="search-input-label"
             {...inputProps}
             className={classNames({
               'b-input-search__field': true,
@@ -128,6 +128,7 @@ class InputSearch extends React.Component {
           />
           <button
             className="b-input-search__button"
+            aria-label="Søk"
             onClick={this.triggerSearch}
           />
         </div>

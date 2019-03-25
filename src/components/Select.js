@@ -18,11 +18,11 @@ const selectElementClasses = simple =>
 
 const Select = props => (
   <div className={selectClasses(props.stacked, props.simple)}>
-    <label htmlFor="contentCustomizer" className="b-select__label">
+    <label htmlFor="profession-selector" className="b-select__label">
       {props.label}
     </label>
     <select
-      name="contentCustomizer"
+      id="profession-selector"
       className={selectElementClasses(props.simple)}
     >
       {/* This value is suppose to be empty.

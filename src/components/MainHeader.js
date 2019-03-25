@@ -68,7 +68,10 @@ class MainHeader extends React.Component {
 
             {this.state.mobileNavOpen && (
               <div className="l-container">
-                <nav className="b-main-header__menu-overlay">
+                <nav
+                  className="b-main-header__menu-overlay"
+                  aria-label="Header-navigasjon"
+                >
                   <div className="b-main-header__menu-overlay-header">
                     <a
                       href="/"
@@ -96,7 +99,10 @@ class MainHeader extends React.Component {
             )}
 
             <div className="l-hide-to-lg">
-              <nav className="b-main-header__nav">
+              <nav
+                className="b-main-header__nav"
+                aria-label="Header navigation"
+              >
                 {this.props.links.map(link => (
                   <a
                     href={link.href}
@@ -125,7 +131,10 @@ class MainHeader extends React.Component {
             </div>
 
             <div className="l-hide-from-lg">
-              <nav className="b-main-header__nav">
+              <nav
+                className="b-main-header__nav"
+                aria-label="Header navigation"
+              >
                 <button
                   onClick={this.toggleMobileNav}
                   className="b-button b-button--secondary-dark b-button--small"
