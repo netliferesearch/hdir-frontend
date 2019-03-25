@@ -100,7 +100,7 @@ $space-directions: (
         margin-#{$direction}: $spaceValue;
 
         @include mq($until: tablet) {
-          margin-#{$direction}: calc(#{$spaceValue} * 2);
+          margin-#{$direction}: calc(#{$spaceValue} * 1.2);
         }
       }
     }

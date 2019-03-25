@@ -9,33 +9,31 @@ const FrontPageHdir = () => (
     <h1 className="visually-hidden">Helsedirektoratet</h1>
     <div className="background-wrapper">
       <div className="l-container">
-        <div className="l-mt-3 l-mb-4">
-          <div className="row">
-            <div className="col-xs-12 col-md-10 col-md-offset-1">
-              <InputSearch
-                label="Hva leter du etter?"
-                exampleSuggestions={[
-                  'Antibiotika',
-                  'Diabetes',
-                  'Hjerneslag',
-                  'Helsestasjon',
-                  'Rus og avhengighet',
-                  'Svangerskap',
-                  'Navn på ansatt',
-                  'Retningslinje',
-                  'Pakkeforløp',
-                  'Rundskriv',
-                  'Statistikk',
-                  'Tilskudd'
-                ]}
-              />
-            </div>
+        <div className="row">
+          <div className="col-xs-12 col-md-10 col-md-offset-1">
+            <InputSearch
+              label="Hva leter du etter?"
+              exampleSuggestions={[
+                'Antibiotika',
+                'Diabetes',
+                'Hjerneslag',
+                'Helsestasjon',
+                'Rus og avhengighet',
+                'Svangerskap',
+                'Navn på ansatt',
+                'Retningslinje',
+                'Pakkeforløp',
+                'Rundskriv',
+                'Statistikk',
+                'Tilskudd'
+              ]}
+            />
           </div>
         </div>
       </div>
     </div>
     <div className="l-container">
-      <div className="l-mt-4">
+      <div className="l-mt-2">
         <Link href="#a" wideButton color="shadow" arrow>
           <img
             src="./icons/Normerende.svg"
@@ -53,7 +51,7 @@ const FrontPageHdir = () => (
       </div>
     </div>
 
-    <div className="l-container l-mt-4">
+    <div className="l-container l-mt-3">
       <div className="row">
         <div className="col-xs col-md-10 col-md-offset-1">
           <LinkList
