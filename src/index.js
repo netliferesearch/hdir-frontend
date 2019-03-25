@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import '@babel/polyfill';
 import 'whatwg-fetch';
 import App from './App';
@@ -22,15 +22,27 @@ if (!process.env.REACT_APP_ENONICXP) {
     );
     const links = JSON.parse(rootElement.getAttribute('data-links'));
 
-    ReactDOM.render(
-      <App
-        name={name}
-        hideSearch={hideSearch}
-        links={links}
-        inputSearchLabel="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
-      />,
-      rootElement
-    );
+    if (rootElement.hasChildNodes()) {
+      hydrate(
+        <App
+          name={name}
+          hideSearch={hideSearch}
+          links={links}
+          inputSearchLabel="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
+        />,
+        rootElement
+      );
+    } else {
+      render(
+        <App
+          name={name}
+          hideSearch={hideSearch}
+          links={links}
+          inputSearchLabel="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
+        />,
+        rootElement
+      );
+    }
   }
 }
 
@@ -46,7 +58,7 @@ if (headerElement) {
 
   const label = headerElement.getAttribute('data-label') || '';
 
-  ReactDOM.render(
+  render(
     <MainHeader
       name={name}
       hideSearch={hideSearch}
@@ -69,7 +81,7 @@ if (searchElement) {
   const exampleSuggestions =
     JSON.parse(headerElement.getAttribute('data-example-suggestions')) || [];
 
-  ReactDOM.render(
+  render(
     <InputSearch
       hideSuggestions={hideSuggestions}
       dark={dark}
@@ -89,7 +101,7 @@ if (sectionSidebarElement) {
       ? []
       : JSON.parse(sectionSidebarElement.getAttribute('data-list'));
 
-  ReactDOM.render(
+  render(
     <SectionSidebar
       heading={heading}
       icon={icon}

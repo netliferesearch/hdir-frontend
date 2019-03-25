@@ -34,7 +34,8 @@
     "build:sass": "node-sass --output-style compressed src/styles -o build",
     "build:prefix-css-themes": "npx postcss build/*.css --use autoprefixer -r",
     "test": "react-app-rewired test",
-    "enonic-build": "REACT_APP_ENONICXP_SEARCH_RESULT_PAGE='/search' REACT_APP_ENONICXP_SEARCH_ENDPOINT='/_/service/helsedirektoratet/autocomplete' REACT_APP_ENONICXP='true' npm run build:app && npm run build:sass && npm run build:prefix-css-themes"
+    "enonic-build": "REACT_APP_ENONICXP_SEARCH_RESULT_PAGE='/search' REACT_APP_ENONICXP_SEARCH_ENDPOINT='/_/service/helsedirektoratet/autocomplete' REACT_APP_ENONICXP='true' npm run build:app && npm run build:sass && npm run build:prefix-css-themes",
+    "postbuild": "react-snap && npx js-beautify build/static-pages/**/* -s 2 -w 120"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^5.0.2",
@@ -48,12 +49,14 @@
     "babel-loader": "^8.0.4",
     "eslint-plugin-react-hooks": "^1.0.1",
     "http-proxy-middleware": "^0.19.0",
+    "js-beautify": "^1.9.0",
     "loki": "^0.14.2",
     "netlify-lambda": "^1.0.1",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.3",
     "postcss-cli": "^6.1.1",
     "react-app-rewired": "^2.0.2",
+    "react-snap": "^1.23.0",
     "react-storybook-addon-static-markup": "https://github.com/nilsnh/react-storybook-addon-static-markup.git",
     "sass-svg-uri": "^1.0.0"
   },
@@ -76,5 +79,10 @@
         "preset": "iPhone 7"
       }
     }
+  },
+  "reactSnap": {
+    "source": "build",
+    "destination": "/build/static-pages",
+    "minifyHtml": null
   }
 }
