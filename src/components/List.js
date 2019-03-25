@@ -18,7 +18,11 @@ const listItemsClasses = columns =>
 
 const List = props => {
   return (
-    <nav className="b-nav-list" id={props.id}>
+    <nav
+      className="b-nav-list"
+      id={props.id}
+      aria-label={`unique-text-explaining-this-${shortid.generate()}`}
+    >
       {props.heading && (
         <div className="b-nav-list__heading">{props.heading}</div>
       )}
@@ -53,7 +57,8 @@ List.propTypes = {
       href: PropTypes.string,
       fields: PropTypes.object
     })
-  )
+  ),
+  ariaLabel: PropTypes.string
 };
 
 export default List;

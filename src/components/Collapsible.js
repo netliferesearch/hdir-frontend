@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import zenscroll from 'zenscroll';
-import Alert from './Alert';
+import shortid from 'shortid';
 
+import Alert from './Alert';
 import Heading from './Heading';
 
 const buttonClasses = (active, size, subtle) =>
@@ -74,6 +75,7 @@ class Collapsible extends React.Component {
 
   render() {
     const { props } = this;
+    const id = props.id || `this-id-should-be-unique-${shortid.generate()}`;
     return (
       <div
         className={collapsibleClasses(props.size, props.subtle, props.noBorder)}
@@ -86,7 +88,7 @@ class Collapsible extends React.Component {
             props.subtle
           )}
           aria-expanded={this.state.collapsed}
-          aria-controls={props.id}
+          aria-controls={id}
           onClick={this.toggleCollapse}
         >
           <Heading
@@ -129,7 +131,7 @@ class Collapsible extends React.Component {
         )}
 
         <div
-          id={props.id}
+          id={id}
           aria-hidden={!this.state.collapsed}
           hidden={!this.state.collapsed}
           className={contentClasses(props.smallContent)}
@@ -155,8 +157,7 @@ Collapsible.propTypes = {
 };
 
 Collapsible.defaultProps = {
-  size: 'large',
-  id: 'changeThis_everyIdShouldBeUnique'
+  size: 'large'
 };
 
 export default Collapsible;

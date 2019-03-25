@@ -40,7 +40,11 @@ const NavList = props => {
   const { list: list = [] } = props;
 
   return (
-    <nav className={listClasses(props.small)} id={props.id}>
+    <nav
+      className={listClasses(props.small)}
+      id={props.id}
+      aria-label={`unique-text-explaining-this-${shortid.generate()}`}
+    >
       {props.heading && (
         <div className="b-nav-list__heading">{props.heading}</div>
       )}
@@ -105,7 +109,8 @@ NavList.propTypes = {
   columns: PropTypes.bool,
   noArrow: PropTypes.bool,
   small: PropTypes.bool,
-  ordered: PropTypes.bool
+  ordered: PropTypes.bool,
+  ariaLabel: PropTypes.string
 };
 
 export default NavList;
