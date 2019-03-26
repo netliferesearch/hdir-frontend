@@ -75,7 +75,7 @@ class Collapsible extends React.Component {
 
   render() {
     const { props } = this;
-    const id = props.id || 'this-id-should-be-unique';
+    const id = props.id || 'changeThis_everyIdShouldBeUnique';
     return (
       <div
         className={collapsibleClasses(props.size, props.subtle, props.noBorder)}
