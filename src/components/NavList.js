@@ -43,7 +43,7 @@ const NavList = props => {
     <nav
       className={listClasses(props.small)}
       id={props.id}
-      aria-label={`unique-text-explaining-this-${shortid.generate()}`}
+      aria-label="unique-text-explaining-this"
     >
       {props.heading && (
         <div className="b-nav-list__heading">{props.heading}</div>
