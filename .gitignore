@@ -27,4 +27,4 @@ src/faas/build
 .loki
 
 # directory for testing older versions
-/old_static_version
+/old_static_version/static_pages
