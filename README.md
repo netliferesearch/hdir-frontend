@@ -14,11 +14,42 @@ It should support IE11+ and two versions old or newer for the evergreen browsers
 
 It can also be found published on Netlify: http://hdir-frontend.netlify.com
 
+## Development
+
+1. `npm install`
+2. `npm run start`
+3. This will open the prototype at `localhost:3000` and Storybook (documentation) at `localhost:9009`.
+
 ## Building for Netlify
 
 1. `npm install`
 2. `npm run build`
 3. Builds everything in the project to `/build`
+
+## :clipboard: Rules
+
+- All styles are written with SCSS (SASS)
+- Follow the airbnb-sass-styleguide: https://github.com/airbnb/css
+- Use the BEM methology: http://getbem.com/
+- Classname prefixing rules:
+  - Blocks (BEM) are prefixed with `b-`
+  - Layout classes are prefixed with `l-`
+  - Typography classes are prefixed with `t-`
+  - Some classes does not have a prefix, like headings and the grid, these are exception to the rules.
+- By default the React components should be functions without state.
+- Follow the WCAG 2.0 guidelines, with DIFI's modifications: https://uu.difi.no/krav-og-regelverk/wcag-20-standarden
+
+### :package: Our SASS dependencies
+
+- Normalize: https://github.com/JohnAlbin/normalize-scss
+- Grid: https://hugeinc.github.io/flexboxgrid-sass/
+- Media queries: https://github.com/sass-mq/sass-mq
+
+### :police-officer: Styling rules
+
+- Each component has 100% width. The grid decides the width of the component. The exception to this rule is `inline` and `inline-block` and `flex` elements, which has their width defined by their content or surroundings.
+- A component should not decide its spacing around itself. There are 5 spacing units to choose from i.e. `l-mt-5`. 5 Is the largest unit, and will give the biggest spacing. `m` stands for margin and `t` for top. The four sides are called `t` `r` `b` `l`. It is prefered to always use margin top, unless it complicates things, if it does, use `l-mb-#`.
+- An element can not contain an element. It always go Block -> Element -> Modifier. BEM shouldn't care about how the DOM/HTML is nested.
 
 ## Building for Enonic
 
@@ -52,33 +83,12 @@ The javascript is a collection of apps that can render, and read the data attrib
 data-list='[{"title":"KAPITTEL 1","url":"#","description":"Kost og fysisk aktivitet ved svangerskaps-diabetes","children":[{"description":"Underkapittel","active":true,"url":"#","prefix":"1.1"},{"description":"Underkapittel","url":"#","prefix":"1.2"}]},{"title":"KAPITTEL 2","url":"#","description":"Diagnostikk og tiltak"},{"title":"KAPITTEL 3","url":"#","description":"Nytt kapittel"}]'
 ```
 
-## Development
+## Handoff to Enonic
 
-1. `npm install`
-2. `npm run start`
-3. This will open the prototype at `localhost:3000` and Storybook (documentation) at `localhost:9009`.
+We need to generate static HTML pages (using react-snap), one static build of an earlier commit, and one from the current. We run a diffing tool to highlight all the changes in the generated HTML.
 
-## :clipboard: Rules
-
-- All styles are written with SCSS (SASS)
-- Follow the airbnb-sass-styleguide: https://github.com/airbnb/css
-- Use the BEM methology: http://getbem.com/
-- Classname prefixing rules:
-  - Blocks (BEM) are prefixed with `b-`
-  - Layout classes are prefixed with `l-`
-  - Typography classes are prefixed with `t-`
-  - Some classes does not have a prefix, like headings and the grid, these are exception to the rules.
-- By default the React components should be functions without state.
-- Follow the WCAG 2.0 guidelines, with DIFI's modifications: https://uu.difi.no/krav-og-regelverk/wcag-20-standarden
-
-### :package: Our SASS dependencies
-
-- Normalize: https://github.com/JohnAlbin/normalize-scss
-- Grid: https://hugeinc.github.io/flexboxgrid-sass/
-- Media queries: https://github.com/sass-mq/sass-mq
-
-### :police-officer: Styling rules
-
-- Each component has 100% width. The grid decides the width of the component. The exception to this rule is `inline` and `inline-block` and `flex` elements, which has their width defined by their content or surroundings.
-- A component should not decide its spacing around itself. There are 5 spacing units to choose from i.e. `l-mt-5`. 5 Is the largest unit, and will give the biggest spacing. `m` stands for margin and `t` for top. The four sides are called `t` `r` `b` `l`. It is prefered to always use margin top, unless it complicates things, if it does, use `l-mb-#`.
-- An element can not contain an element. It always go Block -> Element -> Modifier. BEM shouldn't care about how the DOM/HTML is nested.
+1. Go to an earlier commit, the commit you want to compare. Run `npm run build` and copy `build/static_pages`
+2. Go to the current commit and paste it in `old_static_version`
+3. Run `npm run build`
+4. Run `diff-static-versions`
+5. Open `old_static_version/diff.html` to see the changes.

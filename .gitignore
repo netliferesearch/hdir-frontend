@@ -25,3 +25,6 @@ src/faas/build
 
 # loki: visual regression testing
 .loki
+
+# directory for testing older versions
+/old_static_version

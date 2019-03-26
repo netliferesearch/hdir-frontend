@@ -35,7 +35,8 @@
     "build:prefix-css-themes": "npx postcss build/*.css --use autoprefixer -r",
     "test": "react-app-rewired test",
     "enonic-build": "REACT_APP_ENONICXP_SEARCH_RESULT_PAGE='/search' REACT_APP_ENONICXP_SEARCH_ENDPOINT='/_/service/helsedirektoratet/autocomplete' REACT_APP_ENONICXP='true' npm run build:app && npm run build:sass && npm run build:prefix-css-themes",
-    "postbuild": "react-snap && npx js-beautify build/static-pages/**/* -s 2 -w 120"
+    "postbuild": "react-snap && npx js-beautify build/static_pages/**/* -s 2 -w 9999",
+    "diff-static-versions": "diff build/static_pages old_static_version/static_pages -u -b -B -r | npx diff2html -i stdin -F old_static_version/diff.html"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^5.0.2",
@@ -47,6 +48,7 @@
     "@storybook/react": "^5.0.2",
     "autoprefixer": "^9.4.6",
     "babel-loader": "^8.0.4",
+    "diff2html-cli": "^2.7.0",
     "eslint-plugin-react-hooks": "^1.0.1",
     "http-proxy-middleware": "^0.19.0",
     "js-beautify": "^1.9.0",
@@ -82,7 +84,7 @@
   },
   "reactSnap": {
     "source": "build",
-    "destination": "/build/static-pages",
+    "destination": "/build/static_pages",
     "minifyHtml": null
   }
 }
