@@ -75,18 +75,21 @@ const ThemePage = () => (
             <div className="l-mt-1">
               <hr className="b-hr b-hr--thick" />
             </div>
-            <NavList
-              list={[
-                {
-                  title:
-                    'Råd ved bruk av sosiale medier i helsestasjons- og skolehelsetjenesten',
-                  url: '#',
-                  topic: 'Nasjonale faglige retningslinjer'
-                }
-              ]}
-            />
           </div>
         </div>
+        <List
+          list={[
+            {
+              type: 'generic',
+              url: '#5',
+              fields: {
+                category: 'Nasjonale faglige retningslinjer',
+                heading:
+                  'Råd ved bruk av sosiale medier i helsestasjons- og skolehelsetjenesten'
+              }
+            }
+          ]}
+        />
         <div className="row">
           <div className="col-xs-11 col-xs-offset-1 col-md-10 col-md-offset-1">
             <NavList
