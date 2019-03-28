@@ -139,7 +139,8 @@ class InputSearch extends React.Component {
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
-    fetch(`${searchSuggestionUrl}?searchQuery=${value.toLowerCase()}`)
+    const encodedValue = encodeURIComponent(value);
+    fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
