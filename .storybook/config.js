@@ -2,9 +2,7 @@ import { configure, setAddon, addDecorator } from '@storybook/react';
 import 'loki/configure-react';
 import staticMarkup from 'react-storybook-addon-static-markup';
 
-if (process.env.NODE_ENV === 'development') {
-  require('../src/styles/App.scss'); // For dev mode: Toggle between App.scss and Helfo.scss here
-}
+require('../src/styles/App.scss'); // For dev mode: Toggle between App.scss and Helfo.scss here
 
 setAddon(staticMarkup);
 
