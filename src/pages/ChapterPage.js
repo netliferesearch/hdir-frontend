@@ -185,6 +185,7 @@ const ChapterPage = () => (
                     <Collapsible
                       heading="Seksjon under: 1.2"
                       size="small"
+                      h="h4"
                       smallContent
                     >
                       <p>

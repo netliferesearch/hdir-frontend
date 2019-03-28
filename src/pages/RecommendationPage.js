@@ -107,7 +107,7 @@ const RecommendationPage = () => (
                       size="large"
                     >
                       <div className="l-mb-1">
-                        <Collapsible heading="Sammendrag" size="small">
+                        <Collapsible h="h3" heading="Sammendrag" size="small">
                           <p>
                             Individuelle kostråd for å senke fastende glukose og
                             redusere postprandial glukosestigning er målet med
@@ -169,7 +169,7 @@ const RecommendationPage = () => (
                         </Collapsible>
                       </div>
                       <div className="l-mb-1">
-                        <Collapsible heading="Vurdering" size="small">
+                        <Collapsible h="h3" heading="Vurdering" size="small">
                           <h3>Fordeler og ulemper</h3>
                           <p>
                             <b>
@@ -306,7 +306,11 @@ const RecommendationPage = () => (
                         </Collapsible>
                       </div>
                       <div className="l-mb-1">
-                        <Collapsible heading="Forskningsgrunnlag" size="small">
+                        <Collapsible
+                          h="h3"
+                          heading="Forskningsgrunnlag"
+                          size="small"
+                        >
                           <div className="row l-mt-2">
                             <strong className="col-xs-12 col-md-3 top-xs">
                               Populasjon
@@ -482,7 +486,7 @@ const RecommendationPage = () => (
                         </Collapsible>
                       </div>
                       <div className="l-mb-1">
-                        <Collapsible heading="Referanser" size="small">
+                        <Collapsible h="h3" heading="Referanser" size="small">
                           <p>
                             <b>Thangaratinam S, Rogozinska E, Jolly K et al</b>{' '}
                             : Effects of interventions in pregnancy on maternal
@@ -550,7 +554,7 @@ const RecommendationPage = () => (
           <hr className="b-hr" />
           <div className="l-mt-3 t-sm-right">
             <Link href="#a" secondary small>
-              Sist endret: 11. august 2018
+              Sist faglig oppdatert: 11. august 2018
             </Link>
           </div>
         </div>

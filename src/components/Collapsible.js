@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import zenscroll from 'zenscroll';
-import shortid from 'shortid';
 
 import Alert from './Alert';
 import Heading from './Heading';
@@ -47,6 +46,7 @@ class Collapsible extends React.Component {
       collapsed: false
     };
     this.toggleCollapse = this.toggleCollapse.bind(this);
+    this.headingSelector = this.headingSelector.bind(this);
   }
 
   toggleCollapse() {
@@ -73,6 +73,16 @@ class Collapsible extends React.Component {
     }, 0);
   }
 
+  headingSelector() {
+    if (this.props.h) {
+      return this.props.h;
+    } else {
+      if (this.props.size === 'large') return 'h2';
+      else if (this.props.size === 'medium') return 'h3';
+      else if (this.props.size === 'small') return 'none';
+    }
+  }
+
   render() {
     const { props } = this;
     const id = props.id || 'changeThis_everyIdShouldBeUnique';
@@ -92,11 +102,7 @@ class Collapsible extends React.Component {
           onClick={this.toggleCollapse}
         >
           <Heading
-            h={
-              (props.size === 'large' && 'h2') ||
-              (props.size === 'medium' && 'h3') ||
-              (props.size === 'small' && 'none')
-            }
+            h={this.headingSelector()}
             className={headingClasses(props.size)}
           >
             {props.heading}
@@ -148,6 +154,7 @@ Collapsible.propTypes = {
   subheading: PropTypes.string,
   subheadingContent: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
+  h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,
   noBorder: PropTypes.bool,
