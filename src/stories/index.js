@@ -739,7 +739,12 @@ storiesOf('Quote', module)
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur?
       </p>
-      <p className="b-quote__footnote">Fotnotetekst</p>
+      <p className="b-quote__footnote">
+        Fotnote:
+        <br />0 Tilføyd ved lov 24 juni 2011 nr. 30 (ikr. 1 jan 2012 iflg. res.
+        16 des 2011 nr. 1252). Endres ved lov 16 juni 2017 nr. 55 (ikr. fra den
+        tid Kongen bestemmer).
+      </p>
     </Quote>
   ));
 

@@ -77,7 +77,12 @@ const MemoPage = () => (
                 Dette omfatter tiltak som kan bidra til å forhindre at psykiske
                 plager og lidelser oppstår (primærforebygging).
               </p>
-              <p className="b-quote__footnote">Fotnotetekst</p>
+              <p className="b-quote__footnote">
+                Fotnote:
+                <br />0 Tilføyd ved lov 24 juni 2011 nr. 30 (ikr. 1 jan 2012
+                iflg. res. 16 des 2011 nr. 1252). Endres ved lov 16 juni 2017
+                nr. 55 (ikr. fra den tid Kongen bestemmer).
+              </p>
             </Quote>
             <h3>Kommentarer til § 18:</h3>
             <p>
@@ -157,7 +162,12 @@ const MemoPage = () => (
                 Denne bestemmelsen begrenser ikke plikten til å opplyse om
                 bierverv som følger av avtale eller andre rettsregler.»
               </p>
-              <p className="b-quote__footnote">Fotnotetekst</p>
+              <p className="b-quote__footnote">
+                Fotnote:
+                <br />0 Tilføyd ved lov 24 juni 2011 nr. 30 (ikr. 1 jan 2012
+                iflg. res. 16 des 2011 nr. 1252). Endres ved lov 16 juni 2017
+                nr. 55 (ikr. fra den tid Kongen bestemmer).
+              </p>
             </Quote>
             <a href="#a">Les mer § X på lovdata.no</a>
             <h3>Kommentar til § 19:</h3>
