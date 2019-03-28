@@ -36,7 +36,7 @@
     "test": "react-app-rewired test",
     "enonic-build": "REACT_APP_ENONICXP_SEARCH_RESULT_PAGE='/search' REACT_APP_ENONICXP_SEARCH_ENDPOINT='/_/service/helsedirektoratet/autocomplete' REACT_APP_ENONICXP='true' npm run build:app && npm run build:sass && npm run build:prefix-css-themes",
     "create-static-pages": "react-snap && rm -f build/static_pages/200.html build/static_pages/404.html build/static_pages/index.html build/static_pages/storybook/iframe.html build/static_pages/storybook/index.html && npx prettier --write build/static_pages/**/*",
-    "diff-static-versions": "diff old_static_version/static_pages build/static_pages -u -b -B -r | npx diff2html -i stdin -s side -F old_static_version/diff.html"
+    "diff-static-versions": "diff old_static_version/static_pages build/static_pages -u -b -B -r | npx diff2html -i stdin -s side -F public/diff.html"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^5.0.2",
