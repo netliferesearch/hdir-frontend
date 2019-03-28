@@ -5,6 +5,16 @@
   margin: 2em 0;
   background-color: $grey-lighter;
 
+  // This is coming from the rich text-field in the CMS, so we need to make it non-BEM
+  p {
+    margin: 1em 0 !important;
+    text-indent: 2em;
+  }
+
+  ul {
+    list-style: none;
+  }
+
   &__blockquote {
     &:after,
     &:before {
@@ -16,9 +26,7 @@
     font-weight: bold;
   }
 
-  // This is coming from the rich text-field in the CMS, so we need to make it non-BEM
-  p {
-    margin: 1em 0 !important;
-    text-indent: 2em;
+  &__footnote {
+    text-indent: 0 !important;
   }
 }

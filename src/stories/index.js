@@ -713,9 +713,14 @@ storiesOf('Quote', module)
         voluptatem sequi nesciunt.
       </p>
       <ul>
-        <li>abc</li>
-        <li>def</li>
-        <li>ghi</li>
+        <li>a. abc</li>
+        <li>b. def</li>
+        <li>c. ghi</li>
+      </ul>
+      <ul>
+        <li>1. abc</li>
+        <li>2. def</li>
+        <li>3. ghi</li>
       </ul>
       <p>
         Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
@@ -734,6 +739,7 @@ storiesOf('Quote', module)
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur?
       </p>
+      <p className="b-quote__footnote">Fotnotetekst</p>
     </Quote>
   ));
 

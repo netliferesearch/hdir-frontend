@@ -68,10 +68,16 @@ const MemoPage = () => (
                 Norske og internasjonale studier viser at 30 – 50 prosent av den
                 voksne befolkningen vil få en psykisk lidelse i løpet av livet.
               </p>
+              <ul>
+                <li>a. Befolkning</li>
+                <li>b. Skjermer</li>
+                <li>c. Tastaturer</li>
+              </ul>
               <p>
                 Dette omfatter tiltak som kan bidra til å forhindre at psykiske
                 plager og lidelser oppstår (primærforebygging).
               </p>
+              <p className="b-quote__footnote">Fotnotetekst</p>
             </Quote>
             <h3>Kommentarer til § 18:</h3>
             <p>
@@ -131,6 +137,11 @@ const MemoPage = () => (
                 engasjement, eierinteresser o.l. i annen virksomhet som vil
                 kunne komme i konflikt med hovedarbeidsgivers interesser.
               </p>
+              <ul>
+                <li>1. Befolkning</li>
+                <li>2. Skjermer</li>
+                <li>3. Tastaturer</li>
+              </ul>
               <p>
                 Arbeidsgiveren kan i tillegg kreve at helsepersonell med
                 autorisasjon eller lisens gir opplysninger om all helsefaglig
@@ -146,6 +157,7 @@ const MemoPage = () => (
                 Denne bestemmelsen begrenser ikke plikten til å opplyse om
                 bierverv som følger av avtale eller andre rettsregler.»
               </p>
+              <p className="b-quote__footnote">Fotnotetekst</p>
             </Quote>
             <a href="#a">Les mer § X på lovdata.no</a>
             <h3>Kommentar til § 19:</h3>
