@@ -36,34 +36,30 @@ const AuthorizationFrontPage = () => (
                 For å kunne jobbe som helsepersonell i Norge trenger du
                 autorisasjon og/eller lisens fra Helsedirektoratet.
               </p>
-              <p>
-                <Link href="#a">
-                  In English: How to apply for authorisation or license
-                </Link>
-              </p>
-              <p>
+              <Link href="#a">
+                In English: How to apply for authorisation or license
+              </Link>
+              <div>
                 <Collapsible
                   heading="Jeg som er over 80 år skal søke autorisasjon"
                   size="small"
                 >
                   There should be some content in here.
                 </Collapsible>
-              </p>
+              </div>
               <h2>Veiviser: søk om autorisasjon og lisens</h2>
-              <p>
-                Ved å bruke veiviseren får du:
-                <ul>
-                  <li>Riktig dokumentasjonskrav</li>
-                  <li>Riktig søknadsskjema på Altinn</li>
-                  <li>Saksbehandlingstid og gebyr</li>
-                </ul>
-              </p>
+              <p>Ved å bruke veiviseren får du:</p>
+              <ul>
+                <li>Riktig dokumentasjonskrav</li>
+                <li>Riktig søknadsskjema på Altinn</li>
+                <li>Saksbehandlingstid og gebyr</li>
+              </ul>
               <br />
               <Link href="#a" button>
                 Start veiviseren
               </Link>
               <br />
-              <p>
+              <div>
                 <Collapsible
                   heading="Jeg har søkt – hva skjer nå?"
                   size="small"
@@ -71,15 +67,15 @@ const AuthorizationFrontPage = () => (
                   This is some other content, and it includes{' '}
                   <a href="#a">a link</a>
                 </Collapsible>
-              </p>
-              <p>
+              </div>
+              <div>
                 <Collapsible
                   heading="Jeg har fått svar – hva gjør jeg nå?"
                   size="small"
                 >
                   This is some other content, remember, it can be HTML.
                 </Collapsible>
-              </p>
+              </div>
             </article>
           </div>
         </div>

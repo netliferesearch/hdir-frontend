@@ -37,34 +37,32 @@ const AuthorizationStepPage2 = () => (
                   stå en liten ingress for spørsmålet. Her kan det stå en liten
                   ingress for spørsmålet.
                 </p>
-                <p>
-                  <RadioButtonGroup
-                    heading="This is a heading"
-                    name="someName"
-                    options={[
-                      {
-                        value: '1a',
-                        label: 'Søker selv',
-                        disabled: false
-                      },
-                      {
-                        value: '1b',
-                        label: 'Utdanningsinstitusjon',
-                        disabled: false
-                      },
-                      {
-                        value: '2a',
-                        label: 'Denne er disablet',
-                        disabled: true
-                      },
-                      {
-                        value: '2b',
-                        label: 'Fylkesmann',
-                        disabled: false
-                      }
-                    ]}
-                  />
-                </p>
+                <RadioButtonGroup
+                  heading="This is a heading"
+                  name="someName"
+                  options={[
+                    {
+                      value: '1a',
+                      label: 'Søker selv',
+                      disabled: false
+                    },
+                    {
+                      value: '1b',
+                      label: 'Utdanningsinstitusjon',
+                      disabled: false
+                    },
+                    {
+                      value: '2a',
+                      label: 'Denne er disablet',
+                      disabled: true
+                    },
+                    {
+                      value: '2b',
+                      label: 'Fylkesmann',
+                      disabled: false
+                    }
+                  ]}
+                />
                 <p>
                   <Button>Neste</Button>
                 </p>

@@ -61,9 +61,8 @@ const RecommendationPage = () => (
                       gravide. Det viktigste er å ha et høyt inntak av fiber og
                       å unngå hurtigresorberbare karbohydrater, med andre ord en
                       moderat lav-GI-kost.
-                    </p>{' '}
+                    </p>
                     <p>
-                      {' '}
                       Glukosestigningen etter et måltid avhenger primært av
                       mengde og kvalitet av karbohydratene i måltidet. Gravide
                       kvinner anbefales å innta minimum 175 gram karbohydrat per
@@ -71,8 +70,8 @@ const RecommendationPage = () => (
                       matvarer bør begrenses i mengde og heller fordeles over
                       flere måltider dersom ikke postprandiale glukosemål nås.
                       Kostrådene tilpasses kvinnens KMI og anbefalte vektøkning.
-                    </p>{' '}
-                    <p>Glykemisk indeks</p>{' '}
+                    </p>
+                    <p>Glykemisk indeks</p>
                     <p>
                       (GI) Begrepet benyttes om matvarer med mye fiber og
                       langsomt absorberbare karbohydrater. GI er en måte å
@@ -80,7 +79,7 @@ const RecommendationPage = () => (
                       har på glukosenivået. En GI på 0 betyr ingen/svært liten
                       effekt, mens GI på 100 vil si at matvaren har samme
                       glukosestigende effekt som glukose.
-                    </p>{' '}
+                    </p>
                     <p>
                       En kost med lav GI inkluderer matvarer som i hovedsak har
                       en GI-verdi under 70. Dette er ikke det samme som en
@@ -88,7 +87,7 @@ const RecommendationPage = () => (
                       redusere mengden karbohydrat. Kost med lav GI kan ha et
                       høyt karbohydratinnhold, men kvaliteten på
                       karbohydratkildene er det viktige.
-                    </p>{' '}
+                    </p>
                     <p>
                       Typisk vil en kost med lav GI kunne inneholde
                       karbohydratrike matvarer som belgvekster, hele
@@ -342,7 +341,7 @@ const RecommendationPage = () => (
                                 Keisersnitt, Bruk av insulin, Makrosomi
                                 (fødselsvekt >4kg), Barn med fødselsvekt
                               </div>
-                              <p>
+                              <div>
                                 <a
                                   href="https://app.magicapp.org/public/guideline/aEeerE/pico/nVXR6j/widget?openOnLoad=1"
                                   target="_blank"
@@ -477,7 +476,7 @@ const RecommendationPage = () => (
                                     </p>
                                   </div>
                                 </Collapsible>
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </Collapsible>
