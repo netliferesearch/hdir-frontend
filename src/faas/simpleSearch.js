@@ -1,4 +1,4 @@
-const allNewsItems = [
+const allItems = [
   {
     title: 'A new thing happened',
     category: 'news',
@@ -24,13 +24,12 @@ const allNewsItems = [
   {
     title: 'Demens',
     category: 'Nasjonal faglig rettningslinje',
-    topicTitle: 'Hentet fra',
-    topicText:
-      'Nasjonal faglig retningslinje for tannhelsetjenester til barn og unge 0-20 år'
+    topic:
+      'Hentet fra: Nasjonal faglig retningslinje for tannhelsetjenester til barn og unge 0-20 år'
   },
   {
     title: 'This is news #4',
-    category: 'news',
+    category: 'something',
     file: 'PDF',
     publishDate: '2. April 2015',
     intro: 'Ikke røyk, røyking er ikke bra',
@@ -61,11 +60,16 @@ exports.handler = async (event, context) => {
       body: '404 Not found'
     };
 
-  const search = searchQuery =>
-    allNewsItems.filter(
+  const search = searchQuery => {
+    return allItems.filter(
       item =>
-        Object.values(item).filter(prop => prop.includes(searchQuery)).length
+        Object.values(item).filter(
+          propValue =>
+            propValue.toLowerCase().search(searchQuery.toLowerCase()) !== -1
+        ).length
     );
+  };
+
   const searchResult = search(searchQuery);
 
   if (!searchResult.length)

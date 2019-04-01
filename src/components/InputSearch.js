@@ -33,6 +33,9 @@ const renderSuggestion = suggestion => (
     {suggestion.intro && (
       <div className="suggestion-intro">{suggestion.intro}</div>
     )}
+    {suggestion.topic && (
+      <div className="suggestion-topic">{suggestion.topic}</div>
+    )}
   </div>
 );
 
@@ -152,6 +155,8 @@ class InputSearch extends React.Component {
                 ...data[data.length - 1],
                 title: value,
                 category: '',
+                file: '',
+                topic: '',
                 intro: `Se alle resultater for "${value}"`,
                 url: `${searchPageUrl}?searchquery=${value}`
               }
