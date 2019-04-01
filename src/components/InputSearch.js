@@ -140,28 +140,32 @@ class InputSearch extends React.Component {
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
     const encodedValue = encodeURIComponent(value);
-    fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
-      .then(res => res.json())
-      .then(data => {
-        this.setState({
-          suggestions: [
-            ...data,
-            data.length && {
-              // This row is the blue (or orange) suggestion at the bottom
-              ...data[data.length - 1],
-              title: value,
-              category: '',
-              intro: `Se alle resultater for "${value}"`,
-              url: `${searchPageUrl}?searchquery=${value}`
-            }
-          ]
+    if (value.length >= 3) {
+      fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
+        .then(res => res.json())
+        .then(data => {
+          this.setState({
+            suggestions: [
+              ...data,
+              data.length && {
+                // This row is the blue (or orange) suggestion at the bottom
+                ...data[data.length - 1],
+                title: value,
+                category: '',
+                intro: `Se alle resultater for "${value}"`,
+                url: `${searchPageUrl}?searchquery=${value}`
+              }
+            ]
+          });
+        })
+        .catch(ex => {
+          this.setState({
+            suggestions: []
+          });
         });
-      })
-      .catch(ex => {
-        this.setState({
-          suggestions: []
-        });
-      });
+    } else {
+      this.onSuggestionsClearRequested();
+    }
   };
 
   // Autosuggest will call this function every time you need to clear suggestions.
