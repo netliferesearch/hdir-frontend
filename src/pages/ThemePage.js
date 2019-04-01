@@ -188,7 +188,14 @@ const ThemePage = () => (
                     fields: {
                       category: 'Krav i lov eller forskrift',
                       heading:
-                        'Tannhelsetjenester skal ha et og skolehelsetjenesten'
+                        'Tannhelsetjenester skal ha et og skolehelsetjenesten',
+                      topic: (
+                        <>
+                          <strong>Hentet fra:</strong> Nasjonal faglig
+                          retningslinje for tannhelsetjenester til barn og unge
+                          0-20 år
+                        </>
+                      )
                     }
                   },
                   {
@@ -197,7 +204,14 @@ const ThemePage = () => (
                     fields: {
                       category: 'Sterk anbefaling',
                       heading:
-                        'Barn og unge med høy karierisiko helsestasjons- og skolehelsetjenesten'
+                        'Barn og unge med høy karierisiko helsestasjons- og skolehelsetjenesten',
+                      topic: (
+                        <>
+                          <strong>Hentet fra:</strong> Nasjonal faglig
+                          retningslinje for tannhelsetjenester til barn og unge
+                          0-20 år
+                        </>
+                      )
                     }
                   },
                   {
@@ -206,7 +220,14 @@ const ThemePage = () => (
                     fields: {
                       category: 'Sterk anbefaling',
                       heading:
-                        'Foresatte til barn med administrering av langtidsvirkende reversibel'
+                        'Foresatte til barn med administrering av langtidsvirkende reversibel',
+                      topic: (
+                        <>
+                          <strong>Hentet fra:</strong> Nasjonal faglig
+                          retningslinje for tannhelsetjenester til barn og unge
+                          0-20 år
+                        </>
+                      )
                     }
                   }
                 ]}

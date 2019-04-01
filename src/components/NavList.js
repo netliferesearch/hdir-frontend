@@ -103,7 +103,7 @@ NavList.propTypes = {
       active: PropTypes.bool,
       file: PropTypes.bool,
       infoText: PropTypes.string,
-      topic: PropTypes.string
+      topic: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
     })
   ).isRequired,
   columns: PropTypes.bool,

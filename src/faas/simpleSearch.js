@@ -22,6 +22,13 @@ const allNewsItems = [
     url: '/artikkel'
   },
   {
+    title: 'Demens',
+    category: 'Nasjonal faglig rettningslinje',
+    topicTitle: 'Hentet fra',
+    topicText:
+      'Nasjonal faglig retningslinje for tannhelsetjenester til barn og unge 0-20 år'
+  },
+  {
     title: 'This is news #4',
     category: 'news',
     file: 'PDF',

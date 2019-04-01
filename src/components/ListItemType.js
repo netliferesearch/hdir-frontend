@@ -176,6 +176,9 @@ const ListItemType = props => {
               <div className="b-list-item-type__download">PDF ↓</div>
             )}
           </div>
+          {fields.topic && (
+            <div className="b-list-item-type__topic">{fields.topic}</div>
+          )}
         </div>
       )}
 

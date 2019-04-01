@@ -114,8 +114,22 @@ const SearchResultPage = () => (
                   download: 'PDF ↓',
                   image:
                     'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '1. desember 2003',
-                  topic: 'Innhold basert på søk, alle kan ha denne'
+                  publishDate: '1. desember 2003'
+                }
+              },
+
+              {
+                type: 'generic',
+                url: '#1',
+                fields: {
+                  category: 'Nasjonal faglig rettningslinje',
+                  heading: 'Demens',
+                  topic: (
+                    <>
+                      <strong>Hentet fra:</strong> Nasjonal faglig retningslinje
+                      for tannhelsetjenester til barn og unge 0-20 år
+                    </>
+                  )
                 }
               },
               {
@@ -135,8 +149,7 @@ const SearchResultPage = () => (
                     'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
                   publishDate: '3. desember 2018',
                   lead:
-                    'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
-                  topic: <span>YOYOYO, what up</span>
+                    'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.'
                 }
               },
               {
@@ -147,8 +160,7 @@ const SearchResultPage = () => (
                   category: 'Person',
                   phoneNumber: '+47 123 45 678',
                   position: 'Developer',
-                  department: 'Oslo',
-                  topic: 'Innhold basert på søk, alle kan ha denne'
+                  department: 'Oslo'
                 }
               },
               {
@@ -157,9 +169,7 @@ const SearchResultPage = () => (
                 fields: {
                   heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
                   category: 'Tilskudd',
-                  deadline: 'Søknadsfrist: 11. oktober 2018',
-                  topic:
-                    'If this module is shown on a search page, it might have a text like this for topics'
+                  deadline: 'Søknadsfrist: 11. oktober 2018'
                 }
               },
               {
@@ -170,8 +180,7 @@ const SearchResultPage = () => (
                   category: 'Brosjyre',
                   image:
                     'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                  publishDate: '1. desember 2003',
-                  topic: 'Innhold basert på søk, alle kan ha denne'
+                  publishDate: '1. desember 2003'
                 }
               },
               {
@@ -183,8 +192,7 @@ const SearchResultPage = () => (
                   dateFrom: '3. november 1990',
                   dateTo: '6. desember 2018',
                   location: 'Clarion The Edge, Tromsø',
-                  registrationDeadline: '15. oktober',
-                  topic: 'Innhold basert på søk, alle kan ha denne'
+                  registrationDeadline: '15. oktober'
                 }
               }
             ]}
