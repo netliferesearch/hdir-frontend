@@ -26,7 +26,18 @@ It can also be found published on Netlify: http://hdir-frontend.netlify.com
 2. `npm run build`
 3. Builds everything in the project to `/build`
 
-## :clipboard: Rules
+## Visual regression testing with Loki
+
+When doing styling changes that might affect the project in unexpected places, you should run the automated visual regression tool. 
+
+Loki takes screenshots off all the components in Storybook (update) and stores them as references. After doing the styling changes you can run Loki again (update) to compare the current state with the last one. Loki will highlight the changes in the generated output images. 
+
+1. Create reference images: `npx loki update --port 9009`
+2. Compare changes with the reference: `npx loki test --port 9009`
+
+Be careful not to run update when you want to run the test, because it will override the old reference. 
+
+## Rules
 
 - All styles are written with SCSS (SASS)
 - Follow the airbnb-sass-styleguide: https://github.com/airbnb/css
@@ -39,13 +50,13 @@ It can also be found published on Netlify: http://hdir-frontend.netlify.com
 - By default the React components should be functions without state.
 - Follow the WCAG 2.0 guidelines, with DIFI's modifications: https://uu.difi.no/krav-og-regelverk/wcag-20-standarden
 
-### :package: Our SASS dependencies
+### Our SASS dependencies
 
 - Normalize: https://github.com/JohnAlbin/normalize-scss
 - Grid: https://hugeinc.github.io/flexboxgrid-sass/
 - Media queries: https://github.com/sass-mq/sass-mq
 
-### :police-officer: Styling rules
+### Styling rules
 
 - Each component has 100% width. The grid decides the width of the component. The exception to this rule is `inline` and `inline-block` and `flex` elements, which has their width defined by their content or surroundings.
 - A component should not decide its spacing around itself. There are 5 spacing units to choose from i.e. `l-mt-5`. 5 Is the largest unit, and will give the biggest spacing. `m` stands for margin and `t` for top. The four sides are called `t` `r` `b` `l`. It is prefered to always use margin top, unless it complicates things, if it does, use `l-mb-#`.
@@ -67,12 +78,12 @@ The javascript is a collection of apps that can render, and read the data attrib
   - `data-label` (string) A string for the label to the input-field
   - `data-hide-search` (boolean, remove it to make it false) Used to hide the search button in the header for the frontpage and search page.
   - `data-links` (string) JSON representing the links. An array of objects with the props `name` and `href`.
-  - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]
+  - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]`
 - `#search`
   - `data-dark` (boolean, remove it to make it false) If the search is placed on a dark background.
   - `data-label` (string) A string for the label to the input-field
   - `data-hide-suggestions` (boolean, remove it to make it false) If we don't want suggestions.
-  - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]
+  - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]`
 - `#sectionSidebar`
   - `data-heading` (string) Heading for the sidebar
   - `data-icon` (string) Icon for the sidebar
@@ -91,4 +102,4 @@ We need to generate static HTML pages (using react-snap), one static build of an
 2. Go to the current commit and paste it in `old_static_version`
 3. Run `npm run build`
 4. Run `diff-static-versions`
-5. Open `old_static_version/diff.html` to see the changes.
+5. Open `/public/diff.html` to see the changes. Edit: The new diffs includes the date in the filename. 
