@@ -60,7 +60,8 @@ class InputSearch extends React.Component {
   }
 
   triggerSearch() {
-    window.location = `${searchPageUrl}?searchquery=${this.state.value}`;
+    const encodedValue = encodeURIComponent(this.state.value);
+    window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
   }
 
   componentDidUpdate(prevProps) {
@@ -102,7 +103,8 @@ class InputSearch extends React.Component {
   };
 
   onSuggestionSelected = (e, { suggestion }) => {
-    window.location = suggestion.url;
+    const encodedValue = encodeURIComponent(suggestion.url);
+    window.location = encodedValue;
   };
 
   renderInputComponent(inputProps) {
@@ -158,7 +160,7 @@ class InputSearch extends React.Component {
                 file: '',
                 topic: '',
                 intro: `Se alle resultater for "${value}"`,
-                url: `${searchPageUrl}?searchquery=${value}`
+                url: `${searchPageUrl}?searchquery=${encodedValue}`
               }
             ]
           });
