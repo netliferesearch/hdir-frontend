@@ -4,7 +4,7 @@ import InputSearch from './InputSearch';
 import SearchTray from './SearchTray';
 import NavList from './NavList';
 import shortid from 'shortid';
-import searchIcon from '../base64/search';
+import searchIcon from '../static/base64/search';
 
 class MainHeader extends React.Component {
   constructor(props) {
