@@ -67,12 +67,12 @@ The javascript is a collection of apps that can render, and read the data attrib
   - `data-label` (string) A string for the label to the input-field
   - `data-hide-search` (boolean, remove it to make it false) Used to hide the search button in the header for the frontpage and search page.
   - `data-links` (string) JSON representing the links. An array of objects with the props `name` and `href`.
-  - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]
+  - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]`
 - `#search`
   - `data-dark` (boolean, remove it to make it false) If the search is placed on a dark background.
   - `data-label` (string) A string for the label to the input-field
   - `data-hide-suggestions` (boolean, remove it to make it false) If we don't want suggestions.
-  - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]
+  - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]`
 - `#sectionSidebar`
   - `data-heading` (string) Heading for the sidebar
   - `data-icon` (string) Icon for the sidebar
