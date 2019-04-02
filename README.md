@@ -26,6 +26,17 @@ It can also be found published on Netlify: http://hdir-frontend.netlify.com
 2. `npm run build`
 3. Builds everything in the project to `/build`
 
+## Visual regression testing with Loki
+
+When doing styling changes that might affect the project in unexpected places, you should run the automated visual regression tool. 
+
+Loki takes screenshots off all the components in Storybook (update) and stores them as references. After doing the styling changes you can run Loki again (update) to compare the current state with the last one. Loki will highlight the changes in the generated output images. 
+
+1. Create reference images: `npx loki update --port 9009`
+2. Compare changes with the reference: `npx loki test --port 9009`
+
+Be careful not to run update when you want to run the test, because it will override the old reference. 
+
 ## Rules
 
 - All styles are written with SCSS (SASS)
