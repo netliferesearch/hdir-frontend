@@ -5,6 +5,13 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  @include underline(transparent);
+
+  &:hover {
+    * {
+      color: $link-color;
+    }
+  }
 
   &--horizontal {
     flex-direction: row;
@@ -23,6 +30,10 @@
 
     .b-card__link {
       flex-grow: 1;
+
+      p {
+        margin: 1em 0 0 0;
+      }
     }
   }
 
@@ -49,17 +60,14 @@
     padding: 1rem 3rem 1rem 1rem;
     box-shadow: none;
 
+    p {
+      margin: 1em 0 0 0;
+    }
+
     // Removes the margin, if there is only one child element
     > * {
       &:only-child {
         margin-top: 0;
-      }
-    }
-
-    &:hover {
-      *:first-child {
-        color: $link-color;
-        @include underline(transparent);
       }
     }
 
