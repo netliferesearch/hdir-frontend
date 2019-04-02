@@ -32,7 +32,7 @@
       width: 100%;
       display: block;
     }
-    flex-grow: 1;
+    flex-shrink: 0;
   }
   &__topic {
     display: inline-block;
