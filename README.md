@@ -101,5 +101,6 @@ We need to generate static HTML pages (using react-snap), one static build of an
 1. Go to an earlier commit, the commit you want to compare. Run `npm run build` and copy `build/static_pages`
 2. Go to the current commit and paste it in `old_static_version`
 3. Run `npm run build`
-4. Run `diff-static-versions`
-5. Open `/public/diff.html` to see the changes. Edit: The new diffs includes the date in the filename. 
+4. Generate static pages `npm run create-static-pages`
+5. Run `diff-static-versions`
+6. Open `/public/diff.html` to see the changes. Edit: The new diffs includes the date in the filename. 
