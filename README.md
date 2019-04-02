@@ -91,4 +91,4 @@ We need to generate static HTML pages (using react-snap), one static build of an
 2. Go to the current commit and paste it in `old_static_version`
 3. Run `npm run build`
 4. Run `diff-static-versions`
-5. Open `old_static_version/diff.html` to see the changes.
+5. Open `/public/diff.html` to see the changes. Edit: The new diffs includes the date in the filename. 
