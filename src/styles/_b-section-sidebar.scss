@@ -4,7 +4,7 @@
 
   > nav {
     max-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     &::-webkit-scrollbar {
       -webkit-appearance: none;
