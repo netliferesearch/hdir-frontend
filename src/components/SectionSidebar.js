@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import debounce from 'lodash.debounce';
 import shortid from 'shortid';
+import Stickyfill from 'stickyfilljs';
 
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
@@ -71,12 +72,14 @@ const ListItem = ({ props }) => {
 const SectionSidebar = props => {
   const [headings, setHeadings] = useState([]);
   const [activeHeading, setActiveHeading] = useState(0);
+  const sidebarRef = useRef(null);
 
   // Fetches all headings on mount, if we don't have a list
   useEffect(() => {
     if (!hasItems(props.list)) {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
     }
+    Stickyfill.add(sidebarRef.current);
   }, []);
 
   useEffect(() => {
@@ -121,7 +124,7 @@ const SectionSidebar = props => {
     : props.list;
 
   return (
-    <div className="b-section-sidebar">
+    <div className="b-section-sidebar" ref={sidebarRef}>
       <div
         className={classNames({
           'b-section-sidebar__heading': true,
