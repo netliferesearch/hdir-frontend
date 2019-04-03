@@ -21,10 +21,17 @@ class MainHeader extends React.Component {
   }
 
   toggleSearch() {
-    this.setState({
-      searchOpen: !this.state.searchOpen,
-      searchButtonText: !this.state.searchOpen ? 'Lukk søk' : 'Søk'
-    });
+    this.setState(
+      {
+        searchOpen: !this.state.searchOpen,
+        searchButtonText: !this.state.searchOpen ? 'Lukk søk' : 'Søk'
+      },
+      () => {
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 0);
+      }
+    );
   }
 
   toggleMobileNav() {
