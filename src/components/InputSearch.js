@@ -60,7 +60,7 @@ class InputSearch extends React.Component {
   }
 
   triggerSearch() {
-    const encodedValue = encodeURIComponent(this.state.value);
+    const encodedValue = encodeURI(this.state.value);
     window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
   }
 
@@ -103,7 +103,7 @@ class InputSearch extends React.Component {
   };
 
   onSuggestionSelected = (e, { suggestion }) => {
-    const encodedValue = encodeURIComponent(suggestion.url);
+    const encodedValue = encodeURI(suggestion.url);
     window.location = encodedValue;
   };
 
@@ -144,7 +144,7 @@ class InputSearch extends React.Component {
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
-    const encodedValue = encodeURIComponent(value);
+    const encodedValue = encodeURI(value);
     if (value.length >= 3) {
       fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
         .then(res => res.json())
