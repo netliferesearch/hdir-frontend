@@ -83,7 +83,7 @@ const LisLearning = () => (
                   å nå behandlingsmålene for glukose
                 </p>
               </Collapsible>
-              <div className="l-mt-3">
+              <div className="l-mt-2">
                 <Collapsible
                   heading="Lyskebrokk hos nyfødte"
                   subheading="LÆRINGSMÅL"
@@ -109,7 +109,7 @@ const LisLearning = () => (
                   <p>etc.</p>
                 </Collapsible>
               </div>
-              <div className="l-mt-3 l-mb-2">
+              <div className="l-mt-2 l-mb-2">
                 <Collapsible
                   heading="Vaskulære malformasjoner "
                   subheading="LÆRINGSMÅL"
@@ -173,7 +173,7 @@ const LisLearning = () => (
                   veldig viktig å få med seg
                 </Alert>
               </div>
-              <div className="l-mt-3">
+              <div className="l-mt-2">
                 <Collapsible heading="Utdypende tekst" size="medium">
                   <p>
                     Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -193,7 +193,7 @@ const LisLearning = () => (
                   </p>
                 </Collapsible>
               </div>
-              <div className="l-mt-3">
+              <div className="l-mt-2">
                 <Collapsible
                   heading="Anbefalte læringsaktiviteter"
                   size="medium"
@@ -207,7 +207,7 @@ const LisLearning = () => (
                   </p>
                 </Collapsible>
               </div>
-              <div className="l-mt-3">
+              <div className="l-mt-2">
                 <Collapsible heading="Anbefalte vurderingsformer" size="medium">
                   <p>
                     Example text: Kvinnen bør få kostveiledning og jevnlig
@@ -226,12 +226,10 @@ const LisLearning = () => (
       <div className="l-container l-mt-3 l-mb-5">
         <div className="row">
           <div className="col-md-8 col-xs-12 col-md-offset-4">
-            <div className="l-mt-4">
-              <PageMeta
-                publishDate="11. august 2008"
-                editDate="11. august 2018"
-              />
-            </div>
+            <PageMeta
+              publishDate="11. august 2008"
+              editDate="11. august 2018"
+            />
           </div>
         </div>
       </div>
