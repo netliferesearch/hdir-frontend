@@ -79,6 +79,7 @@
       color: $black;
       padding-right: 1rem;
       padding-left: 0;
+      cursor: pointer;
       &:after {
         position: absolute;
         display: inline-block;
@@ -128,8 +129,15 @@
 
     &--active {
       cursor: default;
-      background-color: $green-light !important; // We use important here, because we don't have the hover state to override it.
+      background-color: rgba(
+        $yellow,
+        0.15
+      ) !important; // We use important here, because we don't have the hover state to override it.
       transition: background-color 0.3s;
+
+      &:hover {
+        color: $black !important;
+      }
     }
 
     &--no-arrow {

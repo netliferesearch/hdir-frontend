@@ -39,7 +39,8 @@ storiesOf('NavList', module)
           title: 'KAPITTEL 3',
           url: '#',
           infoText: 'This is infoText: more text in another column',
-          meta: 'Nasjonale faglige retningslinjer'
+          meta: 'Nasjonale faglige retningslinjer',
+          active: true
         }
       ])}
     />
