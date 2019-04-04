@@ -24,10 +24,11 @@
 
   &__code {
     flex-shrink: 0;
-    margin-top: 0.5em;
     font-weight: normal;
     font-size: $meta-text;
     color: $grey;
+    float: right;
+    margin-top: 0;
   }
 
   &__button {
