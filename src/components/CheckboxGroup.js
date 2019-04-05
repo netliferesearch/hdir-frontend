@@ -14,7 +14,7 @@ const CheckboxGroup = props => (
     {props.heading && (
       <legend className={legendClasses(props.border)}>{props.heading}</legend>
     )}
-    {props.options.map(option => {
+    {props.options.map((option, index) => {
       return (
         <label className="b-checkbox-group__label" key={shortid.generate()}>
           <input
@@ -22,6 +22,21 @@ const CheckboxGroup = props => (
             type="checkbox"
             className="b-checkbox-group__input"
             value={option.value}
+            checked={option.checked}
+            onChange={() =>
+              // Returns an updates list with the item toggeled
+              props.handleChange(
+                props.options.map((option, i) => {
+                  if (i === index) {
+                    return {
+                      ...option,
+                      checked: !option.checked
+                    };
+                  }
+                  return option;
+                })
+              )
+            }
             disabled={option.disabled}
           />
           <i className="b-checkbox-group__indicator" />
@@ -36,11 +51,13 @@ CheckboxGroup.propTypes = {
   heading: PropTypes.string,
   name: PropTypes.string,
   border: PropTypes.bool,
+  handleChange: PropTypes.func,
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.string,
       label: PropTypes.string,
-      disabled: PropTypes.bool
+      disabled: PropTypes.bool,
+      checked: PropTypes.bool
     })
   )
 };
