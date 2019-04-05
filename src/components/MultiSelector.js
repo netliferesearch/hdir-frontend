@@ -5,11 +5,16 @@ import CheckboxGroup from './CheckboxGroup';
 import Button from './Button';
 
 const MultiSelector = props => {
+  const [options, setOptions] = useState(props.options);
   const [open, setOpen] = useState(false);
   const element = useRef();
 
   const openSelector = () => setOpen(true);
-  const closeSelector = () => setOpen(false);
+  const closeSelector = () => {
+    setOpen(false);
+    // Resets the options to prop values if its closed
+    setOptions(props.options);
+  };
 
   useEffect(() => {
     const handleClose = e => {
@@ -17,18 +22,18 @@ const MultiSelector = props => {
     };
     if (open) {
       document.addEventListener('keydown', handleClose);
-      document.addEventListener('mousedown', handleClick);
+      document.addEventListener('mousedown', handleOutsideClick);
     } else {
       document.removeEventListener('keydown', handleClose);
-      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('mousedown', handleOutsideClick);
     }
     return () => {
       document.removeEventListener('keydown', handleClose);
-      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('mousedown', handleOutsideClick);
     };
   }, [open]);
 
-  const handleClick = e => {
+  const handleOutsideClick = e => {
     if (element.current.contains(e.target)) {
       // do nothing when we click inside the element
       return;
@@ -42,6 +47,7 @@ const MultiSelector = props => {
       <button
         className="b-multi-selctor__select"
         onClick={open ? closeSelector : openSelector}
+        aria-expanded={open}
       >
         {open ? 'Lukk' : 'Åpne'}
       </button>
@@ -50,44 +56,8 @@ const MultiSelector = props => {
           <div className="b-multi-selector__checkboxes">
             <CheckboxGroup
               name="statistikktype"
-              options={[
-                {
-                  value: 'Kommunalt pasient- og brukerregister',
-                  label: 'Kommunalt pasient- og brukerregister'
-                },
-                {
-                  value: 'Kvalitetsindikator',
-                  label: 'Kvalitetsindikator'
-                },
-                {
-                  value: 'Norsk pasientregister',
-                  label: 'Norsk pasientregister'
-                },
-                {
-                  value: 'Kommunalt pasient- og brukerregister',
-                  label: 'Kommunalt pasient- og brukerregister'
-                },
-                {
-                  value: 'Kvalitetsindikator',
-                  label: 'Kvalitetsindikator'
-                },
-                {
-                  value: 'Norsk pasientregister',
-                  label: 'Norsk pasientregister'
-                },
-                {
-                  value: 'Kommunalt pasient- og brukerregister',
-                  label: 'Kommunalt pasient- og brukerregister'
-                },
-                {
-                  value: 'Kvalitetsindikator',
-                  label: 'Kvalitetsindikator'
-                },
-                {
-                  value: 'Norsk pasientregister',
-                  label: 'Norsk pasientregister'
-                }
-              ]}
+              options={options}
+              handleChange={setOptions}
             />
           </div>
           <div className="b-multi-selector__buttons">
@@ -104,6 +74,8 @@ const MultiSelector = props => {
   );
 };
 
-MultiSelector.propTypes = {};
+MultiSelector.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.object).isRequired
+};
 
 export default MultiSelector;

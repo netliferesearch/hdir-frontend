@@ -640,7 +640,57 @@ storiesOf('LongShortHeading', module)
 storiesOf('MultiSelector', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => <MultiSelector />);
+  .addWithStaticMarkup('Basic', () => (
+    <MultiSelector
+      options={[
+        {
+          value: 'Kommunalt pasient- og brukerregister',
+          label: 'Kommunalt pasient- og brukerregister',
+          checked: true
+        },
+        {
+          value: 'Kvalitetsindikator',
+          label: 'Kvalitetsindikator',
+          checked: false
+        },
+        {
+          value: 'Norsk pasientregister',
+          label: 'Norsk pasientregister',
+          checked: false
+        },
+        {
+          value: 'Kommunalt pasient- og brukerregister',
+          label: 'Kommunalt pasient- og brukerregister',
+          checked: false
+        },
+        {
+          value: 'Kvalitetsindikator',
+          label: 'Kvalitetsindikator',
+          checked: false
+        },
+        {
+          value: 'Norsk pasientregister',
+          label: 'Norsk pasientregister',
+          checked: false
+        },
+        {
+          value: 'Kommunalt pasient- og brukerregister',
+          label: 'Kommunalt pasient- og brukerregister',
+          checked: false
+        },
+        {
+          value: 'Kvalitetsindikator',
+          label: 'Kvalitetsindikator',
+          checked: false
+        },
+        {
+          value: 'Norsk pasientregister',
+          label: 'Norsk pasientregister',
+          checked: false
+        }
+      ]}
+    />
+  ));
 
 import './navList';
 import './pages';
