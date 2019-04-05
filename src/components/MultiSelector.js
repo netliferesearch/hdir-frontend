@@ -34,12 +34,10 @@ const MultiSelector = props => {
   }, [open]);
 
   const handleOutsideClick = e => {
-    if (element.current.contains(e.target)) {
-      // do nothing when we click inside the element
-      return;
-    }
     // close it if we click outside
-    closeSelector();
+    if (!element.current.contains(e.target)) {
+      closeSelector();
+    }
   };
 
   return (
