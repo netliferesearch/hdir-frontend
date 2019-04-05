@@ -103,8 +103,7 @@ class InputSearch extends React.Component {
   };
 
   onSuggestionSelected = (e, { suggestion }) => {
-    const encodedValue = encodeURI(suggestion.url);
-    window.location = encodedValue;
+    window.location = suggestion.url;
   };
 
   renderInputComponent(inputProps) {
