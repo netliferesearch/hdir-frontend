@@ -12,17 +12,20 @@ const buttonClasses = (arrow, download, small, secondary, plain) =>
     'b-button--plain': plain
   });
 
-const Button = props => (
+const Button = ({
+  arrow,
+  download,
+  small,
+  secondary,
+  plain,
+  children,
+  ...other
+}) => (
   <button
-    className={buttonClasses(
-      props.arrow,
-      props.download,
-      props.small,
-      props.secondary,
-      props.plain
-    )}
+    className={buttonClasses(arrow, download, small, secondary, plain)}
+    {...other}
   >
-    {props.children}
+    {children}
   </button>
 );
 
