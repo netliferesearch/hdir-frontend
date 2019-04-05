@@ -61,7 +61,14 @@ const MultiSelector = props => {
             />
           </div>
           <div className="b-multi-selector__buttons">
-            <Button secondary small onClick={closeSelector}>
+            <Button
+              secondary
+              small
+              onClick={() => {
+                props.handleChange(options);
+                closeSelector();
+              }}
+            >
               Bekreft temaer
             </Button>
             <Button plain small onClick={closeSelector}>
@@ -75,7 +82,8 @@ const MultiSelector = props => {
 };
 
 MultiSelector.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.object).isRequired
+  options: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleChange: PropTypes.func
 };
 
 export default MultiSelector;

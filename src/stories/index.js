@@ -642,6 +642,9 @@ storiesOf('MultiSelector', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <MultiSelector
+      handleChange={arg => {
+        console.log(arg);
+      }}
       options={[
         {
           value: 'Kommunalt pasient- og brukerregister',
