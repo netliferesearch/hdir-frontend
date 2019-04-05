@@ -643,7 +643,7 @@ storiesOf('MultiSelector', module)
   .addWithStaticMarkup('Basic', () => (
     <MultiSelector
       handleChange={arg => {
-        console.log(arg);
+        console.table(arg);
       }}
       options={[
         {
