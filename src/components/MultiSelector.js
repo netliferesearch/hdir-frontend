@@ -1,111 +1,108 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import CheckboxGroup from './CheckboxGroup';
 import Button from './Button';
 
-class MultiSelector extends React.Component {
-  constructor(props) {
-    super(props);
+const MultiSelector = props => {
+  const [open, setOpen] = useState(false);
+  const element = useRef();
 
-    this.state = {
-      open: false
+  const openSelector = () => setOpen(true);
+  const closeSelector = () => setOpen(false);
+
+  useEffect(() => {
+    const handleClose = e => {
+      if (e.key === 'Escape') closeSelector();
     };
-    this.openSelector = this.openSelector.bind(this);
-    this.closeSelector = this.closeSelector.bind(this);
-  }
+    if (open) {
+      document.addEventListener('keydown', handleClose);
+      document.addEventListener('mousedown', handleClick);
+    } else {
+      document.removeEventListener('keydown', handleClose);
+      document.removeEventListener('mousedown', handleClick);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleClose);
+      document.removeEventListener('mousedown', handleClick);
+    };
+  }, [open]);
 
-  setSelectorOpen = open => () => {
-    this.setState({ open: open }, () => {
-      // open ? this.domNode.focus() : this.domNode.blur();
-    });
+  const handleClick = e => {
+    if (element.current.contains(e.target)) {
+      // do nothing when we click inside the element
+      return;
+    }
+    // close it if we click outside
+    closeSelector();
   };
 
-  openSelector = this.setSelectorOpen(true);
-  closeSelector = this.setSelectorOpen(false);
-
-  componentDidMount() {
-    this.domNode.addEventListener('blur', this.closeSelector);
-  }
-
-  componentWillUnmount() {
-    this.domNode.removeEventListener('blur', this.closeSelector);
-  }
-
-  render() {
-    return (
-      <div
-        className="b-multi-selector"
-        ref={ref => {
-          this.domNode = ref;
-        }}
-        tabIndex="0"
+  return (
+    <div className="b-multi-selector" ref={element}>
+      <button
+        className="b-multi-selctor__select"
+        onClick={open ? closeSelector : openSelector}
       >
-        <button
-          className="b-multi-selctor__select"
-          onClick={this.state.open ? this.closeSelector : this.openSelector}
-        >
-          {this.state.open ? 'Lukk' : 'Åpne'}
-        </button>
-        {this.state.open && (
-          <div className="b-multi-selector__box">
-            <div className="b-multi-selector__checkboxes">
-              <CheckboxGroup
-                name="statistikktype"
-                options={[
-                  {
-                    value: 'Kommunalt pasient- og brukerregister',
-                    label: 'Kommunalt pasient- og brukerregister'
-                  },
-                  {
-                    value: 'Kvalitetsindikator',
-                    label: 'Kvalitetsindikator'
-                  },
-                  {
-                    value: 'Norsk pasientregister',
-                    label: 'Norsk pasientregister'
-                  },
-                  {
-                    value: 'Kommunalt pasient- og brukerregister',
-                    label: 'Kommunalt pasient- og brukerregister'
-                  },
-                  {
-                    value: 'Kvalitetsindikator',
-                    label: 'Kvalitetsindikator'
-                  },
-                  {
-                    value: 'Norsk pasientregister',
-                    label: 'Norsk pasientregister'
-                  },
-                  {
-                    value: 'Kommunalt pasient- og brukerregister',
-                    label: 'Kommunalt pasient- og brukerregister'
-                  },
-                  {
-                    value: 'Kvalitetsindikator',
-                    label: 'Kvalitetsindikator'
-                  },
-                  {
-                    value: 'Norsk pasientregister',
-                    label: 'Norsk pasientregister'
-                  }
-                ]}
-              />
-            </div>
-            <div className="b-multi-selector__buttons">
-              <Button secondary small onClick={this.closeSelector}>
-                Bekreft temaer
-              </Button>
-              <Button plain small onClick={this.closeSelector}>
-                Avbryt
-              </Button>
-            </div>
+        {open ? 'Lukk' : 'Åpne'}
+      </button>
+      {open && (
+        <div className="b-multi-selector__box">
+          <div className="b-multi-selector__checkboxes">
+            <CheckboxGroup
+              name="statistikktype"
+              options={[
+                {
+                  value: 'Kommunalt pasient- og brukerregister',
+                  label: 'Kommunalt pasient- og brukerregister'
+                },
+                {
+                  value: 'Kvalitetsindikator',
+                  label: 'Kvalitetsindikator'
+                },
+                {
+                  value: 'Norsk pasientregister',
+                  label: 'Norsk pasientregister'
+                },
+                {
+                  value: 'Kommunalt pasient- og brukerregister',
+                  label: 'Kommunalt pasient- og brukerregister'
+                },
+                {
+                  value: 'Kvalitetsindikator',
+                  label: 'Kvalitetsindikator'
+                },
+                {
+                  value: 'Norsk pasientregister',
+                  label: 'Norsk pasientregister'
+                },
+                {
+                  value: 'Kommunalt pasient- og brukerregister',
+                  label: 'Kommunalt pasient- og brukerregister'
+                },
+                {
+                  value: 'Kvalitetsindikator',
+                  label: 'Kvalitetsindikator'
+                },
+                {
+                  value: 'Norsk pasientregister',
+                  label: 'Norsk pasientregister'
+                }
+              ]}
+            />
           </div>
-        )}
-      </div>
-    );
-  }
-}
+          <div className="b-multi-selector__buttons">
+            <Button secondary small onClick={closeSelector}>
+              Bekreft temaer
+            </Button>
+            <Button plain small onClick={closeSelector}>
+              Avbryt
+            </Button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 MultiSelector.propTypes = {};
 
