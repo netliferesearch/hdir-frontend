@@ -32,7 +32,7 @@ const Alert = props => (
 
 Alert.propTypes = {
   title: PropTypes.string,
-  status: PropTypes.oneOf('', 'success', 'warning', 'danger', 'info'),
+  status: PropTypes.oneOf(['', 'success', 'warning', 'danger', 'info']),
   hideIcon: PropTypes.bool,
   inline: PropTypes.bool,
   small: PropTypes.bool
