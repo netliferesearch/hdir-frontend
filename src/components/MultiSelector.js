@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import CheckboxGroup from './CheckboxGroup';
 import Button from './Button';
@@ -40,14 +41,20 @@ const MultiSelector = props => {
     }
   };
 
+  const selectClasses = open =>
+    classNames({
+      'b-multi-selector__select': true,
+      'b-multi-selector__select--open': open
+    });
+
   return (
     <div className="b-multi-selector" ref={element}>
       <button
-        className="b-multi-selctor__select"
+        className={selectClasses(open)}
         onClick={open ? closeSelector : openSelector}
         aria-expanded={open}
       >
-        {open ? 'Lukk' : 'Åpne'}
+        {props.buttonText}
       </button>
       {open && (
         <div className="b-multi-selector__box">
@@ -67,7 +74,7 @@ const MultiSelector = props => {
                 closeSelector();
               }}
             >
-              Bekreft temaer
+              {props.confirmText}
             </Button>
             <Button plain small onClick={closeSelector}>
               Avbryt
@@ -80,6 +87,8 @@ const MultiSelector = props => {
 };
 
 MultiSelector.propTypes = {
+  buttonText: PropTypes.string,
+  confirmText: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleChange: PropTypes.func
 };

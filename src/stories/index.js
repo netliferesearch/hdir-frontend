@@ -642,13 +642,17 @@ storiesOf('MultiSelector', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
     <MultiSelector
+      buttonText={text('Button text', 'Velg tema')}
+      confirmText={text('Confirm text', 'Bekreft tema')}
       handleChange={arg => {
         console.table(arg);
       }}
-      options={[
+      options={object('Options', [
         {
-          value: 'Kommunalt pasient- og brukerregister',
-          label: 'Kommunalt pasient- og brukerregister',
+          value:
+            'Kommunalt pasient- og brukerregister sdfgs dfgsd fgsd fgdfg dsfg sdfg',
+          label:
+            'Kommunalt pasient- og brukerregister sdfgs dfgsd fgsd fgdfg dsfg sdfg',
           checked: true
         },
         {
@@ -691,7 +695,7 @@ storiesOf('MultiSelector', module)
           label: 'Norsk pasientregister',
           checked: false
         }
-      ]}
+      ])}
     />
   ));
 

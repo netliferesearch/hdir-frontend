@@ -1,14 +1,46 @@
 .b-multi-selector {
-  margin: 5rem;
-
   &__select {
-    height: 1rem;
+    display: flex;
+    background: none;
+    border: 0;
+    font-size: $base-font-size;
+    border-bottom: 1px solid $black;
+    padding: 0 0.4em 0.25em 0.1em;
+    cursor: pointer;
+
+    &:active {
+      color: $black;
+    }
+
+    &:before {
+      display: block;
+      content: ' ';
+      margin-top: 0.2em;
+      margin-right: 0.5em;
+      width: 0.75em;
+      height: 0.75em;
+      transform: rotate(90deg);
+      background-image: url(../static/icons/chevron.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--open {
+      border-color: transparent;
+      padding-bottom: 0.1em;
+      &:before {
+        margin-top: 0.1em;
+        transform: rotate(180deg);
+      }
+    }
   }
   &__box {
-    box-shadow: 0 2px 5px $green-dark;
+    display: inline-block;
+    border-top: 2px solid $primary-color;
+    box-shadow: 0 3px 4px rgba($green-dark, 0.4);
   }
   &__checkboxes {
-    padding: 1rem 1rem 0.25rem 1rem;
+    padding: 1rem 2rem 0.25rem 1rem;
     max-height: 15rem;
     overflow-y: scroll;
 
