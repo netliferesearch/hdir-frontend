@@ -7,3 +7,8 @@
     animation-duration: 0.3s;
   }
 }
+
+// The wrapper needs 100% to make position sticky work
+#sectionSidebar {
+  height: 100%;
+}
