@@ -159,7 +159,7 @@ class InputSearch extends React.Component {
                 file: '',
                 topic: '',
                 intro: `Se alle resultater for "${value}"`,
-                url: `${searchPageUrl}?searchquery=${encodedValue}`
+                url: `${searchPageUrl}?searchquery=${value}`
               }
             ]
           });
