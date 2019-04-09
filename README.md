@@ -28,14 +28,14 @@ It can also be found published on Netlify: http://hdir-frontend.netlify.com
 
 ## Visual regression testing with Loki
 
-When doing styling changes that might affect the project in unexpected places, you should run the automated visual regression tool. 
+When doing styling changes that might affect the project in unexpected places, you should run the automated visual regression tool.
 
-Loki takes screenshots off all the components in Storybook (update) and stores them as references. After doing the styling changes you can run Loki again (update) to compare the current state with the last one. Loki will highlight the changes in the generated output images. 
+Loki takes screenshots off all the components in Storybook (update) and stores them as references. After doing the styling changes you can run Loki again (update) to compare the current state with the last one. Loki will highlight the changes in the generated output images.
 
 1. Create reference images: `npx loki update --port 9009`
 2. Compare changes with the reference: `npx loki test --port 9009`
 
-Be careful not to run update when you want to run the test, because it will override the old reference. 
+Be careful not to run update when you want to run the test, because it will override the old reference.
 
 ## Rules
 
@@ -89,6 +89,14 @@ The javascript is a collection of apps that can render, and read the data attrib
   - `data-icon` (string) Icon for the sidebar
   - `data-heading-url` (string) A link to another page
   - `data-list` (string) JSON representing the links. An array of objects with the props. Example below:
+- `.js-multi-selector` (can be used multiple times on a page)
+  - `data-button-text` (string) The text in the button for opening the list of checkboxes.
+  - `data-confirm-text` (string) The text in the button that triggers the filters
+  - `data-checkbox-group-name` (string) Name of the checkbox group. Same as the search query key.
+  - `data-options` (string) JSON array of checkboxes. `[{"value":"urlEncodedValue","label":"Human readable lable","checked":false}]`
+    - The objects in the array has the props: `value`, `label` and `checked` (this is a boolean).
+    - The value should be url encoded.
+    - The JSON string (data-options) decides which checkbox is currently filtering, not the URL.
 
 ```
 data-list='[{"title":"KAPITTEL 1","url":"#","description":"Kost og fysisk aktivitet ved svangerskaps-diabetes","children":[{"description":"Underkapittel","active":true,"url":"#","prefix":"1.1"},{"description":"Underkapittel","url":"#","prefix":"1.2"}]},{"title":"KAPITTEL 2","url":"#","description":"Diagnostikk og tiltak"},{"title":"KAPITTEL 3","url":"#","description":"Nytt kapittel"}]'
@@ -101,6 +109,6 @@ We need to generate static HTML pages (using react-snap), one static build of an
 1. Go to an earlier commit, the commit you want to compare. Run `npm run build` and copy `build/static_pages`
 2. Go to the current commit and paste it in `old_static_version`
 3. Run `npm run build && npm run create-static-pages && npm run diff-static-versions`
-    * This builds the project, generate static prerendered HTML pages, and creates a HTML diff-file. 
+   - This builds the project, generate static prerendered HTML pages, and creates a HTML diff-file.
 4. Open `/public/diff.html` to see the changes.
-    * The new diffs includes the date in the filename. 
+   - The new diffs includes the date in the filename.

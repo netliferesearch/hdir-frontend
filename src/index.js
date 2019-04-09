@@ -6,11 +6,14 @@ import App from './App';
 import MainHeader from '../src/components/MainHeader';
 import InputSearch from '../src/components/InputSearch';
 import SectionSidebar from '../src/components/SectionSidebar';
+import MultiSelector from './components/MultiSelector';
+import { checkboxFilter } from './functions/searchFilter';
 
 const rootElement = document.getElementById('root');
 const headerElement = document.getElementById('header');
 const searchElement = document.getElementById('search');
 const sectionSidebarElement = document.getElementById('sectionSidebar');
+const multiSelectElements = document.querySelectorAll('.js-multi-selector');
 
 // If we build for Enonic, we don't want all the content.
 // When publishing to Netlify, we want to show everything in this project.
@@ -44,6 +47,29 @@ if (!process.env.REACT_APP_ENONICXP) {
       );
     }
   }
+}
+
+if (multiSelectElements.length) {
+  multiSelectElements.forEach(element => {
+    const buttonText = element.getAttribute('data-button-text');
+    const confirmText = element.getAttribute('data-confirm-text');
+    const checkboxGroupName = element.getAttribute('data-checkbox-group-name');
+    const options =
+      element.getAttribute('data-options') === null
+        ? []
+        : JSON.parse(element.getAttribute('data-options'));
+
+    render(
+      <MultiSelector
+        buttonText={buttonText}
+        confirmText={confirmText}
+        options={options}
+        checkboxGroupName={checkboxGroupName}
+        handleChange={checkboxFilter}
+      />,
+      element
+    );
+  });
 }
 
 if (headerElement) {
