@@ -14,7 +14,9 @@
   }
 
   &--horizontal {
-    flex-direction: row;
+    @include mq($from: tablet) {
+      flex-direction: row;
+    }
 
     // The element which is a child of the feature needs to have 100% height.
     .b-card__feature > * {
@@ -24,12 +26,15 @@
     }
 
     .b-card__feature {
-      display: flex;
-      flex-grow: 0;
+      @include mq($from: tablet) {
+        display: flex;
+        flex-grow: 0;
+      }
     }
 
     .b-card__link {
       flex-grow: 1;
+      overflow: auto;
 
       p {
         margin: 1em 0 0 0;
