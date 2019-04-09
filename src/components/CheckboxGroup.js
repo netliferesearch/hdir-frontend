@@ -26,15 +26,14 @@ const CheckboxGroup = props => (
             onChange={() =>
               // Returns an updates list with the item toggeled
               props.handleChange(
-                props.options.map((option, i) => {
-                  if (i === index) {
-                    return {
-                      ...option,
-                      checked: !option.checked
-                    };
-                  }
-                  return option;
-                })
+                props.options.map((newOption, i) =>
+                  i === index
+                    ? {
+                        ...newOption,
+                        checked: !newOption.checked
+                      }
+                    : newOption
+                )
               )
             }
             disabled={option.disabled}
