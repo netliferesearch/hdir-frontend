@@ -8,7 +8,8 @@ import Button from './Button';
 const MultiSelector = props => {
   const [options, setOptions] = useState(props.options);
   const [open, setOpen] = useState(false);
-  const element = useRef();
+  const boxElement = useRef();
+  const buttonElement = useRef();
 
   const openSelector = () => setOpen(true);
   const closeSelector = () => {
@@ -36,7 +37,11 @@ const MultiSelector = props => {
 
   const handleOutsideClick = e => {
     // close it if we click outside
-    if (!element.current.contains(e.target)) {
+    // Ignores the outside click if we click the open/close button, or else we will close it on mouse down, and open it on mouse up.
+    if (
+      !boxElement.current.contains(e.target) &&
+      !buttonElement.current.contains(e.target)
+    ) {
       closeSelector();
     }
   };
@@ -48,19 +53,20 @@ const MultiSelector = props => {
     });
 
   return (
-    <div className="b-multi-selector" ref={element}>
+    <div className="b-multi-selector">
       <button
         className={selectClasses(open)}
         onClick={open ? closeSelector : openSelector}
         aria-expanded={open}
+        ref={buttonElement}
       >
         {props.buttonText}
       </button>
       {open && (
-        <div className="b-multi-selector__box">
+        <div className="b-multi-selector__box" ref={boxElement}>
           <div className="b-multi-selector__checkboxes">
             <CheckboxGroup
-              name="statistikktype"
+              name={props.checkboxGroupName}
               options={options}
               handleChange={setOptions}
             />
@@ -70,7 +76,7 @@ const MultiSelector = props => {
               secondary
               small
               onClick={() => {
-                props.handleChange(options);
+                props.handleChange(options, props.checkboxGroupName);
                 closeSelector();
               }}
             >
@@ -87,8 +93,9 @@ const MultiSelector = props => {
 };
 
 MultiSelector.propTypes = {
-  buttonText: PropTypes.string,
-  confirmText: PropTypes.string,
+  buttonText: PropTypes.string.isRequired,
+  confirmText: PropTypes.string.isRequired,
+  checkboxGroupName: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleChange: PropTypes.func
 };
