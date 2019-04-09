@@ -50,11 +50,12 @@ Be careful not to run update when you want to run the test, because it will over
 - By default the React components should be functions without state.
 - Follow the WCAG 2.0 guidelines, with DIFI's modifications: https://uu.difi.no/krav-og-regelverk/wcag-20-standarden
 
-### Our SASS dependencies
+### SASS dependencies
 
 - Normalize: https://github.com/JohnAlbin/normalize-scss
 - Grid: https://hugeinc.github.io/flexboxgrid-sass/
 - Media queries: https://github.com/sass-mq/sass-mq
+- SASS-SVG-URI: https://github.com/waldemarfm/sass-svg-uri
 
 ### Styling rules
 
