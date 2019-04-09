@@ -89,18 +89,25 @@ The javascript is a collection of apps that can render, and read the data attrib
   - `data-icon` (string) Icon for the sidebar
   - `data-heading-url` (string) A link to another page
   - `data-list` (string) JSON representing the links. An array of objects with the props. Example below:
-- `.js-multi-selector` (can be used multiple times on a page)
-  - `data-button-text` (string) The text in the button for opening the list of checkboxes.
-  - `data-confirm-text` (string) The text in the button that triggers the filters
-  - `data-checkbox-group-name` (string) Name of the checkbox group. Same as the search query key.
-  - `data-options` (string) JSON array of checkboxes. `[{"value":"urlEncodedValue","label":"Human readable lable","checked":false}]`
-    - The objects in the array has the props: `value`, `label` and `checked` (this is a boolean).
-    - The value should be url encoded.
-    - The JSON string (data-options) decides which checkbox is currently filtering, not the URL.
 
 ```
 data-list='[{"title":"KAPITTEL 1","url":"#","description":"Kost og fysisk aktivitet ved svangerskaps-diabetes","children":[{"description":"Underkapittel","active":true,"url":"#","prefix":"1.1"},{"description":"Underkapittel","url":"#","prefix":"1.2"}]},{"title":"KAPITTEL 2","url":"#","description":"Diagnostikk og tiltak"},{"title":"KAPITTEL 3","url":"#","description":"Nytt kapittel"}]'
 ```
+
+- `.js-multi-selector` (can be used multiple times on a page)
+
+  - `data-button-text` (string) The text in the button for opening the list of checkboxes.
+  - `data-confirm-text` (string) The text in the button that triggers the filters
+  - `data-checkbox-group-name` (string) Name of the checkbox group. Same as the search query key.
+  - `data-options` (string) JSON array of checkboxes:
+
+  ```
+  data-options='[{"value":"urlEncodedValue","label":"Human readable lable","checked":false}]'
+  ```
+
+  - The objects in the array has the props: `value`, `label` and `checked` (this is a boolean).
+  - The value should be url encoded.
+  - The JSON string (data-options) decides which checkbox is currently filtering, not the URL.
 
 ## Handoff to Enonic
 
