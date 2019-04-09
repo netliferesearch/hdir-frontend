@@ -4,10 +4,11 @@
     display: flex;
     background: none;
     border: 0;
-    font-size: $base-font-size;
+    font-size: $meta-text;
     border-bottom: 1px solid $black;
     padding: 0 0.4em 0.25em 0.1em;
     cursor: pointer;
+    text-transform: uppercase;
 
     &:active {
       color: $black;
@@ -28,7 +29,6 @@
 
     &--open {
       border-color: transparent;
-      padding-bottom: 0.1em;
       &:before {
         margin-top: 0.1em;
         transform: rotate(180deg);
@@ -36,6 +36,7 @@
     }
   }
   &__box {
+    top: 1.25em;
     position: absolute;
     z-index: 5;
     background-color: white;
