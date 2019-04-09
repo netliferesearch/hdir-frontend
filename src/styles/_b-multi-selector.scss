@@ -1,4 +1,5 @@
 .b-multi-selector {
+  position: relative;
   &__select {
     display: flex;
     background: none;
@@ -35,12 +36,15 @@
     }
   }
   &__box {
+    position: absolute;
+    z-index: 5;
+    background-color: white;
     display: inline-block;
     border-top: 2px solid $primary-color;
     box-shadow: 0 3px 4px rgba($green-dark, 0.4);
   }
   &__checkboxes {
-    padding: 1rem 2rem 0.25rem 1rem;
+    padding: 1rem 2rem 1rem 1rem;
     max-height: 15rem;
     overflow-y: scroll;
 
