@@ -6,6 +6,7 @@ import FilterList from '../components/FilterList';
 import ArticleIntro from '../components/ArticleIntro';
 import NavList from '../components/NavList';
 import Breadcrumbs from '../components/Breadcrumbs';
+import MultiSelector from '../components/MultiSelector';
 
 const StatisticsPage = () => (
   <div className="l-container">
@@ -129,6 +130,56 @@ const StatisticsPage = () => (
           <strong className="t--small t--grey"> VELG TJENESTE </strong>
           <FilterList
             list={['Begge', 'Primærhelsetjenesten', 'Spesialisthelsetjenesten']}
+          />
+        </div>
+        <div className="l-mt-2">
+          <MultiSelector
+            buttonText="Statistikktype"
+            confirmText="Bekreft typer"
+            checkboxGroupName="statistikk_typer"
+            options={[
+              {
+                value: 'aaa',
+                label: 'aaa',
+                checked: false
+              },
+              {
+                value: 'bbb',
+                label: 'bbb',
+                checked: false
+              },
+              {
+                value: 'ccc',
+                label: 'lang tekst lang tekst lang test lang tekst',
+                checked: false
+              }
+            ]}
+            handleChange={selected => alert(JSON.stringify(selected))}
+          />
+        </div>
+        <div className="l-mt-2">
+          <MultiSelector
+            buttonText="Tema"
+            confirmText="Bekreft tema"
+            checkboxGroupName="tema"
+            options={[
+              {
+                value: '123',
+                label: '123',
+                checked: true
+              },
+              {
+                value: '456',
+                label: '456',
+                checked: false
+              },
+              {
+                value: '789',
+                label: '789',
+                checked: false
+              }
+            ]}
+            handleChange={selected => alert(JSON.stringify(selected))}
           />
         </div>
         <div className="l-mt-2">
