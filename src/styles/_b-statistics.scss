@@ -28,13 +28,13 @@
   }
   &__big-text {
     font-size: $extra-large-text;
-    color: $purple;
+    color: $purple !important;
   }
   &__small-text {
     display: flex;
     align-items: center;
     font-size: $meta-text;
-    color: $purple;
+    color: $purple !important;
 
     &:only-child {
       height: 100%;

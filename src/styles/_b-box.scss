@@ -29,12 +29,12 @@
     border: 1px solid $blue-light;
   }
   &--blue-dark {
-    color: $purple;
+    color: $purple !important;
     background-color: $blue-dark;
     border: 1px solid $blue-light;
   }
   &--yellow {
-    color: $black;
+    color: $black !important;
     background-color: $yellow-light;
   }
 }
