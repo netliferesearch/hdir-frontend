@@ -25,6 +25,7 @@ if (!process.env.REACT_APP_ENONICXP) {
     );
     const links = JSON.parse(rootElement.getAttribute('data-links'));
 
+    // For pre-rendering with React Snap
     if (rootElement.hasChildNodes()) {
       hydrate(
         <App
