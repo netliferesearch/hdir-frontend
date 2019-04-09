@@ -122,67 +122,125 @@ const StatisticsPage = () => (
           </div>
         </div>
       </div>
-      <div className="col-xs-12 l-mt-4">
+      <div className="l-mt-3">
         <h2>Finn indikatorer</h2>
       </div>
-      <div className="col-xs-12 l-mt-2">
-        <div className="l-mt-1">
-          <strong className="t--small t--grey"> VELG TJENESTE </strong>
+      <div className="row l-mt-1">
+        <div className="col-xs-12 col-md-3 col-lg-2 l-mt-1">
+          <span className="t--small t--grey">VELG TJENESTE</span>
+        </div>
+        <div className="col-xs-12 col-md-9 col-lg-10 l-mt-1">
           <FilterList
             list={['Begge', 'Primærhelsetjenesten', 'Spesialisthelsetjenesten']}
           />
         </div>
-        <div className="l-mt-2">
+        <div className="col-xs-12 col-md-3 col-lg-2 l-mt-1">
+          <span className="t--small t--grey">VELG STATISTIKKTYPE</span>
+        </div>
+        <div className="col-xs-12 col-md-9 col-lg-10 l-mt-1">
           <MultiSelector
             buttonText="Statistikktype"
             confirmText="Bekreft typer"
             checkboxGroupName="statistikk_typer"
             options={[
               {
-                value: 'aaa',
-                label: 'aaa',
+                value: 'Kommunalt%20pasient-%20og%20brukerregister',
+                label: 'Kommunalt pasient- og brukerregister',
                 checked: false
               },
               {
-                value: 'bbb',
-                label: 'bbb',
+                value: 'Kvalitetsindikator',
+                label: 'Kvalitetsindikator',
                 checked: false
               },
               {
-                value: 'ccc',
-                label: 'lang tekst lang tekst lang test lang tekst',
+                value: 'Norsk%20pasientregister',
+                label: 'Norsk pasientregister',
+                checked: false
+              },
+              {
+                value: 'Rapporter%20og%20analyser',
+                label: 'Rapporter og analyser',
+                checked: false
+              },
+              {
+                value: 'Samdata',
+                label: 'Samdata',
+                checked: false
+              },
+              {
+                value: 'Styringsdata',
+                label: 'Styringsdata',
+                checked: false
+              },
+              {
+                value: 'Fastlegeregisteret',
+                label: 'Fastlegeregisteret',
+                checked: false
+              },
+              {
+                value: 'Helsepersonellregisteret',
+                label: 'Helsepersonellregisteret',
                 checked: false
               }
             ]}
             handleChange={selected => alert(JSON.stringify(selected))}
           />
         </div>
-        <div className="l-mt-2">
+        <div className="col-xs-12 col-md-3 col-lg-2 l-mt-1">
+          <span className="t--small t--grey">VELG TEMA</span>
+        </div>
+        <div className="col-xs-12 col-md-9 col-lg-10 l-mt-1">
           <MultiSelector
             buttonText="Tema"
             confirmText="Bekreft tema"
             checkboxGroupName="tema"
             options={[
               {
-                value: '123',
-                label: '123',
+                value: 'Akuttmedisinske%20tjenester%20utenfor%20sykehus',
+                label: 'Akuttmedisinske tjenester utenfor sykehus',
                 checked: true
               },
               {
-                value: '456',
-                label: '456',
-                checked: false
+                value: 'Behandling%20av%20sykdom%20og%20overlevelse',
+                label: 'Behandling av sykdom og overlevelse',
+                checked: true
               },
               {
-                value: '789',
-                label: '789',
-                checked: false
+                value: 'Diabetes',
+                label: 'Diabetes',
+                checked: true
+              },
+              {
+                value: 'Graviditet%20og%20fødsel',
+                label: 'Graviditet og fødsel',
+                checked: true
+              },
+              {
+                value: 'Hjerte-%20og%20karsykdommer',
+                label: 'Hjerte- og karsykdommer',
+                checked: true
+              },
+              {
+                value: 'Infeksjon',
+                label: 'Infeksjon',
+                checked: true
+              },
+              {
+                value: 'Kommunale%20helse-%20og%20omsorgstjenester',
+                label: 'Kommunale helse- og omsorgstjenester',
+                checked: true
+              },
+              {
+                value: 'Kreft%20%E2%80%93%20behandling%20og%20overlevelse',
+                label: 'Kreft – behandling og overlevelse',
+                checked: true
               }
             ]}
             handleChange={selected => alert(JSON.stringify(selected))}
           />
         </div>
-        <div className="l-mt-2">
+        <div className="col-xs-12 l-mt-2">
           <span className="t--small">
             <a href="#">NULLSTILL ALLE FILTRE</a>
           </span>
@@ -190,7 +248,7 @@ const StatisticsPage = () => (
       </div>
       <div className="row l-mt-3 l-mb-5">
         <div className="col-xs-12">
-          <strong>250 STATISTIKKSIDER</strong> som passer dine valfte filtre
+          <strong>250 STATISTIKKSIDER</strong> som passer dine valgte filtre
           <div className="l-mt-2">
             <NavList
               heading="A"
