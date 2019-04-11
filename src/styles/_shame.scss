@@ -184,25 +184,6 @@
   }
 }
 
-.b-background {
-  position: absolute;
-  top: calc(10vh + 5rem);
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background-size: calc(25% + 25rem);
-  opacity: 0.15;
-  background-repeat: repeat-x;
-  &--hdir {
-    background-image: url('../static/icon_background.svg');
-  }
-  @include mq($until: $tablet) {
-    top: calc(7.5rem + 7.5vw);
-    background-size: 150%;
-  }
-}
-
 .background-wrapper {
   position: relative;
   height: 100%;
