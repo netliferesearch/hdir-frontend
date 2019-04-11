@@ -59,6 +59,55 @@ storiesOf('ContentLabel', module)
     </ContentLabel>
   ));
 
+storiesOf('Grid', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <div className="l-container grid-example">
+      <p>
+        <code>.l-container</code> is not needed for the grid to work.
+      </p>
+      <p>
+        <code>.grid-example</code> only helps showing the grid visually.
+      </p>
+      <p>
+        The columns always need the row wrapper. A row can not be a direct
+        descendant of a row.
+      </p>
+      <p>
+        Unlike the bootstrap-grid and other typical 12 column grids, this grid
+        needs to specify the smallest column width. With xs or no specified size
+        (i.e. col-xs).
+      </p>
+      <div className="row">
+        <div className="col-xs-12">xs 12</div>
+      </div>
+      <div className="row">
+        <div className="col-xs-12 col-sm-6">xs 12, sm-6</div>
+        <div className="col-xs-12 col-sm-6">xs 12, sm-6</div>
+      </div>
+      <div className="row">
+        <div className="col-xs-12 col-sm-6 col-md-4">xs 12, sm-6, md-4</div>
+        <div className="col-xs-12 col-sm-6 col-md-4">xs 12, sm-6, md-4</div>
+        <div className="col-xs-12 col-sm-6 col-md-4">xs 12, sm-6, md-4</div>
+      </div>
+      <div className="row">
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          xs 12, sm-6, md-4, lg-3
+        </div>
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          xs 12, sm-6, md-4, lg-3
+        </div>
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          xs 12, sm-6, md-4, lg-3
+        </div>
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          xs 12, sm-6, md-4, lg-3
+        </div>
+      </div>
+    </div>
+  ));
+
 storiesOf('Image', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
