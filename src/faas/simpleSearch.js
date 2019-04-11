@@ -74,8 +74,8 @@ exports.handler = async (event, context) => {
 
   if (!searchResult.length)
     return {
-      statusCode: 404,
-      body: '404 Not found'
+      statusCode: 200,
+      body: JSON.stringify([])
     };
 
   return {
