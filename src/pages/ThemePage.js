@@ -243,7 +243,14 @@ const ThemePage = () => (
 
         <div className="row">
           <div className="col-xs-12 l-mt-4">
-            <h2>Tilskudd</h2>
+            <h2>
+              <img
+                src="./icons/Tilskudd.svg"
+                className="b-icon b-icon--heading"
+                role="presentation"
+              />
+              Tilskudd
+            </h2>
             <div className="l-mt-1">
               <hr className="b-hr b-hr--thick" />
             </div>
@@ -263,7 +270,14 @@ const ThemePage = () => (
 
         <div className="row">
           <div className="col-xs-12 l-mt-4">
-            <h2>Statistikk</h2>
+            <h2>
+              <img
+                src="./icons/Statistikk.svg"
+                className="b-icon b-icon--heading"
+                role="presentation"
+              />
+              Statistikk
+            </h2>
             <div className="l-mt-1">
               <hr className="b-hr b-hr--thick" />
             </div>
@@ -329,7 +343,14 @@ const ThemePage = () => (
 
         <div className="row">
           <div className="col-xs-12 l-mt-4">
-            <h2>Rapporter</h2>
+            <h2>
+              <img
+                src="./icons/Rapporter.svg"
+                className="b-icon b-icon--heading"
+                role="presentation"
+              />
+              Rapporter
+            </h2>
             <div className="l-mt-1">
               <hr className="b-hr b-hr--thick" />
             </div>
@@ -394,7 +415,14 @@ const ThemePage = () => (
 
         <div className="row l-mt-4">
           <div className="col-xs-12">
-            <h2>Konferanser</h2>
+            <h2>
+              <img
+                src="./icons/Konferanser.svg"
+                className="b-icon b-icon--heading"
+                role="presentation"
+              />
+              Konferanser
+            </h2>
             <div className="l-mt-1">
               <hr className="b-hr b-hr--thick" />
             </div>
