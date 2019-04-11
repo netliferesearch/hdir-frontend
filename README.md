@@ -37,7 +37,7 @@ Loki takes screenshots off all the components in Storybook (update) and stores t
 
 Be careful not to run update when you want to run the test, because it will override the old reference.
 
-## Rules
+## Project rules
 
 - All styles are written with SCSS (SASS)
 - Follow the airbnb-sass-styleguide: https://github.com/airbnb/css
@@ -50,18 +50,18 @@ Be careful not to run update when you want to run the test, because it will over
 - By default the React components should be functions without state.
 - Follow the WCAG 2.0 guidelines, with DIFI's modifications: https://uu.difi.no/krav-og-regelverk/wcag-20-standarden
 
+### Styling rules
+
+- Each component has 100% width. The grid decides the width of the component. The exception to this rule is `inline` and `inline-block` and `flex` elements, which has their width defined by their content or surroundings.
+- A component should not decide its spacing around itself. There are 5 spacing units to choose from i.e. `l-mt-5`. 5 Is the largest unit, and will give the biggest spacing. `m` stands for margin and `t` for top. The four sides are called `t` `r` `b` `l`. It is prefered to always use margin top, unless it complicates things, if it does, use `l-mb-#`.
+- An element can not contain an element. It always go Block -> Element -> Modifier. BEM shouldn't care about how the DOM/HTML is nested.
+
 ### SASS dependencies
 
 - Normalize: https://github.com/JohnAlbin/normalize-scss
 - Grid: https://hugeinc.github.io/flexboxgrid-sass/
 - Media queries: https://github.com/sass-mq/sass-mq
 - SASS-SVG-URI: https://github.com/waldemarfm/sass-svg-uri
-
-### Styling rules
-
-- Each component has 100% width. The grid decides the width of the component. The exception to this rule is `inline` and `inline-block` and `flex` elements, which has their width defined by their content or surroundings.
-- A component should not decide its spacing around itself. There are 5 spacing units to choose from i.e. `l-mt-5`. 5 Is the largest unit, and will give the biggest spacing. `m` stands for margin and `t` for top. The four sides are called `t` `r` `b` `l`. It is prefered to always use margin top, unless it complicates things, if it does, use `l-mb-#`.
-- An element can not contain an element. It always go Block -> Element -> Modifier. BEM shouldn't care about how the DOM/HTML is nested.
 
 ## Building for Enonic
 
