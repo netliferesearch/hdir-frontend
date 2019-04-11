@@ -20,11 +20,15 @@ It can also be found published on Netlify: http://hdir-frontend.netlify.com
 2. `npm run start`
 3. This will open the prototype at `localhost:3000` and Storybook (documentation) at `localhost:9009`.
 
-## Building for Netlify
+## Building and deployment
 
 1. `npm install`
 2. `npm run build`
 3. Builds everything in the project to `/build`
+
+You don't need to build before a deployment. Netlify will build and deploy automatically when pushing to the master branch.
+
+Netlify will also automatically create a new enviroment for other branches. It will get a random generated URL, found in Netlify in the deployment section.
 
 ## Visual regression testing with Loki
 
