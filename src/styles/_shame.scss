@@ -1,37 +1,3 @@
-.suggestion-title {
-  display: inline-block;
-  margin-top: 0.25rem;
-  font-size: $medium-large-text;
-}
-.suggestion-topic {
-  font-size: $meta-text;
-  margin: 0.5rem 0;
-}
-.suggestion-intro {
-  font-size: $meta-text;
-  margin: 0.5rem 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-}
-.suggestion__meta {
-  font-size: $meta-text;
-}
-.suggestion-category {
-  display: inline-block;
-  padding: 0.25em;
-  margin-left: 0.5em;
-  font-size: $meta-text;
-  background-color: $yellow-light;
-}
-.suggestion-download {
-  display: inline-block;
-  margin-left: 1em;
-  font-size: $meta-text;
-  @include underline($link-color);
-}
-
 .b-article-image {
   &__image {
     max-width: 100%;
