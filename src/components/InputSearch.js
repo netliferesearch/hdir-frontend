@@ -148,21 +148,27 @@ class InputSearch extends React.Component {
       fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
         .then(res => res.json())
         .then(data => {
-          this.setState({
-            suggestions: [
-              ...data,
-              data.length && {
-                // This row is the blue (or orange) suggestion at the bottom
-                ...data[data.length - 1],
-                title: value,
-                category: '',
-                file: '',
-                topic: '',
-                intro: `Se alle resultater for "${value}"`,
-                url: `${searchPageUrl}?searchquery=${value}`
-              }
-            ]
-          });
+          if (data.length) {
+            this.setState({
+              suggestions: [
+                ...data,
+                {
+                  // This row is the blue (or orange) suggestion at the bottom
+                  ...data[data.length - 1],
+                  title: value,
+                  category: '',
+                  file: '',
+                  topic: '',
+                  intro: `Se alle resultater for "${value}"`,
+                  url: `${searchPageUrl}?searchquery=${value}`
+                }
+              ]
+            });
+          } else {
+            this.setState({
+              suggestions: []
+            });
+          }
         })
         .catch(ex => {
           this.setState({
