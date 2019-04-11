@@ -1,0 +1,27 @@
+.b-hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid $black;
+  &--grey-light {
+    border-color: $grey-light;
+  }
+  &--grey-lighter {
+    border-color: $grey-lighter;
+  }
+  &--blue {
+    border-color: $blue;
+  }
+  &--black {
+    border-color: $black;
+  }
+  &--thick {
+    border-width: 4px;
+  }
+  &--link-color {
+    border-color: $link-color;
+  }
+  &--padded {
+    margin: 1rem 0;
+  }
+}

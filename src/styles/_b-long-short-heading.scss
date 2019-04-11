@@ -1,0 +1,26 @@
+.b-long-short-heading {
+  position: relative;
+  width: 100%;
+
+  &__sub {
+    font-weight: bold;
+    font-size: $meta-text;
+    margin-top: 1rem;
+  }
+  &__sub-icon {
+    height: 2em;
+    width: 2em;
+    margin-right: 1em;
+    margin-bottom: -0.6em;
+  }
+  &__link {
+    font-size: $meta-text;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include mq($until: $tablet) {
+      position: static;
+      margin-top: 1em;
+    }
+  }
+}

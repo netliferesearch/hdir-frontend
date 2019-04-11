@@ -1,0 +1,10 @@
+.b-article-image {
+  &__image {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+  &__text {
+    font-size: $meta-text;
+    color: $grey;
+  }
+}

@@ -1,0 +1,13 @@
+.b-questionnaire {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__options {
+    display: flex;
+    flex-shrink: 0;
+    width: 50%;
+    justify-content: space-evenly;
+  }
+}
