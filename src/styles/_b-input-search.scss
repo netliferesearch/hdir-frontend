@@ -17,6 +17,13 @@
     }
   }
 
+  &__placeholder {
+    position: absolute;
+    left: 1.15em;
+    top: 0.75em;
+    color: lighten($grey, 25);
+  }
+
   &__field {
     min-width: 0;
     font-size: 1rem;

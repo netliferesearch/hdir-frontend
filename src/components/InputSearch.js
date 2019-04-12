@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
 import URLSearchParams from 'url-search-params';
+import useInterval from '../hooks/useInterval';
 
 const searchPageUrl = process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
   ? process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
@@ -11,7 +12,6 @@ const searchSuggestionUrl = process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
   ? process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
   : '/.netlify/functions/simpleSearch';
 
-// Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
   <div>
     {suggestion.title && (
@@ -38,39 +38,13 @@ const InputSearch = props => {
   const [value, setValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
-  const [placeholderInterval, setPlaceholderInterval] = useState(null);
   const inputElement = useRef(null);
-
-  function triggerSearch() {
-    const encodedValue = encodeURI(value);
-    window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
-  }
-
-  function onChange(event, { newValue }) {
-    setValue(newValue);
-  }
-
-  function onSuggestionSelected(event, { suggestion }) {
-    window.location = suggestion.url;
-  }
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
-    // Goes through the suggestions, and put them in the input search field, as placeholder
-    const interval = setInterval(() => {
-      const index = placeholderIndex;
-      setPlaceholderIndex(
-        index < props.exampleSuggestions.length - 1 ? index + 1 : 0
-      );
-    }, 2000);
 
-    setPlaceholderInterval(interval);
     setValue(searchQuery ? searchQuery : '');
-
-    return () => {
-      clearInterval(placeholderInterval);
-    };
   }, []);
 
   useEffect(() => {
@@ -78,6 +52,14 @@ const InputSearch = props => {
       ? inputElement.current.focus()
       : inputElement.current.blur();
   }, [props.autoFocus]);
+
+  useInterval(() => {
+    setPlaceholderIndex(
+      placeholderIndex < props.exampleSuggestions.length - 1
+        ? placeholderIndex + 1
+        : 0
+    );
+  }, 2000);
 
   const renderInputComponent = inputProps => (
     <div className="b-input-search">
@@ -93,6 +75,12 @@ const InputSearch = props => {
         </div>
       )}
       <div className="b-input-search__inputs">
+        {!value && (
+          <div className="b-input-search__placeholder" aria-hidden>
+            {props.exampleSuggestions.length &&
+              props.exampleSuggestions[placeholderIndex]}
+          </div>
+        )}
         <input
           title="Søk"
           aria-labelledby="search-input-label"
@@ -112,8 +100,20 @@ const InputSearch = props => {
     </div>
   );
 
+  function triggerSearch() {
+    const encodedValue = encodeURI(value);
+    window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
+  }
+
+  function onChange(event, { newValue }) {
+    setValue(newValue);
+  }
+
+  function onSuggestionSelected(event, { suggestion }) {
+    window.location = suggestion.url;
+  }
+
   // Autosuggest will call this function every time you need to update suggestions.
-  // You already implemented this logic above, so just use it.
   function onSuggestionsFetchRequested({ value }) {
     const encodedValue = encodeURI(value);
     if (value.length >= 3) {
@@ -124,7 +124,7 @@ const InputSearch = props => {
             setSuggestions([
               ...data,
               {
-                // This row is the blue (or orange) suggestion at the bottom
+                // The last row that is highlighted
                 ...data[data.length - 1],
                 title: value,
                 category: '',
