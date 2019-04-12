@@ -29,7 +29,7 @@ const Card = props => (
 );
 
 Card.propTypes = {
-  heading: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   text: PropTypes.string,
   url: PropTypes.string,
   topic: PropTypes.string,
