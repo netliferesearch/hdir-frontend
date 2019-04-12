@@ -100,4 +100,10 @@ MultiSelector.propTypes = {
   handleChange: PropTypes.func
 };
 
+MultiSelector.defaultProps = {
+  handleChange: value => {
+    console.warn('missing property function in MultiSelector', value);
+  }
+};
+
 export default MultiSelector;

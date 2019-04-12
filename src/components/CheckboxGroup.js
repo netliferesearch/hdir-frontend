@@ -61,4 +61,10 @@ CheckboxGroup.propTypes = {
   )
 };
 
+CheckboxGroup.defaultProps = {
+  handleChange: value => {
+    console.warn('missing property function in CheckboxGroup', value);
+  }
+};
+
 export default CheckboxGroup;
