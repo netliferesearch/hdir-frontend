@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
@@ -10,11 +10,6 @@ const searchPageUrl = process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
 const searchSuggestionUrl = process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
   ? process.env.REACT_APP_ENONICXP_SEARCH_ENDPOINT
   : '/.netlify/functions/simpleSearch';
-
-// When suggestion is clicked, Autosuggest needs to populate the input
-// based on the clicked suggestion. Teach Autosuggest how to calculate the
-// input value for every given suggestion.
-const getSuggestionValue = suggestion => suggestion.title;
 
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
@@ -39,198 +34,154 @@ const renderSuggestion = suggestion => (
   </div>
 );
 
-class InputSearch extends React.Component {
-  constructor(props) {
-    super(props);
+const InputSearch = props => {
+  const [value, setValue] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  const [placeholderIndex, setPlaceholderIndex] = useState(0);
+  const [placeholderInterval, setPlaceholderInterval] = useState(null);
+  const inputElement = useRef(null);
 
-    // Autosuggest is a controlled component.
-    // This means that you need to provide an input value
-    // and an onChange handler that updates this value (see below).
-    // Suggestions also need to be provided to the Autosuggest,
-    // and they are initially empty because the Autosuggest is closed.
-    this.state = {
-      value: '',
-      suggestions: [],
-      placeholderSuggestionIndex: 0,
-      placeholderInterval: null
-    };
-
-    this.triggerSearch = this.triggerSearch.bind(this);
-    this.renderInputComponent = this.renderInputComponent.bind(this);
-  }
-
-  triggerSearch() {
-    const encodedValue = encodeURI(this.state.value);
+  function triggerSearch() {
+    const encodedValue = encodeURI(value);
     window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.autoFocus !== prevProps.autoFocus) {
-      // Find the input field and focus on it.
-      // This is used when we open the search from the header.
-      this.props.autoFocus
-        ? document.querySelector('.b-input-search__field').focus()
-        : document.querySelector('.b-input-search__field').blur();
-    }
+  function onChange(event, { newValue }) {
+    setValue(newValue);
   }
 
-  componentDidMount() {
+  function onSuggestionSelected(event, { suggestion }) {
+    window.location = suggestion.url;
+  }
+
+  useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
     // Goes through the suggestions, and put them in the input search field, as placeholder
     const interval = setInterval(() => {
-      const index = this.state.placeholderSuggestionIndex;
-      this.setState({
-        placeholderSuggestionIndex:
-          index < this.props.exampleSuggestions.length - 1 ? index + 1 : 0
-      });
+      const index = placeholderIndex;
+      setPlaceholderIndex(
+        index < props.exampleSuggestions.length - 1 ? index + 1 : 0
+      );
     }, 2000);
 
-    this.setState({
-      placeholderInterval: interval,
-      value: searchQuery ? searchQuery : ''
-    });
-  }
+    setPlaceholderInterval(interval);
+    setValue(searchQuery ? searchQuery : '');
 
-  componentWillUnmount() {
-    clearInterval(this.state.placeholderInterval);
-  }
+    return () => {
+      clearInterval(placeholderInterval);
+    };
+  }, []);
 
-  onChange = (event, { newValue }) => {
-    this.setState({
-      value: newValue
-    });
-  };
+  useEffect(() => {
+    props.autoFocus
+      ? inputElement.current.focus()
+      : inputElement.current.blur();
+  }, [props.autoFocus]);
 
-  onSuggestionSelected = (e, { suggestion }) => {
-    window.location = suggestion.url;
-  };
-
-  renderInputComponent(inputProps) {
-    return (
-      <div className="b-input-search">
-        {this.props.label && (
-          <div
-            id="search-input-label"
-            className={classNames({
-              'b-input-search__label': true,
-              'b-input-search__label--dark': inputProps.dark
-            })}
-          >
-            {this.props.label}
-          </div>
-        )}
-        <div className="b-input-search__inputs">
-          <input
-            title="Søk"
-            aria-labelledby="search-input-label"
-            {...inputProps}
-            className={classNames({
-              'b-input-search__field': true,
-              'b-input-search__field--dark': inputProps.dark
-            })}
-          />
-          <button
-            className="b-input-search__button"
-            aria-label="Søk"
-            onClick={this.triggerSearch}
-          />
+  const renderInputComponent = inputProps => (
+    <div className="b-input-search">
+      {props.label && (
+        <div
+          id="search-input-label"
+          className={classNames({
+            'b-input-search__label': true,
+            'b-input-search__label--dark': props.dark
+          })}
+        >
+          {props.label}
         </div>
+      )}
+      <div className="b-input-search__inputs">
+        <input
+          title="Søk"
+          aria-labelledby="search-input-label"
+          {...inputProps}
+          ref={inputElement}
+          className={classNames({
+            'b-input-search__field': true,
+            'b-input-search__field--dark': props.dark
+          })}
+        />
+        <button
+          className="b-input-search__button"
+          aria-label="Søk"
+          onClick={triggerSearch}
+        />
       </div>
-    );
-  }
+    </div>
+  );
 
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
-  onSuggestionsFetchRequested = ({ value }) => {
+  function onSuggestionsFetchRequested({ value }) {
     const encodedValue = encodeURI(value);
     if (value.length >= 3) {
       fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
         .then(res => res.json())
         .then(data => {
           if (data.length) {
-            this.setState({
-              suggestions: [
-                ...data,
-                {
-                  // This row is the blue (or orange) suggestion at the bottom
-                  ...data[data.length - 1],
-                  title: value,
-                  category: '',
-                  file: '',
-                  topic: '',
-                  intro: `Se alle resultater for "${value}"`,
-                  url: `${searchPageUrl}?searchquery=${value}`
-                }
-              ]
-            });
+            setSuggestions([
+              ...data,
+              {
+                // This row is the blue (or orange) suggestion at the bottom
+                ...data[data.length - 1],
+                title: value,
+                category: '',
+                file: '',
+                topic: '',
+                intro: `Se alle resultater for "${value}"`,
+                url: `${searchPageUrl}?searchquery=${value}`
+              }
+            ]);
           } else {
-            this.setState({
-              suggestions: []
-            });
+            setSuggestions([]);
           }
         })
         .catch(ex => {
-          this.setState({
-            suggestions: []
-          });
+          setSuggestions([]);
         });
     } else {
-      this.onSuggestionsClearRequested();
+      setSuggestions([]);
+    }
+  }
+
+  const inputProps = {
+    value: value,
+    onChange: onChange,
+    onKeyDown: event => {
+      // 13 = enter key
+      if (event.keyCode === 13 && value) {
+        // If the search query is not equal to any of the suggestions, we go to the SERP
+        // We also want to ignore the last suggestion, since it is not really a suggestion
+        if (
+          !suggestions.some((x, index) => {
+            if (index !== suggestions.length - 1) {
+              return x.title === value;
+            } else return false;
+          })
+        ) {
+          triggerSearch();
+        }
+      }
     }
   };
 
-  // Autosuggest will call this function every time you need to clear suggestions.
-  onSuggestionsClearRequested = () => {
-    this.setState({
-      suggestions: []
-    });
-  };
-
-  render() {
-    // Autosuggest will pass through all these props to the input.
-    const inputProps = placeholder => ({
-      placeholder: placeholder,
-      dark: this.props.dark,
-      value: this.state.value,
-      onChange: this.onChange,
-      onKeyDown: event => {
-        // 13 = enter key
-        if (event.keyCode === 13 && this.state.value) {
-          // If the search query is not equal to any of the suggestions, we go to the SERP
-          // We also want to ignore the last suggestion, since it is not really a suggestion
-          if (
-            !this.state.suggestions.some((x, index) => {
-              if (index !== this.state.suggestions.length - 1) {
-                return x.title === this.state.value;
-              } else return false;
-            })
-          ) {
-            this.triggerSearch();
-          }
-        }
-      }
-    });
-
-    return (
-      <Autosuggest
-        suggestions={this.props.showSuggestions ? this.state.suggestions : []}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        onSuggestionSelected={this.onSuggestionSelected}
-        renderInputComponent={this.renderInputComponent}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps(
-          this.props.exampleSuggestions[this.state.placeholderSuggestionIndex]
-        )}
-      />
-    );
-  }
-}
+  return (
+    <Autosuggest
+      suggestions={props.showSuggestions ? suggestions : []}
+      onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+      onSuggestionsClearRequested={() => setSuggestions([])}
+      onSuggestionSelected={onSuggestionSelected}
+      renderInputComponent={renderInputComponent}
+      getSuggestionValue={suggestion => suggestion.title}
+      renderSuggestion={renderSuggestion}
+      inputProps={inputProps}
+    />
+  );
+};
 
 InputSearch.propTypes = {
-  type: PropTypes.string,
   label: PropTypes.string,
   dark: PropTypes.bool,
   showSuggestions: PropTypes.bool,
@@ -239,7 +190,6 @@ InputSearch.propTypes = {
 };
 
 InputSearch.defaultProps = {
-  type: 'search',
   showSuggestions: true,
   exampleSuggestions: []
 };
