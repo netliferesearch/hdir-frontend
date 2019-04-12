@@ -8,12 +8,10 @@ import searchIcon from '../static/base64/search';
 
 const MainHeader = props => {
   const [searchOpen, setSearchOpen] = useState(false);
-  const [searchButtonText, setSearchButtonText] = useState('Søk');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   function toggleSearch() {
     setSearchOpen(!searchOpen);
-    setSearchButtonText(!searchOpen ? 'Lukk søk' : 'Søk');
 
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -69,7 +67,7 @@ const MainHeader = props => {
                     className="b-button b-button--small b-button--secondary"
                     onClick={() => setMobileNavOpen(!mobileNavOpen)}
                   >
-                    Lukk
+                    Lukk søk
                   </button>
                 </div>
                 <div className="b-main-header__menu-overlay-links">
@@ -95,19 +93,32 @@ const MainHeader = props => {
                   {link.name}
                 </a>
               ))}
-              {!props.hideSearch && (
+              {!props.hideSearch && !searchOpen && (
                 <button
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
                 >
-                  {searchButtonText}{' '}
-                  {!searchOpen && (
-                    <img
-                      src={searchIcon}
-                      className="b-icon b-icon--small"
-                      role="presentation"
-                    />
-                  )}
+                  Søk{' '}
+                  <img
+                    src={searchIcon}
+                    alt=""
+                    className="b-icon b-icon--small"
+                    role="presentation"
+                  />
+                </button>
+              )}
+              {!props.hideSearch && searchOpen && (
+                <button
+                  onClick={toggleSearch}
+                  className="b-button b-button--secondary-dark b-button--small"
+                >
+                  Lukk{' '}
+                  <img
+                    src={searchIcon}
+                    alt=""
+                    className="b-icon b-icon--small"
+                    role="presentation"
+                  />
                 </button>
               )}
             </nav>
@@ -122,19 +133,32 @@ const MainHeader = props => {
                 Meny
               </button>
               <div className="l-inline-space" />
-              {!props.hideSearch && (
+              {!props.hideSearch && !searchOpen && (
                 <button
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
                 >
-                  {searchButtonText}{' '}
-                  {!searchOpen && (
-                    <img
-                      src={searchIcon}
-                      className="b-icon b-icon--small"
-                      role="presentation"
-                    />
-                  )}
+                  Søk{' '}
+                  <img
+                    src={searchIcon}
+                    alt=""
+                    className="b-icon b-icon--small"
+                    role="presentation"
+                  />
+                </button>
+              )}
+              {!props.hideSearch && searchOpen && (
+                <button
+                  onClick={toggleSearch}
+                  className="b-button b-button--secondary-dark b-button--small"
+                >
+                  Lukk{' '}
+                  <img
+                    src={searchIcon}
+                    alt=""
+                    className="b-icon b-icon--small"
+                    role="presentation"
+                  />
                 </button>
               )}
             </nav>
