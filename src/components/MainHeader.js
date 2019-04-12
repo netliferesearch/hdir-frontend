@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import InputSearch from './InputSearch';
 import SearchTray from './SearchTray';
@@ -9,6 +9,20 @@ import searchIcon from '../static/base64/search';
 const MainHeader = props => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  useEffect(() => {
+    const handleClose = e => {
+      if (e.key === 'Escape') setSearchOpen(false);
+    };
+    if (searchOpen) {
+      document.addEventListener('keydown', handleClose);
+    } else {
+      document.removeEventListener('keydown', handleClose);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleClose);
+    };
+  }, [searchOpen]);
 
   function toggleSearch() {
     setSearchOpen(!searchOpen);
