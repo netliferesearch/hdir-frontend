@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    background: white;
   }
 
   &__label {
@@ -25,17 +26,24 @@
   }
 
   &__field {
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    width: 100%;
     min-width: 0;
     font-size: 1rem;
     flex: 1;
     height: 100%;
     box-sizing: border-box;
     color: $secondary-color;
-    background-color: white;
     border: 1px solid $secondary-color;
     padding: 0 1em;
     border-radius: 4px;
     text-overflow: ellipsis;
+
+    &::-ms-clear {
+      display: none;
+    }
 
     &:focus {
       outline: 0;
