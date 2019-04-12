@@ -112,13 +112,7 @@ const MainHeader = props => {
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
                 >
-                  Lukk{' '}
-                  <img
-                    src={searchIcon}
-                    alt=""
-                    className="b-icon b-icon--small"
-                    role="presentation"
-                  />
+                  Lukk søk
                 </button>
               )}
             </nav>
@@ -152,13 +146,7 @@ const MainHeader = props => {
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
                 >
-                  Lukk{' '}
-                  <img
-                    src={searchIcon}
-                    alt=""
-                    className="b-icon b-icon--small"
-                    role="presentation"
-                  />
+                  Lukk søk
                 </button>
               )}
             </nav>
