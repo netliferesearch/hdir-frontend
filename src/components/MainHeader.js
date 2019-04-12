@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import InputSearch from './InputSearch';
 import SearchTray from './SearchTray';
@@ -6,173 +6,144 @@ import NavList from './NavList';
 import shortid from 'shortid';
 import searchIcon from '../static/base64/search';
 
-class MainHeader extends React.Component {
-  constructor(props) {
-    super(props);
+const MainHeader = props => {
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchButtonText, setSearchButtonText] = useState('Søk');
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-    this.state = {
-      searchOpen: false,
-      searchButtonText: 'Søk',
-      mobileNavOpen: false
-    };
+  function toggleSearch() {
+    setSearchOpen(!searchOpen);
+    setSearchButtonText(!searchOpen ? 'Lukk søk' : 'Søk');
 
-    this.toggleSearch = this.toggleSearch.bind(this);
-    this.toggleMobileNav = this.toggleMobileNav.bind(this);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
   }
 
-  toggleSearch() {
-    this.setState(
-      {
-        searchOpen: !this.state.searchOpen,
-        searchButtonText: !this.state.searchOpen ? 'Lukk søk' : 'Søk'
-      },
-      () => {
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-        }, 0);
-      }
-    );
-  }
-
-  toggleMobileNav() {
-    this.setState({
-      mobileNavOpen: !this.state.mobileNavOpen
-    });
-  }
-
-  render() {
-    return (
-      <>
-        <SearchTray open={this.state.searchOpen}>
+  return (
+    <>
+      {searchOpen && (
+        <SearchTray open={searchOpen}>
           <div className="l-container">
             <InputSearch
               dark
-              autoFocus={this.state.searchOpen}
-              label={this.props.label}
-              exampleSuggestions={this.props.exampleSuggestions}
+              autoFocus={searchOpen}
+              label={props.label}
+              exampleSuggestions={props.exampleSuggestions}
             />
           </div>
         </SearchTray>
-        <div className="l-container">
-          <div className="b-main-header">
-            <a href="/" className="b-main-header__logo-link">
-              <div className="l-hide-to-md">
-                <div
-                  className="b-main-header__logo"
-                  aria-label={this.props.name}
-                >
-                  {this.props.name}
-                </div>
+      )}
+      <div className="l-container">
+        <div className="b-main-header">
+          <a href="/" className="b-main-header__logo-link">
+            <div className="l-hide-to-md">
+              <div className="b-main-header__logo" aria-label={props.name}>
+                {props.name}
               </div>
-              <div className="l-hide-from-md">
-                <div
-                  className="b-main-header__logo b-main-header__logo--small"
-                  aria-label={this.props.name}
-                >
-                  {this.props.name}
-                </div>
-              </div>
-            </a>
-
-            {this.state.mobileNavOpen && (
-              <div className="l-container">
-                <nav
-                  className="b-main-header__menu-overlay"
-                  aria-label="Header-navigasjon"
-                >
-                  <div className="b-main-header__menu-overlay-header">
-                    <a
-                      href="/"
-                      className="b-main-header__logo b-main-header__logo--small"
-                      aria-label={this.props.name}
-                    />
-
-                    <button
-                      className="b-button b-button--small b-button--secondary"
-                      onClick={this.toggleMobileNav}
-                    >
-                      Lukk
-                    </button>
-                  </div>
-                  <div className="b-main-header__menu-overlay-links">
-                    <NavList
-                      list={this.props.links.map(item => ({
-                        title: item.name,
-                        url: item.href
-                      }))}
-                    />
-                  </div>
-                </nav>
-              </div>
-            )}
-
-            <div className="l-hide-to-lg">
-              <nav
-                className="b-main-header__nav"
-                aria-label="Header navigation"
+            </div>
+            <div className="l-hide-from-md">
+              <div
+                className="b-main-header__logo b-main-header__logo--small"
+                aria-label={props.name}
               >
-                {this.props.links.map(link => (
+                {props.name}
+              </div>
+            </div>
+          </a>
+
+          {mobileNavOpen && (
+            <div className="l-container">
+              <nav
+                className="b-main-header__menu-overlay"
+                aria-label="Header-navigasjon"
+              >
+                <div className="b-main-header__menu-overlay-header">
                   <a
-                    href={link.href}
-                    className="b-main-header__link"
-                    key={shortid.generate()}
-                  >
-                    {link.name}
-                  </a>
-                ))}
-                {!this.props.hideSearch && (
+                    href="/"
+                    className="b-main-header__logo b-main-header__logo--small"
+                    aria-label={props.name}
+                  />
+
                   <button
-                    onClick={this.toggleSearch}
-                    className="b-button b-button--secondary-dark b-button--small"
+                    className="b-button b-button--small b-button--secondary"
+                    onClick={() => setMobileNavOpen(!mobileNavOpen)}
                   >
-                    {this.state.searchButtonText}{' '}
-                    {!this.state.searchOpen && (
-                      <img
-                        src={searchIcon}
-                        className="b-icon b-icon--small"
-                        role="presentation"
-                      />
-                    )}
+                    Lukk
                   </button>
-                )}
+                </div>
+                <div className="b-main-header__menu-overlay-links">
+                  <NavList
+                    list={props.links.map(item => ({
+                      title: item.name,
+                      url: item.href
+                    }))}
+                  />
+                </div>
               </nav>
             </div>
+          )}
 
-            <div className="l-hide-from-lg">
-              <nav
-                className="b-main-header__nav"
-                aria-label="Header navigation"
-              >
+          <div className="l-hide-to-lg">
+            <nav className="b-main-header__nav" aria-label="Header navigation">
+              {props.links.map(link => (
+                <a
+                  href={link.href}
+                  className="b-main-header__link"
+                  key={shortid.generate()}
+                >
+                  {link.name}
+                </a>
+              ))}
+              {!props.hideSearch && (
                 <button
-                  onClick={this.toggleMobileNav}
+                  onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
                 >
-                  Meny
+                  {searchButtonText}{' '}
+                  {!searchOpen && (
+                    <img
+                      src={searchIcon}
+                      className="b-icon b-icon--small"
+                      role="presentation"
+                    />
+                  )}
                 </button>
-                <div className="l-inline-space" />
-                {!this.props.hideSearch && (
-                  <button
-                    onClick={this.toggleSearch}
-                    className="b-button b-button--secondary-dark b-button--small"
-                  >
-                    {this.state.searchButtonText}{' '}
-                    {!this.state.searchOpen && (
-                      <img
-                        src={searchIcon}
-                        className="b-icon b-icon--small"
-                        role="presentation"
-                      />
-                    )}
-                  </button>
-                )}
-              </nav>
-            </div>
+              )}
+            </nav>
+          </div>
+
+          <div className="l-hide-from-lg">
+            <nav className="b-main-header__nav" aria-label="Header navigation">
+              <button
+                onClick={() => setMobileNavOpen(!mobileNavOpen)}
+                className="b-button b-button--secondary-dark b-button--small"
+              >
+                Meny
+              </button>
+              <div className="l-inline-space" />
+              {!props.hideSearch && (
+                <button
+                  onClick={toggleSearch}
+                  className="b-button b-button--secondary-dark b-button--small"
+                >
+                  {searchButtonText}{' '}
+                  {!searchOpen && (
+                    <img
+                      src={searchIcon}
+                      className="b-icon b-icon--small"
+                      role="presentation"
+                    />
+                  )}
+                </button>
+              )}
+            </nav>
           </div>
         </div>
-      </>
-    );
-  }
-}
+      </div>
+    </>
+  );
+};
 
 MainHeader.propTypes = {
   hideSearch: PropTypes.bool,
