@@ -4,14 +4,17 @@
   align-items: center;
   &:after {
     position: absolute;
-    color: $secondary-color;
     display: block;
-    height: 1em;
-    width: 1em;
-    bottom: 1.4em;
-    right: 0.5em;
+    bottom: 1.15em;
+    right: 1em;
     z-index: -1;
-    content: '↓';
+    height: 0.8em;
+    width: 0.8em;
+    margin-left: 0.33em;
+    content: '';
+    background-image: url($arrow-down);
+    background-size: 0.8em;
+    background-repeat: no-repeat;
   }
 
   &--simple {
@@ -19,7 +22,7 @@
 
     &:after {
       right: 0;
-      top: 0.2em;
+      bottom: 0.6em;
     }
   }
 

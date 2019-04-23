@@ -37,6 +37,7 @@ const Link = props => (
     {props.icon && (
       <div
         className="b-link__icon"
+        role="presentation"
         style={{ backgroundImage: `url(${props.icon})` }}
       />
     )}

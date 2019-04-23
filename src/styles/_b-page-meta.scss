@@ -13,9 +13,7 @@
     @include link-init($black, true, $link-color);
 
     &:after {
-      display: inline-block;
-      margin-left: 0.5em;
-      content: ' →';
+      @include pseudo-arrow($arrow-right);
     }
   }
 

@@ -79,22 +79,23 @@
       color: $black;
       padding-right: 1rem;
       padding-left: 0;
+      @include underline($link-color);
+      height: 1.4em;
       cursor: pointer;
+
       &:after {
         position: absolute;
-        display: inline-block;
-        top: 0;
+        top: 0.4em;
         right: 0;
-        border-bottom: 1px solid $link-color;
-        width: 100%;
-        text-align: right;
-        content: '↓';
+        @include pseudo-arrow($arrow-down);
+
         @include mq($until: $tablet) {
+          top: 0;
           position: relative;
-          margin-left: 0.5em;
-          border-bottom: 0;
-          width: auto;
         }
+      }
+      @include mq($until: $tablet) {
+        @include underline(transparent);
       }
     }
   }
@@ -141,17 +142,20 @@
     }
 
     &--no-arrow {
+      padding-right: 1rem !important;
       &:before {
-        display: none;
+        display: none !important;
       }
       &:after {
-        display: none;
+        display: none !important;
       }
     }
 
     &--arrow {
+      padding-right: 2rem;
       &:after {
-        content: '→';
+        @include pseudo-arrow($arrow-right);
+        top: 1.35em;
         position: absolute;
         right: 1rem;
       }
@@ -161,9 +165,10 @@
       cursor: default;
     }
 
+    // DEPRECATED - might be used in Enonic somewhere.
+    // Grep the Enonic project for .b-nav-list__link--anchor before removing.
     &--anchor {
       justify-content: flex-start;
-
       &:before {
         content: '↓';
         color: $primary-color;
@@ -175,7 +180,6 @@
         // We use this as a reset, to remove the other arrow
         content: '';
       }
-
       @include mq($until: $tablet) {
         margin-left: 1rem;
         position: relative;
@@ -187,6 +191,7 @@
       }
     }
   }
+  //
   &__item-description {
     width: 30%;
     flex-shrink: 0;

@@ -564,14 +564,21 @@ storiesOf('Link', module)
     <Link
       href={text('href', '#')}
       icon={text('Icon', './icons/method.svg')}
+      arrow={boolean('Arrow', false)}
+      arrowLeft={boolean('Arrow left', false)}
+      small={boolean('Small', false)}
+      secondary={boolean('Secondary', false)}
       button={boolean('Button', false)}
       buttonSecondary={boolean('Button secondary', false)}
       buttonInherit={boolean('Button inherit', false)}
-      small={boolean('Small', false)}
-      secondary={boolean('Secondary', false)}
-      arrow={boolean('Arrow', false)}
-      color={select('Color', { none: '', purple: 'purple' }, '')}
+      color={select(
+        'Color',
+        { none: '', white: 'white', purple: 'purple', shadow: 'shadow' },
+        ''
+      )}
       wideButton={boolean('Wide button', false)}
+      heading={boolean('Button', false)}
+      noUnderline={boolean('Button', false)}
     >
       {text('Content', 'Skriv ut')}
     </Link>

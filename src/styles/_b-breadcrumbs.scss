@@ -50,10 +50,16 @@
         &:before {
           position: absolute;
           display: inline-block;
-          content: '←';
+          content: '';
+
+          background-image: url($arrow-left);
+          background-size: 0.8em;
+          background-repeat: no-repeat;
+
           left: -1.5em;
-          height: 1em;
-          width: auto;
+          top: 0.4em;
+          height: 0.8em;
+          width: 0.8em;
         }
       }
     }

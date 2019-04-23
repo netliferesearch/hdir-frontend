@@ -10,33 +10,28 @@
     background-size: contain;
     background-position: 0 center;
   }
-  &__download {
-    &:after {
-      content: ' ↓';
-      box-shadow: 0 1px 0 transparent;
-      color: $link-color;
-    }
-  }
   &__link {
     position: relative;
 
     &--arrow {
-      &:before {
-        content: '→';
-        box-shadow: 0 1px 0 transparent;
-        float: right;
-        color: inherit !important;
-        margin-left: 0.5em;
+      &:after {
+        @include pseudo-arrow($arrow-right);
+        position: absolute;
+        display: block;
+        right: -1.5em;
+        bottom: 0.15em;
       }
+      margin-right: 1.5em;
     }
     &--arrow-left {
       &:before {
-        content: '←';
-        box-shadow: 0 1px 0 transparent;
-        float: left;
-        color: inherit !important;
-        margin-right: 0.5em;
+        @include pseudo-arrow($arrow-left);
+        position: absolute;
+        display: block;
+        left: -1.75em;
+        bottom: 0.15em;
       }
+      margin-left: 1.75em;
     }
     &--secondary {
       @include link-init($grey, true, $grey);

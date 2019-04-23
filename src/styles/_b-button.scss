@@ -11,13 +11,13 @@
 
   &--download {
     &:after {
-      @include after_arrow($arrow-white-down);
+      @include pseudo-arrow($arrow-white-down);
     }
   }
 
   &--arrow {
     &:after {
-      @include after_arrow($arrow-white-right);
+      @include pseudo-arrow($arrow-white-right);
     }
   }
 
@@ -38,12 +38,12 @@
     background: white;
     &.b-button--arrow {
       &:after {
-        @include after_arrow($arrow-right);
+        @include pseudo-arrow($arrow-right);
       }
     }
     &.b-button--download {
       &:after {
-        @include after_arrow($arrow-down);
+        @include pseudo-arrow($arrow-down);
       }
     }
   }
@@ -54,12 +54,12 @@
     background: white;
     &.b-button--arrow {
       &:after {
-        @include after_arrow($arrow-right);
+        @include pseudo-arrow($arrow-right);
       }
     }
     &.b-button--download {
       &:after {
-        @include after_arrow($arrow-down);
+        @include pseudo-arrow($arrow-down);
       }
     }
   }

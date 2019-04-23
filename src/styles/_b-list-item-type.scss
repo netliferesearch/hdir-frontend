@@ -1,13 +1,13 @@
 .b-list-item-type {
   position: relative;
+  width: 100%;
   width: calc(100% - 1.5rem);
 
   &:after {
-    content: '→';
+    @include pseudo-arrow($arrow-right);
     position: absolute;
-    top: 0;
     right: -1rem;
-    color: $link-color;
+    top: 0.4em;
   }
 
   &--no-arrow {
@@ -60,6 +60,7 @@
   }
   &__text {
     flex: 3;
+    padding-right: 0.5rem;
   }
   &__category {
     font-size: $meta-text;

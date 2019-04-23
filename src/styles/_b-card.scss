@@ -78,11 +78,11 @@
 
     &--right-arrow {
       &:after {
-        content: '→';
+        @include pseudo-arrow($arrow-right);
+
         position: absolute;
-        right: 1rem;
-        top: 0.75rem;
-        font-size: $medium-large-text;
+        right: 1em;
+        top: 1.25em;
       }
     }
 
@@ -93,11 +93,11 @@
         display: none;
       }
       &:before {
-        content: '←';
+        @include pseudo-arrow($arrow-left);
+
         position: absolute;
-        left: 1rem;
-        top: 0.75rem;
-        font-size: $medium-large-text;
+        left: 1em;
+        top: 1.25em;
       }
     }
   }

@@ -26,11 +26,15 @@
     &:after {
       visibility: hidden;
       margin-left: 0.5em;
-      content: '→';
-      font-weight: normal;
-      font-size: 1em;
-      color: $link-color;
-      height: 100%;
+      margin-top: 0.15em;
+
+      content: '';
+      height: 1em;
+      width: 1em;
+
+      background-image: url($arrow-right);
+      background-size: 0.8em;
+      background-repeat: no-repeat;
     }
   }
 
