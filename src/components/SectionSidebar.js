@@ -48,7 +48,9 @@ const ListItem = ({ props }) => {
         {(props.prefix || props.description) && (
           <div className="b-section-sidebar__meta">
             {props.prefix && (
-              <div className="b-section-sidebar__prefix">{props.prefix}</div>
+              <div className="b-section-sidebar__prefix" role="presentation">
+                {props.prefix}
+              </div>
             )}
             {props.description && (
               <div className="b-section-sidebar__description">
