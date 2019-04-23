@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from './Link';
 
-const ContentLabel = props => {
+const LongShortHeading = props => {
   return (
     <div className="b-long-short-heading">
       <h1>
@@ -35,7 +35,7 @@ const ContentLabel = props => {
   );
 };
 
-ContentLabel.propTypes = {
+LongShortHeading.propTypes = {
   long: PropTypes.string.isRequired,
   short: PropTypes.string,
   icon: PropTypes.string,
@@ -43,4 +43,4 @@ ContentLabel.propTypes = {
   linkText: PropTypes.string
 };
 
-export default ContentLabel;
+export default LongShortHeading;
