@@ -11,27 +11,16 @@
 
   &--download {
     &:after {
-      content: '↓';
-      margin-left: 0.5em;
-      box-shadow: 0 1px 0 transparent;
-      color: inherit;
+      @include after_arrow($arrow-white-down);
     }
   }
 
   &--arrow {
     &:after {
-      content: ' →';
-      box-shadow: 0 1px 0 transparent;
-      color: inherit;
+      @include after_arrow($arrow-white-right);
     }
   }
-  &--arrow-down {
-    &:before {
-      content: '↓ ';
-      box-shadow: 0 1px 0 transparent;
-      color: inherit;
-    }
-  }
+
   &--small {
     font-size: $meta-text;
   }
@@ -47,10 +36,31 @@
     border: 2px solid $link-color;
     color: $link-color !important;
     background: white;
+    &.b-button--arrow {
+      &:after {
+        @include after_arrow($arrow-right);
+      }
+    }
+    &.b-button--download {
+      &:after {
+        @include after_arrow($arrow-down);
+      }
+    }
   }
+
   &--secondary-dark {
     border: 2px solid $secondary-color;
     color: $secondary-color !important;
     background: white;
+    &.b-button--arrow {
+      &:after {
+        @include after_arrow($arrow-right);
+      }
+    }
+    &.b-button--download {
+      &:after {
+        @include after_arrow($arrow-down);
+      }
+    }
   }
 }

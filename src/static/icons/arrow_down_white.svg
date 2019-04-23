@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="43px" viewBox="0 0 44 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>arrow_down_white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_down_white" transform="translate(0.616000, 0.384000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M42.496,23.744 C37.5893088,26.7306816 33.5253494,29.6853187 30.304,32.608 C27.0826506,35.5306813 24.1280134,38.8693146 21.44,42.624 L21.056,42.624 C18.3679866,38.8693146 15.4133494,35.5306813 12.192,32.608 C8.97065056,29.6853187 4.9066912,26.7306816 0,23.744 L3.328,19.712 C10.6240365,24.5333574 15.9146502,29.2266438 19.2,33.792 C18.858665,29.9519808 18.688,26.261351 18.688,22.72 L18.688,0 L23.808,0 L23.808,22.72 C23.808,26.261351 23.637335,29.9519808 23.296,33.792 C26.5813498,29.2266438 31.8719635,24.5333574 39.168,19.712 L42.496,23.744 Z" id="↓"></path>
+        </g>
+    </g>
+</svg>
