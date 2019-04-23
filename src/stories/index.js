@@ -321,6 +321,7 @@ storiesOf('Button', module)
       arrow={boolean('Arrow', false)}
       download={boolean('Download', false)}
       secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
       plain={boolean('Plain', false)}
       small={boolean('Small', false)}
     >
