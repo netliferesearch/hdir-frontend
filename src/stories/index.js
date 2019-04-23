@@ -21,7 +21,6 @@ import Card from '../components/Card';
 import ChapterHeading from '../components/ChapterHeading';
 import CheckboxGroup from '../components/CheckboxGroup';
 import Collapsible from '../components/Collapsible';
-import ContentLabel from '../components/ContentLabel';
 import FilterList from '../components/FilterList';
 import Footer from '../components/Footer';
 import FooterHelfo from '../components/FooterHelfo';
@@ -38,26 +37,12 @@ import PressRelease from '../components/PressRelease';
 import Questionnaire from '../components/Questionnaire';
 import Quote from '../components/Quote';
 import RadioButtonGroup from '../components/RadioButtonGroup';
-import SearchResultSection from '../components/SearchResultSection';
-import SearchResultSectionSimple from '../components/SearchResultSectionSimple';
 import SectionSidebar from '../components/SectionSidebar';
 import Select from '../components/Select';
 import SquareImage from '../components/SquareImage';
 import Statistics from '../components/Statistics';
 import TableExample from '../components/TableExample';
 import TransportBlock from '../components/TransportBlock';
-
-storiesOf('ContentLabel', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => (
-    <ContentLabel
-      highlight={boolean('Highlight', false)}
-      code={boolean('Code', false)}
-    >
-      Some content
-    </ContentLabel>
-  ));
 
 storiesOf('Grid', module)
   .addDecorator(withKnobs)
@@ -592,16 +577,6 @@ storiesOf('Link', module)
     </Link>
   ));
 
-storiesOf('SearchResultSection', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => <SearchResultSection />);
-
-storiesOf('SearchResultSectionSimple', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => <SearchResultSectionSimple />);
-
 import './listItemType';
 import './list';
 
@@ -865,23 +840,6 @@ storiesOf('Questionnaire', module)
         <Questionnaire />
       </div>
     </Box>
-  ));
-
-storiesOf('References', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => (
-    <ol>
-      <li>
-        <a href="#a">I read it on Wikipedia, so it must be true</a>
-      </li>
-      <li>
-        Some book I don't remember the name of, the IBAN number starts with 5.
-      </li>
-      <li>
-        <a href="#b">Just Google it</a>
-      </li>
-    </ol>
   ));
 
 storiesOf('RadioButtonGroup', module)
