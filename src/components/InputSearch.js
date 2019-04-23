@@ -77,8 +77,9 @@ const InputSearch = props => {
       <div className="b-input-search__inputs">
         {!value && (
           <div className="b-input-search__placeholder" aria-hidden>
-            {props.exampleSuggestions.length &&
-              props.exampleSuggestions[placeholderIndex]}
+            {props.exampleSuggestions.length
+              ? props.exampleSuggestions[placeholderIndex]
+              : ''}
           </div>
         )}
         <input
