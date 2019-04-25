@@ -94,7 +94,8 @@ const InputSearch = props => {
         />
         <button
           className="b-input-search__button"
-          aria-label="Søk"
+          type="button"
+          aria-hidden
           onClick={triggerSearch}
         />
       </div>
@@ -169,16 +170,41 @@ const InputSearch = props => {
   };
 
   return (
-    <Autosuggest
-      suggestions={props.showSuggestions ? suggestions : []}
-      onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-      onSuggestionsClearRequested={() => setSuggestions([])}
-      onSuggestionSelected={onSuggestionSelected}
-      renderInputComponent={renderInputComponent}
-      getSuggestionValue={suggestion => suggestion.title}
-      renderSuggestion={renderSuggestion}
-      inputProps={inputProps}
-    />
+    <form
+      onSubmit={e => {
+        e.preventDefault();
+        triggerSearch();
+      }}
+    >
+      <div aria-hidden>
+        <Autosuggest
+          suggestions={props.showSuggestions ? suggestions : []}
+          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={() => setSuggestions([])}
+          onSuggestionSelected={onSuggestionSelected}
+          renderInputComponent={renderInputComponent}
+          getSuggestionValue={suggestion => suggestion.title}
+          renderSuggestion={renderSuggestion}
+          inputProps={inputProps}
+        />
+      </div>
+      {/* Screen readers gets a simplified form for now */}
+      <label htmlFor="side-søk" className="visually-hidden">
+        Søk på siden
+      </label>
+      <input
+        type="search"
+        id="side-søk"
+        onChange={e => {
+          setValue(e.target.value);
+        }}
+        value={value}
+        className="visually-hidden"
+      />
+      <button type="submit" className="visually-hidden">
+        Søk
+      </button>
+    </form>
   );
 };
 
