@@ -166,9 +166,20 @@ const ArticlePage = () => (
           <PageMeta publishDate="11. august 2008" editDate="12. august 2018" />
 
           <div className="l-mt-1">
-            <Link href="#a" small icon="../icons/print.svg">
-              Skriv ut hele retningslinjen
-            </Link>
+            <small>
+              <img
+                src="../icons/print.svg"
+                alt=""
+                role="presentation"
+                style={{
+                  height: '1.4em',
+                  width: 'auto',
+                  marginRight: '0.5em',
+                  marginBottom: '-0.2em'
+                }}
+              />
+              Skriv ut/Lag PDF er midlertidig deaktivert
+            </small>
           </div>
         </div>
       </div>
