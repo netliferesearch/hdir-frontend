@@ -35,7 +35,12 @@ const MainHeader = props => {
   return (
     <>
       {searchOpen && (
-        <SearchTray open={searchOpen}>
+        <SearchTray
+          open={searchOpen}
+          id="searchTray"
+          role="region"
+          aria-live="polite"
+        >
           <div className="l-container">
             <InputSearch
               dark
@@ -111,6 +116,7 @@ const MainHeader = props => {
                 <button
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
+                  aria-controls="searchTray"
                 >
                   Søk{' '}
                   <img
