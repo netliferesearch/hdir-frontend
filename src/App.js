@@ -56,7 +56,7 @@ class App extends Component {
             <MainHeader
               name={this.props.name}
               links={this.props.links}
-              label={this.props.inputSearchLabel}
+              inputSearchLabel={this.props.inputSearchLabel}
               hideSearch={this.props.hideSearch}
               exampleSuggestions={[
                 'Antibiotika',

@@ -18,6 +18,7 @@ import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import MainHeader from '../components/MainHeader';
 import ChapterHeading from '../components/ChapterHeading';
 import CheckboxGroup from '../components/CheckboxGroup';
 import Collapsible from '../components/Collapsible';
@@ -125,6 +126,22 @@ storiesOf('Breadcrumbs', module)
           href: '#a'
         }
       ])}
+    />
+  ));
+
+storiesOf('MainHeader', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <MainHeader
+      name={text('Name', 'Helsedirektoratet')}
+      hideSearch={boolean('Hide search', false)}
+      links={object('List', [
+        { name: 'Om Helsedirektoratet', href: '#' },
+        { name: 'English', href: '#' }
+      ])}
+      inputSearchLabel={text('Input search label', 'Søk')}
+      exampleSuggestions={object('List', ['aaa', 'bbbb', 'ccccc'])}
     />
   ));
 

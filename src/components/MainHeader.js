@@ -45,7 +45,7 @@ const MainHeader = props => {
             <InputSearch
               dark
               autoFocus={searchOpen}
-              label={props.label}
+              label={props.inputSearchLabel}
               exampleSuggestions={props.exampleSuggestions}
             />
           </div>
@@ -181,7 +181,7 @@ MainHeader.propTypes = {
   hideSearch: PropTypes.bool,
   name: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.object),
-  label: PropTypes.string,
+  inputSearchLabel: PropTypes.string,
   exampleSuggestions: PropTypes.arrayOf(PropTypes.string)
 };
 
