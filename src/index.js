@@ -7,7 +7,7 @@ import MainHeader from '../src/components/MainHeader';
 import InputSearch from '../src/components/InputSearch';
 import SectionSidebar from '../src/components/SectionSidebar';
 import MultiSelector from './components/MultiSelector';
-import { checkboxFilter } from './functions/searchFilter';
+import { checkboxFilter } from './js/searchFilter';
 
 const rootElement = document.getElementById('root');
 const headerElement = document.getElementById('header');

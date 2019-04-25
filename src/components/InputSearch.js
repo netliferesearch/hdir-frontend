@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
 import URLSearchParams from 'url-search-params';
-import useInterval from '../hooks/useInterval';
+import useInterval from '../js/hooks/useInterval';
 
 const searchPageUrl = process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
   ? process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
