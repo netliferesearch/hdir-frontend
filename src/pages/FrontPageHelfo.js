@@ -34,6 +34,7 @@ const FrontPageHelfo = () => (
             <img
               src="./icons/scale.svg"
               className="b-icon b-icon--heading"
+              alt=""
               role="presentation"
             />
             Bruk riktig takst og regelverk
@@ -86,6 +87,7 @@ const FrontPageHelfo = () => (
             <img
               src="./icons/firstaid.svg"
               className="b-icon b-icon--heading"
+              alt=""
               role="presentation"
             />
             Inngå eller endre en avtale
@@ -124,6 +126,7 @@ const FrontPageHelfo = () => (
             <img
               src="./icons/money_bag.svg"
               className="b-icon b-icon--heading"
+              alt=""
               role="presentation"
             />
             Få refusjon og oppgjør
@@ -163,6 +166,7 @@ const FrontPageHelfo = () => (
             <img
               src="./icons/people.svg"
               className="b-icon b-icon--heading"
+              alt=""
               role="presentation"
             />
             På vegne av pasienten

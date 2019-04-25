@@ -5,7 +5,6 @@ import { default as LinkComp } from '../components/Link';
 const FrontPage = () => (
   <div>
     <div className="l-container l-mt-3">
-      Press 'h' to toggle block/component hints.
       <div className="l-mt-2">
         <LinkComp buttonSecondary href="/storybook">
           Go to Storybook

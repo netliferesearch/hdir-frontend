@@ -46,6 +46,7 @@ const StatisticsPage = () => (
                   <img
                     src="./icons/pie.svg"
                     role="presentation"
+                    alt=""
                     className="b-icon b-icon--large"
                   />
                 </Box>
@@ -69,6 +70,7 @@ const StatisticsPage = () => (
                   <img
                     src="../icons/pie.svg"
                     role="presentation"
+                    alt=""
                     className="b-icon b-icon--large"
                   />
                 </Box>
@@ -91,6 +93,7 @@ const StatisticsPage = () => (
                   <img
                     src="./icons/pie.svg"
                     role="presentation"
+                    alt=""
                     className="b-icon b-icon--large"
                   />
                 </Box>
@@ -114,6 +117,7 @@ const StatisticsPage = () => (
                   <img
                     src="../icons/pie.svg"
                     role="presentation"
+                    alt=""
                     className="b-icon b-icon--large"
                   />
                 </Box>

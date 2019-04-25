@@ -14,6 +14,7 @@ const Statistics = props => (
       <img
         className="b-statistics__icon"
         src={props.icon}
+        alt=""
         role="presentation"
       />
     )}

@@ -38,8 +38,8 @@ const FrontPageHdir = () => (
           <img
             src="./icons/Normerende.svg"
             className="b-icon b-icon--medium l-mr-1"
-            // src="http://placehold.it/40x40"
-            alt="Bok med forstørrelsesglass"
+            role="presentation"
+            alt=""
           />
           <strong>Nasjonale anbefalinger, råd og pakkeforløp</strong>
           <div className="l-mt-1 l-mb-1">

@@ -12,8 +12,9 @@ const LinkList = props => (
         >
           <img
             src={item.image}
-            alt={item.imageAlt}
+            alt=""
             className="b-link-list__image"
+            role="presentation"
           />
           <span className="b-link-list__text">{item.text}</span>
         </div>
@@ -25,8 +26,9 @@ const LinkList = props => (
         >
           <img
             src={item.image}
-            alt={item.imageAlt}
+            alt=""
             className="b-link-list__image"
+            role="presentation"
           />
           <span className="b-link-list__text">{item.text}</span>
         </a>

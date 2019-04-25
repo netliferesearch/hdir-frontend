@@ -17,6 +17,7 @@ const LongShortHeading = props => {
               <img
                 src={props.icon}
                 role="presentation"
+                alt=""
                 aria-hidden="true"
                 className="b-long-short-heading__sub-icon"
               />

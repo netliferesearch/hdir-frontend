@@ -136,6 +136,8 @@ const SectionSidebar = props => {
         {props.icon && (
           <img
             src={props.icon}
+            alt=""
+            role="presentation"
             className="b-section-sidebar__icon"
             aria-hidden
           />

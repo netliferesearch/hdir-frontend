@@ -247,6 +247,7 @@ const ThemePage = () => (
               <img
                 src="./icons/Tilskudd.svg"
                 className="b-icon b-icon--heading"
+                alt=""
                 role="presentation"
               />
               Tilskudd
@@ -274,6 +275,7 @@ const ThemePage = () => (
               <img
                 src="./icons/Statistikk.svg"
                 className="b-icon b-icon--heading"
+                alt=""
                 role="presentation"
               />
               Statistikk
@@ -347,6 +349,7 @@ const ThemePage = () => (
               <img
                 src="./icons/Rapporter.svg"
                 className="b-icon b-icon--heading"
+                alt=""
                 role="presentation"
               />
               Rapporter
@@ -419,6 +422,7 @@ const ThemePage = () => (
               <img
                 src="./icons/Konferanser.svg"
                 className="b-icon b-icon--heading"
+                alt=""
                 role="presentation"
               />
               Konferanser
