@@ -119,9 +119,10 @@ The javascript is a collection of apps that can render, and read the data attrib
 
 We need to generate static HTML pages (using react-snap), one static build of an earlier commit, and one from the current. We run a diffing tool to highlight all the changes in the generated HTML.
 
-1. Go to an earlier commit, the commit you want to compare. Run `npm run build` and copy `build/static_pages`
-2. Go to the current commit and paste it in `old_static_version`
-3. Run `npm run build && npm run create-static-pages && npm run diff-static-versions`
+1. Go to an earlier commit, the commit you want to compare. Run `npm run build`.
+2. Run `create-static-pages` and copy `build/static_pages`.
+3. Go to the current commit, go to the directory `old_static_version` and delete the directory there, if there are any, and paste the copied directory in there.
+4. Run `npm run build && npm run create-static-pages && npm run diff-static-versions`
    - This builds the project, generate static prerendered HTML pages, and creates a HTML diff-file.
-4. Open `/public/diff.html` to see the changes.
+5. Open `/public/diff.html` to see the changes.
    - The new diffs includes the date in the filename.
