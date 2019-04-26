@@ -45,6 +45,11 @@ import Statistics from '../components/Statistics';
 import TableExample from '../components/TableExample';
 import TransportBlock from '../components/TransportBlock';
 
+import './listItemType';
+import './list';
+import './navList';
+import './pages';
+
 storiesOf('Grid', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -601,9 +606,6 @@ storiesOf('Link', module)
     </Link>
   ));
 
-import './listItemType';
-import './list';
-
 storiesOf('ListHeading', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -747,9 +749,6 @@ storiesOf('MultiSelector', module)
       ])}
     />
   ));
-
-import './navList';
-import './pages';
 
 storiesOf('PageMeta', module)
   .addDecorator(withKnobs)
