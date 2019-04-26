@@ -1,13 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import {
-  withKnobs,
-  text,
-  boolean,
-  object,
-  select
-} from '@storybook/addon-knobs';
+import { withKnobs, text, object } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 
 import List from '../components/List';

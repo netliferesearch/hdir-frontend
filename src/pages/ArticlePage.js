@@ -2,7 +2,6 @@ import React from 'react';
 
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
-import Link from '../components/Link';
 import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
