@@ -40,6 +40,7 @@ const ListItem = ({ props }) => {
     <>
       <a
         href={!props.active && props.url}
+        role={props.active && 'presentation'}
         className={linkClasses(props.small, props.active, props.children)}
       >
         {props.title && (
