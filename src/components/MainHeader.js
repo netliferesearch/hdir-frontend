@@ -79,8 +79,9 @@ const MainHeader = props => {
                   <a
                     href="/"
                     className="b-main-header__logo b-main-header__logo--small"
-                    aria-label={props.name}
-                  />
+                  >
+                    {props.name}
+                  </a>
 
                   <button
                     className="b-button b-button--small b-button--secondary"

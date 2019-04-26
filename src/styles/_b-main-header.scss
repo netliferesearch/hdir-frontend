@@ -18,6 +18,7 @@
     &--small {
       background-image: url($logo-small);
       background-size: contain;
+      font-size: 0;
     }
   }
   &__logo-link {
