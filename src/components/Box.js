@@ -23,7 +23,15 @@ const Box = props => (
 Box.propTypes = {
   square: PropTypes.bool,
   noPadding: PropTypes.bool,
-  color: PropTypes.oneOf(['', 'green', 'white', 'blue', 'blueDark', 'yellow'])
+  color: PropTypes.oneOf([
+    '',
+    'green',
+    'grey',
+    'white',
+    'blue',
+    'blueDark',
+    'yellow'
+  ])
 };
 
 export default Box;
