@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import InputSearch from './InputSearch';
 import SearchTray from './SearchTray';
-import NavList from './NavList';
 import shortid from 'shortid';
 import searchIcon from '../static/base64/search';
+import MainHeaderMobileNav from './MainHeaderMobileNav';
 
 const MainHeader = props => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -70,36 +70,11 @@ const MainHeader = props => {
           </a>
 
           {mobileNavOpen && (
-            <div className="l-container">
-              <nav
-                className="b-main-header__menu-overlay"
-                aria-label="Header-navigasjon"
-              >
-                <div className="b-main-header__menu-overlay-header">
-                  <a
-                    href="/"
-                    className="b-main-header__logo b-main-header__logo--small"
-                  >
-                    {props.name}
-                  </a>
-
-                  <button
-                    className="b-button b-button--small b-button--secondary"
-                    onClick={() => setMobileNavOpen(!mobileNavOpen)}
-                  >
-                    Lukk søk
-                  </button>
-                </div>
-                <div className="b-main-header__menu-overlay-links">
-                  <NavList
-                    list={props.links.map(item => ({
-                      title: item.name,
-                      url: item.href
-                    }))}
-                  />
-                </div>
-              </nav>
-            </div>
+            <MainHeaderMobileNav
+              name={props.name}
+              showNav={setMobileNavOpen}
+              links={props.links}
+            />
           )}
 
           <div className="l-hide-to-lg">
@@ -144,6 +119,8 @@ const MainHeader = props => {
               <button
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}
                 className="b-button b-button--secondary-dark b-button--small"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
               >
                 Meny
               </button>
