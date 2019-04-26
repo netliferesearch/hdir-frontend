@@ -13,7 +13,7 @@
     "react-autosuggest": "^9.4.1",
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
+    "react-scripts": "3.0.0",
     "sass-mq": "^5.0.0",
     "shortid": "^2.2.13",
     "source-map-explorer": "^1.7.0",
