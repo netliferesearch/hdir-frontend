@@ -82,7 +82,7 @@ const SectionSidebar = props => {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
     }
     Stickyfill.add(sidebarRef.current);
-  }, []);
+  }, [headings]);
 
   useEffect(() => {
     if (!hasItems(props.list)) {

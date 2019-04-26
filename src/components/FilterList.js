@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
 const FilterList = props => {
-  const [selected, setSelected] = useState('');
-
-  useEffect(() => {
-    setSelected(props.list.length && props.list[0]);
-  }, []);
+  const [selected, setSelected] = useState(
+    props.list.length ? props.list[0] : []
+  );
 
   function select(event, item) {
     event.preventDefault();
