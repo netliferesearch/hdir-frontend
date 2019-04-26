@@ -245,9 +245,9 @@ const StatisticsPage = () => (
           />
         </div>
         <div className="col-xs-12 l-mt-2">
-          <span className="t--small">
-            <a href="#">NULLSTILL ALLE FILTRE</a>
-          </span>
+          <a href="#a" className="t--small">
+            NULLSTILL ALLE FILTRE
+          </a>
         </div>
       </div>
       <div className="row l-mt-3 l-mb-5">
