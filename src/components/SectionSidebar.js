@@ -82,7 +82,7 @@ const SectionSidebar = props => {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
     }
     Stickyfill.add(sidebarRef.current);
-  }, [headings]);
+  }, [props.list]);
 
   useEffect(() => {
     if (!hasItems(props.list)) {
@@ -107,7 +107,7 @@ const SectionSidebar = props => {
         window.removeEventListener('scroll', findActiveHeadingDebounce);
       };
     }
-  });
+  }, [headings, props.list]);
 
   // Gives all headings a url-safe id based on its text
   if (!hasItems(props.list)) {

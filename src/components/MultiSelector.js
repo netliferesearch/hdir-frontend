@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -12,11 +12,25 @@ const MultiSelector = props => {
   const buttonElement = useRef();
 
   const openSelector = () => setOpen(true);
-  const closeSelector = () => {
+  const closeSelector = useCallback(() => {
     setOpen(false);
     // Resets the options to prop values if its closed
     setOptions(props.options);
-  };
+  }, [props.options]);
+
+  const handleOutsideClick = useCallback(
+    e => {
+      // close it if we click outside
+      // Ignores the outside click if we click the open/close button, or else we will close it on mouse down, and open it on mouse up.
+      if (
+        !boxElement.current.contains(e.target) &&
+        !buttonElement.current.contains(e.target)
+      ) {
+        closeSelector();
+      }
+    },
+    [closeSelector]
+  );
 
   useEffect(() => {
     const handleClose = e => {
@@ -33,18 +47,7 @@ const MultiSelector = props => {
       document.removeEventListener('keydown', handleClose);
       document.removeEventListener('mousedown', handleOutsideClick);
     };
-  }, [open]);
-
-  const handleOutsideClick = e => {
-    // close it if we click outside
-    // Ignores the outside click if we click the open/close button, or else we will close it on mouse down, and open it on mouse up.
-    if (
-      !boxElement.current.contains(e.target) &&
-      !buttonElement.current.contains(e.target)
-    ) {
-      closeSelector();
-    }
-  };
+  }, [open, closeSelector, handleOutsideClick]);
 
   const selectClasses = open =>
     classNames({
