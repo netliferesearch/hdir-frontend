@@ -1,0 +1,41 @@
+// This file contains styles for the dynamically generated forms built using
+// 'xp-formbuilder', a form plugin for 'Enonic'
+
+// 'div' element, lives outside 'form'
+#xp-formbuilder-introtext {}
+
+// 'div' element, lives outside 'form'
+#xp-formbuilder-successmessage {
+  p {}
+}
+
+// 'form' element, wraps the whole form
+.xp-formbuilder-form {
+  // 'fieldset' wraps all the interactive elements
+  fieldset {}
+  .btn {
+    &-primary {
+
+    }
+    input[type='submit'],
+    &.xp-submit {}
+  }
+}
+
+// 'div' element, wraps each interactive element, except the submit button
+.xp-form-input {
+  label {
+    span {
+      &.required-star {}
+    }
+  }
+  textarea {}
+  select {
+    option {}
+  }
+  input[type='checkbox'] {}
+  input[type='email'] {}
+  input[type='file'] {}
+  input[type='radio'] {}
+  input[type='text'] {}
+}
