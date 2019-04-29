@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import debounce from 'lodash.debounce';
 import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
+import { detect } from 'detect-browser';
 
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
@@ -28,14 +29,21 @@ const activeChild = children =>
 const urlKebabCase = string =>
   encodeURI(string.replace(/\s+/g, '-').toLowerCase());
 
+const linkClasses = (small, active, children) =>
+  classNames({
+    'b-section-sidebar__link': true,
+    'b-section-sidebar__link--small': small,
+    'b-section-sidebar__link--active': active || activeChild(children)
+  });
+
+const sectionSidebarClasses = bottom =>
+  classNames({
+    'b-section-sidebar': true,
+    'b-section-sidebar--bottom': bottom
+  });
+
 // Part of the component as it own component, we also make it use itself.
 const ListItem = ({ props }) => {
-  const linkClasses = (small, active, children) =>
-    classNames({
-      'b-section-sidebar__link': true,
-      'b-section-sidebar__link--small': small,
-      'b-section-sidebar__link--active': active || activeChild(children)
-    });
   return (
     <>
       <a
@@ -75,7 +83,20 @@ const ListItem = ({ props }) => {
 const SectionSidebar = props => {
   const [headings, setHeadings] = useState([]);
   const [activeHeading, setActiveHeading] = useState(0);
+  const [bottom, setBottom] = useState(false);
   const sidebarRef = useRef(null);
+
+  const nearBottom = () => {
+    const position = window.pageYOffset;
+    const documentHeight = document.body.scrollHeight;
+    const windowHeight = window.innerHeight;
+    // If we have scrolled to the bottom of (75% window height) of the page (body)
+    if (position > documentHeight - windowHeight * 1.75) {
+      setBottom(true);
+    } else {
+      setBottom(false);
+    }
+  };
 
   // Fetches all headings on mount, if we don't have a list
   useEffect(() => {
@@ -102,10 +123,20 @@ const SectionSidebar = props => {
         setActiveHeading
       );
 
+      const nearBottomDebounce = createDebounceFunction(nearBottom);
+
       window.addEventListener('scroll', findActiveHeadingDebounce);
+      // Use this fallback function only for IE
+      // Even with sticky polyfill IE has problems with tall sticky elements
+      if (detect().name === 'ie') {
+        window.addEventListener('scroll', nearBottomDebounce);
+      }
 
       return () => {
         window.removeEventListener('scroll', findActiveHeadingDebounce);
+        if (detect().name === 'ie') {
+          window.addEventListener('scroll', nearBottomDebounce);
+        }
       };
     }
   }, [headings, props.list]);
@@ -127,7 +158,7 @@ const SectionSidebar = props => {
     : props.list;
 
   return (
-    <div className="b-section-sidebar" ref={sidebarRef}>
+    <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
       <div
         className={classNames({
           'b-section-sidebar__heading': true,

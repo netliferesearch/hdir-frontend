@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "classnames": "^2.2.6",
+    "detect-browser": "^4.5.0",
     "flexboxgrid-sass": "^8.0.5",
     "http-proxy-middleware": "^0.19.1",
     "normalize-scss": "^7.0.1",
