@@ -47,7 +47,8 @@ const formbuilderGeneratedMarkup = () => (
           <label htmlFor="Hva%20er%20din%20alder%3F">
             <span>Hva er din alder?</span>
           </label>
-          <select id="Hva%20er%20din%20alder%3F" name="Hva%20er%20din%20alder%3F" defaultValue="Velg alder">
+          <select id="Hva%20er%20din%20alder%3F" name="Hva%20er%20din%20alder%3F">
+            <option value="" selected="selected" disabled="disabled">Velg alder</option>
             <option value="1829" text="option">18-29</option>
             <option value="3039" text="option">30-39</option>
             <option value="4049" text="option">40-49</option>
