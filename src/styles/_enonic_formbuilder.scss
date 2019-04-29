@@ -1,41 +1,112 @@
 // This file contains styles for the dynamically generated forms built using
 // 'xp-formbuilder', a form plugin for 'Enonic'
 
+@mixin input-formatting-basic() {
+  font-size: $meta-text;
+  background-color: transparent;
+  width: 100%;
+  box-sizing : border-box;
+}
+
+@mixin input-formatting() {
+  @include input-formatting-basic();
+  border: 1px solid $secondary-color;
+  padding: 1em 2.5em 1em 1em;
+}
+
 // 'div' element, lives outside 'form'
 #xp-formbuilder-introtext {}
 
 // 'div' element, lives outside 'form'
 #xp-formbuilder-successmessage {
-  p {}
+  p {
+    color: $green-warning;
+  }
 }
 
 // 'form' element, wraps the whole form
 .xp-formbuilder-form {
+  line-height: 2;
+  @extend .l-mb-2;
   // 'fieldset' wraps all the interactive elements
-  fieldset {}
+  fieldset {
+    display: block;
+    position: relative;
+    border: 0;
+    padding: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-after: 0;
+    @extend .l-mb-2;
+  }
+  input[type="submit"],
   .btn {
+    text-decoration: none;
+    @extend .b-button;
     &-primary {
-
+      @extend .b-button--plain;
     }
-    input[type='submit'],
-    &.xp-submit {}
+    &-secondary {
+      @extend .b-button--secondary;
+    }
   }
 }
 
 // 'div' element, wraps each interactive element, except the submit button
 .xp-form-input {
+  position: relative;
+  @extend .l-mb-1;
   label {
+    display: block;
+    margin-right: 1em;
+    color: $secondary-color;
     span {
-      &.required-star {}
+      &.required-star {
+        margin: 0 10px 0 2px;
+        color: $red-warning;
+      }
+    }
+    span + input[type="file"] {
+      display: block;
     }
   }
-  textarea {}
-  select {
-    option {}
+  textarea {
+    @include input-formatting();
   }
-  input[type='checkbox'] {}
-  input[type='email'] {}
-  input[type='file'] {}
-  input[type='radio'] {}
-  input[type='text'] {}
+  select {
+    @extend .b-select__select;
+    &:after {
+      @extend .b-select:after;
+    }
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: relative;
+    top: -2px; // @TODO: only necessary on desktop
+    margin-right: 10px;
+  }
+  input[type="email"],
+  input[type="text"] {
+    @include input-formatting();
+  }
+  // We would be able to do more if we had control of the markup, but we don't
+  // (See: https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/)
+  // The only solution here is to make it look less bad...
+  input[type="file"] {
+    @include input-formatting-basic();
+  }
+  // ...and enhance it where supported
+  ::-webkit-file-upload-button { // webkit
+    @extend .b-button;
+    @extend .b-button--secondary;
+  }
+  // @TODO(?): Don't know if there's anything we can do, but applying the styles below
+  // breaks all button styles within the 'form'
+  // ::-ms-browse { // IE10 (Windows 8+)
+  //   @extend .b-button;
+  //   @extend .b-button--secondary;
+  // }
 }
