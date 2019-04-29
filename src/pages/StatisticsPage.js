@@ -2,6 +2,7 @@ import React from 'react';
 
 import Card from '../components/Card';
 import Box from '../components/Box';
+import Link from '../components/Link';
 import FilterList from '../components/FilterList';
 import ArticleIntro from '../components/ArticleIntro';
 import NavList from '../components/NavList';
@@ -76,7 +77,7 @@ const StatisticsPage = () => (
                 </Box>
               </Card>
             </div>
-            <div className="col-xs-12 col-md-6 l-mt-2">
+            <div className="col-xs-12 col-md-6 l-mt-1">
               <Card
                 heading="Nasjonale styringsmål for spesialisthelsetjenesten"
                 text="Kvalitetsindikator"
@@ -99,7 +100,7 @@ const StatisticsPage = () => (
                 </Box>
               </Card>
             </div>
-            <div className="col-xs-12 col-md-6 l-mt-2">
+            <div className="col-xs-12 col-md-6 l-mt-1">
               <Card
                 heading="Ventetider og pasientrettigheter"
                 text="Norsk pasientregister"
@@ -122,6 +123,11 @@ const StatisticsPage = () => (
                   />
                 </Box>
               </Card>
+            </div>
+            <div className="col-xs-12 l-mt-1">
+              <Link arrow href="#a">
+                Se alle dashboards
+              </Link>
             </div>
           </div>
         </div>
@@ -259,42 +265,21 @@ const StatisticsPage = () => (
               columns
               list={[
                 {
-                  title: 'Antibiotika',
-                  url: '#',
-                  meta: 'Nasjonale faglige retningslinjer'
-                },
-                {
-                  title: 'ADHD',
-                  url: '#',
-                  meta: 'Nasjonale faglige retningslinjer'
+                  title:
+                    'Aktivitets- og forløpstidsindikatorer for Pakkeforløp for kreft',
+                  url: '#a',
+                  meta: ['11.10.2018', 'Kvalitetsindikator']
                 },
                 {
                   title:
-                    'Aktuell informasjon om lov og forskrift for prioriteringsveildere',
+                    'AMK-sentraler – antall henvendelser, svartid og utrykningstid',
                   url: '#',
-                  meta: 'Veileder'
+                  meta: ['30.12.2020', 'Kvalitetsindikator']
                 },
                 {
-                  title: 'Fileksempel',
+                  title: 'Amputasjon hos diabetespasienter',
                   url: '#',
-                  meta: 'En PDF',
-                  infoText: 'PDF (3,5 MB)',
-                  file: true
-                },
-                {
-                  title: 'ADHD',
-                  url: '#',
-                  meta: 'Nasjonale faglige retningslinjer'
-                },
-                {
-                  title: 'Antibiotika',
-                  url: '#',
-                  meta: 'Nasjonale faglige retningslinjer'
-                },
-                {
-                  title: 'ADHD',
-                  url: '#',
-                  meta: 'Nasjonale faglige retningslinjer'
+                  meta: ['11.10.2018', 'Kvalitetsindikator']
                 }
               ]}
             />
@@ -305,14 +290,38 @@ const StatisticsPage = () => (
               columns
               list={[
                 {
-                  title: 'Antibiotika',
+                  title: 'Barnediabetes',
                   url: '#',
-                  meta: 'Nasjonale faglige retningslinjer'
+                  file: true,
+                  infoText: 'PDF',
+                  meta: ['01.01.2020', 'Rapport']
                 },
                 {
-                  title: 'ADHD',
+                  title: 'Behandlet i slagenhet etter akutt hjerneslag',
                   url: '#',
-                  meta: 'Nasjonale faglige retningslinjer'
+                  meta: ['11.10.2018', 'Kvalitetsindikator']
+                },
+                {
+                  title:
+                    'Blodfortynnede behandlinger etter hjerteinfarkt hos pasienter med hjerteflimmer',
+                  url: '#',
+                  meta: ['11.10.2018', 'Kvalitetsindikator']
+                },
+                {
+                  title: 'Blodtrykksehandling etter hjerneslag',
+                  url: '#',
+                  meta: ['11.10.2018', 'Kvalitetsindikator']
+                },
+                {
+                  title: 'Blogsukkerregulering hos voksne med type 1 diabetes',
+                  url: '#',
+                  meta: ['11.10.2018', 'Kvalitetsindikator']
+                },
+                {
+                  title:
+                    'Blodpropphemmendebehandling etter hjerneslag som skyldes blodpropp',
+                  url: '#',
+                  meta: ['11.10.2018', 'Kvalitetsindikator']
                 }
               ]}
             />
