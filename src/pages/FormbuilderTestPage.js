@@ -1,7 +1,8 @@
 import React from 'react';
 import { default as LinkComp } from '../components/Link';
 
-const formbuilderGeneratedMarkup = () => (
+// Export it so we can use the same markup on 'ArticlePageWithForm'
+export const formbuilderGeneratedMarkup = () => (
   <section data-portal-component-type="part">
     <h2>Testskjema</h2>
     <div id="xp-formbuilder-introtext"></div>

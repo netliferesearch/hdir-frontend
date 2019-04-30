@@ -20,6 +20,9 @@ const FrontPage = () => (
         <Link to="/artikkel">Artikkel</Link>
       </p>
       <p>
+        <Link to="/artikkel-med-skjema">Artikkel med skjema</Link>
+      </p>
+      <p>
         <Link to="/anbefaling">Anbefaling</Link>
       </p>
       <p>
