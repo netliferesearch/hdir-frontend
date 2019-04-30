@@ -32,6 +32,9 @@ const FrontPage = () => (
         <Link to="/autorisasjon-steg-2">Autorisasjon steg 2</Link>
       </p>
       <p>
+        <Link to="/skjemabygger-enonic">Skjemaer lagt gjennom Enonics skjemabygger</Link>
+      </p>
+      <p>
         <Link to="/helfo-forside">Helfo forside</Link>
       </p>
       <p>

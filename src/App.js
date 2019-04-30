@@ -15,6 +15,7 @@ import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import ChapterPage from './pages/ChapterPage';
 import ChapterPageReport from './pages/ChapterPageReport';
+import FormbuilderTestPage from './pages/FormbuilderTestPage';
 import FrontPage from './pages/FrontPage';
 import FrontPageHdir from './pages/FrontPageHdir';
 import FrontPageHelfo from './pages/FrontPageHelfo';
@@ -137,6 +138,10 @@ class App extends Component {
               <Route path="/trykksaker" component={PressReleasePage} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
+              <Route
+                path="/skjemabygger-enonic"
+                component={FormbuilderTestPage}
+              />
               <Route component={NotFound} />
             </Switch>
             <Box noPadding square color="blueDark">
