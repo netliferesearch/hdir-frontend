@@ -6,6 +6,7 @@
   background-color: transparent;
   width: 100%;
   box-sizing : border-box;
+  border-radius: 5px;
 }
 
 @mixin input-formatting() {
@@ -73,20 +74,17 @@
       display: block;
     }
   }
-  textarea {
-    @include input-formatting();
-  }
+  textarea,
   select {
-    @extend .b-select__select;
-    &:after {
-      @extend .b-select:after;
-    }
+    @include input-formatting();
   }
   input[type="checkbox"],
   input[type="radio"] {
     position: relative;
-    top: -2px; // @TODO: only necessary on desktop
     margin-right: 10px;
+    @include mq($from: $tablet) {
+      top: -2px;
+    }
   }
   input[type="email"],
   input[type="text"] {
@@ -98,15 +96,4 @@
   input[type="file"] {
     @include input-formatting-basic();
   }
-  // ...and enhance it where supported
-  ::-webkit-file-upload-button { // webkit
-    @extend .b-button;
-    @extend .b-button--secondary;
-  }
-  // @TODO(?): Don't know if there's anything we can do, but applying the styles below
-  // breaks all button styles within the 'form'
-  // ::-ms-browse { // IE10 (Windows 8+)
-  //   @extend .b-button;
-  //   @extend .b-button--secondary;
-  // }
 }
