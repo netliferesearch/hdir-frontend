@@ -1,8 +1,7 @@
 import React from 'react';
 import uuidv4 from 'uuid/v4';
 
-import SectionSidebar from '../components/SectionSidebar';
-import PageMeta from '../components/PageMeta';
+import IconCategory from '../components/IconCategory';
 import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Collapsible from '../components/Collapsible';
@@ -40,10 +39,9 @@ const TreatmentPageA = () => (
         </div>
         <div className="row l-mt-4">
           <aside className="col-xs-12 col-md-3 l-mb-4">
-            <SectionSidebar
-              heading="PAKKEFORLØP"
-              headingUrl="#a"
-              icon="../icons/Konferanser.svg"
+            <IconCategory
+              heading="Pakkeforløp"
+              icon="../icons/Pakkeforløp.svg"
             />
           </aside>
           <div className="col-xs-12 col-md-8 col-md-offset-1 t-body-text t-right">

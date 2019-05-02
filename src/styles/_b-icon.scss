@@ -31,4 +31,22 @@
       font-size: $meta-text;
     }
   }
+  &--category {
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      box-shadow: none;
+    }
+    &__icon {
+      height: 3em;
+      width: auto;
+      flex-shrink: 0;
+      margin-right: 1em;
+    }
+    &__heading {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
 }

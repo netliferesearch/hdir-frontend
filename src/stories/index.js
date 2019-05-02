@@ -26,6 +26,7 @@ import FilterList from '../components/FilterList';
 import Footer from '../components/Footer';
 import FooterHelfo from '../components/FooterHelfo';
 import Heading from '../components/Heading';
+import IconCategory from '../components/IconCategory';
 import IconWithText from '../components/IconWithText';
 import Image from '../components/Image';
 import InputSearch from '../components/InputSearch';
@@ -45,6 +46,7 @@ import SquareImage from '../components/SquareImage';
 import Statistics from '../components/Statistics';
 import TableExample from '../components/TableExample';
 import TransportBlock from '../components/TransportBlock';
+import TreatmentsDuration from '../components/TreatmentsDuration';
 
 import './listItemType';
 import './list';
@@ -97,6 +99,27 @@ storiesOf('Grid', module)
           xs 12, sm-6, md-4, lg-3
         </div>
       </div>
+    </div>
+  ));
+
+storiesOf('IconCategory', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <div style={{ overflow: 'hidden' }}>
+      <IconCategory
+        heading={text('Text', 'Pakkeforløp')}
+        icon={text('Icon', './icons/Pakkeforløp.svg')}
+      />
+    </div>
+  ))
+  .addWithStaticMarkup('With url', () => (
+    <div style={{ overflow: 'hidden' }}>
+      <IconCategory
+        heading={text('Text', 'Konferanser')}
+        icon={text('Icon', './icons/Konferanser.svg')}
+        url={text('Text', '#a')}
+      />
     </div>
   ));
 
@@ -978,3 +1001,12 @@ storiesOf('TableExample', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => <TableExample />);
+
+storiesOf('TreatmentsDuration', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <TreatmentsDuration
+      duration="13 hours and 37 minuts"
+    />
+  ));
