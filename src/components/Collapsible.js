@@ -5,6 +5,7 @@ import zenscroll from 'zenscroll';
 
 import Alert from './Alert';
 import Heading from './Heading';
+import TreatmentsDuration from './TreatmentsDuration';
 
 const buttonClasses = (active, size, subtle) =>
   classNames({
@@ -90,6 +91,12 @@ const Collapsible = props => {
           )}
         </Heading>
       </button>
+      {props.treatmentsDuration && (
+        <TreatmentsDuration
+          duration={props.treatmentsDuration}
+          classes="l-mt-1"
+        />
+      )}
       {props.subheading && !props.subheadingContent && (
         <div className="b-collapsible__subheading l-mt-1">
           {props.subheading}
@@ -138,6 +145,7 @@ Collapsible.propTypes = {
   noBorder: PropTypes.bool,
   alert: PropTypes.string,
   code: PropTypes.string,
+  treatmentsDuration: PropTypes.string,
   id: PropTypes.string
 };
 

@@ -77,6 +77,18 @@ const FrontPage = () => (
         <Link to="/lis-læringsaktiviteter">LIS-læringsaktiviteter</Link>
       </p>
       <p>
+        <Link to="/pakkeforløp-a">Pakkeforløp [A]</Link>
+      </p>
+      <p>
+        <Link to="/pakkeforløp-b">Pakkeforløp [B]</Link>
+      </p>
+      <p>
+        <Link to="/pakkeforløp-c">Pakkeforløp [C]</Link>
+      </p>
+      <p>
+        <Link to="/pakkeforløp-d">Pakkeforløp [D]</Link>
+      </p>
+      <p>
         <Link to="/produkt">Produkt</Link>
       </p>
       <p>

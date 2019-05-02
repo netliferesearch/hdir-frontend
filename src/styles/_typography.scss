@@ -67,9 +67,9 @@ a {
   box-shadow: 0 1px 0 $link-color;
 }
 
-// Responsive text alignment
 .t {
   @each $spaceName, $spaceValue in $flexboxgrid-breakpoints {
+    // Responsive text alignment
     &-#{$spaceName}-right {
       text-align: left;
       @include mq($from: $spaceValue) {
@@ -87,6 +87,16 @@ a {
       @include mq($from: $spaceValue) {
         text-align: center;
       }
+    }
+    // Brute force text alignment
+    &-right {
+      text-align: right;
+    }
+    &-left {
+      text-align: left;
+    }
+    &-center {
+      text-align: center;
     }
   }
 }

@@ -26,6 +26,7 @@ import FilterList from '../components/FilterList';
 import Footer from '../components/Footer';
 import FooterHelfo from '../components/FooterHelfo';
 import Heading from '../components/Heading';
+import IconWithText from '../components/IconWithText';
 import Image from '../components/Image';
 import InputSearch from '../components/InputSearch';
 import Link from '../components/Link';
@@ -96,6 +97,19 @@ storiesOf('Grid', module)
           xs 12, sm-6, md-4, lg-3
         </div>
       </div>
+    </div>
+  ));
+
+storiesOf('IconWithText', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <div style={{ overflow: 'hidden' }}>
+      <IconWithText
+        icon={text('Icon', './icons/clock.svg')}
+        alt={text('alt', 'Time is on my side')}
+        text={text('Text', 'Time is on my side')}
+      />
     </div>
   ));
 
@@ -509,6 +523,15 @@ storiesOf('Collapsible', module)
         'large'
       )}
       alert={text('Alert', '')}
+    >
+      {text('Text', 'You can place any content in here.')}
+    </Collapsible>
+  ))
+  .addWithStaticMarkup('With treatment duration', () => (
+    <Collapsible
+      heading={text('Heading', 'Heading')}
+      treatmentsDuration={text('Treatments duration', '13 hours and 37 minutes')}
+      smallContent={boolean('Small content', true)}
     >
       {text('Text', 'You can place any content in here.')}
     </Collapsible>
