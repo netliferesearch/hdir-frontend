@@ -9,6 +9,7 @@ import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import List from '../components/List';
 import Heading from '../components/Heading';
+import Button from '../components/Button';
 
 const TreatmentPageA = () => (
   <>
@@ -37,20 +38,46 @@ const TreatmentPageA = () => (
             h="h1"
           />
         </div>
-        <div className="row l-mt-4">
-          <aside className="col-xs-12 col-md-3 l-mb-4">
+        <div className="row l-mt-2">
+          <div className="col-xs-12 col-md-6 l-mb-4">
             <IconCategory
               heading="Pakkeforløp"
               icon="../icons/Pakkeforløp.svg"
             />
-          </aside>
-          <div className="col-xs-12 col-md-8 col-md-offset-1 t-body-text t-right">
+          </div>
+          <div className="col-xs-12 col-md-6 t-body-text t-right">
             <Link href="#a">
               Hva er et pakkeforløp?
             </Link>
           </div>
         </div>
-        <div className="row l-mt-4">
+        <div className="row l-mt-2">
+          <div className="col-xs-12">
+            <p className="t--uppercase">Vis forløpet som:</p>
+          </div>
+        </div>
+        <div className="row l-mt-1">
+          <div className="col-xs-12 col-md-4 l-mb-4">
+            <Button
+              optionPrimary
+              classes="l-mr-2"
+            >
+              <span>Tekst</span>
+            </Button>
+            <Button
+              optionSecondary
+            >
+              <span>Flytdiagram</span>
+            </Button>
+          </div>
+          <div className="col-xs-12 col-md-8 t-body-text t-right">
+            <Link href="#a">
+              Hva er et pakkeforløp?
+            </Link>
+          </div>
+        </div>
+
+        <div className="row l-mt-2">
           <div className="col-xs-12 l-mb-4">
             <div className="l-mt-3">
               <Collapsible

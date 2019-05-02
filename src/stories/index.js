@@ -279,6 +279,8 @@ storiesOf('Alert', module)
         'success'
       )}
       small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
       inline={boolean('Inline', false)}
       title={text('Title', '')}
     >
@@ -401,6 +403,18 @@ storiesOf('Button', module)
       >
         {text('Content', 'SecondaryDark')}
       </Button>
+      <br/>
+      <Button
+        optionPrimary={boolean('Option primary', true)}
+      >
+        {text('Content', 'Option primary')}
+      </Button>
+      <br/>
+      <Button
+        optionSecondary={boolean('Option secondary', true)}
+      >
+        {text('Content', 'Option secondary')}
+      </Button>
     </>
   ))
   .addWithStaticMarkup('Basic', () => (
@@ -411,6 +425,8 @@ storiesOf('Button', module)
       secondaryDark={boolean('Secondary dark', false)}
       plain={boolean('Plain', false)}
       small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
     >
       {text('Content', 'Submit')}
     </Button>
@@ -423,6 +439,8 @@ storiesOf('Button', module)
       secondaryDark={boolean('Secondary dark', false)}
       plain={boolean('Plain', false)}
       small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
     >
       {text('Content', 'Arrow')}
     </Button>
@@ -435,6 +453,8 @@ storiesOf('Button', module)
       secondaryDark={boolean('Secondary dark', false)}
       plain={boolean('Plain', false)}
       small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
     >
       {text('Content', 'Download')}
     </Button>
@@ -447,6 +467,8 @@ storiesOf('Button', module)
       secondaryDark={boolean('Secondary dark', false)}
       plain={boolean('Plain', false)}
       small={boolean('Small', true)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
     >
       {text('Content', 'Small')}
     </Button>
@@ -459,6 +481,8 @@ storiesOf('Button', module)
       secondaryDark={boolean('Secondary dark', false)}
       plain={boolean('Plain', false)}
       small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
     >
       {text('Content', 'Secondary')}
     </Button>
@@ -471,6 +495,8 @@ storiesOf('Button', module)
       secondaryDark={boolean('Secondary dark', false)}
       plain={boolean('Plain', true)}
       small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
     >
       {text('Content', 'Plain')}
     </Button>
@@ -483,8 +509,38 @@ storiesOf('Button', module)
       secondaryDark={boolean('Secondary dark', true)}
       plain={boolean('Plain', false)}
       small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
     >
       {text('Content', 'SecondaryDark')}
+    </Button>
+  ))
+  .addWithStaticMarkup('Option primary', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', true)}
+      optionSecondary={boolean('Option secondary', false)}
+    >
+      {text('Content', 'Option primary')}
+    </Button>
+  ))
+  .addWithStaticMarkup('Option secondary', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', true)}
+    >
+      {text('Content', 'Option secondary')}
     </Button>
   ));
 
@@ -750,6 +806,8 @@ storiesOf('Link', module)
       arrow={boolean('Arrow', false)}
       arrowLeft={boolean('Arrow left', false)}
       small={boolean('Small', false)}
+      optionPrimary={boolean('Option primary', false)}
+      optionSecondary={boolean('Option secondary', false)}
       secondary={boolean('Secondary', false)}
       button={boolean('Button', false)}
       buttonSecondary={boolean('Button secondary', false)}
