@@ -134,91 +134,80 @@ const TreatmentPageA = () => (
             <div className="l-mt-2">
               <hr className="b-hr b-hr--black b-hr--thin" />
             </div>
-            <div className="l-mt-2">
+            <div className="l-mt-5">
               <Link wideButton arrow color="purple">
                 Les mer om symptomer, årsaker og behandling av lungekreft på <span style={{textDecoration: 'underline'}}>helsenorge.no</span>.
               </Link>
             </div>
-            <div className="l-mt-3">
-              <PageMeta
-                publishDate="11. oktober 2008"
-                editDate="11. august 2018"
-              />
+            <div className="row l-mt-4">
+              <div className="col-xs-12">
+                <Box color="white">
+                  <p className="l-m-0 t--uppercase">Last ned trykksaker</p>
+                  <Heading h="h3" className="l-mt-2">
+                    Materiell til pasienter og pårørende
+                  </Heading>
+                  <div className="l-mt-2">
+                    <hr className="b-hr b-hr--blue b-hr--thin" />
+                  </div>
+                  <List
+                    list={[
+                      {
+                        type: 'generic',
+                        url: '#6',
+                        fields: {
+                          download: 'true',
+                          heading: 'FAKTAARK',
+                          subheading: 'Pakkeforløp på 1-2-3'
+                        }
+                      }
+                    ]}
+                  />
+                </Box>
+              </div>
+            </div>
+            <div className="row l-mt-4">
+              <div className="col-xs-12">
+                <Box color="white">
+                  <p className="l-m-0 t--uppercase">Relaterte produkter</p>
+                  <div className="l-mt-2">
+                    <hr className="b-hr b-hr--black b-hr--thick" />
+                  </div>
+                  <List
+                    list={[
+                      {
+                        type: 'generic',
+                        url: '#6',
+                        fields: {
+                          heading: 'Relatert retningslinje',
+                          category: 'Nasjonale faglige retningslinjer'
+                        }
+                      },
+                      {
+                        type: 'generic',
+                        url: '#6',
+                        fields: {
+                          heading: 'Lungekreft, mesoteliom og thymom',
+                          category: 'Handlingsprogram'
+                        }
+                      },
+                    ]}
+                  />
+                </Box>
+              </div>
             </div>
           </div>
         </div>
-        <div className="row l-mt-4">
-          <div className="col-xs-12">
-            <Box color="white">
-              <p className="l-m-0 t--uppercase">Last ned trykksaker</p>
-              <Heading h="h3" className="l-mt-2">
-                Materiell til pasienter og pårørende
-              </Heading>
-              <div className="l-mt-2">
-                <hr className="b-hr b-hr--blue b-hr--thin" />
-              </div>
-              <List
-                list={[
-                  {
-                    type: 'generic',
-                    url: '#6',
-                    fields: {
-                      download: 'true',
-                      heading: 'FAKTAARK',
-                      subheading: 'Pakkeforløp på 1-2-3'
-                    }
-                  }
-                ]}
-              />
-            </Box>
-          </div>
-        </div>
-        <div className="row l-mt-4">
-          <div className="col-xs-12">
-            <Box color="white">
-              <p className="l-m-0 t--uppercase">Relaterte produkter</p>
-              <div className="l-mt-2">
-                <hr className="b-hr b-hr--black b-hr--thick" />
-              </div>
-              <List
-                list={[
-                  {
-                    type: 'generic',
-                    url: '#6',
-                    fields: {
-                      heading: 'Relatert retningslinje',
-                      category: 'Nasjonale faglige retningslinjer'
-                    }
-                  },
-                  {
-                    type: 'generic',
-                    url: '#6',
-                    fields: {
-                      heading: 'Lungekreft, mesoteliom og thymom',
-                      category: 'Handlingsprogram'
-                    }
-                  },
-                ]}
-              />
-            </Box>
-          </div>
-        </div>
       </main>
-      <div className="l-mt-4">
+      <div className="l-mt-5">
         <div className="row">
-          <div className="col-xs-12 col-md-8 col-md-offset-4">
+          <div className="col-xs-12">
             <Link href="#a" small icon="../icons/method.svg">
-              Om metode og prosess
+              Om pakkeforløpet
             </Link>
             <br />
             <Link href="#a" small icon="../icons/print.svg">
-              Skriv ut hele retningslinjen
+              Skriv ut hele pakkeforløpet
             </Link>
-            <br />
-            <PageMeta
-              publishDate="11. august 2008"
-              editDate="11. august 2018"
-            />
           </div>
         </div>
       </div>
