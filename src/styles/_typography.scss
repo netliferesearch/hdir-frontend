@@ -108,15 +108,16 @@ a {
       color: $colorVal;
     }
   }
-}
-
-.t--small {
-  font-size: $meta-text;
-}
-
-.t--tab-left {
-  display: inline-block;
-  margin-left: 1.5rem;
+  &--small {
+    font-size: $meta-text;
+  }
+  &--tab-left {
+    display: inline-block;
+    margin-left: 1.5rem;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
 }
 
 small {

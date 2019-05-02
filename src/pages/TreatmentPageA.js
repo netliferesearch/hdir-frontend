@@ -8,6 +8,8 @@ import ChapterHeading from '../components/ChapterHeading';
 import Collapsible from '../components/Collapsible';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
+import List from '../components/List';
+import Heading from '../components/Heading';
 
 const TreatmentPageA = () => (
   <>
@@ -143,6 +145,32 @@ const TreatmentPageA = () => (
                 editDate="11. august 2018"
               />
             </div>
+          </div>
+        </div>
+        <div className="row l-mt-4">
+          <div className="col-xs-12">
+            <Box color="white">
+              <p className="l-m-0 t--uppercase">Last ned trykksaker</p>
+              <Heading h="h3" className="l-mt-2">
+                Materiell til pasienter og pårørende
+              </Heading>
+              <div className="l-mt-2">
+                <hr className="b-hr b-hr--blue b-hr--thin" />
+              </div>
+              <List
+                list={[
+                  {
+                    type: 'generic',
+                    url: '#6',
+                    fields: {
+                      download: 'true',
+                      heading: 'FAKTAARK',
+                      subheading: 'Pakkeforløp på 1-2-3'
+                    }
+                  }
+                ]}
+              />
+            </Box>
           </div>
         </div>
       </main>
