@@ -173,6 +173,36 @@ const TreatmentPageA = () => (
             </Box>
           </div>
         </div>
+        <div className="row l-mt-4">
+          <div className="col-xs-12">
+            <Box color="white">
+              <p className="l-m-0 t--uppercase">Relaterte produkter</p>
+              <div className="l-mt-2">
+                <hr className="b-hr b-hr--black b-hr--thick" />
+              </div>
+              <List
+                list={[
+                  {
+                    type: 'generic',
+                    url: '#6',
+                    fields: {
+                      heading: 'Relatert retningslinje',
+                      category: 'Nasjonale faglige retningslinjer'
+                    }
+                  },
+                  {
+                    type: 'generic',
+                    url: '#6',
+                    fields: {
+                      heading: 'Lungekreft, mesoteliom og thymom',
+                      category: 'Handlingsprogram'
+                    }
+                  },
+                ]}
+              />
+            </Box>
+          </div>
+        </div>
       </main>
       <div className="l-mt-4">
         <div className="row">
