@@ -360,6 +360,49 @@ storiesOf('ArticleIntro', module)
 storiesOf('Button', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
+  .addWithStaticMarkup('All', () => (
+    <>
+      <Button>
+        {text('Content', 'Submit')}
+      </Button>
+      <br/>
+      <Button
+        arrow={boolean('Arrow', true)}
+      >
+        {text('Content', 'Arrow')}
+      </Button>
+      <br/>
+      <Button
+        download={boolean('Download', true)}
+      >
+        {text('Content', 'Download')}
+      </Button>
+      <br/>
+      <Button
+        small={boolean('Small', true)}
+      >
+        {text('Content', 'Small')}
+      </Button>
+      <br/>
+      <Button
+        secondary={boolean('Secondary', true)}
+      >
+        {text('Content', 'Secondary')}
+      </Button>
+      <br/>
+      <Button
+        plain={boolean('Plain', true)}
+      >
+        {text('Content', 'Plain')}
+      </Button>
+      <br/>
+      <Button
+        secondaryDark={boolean('Secondary dark', true)}
+      >
+        {text('Content', 'SecondaryDark')}
+      </Button>
+    </>
+  ))
   .addWithStaticMarkup('Basic', () => (
     <Button
       arrow={boolean('Arrow', false)}
@@ -370,6 +413,78 @@ storiesOf('Button', module)
       small={boolean('Small', false)}
     >
       {text('Content', 'Submit')}
+    </Button>
+  ))
+  .addWithStaticMarkup('arrow', () => (
+    <Button
+      arrow={boolean('Arrow', true)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Arrow')}
+    </Button>
+  ))
+  .addWithStaticMarkup('download', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', true)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Download')}
+    </Button>
+  ))
+  .addWithStaticMarkup('small', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', true)}
+    >
+      {text('Content', 'Small')}
+    </Button>
+  ))
+  .addWithStaticMarkup('secondary', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', true)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Secondary')}
+    </Button>
+  ))
+  .addWithStaticMarkup('plain', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', true)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Plain')}
+    </Button>
+  ))
+  .addWithStaticMarkup('secondaryDark', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', true)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'SecondaryDark')}
     </Button>
   ));
 
