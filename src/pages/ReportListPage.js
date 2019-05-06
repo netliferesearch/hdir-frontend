@@ -106,7 +106,7 @@ const ReportListPage = () => (
             />
           </div>
         </aside>
-        <section className="col-md-8 col-md-offset-1">
+        <section className="col-xs-12 col-md-8 col-md-offset-1">
           <ListHeading heading="250 Rapporter" />
           <div className="js-expand-list" data-start-limit="10">
             <List

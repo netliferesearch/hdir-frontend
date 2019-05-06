@@ -128,14 +128,14 @@ const SectionSidebar = props => {
       window.addEventListener('scroll', findActiveHeadingDebounce);
       // Use this fallback function only for IE
       // Even with sticky polyfill IE has problems with tall sticky elements
-      if (detect().name === 'ie') {
+      if (detect() && detect().name === 'ie') {
         window.addEventListener('scroll', nearBottomDebounce);
       }
 
       return () => {
         window.removeEventListener('scroll', findActiveHeadingDebounce);
-        if (detect().name === 'ie') {
-          window.addEventListener('scroll', nearBottomDebounce);
+        if (detect() && detect().name === 'ie') {
+          window.removeEventListener('scroll', nearBottomDebounce);
         }
       };
     }
