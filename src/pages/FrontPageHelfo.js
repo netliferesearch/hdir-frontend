@@ -10,7 +10,7 @@ const FrontPageHelfo = () => (
     <h1 className="visually-hidden">Helfo</h1>
     <div className="l-container">
       <div className="row">
-        <div className="col-md-6 col-md-offset-3 l-mt-3">
+        <div className="col-xs-12 col-md-6 col-md-offset-3 l-mt-3">
           <form action="">
             <Select
               label="Finn yrkesgruppe"
@@ -50,7 +50,7 @@ const FrontPageHelfo = () => (
         <hr className="b-hr b-hr--thick" />
       </div>
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-xs-12 col-md-6">
           <p>
             Når du sender refusjonskrav, er det viktig at du kan dokumenterer at
             refusjonsvilkåra er oppfylte. Då sikrar du at Helfo kan kontrollere
@@ -62,7 +62,7 @@ const FrontPageHelfo = () => (
             </Alert>
           </div>
         </div>
-        <div className="col-md-5 col-md-offset-1">
+        <div className="col-xs-12 col-md-5 col-md-offset-1">
           <NavList
             list={[
               { title: 'Refusjonskrav', url: '#' },
@@ -74,7 +74,7 @@ const FrontPageHelfo = () => (
       </div>
 
       <div className="row">
-        <div className="l-mt-5 col-md-8 col-md-offset-2">
+        <div className="l-mt-5 col-xs-12 col-md-8 col-md-offset-2">
           <Link href="#a" wideButton color="purple" arrow>
             Henvis pasienten til helsenorge.no for mer informasjon
           </Link>
@@ -103,14 +103,14 @@ const FrontPageHelfo = () => (
         <hr className="b-hr b-hr--thick" />
       </div>
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-xs-12 col-md-6">
           <p>
             Når du har avtale med Helfo får du direkte utbetalt den økonomiske
             stønaden pasienten har rett til. Når du har avtale med Helfo får du
             direkte utbetalt den økonomiske stønaden pasienten har rett til.
           </p>
         </div>
-        <div className="col-md-5 col-md-offset-1">
+        <div className="col-xs-12 col-md-5 col-md-offset-1">
           <NavList
             list={[
               { title: 'Inngå avtale', url: '#' },
@@ -142,7 +142,7 @@ const FrontPageHelfo = () => (
         <hr className="b-hr b-hr--thick" />
       </div>
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-xs-12 col-md-6">
           <p>
             Etter at du som lege har sendt inn et refusjonskrav til Helfo, og
             dette er behandlet, vil du få et utbetalingsvedtak. Etter at du som
@@ -150,7 +150,7 @@ const FrontPageHelfo = () => (
             behandlet, vil du få et utbetalingsvedtak.
           </p>
         </div>
-        <div className="col-md-5 col-md-offset-1">
+        <div className="col-xs-12 col-md-5 col-md-offset-1">
           <NavList
             list={[
               { title: 'Send inn refusjonskrav', url: '#' },
@@ -182,13 +182,13 @@ const FrontPageHelfo = () => (
         <hr className="b-hr b-hr--thick" />
       </div>
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-xs-12 col-md-6">
           <p>
             Du kan hjelpe pasienten med å søke individuell stønad i en rekke
             tilfeller.
           </p>
         </div>
-        <div className="col-md-5 col-md-offset-1">
+        <div className="col-xs-12 col-md-5 col-md-offset-1">
           <NavList
             list={[
               { title: 'Individuell stønad', url: '#' },

@@ -41,7 +41,7 @@ const NewsListPage = () => (
             />
           </div>
         </aside>
-        <section className="col-md-8 col-md-offset-1">
+        <section className="col-xs-12 col-md-8 col-md-offset-1">
           <div className="js-expand-list" data-start-limit="10">
             <ListHeading heading="Nyheter" />
             <List
