@@ -5,7 +5,7 @@
   font-size: $meta-text;
   background-color: transparent;
   width: 100%;
-  box-sizing : border-box;
+  box-sizing: border-box;
   border-radius: 5px;
 }
 
@@ -16,7 +16,8 @@
 }
 
 // 'div' element, lives outside 'form'
-#xp-formbuilder-introtext {}
+#xp-formbuilder-introtext {
+}
 
 // 'div' element, lives outside 'form'
 #xp-formbuilder-successmessage {
@@ -43,7 +44,7 @@
     -webkit-padding-after: 0;
     @extend .l-mb-2;
   }
-  input[type="submit"],
+  input[type='submit'],
   .btn {
     text-decoration: none;
     @extend .b-button;
@@ -63,14 +64,14 @@
   label {
     display: block;
     margin-right: 1em;
-    color: $secondary-color;
+    color: $black;
     span {
       &.required-star {
         margin: 0 10px 0 2px;
         color: $red-warning;
       }
     }
-    span + input[type="file"] {
+    span + input[type='file'] {
       display: block;
     }
   }
@@ -78,22 +79,22 @@
   select {
     @include input-formatting();
   }
-  input[type="checkbox"],
-  input[type="radio"] {
+  input[type='checkbox'],
+  input[type='radio'] {
     position: relative;
     margin-right: 10px;
     @include mq($from: $tablet) {
       top: -2px;
     }
   }
-  input[type="email"],
-  input[type="text"] {
+  input[type='email'],
+  input[type='text'] {
     @include input-formatting();
   }
   // We would be able to do more if we had control of the markup, but we don't
   // (See: https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/)
   // The only solution here is to make it look less bad...
-  input[type="file"] {
+  input[type='file'] {
     @include input-formatting-basic();
   }
 }
