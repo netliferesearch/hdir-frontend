@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import uuidv4 from 'uuid/v4';
+import shortid from 'shortid';
 
 const IconCategory = props => (
   <div className="b-icon--category">
@@ -12,11 +12,13 @@ const IconCategory = props => (
       aria-hidden
     />
     {props.url ? (
-      <a href={props.url} id={uuidv4()}>
+      <a href={props.url} id={shortid.generate()}>
         <span className="b-icon--category__heading">{props.heading}</span>
       </a>
     ) : (
-      <span id={uuidv4()} className="b-icon--category__heading">{props.heading}</span>
+      <span id={shortid.generate()} className="b-icon--category__heading">
+        {props.heading}
+      </span>
     )}
   </div>
 );
@@ -24,7 +26,7 @@ const IconCategory = props => (
 IconCategory.propTypes = {
   heading: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  url: PropTypes.string,
+  url: PropTypes.string
 };
 
 export default IconCategory;

@@ -1,5 +1,5 @@
 import React from 'react';
-import uuidv4 from 'uuid/v4';
+import shortid from 'shortid';
 
 import SectionSidebar from '../components/SectionSidebar';
 import PageMeta from '../components/PageMeta';
@@ -30,11 +30,7 @@ const TreatmentPageC = () => (
       />
       <main id="main">
         <div className="l-mt-3">
-          <ChapterHeading
-            heading="Lungekreft"
-            line="none"
-            h="h1"
-          />
+          <ChapterHeading heading="Lungekreft" line="none" h="h1" />
         </div>
         <div className="row l-mt-4">
           <aside className="col-xs-12 col-md-3 l-mb-4">
@@ -45,9 +41,7 @@ const TreatmentPageC = () => (
             />
           </aside>
           <div className="col-xs-12 col-md-8 col-md-offset-1 t-body-text t-right">
-            <Link href="#a">
-              Hva er et pakkeforløp?
-            </Link>
+            <Link href="#a">Hva er et pakkeforløp?</Link>
           </div>
         </div>
         <div className="row l-mt-4">
@@ -57,12 +51,12 @@ const TreatmentPageC = () => (
                 heading="Inngang til pakkeforløpet"
                 smallContent
                 treatmentsDuration="7 kalenderdager fra henvisning mottatt til første fremmøte utredende avdeling"
-                id={uuidv4()}
+                id={shortid.generate()}
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </p>
               </Collapsible>
             </div>
@@ -71,12 +65,12 @@ const TreatmentPageC = () => (
                 heading="Utredning av lungekreft"
                 smallContent
                 treatmentsDuration="21 kalenderdager fra første fremmøte i utredende avdeling til avsluttet utredning (beslutning tas)"
-                id={uuidv4()}
+                id={shortid.generate()}
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </p>
               </Collapsible>
             </div>
@@ -85,12 +79,12 @@ const TreatmentPageC = () => (
                 heading="Behandling av lungekreft"
                 smallContent
                 treatmentsDuration="7 kalenderdager (medikamentell behandling)/14 kalenderdager (kirurgi eller cellegift) fra avsluttet utredning til start behandling"
-                id={uuidv4()}
+                id={shortid.generate()}
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </p>
               </Collapsible>
             </div>
@@ -98,12 +92,12 @@ const TreatmentPageC = () => (
               <Collapsible
                 heading="Oppfølging og kontroll ved lungekreft"
                 smallContent
-                id={uuidv4()}
+                id={shortid.generate()}
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </p>
               </Collapsible>
             </div>
@@ -111,12 +105,12 @@ const TreatmentPageC = () => (
               <Collapsible
                 heading="Ut av pakkeforløpet"
                 smallContent
-                id={uuidv4()}
+                id={shortid.generate()}
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </p>
               </Collapsible>
             </div>
@@ -134,7 +128,11 @@ const TreatmentPageC = () => (
             </div>
             <div className="l-mt-2">
               <Link wideButton arrow color="purple">
-                Les mer om symptomer, årsaker og behandling av lungekreft på <span style={{textDecoration: 'underline'}}>helsenorge.no</span>.
+                Les mer om symptomer, årsaker og behandling av lungekreft på{' '}
+                <span style={{ textDecoration: 'underline' }}>
+                  helsenorge.no
+                </span>
+                .
               </Link>
             </div>
             <div className="l-mt-3">
