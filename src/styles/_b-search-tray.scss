@@ -5,11 +5,13 @@
   height: 20rem;
 
   @include mq($until: $tablet) {
-    height: 35vh;
+    height: 50vh;
   }
 
   &__item {
-    animation: fadeInUp 300ms ease;
+    @include mq($from: tablet) {
+      animation: fadeInUp 300ms ease;
+    }
   }
 
   &--blue {
