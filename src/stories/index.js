@@ -26,7 +26,6 @@ import FilterList from '../components/FilterList';
 import Footer from '../components/Footer';
 import FooterHelfo from '../components/FooterHelfo';
 import Heading from '../components/Heading';
-import IconCategory from '../components/IconCategory';
 import IconWithText from '../components/IconWithText';
 import Image from '../components/Image';
 import InputSearch from '../components/InputSearch';
@@ -99,27 +98,6 @@ storiesOf('Grid', module)
           xs 12, sm-6, md-4, lg-3
         </div>
       </div>
-    </div>
-  ));
-
-storiesOf('IconCategory', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => (
-    <div style={{ overflow: 'hidden' }}>
-      <IconCategory
-        heading={text('Text', 'Pakkeforløp')}
-        icon={text('Icon', './icons/Pakkeforløp.svg')}
-      />
-    </div>
-  ))
-  .addWithStaticMarkup('With url', () => (
-    <div style={{ overflow: 'hidden' }}>
-      <IconCategory
-        heading={text('Text', 'Konferanser')}
-        icon={text('Icon', './icons/Konferanser.svg')}
-        url={text('Text', '#a')}
-      />
     </div>
   ));
 
@@ -364,55 +342,31 @@ storiesOf('Button', module)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('All', () => (
     <>
-      <Button>
-        {text('Content', 'Submit')}
-      </Button>
-      <br/>
-      <Button
-        arrow={boolean('Arrow', true)}
-      >
-        {text('Content', 'Arrow')}
-      </Button>
-      <br/>
-      <Button
-        download={boolean('Download', true)}
-      >
+      <Button>{text('Content', 'Submit')}</Button>
+      <br />
+      <Button arrow={boolean('Arrow', true)}>{text('Content', 'Arrow')}</Button>
+      <br />
+      <Button download={boolean('Download', true)}>
         {text('Content', 'Download')}
       </Button>
-      <br/>
-      <Button
-        small={boolean('Small', true)}
-      >
-        {text('Content', 'Small')}
-      </Button>
-      <br/>
-      <Button
-        secondary={boolean('Secondary', true)}
-      >
+      <br />
+      <Button small={boolean('Small', true)}>{text('Content', 'Small')}</Button>
+      <br />
+      <Button secondary={boolean('Secondary', true)}>
         {text('Content', 'Secondary')}
       </Button>
-      <br/>
-      <Button
-        plain={boolean('Plain', true)}
-      >
-        {text('Content', 'Plain')}
-      </Button>
-      <br/>
-      <Button
-        secondaryDark={boolean('Secondary dark', true)}
-      >
+      <br />
+      <Button plain={boolean('Plain', true)}>{text('Content', 'Plain')}</Button>
+      <br />
+      <Button secondaryDark={boolean('Secondary dark', true)}>
         {text('Content', 'SecondaryDark')}
       </Button>
-      <br/>
-      <Button
-        optionPrimary={boolean('Option primary', true)}
-      >
+      <br />
+      <Button optionPrimary={boolean('Option primary', true)}>
         {text('Content', 'Option primary')}
       </Button>
-      <br/>
-      <Button
-        optionSecondary={boolean('Option secondary', true)}
-      >
+      <br />
+      <Button optionSecondary={boolean('Option secondary', true)}>
         {text('Content', 'Option secondary')}
       </Button>
     </>
@@ -724,7 +678,10 @@ storiesOf('Collapsible', module)
   .addWithStaticMarkup('With treatment duration', () => (
     <Collapsible
       heading={text('Heading', 'Heading')}
-      treatmentsDuration={text('Treatments duration', '13 hours and 37 minutes')}
+      treatmentsDuration={text(
+        'Treatments duration',
+        '13 hours and 37 minutes'
+      )}
       smallContent={boolean('Small content', true)}
     >
       {text('Text', 'You can place any content in here.')}
@@ -1179,7 +1136,5 @@ storiesOf('TreatmentsDuration', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <TreatmentsDuration
-      duration="13 hours and 37 minuts"
-    />
+    <TreatmentsDuration duration="13 hours and 37 minuts" />
   ));

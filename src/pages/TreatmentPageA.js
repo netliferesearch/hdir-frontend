@@ -1,7 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
 
-import IconCategory from '../components/IconCategory';
 import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Collapsible from '../components/Collapsible';
@@ -9,7 +8,8 @@ import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import List from '../components/List';
 import Heading from '../components/Heading';
-import Button from '../components/Button';
+import FilterList from '../components/FilterList';
+import IconWithText from '../components/IconWithText';
 
 const TreatmentPageA = () => (
   <>
@@ -35,36 +35,23 @@ const TreatmentPageA = () => (
           <ChapterHeading heading="Lungekreft" line="none" h="h1" />
         </div>
         <div className="row l-mt-2">
-          <div className="col-xs-12 col-md-6 l-mb-4">
-            <IconCategory
-              heading="Pakkeforløp"
-              icon="../icons/Pakkeforløp.svg"
-            />
+          <div className="col-xs-12 col-md-6">
+            <IconWithText text="Pakkeforløp" icon="../icons/Pakkeforløp.svg" />
           </div>
-          <div className="col-xs-12 col-md-6 t-body-text t-right">
+          <div className="col-xs-12 col-md-6 t-body-text t-lg-right">
             <Link href="#a">Hva er et pakkeforløp?</Link>
           </div>
         </div>
         <div className="row l-mt-2">
-          <div className="col-xs-12">
-            <p className="t--uppercase">Vis forløpet som:</p>
+          <div class="col-xs-12 col-md-3 col-lg-2 l-mt-1">
+            <span class="t--small t--grey">VIS FORLØPET SOM</span>
           </div>
-        </div>
-        <div className="row l-mt-1">
-          <div className="col-xs-12 col-md-4 l-mb-4">
-            <Button optionPrimary classes="l-mr-2">
-              <span>Tekst</span>
-            </Button>
-            <Button optionSecondary>
-              <span>Flytdiagram</span>
-            </Button>
-          </div>
-          <div className="col-xs-12 col-md-8 t-body-text t-right">
-            <Link href="#a">Hva er et pakkeforløp?</Link>
+          <div className="col-xs-12 col-md-9 col-lg-10 l-mt-1">
+            <FilterList list={['Tekst', 'Flytdiagram']} />
           </div>
         </div>
 
-        <div className="row l-mt-2">
+        <div className="row">
           <div className="col-xs-12 l-mb-4">
             <div className="l-mt-3">
               <Collapsible
