@@ -20,17 +20,6 @@
     width: 100%;
     width: auto;
   }
-  &--with-text {
-    display: flex;
-    align-items: center;
-    &__image {
-      margin-right: 1em;
-    }
-    &__text {
-      text-transform: uppercase;
-      font-size: $meta-text;
-    }
-  }
   &--category {
     display: flex;
     align-items: center;
