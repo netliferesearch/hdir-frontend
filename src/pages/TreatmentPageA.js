@@ -43,16 +43,18 @@ const TreatmentPageA = () => (
           </div>
         </div>
         <div className="row l-mt-2">
-          <div class="col-xs-12 col-md-3 col-lg-2 l-mt-1">
+          <div class="col-xs-12">
             <span class="t--small t--grey">VIS FORLØPET SOM</span>
           </div>
+        </div>
+        <div className="row">
           <div className="col-xs-12 col-md-9 col-lg-10 l-mt-1">
             <FilterList list={['Tekst', 'Flytdiagram']} />
           </div>
         </div>
 
         <div className="row">
-          <div className="col-xs-12 l-mb-4">
+          <div className="col-xs-12">
             <div className="l-mt-3">
               <Collapsible
                 heading="Inngang til pakkeforløpet"
@@ -130,10 +132,7 @@ const TreatmentPageA = () => (
               line="none"
               url="#a"
             />
-            <div className="l-mt-2">
-              <hr className="b-hr b-hr--black b-hr--thin" />
-            </div>
-            <div className="l-mt-5">
+            <div className="l-mt-4">
               <Link wideButton arrow color="purple">
                 Les mer om symptomer, årsaker og behandling av lungekreft på{' '}
                 <span style={{ textDecoration: 'underline' }}>
@@ -201,9 +200,9 @@ const TreatmentPageA = () => (
           </div>
         </div>
       </main>
-      <div className="l-mt-5">
-        <div className="row">
-          <div className="col-xs-12">
+      <div className="row">
+        <div className="col-xs-12">
+          <div className="l-mt-4">
             <Link href="#a" small icon="../icons/method.svg">
               Om pakkeforløpet
             </Link>
