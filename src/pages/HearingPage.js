@@ -21,7 +21,7 @@ const HearingPage = () => (
           <aside className="col-md-3 col-xs-12 l-mb-4">
             <SectionSidebar heading="Innhold på denne siden" />
           </aside>
-          <div className="col-md-7 col-md-offset-1">
+          <div className="col-xs-12 col-md-7 col-md-offset-1">
             <div className="t-body-text">
               <h2>Høringsbrev</h2>
               <p>
