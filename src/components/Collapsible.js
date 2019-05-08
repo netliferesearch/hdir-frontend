@@ -5,7 +5,6 @@ import zenscroll from 'zenscroll';
 
 import Alert from './Alert';
 import Heading from './Heading';
-import TreatmentsDuration from './TreatmentsDuration';
 
 const buttonClasses = (active, size, subtle) =>
   classNames({
@@ -78,6 +77,9 @@ const Collapsible = props => {
       className={collapsibleClasses(props.size, props.subtle, props.noBorder)}
       ref={parentElement}
     >
+      {props.category && (
+        <div className="b-collapsible__category">{props.category}</div>
+      )}
       <button
         className={buttonClasses(collapsed, props.size, props.subtle)}
         aria-expanded={collapsed}
@@ -91,16 +93,13 @@ const Collapsible = props => {
           )}
         </Heading>
       </button>
-      {props.treatmentsDuration && (
-        <TreatmentsDuration
-          duration={props.treatmentsDuration}
-          classes="l-mt-1"
-        />
-      )}
       {props.subheading && !props.subheadingContent && (
         <div className="b-collapsible__subheading l-mt-1">
           {props.subheading}
         </div>
+      )}
+      {!props.subheading && props.subheadingContent && (
+        <div className="l-mt-1"> {props.subheadingContent}</div>
       )}
       {props.subheading && props.subheadingContent && (
         <div className="b-collapsible__subheading-collapsible l-mt-1">
@@ -142,10 +141,10 @@ Collapsible.propTypes = {
   h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,
+  category: PropTypes.string,
   noBorder: PropTypes.bool,
   alert: PropTypes.string,
   code: PropTypes.string,
-  treatmentsDuration: PropTypes.string,
   id: PropTypes.string
 };
 

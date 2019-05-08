@@ -45,12 +45,11 @@ import SquareImage from '../components/SquareImage';
 import Statistics from '../components/Statistics';
 import TableExample from '../components/TableExample';
 import TransportBlock from '../components/TransportBlock';
-import TreatmentsDuration from '../components/TreatmentsDuration';
 
 import './listItemType';
 import './list';
 import './navList';
-import './pages';
+// import './pages';
 
 storiesOf('Grid', module)
   .addDecorator(withKnobs)
@@ -105,13 +104,11 @@ storiesOf('IconWithText', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => (
-    <div style={{ overflow: 'hidden' }}>
-      <IconWithText
-        icon={text('Icon', './icons/clock.svg')}
-        alt={text('alt', 'Time is on my side')}
-        text={text('Text', 'Time is on my side')}
-      />
-    </div>
+    <IconWithText
+      icon={text('Icon', './icons/clock.svg')}
+      text={text('Text', 'Time is on my side')}
+      size={select('Size', { small: 'small', medium: 'medium' }, 'medium')}
+    />
   ));
 
 storiesOf('Image', module)
@@ -632,6 +629,22 @@ storiesOf('Collapsible', module)
       subheading={text('Subheading', 'Svak anbefaling')}
       subheadingContent={text('Subheading Content', 'Bla bla bla bla')}
       subtle={boolean('Subtle', false)}
+      h={select(
+        'Heading',
+        {
+          none: null,
+          h1: 'h1',
+          h2: 'h2',
+          h3: 'h3',
+          h4: 'h4',
+          h5: 'h5',
+          h6: 'h6'
+        },
+        'none'
+      )}
+      noBorder={boolean('No border', false)}
+      code={text('Code', '')}
+      id={text('Id', 'Some unique id')}
       smallContent={boolean('Small content', false)}
       size={select(
         'Size',
@@ -646,15 +659,30 @@ storiesOf('Collapsible', module)
     >
       {text('Text', 'You can place any content in here.')}
     </Collapsible>
-  ))
-  .addWithStaticMarkup('With treatment duration', () => (
+  ));
+
+storiesOf('Collapsible', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('With subcontent', () => (
     <Collapsible
       heading={text('Heading', 'Heading')}
-      treatmentsDuration={text(
-        'Treatments duration',
-        '13 hours and 37 minutes'
+      subheadingContent={
+        <>
+          <span style={{ color: 'limegreen' }}>Some</span> HTML/JSX{' '}
+          <span style={{ color: 'pink' }}>content</span>
+        </>
+      }
+      id={text('Id', 'Some unique id')}
+      size={select(
+        'Size',
+        {
+          large: 'large',
+          medium: 'medium',
+          small: 'small'
+        },
+        'large'
       )}
-      smallContent={boolean('Small content', true)}
     >
       {text('Text', 'You can place any content in here.')}
     </Collapsible>
@@ -1101,10 +1129,3 @@ storiesOf('TableExample', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Basic', () => <TableExample />);
-
-storiesOf('TreatmentsDuration', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => (
-    <TreatmentsDuration duration="13 hours and 37 minuts" />
-  ));

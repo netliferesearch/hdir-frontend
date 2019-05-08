@@ -1,15 +1,18 @@
 import React from 'react';
 import shortid from 'shortid';
 
-import SectionSidebar from '../components/SectionSidebar';
-import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Collapsible from '../components/Collapsible';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
+import List from '../components/List';
+import Select from '../components/Select';
+import Heading from '../components/Heading';
+import FilterList from '../components/FilterList';
+import IconWithText from '../components/IconWithText';
 
-const TreatmentPageB = () => (
+const TreatmentPageA = () => (
   <>
     <div className="l-container">
       <Breadcrumbs
@@ -32,39 +35,144 @@ const TreatmentPageB = () => (
         <div className="l-mt-3">
           <ChapterHeading heading="Lungekreft" line="none" h="h1" />
         </div>
-        <div className="row l-mt-4">
-          <aside className="col-xs-12 col-md-3 l-mb-4">
-            <SectionSidebar
-              heading="PAKKEFORLØP"
-              headingUrl="#a"
-              icon="../icons/Konferanser.svg"
-            />
-          </aside>
-          <div className="col-xs-12 col-md-8 col-md-offset-1 t-body-text t-right">
+        <div className="row l-mt-1">
+          <div className="col-xs-12 col-md-6 l-mt-1">
+            <IconWithText text="Pakkeforløp" icon="../icons/Pakkeforløp.svg" />
+          </div>
+          <div className="col-xs-12 col-md-6 l-mt-1 t-small t-lg-right">
             <Link href="#a">Hva er et pakkeforløp?</Link>
           </div>
         </div>
-        <div className="row l-mt-4">
-          <div className="col-xs-12 l-mb-4">
+        <div className="row bottom-xs l-mt-2">
+          <div class="col-xs-12 col-md-4 col-lg-7">
+            <div class="t--small t--grey">VIS FORLØPET SOM</div>
+            <div className="l-mt-1">
+              <FilterList list={['Tekst', 'Flytdiagram']} />
+            </div>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-5">
+            <div className="l-mt-1">
+              <Select
+                label="Vis viktigste for:"
+                placeholder="Velg"
+                simple
+                options={['a', 'b', 'c', 'd']}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-xs-12">
             <div className="l-mt-3">
               <Collapsible
                 heading="Inngang til pakkeforløpet"
                 smallContent
-                treatmentsDuration="7 kalenderdager fra henvisning mottatt til første fremmøte utredende avdeling"
+                subheadingContent={
+                  <>
+                    <IconWithText
+                      text="Forløpstid"
+                      icon="../icons/clock.svg"
+                      size="small"
+                    />
+                    <p className="t--small t--grey">
+                      7 kalenderdager fra henvisning mottatt til første fremmøte
+                      utredende avdeling
+                    </p>
+                  </>
+                }
                 id={shortid.generate()}
               >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <div className="col-xs-12 col-md-10 col-md-offset-1">
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Mistanke om psykoseutvikling"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Vurdering av av varseltegn og symptomer"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Dialog med pasient og/eller foreldre, ev. pårørende"
+                      category="AKTIVITET"
+                      subheadingContent={
+                        <span className="t--grey">
+                          #henviser #pasient #pårørende
+                        </span>
+                      }
+                      size="medium"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Pakkeforløpet starter"
+                      category="AKTIVITET"
+                      size="medium"
+                    >
+                      <>
+                        <p>
+                          Hensikten med første samtale er å avklare hva som er
+                          pasientens og/eller foreldres, ev. pårørendes behov,
+                          mål og ønsker for behandling og oppfølging. Ved behov,
+                          bør det legges til rette for samtale utenfor
+                          institusjonen. Behandler skal bidra til å etablere en
+                          trygg ramme for åpenhet og tillit.
+                        </p>
+                        <Collapsible
+                          heading="Beskrivelse av aktiviteten"
+                          size="small"
+                          id={shortid.generate()}
+                        >
+                          <p>abc abc abc.</p>
+                        </Collapsible>
+                        <br />
+                        <Collapsible
+                          heading="Begrunnelse"
+                          size="small"
+                          id={shortid.generate()}
+                        >
+                          <p>abc abc abc.</p>
+                        </Collapsible>
+                      </>
+                    </Collapsible>
+                  </div>
+                </div>
               </Collapsible>
             </div>
             <div className="l-mt-3">
               <Collapsible
                 heading="Utredning av lungekreft"
                 smallContent
-                treatmentsDuration="21 kalenderdager fra første fremmøte i utredende avdeling til avsluttet utredning (beslutning tas)"
+                subheadingContent={
+                  <>
+                    <IconWithText
+                      text="Forløpstid"
+                      icon="../icons/clock.svg"
+                      size="small"
+                    />
+                    <p className="t--small t--grey">
+                      21 kalenderdager fra første fremmøte i utredende avdeling
+                      til avsluttet utredning (beslutning tas)
+                    </p>
+                  </>
+                }
                 id={shortid.generate()}
               >
                 <p>
@@ -78,7 +186,20 @@ const TreatmentPageB = () => (
               <Collapsible
                 heading="Behandling av lungekreft"
                 smallContent
-                treatmentsDuration="7 kalenderdager (medikamentell behandling)/14 kalenderdager (kirurgi eller cellegift) fra avsluttet utredning til start behandling"
+                subheadingContent={
+                  <>
+                    <IconWithText
+                      text="Forløpstid"
+                      icon="../icons/clock.svg"
+                      size="small"
+                    />
+                    <p className="t--small t--grey">
+                      7 kalenderdager (medikamentell behandling)/14
+                      kalenderdager (kirurgi eller cellegift) fra avsluttet
+                      utredning til start behandling
+                    </p>
+                  </>
+                }
                 id={shortid.generate()}
               >
                 <p>
@@ -123,10 +244,7 @@ const TreatmentPageB = () => (
               line="none"
               url="#a"
             />
-            <div className="l-mt-2">
-              <hr className="b-hr b-hr--black b-hr--thin" />
-            </div>
-            <div className="l-mt-2">
+            <div className="l-mt-4">
               <Link wideButton arrow color="purple">
                 Les mer om symptomer, årsaker og behandling av lungekreft på{' '}
                 <span style={{ textDecoration: 'underline' }}>
@@ -135,30 +253,75 @@ const TreatmentPageB = () => (
                 .
               </Link>
             </div>
-            <div className="l-mt-3">
-              <PageMeta
-                publishDate="11. oktober 2008"
-                editDate="11. august 2018"
-              />
+            <div className="row l-mt-4">
+              <div className="col-xs-12">
+                <Box color="white">
+                  <p className="l-m-0 t--uppercase">Last ned trykksaker</p>
+                  <Heading h="h3" className="l-mt-2">
+                    Materiell til pasienter og pårørende
+                  </Heading>
+                  <div className="l-mt-2">
+                    <hr className="b-hr b-hr--blue b-hr--thin" />
+                  </div>
+                  <List
+                    list={[
+                      {
+                        type: 'generic',
+                        url: '#6',
+                        fields: {
+                          download: 'true',
+                          heading: 'FAKTAARK',
+                          subheading: 'Pakkeforløp på 1-2-3'
+                        }
+                      }
+                    ]}
+                  />
+                </Box>
+              </div>
+            </div>
+            <div className="row l-mt-4">
+              <div className="col-xs-12">
+                <Box color="white">
+                  <p className="l-m-0 t--uppercase">Relaterte produkter</p>
+                  <div className="l-mt-2">
+                    <hr className="b-hr b-hr--black b-hr--thick" />
+                  </div>
+                  <List
+                    list={[
+                      {
+                        type: 'generic',
+                        url: '#6',
+                        fields: {
+                          heading: 'Relatert retningslinje',
+                          category: 'Nasjonale faglige retningslinjer'
+                        }
+                      },
+                      {
+                        type: 'generic',
+                        url: '#6',
+                        fields: {
+                          heading: 'Lungekreft, mesoteliom og thymom',
+                          category: 'Handlingsprogram'
+                        }
+                      }
+                    ]}
+                  />
+                </Box>
+              </div>
             </div>
           </div>
         </div>
       </main>
-      <div className="l-mt-4">
-        <div className="row">
-          <div className="col-xs-12 col-md-8 col-md-offset-4">
+      <div className="row">
+        <div className="col-xs-12">
+          <div className="l-mt-4">
             <Link href="#a" small icon="../icons/method.svg">
-              Om metode og prosess
+              Om pakkeforløpet
             </Link>
             <br />
             <Link href="#a" small icon="../icons/print.svg">
-              Skriv ut hele retningslinjen
+              Skriv ut hele pakkeforløpet
             </Link>
-            <br />
-            <PageMeta
-              publishDate="11. august 2008"
-              editDate="11. august 2018"
-            />
           </div>
         </div>
       </div>
@@ -179,4 +342,4 @@ const TreatmentPageB = () => (
   </>
 );
 
-export default TreatmentPageB;
+export default TreatmentPageA;

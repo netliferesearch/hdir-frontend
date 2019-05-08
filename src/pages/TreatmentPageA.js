@@ -7,6 +7,7 @@ import Collapsible from '../components/Collapsible';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import List from '../components/List';
+import Select from '../components/Select';
 import Heading from '../components/Heading';
 import FilterList from '../components/FilterList';
 import IconWithText from '../components/IconWithText';
@@ -34,22 +35,30 @@ const TreatmentPageA = () => (
         <div className="l-mt-3">
           <ChapterHeading heading="Lungekreft" line="none" h="h1" />
         </div>
-        <div className="row l-mt-2">
-          <div className="col-xs-12 col-md-6">
+        <div className="row l-mt-1">
+          <div className="col-xs-12 col-md-6 l-mt-1">
             <IconWithText text="Pakkeforløp" icon="../icons/Pakkeforløp.svg" />
           </div>
-          <div className="col-xs-12 col-md-6 t-body-text t-lg-right">
+          <div className="col-xs-12 col-md-6 l-mt-1 t-small t-lg-right">
             <Link href="#a">Hva er et pakkeforløp?</Link>
           </div>
         </div>
-        <div className="row l-mt-2">
-          <div class="col-xs-12">
-            <span class="t--small t--grey">VIS FORLØPET SOM</span>
+        <div className="row bottom-xs l-mt-2">
+          <div class="col-xs-12 col-md-4 col-lg-7">
+            <div class="t--small t--grey">VIS FORLØPET SOM</div>
+            <div className="l-mt-1">
+              <FilterList list={['Tekst', 'Flytdiagram']} />
+            </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-12 col-md-9 col-lg-10 l-mt-1">
-            <FilterList list={['Tekst', 'Flytdiagram']} />
+          <div className="col-xs-12 col-md-8 col-lg-5">
+            <div className="l-mt-1">
+              <Select
+                label="Vis viktigste for:"
+                placeholder="Velg"
+                simple
+                options={['a', 'b', 'c', 'd']}
+              />
+            </div>
           </div>
         </div>
 
@@ -59,21 +68,111 @@ const TreatmentPageA = () => (
               <Collapsible
                 heading="Inngang til pakkeforløpet"
                 smallContent
-                treatmentsDuration="7 kalenderdager fra henvisning mottatt til første fremmøte utredende avdeling"
+                subheadingContent={
+                  <>
+                    <IconWithText
+                      text="Forløpstid"
+                      icon="../icons/clock.svg"
+                      size="small"
+                    />
+                    <p className="t--small t--grey">
+                      7 kalenderdager fra henvisning mottatt til første fremmøte
+                      utredende avdeling
+                    </p>
+                  </>
+                }
                 id={shortid.generate()}
               >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <div className="col-xs-12 col-md-10 col-md-offset-1">
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Mistanke om psykoseutvikling"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Vurdering av av varseltegn og symptomer"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Dialog med pasient og/eller foreldre, ev. pårørende"
+                      category="AKTIVITET"
+                      subheadingContent={
+                        <span className="t--grey">
+                          #henviser #pasient #pårørende
+                        </span>
+                      }
+                      size="medium"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Pakkeforløpet starter"
+                      category="AKTIVITET"
+                      size="medium"
+                    >
+                      <>
+                        <p>
+                          Hensikten med første samtale er å avklare hva som er
+                          pasientens og/eller foreldres, ev. pårørendes behov,
+                          mål og ønsker for behandling og oppfølging. Ved behov,
+                          bør det legges til rette for samtale utenfor
+                          institusjonen. Behandler skal bidra til å etablere en
+                          trygg ramme for åpenhet og tillit.
+                        </p>
+                        <Collapsible
+                          heading="Beskrivelse av aktiviteten"
+                          size="small"
+                          id={shortid.generate()}
+                        >
+                          <p>abc abc abc.</p>
+                        </Collapsible>
+                        <br />
+                        <Collapsible
+                          heading="Begrunnelse"
+                          size="small"
+                          id={shortid.generate()}
+                        >
+                          <p>abc abc abc.</p>
+                        </Collapsible>
+                      </>
+                    </Collapsible>
+                  </div>
+                </div>
               </Collapsible>
             </div>
             <div className="l-mt-3">
               <Collapsible
                 heading="Utredning av lungekreft"
                 smallContent
-                treatmentsDuration="21 kalenderdager fra første fremmøte i utredende avdeling til avsluttet utredning (beslutning tas)"
+                subheadingContent={
+                  <>
+                    <IconWithText
+                      text="Forløpstid"
+                      icon="../icons/clock.svg"
+                      size="small"
+                    />
+                    <p className="t--small t--grey">
+                      21 kalenderdager fra første fremmøte i utredende avdeling
+                      til avsluttet utredning (beslutning tas)
+                    </p>
+                  </>
+                }
                 id={shortid.generate()}
               >
                 <p>
@@ -87,7 +186,20 @@ const TreatmentPageA = () => (
               <Collapsible
                 heading="Behandling av lungekreft"
                 smallContent
-                treatmentsDuration="7 kalenderdager (medikamentell behandling)/14 kalenderdager (kirurgi eller cellegift) fra avsluttet utredning til start behandling"
+                subheadingContent={
+                  <>
+                    <IconWithText
+                      text="Forløpstid"
+                      icon="../icons/clock.svg"
+                      size="small"
+                    />
+                    <p className="t--small t--grey">
+                      7 kalenderdager (medikamentell behandling)/14
+                      kalenderdager (kirurgi eller cellegift) fra avsluttet
+                      utredning til start behandling
+                    </p>
+                  </>
+                }
                 id={shortid.generate()}
               >
                 <p>
