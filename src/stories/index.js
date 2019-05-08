@@ -26,6 +26,7 @@ import FilterList from '../components/FilterList';
 import Footer from '../components/Footer';
 import FooterHelfo from '../components/FooterHelfo';
 import Heading from '../components/Heading';
+import IconWithText from '../components/IconWithText';
 import Image from '../components/Image';
 import InputSearch from '../components/InputSearch';
 import Link from '../components/Link';
@@ -48,7 +49,7 @@ import TransportBlock from '../components/TransportBlock';
 import './listItemType';
 import './list';
 import './navList';
-import './pages';
+// import './pages';
 
 storiesOf('Grid', module)
   .addDecorator(withKnobs)
@@ -97,6 +98,17 @@ storiesOf('Grid', module)
         </div>
       </div>
     </div>
+  ));
+
+storiesOf('IconWithText', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Basic', () => (
+    <IconWithText
+      icon={text('Icon', './icons/clock.svg')}
+      text={text('Text', 'Time is on my side')}
+      size={select('Size', { small: 'small', medium: 'medium' }, 'medium')}
+    />
   ));
 
 storiesOf('Image', module)
@@ -323,6 +335,29 @@ storiesOf('ArticleIntro', module)
 storiesOf('Button', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
+  .addWithStaticMarkup('All', () => (
+    <>
+      <Button>{text('Content', 'Submit')}</Button>
+      <br />
+      <Button arrow={boolean('Arrow', true)}>{text('Content', 'Arrow')}</Button>
+      <br />
+      <Button download={boolean('Download', true)}>
+        {text('Content', 'Download')}
+      </Button>
+      <br />
+      <Button small={boolean('Small', true)}>{text('Content', 'Small')}</Button>
+      <br />
+      <Button secondary={boolean('Secondary', true)}>
+        {text('Content', 'Secondary')}
+      </Button>
+      <br />
+      <Button plain={boolean('Plain', true)}>{text('Content', 'Plain')}</Button>
+      <br />
+      <Button secondaryDark={boolean('Secondary dark', true)}>
+        {text('Content', 'SecondaryDark')}
+      </Button>
+    </>
+  ))
   .addWithStaticMarkup('Basic', () => (
     <Button
       arrow={boolean('Arrow', false)}
@@ -333,6 +368,102 @@ storiesOf('Button', module)
       small={boolean('Small', false)}
     >
       {text('Content', 'Submit')}
+    </Button>
+  ))
+  .addWithStaticMarkup('arrow', () => (
+    <Button
+      arrow={boolean('Arrow', true)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Arrow')}
+    </Button>
+  ))
+  .addWithStaticMarkup('download', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', true)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Download')}
+    </Button>
+  ))
+  .addWithStaticMarkup('small', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', true)}
+    >
+      {text('Content', 'Small')}
+    </Button>
+  ))
+  .addWithStaticMarkup('secondary', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', true)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Secondary')}
+    </Button>
+  ))
+  .addWithStaticMarkup('plain', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', true)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Plain')}
+    </Button>
+  ))
+  .addWithStaticMarkup('secondaryDark', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', true)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'SecondaryDark')}
+    </Button>
+  ))
+  .addWithStaticMarkup('Option primary', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Option primary')}
+    </Button>
+  ))
+  .addWithStaticMarkup('Option secondary', () => (
+    <Button
+      arrow={boolean('Arrow', false)}
+      download={boolean('Download', false)}
+      secondary={boolean('Secondary', false)}
+      secondaryDark={boolean('Secondary dark', false)}
+      plain={boolean('Plain', false)}
+      small={boolean('Small', false)}
+    >
+      {text('Content', 'Option secondary')}
     </Button>
   ));
 
@@ -497,7 +628,24 @@ storiesOf('Collapsible', module)
       heading={text('Heading', 'Heading')}
       subheading={text('Subheading', 'Svak anbefaling')}
       subheadingContent={text('Subheading Content', 'Bla bla bla bla')}
+      collapsed={boolean('Collapsed', false)}
       subtle={boolean('Subtle', false)}
+      h={select(
+        'Heading',
+        {
+          none: null,
+          h1: 'h1',
+          h2: 'h2',
+          h3: 'h3',
+          h4: 'h4',
+          h5: 'h5',
+          h6: 'h6'
+        },
+        'none'
+      )}
+      noBorder={boolean('No border', false)}
+      code={text('Code', '')}
+      id={text('Id', 'Some unique id')}
       smallContent={boolean('Small content', false)}
       size={select(
         'Size',
@@ -509,6 +657,33 @@ storiesOf('Collapsible', module)
         'large'
       )}
       alert={text('Alert', '')}
+    >
+      {text('Text', 'You can place any content in here.')}
+    </Collapsible>
+  ));
+
+storiesOf('Collapsible', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('With subcontent', () => (
+    <Collapsible
+      heading={text('Heading', 'Heading')}
+      subheadingContent={
+        <>
+          <span style={{ color: 'limegreen' }}>Some</span> HTML/JSX{' '}
+          <span style={{ color: 'pink' }}>content</span>
+        </>
+      }
+      id={text('Id', 'Some unique id')}
+      size={select(
+        'Size',
+        {
+          large: 'large',
+          medium: 'medium',
+          small: 'small'
+        },
+        'large'
+      )}
     >
       {text('Text', 'You can place any content in here.')}
     </Collapsible>

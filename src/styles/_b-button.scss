@@ -63,4 +63,26 @@
       }
     }
   }
+
+  &--option {
+    &-primary,
+    &-secondary {
+      text-transform: uppercase;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-radius: 0;
+      color: $black;
+    }
+    &-primary {
+      padding: 0.5em;
+      background-color: $green-light;
+      border-bottom: 1px solid $green-light;
+    }
+    &-secondary {
+      padding: 0.5em 0;
+      background-color: transparent;
+      border-bottom: 1px solid $black;
+    }
+  }
 }

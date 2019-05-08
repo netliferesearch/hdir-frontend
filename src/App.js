@@ -48,6 +48,10 @@ import StatisticsSubpage2 from './pages/StatisticsSubpage2';
 import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import ThemePage from './pages/ThemePage';
 import TransportPage from './pages/TransportPage';
+import TreatmentPageA from './pages/TreatmentPageA';
+import TreatmentPageB from './pages/TreatmentPageB';
+import TreatmentPageC from './pages/TreatmentPageC';
+import TreatmentPageD from './pages/TreatmentPageD';
 
 class App extends Component {
   render() {
@@ -147,6 +151,10 @@ class App extends Component {
                 path="/skjemabygger-enonic"
                 component={FormbuilderTestPage}
               />
+              <Route path="/pakkeforløp-a" component={TreatmentPageA}/>
+              <Route path="/pakkeforløp-b" component={TreatmentPageB}/>
+              <Route path="/pakkeforløp-c" component={TreatmentPageC}/>
+              <Route path="/pakkeforløp-d" component={TreatmentPageD}/>
               <Route component={NotFound} />
             </Switch>
             <Box noPadding square color="blueDark">

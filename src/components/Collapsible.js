@@ -51,10 +51,14 @@ const Collapsible = props => {
   }, [props.id]);
 
   useEffect(() => {
-    if (collapsed) {
+    if (collapsed && !props.collapsed) {
       zenscroll.intoView(parentElement.current, 300);
     }
-  }, [collapsed]);
+  }, [collapsed, props.collapsed]);
+
+  useEffect(() => {
+    setCollapsed(props.collapsed);
+  }, [props.collapsed]);
 
   const toggleCollapse = () => {
     setCollapsed(!collapsed);
@@ -77,6 +81,9 @@ const Collapsible = props => {
       className={collapsibleClasses(props.size, props.subtle, props.noBorder)}
       ref={parentElement}
     >
+      {props.category && (
+        <div className="b-collapsible__category">{props.category}</div>
+      )}
       <button
         className={buttonClasses(collapsed, props.size, props.subtle)}
         aria-expanded={collapsed}
@@ -94,6 +101,9 @@ const Collapsible = props => {
         <div className="b-collapsible__subheading l-mt-1">
           {props.subheading}
         </div>
+      )}
+      {!props.subheading && props.subheadingContent && (
+        <div className="l-mt-1"> {props.subheadingContent}</div>
       )}
       {props.subheading && props.subheadingContent && (
         <div className="b-collapsible__subheading-collapsible l-mt-1">
@@ -135,14 +145,17 @@ Collapsible.propTypes = {
   h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,
+  category: PropTypes.string,
   noBorder: PropTypes.bool,
   alert: PropTypes.string,
+  collapsed: PropTypes.bool,
   code: PropTypes.string,
   id: PropTypes.string
 };
 
 Collapsible.defaultProps = {
-  size: 'large'
+  size: 'large',
+  collapsed: false
 };
 
 export default Collapsible;

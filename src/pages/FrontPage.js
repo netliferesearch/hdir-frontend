@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { default as LinkComp } from '../components/Link';
+import { default as LinkComp } from '../components/Link'; // It uses "default as" to avoid naming conflict in this file.
 
 const FrontPage = () => (
   <div>
@@ -35,7 +35,9 @@ const FrontPage = () => (
         <Link to="/autorisasjon-steg-2">Autorisasjon steg 2</Link>
       </p>
       <p>
-        <Link to="/skjemabygger-enonic">Skjemaer lagt gjennom Enonics skjemabygger</Link>
+        <Link to="/skjemabygger-enonic">
+          Skjemaer lagt gjennom Enonics skjemabygger
+        </Link>
       </p>
       <p>
         <Link to="/helfo-forside">Helfo forside</Link>
@@ -75,6 +77,18 @@ const FrontPage = () => (
       </p>
       <p>
         <Link to="/lis-læringsaktiviteter">LIS-læringsaktiviteter</Link>
+      </p>
+      <p>
+        <Link to="/pakkeforløp-a">Pakkeforløp [A]</Link>
+      </p>
+      <p>
+        <Link to="/pakkeforløp-b">Pakkeforløp [B]</Link>
+      </p>
+      <p>
+        <Link to="/pakkeforløp-c">Pakkeforløp [C]</Link>
+      </p>
+      <p>
+        <Link to="/pakkeforløp-d">Pakkeforløp [D]</Link>
       </p>
       <p>
         <Link to="/produkt">Produkt</Link>

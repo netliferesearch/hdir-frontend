@@ -20,30 +20,18 @@ const buttonClasses = (
     'b-button--secondary-dark': secondaryDark
   });
 
-const Button = ({
-  arrow,
-  download,
-  small,
-  secondary,
-  plain,
-  children,
-  secondaryDark,
-  ...other
-}) => (
-  <button
-    className={buttonClasses(
-      arrow,
-      download,
-      small,
-      secondary,
-      plain,
-      secondaryDark
-    )}
-    {...other}
-  >
-    {children}
-  </button>
-);
+const Button = props => {
+  const allClassNames = buttonClasses(
+    props.arrow,
+    props.download,
+    props.small,
+    props.secondary,
+    props.plain,
+    props.secondaryDark
+  );
+
+  return <button className={allClassNames}>{props.children}</button>;
+};
 
 Button.propTypes = {
   arrow: PropTypes.bool,

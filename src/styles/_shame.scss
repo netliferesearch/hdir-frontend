@@ -48,3 +48,23 @@ table {
     }
   }
 }
+
+.b-icon-with-text {
+  display: flex;
+  align-items: center;
+  &__image {
+    height: 2em;
+    width: auto;
+    margin-right: 0.75em;
+
+    &--small {
+      height: 1em;
+      margin-right: 0.6em;
+    }
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: $meta-text;
+    font-weight: bold;
+  }
+}

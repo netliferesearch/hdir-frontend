@@ -119,6 +119,11 @@ $space-directions: (
       }
     }
   }
+
+  // rip all margins
+  &-m-0 {
+    margin: 0;
+  }
 }
 
 .l-inline-space {

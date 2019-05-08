@@ -67,9 +67,9 @@ a {
   box-shadow: 0 1px 0 $link-color;
 }
 
-// Responsive text alignment
 .t {
   @each $spaceName, $spaceValue in $flexboxgrid-breakpoints {
+    // Responsive text alignment
     &-#{$spaceName}-right {
       text-align: left;
       @include mq($from: $spaceValue) {
@@ -88,6 +88,16 @@ a {
         text-align: center;
       }
     }
+    // Brute force text alignment
+    &-right {
+      text-align: right;
+    }
+    &-left {
+      text-align: left;
+    }
+    &-center {
+      text-align: center;
+    }
   }
 }
 
@@ -98,15 +108,16 @@ a {
       color: $colorVal;
     }
   }
-}
-
-.t--small {
-  font-size: $meta-text;
-}
-
-.t--tab-left {
-  display: inline-block;
-  margin-left: 1.5rem;
+  &--small {
+    font-size: $meta-text;
+  }
+  &--tab-left {
+    display: inline-block;
+    margin-left: 1.5rem;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
 }
 
 small {
