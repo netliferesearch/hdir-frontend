@@ -628,6 +628,7 @@ storiesOf('Collapsible', module)
       heading={text('Heading', 'Heading')}
       subheading={text('Subheading', 'Svak anbefaling')}
       subheadingContent={text('Subheading Content', 'Bla bla bla bla')}
+      collapsed={boolean('Collapsed', false)}
       subtle={boolean('Subtle', false)}
       h={select(
         'Heading',

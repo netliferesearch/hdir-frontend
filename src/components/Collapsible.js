@@ -51,10 +51,14 @@ const Collapsible = props => {
   }, [props.id]);
 
   useEffect(() => {
-    if (collapsed) {
+    if (collapsed && !props.collapsed) {
       zenscroll.intoView(parentElement.current, 300);
     }
-  }, [collapsed]);
+  }, [collapsed, props.collapsed]);
+
+  useEffect(() => {
+    setCollapsed(props.collapsed);
+  }, [props.collapsed]);
 
   const toggleCollapse = () => {
     setCollapsed(!collapsed);
@@ -144,12 +148,14 @@ Collapsible.propTypes = {
   category: PropTypes.string,
   noBorder: PropTypes.bool,
   alert: PropTypes.string,
+  collapsed: PropTypes.bool,
   code: PropTypes.string,
   id: PropTypes.string
 };
 
 Collapsible.defaultProps = {
-  size: 'large'
+  size: 'large',
+  collapsed: false
 };
 
 export default Collapsible;
