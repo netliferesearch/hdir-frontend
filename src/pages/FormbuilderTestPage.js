@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from '../components/Link';
 
 // Export it so we can use the same markup on 'ArticlePageWithForm'
 export const formbuilderGeneratedMarkup = () => (
