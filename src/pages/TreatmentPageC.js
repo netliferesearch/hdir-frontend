@@ -4,10 +4,7 @@ import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
-import List from '../components/List';
-import Select from '../components/Select';
-import Heading from '../components/Heading';
-import FilterList from '../components/FilterList';
+import NavList from '../components/NavList';
 import IconWithText from '../components/IconWithText';
 
 const TreatmentPageA = () => (
@@ -103,59 +100,51 @@ const TreatmentPageA = () => (
                 .
               </Link>
             </div>
-            <div className="row l-mt-4">
-              <div className="col-xs-12">
-                <Box color="white">
-                  <p className="l-m-0 t--uppercase">Last ned trykksaker</p>
-                  <Heading h="h3" className="l-mt-2">
-                    Materiell til pasienter og pårørende
-                  </Heading>
-                  <div className="l-mt-2">
-                    <hr className="b-hr b-hr--blue b-hr--thin" />
-                  </div>
-                  <List
+            <div className="row">
+              <div className="col-xs-12 l-mt-4">
+                <Box color="green">
+                  <ChapterHeading
+                    heading="Materiell til pasienter og pårørende"
+                    subheading="LAST NED TRYKKSAKER"
+                    h="h3"
+                    line="none"
+                  />
+                  <NavList
+                    small
                     list={[
                       {
-                        type: 'generic',
-                        url: '#6',
-                        fields: {
-                          download: 'true',
-                          heading: 'FAKTAARK',
-                          subheading: 'Pakkeforløp på 1-2-3'
-                        }
+                        title: 'FAKTAARK',
+                        url: '#a',
+                        meta: 'Pakkeforløp på 1-2-3',
+                        infoText: 'PDF',
+                        file: true
                       }
                     ]}
                   />
                 </Box>
               </div>
             </div>
-            <div className="row l-mt-4">
-              <div className="col-xs-12">
-                <Box color="white">
-                  <p className="l-m-0 t--uppercase">Relaterte produkter</p>
-                  <div className="l-mt-2">
-                    <hr className="b-hr b-hr--black b-hr--thick" />
+            <div className="row">
+              <div className="col-xs-12 l-mt-4">
+                <Box>
+                  <h3 className="h4">RELATERTE PRODUKTER</h3>
+                  <div className="l-mt-1">
+                    <NavList
+                      small
+                      list={[
+                        {
+                          title: 'Relatert retninglinje',
+                          topic: 'Nasjonal faglig retninglinje',
+                          url: '#a'
+                        },
+                        {
+                          description: 'Lungekreft, mesoteliom og thymom',
+                          topic: 'Handlinngsprogram',
+                          url: '#b'
+                        }
+                      ]}
+                    />
                   </div>
-                  <List
-                    list={[
-                      {
-                        type: 'generic',
-                        url: '#6',
-                        fields: {
-                          heading: 'Relatert retningslinje',
-                          category: 'Nasjonale faglige retningslinjer'
-                        }
-                      },
-                      {
-                        type: 'generic',
-                        url: '#6',
-                        fields: {
-                          heading: 'Lungekreft, mesoteliom og thymom',
-                          category: 'Handlingsprogram'
-                        }
-                      }
-                    ]}
-                  />
                 </Box>
               </div>
             </div>

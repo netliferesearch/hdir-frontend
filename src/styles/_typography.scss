@@ -108,16 +108,6 @@ a {
       color: $colorVal;
     }
   }
-  &--small {
-    font-size: $meta-text;
-  }
-  &--tab-left {
-    display: inline-block;
-    margin-left: 1.5rem;
-  }
-  &--uppercase {
-    text-transform: uppercase;
-  }
 }
 
 small {
@@ -154,5 +144,18 @@ small {
   }
   ul {
     margin-top: 0.5em;
+  }
+}
+
+.t {
+  &--small {
+    font-size: $meta-text;
+  }
+  &--tab-left {
+    display: inline-block;
+    margin-left: 1.5rem;
+  }
+  &--uppercase {
+    text-transform: uppercase;
   }
 }

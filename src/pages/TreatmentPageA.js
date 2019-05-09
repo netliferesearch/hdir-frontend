@@ -5,10 +5,9 @@ import Link from '../components/Link';
 import ChapterHeading from '../components/ChapterHeading';
 import Collapsible from '../components/Collapsible';
 import Box from '../components/Box';
+import NavList from '../components/NavList';
 import Breadcrumbs from '../components/Breadcrumbs';
-import List from '../components/List';
 import Select from '../components/Select';
-import Heading from '../components/Heading';
 import FilterList from '../components/FilterList';
 import IconWithText from '../components/IconWithText';
 
@@ -175,11 +174,89 @@ const TreatmentPageA = () => (
                 }
                 id={shortid.generate()}
               >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <div className="col-xs-12 col-md-10 col-md-offset-1">
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Utredning"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Fastettelse av diagnose og stadieinndeling"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Støttebehandling og sykepleie"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Informasjon og dialog med pasienten"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Klinisk beslutning"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Ansvarlig for utredning"
+                      size="medium"
+                      category="Informasjon"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Hyppighet oppståtte komplikasjoner"
+                      size="medium"
+                      category="Informasjon"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Registrering av koder"
+                      size="medium"
+                      category="Informasjon"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                </div>
               </Collapsible>
             </div>
             <div className="l-mt-3">
@@ -202,11 +279,106 @@ const TreatmentPageA = () => (
                 }
                 id={shortid.generate()}
               >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Behandling av ikke-småcellet lungekreft"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Behandling av småcellet lungekreft"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Øyeblikkelig hjelp ved akutte tilstander"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Støttebehandling og sykepleie"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Rehabilitering"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Informasjon og dialog med pasienten"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Hovedgrupper av behandlingsforløp"
+                    size="medium"
+                    category="Informasjon"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Hyppigst oppståtte komplikasjoner"
+                    size="medium"
+                    category="Informasjon"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Ansvarlig for behandlingen"
+                    size="medium"
+                    category="Informasjon"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Registrering av koder"
+                    size="medium"
+                    category="Informasjon"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
               </Collapsible>
             </div>
             <div className="l-mt-3">
@@ -215,11 +387,76 @@ const TreatmentPageA = () => (
                 smallContent
                 id={shortid.generate()}
               >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Kontroll"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Håndtering av tilbakefall"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Støttebehandling og sykepleie"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Rehabilitering"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Informasjon og dialog med pasienten"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Palliasjon"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Ansvarlig for oppfølgingen"
+                    size="medium"
+                    category="Informasjon"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
               </Collapsible>
             </div>
             <div className="l-mt-3">
@@ -228,11 +465,16 @@ const TreatmentPageA = () => (
                 smallContent
                 id={shortid.generate()}
               >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <div className="l-mt-2">
+                  <Collapsible
+                    heading="Oppfølging hos fastlege"
+                    size="medium"
+                    category="AKTIVITET"
+                    id={shortid.generate()}
+                  >
+                    <p>abc abc.</p>
+                  </Collapsible>
+                </div>
               </Collapsible>
             </div>
             <div className="l-mt-3">
@@ -253,59 +495,51 @@ const TreatmentPageA = () => (
                 .
               </Link>
             </div>
-            <div className="row l-mt-4">
-              <div className="col-xs-12">
-                <Box color="white">
-                  <p className="l-m-0 t--uppercase">Last ned trykksaker</p>
-                  <Heading h="h3" className="l-mt-2">
-                    Materiell til pasienter og pårørende
-                  </Heading>
-                  <div className="l-mt-2">
-                    <hr className="b-hr b-hr--blue b-hr--thin" />
-                  </div>
-                  <List
+            <div className="row">
+              <div className="col-xs-12 l-mt-4">
+                <Box color="green">
+                  <ChapterHeading
+                    heading="Materiell til pasienter og pårørende"
+                    subheading="LAST NED TRYKKSAKER"
+                    h="h3"
+                    line="none"
+                  />
+                  <NavList
+                    small
                     list={[
                       {
-                        type: 'generic',
-                        url: '#6',
-                        fields: {
-                          download: 'true',
-                          heading: 'FAKTAARK',
-                          subheading: 'Pakkeforløp på 1-2-3'
-                        }
+                        title: 'FAKTAARK',
+                        url: '#a',
+                        meta: 'Pakkeforløp på 1-2-3',
+                        infoText: 'PDF',
+                        file: true
                       }
                     ]}
                   />
                 </Box>
               </div>
             </div>
-            <div className="row l-mt-4">
-              <div className="col-xs-12">
-                <Box color="white">
-                  <p className="l-m-0 t--uppercase">Relaterte produkter</p>
-                  <div className="l-mt-2">
-                    <hr className="b-hr b-hr--black b-hr--thick" />
+            <div className="row">
+              <div className="col-xs-12 l-mt-4">
+                <Box>
+                  <h3 className="h4">RELATERTE PRODUKTER</h3>
+                  <div className="l-mt-1">
+                    <NavList
+                      small
+                      list={[
+                        {
+                          title: 'Relatert retninglinje',
+                          topic: 'Nasjonal faglig retninglinje',
+                          url: '#a'
+                        },
+                        {
+                          description: 'Lungekreft, mesoteliom og thymom',
+                          topic: 'Handlinngsprogram',
+                          url: '#b'
+                        }
+                      ]}
+                    />
                   </div>
-                  <List
-                    list={[
-                      {
-                        type: 'generic',
-                        url: '#6',
-                        fields: {
-                          heading: 'Relatert retningslinje',
-                          category: 'Nasjonale faglige retningslinjer'
-                        }
-                      },
-                      {
-                        type: 'generic',
-                        url: '#6',
-                        fields: {
-                          heading: 'Lungekreft, mesoteliom og thymom',
-                          category: 'Handlingsprogram'
-                        }
-                      }
-                    ]}
-                  />
                 </Box>
               </div>
             </div>

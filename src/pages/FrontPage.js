@@ -91,6 +91,9 @@ const FrontPage = () => (
         <Link to="/pakkeforløp-d">Pakkeforløp [D]</Link>
       </p>
       <p>
+        <Link to="/pakkeforløp-e">Pakkeforløp [E]</Link>
+      </p>
+      <p>
         <Link to="/produkt">Produkt</Link>
       </p>
       <p>
