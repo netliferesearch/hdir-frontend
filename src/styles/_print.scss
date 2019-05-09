@@ -36,4 +36,17 @@
   .b-search-tray ~ .b-box {
     display: none;
   }
+  // Hide everything else but the 'main' element
+  * {
+    visibility: hidden;
+  }
+  main {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  main,
+  main * {
+    visibility: visible;
+  }
 }

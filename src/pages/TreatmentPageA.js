@@ -43,8 +43,8 @@ const TreatmentPageA = () => (
           </div>
         </div>
         <div className="row bottom-xs l-mt-2">
-          <div class="col-xs-12 col-md-4 col-lg-7">
-            <div class="t--small t--grey">VIS FORLØPET SOM</div>
+          <div className="col-xs-12 col-md-4 col-lg-7">
+            <div className="t--small t--grey">VIS FORLØPET SOM</div>
             <div className="l-mt-1">
               <FilterList list={['Tekst', 'Flytdiagram']} />
             </div>
