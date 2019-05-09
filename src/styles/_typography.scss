@@ -41,7 +41,7 @@ body {
   color: $text-color;
   font-family: $base-font-family, 'Source Code Pro';
   font-weight: normal;
-  line-height: 1.6;
+  line-height: $base-line-height;
 }
 
 input,
