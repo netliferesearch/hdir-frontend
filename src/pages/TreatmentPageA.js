@@ -318,12 +318,10 @@ const TreatmentPageA = () => (
             <Link href="#a" small icon="../icons/method.svg">
               Om pakkeforløpet
             </Link>
-            <div className="hide-on-print">
-              <br />
-              <Link href="#a" small icon="../icons/print.svg">
-                Skriv ut hele pakkeforløpet
-              </Link>
-            </div>
+            <br />
+            <Link href="#a" small icon="../icons/print.svg">
+              Skriv ut hele pakkeforløpet
+            </Link>
           </div>
         </div>
       </div>

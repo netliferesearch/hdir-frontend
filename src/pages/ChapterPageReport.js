@@ -121,12 +121,10 @@ const ChapterPageReport = () => (
         <Link href="#a" small icon="../icons/method.svg">
           Om metode og prosess
         </Link>
-        <div className="hide-on-print">
-          <br />
-          <Link href="#a" small icon="../icons/print.svg">
-            Skriv ut hele retningslinjen
-          </Link>
-        </div>
+        <br />
+        <Link href="#a" small icon="../icons/print.svg">
+          Skriv ut hele retningslinjen
+        </Link>
       </div>
 
       <div className="l-mt-4">

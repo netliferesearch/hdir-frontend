@@ -147,12 +147,10 @@ const StatisticsSubpage = () => (
               publishDate="11. august 2008"
               editDate="12. august 2018"
             />
-            <div className="hide-on-print">
-              <div className="l-mt-1">
-                <Link href="#a" small icon="../icons/print.svg">
-                  Skriv ut hele retningslinjen
-                </Link>
-              </div>
+            <div className="l-mt-1">
+              <Link href="#a" small icon="../icons/print.svg">
+                Skriv ut hele retningslinjen
+              </Link>
             </div>
           </div>
         </div>

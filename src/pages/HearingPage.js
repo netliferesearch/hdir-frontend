@@ -90,12 +90,10 @@ const HearingPage = () => (
           <Link href="#a" small icon="../icons/print.svg">
             Print
           </Link>
-          <div className="hide-on-print">
-            <br />
-            <Link href="#a" small icon="../icons/pdf.svg">
-              Lag PDF
-            </Link>
-          </div>
+          <br />
+          <Link href="#a" small icon="../icons/pdf.svg">
+            Lag PDF
+          </Link>
         </div>
       </div>
     </div>

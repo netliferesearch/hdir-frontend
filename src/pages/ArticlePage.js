@@ -164,23 +164,21 @@ const ArticlePage = () => (
         <div className="col-md-8 col-xs-12 col-md-offset-4">
           <PageMeta publishDate="11. august 2008" editDate="12. august 2018" />
 
-          <div className="hide-on-print">
-            <div className="l-mt-1">
-              <small>
-                <img
-                  src="../icons/print.svg"
-                  alt=""
-                  role="presentation"
-                  style={{
-                    height: '1.4em',
-                    width: 'auto',
-                    marginRight: '0.5em',
-                    marginBottom: '-0.2em'
-                  }}
-                />
-                Skriv ut/Lag PDF er midlertidig deaktivert
-              </small>
-            </div>
+          <div className="l-mt-1">
+            <small>
+              <img
+                src="../icons/print.svg"
+                alt=""
+                role="presentation"
+                style={{
+                  height: '1.4em',
+                  width: 'auto',
+                  marginRight: '0.5em',
+                  marginBottom: '-0.2em'
+                }}
+              />
+              Skriv ut/Lag PDF er midlertidig deaktivert
+            </small>
           </div>
         </div>
       </div>
