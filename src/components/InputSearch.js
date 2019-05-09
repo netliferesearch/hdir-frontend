@@ -170,12 +170,7 @@ const InputSearch = props => {
   };
 
   return (
-    <form
-      onSubmit={e => {
-        e.preventDefault();
-        triggerSearch();
-      }}
-    >
+    <>
       <div aria-hidden>
         <Autosuggest
           suggestions={props.showSuggestions ? suggestions : []}
@@ -189,22 +184,29 @@ const InputSearch = props => {
         />
       </div>
       {/* Screen readers gets a simplified form for now */}
-      <label htmlFor="side-søk" className="visually-hidden">
-        Søk på siden
-      </label>
-      <input
-        type="search"
-        id="side-søk"
-        onChange={e => {
-          setValue(e.target.value);
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          triggerSearch();
         }}
-        value={value}
-        className="visually-hidden"
-      />
-      <button type="submit" className="visually-hidden">
-        Søk
-      </button>
-    </form>
+      >
+        <label htmlFor="side-søk" className="visually-hidden">
+          Søk på siden
+        </label>
+        <input
+          type="search"
+          id="side-søk"
+          onChange={e => {
+            setValue(e.target.value);
+          }}
+          value={value}
+          className="visually-hidden"
+        />
+        <button type="submit" className="visually-hidden">
+          Søk
+        </button>
+      </form>
+    </>
   );
 };
 
