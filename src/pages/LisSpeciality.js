@@ -30,10 +30,12 @@ const LisSpeciality = () => (
         <Link href="#a" small icon="../icons/method.svg">
           Om metode og prosess
         </Link>
-        <br />
-        <Link href="#a" small icon="../icons/print.svg">
-          Skriv ut hele retningslinjen
-        </Link>
+        <div className="hide-on-print">
+          <br />
+          <Link href="#a" small icon="../icons/print.svg">
+            Skriv ut hele retningslinjen
+          </Link>
+        </div>
       </div>
     </div>
 

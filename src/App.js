@@ -157,11 +157,13 @@ class App extends Component {
               <Route path="/pakkeforløp-d" component={TreatmentPageD}/>
               <Route component={NotFound} />
             </Switch>
-            <Box noPadding square color="blueDark">
-              <div className="l-container l-mt-2">
-                <Footer />
-              </div>
-            </Box>
+            <div className="hide-on-print">
+              <Box noPadding square color="blueDark">
+                <div className="l-container l-mt-2">
+                  <Footer />
+                </div>
+              </Box>
+            </div>
           </ScrollToTop>
         </BrowserRouter>
       </div>

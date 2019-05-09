@@ -158,9 +158,11 @@ const ProductPage = () => (
       />
     </div>
     <div className="l-mt-2">
-      <Link href="#a" small icon="../icons/print.svg">
-        Skriv ut hele retningslinjen
-      </Link>
+      <div className="hide-on-print">
+        <Link href="#a" small icon="../icons/print.svg">
+          Skriv ut hele retningslinjen
+        </Link>
+      </div>
 
       <div className="col-xs-12 l-mt-4 l-mb-5">
         <Link href="#a" wideButton arrow color="purple">
