@@ -32,6 +32,13 @@ const MainHeader = props => {
     }, 0);
   }
 
+  const {
+    exampleSuggestions = [],
+    hideSearch = false,
+    inputSearchLabel = '',
+    links = [],
+    name = '',
+  } = props;
   return (
     <>
       {searchOpen && (
@@ -45,8 +52,8 @@ const MainHeader = props => {
             <InputSearch
               dark
               autoFocus={searchOpen}
-              label={props.inputSearchLabel}
-              exampleSuggestions={props.exampleSuggestions}
+              label={inputSearchLabel}
+              exampleSuggestions={exampleSuggestions}
             />
           </div>
         </SearchTray>
@@ -55,31 +62,31 @@ const MainHeader = props => {
         <div className="b-main-header">
           <a href="/" className="b-main-header__logo-link">
             <div className="l-hide-to-md">
-              <div className="b-main-header__logo" aria-label={props.name}>
-                {props.name}
+              <div className="b-main-header__logo" aria-label={name}>
+                {name}
               </div>
             </div>
             <div className="l-hide-from-md">
               <div
                 className="b-main-header__logo b-main-header__logo--small"
-                aria-label={props.name}
+                aria-label={name}
               >
-                {props.name}
+                {name}
               </div>
             </div>
           </a>
 
           {mobileNavOpen && (
             <MainHeaderMobileNav
-              name={props.name}
+              name={name}
               showNav={setMobileNavOpen}
-              links={props.links}
+              links={links}
             />
           )}
 
           <div className="l-hide-to-lg">
             <nav className="b-main-header__nav" aria-label="Header navigation">
-              {props.links.map(link => (
+              {links.map(link => (
                 <a
                   href={link.href}
                   className="b-main-header__link"
@@ -88,7 +95,7 @@ const MainHeader = props => {
                   {link.name}
                 </a>
               ))}
-              {!props.hideSearch && !searchOpen && (
+              {!hideSearch && !searchOpen && (
                 <button
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
@@ -103,7 +110,7 @@ const MainHeader = props => {
                   />
                 </button>
               )}
-              {!props.hideSearch && searchOpen && (
+              {!hideSearch && searchOpen && (
                 <button
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
@@ -125,7 +132,7 @@ const MainHeader = props => {
                 Meny
               </button>
               <div className="l-inline-space" />
-              {!props.hideSearch && !searchOpen && (
+              {!hideSearch && !searchOpen && (
                 <button
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
@@ -139,7 +146,7 @@ const MainHeader = props => {
                   />
                 </button>
               )}
-              {!props.hideSearch && searchOpen && (
+              {!hideSearch && searchOpen && (
                 <button
                   onClick={toggleSearch}
                   className="b-button b-button--secondary-dark b-button--small"
@@ -156,11 +163,11 @@ const MainHeader = props => {
 };
 
 MainHeader.propTypes = {
+  exampleSuggestions: PropTypes.arrayOf(PropTypes.string),
   hideSearch: PropTypes.bool,
-  name: PropTypes.string,
-  links: PropTypes.arrayOf(PropTypes.object),
   inputSearchLabel: PropTypes.string,
-  exampleSuggestions: PropTypes.arrayOf(PropTypes.string)
+  links: PropTypes.arrayOf(PropTypes.object),
+  name: PropTypes.string,
 };
 
 MainHeader.defaultProps = {
