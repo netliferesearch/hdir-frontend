@@ -4,6 +4,7 @@ import { HashRouter } from 'react-router-dom';
 
 // Pages
 import ArticlePage from '../pages/ArticlePage';
+import ArticlePageNoH2 from '../pages/ArticlePageNoH2';
 import AuthorizationFrontPage from '../pages/AuthorizationFrontPage';
 import AuthorizationStepPage from '../pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from '../pages/AuthorizationStepPage2';
@@ -53,6 +54,11 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Article page', () => (
     <HashRouter>
       <ArticlePage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Article page no H2', () => (
+    <HashRouter>
+      <ArticlePageNoH2 />
     </HashRouter>
   ))
   .addWithStaticMarkup('Chapter page', () => (

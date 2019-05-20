@@ -6,6 +6,9 @@ import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
 
+// Import utils
+import { isEmptyArray } from './../utils/isEmptyUtil';
+
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -103,8 +106,10 @@ const SectionSidebar = props => {
     if (!hasItems(props.list)) {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
     }
-    Stickyfill.add(sidebarRef.current);
-  }, [props.list]);
+    if (!isEmptyArray(headings)) {
+      Stickyfill.add(sidebarRef.current);
+    }
+  }, [props.list, headings]);
 
   useEffect(() => {
     if (!hasItems(props.list)) {
@@ -157,7 +162,7 @@ const SectionSidebar = props => {
       }))
     : props.list;
 
-  return (
+  const renderContent = () => (
     <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
       <div
         className={classNames({
@@ -199,6 +204,17 @@ const SectionSidebar = props => {
         })}
       </nav>
     </div>
+  );
+
+  return (
+    <>
+      {!isEmptyArray(headings)
+        ?
+        renderContent()
+        :
+        null
+      }
+    </>
   );
 };
 

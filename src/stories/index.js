@@ -49,7 +49,7 @@ import TransportBlock from '../components/TransportBlock';
 import './listItemType';
 import './list';
 import './navList';
-// import './pages';
+import './pages';
 
 storiesOf('Grid', module)
   .addDecorator(withKnobs)
