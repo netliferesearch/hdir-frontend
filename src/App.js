@@ -10,6 +10,7 @@ import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 
 import ArticlePage from './pages/ArticlePage';
+import ArticlePageNoH2 from './pages/ArticlePageNoH2';
 import ArticlePageWithForm from './pages/ArticlePageWithForm';
 import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
@@ -85,6 +86,7 @@ class App extends Component {
               <Route path="/produkt" component={ProductPage} />
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/artikkel" component={ArticlePage} />
+              <Route path="/artikkel-ingen-h2" component={ArticlePageNoH2} />
               <Route
                 path="/artikkel-med-skjema"
                 component={ArticlePageWithForm}
