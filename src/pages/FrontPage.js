@@ -2,6 +2,68 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { default as LinkComp } from '../components/Link'; // It uses "default as" to avoid naming conflict in this file.
 
+const pages = [
+  {link: '/abonnement-tilpassing', desc: 'Abonnement Tilpassing'},
+  {link: '/anbefaling', desc: 'Anbefaling'},
+  {link: '/artikkel', desc: 'Artikkel'},
+  {link: '/artikkel-med-skjema', desc: 'Artikkel med skjema'},
+  {link: '/autorisasjon-forside', desc: 'Autorisasjon forside'},
+  {link: '/autorisasjon-steg', desc: 'Autorisasjon steg'},
+  {link: '/autorisasjon-steg-2', desc: 'Autorisasjon steg 2'},
+  {link: '/hdir-forside', desc: 'Helsedirektoratet forside'},
+  {link: '/hdir-tema', desc: 'Helsedirektoratet temaside'},
+  {link: '/helfo-forside', desc: 'Helfo forside'},
+  {link: '/høringer', desc: 'Høringer'},
+  {link: '/høringer-forside', desc: 'Høringer forside'},
+  {link: '/kapittel', desc: 'Kapittel'},
+  {link: '/ledig-stilling', desc: 'Ledig stilling'},
+  {link: '/lis-forside', desc: 'LIS-forside'},
+  {link: '/lis-læringsaktiviteter', desc: 'LIS-læringsaktiviteter'},
+  {link: '/lis-læringsmål', desc: 'LIS-læringsmål'},
+  {link: '/lis-spesialitet', desc: 'LIS-spesialitet'},
+  {link: '/normerende-innhold', desc: 'Normerende'},
+  {link: '/nyhetsliste', desc: 'Nyhetsliste'},
+  {link: '/pakkeforløp-a', desc: 'Pakkeforløp [A]'},
+  {link: '/pakkeforløp-b', desc: 'Pakkeforløp [B]'},
+  {link: '/pakkeforløp-c', desc: 'Pakkeforløp [C]'},
+  {link: '/pakkeforløp-d', desc: 'Pakkeforløp [D]'},
+  {link: '/pakkeforløp-e', desc: 'Pakkeforløp [E]'},
+  {link: '/produkt', desc: 'Produkt'},
+  {link: '/rapport', desc: 'Rapport'},
+  {link: '/rapport-kapittel', desc: 'Rapport kapittel'},
+  {link: '/rapport-liste', desc: 'Rapportliste'},
+  {link: '/rapportside-uten-bilde', desc: 'Rapportside uten bilde'},
+  {link: '/rundskriv', desc: 'Rundskriv'},
+  {link: '/rundskriv-forside', desc: 'Rundskriv forside'},
+  {link: '/skjemabygger-enonic', desc: 'Skjemaer lagt gjennom Enonics skjemabygger'},
+  {link: '/statistikk', desc: 'Statistikk'},
+  {link: '/statistikk-underside', desc: 'Statistikkunderside (bred)'},
+  {link: '/statistikk-underside-2', desc: 'Statistikkunderside (smal)'},
+  {link: '/søkeresultat', desc: 'Søkeresultat'},
+  {link: '/tidligere-versjoner', desc: 'Tidligere versjoner'},
+  {link: '/tilskudd', desc: 'Tilskuddside'},
+  {link: '/tilskudd-underside', desc: 'Tilskudd underside'},
+  {link: '/transportside', desc: 'Transportside'},
+  {link: '/trykksaker', desc: 'Trykksaker'},
+  {link: '/yrke-velger', desc: 'Yrkesvelger'},
+];
+
+const renderPageItems = pages => {
+  const thePages = [];
+  for (let p in pages) {
+    const {
+      link = '',
+      desc = '',
+    } = pages[p];
+    thePages.push(
+      <p key={`page-${p}`}>
+        <Link to={link}>{desc}</Link>
+      </p>
+    )
+  }
+  return thePages;
+};
+
 const FrontPage = () => (
   <div>
     <div className="l-container l-mt-3">
@@ -13,134 +75,7 @@ const FrontPage = () => (
     </div>
     <div className="l-container l-mt-3 l-mb-5">
       <h1>Pages</h1>
-      <p>
-        <Link to="/abonnement-tilpassing">Abonnement Tilpassing</Link>
-      </p>
-      <p>
-        <Link to="/artikkel">Artikkel</Link>
-      </p>
-      <p>
-        <Link to="/artikkel-med-skjema">Artikkel med skjema</Link>
-      </p>
-      <p>
-        <Link to="/anbefaling">Anbefaling</Link>
-      </p>
-      <p>
-        <Link to="/autorisasjon-forside">Autorisasjon forside</Link>
-      </p>
-      <p>
-        <Link to="/autorisasjon-steg">Autorisasjon steg</Link>
-      </p>
-      <p>
-        <Link to="/autorisasjon-steg-2">Autorisasjon steg 2</Link>
-      </p>
-      <p>
-        <Link to="/skjemabygger-enonic">
-          Skjemaer lagt gjennom Enonics skjemabygger
-        </Link>
-      </p>
-      <p>
-        <Link to="/helfo-forside">Helfo forside</Link>
-      </p>
-      <p>
-        <Link to="/hdir-forside">Helsedirektoratet forside</Link>
-      </p>
-      <p>
-        <Link to="/hdir-tema">Helsedirektoratet temaside</Link>
-      </p>
-      <p>
-        <Link to="/høringer-forside">Høringer forside</Link>
-      </p>
-      <p>
-        <Link to="/høringer">Høringer</Link>
-      </p>
-      <p>
-        <Link to="/ledig-stilling">Ledig stilling</Link>
-      </p>
-      <p>
-        <Link to="/normerende-innhold">Normerende</Link>
-      </p>
-      <p>
-        <Link to="/nyhetsliste">Nyhetsliste</Link>
-      </p>
-      <p>
-        <Link to="/kapittel">Kapittel</Link>
-      </p>
-      <p>
-        <Link to="/lis-spesialitet">LIS-spesialitet</Link>
-      </p>
-      <p>
-        <Link to="/lis-læringsmål">LIS-læringsmål</Link>
-      </p>
-      <p>
-        <Link to="/lis-forside">LIS-forside</Link>
-      </p>
-      <p>
-        <Link to="/lis-læringsaktiviteter">LIS-læringsaktiviteter</Link>
-      </p>
-      <p>
-        <Link to="/pakkeforløp-a">Pakkeforløp [A]</Link>
-      </p>
-      <p>
-        <Link to="/pakkeforløp-b">Pakkeforløp [B]</Link>
-      </p>
-      <p>
-        <Link to="/pakkeforløp-c">Pakkeforløp [C]</Link>
-      </p>
-      <p>
-        <Link to="/pakkeforløp-d">Pakkeforløp [D]</Link>
-      </p>
-      <p>
-        <Link to="/pakkeforløp-e">Pakkeforløp [E]</Link>
-      </p>
-      <p>
-        <Link to="/produkt">Produkt</Link>
-      </p>
-      <p>
-        <Link to="/rundskriv">Rundskriv</Link>
-      </p>
-      <p>
-        <Link to="/rundskriv-forside">Rundskriv forside</Link>
-      </p>
-      <p>
-        <Link to="/rapport">Rapport</Link>
-      </p>
-      <p>
-        <Link to="/rapport-liste">Rapportliste</Link>
-      </p>
-      <p>
-        <Link to="/rapportside-uten-bilde">Rapportside uten bilde</Link>
-      </p>
-      <p>
-        <Link to="/rapport-kapittel">Rapport kapittel</Link>
-      </p>
-      <p>
-        <Link to="/statistikk">Statistikk</Link>
-      </p>
-      <p>
-        <Link to="/statistikk-underside">Statistikkunderside (bred)</Link>
-      </p>
-      <p>
-        <Link to="/statistikk-underside-2">Statistikkunderside (smal)</Link>
-      </p>
-      <p>
-        <Link to="/søkeresultat">Søkeresultat</Link>
-      </p>
-      <p>
-        <Link to="/transportside">Transportside</Link>
-      </p>
-      <p>
-        <Link to="/yrke-velger">Yrkesvelger</Link>
-      </p>
-      <p>
-        <Link to="/tilskudd">Tilskuddside</Link>
-      </p>
-      <p>
-        <Link to="/tilskudd-underside">Tilskudd underside</Link>
-      </p>
-      <p>
-        <Link to="/trykksaker">Trykksaker</Link>
-      </p>
+      {renderPageItems(pages)}
     </div>
   </div>
 );
