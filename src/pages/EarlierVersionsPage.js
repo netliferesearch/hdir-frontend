@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Breadcrumbs from '../components/Breadcrumbs';
-import NavList from '../components/NavList';
 import ArticleIntro from '../components/ArticleIntro';
+import Breadcrumbs from '../components/Breadcrumbs';
 import Button from '../components/Button';
+import NavList from '../components/NavList';
 
-const ArticlePage = () => (
+const EarlierVersionsPage = () => (
   <>
     <div className="l-container">
       <Breadcrumbs
@@ -49,4 +49,4 @@ const ArticlePage = () => (
   </>
 );
 
-export default ArticlePage;
+export default EarlierVersionsPage;
