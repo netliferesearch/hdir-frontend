@@ -10,6 +10,7 @@ import AuthorizationStepPage from '../pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from '../pages/AuthorizationStepPage2';
 import ChapterPage from '../pages/ChapterPage';
 import ChapterPageReport from '../pages/ChapterPageReport';
+import EarlierVersionsPage from '../pages/EarlierVersionsPage';
 import FrontPageHdir from '../pages/FrontPageHdir';
 import FrontPageHelfo from '../pages/FrontPageHelfo';
 import GrantsPage from '../pages/GrantsPage';
@@ -69,6 +70,11 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('ChapterPageReport', () => (
     <HashRouter>
       <ChapterPageReport />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('EarlierVersionsPage', () => (
+    <HashRouter>
+      <EarlierVersionsPage />
     </HashRouter>
   ))
   .addWithStaticMarkup('FrontPageHdir', () => (

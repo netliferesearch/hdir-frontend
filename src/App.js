@@ -17,6 +17,7 @@ import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import ChapterPage from './pages/ChapterPage';
 import ChapterPageReport from './pages/ChapterPageReport';
+import EarlierVersionsPage from './pages/EarlierVersionsPage';
 import FormbuilderTestPage from './pages/FormbuilderTestPage';
 import FrontPage from './pages/FrontPage';
 import FrontPageHdir from './pages/FrontPageHdir';
@@ -117,6 +118,7 @@ class App extends Component {
                 component={LisLearningActivities}
               />
               <Route path="/rapport-kapittel" component={ChapterPageReport} />
+              <Route path="/tidligere-versjoner" component={EarlierVersionsPage} />
               <Route path="/yrke-velger" component={ProfessionSelector} />
               <Route
                 path="/autorisasjon-forside"
