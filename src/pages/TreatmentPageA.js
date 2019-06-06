@@ -55,7 +55,7 @@ const TreatmentPageA = () => (
                 label="Vis viktigste for:"
                 placeholder="Velg"
                 simple
-                options={['a', 'b', 'c', 'd']}
+                options={['Henviser', 'Forløpkoordinator', 'Behandler']}
               />
             </div>
           </div>
