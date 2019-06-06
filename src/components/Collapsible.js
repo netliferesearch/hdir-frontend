@@ -140,7 +140,7 @@ const Collapsible = props => {
 Collapsible.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  subheadingContent: PropTypes.string,
+  subheadingContent: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,

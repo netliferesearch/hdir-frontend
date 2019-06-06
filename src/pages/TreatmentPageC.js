@@ -138,7 +138,7 @@ const TreatmentPageA = () => (
                           url: '#a'
                         },
                         {
-                          description: 'Lungekreft, mesoteliom og thymom',
+                          title: 'Lungekreft, mesoteliom og thymom',
                           topic: 'Handlinngsprogram',
                           url: '#b'
                         }
