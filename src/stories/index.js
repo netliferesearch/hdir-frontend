@@ -738,7 +738,8 @@ storiesOf('Heading', module)
           h3: 'h3',
           h4: 'h4',
           h5: 'h5',
-          h6: 'h6'
+          h6: 'h6',
+          h0: 'h0'
         },
         'h1'
       )}

@@ -56,8 +56,8 @@ const TreatmentPageA = () => (
           </div>
         </div>
         <div className="row bottom-xs l-mt-2">
-          <div class="col-xs-12 col-md-4 col-lg-7">
-            <div class="t--small t--grey">VIS FORLØPET SOM</div>
+          <div className="col-xs-12 col-md-4 col-lg-7">
+            <div className="t--small t--grey">VIS FORLØPET SOM</div>
             <div className="l-mt-1">
               <FilterList list={['Tekst', 'Flytdiagram']} />
             </div>
@@ -68,7 +68,7 @@ const TreatmentPageA = () => (
                 label="Vis viktigste for:"
                 placeholder="Velg"
                 simple
-                options={['a', 'b', 'c', 'd']}
+                options={['Henviser', 'Forløpkoordinator', 'Behandler']}
               />
             </div>
           </div>
@@ -249,10 +249,11 @@ const TreatmentPageA = () => (
                             <br />
                             <a href="#b">- Relatert lovfortolkning 2</a>
                           </p>
-                          <hr className="b-hr b-hr--grey-light" />
-                          <p>
-                            <a href="#a">Sist endret: 22.05.2018</a>
-                          </p>
+                          <div className="l-mt-3 t-sm-right">
+                            <Link href="#a" secondary small>
+                              Sist faglig oppdatert: 11. august 2018
+                            </Link>
+                          </div>
                         </Collapsible>
                       </div>
                     </Collapsible>
@@ -293,57 +294,59 @@ const TreatmentPageA = () => (
                 collapsed
                 id={shortid.generate()}
               >
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Behandling av ikke-småcellet lungekreft"
-                    size="medium"
-                    category="AKTIVITET"
-                    subheadingContent={
-                      <span className="t--grey">#behandler #pasient</span>
-                    }
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Behandling av småcellet lungekreft"
-                    size="medium"
-                    category="AKTIVITET"
-                    subheadingContent={
-                      <span className="t--grey">#behandler #pasient</span>
-                    }
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Øyeblikkelig hjelp ved akutte tilstander"
-                    size="medium"
-                    category="AKTIVITET"
-                    subheadingContent={
-                      <span className="t--grey">#behandler #pasient</span>
-                    }
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Støttebehandling og sykepleie"
-                    size="medium"
-                    category="AKTIVITET"
-                    subheadingContent={
-                      <span className="t--grey">#behandler #pasient</span>
-                    }
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
+                <div className="col-xs-12 col-md-10 col-md-offset-1">
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Behandling av ikke-småcellet lungekreft"
+                      size="medium"
+                      category="AKTIVITET"
+                      subheadingContent={
+                        <span className="t--grey">#behandler #pasient</span>
+                      }
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Behandling av småcellet lungekreft"
+                      size="medium"
+                      category="AKTIVITET"
+                      subheadingContent={
+                        <span className="t--grey">#behandler #pasient</span>
+                      }
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Øyeblikkelig hjelp ved akutte tilstander"
+                      size="medium"
+                      category="AKTIVITET"
+                      subheadingContent={
+                        <span className="t--grey">#behandler #pasient</span>
+                      }
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Støttebehandling og sykepleie"
+                      size="medium"
+                      category="AKTIVITET"
+                      subheadingContent={
+                        <span className="t--grey">#behandler #pasient</span>
+                      }
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
                 </div>
               </Collapsible>
             </div>
@@ -354,20 +357,22 @@ const TreatmentPageA = () => (
                 collapsed
                 id={shortid.generate()}
               >
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Avslutning i psykisk helsevern"
-                    size="medium"
-                    category="AKTIVITET"
-                    subheadingContent={
-                      <span className="t--grey">
-                        #behandler #kommune #forløpskoordinator #pasient
-                      </span>
-                    }
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
+                <div className="col-xs-12 col-md-10 col-md-offset-1">
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Avslutning i psykisk helsevern"
+                      size="medium"
+                      category="AKTIVITET"
+                      subheadingContent={
+                        <span className="t--grey">
+                          #behandler #kommune #forløpskoordinator #pasient
+                        </span>
+                      }
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
                 </div>
               </Collapsible>
             </div>
@@ -427,7 +432,7 @@ const TreatmentPageA = () => (
                           url: '#a'
                         },
                         {
-                          description: 'Lungekreft, mesoteliom og thymom',
+                          title: 'Lungekreft, mesoteliom og thymom',
                           topic: 'Handlinngsprogram',
                           url: '#b'
                         }
@@ -443,10 +448,6 @@ const TreatmentPageA = () => (
       <div className="row">
         <div className="col-xs-12">
           <div className="l-mt-4">
-            <Link href="#a" small icon="../icons/method.svg">
-              Om pakkeforløpet
-            </Link>
-            <br />
             <Link href="#a" small icon="../icons/print.svg">
               Skriv ut hele pakkeforløpet
             </Link>

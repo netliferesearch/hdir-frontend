@@ -51,9 +51,7 @@ import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import ThemePage from './pages/ThemePage';
 import TransportPage from './pages/TransportPage';
 import TreatmentPageA from './pages/TreatmentPageA';
-import TreatmentPageB from './pages/TreatmentPageB';
 import TreatmentPageC from './pages/TreatmentPageC';
-import TreatmentPageD from './pages/TreatmentPageD';
 import TreatmentPageE from './pages/TreatmentPageE';
 
 class App extends Component {
@@ -157,9 +155,7 @@ class App extends Component {
                 component={FormbuilderTestPage}
               />
               <Route path="/pakkeforløp-a" component={TreatmentPageA} />
-              <Route path="/pakkeforløp-b" component={TreatmentPageB} />
               <Route path="/pakkeforløp-c" component={TreatmentPageC} />
-              <Route path="/pakkeforløp-d" component={TreatmentPageD} />
               <Route path="/pakkeforløp-e" component={TreatmentPageE} />
               <Route component={NotFound} />
             </Switch>

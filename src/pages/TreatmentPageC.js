@@ -138,7 +138,7 @@ const TreatmentPageA = () => (
                           url: '#a'
                         },
                         {
-                          description: 'Lungekreft, mesoteliom og thymom',
+                          title: 'Lungekreft, mesoteliom og thymom',
                           topic: 'Handlinngsprogram',
                           url: '#b'
                         }
@@ -154,10 +154,6 @@ const TreatmentPageA = () => (
       <div className="row">
         <div className="col-xs-12">
           <div className="l-mt-4">
-            <Link href="#a" small icon="../icons/method.svg">
-              Om pakkeforløpet
-            </Link>
-            <br />
             <Link href="#a" small icon="../icons/print.svg">
               Skriv ut hele pakkeforløpet
             </Link>

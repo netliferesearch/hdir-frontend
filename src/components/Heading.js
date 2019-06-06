@@ -14,13 +14,13 @@ const Heading = props => {
     return <h5 className={props.className}>{props.children}</h5>;
   else if (props.h === 'h6')
     return <h6 className={props.className}>{props.children}</h6>;
-  else if (props.h === 'none')
+  else if (props.h === 'h0')
     return <div className={props.className}>{props.children}</div>;
   else return '';
 };
 
 Heading.propTypes = {
-  h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'none']).isRequired,
+  h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h0']).isRequired,
   className: PropTypes.string
 };
 

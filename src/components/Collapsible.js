@@ -15,12 +15,13 @@ const buttonClasses = (active, size, subtle) =>
     'b-collapsible__button--medium': size === 'medium'
   });
 
-const headingClasses = size =>
+const headingClasses = (size, bold) =>
   classNames({
     'b-collapsible__heading': true,
     h3: size === 'large',
     h4: size === 'medium',
-    normal: size === 'small'
+    normal: size === 'small',
+    'h0--bold': bold // a hack :( one special case they want the header to be bold
   });
 
 const collapsibleClasses = (size, subtle, noBorder) =>
@@ -70,7 +71,7 @@ const Collapsible = props => {
     } else {
       if (props.size === 'large') return 'h2';
       else if (props.size === 'medium') return 'h3';
-      else if (props.size === 'small') return 'none';
+      else if (props.size === 'small') return 'h0';
     }
   };
 
@@ -90,7 +91,7 @@ const Collapsible = props => {
         aria-controls={id}
         onClick={toggleCollapse}
       >
-        <Heading h={headingSelector()} className={headingClasses(props.size)}>
+        <Heading h={headingSelector()} className={headingClasses(props.size, props.bold)}>
           {props.heading}
           {props.code && (
             <div className="b-collapsible__code">{props.code}</div>
@@ -140,9 +141,9 @@ const Collapsible = props => {
 Collapsible.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  subheadingContent: PropTypes.string,
+  subheadingContent: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  h: PropTypes.oneOf(['h0', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,
   category: PropTypes.string,
@@ -150,7 +151,8 @@ Collapsible.propTypes = {
   alert: PropTypes.string,
   collapsed: PropTypes.bool,
   code: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.string,
+  bold: PropTypes.bool
 };
 
 Collapsible.defaultProps = {
