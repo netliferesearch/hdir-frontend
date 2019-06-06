@@ -21,7 +21,7 @@ const headingClasses = (size, bold) =>
     h3: size === 'large',
     h4: size === 'medium',
     normal: size === 'small',
-    'none--bold': bold === 'header' // a hack :( one special case they want the header to be bold
+    'h0--bold': bold // a hack :( one special case they want the header to be bold
   });
 
 const collapsibleClasses = (size, subtle, noBorder) =>
@@ -71,7 +71,7 @@ const Collapsible = props => {
     } else {
       if (props.size === 'large') return 'h2';
       else if (props.size === 'medium') return 'h3';
-      else if (props.size === 'small') return 'none';
+      else if (props.size === 'small') return 'h0';
     }
   };
 
@@ -141,9 +141,9 @@ const Collapsible = props => {
 Collapsible.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  subheadingContent: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
+  subheadingContent: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  h: PropTypes.oneOf(['h0', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,
   category: PropTypes.string,
@@ -152,7 +152,7 @@ Collapsible.propTypes = {
   collapsed: PropTypes.bool,
   code: PropTypes.string,
   id: PropTypes.string,
-  bold: PropTypes.string
+  bold: PropTypes.bool
 };
 
 Collapsible.defaultProps = {
