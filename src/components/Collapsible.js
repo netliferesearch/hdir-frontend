@@ -15,12 +15,13 @@ const buttonClasses = (active, size, subtle) =>
     'b-collapsible__button--medium': size === 'medium'
   });
 
-const headingClasses = size =>
+const headingClasses = (size, bold) =>
   classNames({
     'b-collapsible__heading': true,
     h3: size === 'large',
     h4: size === 'medium',
-    normal: size === 'small'
+    normal: size === 'small',
+    'none--bold': bold === 'header' // a hack :( one special case they want the header to be bold
   });
 
 const collapsibleClasses = (size, subtle, noBorder) =>
@@ -90,7 +91,7 @@ const Collapsible = props => {
         aria-controls={id}
         onClick={toggleCollapse}
       >
-        <Heading h={headingSelector()} className={headingClasses(props.size)}>
+        <Heading h={headingSelector()} className={headingClasses(props.size, props.bold)}>
           {props.heading}
           {props.code && (
             <div className="b-collapsible__code">{props.code}</div>
@@ -150,7 +151,8 @@ Collapsible.propTypes = {
   alert: PropTypes.string,
   collapsed: PropTypes.bool,
   code: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.string,
+  bold: PropTypes.string
 };
 
 Collapsible.defaultProps = {
