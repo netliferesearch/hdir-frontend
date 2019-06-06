@@ -249,10 +249,11 @@ const TreatmentPageA = () => (
                             <br />
                             <a href="#b">- Relatert lovfortolkning 2</a>
                           </p>
-                          <hr className="b-hr b-hr--grey-light" />
-                          <p>
-                            <a href="#a">Sist endret: 22.05.2018</a>
-                          </p>
+                          <div className="l-mt-3 t-sm-right">
+                            <Link href="#a" secondary small>
+                              Sist faglig oppdatert: 11. august 2018
+                            </Link>
+                          </div>
                         </Collapsible>
                       </div>
                     </Collapsible>
