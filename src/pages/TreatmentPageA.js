@@ -279,105 +279,107 @@ const TreatmentPageA = () => (
                 }
                 id={shortid.generate()}
               >
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Behandling av ikke-småcellet lungekreft"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Behandling av småcellet lungekreft"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Øyeblikkelig hjelp ved akutte tilstander"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Støttebehandling og sykepleie"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Rehabilitering"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Informasjon og dialog med pasienten"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Hovedgrupper av behandlingsforløp"
-                    size="medium"
-                    category="Informasjon"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Hyppigst oppståtte komplikasjoner"
-                    size="medium"
-                    category="Informasjon"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Ansvarlig for behandlingen"
-                    size="medium"
-                    category="Informasjon"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Registrering av koder"
-                    size="medium"
-                    category="Informasjon"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
+                <div className="col-xs-12 col-md-10 col-md-offset-1">
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Behandling av ikke-småcellet lungekreft"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Behandling av småcellet lungekreft"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Øyeblikkelig hjelp ved akutte tilstander"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Støttebehandling og sykepleie"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Rehabilitering"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Informasjon og dialog med pasienten"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Hovedgrupper av behandlingsforløp"
+                      size="medium"
+                      category="Informasjon"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Hyppigst oppståtte komplikasjoner"
+                      size="medium"
+                      category="Informasjon"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Ansvarlig for behandlingen"
+                      size="medium"
+                      category="Informasjon"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Registrering av koder"
+                      size="medium"
+                      category="Informasjon"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
                 </div>
               </Collapsible>
             </div>
@@ -387,75 +389,77 @@ const TreatmentPageA = () => (
                 smallContent
                 id={shortid.generate()}
               >
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Kontroll"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Håndtering av tilbakefall"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Støttebehandling og sykepleie"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Rehabilitering"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Informasjon og dialog med pasienten"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Palliasjon"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
-                </div>
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Ansvarlig for oppfølgingen"
-                    size="medium"
-                    category="Informasjon"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
+                <div className="col-xs-12 col-md-10 col-md-offset-1">
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Kontroll"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Håndtering av tilbakefall"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Støttebehandling og sykepleie"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Rehabilitering"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Informasjon og dialog med pasienten"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Palliasjon"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Ansvarlig for oppfølgingen"
+                      size="medium"
+                      category="Informasjon"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
                 </div>
               </Collapsible>
             </div>
@@ -465,15 +469,17 @@ const TreatmentPageA = () => (
                 smallContent
                 id={shortid.generate()}
               >
-                <div className="l-mt-2">
-                  <Collapsible
-                    heading="Oppfølging hos fastlege"
-                    size="medium"
-                    category="AKTIVITET"
-                    id={shortid.generate()}
-                  >
-                    <p>abc abc.</p>
-                  </Collapsible>
+                <div className="col-xs-12 col-md-10 col-md-offset-1">
+                  <div className="l-mt-2">
+                    <Collapsible
+                      heading="Oppfølging hos fastlege"
+                      size="medium"
+                      category="AKTIVITET"
+                      id={shortid.generate()}
+                    >
+                      <p>abc abc.</p>
+                    </Collapsible>
+                  </div>
                 </div>
               </Collapsible>
             </div>
