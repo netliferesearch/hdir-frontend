@@ -19,33 +19,40 @@
 }
 
 table {
-  width: 100%;
+  border: 1px solid $black;
+  max-width: 100%;
   border-spacing: 0;
   tr {
     &:last-child {
-      td,
-      th {
-        border-bottom: 1px solid $black;
+      td {
+        border-bottom: none;
+      }
+      @include mq($from: $desktop) {
+        th {
+          border-bottom: none;
+        }
       }
     }
   }
   th,
   td {
+    display: block;
+    box-sizing: border-box;
     padding: 1rem;
-    border: 1px solid $black;
-    border-left: 0;
-    border-bottom: 0;
+    border-bottom: 1px solid $black;
 
-    &:last-child {
-      border-right: 0;
+    @include mq($from: $desktop) {
+      display: table-cell;
+      border-right: 1px solid $black;
+
+      &:last-child {
+        border-right: 0;
+      }
     }
   }
   th {
     text-align: left;
     font-weight: bold;
-    &[scope='row'] {
-      font-weight: normal;
-    }
   }
 }
 

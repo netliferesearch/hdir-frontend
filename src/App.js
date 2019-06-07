@@ -31,6 +31,7 @@ import LisLearning from './pages/LisLearning';
 import LisLearningActivities from './pages/LisLearningActivities';
 import LisSpeciality from './pages/LisSpeciality';
 import MemoPage from './pages/MemoPage';
+import MedicinePage from './pages/MedicinePage';
 import NewsListPage from './pages/NewsListPage';
 import NormativeContentPage from './pages/NormativeContentPage';
 import NotFound from './pages/NotFound';
@@ -157,6 +158,8 @@ class App extends Component {
               <Route path="/pakkeforløp-a" component={TreatmentPageA} />
               <Route path="/pakkeforløp-c" component={TreatmentPageC} />
               <Route path="/pakkeforløp-e" component={TreatmentPageE} />
+              <Route path="/medisin" component={MedicinePage} />
+              MedicinePage
               <Route component={NotFound} />
             </Switch>
             <Box noPadding square color="blueDark">

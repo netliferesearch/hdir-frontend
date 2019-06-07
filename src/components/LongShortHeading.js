@@ -27,11 +27,11 @@ const LongShortHeading = props => {
         )}
         {!props.short && <span>{props.long}</span>}
       </h1>
-      <div className="b-long-short-heading__link">
+      {props.url && <div className="b-long-short-heading__link">
         <Link href={props.url} arrow>
           {props.linkText}
         </Link>
-      </div>
+      </div>}
     </div>
   );
 };
