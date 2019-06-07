@@ -27,6 +27,7 @@ const pages = [
   {link: '/pakkeforløp-c', desc: 'Pakkeforløp [C]'},
   {link: '/pakkeforløp-e', desc: 'Pakkeforløp [E]'},
   {link: '/medisin', desc: 'Medisin'},
+  {link: '/medisinListe', desc: 'MedisinListe'},
   {link: '/produkt', desc: 'Produkt'},
   {link: '/rapport', desc: 'Rapport'},
   {link: '/rapport-kapittel', desc: 'Rapport kapittel'},
