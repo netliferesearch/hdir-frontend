@@ -72,7 +72,7 @@ const NavList = props => {
               <div className="b-nav-list__item-title">
                 {item.title}
                 {/* Is is possible to use a array of meta texts or just a string */}
-                {Array.isArray(item.meta) ? (
+                {item.meta && Array.isArray(item.meta) ? (
                   <div className="b-nav-list__item-meta">
                     {item.meta.map((x, i) => {
                       if (i === 0) return item.meta[0];

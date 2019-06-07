@@ -32,6 +32,7 @@ import LisLearningActivities from './pages/LisLearningActivities';
 import LisSpeciality from './pages/LisSpeciality';
 import MemoPage from './pages/MemoPage';
 import MedicinePage from './pages/MedicinePage';
+import MedicineListPage from './pages/MedicineListPage';
 import NewsListPage from './pages/NewsListPage';
 import NormativeContentPage from './pages/NormativeContentPage';
 import NotFound from './pages/NotFound';
@@ -159,6 +160,7 @@ class App extends Component {
               <Route path="/pakkeforløp-c" component={TreatmentPageC} />
               <Route path="/pakkeforløp-e" component={TreatmentPageE} />
               <Route path="/medisin" component={MedicinePage} />
+              <Route path="/medisinListe" component={MedicineListPage} />
               MedicinePage
               <Route component={NotFound} />
             </Switch>

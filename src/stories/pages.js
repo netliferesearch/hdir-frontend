@@ -22,6 +22,7 @@ import LisLearning from '../pages/LisLearning';
 import LisLearningActivities from '../pages/LisLearningActivities';
 import LisSpeciality from '../pages/LisSpeciality';
 import MedicinePage from '../pages/MedicinePage';
+import MedicineListPage from '../pages/MedicineListPage';
 import MemoPage from '../pages/MemoPage';
 import NewsListPage from '../pages/NewsListPage';
 import NormativeContentPage from '../pages/NormativeContentPage';
@@ -116,6 +117,11 @@ storiesOf('Pages', module)
   .addWithStaticMarkup('Medicine page', () => (
     <HashRouter>
       <MedicinePage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Medicine List page', () => (
+    <HashRouter>
+      <MedicineListPage />
     </HashRouter>
   ))
   .addWithStaticMarkup('Memo page', () => (
