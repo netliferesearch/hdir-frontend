@@ -31,7 +31,7 @@ const MedicinePage = () => (
               <LongShortHeading
                 long="Virkestoffer"
                 short="Amfetamin 2"
-                icon="./icons/firstAid.svg"
+                icon="./icons/Medisiner.svg"
               />
             </div>
             <div className="l-mt-4">

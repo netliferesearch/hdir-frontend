@@ -28,7 +28,7 @@ const MedicineListPage = () => (
         <LongShortHeading
           long="Delegasjonsfullmakt til Helfo med legemiddelliste"
           short="Legemidler- og virkestoff liste"
-          icon="./icons/firstAid.svg"
+          icon="./icons/Medisiner.svg"
         />
       </div>
       <div className="l-mt-3">
