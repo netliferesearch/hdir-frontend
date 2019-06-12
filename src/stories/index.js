@@ -853,7 +853,7 @@ storiesOf('LinkList', module)
 storiesOf('LongShortHeading', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup('Basic', () => (
+  .addWithStaticMarkup('Basic uten link', () => (
     <LongShortHeading
       long={text(
         'Long heading',
@@ -861,6 +861,15 @@ storiesOf('LongShortHeading', module)
       )}
       short={text('Short heading', 'Svangerskapsdiabetes')}
       icon={text('Icon path', 'https://placehold.it/64x64')}
+    />
+  ))
+  .addWithStaticMarkup('Basic med link', () => (
+    <LongShortHeading
+      long={text("Long heading", "Nasjonal faglig retningslinje")}
+      short={text("Short heading", "Svangerskapsdiabetes")}
+      icon={'./icons/Retningslinjer_Veiledere_Faglige_råd.svg'}
+      url="#a"
+      linkText={text("Link text: ", "Hva er nasjonal faglig retningslinje")}
     />
   ));
 
