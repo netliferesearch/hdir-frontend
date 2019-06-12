@@ -20,7 +20,7 @@ function findActiveHeading(headings, scrollPos, setActiveHeading) {
   setActiveHeading(scrolledPastItems.length);
 }
 
-const hasItems = arr => arr && arr.length;
+const hasItems = arr => (arr && arr.length) ? true : false;
 
 const activeChild = children =>
   children ? children.some(x => x.active) : false;
@@ -47,8 +47,8 @@ const ListItem = ({ props }) => {
   return (
     <>
       <a
-        href={!props.active && props.url}
-        role={props.active && 'presentation'}
+        href={!props.active && props.url ? props.url : ''}
+        role={props.active ? 'presentation' : ''}
         className={linkClasses(props.small, props.active, props.children)}
       >
         {props.title && (
@@ -98,17 +98,14 @@ const SectionSidebar = props => {
     }
   };
 
-  // Fetches all headings on mount, if we don't have a list
   useEffect(() => {
-    if (!hasItems(props.list)) {
+    // Fetches all headings on mount, if we don't have a list
+    if (!hasItems(props.list) && !hasItems(headings)) {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
     }
     if (hasItems(headings)) {
       Stickyfill.add(sidebarRef.current);
     }
-  }, [props.list, headings]);
-
-  useEffect(() => {
     if (!hasItems(props.list)) {
       // Returns a new function that is a debounce with our function and its arguments
       const createDebounceFunction = (func, ...args) =>
@@ -141,7 +138,7 @@ const SectionSidebar = props => {
         }
       };
     }
-  }, [headings, props.list]);
+  }, [props.list, headings]);
 
   // Gives all headings a url-safe id based on its text
   if (!hasItems(props.list)) {
