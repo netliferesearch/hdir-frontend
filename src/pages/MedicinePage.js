@@ -29,16 +29,20 @@ const MedicinePage = () => (
           <div className="col-md-8 col-xs-12 col-md-offset-2">
             <div className="l-mt-4">
               <LongShortHeading
-                long="Virkestoffer"
                 short="Amfetamin 2"
+                long="Virkestoff"
                 icon="./icons/Medisiner.svg"
+                url="https://www.nav.no/rettskildene/Vedlegg/vedlegg-1-til-5-14-delegasjonsfullmakt-til-helfo-med-legemiddelliste"
+                linkText="Vedlegg 1 til § 5-14"
               />
             </div>
-            <div className="l-mt-4">
+            <div className="l-mt-3">
               <article className="t-body-text">
                 <Box color="green" square>
                   <p>
-                    <b>Endret: 8/14, 9/15, 8/16, 1/18, 8/18, 2/19</b>
+                    <b>
+                      Sist faglig oppdatert: 8/14, 9/15, 8/16, 1/18, 8/18, 2/19
+                    </b>
                   </p>
                   <p>
                     <b>Preparatnavn: Adderall XR</b>
@@ -48,8 +52,17 @@ const MedicinePage = () => (
                       ATC-kode: N06BA01 ikke-markedsført preparat, A-preparat
                     </b>
                   </p>
+                  <div className="l-mt-2">
+                    <p>
+                      Det kan fattes et vedtak som gjelder både for krem og
+                      plaster i reseptpliktig pakning. Det kan fattes et vedtak
+                      som gjelder både for krem og plaster i reseptpliktig
+                      pakning. Det kan fattes et vedtak som gjelder både for
+                      krem og plaster i reseptpliktig pakning.
+                    </p>
+                  </div>
                 </Box>
-                <div className="l-mt-4">
+                <div className="l-mt-3">
                   <table>
                     <tbody>
                       <tr>
@@ -60,16 +73,15 @@ const MedicinePage = () => (
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row">Diagnosekode</th>
+                        <th scope="row">Diagnosekoder</th>
                         <td>ICD-10: F90 / ICPC-2: P81</td>
                       </tr>
                       <tr>
                         <th scope="row">Hjemmel</th>
                         <td>
                           § 3 ICD-10: F90
-                          <br />
                           <p>&nbsp;</p>
-                          <i>Før 1. januar 2018:</i>
+                          Før 1. januar 2018:
                           <br />
                           § 3a, jf. § 2
                           <br />
@@ -79,12 +91,74 @@ const MedicinePage = () => (
                         </td>
                       </tr>
                       <tr>
+                        <th scope="row">Tidsbegrensning</th>
+                        <td>
+                          Vedtakene tidsbegrenses i 2 år.
+                          <p>&nbsp;</p>
+                          Dersom brukeren fyller 18 år i løpet av disse to
+                          årene, og det ikke er gjort unntak fra
+                          aldersbegrensningen, skal vedtaket tidsbegrenses til
+                          fylte 18 år.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Vilkår</th>
+                        <td>
+                          Det skal bekreftes at:
+                          <ul>
+                            <li>
+                              faren for avhengighet er vurdert og funnet
+                              underordnet behovet for behandling
+                            </li>
+                            <li>konkret behandlingsplan foreligger</li>
+                            <li>
+                              smerteanalyse er utført, for eksempel ved hjelp av
+                              VAS-skala
+                            </li>
+                          </ul>
+                          Døgndose skal oppgis per legemiddel eller som mg orale
+                          morfinekvivalenter. Navnet på fastlege med tilhørende
+                          legekontor, sykehusavdeling og/eller tverrfaglig
+                          smerteklinikk som skal forskrive legemidlene til
+                          pasienten skal oppgis.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Krav til søkende lege</th>
+                        <td>
+                          Søknad skal komme fra pasientens fastlege / lege ved
+                          fastlegens kontor eller fra en lege ved en tverrfaglig
+                          smerteklinikk ved:
+                          <ul>
+                            <li>
+                              Søknader om legemidler i ATC-gruppe N02A og
+                              R05DA04
+                            </li>
+                            <li>
+                              Døgndose inntil (≤) 100 mg orale
+                              morfinekvivalenter
+                            </li>
+                            <li>Avklart smertetilstand</li>
+                          </ul>
+                          Søknad skal komme fra lege ved en tverrfaglig
+                          smerteklinikk ved:
+                          <ul>
+                            <li>
+                              Døgndose over 100 mg og inntil 300 (≤) mg orale
+                              morfinekvivalenter
+                            </li>
+                            <li>Uavklart smertetilstand</li>
+                            <li>Søknader om metadon (ATC-kode N07BC02)</li>
+                          </ul>
+                          Metadon (ATC-kode N07BC02) inkluderes i alle vedtak
+                          når søknaden kommer fra tverrfaglig smerteklinikk.
+                        </td>
+                      </tr>
+                      <tr>
                         <th scope="row">Krav til tidligere behandling</th>
                         <td>
-                          <i>
-                            Minst to forhåndsgodkjente preparater med
-                            forskjellig virkestoff:
-                          </i>
+                          Minst to forhåndsgodkjente preparater med forskjellig
+                          virkestoff:
                           <br />
                           metylfenidat (ATC-kode N06BA04),
                           <br />
@@ -137,7 +211,7 @@ const MedicinePage = () => (
                           § 3 ICD-10: F90
                           <br />
                           <p>&nbsp;</p>
-                          <i>Før 1. januar 2018:</i>
+                          Før 1. januar 2018:
                           <br />
                           § 3a, jf. § 2
                           <br />
@@ -149,10 +223,8 @@ const MedicinePage = () => (
                       <tr>
                         <th scope="row">Krav til tidligere behandling</th>
                         <td>
-                          <i>
-                            Minst to forhåndsgodkjente preparater med
-                            forskjellig virkestoff:
-                          </i>
+                          Minst to forhåndsgodkjente preparater med forskjellig
+                          virkestoff:
                           <br />
                           metylfenidat (ATC-kode N06BA04),
                           <br />
