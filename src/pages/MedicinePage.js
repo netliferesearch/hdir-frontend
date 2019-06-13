@@ -15,7 +15,7 @@ const MedicinePage = () => (
             href: '#a'
           },
           {
-            name: 'Preparater',
+            name: 'Legemiddel',
             href: '#a'
           },
           {
@@ -45,7 +45,7 @@ const MedicinePage = () => (
                     </b>
                   </p>
                   <p>
-                    <b>Preparatnavn: Adderall XR</b>
+                    <b>Legemiddelnavn: Adderall XR</b>
                   </p>
                   <p>
                     <b>
