@@ -18,7 +18,7 @@ const MedicineListPage = () => (
           href: '#a'
         },
         {
-          name: 'Legemiddelliste',
+          name: 'Legemidler og virkestoff',
           href: '#a'
         }
       ]}
@@ -35,7 +35,7 @@ const MedicineListPage = () => (
       </div>
       <div className="l-mt-3">
         <h2 className="h5 h5--thin l-mb-1">Velg innholdstype</h2>
-        <FilterList list={['Virkestoff', 'Legemiddel']} />
+        <FilterList list={['Legemidler', 'Virkestoff']} />
       </div>
 
       <div className="l-mt-3">
