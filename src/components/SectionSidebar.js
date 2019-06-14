@@ -5,7 +5,12 @@ import debounce from 'lodash.debounce';
 import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
+// Import utilities
+import buildId from './../utils/buildIdUtil'
+import scrollToTitleFromUrlHash from './../utils/scrollToTitleFromUrlHashUtil'
 
+// Initiate logic for scrolling to header/section based on hash in url
+scrollToTitleFromUrlHash()
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -27,7 +32,7 @@ const activeChild = children =>
 
 // Makes a URL-safe string
 const urlKebabCase = string =>
-  encodeURI(string.replace(/\s+/g, '-').toLowerCase());
+  encodeURI(buildId(string));
 
 const linkClasses = (small, active, children) =>
   classNames({
