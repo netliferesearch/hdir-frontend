@@ -147,9 +147,23 @@ const SectionSidebar = props => {
 
   // Gives all headings a url-safe id based on its text
   if (!hasItems(props.list)) {
-    headings.forEach(item => {
-      item.setAttribute('id', urlKebabCase(item.innerText));
-    });
+    headings.reduce((item, nextItem)=>{
+      // Create kebabt url like this -> one-long-string
+      const kebabUrl = urlKebabCase(nextItem.innerText);
+      // Filter for duplicates
+      const foundDuplicate = item.filter(a => urlKebabCase(a.innerText) === kebabUrl)
+      if (foundDuplicate.length > 0) {
+        // If duplicates found create an id attribute and add the length of duplicates as unique id to the id
+        nextItem.setAttribute('id', `${kebabUrl}-${foundDuplicate.length}`);
+      }else{
+        // Create an id attribute
+        nextItem.setAttribute('id', kebabUrl);
+      }
+      return [
+        ...item,
+        nextItem
+      ]
+    },[])
   }
 
   // Creates a list with links with either the headings, or the list it received
@@ -157,7 +171,7 @@ const SectionSidebar = props => {
     ? headings.map(h => ({
         description: h.innerText,
         prefix: '↓',
-        url: `#${urlKebabCase(h.innerText)}`
+        url: `#${h.id}`
       }))
     : props.list;
 
