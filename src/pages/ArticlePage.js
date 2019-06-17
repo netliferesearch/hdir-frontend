@@ -1,6 +1,10 @@
 import React from 'react';
 
 import NavList from '../components/NavList';
+// utils
+import scrollToTitleFromUrlHash from './../utils/scrollToTitleFromUrlHashUtil'
+
+// import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
@@ -8,7 +12,11 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import SectionSidebar from '../components/SectionSidebar';
 import Statistics from '../components/Statistics';
 
+
+scrollToTitleFromUrlHash()
+
 const ArticlePage = () => (
+
   <>
     <div className="l-container">
       <Breadcrumbs
@@ -41,6 +49,13 @@ const ArticlePage = () => (
             <SectionSidebar heading="Innhold på denne siden" />
           </aside>
           <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
+            <h2>Bakgrunn</h2>
+            <p>
+              Flertallet av personer med <i>psykiske helseproblemer</i> er i
+              jobb. Likevel er det mange som står utenfor arbeidslivet og ønsker
+              seg inn.
+            </p>
+
             <h2>Bakgrunn</h2>
             <p>
               Flertallet av personer med <i>psykiske helseproblemer</i> er i
@@ -81,7 +96,34 @@ const ArticlePage = () => (
               arbeidsgivere og ansatte/jobbsøkere til å skape et godt
               arbeidsmiljø.
             </p>
+
             <h2>Arbeid bidrar til raskere bedring</h2>
+            <p>
+              Flertallet av personer med psykiske helseproblemer er i jobb.
+              Likevel er det mange som står utenfor arbeidslivet og ønsker seg
+              inn.
+            </p>
+
+            <h2>3 søk</h2>
+            <p>
+              Flertallet av personer med psykiske helseproblemer er i jobb.
+              Likevel er det mange som står utenfor arbeidslivet og ønsker seg
+              inn.
+            </p>
+
+            <h2>3 søk</h2>
+            <p>
+              Flertallet av personer med psykiske helseproblemer er i jobb.
+              Likevel er det mange som står utenfor arbeidslivet og ønsker seg
+              inn.
+            </p>
+            <h2>3 søk</h2>
+
+            <p>
+              Flertallet av personer med psykiske helseproblemer er i jobb.
+              Likevel er det mange som står utenfor arbeidslivet og ønsker seg
+              inn.
+            </p>
             <p>
               Flertallet av personer med psykiske helseproblemer er i jobb.
               Likevel er det mange som står utenfor arbeidslivet og ønsker seg
