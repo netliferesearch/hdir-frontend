@@ -5,7 +5,12 @@ import debounce from 'lodash.debounce';
 import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
+// Import utilities
+import scrollToTitleFromUrlHash from './../utils/scrollToTitleFromUrlHashUtil'
+import createUniqueHeaders from './../utils/createUniqueHeadersUtil'
 
+// Initiate logic for scrolling to header/section based on hash in url
+scrollToTitleFromUrlHash()
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -24,10 +29,6 @@ const hasItems = arr => (arr && arr.length) ? true : false;
 
 const activeChild = children =>
   children ? children.some(x => x.active) : false;
-
-// Makes a URL-safe string
-const urlKebabCase = string =>
-  encodeURI(string.replace(/\s+/g, '-').toLowerCase());
 
 const linkClasses = (small, active, children) =>
   classNames({
@@ -142,9 +143,8 @@ const SectionSidebar = props => {
 
   // Gives all headings a url-safe id based on its text
   if (!hasItems(props.list)) {
-    headings.forEach(item => {
-      item.setAttribute('id', urlKebabCase(item.innerText));
-    });
+    // Util that create unique id for the h2 tags
+    createUniqueHeaders(headings)
   }
 
   // Creates a list with links with either the headings, or the list it received
@@ -152,7 +152,7 @@ const SectionSidebar = props => {
     ? headings.map(h => ({
         description: h.innerText,
         prefix: '↓',
-        url: `#${urlKebabCase(h.innerText)}`
+        url: `#${h.id}`
       }))
     : props.list;
 

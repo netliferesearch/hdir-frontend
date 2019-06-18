@@ -8,6 +8,7 @@
     "detect-browser": "^4.5.0",
     "flexboxgrid-sass": "^8.0.5",
     "http-proxy-middleware": "^0.19.1",
+    "jsdom": "^15.1.1",
     "melanke-watchjs": "^1.5.0",
     "normalize-scss": "^7.0.1",
     "prop-types": "^15.6.2",
@@ -85,6 +86,11 @@
         "preset": "iPhone 7"
       }
     }
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/setupTest.js"
+    ]
   },
   "reactSnap": {
     "source": "build",
