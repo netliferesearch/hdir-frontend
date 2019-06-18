@@ -9,6 +9,7 @@
     "flexboxgrid-sass": "^8.0.5",
     "http-proxy-middleware": "^0.19.1",
     "jsdom": "^15.1.1",
+    "melanke-watchjs": "^1.5.0",
     "normalize-scss": "^7.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.8.1",
@@ -63,7 +64,8 @@
     "react-app-rewired": "^2.0.2",
     "react-snap": "^1.23.0",
     "react-storybook-addon-static-markup": "https://github.com/nilsnh/react-storybook-addon-static-markup.git",
-    "sass-svg-uri": "^1.0.0"
+    "sass-svg-uri": "^1.0.0",
+    "validate-color": "^1.0.2"
   },
   "browserslist": [
     ">0.5%",
