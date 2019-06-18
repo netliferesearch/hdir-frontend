@@ -6,8 +6,8 @@ import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
 // Import utilities
-import buildId from './../utils/buildIdUtil'
 import scrollToTitleFromUrlHash from './../utils/scrollToTitleFromUrlHashUtil'
+import createUniqueHeaders from './../utils/createUniqueHeadersUtil'
 
 // Initiate logic for scrolling to header/section based on hash in url
 scrollToTitleFromUrlHash()
@@ -29,10 +29,6 @@ const hasItems = arr => (arr && arr.length) ? true : false;
 
 const activeChild = children =>
   children ? children.some(x => x.active) : false;
-
-// Makes a URL-safe string
-const urlKebabCase = string =>
-  encodeURI(buildId(string));
 
 const linkClasses = (small, active, children) =>
   classNames({
@@ -147,23 +143,8 @@ const SectionSidebar = props => {
 
   // Gives all headings a url-safe id based on its text
   if (!hasItems(props.list)) {
-    headings.reduce((item, nextItem)=>{
-      // Create kebabt url like this -> one-long-string
-      const kebabUrl = urlKebabCase(nextItem.innerText);
-      // Filter for duplicates
-      const foundDuplicate = item.filter(a => urlKebabCase(a.innerText) === kebabUrl)
-      if (foundDuplicate.length > 0) {
-        // If duplicates found create an id attribute and add the length of duplicates as unique id to the id
-        nextItem.setAttribute('id', `${kebabUrl}-${foundDuplicate.length}`);
-      }else{
-        // Create an id attribute
-        nextItem.setAttribute('id', kebabUrl);
-      }
-      return [
-        ...item,
-        nextItem
-      ]
-    },[])
+    // Util that create unique id for the h2 tags
+    createUniqueHeaders(headings)
   }
 
   // Creates a list with links with either the headings, or the list it received
