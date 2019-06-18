@@ -13,7 +13,10 @@ const SearchResultPage = () => (
       <div className="row l-mt-3">
         <div className="col-xs-12 col-md-8 col-md-offset-4">
           <InputSearch label="Søk" />
-          <div className="l-mt-1 b-link t-right"><a href="#" className="b-link__link b-link__link--arrow">Søk i arkivert innhold</a>
+          <div className="l-mt-1 b-link t-right">
+            <a href="#" className="b-link__link b-link__link--arrow">
+              Søk i arkivert innhold
+            </a>
           </div>
         </div>
       </div>
