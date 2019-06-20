@@ -20,7 +20,7 @@ const createUniqueHeaders = items => {
     // Added a onclick to all headers goint through this logic
     nextItem.onclick = () => {
       const urlToCopy = `${window.location.origin}${window.location.pathname}#${nextItem.id}`
-      console.info(`Copied ${urlToCopy} to clipboard`);
+      console.info(`NOT ACTIVATED => Copied ${urlToCopy} to clipboard`);
       // TODO: Uncomment to activate the copy to clipboard logic
       // // Copy the url for the heade clicked
       // copyToClipboard(urlToCopy)
