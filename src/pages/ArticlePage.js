@@ -1,8 +1,6 @@
 import React from 'react';
 
 import NavList from '../components/NavList';
-// utils
-import scrollToTitleFromUrlHash from './../utils/scrollToTitleFromUrlHashUtil'
 
 // import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
@@ -11,9 +9,6 @@ import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SectionSidebar from '../components/SectionSidebar';
 import Statistics from '../components/Statistics';
-
-
-scrollToTitleFromUrlHash()
 
 const ArticlePage = () => (
 
