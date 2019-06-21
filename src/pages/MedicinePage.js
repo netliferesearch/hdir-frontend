@@ -32,8 +32,6 @@ const MedicinePage = () => (
                 short="Amfetamin 2"
                 long="Virkestoff"
                 icon="./icons/Medisiner.svg"
-                url="https://www.nav.no/rettskildene/Vedlegg/vedlegg-1-til-5-14-delegasjonsfullmakt-til-helfo-med-legemiddelliste"
-                linkText="Vedlegg 1 til § 5-14"
               />
             </div>
             <div className="l-mt-3">
