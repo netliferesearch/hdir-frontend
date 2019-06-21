@@ -12,3 +12,17 @@
 #sectionSidebar {
   height: 100%;
 }
+
+// The copy icon for headers generated with createUniqueHeadersUtil
+.js-copy-icon {
+  margin-left: 0.1em;
+  padding: 0.4em;
+  display: none;
+  @include mq($until: desktop) {
+    display: inline;
+  }
+}
+.js-show-copy-icon:hover > .js-copy-icon, .js-copy-icon:hover {
+  cursor: pointer;
+  display: inline;
+}
