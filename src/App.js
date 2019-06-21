@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+// Styles
 import './styles/App.scss';
-
+// Import components
 import Loading from './components/Loading';
 import ScrollToTop from './components/ScrollToTop';
 import Box from './components/Box';
 import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
-
+// Import pages
 import ArticlePage from './pages/ArticlePage';
 import ArticlePageNoH2 from './pages/ArticlePageNoH2';
 import ArticlePageWithForm from './pages/ArticlePageWithForm';
@@ -56,8 +56,18 @@ import TransportPage from './pages/TransportPage';
 import TreatmentPageA from './pages/TreatmentPageA';
 import TreatmentPageC from './pages/TreatmentPageC';
 import TreatmentPageE from './pages/TreatmentPageE';
+// Import utilities
+import scrollToTitleFromUrlHash from './utils/scrollToTitleFromUrlHashUtil'
+import createUniqueHeaders from './utils/createUniqueHeadersUtil'
 
 class App extends Component {
+  componentDidMount(){
+    // Initiate logic for scrolling to header/section based on hash in url
+    scrollToTitleFromUrlHash()
+    // Find all h2 headers and add unique ids
+    createUniqueHeaders([...document.querySelectorAll('h2')]);
+  }
+
   render() {
     return (
       <div className="App">
