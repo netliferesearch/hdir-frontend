@@ -28,6 +28,8 @@ const pages = [
   {link: '/pakkeforløp-e', desc: 'Pakkeforløp [E]'},
   {link: '/medisin', desc: 'Medisin'},
   {link: '/medisinListe', desc: 'MedisinListe'},
+  {link: '/pdf-print-preview', desc: 'Print PDF Preview'},
+  {link: '/produkt', desc: 'Produkt'},
   {link: '/produkt', desc: 'Produkt'},
   {link: '/rapport', desc: 'Rapport'},
   {link: '/rapport-kapittel', desc: 'Rapport kapittel'},

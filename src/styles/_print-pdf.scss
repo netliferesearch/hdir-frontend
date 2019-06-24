@@ -1,0 +1,44 @@
+@page {
+  size: A4;
+  margin: 1cm;
+  counter-increment: page;
+  @bottom-center {
+    content: "Side " counter(page) "/" counter(pages);
+    margin-bottom: 1cm;
+  }
+}
+
+.print-pdf {
+  padding: 0 20px 20px;
+  // Every 'div' that is a diract child of 'body' is a single page
+  & > div {
+    border-bottom: 10px solid black;
+    margin-bottom: 40px;
+  }
+  .tabbed {
+    margin-left: 20px;
+  }
+  font-size: 16px;
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5 {
+    margin-bottom: 10px;
+  }
+  h1, .h1 {
+    font-size: 40px;
+  }
+  h2, .h2 {
+    font-size: 30px;
+  }
+  h3, .h3 {
+    font-size: 24px;
+  }
+  h4, .h4 {
+    font-size: 20px;
+  }
+  h5, .h5 {
+    font-size: 18px;
+  }
+}
