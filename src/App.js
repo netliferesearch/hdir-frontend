@@ -40,6 +40,7 @@ import NotFound from './pages/NotFound';
 import ParentHearingPage from './pages/ParentHearingPage';
 import ParentMemoPage from './pages/ParentMemoPage';
 import PressReleasePage from './pages/PressReleasePage';
+import PrintPdfPreview from './pages/PrintPdfPreview';
 import ProductPage from './pages/ProductPage';
 import ProfessionSelector from './pages/ProfessionSelector';
 import RecommendationPage from './pages/RecommendationPage';
@@ -171,6 +172,7 @@ class App extends Component {
               <Route path="/pakkeforløp-a" component={TreatmentPageA} />
               <Route path="/pakkeforløp-c" component={TreatmentPageC} />
               <Route path="/pakkeforløp-e" component={TreatmentPageE} />
+              <Route path="/pdf-print-preview" component={PrintPdfPreview} />
               <Route path="/medisin" component={MedicinePage} />
               <Route path="/medisinListe" component={MedicineListPage} />
               MedicinePage
