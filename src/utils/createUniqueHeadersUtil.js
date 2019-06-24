@@ -32,11 +32,11 @@ const createUniqueHeaders = items => {
     ele.onclick = () => {
       const urlToCopy = `${window.location.origin}${window.location.pathname}#${nextItem.id}`
       console.info(`Copied ${urlToCopy} to clipboard`);
-      // // Copy the url for the heade clicked…
+      // Copy the url for the heade clicked…
       copyToClipboard(urlToCopy)
     }
     nextItem.appendChild(ele);
-    nextItem.className = nextItem.className + ' js-show-copy-icon'
+    nextItem.className = nextItem.className || '' + ' js-show-copy-icon'
 
     return [
       ...item,
