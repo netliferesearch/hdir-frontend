@@ -1,8 +1,11 @@
-// SCSS
-
-
 @page {
+  size: A4;
   margin: 1cm;
+  counter-increment: page;
+  @bottom-center {
+    content: "Side " counter(page) "/" counter(pages);
+    margin-bottom: 1cm;
+  }
 }
 
 .print-pdf {
