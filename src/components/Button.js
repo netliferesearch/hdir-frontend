@@ -30,7 +30,7 @@ const Button = props => {
     props.secondaryDark
   );
 
-  return <button className={allClassNames}>{props.children}</button>;
+  return <button className={allClassNames} onClick={props.onClick}>{props.children}</button>;
 };
 
 Button.propTypes = {
