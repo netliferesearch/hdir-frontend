@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import zenscroll from 'zenscroll';
 
+import uuidv4 from 'uuid/v4';
+
 import Alert from './Alert';
 import Heading from './Heading';
 
@@ -127,7 +129,7 @@ const Collapsible = props => {
       )}
 
       <div
-        id={id}
+        id={uuidv4()}
         aria-hidden={!collapsed}
         hidden={!collapsed}
         className={contentClasses(props.smallContent)}
