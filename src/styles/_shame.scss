@@ -25,14 +25,13 @@ table {
   border-left: none;
   border-right: none;
   tr {
+    display: table-row;
     &:last-child {
       td {
         border-bottom: none;
       }
-      @include mq($from: $desktop) {
-        th {
-          border-bottom: none;
-        }
+      th {
+        border-bottom: none;
       }
     }
   }
@@ -41,6 +40,10 @@ table {
     box-sizing: border-box;
     padding: 1rem;
     border-bottom: 1px solid $black;
+    &:first-child{
+      border-bottom: 1px solid $black;
+      border-right: 1px solid $black;
+    }
 
     @include mq($from: $desktop) {
       display: table-cell;
