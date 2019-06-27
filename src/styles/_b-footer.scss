@@ -5,6 +5,10 @@
     @include link-init(white, true);
     display: inline;
     line-height: 2em;
+    
+    &:focus {
+      outline-color: white
+    }
   }
   &__text {
     font-size: $meta-text;
