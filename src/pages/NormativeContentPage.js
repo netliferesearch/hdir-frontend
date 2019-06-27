@@ -31,12 +31,12 @@ const NormativeContentPage = () => (
           <h2 className="h5 h5--thin l-mb-1">Velg innholdstype</h2>
           <FilterList
             list={[
-              'Alt',
-              'Nasjonale faglige retningslinjer',
-              'Pakkeforløp',
-              'Rundskriv',
-              'Veileder til lov og forskrift',
-              'Høringer'
+              'Alt (22)',
+              'Nasjonale faglige retningslinjer (3)',
+              'Pakkeforløp (4)',
+              'Rundskriv (5)',
+              'Veileder til lov og forskrift (8)',
+              'Høringer (2)'
             ]}
           />
         </div>
