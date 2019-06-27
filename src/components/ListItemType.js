@@ -18,7 +18,7 @@ const ListItemType = props => {
         >
           <div className="b-list-item-type__flex-wrapper">
             <div className="b-list-item-type__text">
-              {fields.heading && <div className="h3">{fields.heading}</div>}
+              {fields.heading && <h3>{fields.heading}</h3>}
               {fields.category && (
                 <p className="b-list-item-type__category">{fields.category}</p>
               )}
@@ -50,7 +50,7 @@ const ListItemType = props => {
         >
           <div className="b-list-item-type__flex-wrapper">
             <div className="b-list-item-type__text">
-              {fields.heading && <div className="h3">{fields.heading}</div>}
+              {fields.heading && <h3>{fields.heading}</h3>}
               {fields.category && (
                 <p className="b-list-item-type__category">{fields.category}</p>
               )}
@@ -99,7 +99,7 @@ const ListItemType = props => {
               <SquareImage src={fields.image} alt={fields.heading} />
             </div>
             <div className="b-list-item-type__text">
-              {fields.heading && <div className="h3">{fields.heading}</div>}
+              {fields.heading && <h3>{fields.heading}</h3>}
               {fields.category && (
                 <p className="b-list-item-type__category">{fields.category}</p>
               )}
@@ -129,7 +129,7 @@ const ListItemType = props => {
         >
           <div className="b-list-item-type__flex-wrapper">
             <div className="b-list-item-type__text">
-              {fields.heading && <div className="h3">{fields.heading}</div>}
+              {fields.heading && <h3>{fields.heading}</h3>}
               {fields.category && (
                 <p className="b-list-item-type__category">{fields.category}</p>
               )}
@@ -157,7 +157,7 @@ const ListItemType = props => {
         >
           <div className="b-list-item-type__flex-wrapper">
             <div className="b-list-item-type__text">
-              {fields.heading && <div className="h3">{fields.heading}</div>}
+              {fields.heading && <h3>{fields.heading}</h3>}
               {fields.category && (
                 <p className="b-list-item-type__category">{fields.category}</p>
               )}
