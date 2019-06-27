@@ -4,7 +4,7 @@ import Select from './Select';
 
 const ListHeading = props => (
   <div className="b-list-heading">
-    <strong className="b-list-heading__heading">{props.heading}</strong>
+    <h4 className="b-list-heading__heading">{props.heading}</h4>
     {props.selectLabel && props.selectOptions && (
       <Select label={props.selectLabel} options={props.selectOptions} simple />
     )}
