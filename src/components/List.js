@@ -24,7 +24,7 @@ const List = props => {
       aria-label="unique-text-explaining-this"
     >
       {props.heading && (
-        <div className="b-nav-list__heading">{props.heading}</div>
+        <h3 className="b-nav-list__heading h4">{props.heading}</h3>
       )}
       <ul className={listItemsClasses(props.columns)}>
         {props.list.map(item => (
