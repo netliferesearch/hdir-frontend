@@ -8,13 +8,18 @@ const legendClasses = border =>
     'b-checkbox-group__legend': true,
     'b-checkbox-group__legend--border': border
   });
+  
+  const sort = (values) => {
+    return values.sort((a, b) => ('' + a.value).localeCompare(b.value))
+  }
 
 const CheckboxGroup = props => (
   <fieldset className="b-checkbox-group">
     {props.heading && (
       <legend className={legendClasses(props.border)}>{props.heading}</legend>
     )}
-    {props.options.map((option, index) => {
+    {sort(props.options).map((option, index) => {
+      console.log(option)
       return (
         <label className="b-checkbox-group__label" key={shortid.generate()}>
           <input
@@ -26,7 +31,7 @@ const CheckboxGroup = props => (
             onChange={() =>
               // Returns an updates list with the item toggeled
               props.handleChange(
-                props.options.map((newOption, i) =>
+                sort(props.options).map((newOption, i) =>
                   i === index
                     ? {
                         ...newOption,
