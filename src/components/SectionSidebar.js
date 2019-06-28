@@ -38,13 +38,26 @@ const sectionSidebarClasses = bottom =>
   });
 
 // Part of the component as it own component, we also make it use itself.
-const ListItem = ({ props }) => {
+const ListItem = ({ props, onClick }) => {
+  
+  // On click, we find the corresponding heading
+  // We add tabindex, so tabindex order isn't broken. Then we focus on it.
+  const setFocus = () => {
+    const heading = document.getElementById(props.url.replace('#','')) || '';
+    const headingElement = heading && heading.closest('.b-chapter-heading');
+    setTimeout(function(){ 
+      headingElement && headingElement.setAttribute('tabindex', -1);
+      headingElement && headingElement.focus();
+    }, 0);
+  }
+  
   return (
     <>{
       // eslint-disable-next-line jsx-a11y/anchor-is-valid
       }<a
         href={!props.active && props.url ? props.url : ''}
         role={props.active ? 'presentation' : ''}
+        onClick={setFocus}
         className={linkClasses(props.small, props.active, props.children)}
       >
         {props.title && (
