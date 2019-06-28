@@ -9,6 +9,7 @@ const legendClasses = border =>
     'b-checkbox-group__legend--border': border
   });
   
+  // Sorts values alphabetically
   const sort = (values) => {
     return values.sort((a, b) => ('' + a.value).localeCompare(b.value))
   }
