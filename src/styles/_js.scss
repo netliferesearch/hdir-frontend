@@ -29,7 +29,10 @@ h2:hover > .js-copy-icon,
   cursor: pointer;
   display: inline-block;
 }
-.js-copy-icon-text {
-  position: relative;
-  left: 10px;
+
+h2:hover {
+  @include mq($from: desktop) {
+    position: relative;
+    left: -21.5px;
+  }
 }

@@ -8,7 +8,6 @@ import InputSearch from '../src/components/InputSearch';
 import SectionSidebar from '../src/components/SectionSidebar';
 import MultiSelector from './components/MultiSelector';
 import Loading from './components/Loading';
-import GenerateLinksOnHeadings from './components/GenerateLinksOnHeadings';
 import { checkboxFilter } from './js/searchFilter';
 
 const rootElement = document.getElementById('root');
@@ -17,7 +16,6 @@ const searchElement = document.getElementById('search');
 const sectionSidebarElement = document.getElementById('sectionSidebar');
 const multiSelectElements = document.querySelectorAll('.js-multi-selector');
 const loadingStatusElement = document.getElementById('loadingStatus');
-const generateLinksOnHeadingsElement = document.getElementById('generateLinksOnHeadings');
 
 // If we build for Enonic, we don't want all the content.
 // When publishing to Netlify, we want to show everything in this project.
@@ -147,12 +145,5 @@ if (loadingStatusElement) {
   render(
     <Loading message="PDF-versjon opprettes. Dette kan ta litt tid."/>,
     loadingStatusElement
-  );
-}
-
-if (generateLinksOnHeadingsElement) {
-  render(
-    <GenerateLinksOnHeadings/>,
-    generateLinksOnHeadingsElement
   );
 }

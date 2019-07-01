@@ -38,7 +38,7 @@ const createUniqueHeaders = items => {
     const headingTxt = nextItem.innerHTML;
     headingTxtEl.innerHTML = headingTxt;
     nextItem.innerHTML = '';
-    nextItem.append(headingTxtEl);
+    nextItem.appendChild(headingTxtEl);
 
     ele.onclick = () => {
       const urlToCopy = `${window.location.origin}${window.location.pathname}#${nextItem.id}`

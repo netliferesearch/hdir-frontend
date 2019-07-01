@@ -5,6 +5,8 @@ import debounce from 'lodash.debounce';
 import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
+// Import components
+import GenerateLinksOnHeadings from './GenerateLinksOnHeadings';
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -146,47 +148,52 @@ const SectionSidebar = props => {
     : props.list;
 
   const renderContent = () => (
-    <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
-      <div
-        className={classNames({
-          'b-section-sidebar__heading': true,
-          'b-section-sidebar__heading--thick': !hasItems(props.list)
-        })}
-      >
-        {props.icon && (
-          <img
-            src={props.icon}
-            alt=""
-            role="presentation"
-            className="b-section-sidebar__icon"
-            aria-hidden
-          />
-        )}
-        {props.heading && props.headingUrl ? (
-          <a href={props.headingUrl} id="section-sidebar-heading">
-            {props.heading}
-          </a>
-        ) : (
-          <span id="section-sidebar-heading">{props.heading}</span>
-        )}
+    <>
+      {!hasItems(props.list) &&
+        <GenerateLinksOnHeadings/>
+      }
+      <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
+        <div
+          className={classNames({
+            'b-section-sidebar__heading': true,
+            'b-section-sidebar__heading--thick': !hasItems(props.list)
+          })}
+        >
+          {props.icon && (
+            <img
+              src={props.icon}
+              alt=""
+              role="presentation"
+              className="b-section-sidebar__icon"
+              aria-hidden
+            />
+          )}
+          {props.heading && props.headingUrl ? (
+            <a href={props.headingUrl} id="section-sidebar-heading">
+              {props.heading}
+            </a>
+          ) : (
+            <span id="section-sidebar-heading">{props.heading}</span>
+          )}
+        </div>
+        <nav aria-describedby="section-sidebar-heading">
+          {list.map((item, index) => {
+            if (!hasItems(props.list)) {
+              return (
+                <ListItem
+                  props={{
+                    ...item,
+                    active: activeHeading === index + 1
+                  }}
+                  key={shortid.generate()}
+                />
+              );
+            }
+            return <ListItem props={item} key={shortid.generate()} />;
+          })}
+        </nav>
       </div>
-      <nav aria-describedby="section-sidebar-heading">
-        {list.map((item, index) => {
-          if (!hasItems(props.list)) {
-            return (
-              <ListItem
-                props={{
-                  ...item,
-                  active: activeHeading === index + 1
-                }}
-                key={shortid.generate()}
-              />
-            );
-          }
-          return <ListItem props={item} key={shortid.generate()} />;
-        })}
-      </nav>
-    </div>
+    </>
   );
 
   return (

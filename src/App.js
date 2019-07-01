@@ -6,7 +6,6 @@ import './styles/App.scss';
 // Import components
 import Loading from './components/Loading';
 import ScrollToTop from './components/ScrollToTop';
-import GenerateLinksOnHeadings from './components/GenerateLinksOnHeadings';
 import Box from './components/Box';
 import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
@@ -67,7 +66,6 @@ class App extends Component {
         <BrowserRouter>
           <ScrollToTop>
             <Loading message="PDF-versjon opprettes. Dette kan ta litt tid."/>
-            <GenerateLinksOnHeadings/>
             <MainHeader
               name={this.props.name}
               links={this.props.links}
