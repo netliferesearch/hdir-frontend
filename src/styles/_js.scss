@@ -33,6 +33,6 @@ h2:hover > .js-copy-icon,
 h2[id]:hover {
   @include mq($from: desktop) {
     position: relative;
-    left: -21.5px;
+    left: -22px;
   }
 }
