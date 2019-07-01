@@ -30,7 +30,7 @@ h2:hover > .js-copy-icon,
   display: inline-block;
 }
 
-h2:hover {
+h2[id]:hover {
   @include mq($from: desktop) {
     position: relative;
     left: -21.5px;
