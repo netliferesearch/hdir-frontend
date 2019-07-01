@@ -15,17 +15,21 @@
 
 // The copy icon for headers generated with createUniqueHeadersUtil
 .js-copy-icon {
-  margin-left: 0.1em;
-  padding: 0.4em;
   display: none;
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
   @include mq($until: desktop) {
-    display: inline;
+    display: inline-block;
   }
 }
-.js-show-copy-icon:hover > .js-copy-icon, .js-copy-icon:hover {
+h2:hover > .js-copy-icon,
+.js-show-copy-icon:hover > .js-copy-icon,
+.js-copy-icon:hover {
   cursor: pointer;
-  display: inline;
+  display: inline-block;
+}
+.js-copy-icon-text {
+  position: relative;
+  left: 10px;
 }

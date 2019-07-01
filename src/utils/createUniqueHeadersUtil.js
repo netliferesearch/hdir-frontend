@@ -26,10 +26,19 @@ const createUniqueHeaders = items => {
 
     // DOC https://stackoverflow.com/questions/5210033/using-only-css-show-div-on-hover-over-a
 
-    const ele = document.createElement("span");
+    // Create element to contain click-able hash symbol
+    const ele = document.createElement('span');
     ele.className = "js-copy-icon";
     ele.innerHTML = "#";
-    // ele.id = "help";
+    // Create element to contain the current h2's text
+    // Extract h2's text, assign it to new element and remove it from h2
+    // Append the new element to the now empty 'h2'
+    const headingTxtEl = document.createElement('span');
+    headingTxtEl.className = 'js-copy-icon-text'
+    const headingTxt = nextItem.innerHTML;
+    headingTxtEl.innerHTML = headingTxt;
+    nextItem.innerHTML = '';
+    nextItem.append(headingTxtEl);
 
     ele.onclick = () => {
       const urlToCopy = `${window.location.origin}${window.location.pathname}#${nextItem.id}`
@@ -37,7 +46,12 @@ const createUniqueHeaders = items => {
       // Copy the url for the heade clicked…
       copyToClipboard(urlToCopy)
     }
-    nextItem.appendChild(ele);
+
+    function prepend(parent, ele) {
+      parent.insertBefore(ele , parent.firstChild);
+    }
+
+    prepend(nextItem, ele);
     nextItem.className = nextItem.className || ' js-show-copy-icon';
 
     return [
