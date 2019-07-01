@@ -129,4 +129,8 @@
     letter-spacing: 1px;
     font-size: $meta-text;
   }
+  &__meta-heading {
+    font-size: $meta-text;
+    margin-top: 10px;
+  }
 }
