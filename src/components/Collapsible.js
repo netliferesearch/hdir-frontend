@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import zenscroll from 'zenscroll';
 
+import uuidv4 from 'uuid/v4';
+
 import Alert from './Alert';
 import Heading from './Heading';
 
@@ -107,16 +109,19 @@ const Collapsible = props => {
         <div className="l-mt-1"> {props.subheadingContent}</div>
       )}
       {props.subheading && props.subheadingContent && (
-        <div className="b-collapsible__subheading-collapsible l-mt-1">
+        collapsed ? (
+          <div className="b-collapsible__subheading-collapsible l-mt-1">
           <Collapsible
-            heading={props.subheading}
-            subtle={Boolean(props.subheadingContent)}
-            size="small"
-            smallContent
+          heading={props.subheading}
+          subtle={Boolean(props.subheadingContent)}
+          size="small"
+          smallContent
           >
-            <p>{props.subheadingContent}</p>
+          <p>{props.subheadingContent}</p>
           </Collapsible>
-        </div>
+          </div>
+        ) :
+        <p className="b-collapsible__meta-heading">{props.subheading}</p>
       )}
       {!collapsed && props.alert && (
         <div className="l-mt-1">
@@ -127,7 +132,7 @@ const Collapsible = props => {
       )}
 
       <div
-        id={id}
+        id={uuidv4()}
         aria-hidden={!collapsed}
         hidden={!collapsed}
         className={contentClasses(props.smallContent)}
