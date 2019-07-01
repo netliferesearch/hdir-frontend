@@ -5,8 +5,6 @@ import debounce from 'lodash.debounce';
 import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
-// Import components
-import GenerateLinksOnHeadings from './GenerateLinksOnHeadings';
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -149,9 +147,6 @@ const SectionSidebar = props => {
 
   const renderContent = () => (
     <>
-      {!hasItems(props.list) &&
-        <GenerateLinksOnHeadings/>
-      }
       <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
         <div
           className={classNames({

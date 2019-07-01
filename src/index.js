@@ -8,6 +8,7 @@ import InputSearch from '../src/components/InputSearch';
 import SectionSidebar from '../src/components/SectionSidebar';
 import MultiSelector from './components/MultiSelector';
 import Loading from './components/Loading';
+import GenerateLinksOnHeadings from './components/GenerateLinksOnHeadings';
 import { checkboxFilter } from './js/searchFilter';
 
 const rootElement = document.getElementById('root');
@@ -15,7 +16,7 @@ const headerElement = document.getElementById('header');
 const searchElement = document.getElementById('search');
 const sectionSidebarElement = document.getElementById('sectionSidebar');
 const multiSelectElements = document.querySelectorAll('.js-multi-selector');
-const loadingStatusElement = document.getElementById('loadingStatus');
+const globalScopeScriptsElement = document.getElementById('globalScopeScripts');
 
 // If we build for Enonic, we don't want all the content.
 // When publishing to Netlify, we want to show everything in this project.
@@ -141,9 +142,12 @@ if (sectionSidebarElement) {
   );
 }
 
-if (loadingStatusElement) {
+if (globalScopeScriptsElement) {
   render(
-    <Loading message="PDF-versjon opprettes. Dette kan ta litt tid."/>,
-    loadingStatusElement
+    <>
+      <GenerateLinksOnHeadings/>
+      <Loading message="PDF-versjon opprettes. Dette kan ta litt tid."/>
+    </>,
+    globalScopeScriptsElement
   );
 }

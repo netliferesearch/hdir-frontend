@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // Styles
 import './styles/App.scss';
 // Import components
+import GenerateLinksOnHeadings from './components/GenerateLinksOnHeadings';
 import Loading from './components/Loading';
 import ScrollToTop from './components/ScrollToTop';
 import Box from './components/Box';
@@ -65,6 +66,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <ScrollToTop>
+            <GenerateLinksOnHeadings/>
             <Loading message="PDF-versjon opprettes. Dette kan ta litt tid."/>
             <MainHeader
               name={this.props.name}
