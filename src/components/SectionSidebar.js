@@ -40,8 +40,9 @@ const sectionSidebarClasses = bottom =>
 // Part of the component as it own component, we also make it use itself.
 const ListItem = ({ props }) => {
   return (
-    <>
-      <a
+    <>{
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
+      }<a
         href={!props.active && props.url ? props.url : ''}
         role={props.active ? 'presentation' : ''}
         className={linkClasses(props.small, props.active, props.children)}
