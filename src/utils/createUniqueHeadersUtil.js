@@ -1,16 +1,16 @@
 import buildId from './buildIdUtil';
-import copyToClipboard from './copyToClipboardUtil';
-import clp from './consoleLogPlusUtil';
+import { createCopyToClipboardEl } from './copyToClipboardUtil';
 
 // Makes a URL-safe string
 const urlKebabCase = string => encodeURI(buildId(string));
 
+// Prepend an element before another
+const prepend = (parent, elToPrepend) => {
+  parent.insertBefore(elToPrepend , parent.firstChild);
+}
+
 const createUniqueHeaders = items => {
-  clp({
-    prefix: 'createUniqueHeaders',
-    message: 'About to start creating unique header links',
-    type: 'info',
-  })
+  // Note: 'nextItem' here is a single heading (h2)
   return items.reduce((item, nextItem) => {
     // Create kebabt url like this -> one-long-string
     const kebabUrl = urlKebabCase(nextItem.innerText);
@@ -23,37 +23,23 @@ const createUniqueHeaders = items => {
       // Create an id attribute
       nextItem.id = kebabUrl;
     }
-
-    // DOC https://stackoverflow.com/questions/5210033/using-only-css-show-div-on-hover-over-a
-
-    // Create element to contain click-able hash symbol
-    const ele = document.createElement('span');
-    ele.className = "js-copy-icon";
-    ele.innerHTML = "#";
-    // Create element to contain the current h2's text
-    // Extract h2's text, assign it to new element and remove it from h2
-    // Append the new element to the now empty 'h2'
+    // Create element to contain the current h2's content
     const headingTxtEl = document.createElement('span');
+    // Give it a class
     headingTxtEl.className = 'js-copy-icon-text'
+    // Extract h2's content
     const headingTxt = nextItem.innerHTML;
+    // Assign it to new element
     headingTxtEl.innerHTML = headingTxt;
+    // And remove it from h2
     nextItem.innerHTML = '';
+    // Append the new element to the now empty 'h2'
     nextItem.appendChild(headingTxtEl);
-
-    ele.onclick = () => {
-      const urlToCopy = `${window.location.origin}${window.location.pathname}#${nextItem.id}`
-      console.info(`Copied ${urlToCopy} to clipboard`);
-      // Copy the url for the heade clicked…
-      copyToClipboard(urlToCopy)
-    }
-
-    function prepend(parent, ele) {
-      parent.insertBefore(ele , parent.firstChild);
-    }
-
-    prepend(nextItem, ele);
+    // Prepend the created copy to clipboard element
+    prepend(nextItem, createCopyToClipboardEl(nextItem.id));
+    // Assign class to heading
     nextItem.className = nextItem.className || ' js-show-copy-icon';
-
+    // Return headings with changes
     return [
       ...item,
       nextItem

@@ -1,12 +1,7 @@
+// See: "Copying text to clipboard with JavaScript"
+// https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
 
-/*
-
-  Code  copied from this article "Copying text to clipboard with JavaScript"
-  https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
-
-*/
-
-const copyToClipboard = str => {
+export const copyToClipboard = str => {
   const el = document.createElement('textarea');  // Create a <textarea> element
   el.value = str; // Set its value to the string that you want copied
   el.setAttribute('readonly', ''); // Make it readonly to be tamper-proof
@@ -26,5 +21,16 @@ const copyToClipboard = str => {
   }
 };
 
-
-export default copyToClipboard;
+export const createCopyToClipboardEl = id => {
+  // Create element to contain click-able hash symbol
+  const el = document.createElement('span');
+  el.className = "js-copy-icon";
+  el.innerHTML = "#";
+  el.onclick = () => {
+    const urlToCopy = `${window.location.origin}${window.location.pathname}#${id}`
+    console.info(`[createCopyToClipboardEl]: Copied [${urlToCopy}] to clipboard`);
+    // Copy the url from the clicked heading
+    copyToClipboard(urlToCopy);
+  }
+  return el;
+}
