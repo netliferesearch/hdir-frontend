@@ -31,13 +31,17 @@
     }
 
     &--feature {
-      min-height: 60vh;
       flex-shrink: 0;
+      @include mq($until: $tablet) {
+        width: 100%;
+        margin-left: 0;
+      }
       @include mq($until: $desktop) {
         width: calc(100% + #{$container-small} + #{$container-small});
         margin-left: -$container-small;
       }
       @include mq($from: $desktop) {
+        min-height: 60vh;
         width: calc(100% + #{$container-medium} + #{$container-medium});
         margin-left: -$container-medium;
       }
