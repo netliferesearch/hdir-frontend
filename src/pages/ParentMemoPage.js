@@ -45,24 +45,9 @@ const MemoChapterPage = () => (
           <aside className="col-md-3 col-xs-12 l-mb-3">
             <SectionSidebar
               heading="Innhold på denne siden"
-              list={[
-                {
-                  title:
-                    'Kapittel 1. Lovens formål, virkeområde og definisjoner',
-                  url: '#'
-                },
-                {
-                  title: 'Kapittel 2. Krav til helsepersonells yrkesutøvelse',
-                  url: '#'
-                },
-                {
-                  title: 'Kapittel 3. Krav til organisering og virksomhet',
-                  url: '#'
-                }
-              ]}
             />
           </aside>
-          <article className="col-md-8 col-xs-12 col-md-offset-1">
+          <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
             <ChapterHeading
               heading="Lovens formål, virkeområde og definasjoner"
               subheading="KAPITTEL 1"
