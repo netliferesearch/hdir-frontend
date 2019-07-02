@@ -90,7 +90,6 @@ The javascript is a collection of apps that can render, and read the data attrib
   - `data-hide-suggestions` (boolean, remove it to make it false) If we don't want suggestions.
   - `data-example-suggestions` (string) JSON array with strings `["a", "b", "c"]`
 - `#sectionSidebar`
-
   - `data-heading` (string) Heading for the sidebar
   - `data-icon` (string) Icon for the sidebar
   - `data-heading-url` (string) A link to another page
@@ -99,9 +98,10 @@ The javascript is a collection of apps that can render, and read the data attrib
   ```
   data-list='[{"title":"KAPITTEL 1","url":"#","description":"Kost og fysisk aktivitet ved svangerskaps-diabetes","children":[{"description":"Underkapittel","active":true,"url":"#","prefix":"1.1"},{"description":"Underkapittel","url":"#","prefix":"1.2"}]},{"title":"KAPITTEL 2","url":"#","description":"Diagnostikk og tiltak"},{"title":"KAPITTEL 3","url":"#","description":"Nytt kapittel"}]'
   ```
-
+- `#globalScopeScripts`
+  - This element should be present directly under `body`, preferably as `body`'s last child.
+  - Two standalone components are loaded through this element: `Loading` and `GenerateLinksOnHeadings`, as both should be made available at the highest level in the **DOM tree**.
 - `.js-multi-selector` (can be used multiple times on a page)
-
   - `data-button-text` (string) The text in the button for opening the list of checkboxes.
   - `data-confirm-text` (string) The text in the button that triggers the filters
   - `data-checkbox-group-name` (string) Name of the checkbox group. Same as the search query key.

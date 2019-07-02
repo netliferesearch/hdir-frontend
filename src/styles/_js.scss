@@ -12,3 +12,51 @@
 #sectionSidebar {
   height: 100%;
 }
+
+// The copy icon for headers generated with createUniqueHeadersUtil
+.js-copy-icon {
+  display: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  @include mq($until: desktop) {
+    display: inline-block;
+  }
+}
+h2:hover > .js-copy-icon,
+.js-show-copy-icon:hover > .js-copy-icon,
+.js-copy-icon:hover {
+  cursor: pointer;
+  display: inline-block;
+}
+// The normal 'h2' headings, on articles
+h2[id]:hover {
+  position: relative;
+  @include mq($from: desktop) {
+    left: -22px;
+  }
+}
+// The 'h2' headings shown as actual 'chapter' on chapter page
+a {
+  h2[id] {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    // the hover on default 'h2[id]:hover' covers this case as well!
+    .js-copy-icon {
+      position: relative;
+      top: 39px;
+    }
+  }
+}
+// The 'h2' headings shown as top recommendations on chapter page
+.b-collapsible {
+  h2[id] {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    @include mq($from: desktop) {
+      left: -14.75px;
+    }
+  }
+}

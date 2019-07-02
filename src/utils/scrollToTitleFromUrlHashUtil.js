@@ -1,17 +1,17 @@
-import getFragment from './getUrlFragmentUtil'
+import getFragment from './getUrlFragmentUtil';
 
 export default function scrollToTitleFromUrlHash() {
   const url = window.location.href;
-  const lastHash = getFragment(url)
+  const lastHash = getFragment(url);
   // If there is no hash in url return and do nothing
-  if (!lastHash) return false
+  if (!lastHash) return false;
   // Find hash in document and scroll to that title (h2)
   waitForIt(`#${lastHash}`)
     .then((el) => {
-      return (el) ? el.scrollIntoView() : false
+      return (el) ? el.scrollIntoView() : false;
     })
-    .catch((err) => err)
-  return lastHash // For test
+    .catch((err) => err);
+  return lastHash; // For test
 }
 
 // sleep helper to make the check again after some time

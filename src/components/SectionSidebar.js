@@ -40,8 +40,9 @@ const sectionSidebarClasses = bottom =>
 // Part of the component as it own component, we also make it use itself.
 const ListItem = ({ props }) => {
   return (
-    <>
-      <a
+    <>{
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
+      }<a
         href={!props.active && props.url ? props.url : ''}
         role={props.active ? 'presentation' : ''}
         className={linkClasses(props.small, props.active, props.children)}
@@ -145,47 +146,49 @@ const SectionSidebar = props => {
     : props.list;
 
   const renderContent = () => (
-    <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
-      <div
-        className={classNames({
-          'b-section-sidebar__heading': true,
-          'b-section-sidebar__heading--thick': !hasItems(props.list)
-        })}
-      >
-        {props.icon && (
-          <img
-            src={props.icon}
-            alt=""
-            role="presentation"
-            className="b-section-sidebar__icon"
-            aria-hidden
-          />
-        )}
-        {props.heading && props.headingUrl ? (
-          <a href={props.headingUrl} id="section-sidebar-heading">
-            {props.heading}
-          </a>
-        ) : (
-          <span id="section-sidebar-heading">{props.heading}</span>
-        )}
+    <>
+      <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
+        <div
+          className={classNames({
+            'b-section-sidebar__heading': true,
+            'b-section-sidebar__heading--thick': !hasItems(props.list)
+          })}
+        >
+          {props.icon && (
+            <img
+              src={props.icon}
+              alt=""
+              role="presentation"
+              className="b-section-sidebar__icon"
+              aria-hidden
+            />
+          )}
+          {props.heading && props.headingUrl ? (
+            <a href={props.headingUrl} id="section-sidebar-heading">
+              {props.heading}
+            </a>
+          ) : (
+            <span id="section-sidebar-heading">{props.heading}</span>
+          )}
+        </div>
+        <nav aria-describedby="section-sidebar-heading">
+          {list.map((item, index) => {
+            if (!hasItems(props.list)) {
+              return (
+                <ListItem
+                  props={{
+                    ...item,
+                    active: activeHeading === index + 1
+                  }}
+                  key={shortid.generate()}
+                />
+              );
+            }
+            return <ListItem props={item} key={shortid.generate()} />;
+          })}
+        </nav>
       </div>
-      <nav aria-describedby="section-sidebar-heading">
-        {list.map((item, index) => {
-          if (!hasItems(props.list)) {
-            return (
-              <ListItem
-                props={{
-                  ...item,
-                  active: activeHeading === index + 1
-                }}
-                key={shortid.generate()}
-              />
-            );
-          }
-          return <ListItem props={item} key={shortid.generate()} />;
-        })}
-      </nav>
-    </div>
+    </>
   );
 
   return (
