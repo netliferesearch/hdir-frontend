@@ -97,6 +97,8 @@ const SectionSidebar = props => {
   };
 
   useEffect(() => {
+    // If we don't have any headings, make a list of the present h2 headings
+    createUniqueHeaders([...document.querySelectorAll('h2')]);
     // Fetches all headings on mount, if we don't have a list
     if (!hasItems(props.list) && !hasItems(headings)) {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
@@ -137,11 +139,6 @@ const SectionSidebar = props => {
       };
     }
   }, [props.list, headings]);
-
-  // If we don't have any headings, make a list of the present h2 headings
-  if (!hasItems(props.list)) {
-    createUniqueHeaders([...document.querySelectorAll('h2')]);
-  }
   
   // Creates a list with links with either the headings, or the list it received
   const list = !hasItems(props.list)
@@ -198,8 +195,6 @@ const SectionSidebar = props => {
     </>
   );
   
-  // If we don't have any headings, make a list of the present h2 headings
-  createUniqueHeaders([...document.querySelectorAll('h2')]);
 
   return (
     <>
