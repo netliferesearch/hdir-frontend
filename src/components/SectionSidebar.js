@@ -45,7 +45,7 @@ const ListItem = ({ props }) => {
     <>{
       // eslint-disable-next-line jsx-a11y/anchor-is-valid
       }<a
-        href={!props.active && props.url ? props.url : ''}
+        href={!props.active && props.url}
         role={props.active ? 'presentation' : ''}
         className={linkClasses(props.small, props.active, props.children)}
       >
