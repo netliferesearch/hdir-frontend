@@ -97,8 +97,6 @@ const SectionSidebar = props => {
   };
 
   useEffect(() => {
-    // If we don't have any headings, make a list of the present h2 headings
-    createUniqueHeaders([...document.querySelectorAll('h2')]);
     // Fetches all headings on mount, if we don't have a list
     if (!hasItems(props.list) && !hasItems(headings)) {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
@@ -139,6 +137,12 @@ const SectionSidebar = props => {
       };
     }
   }, [props.list, headings]);
+  
+  // Gives all headings a url-safe id based on its text
+  if (!hasItems(props.list)) {
+    // Util that create unique id for the h2 tags
+    createUniqueHeaders(headings)
+  }
   
   // Creates a list with links with either the headings, or the list it received
   const list = !hasItems(props.list)
