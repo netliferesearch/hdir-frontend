@@ -8,7 +8,7 @@ import InputSearch from '../src/components/InputSearch';
 import SectionSidebar from '../src/components/SectionSidebar';
 import MultiSelector from './components/MultiSelector';
 import Loading from './components/Loading';
-import GenerateLinksOnHeadings from './components/GenerateLinksOnHeadings';
+import GlobalScopeScripts from './components/GlobalScopeScripts';
 import { checkboxFilter } from './js/searchFilter';
 
 const rootElement = document.getElementById('root');
@@ -145,7 +145,7 @@ if (sectionSidebarElement) {
 if (globalScopeScriptsElement) {
   render(
     <>
-      <GenerateLinksOnHeadings/>
+      <GlobalScopeScripts/>
       <Loading message="PDF-versjon opprettes. Dette kan ta litt tid."/>
     </>,
     globalScopeScriptsElement

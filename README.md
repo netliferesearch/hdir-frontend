@@ -100,7 +100,7 @@ The javascript is a collection of apps that can render, and read the data attrib
   ```
 - `#globalScopeScripts`
   - This element should be present directly under `body`, preferably as `body`'s last child.
-  - Two standalone components are loaded through this element: `Loading` and `GenerateLinksOnHeadings`, as both should be made available at the highest level in the **DOM tree**.
+  - Two standalone components are loaded through this element: `Loading` and `GlobalScopeScripts`, as both should be made available at the highest level in the **DOM tree**.
 - `.js-multi-selector` (can be used multiple times on a page)
   - `data-button-text` (string) The text in the button for opening the list of checkboxes.
   - `data-confirm-text` (string) The text in the button that triggers the filters
