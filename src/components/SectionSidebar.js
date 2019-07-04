@@ -197,6 +197,9 @@ const SectionSidebar = props => {
       </div>
     </>
   );
+  
+  // If we don't have any headings, make a list of the present h2 headings
+  createUniqueHeaders([...document.querySelectorAll('h2')]);
 
   return (
     <>
