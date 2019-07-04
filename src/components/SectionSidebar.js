@@ -5,6 +5,8 @@ import debounce from 'lodash.debounce';
 import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
+import createUniqueHeaders from './../utils/createUniqueHeadersUtil';
+
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -136,6 +138,11 @@ const SectionSidebar = props => {
     }
   }, [props.list, headings]);
 
+  // If we don't have any headings, make a list of the present h2 headings
+  if (!hasItems(props.list)) {
+    createUniqueHeaders([...document.querySelectorAll('h2')]);
+  }
+  
   // Creates a list with links with either the headings, or the list it received
   const list = !hasItems(props.list)
     ? headings.map(h => ({
