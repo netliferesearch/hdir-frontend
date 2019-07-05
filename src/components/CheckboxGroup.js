@@ -20,7 +20,6 @@ const CheckboxGroup = props => (
       <legend className={legendClasses(props.border)}>{props.heading}</legend>
     )}
     {sort(props.options).map((option, index) => {
-      console.log(option)
       return (
         <label className="b-checkbox-group__label" key={shortid.generate()}>
           <input
