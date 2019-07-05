@@ -159,7 +159,7 @@ const SectionSidebar = props => {
 
   // Creates a list with links with either the headings, or the list it received
   const list = !hasItems(props.list)
-    ? headings.map(h => (console.log(h.getAttribute('id')),{
+    ? headings.map(h => ({
         description: h.innerText,
         prefix: '↓',
         url: `#${h.id}`
