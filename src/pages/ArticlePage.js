@@ -51,8 +51,8 @@ const ArticlePage = () => (
               seg inn.
             </p>
             
-            <div class="b-table__wrapper">
-              <table class="b-table">
+            <div className="b-table__wrapper">
+              <table className="b-table">
                 <tbody>
                   <tr>
                     <th scope="row">Indikasjon: Del 1/2</th>
