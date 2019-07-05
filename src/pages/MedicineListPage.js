@@ -26,11 +26,7 @@ const MedicineListPage = () => (
     <main id="main">
       <div className="l-mt-3">
         <LongShortHeading
-          long="Delegasjonsfullmakt til Helfo med legemiddelliste"
           short="Legemidler og virkestoff"
-          icon="./icons/Medisiner.svg"
-          url="https://www.nav.no/rettskildene/Vedlegg/vedlegg-1-til-5-14-delegasjonsfullmakt-til-helfo-med-legemiddelliste"
-          linkText="Vedlegg 1 til § 5-14"
         />
       </div>
       <div className="l-mt-3">

@@ -4,6 +4,6 @@ const getFragment = url => {
   if (i !== -1) {
     return url.substr(i).replace('#', '');
   }
-}
+};
 
 export default getFragment;

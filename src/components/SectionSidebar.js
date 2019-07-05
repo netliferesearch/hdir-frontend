@@ -5,6 +5,8 @@ import debounce from 'lodash.debounce';
 import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
+import createUniqueHeaders from './../utils/createUniqueHeadersUtil';
+
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -39,39 +41,48 @@ const sectionSidebarClasses = bottom =>
 
 // Part of the component as it own component, we also make it use itself.
 const ListItem = ({ props }) => {
-  return (
+  const renderItemContent = (
     <>
-      <a
-        href={!props.active && props.url ? props.url : ''}
-        role={props.active ? 'presentation' : ''}
-        className={linkClasses(props.small, props.active, props.children)}
-      >
-        {props.title && (
-          <div className="b-section-sidebar__title">{props.title}</div>
-        )}
-        {(props.prefix || props.description) && (
-          <div className="b-section-sidebar__meta">
-            {props.prefix && (
-              <div className="b-section-sidebar__prefix" role="presentation">
-                {props.prefix}
-              </div>
-            )}
-            {props.description && (
-              <div className="b-section-sidebar__description">
-                {props.description}
-              </div>
-            )}
-          </div>
-        )}
-      </a>
-      {props.children &&
-        props.children.map(child => (
-          <ListItem
-            props={{ ...child, small: true }}
-            key={shortid.generate()}
-          />
-        ))}
+      {props.title && (
+        <div className="b-section-sidebar__title">{props.title}</div>
+      )}
+      {(props.prefix || props.description) && (
+        <div className="b-section-sidebar__meta">
+          {props.prefix && (
+            <div className="b-section-sidebar__prefix" role="presentation">
+              {props.prefix}
+            </div>
+          )}
+          {props.description && (
+            <div className="b-section-sidebar__description">
+              {props.description}
+            </div>
+          )}
+        </div>
+      )}
     </>
+  )
+  const renderItemActive = (
+    <div
+      className={linkClasses(props.small, props.active, props.children)}
+    >
+      {renderItemContent}
+    </div>
+  );
+  const renderItemInactive = (
+    <a
+      href={props.url}
+      className={linkClasses(props.small, props.active, props.children)}
+    >
+      {renderItemContent}
+    </a>
+  );
+  return (
+    (!props.active && props.url)
+      ?
+      renderItemInactive
+      :
+      renderItemActive
   );
 };
 
@@ -135,6 +146,12 @@ const SectionSidebar = props => {
     }
   }, [props.list, headings]);
 
+  // Gives all headings a url-safe id based on its text
+  if (!hasItems(props.list)) {
+    // Util that create unique id for the h2 tags
+    createUniqueHeaders(headings)
+  }
+
   // Creates a list with links with either the headings, or the list it received
   const list = !hasItems(props.list)
     ? headings.map(h => ({
@@ -145,48 +162,51 @@ const SectionSidebar = props => {
     : props.list;
 
   const renderContent = () => (
-    <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
-      <div
-        className={classNames({
-          'b-section-sidebar__heading': true,
-          'b-section-sidebar__heading--thick': !hasItems(props.list)
-        })}
-      >
-        {props.icon && (
-          <img
-            src={props.icon}
-            alt=""
-            role="presentation"
-            className="b-section-sidebar__icon"
-            aria-hidden
-          />
-        )}
-        {props.heading && props.headingUrl ? (
-          <a href={props.headingUrl} id="section-sidebar-heading">
-            {props.heading}
-          </a>
-        ) : (
-          <span id="section-sidebar-heading">{props.heading}</span>
-        )}
+    <>
+      <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
+        <div
+          className={classNames({
+            'b-section-sidebar__heading': true,
+            'b-section-sidebar__heading--thick': !hasItems(props.list)
+          })}
+        >
+          {props.icon && (
+            <img
+              src={props.icon}
+              alt=""
+              role="presentation"
+              className="b-section-sidebar__icon"
+              aria-hidden
+            />
+          )}
+          {props.heading && props.headingUrl ? (
+            <a href={props.headingUrl} id="section-sidebar-heading">
+              {props.heading}
+            </a>
+          ) : (
+            <span id="section-sidebar-heading">{props.heading}</span>
+          )}
+        </div>
+        <nav aria-describedby="section-sidebar-heading">
+          {list.map((item, index) => {
+            if (!hasItems(props.list)) {
+              return (
+                <ListItem
+                  props={{
+                    ...item,
+                    active: activeHeading === index + 1
+                  }}
+                  key={shortid.generate()}
+                />
+              );
+            }
+            return <ListItem props={item} key={shortid.generate()} />;
+          })}
+        </nav>
       </div>
-      <nav aria-describedby="section-sidebar-heading">
-        {list.map((item, index) => {
-          if (!hasItems(props.list)) {
-            return (
-              <ListItem
-                props={{
-                  ...item,
-                  active: activeHeading === index + 1
-                }}
-                key={shortid.generate()}
-              />
-            );
-          }
-          return <ListItem props={item} key={shortid.generate()} />;
-        })}
-      </nav>
-    </div>
+    </>
   );
+
 
   return (
     <>
