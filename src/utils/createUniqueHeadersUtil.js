@@ -28,7 +28,7 @@ const createUniqueHeaders = items => {
     // Give it a class
     headingTxtEl.className = 'js-copy-icon-text'
     // Extract h2's content
-    const headingTxt = nextItem.innerHTML;
+    const headingTxt = nextItem.innerHTML.replace('#', '');
     // Assign it to new element
     headingTxtEl.innerHTML = headingTxt;
     // And remove it from h2

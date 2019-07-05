@@ -150,16 +150,22 @@ const SectionSidebar = props => {
       };
     }
   }, [props.list, headings]);
+  
+  // Gives all headings a url-safe id based on its text
+  if (!hasItems(props.list) && hasItems(headings)) {
+    // Util that create unique id for the h2 tags
+    createUniqueHeaders(headings);
+  }
 
   // Creates a list with links with either the headings, or the list it received
   const list = !hasItems(props.list)
-    ? headings.map(h => ({
+    ? headings.map(h => (console.log(h.getAttribute('id')),{
         description: h.innerText,
         prefix: '↓',
         url: `#${h.id}`
       }))
     : props.list;
-
+    
   const renderContent = () => (
     <>
       <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>

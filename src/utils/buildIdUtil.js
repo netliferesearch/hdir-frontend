@@ -1,6 +1,6 @@
 const buildId = text => {
   // Regex for special characters
-  const rgx = /[;\\/:*!%?"()<>|&'_]/g;
+  const rgx = /[;\\/:*!%#?"()<>|&'_]/g;
   // If first character is a number add a string to the start
   if (!isNaN(text.charAt(0))) { text = `header-${text}` }
   return text.toLowerCase()
