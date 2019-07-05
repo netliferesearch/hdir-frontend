@@ -4,10 +4,9 @@
 // Import dependencies
 import { Component } from 'react';
 // Import utilities
-import createUniqueHeaders from './../utils/createUniqueHeadersUtil';
 import scrollToTitleFromUrlHash from './../utils/scrollToTitleFromUrlHashUtil';
 
-class GenerateLinksOnHeadings extends Component {
+class GlobalScopeScripts extends Component {
   componentDidMount(){
     // Initiate logic for scrolling to header/section based on hash in url
     scrollToTitleFromUrlHash();
@@ -21,4 +20,4 @@ class GenerateLinksOnHeadings extends Component {
   };
 }
 
-export default GenerateLinksOnHeadings;
+export default GlobalScopeScripts;

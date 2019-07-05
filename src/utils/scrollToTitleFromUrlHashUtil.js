@@ -1,4 +1,25 @@
+/* eslint-disable no-restricted-globals */
+
 import getFragment from './getUrlFragmentUtil';
+import containsString from './containsStringUtil';
+
+const envUrl = location.host ? location.host : '';
+
+// Console status if we're not in production and not in test environment
+const consoleIfNotInProduction = (isTrue, message) => {
+  if (
+    // Only proceed if our truthy conditon is true
+    isTrue &&
+    // We're not in test environment (to reduce noise in 'test' console)
+    process.env.NODE_ENV !== 'test' &&
+    (
+      // We are in one of our development servers
+      containsString(envUrl, 'localhost') || containsString(envUrl, 'enonic')
+    )
+  ) {
+    console.log(message);
+  }
+}
 
 export default function scrollToTitleFromUrlHash() {
   const url = window.location.href;
@@ -8,6 +29,7 @@ export default function scrollToTitleFromUrlHash() {
   // Find hash in document and scroll to that title (h2)
   waitForIt(`#${lastHash}`)
     .then((el) => {
+      consoleIfNotInProduction(el, `[scrollToTitleFromUrlHash]: Scrolling to '${`#${lastHash}`}'!`);
       return (el) ? el.scrollIntoView() : false;
     })
     .catch((err) => err);
