@@ -11,7 +11,7 @@ const legendClasses = border =>
   
   // Sorts values alphabetically
   const sort = (values) => {
-    return values.sort((a, b) => ('' + a.value).replace(/\W/g, '').localeCompare(b.value.replace(/\W/g, '')))
+    return values.sort((a, b) => ('' + a.label).replace(/\W/g, '').localeCompare(b.label.replace(/\W/g, '')))
   }
 
 const CheckboxGroup = props => (
