@@ -158,9 +158,10 @@ const SectionSidebar = props => {
   }
 
   // Creates a list with links with either the headings, or the list it received
+  // Bugfix for IE: Remove # symbol from text
   const list = !hasItems(props.list)
     ? headings.map(h => ({
-        description: h.innerText,
+        description: h.innerText.replace('#', ''),
         prefix: '↓',
         url: `#${h.id}`
       }))
