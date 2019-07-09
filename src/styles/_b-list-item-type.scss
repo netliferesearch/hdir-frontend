@@ -42,6 +42,10 @@
     font-size: $meta-text;
     color: $red !important;
   }
+  &__deadline--open {
+    font-size: $meta-text;
+    color: $green-warning !important;
+  }
   &__lead {
   }
 
