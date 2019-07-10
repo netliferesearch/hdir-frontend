@@ -78,8 +78,8 @@ const StatisticsSubpage = () => (
                 width="100%"
                 height="600"
                 src="https://app.powerbi.com/view?r=eyJrIjoiYTllNGYyOTMtNGQyMy00M2QyLTg3MTUtZmJjZTVjYTkwODczIiwidCI6IjZiYTFiZDVjLTc1MGYtNGFkNi1hYmEzLTBmOTU1ODViYzIxZiIsImMiOjh9"
-                frameborder="0"
-                allowFullScreen="true"
+                frameBorder="0"
+                allowFullScreen={true}
               />
             </p>
             <h2>Hovedfunn</h2>
@@ -89,32 +89,62 @@ const StatisticsSubpage = () => (
               789*.
             </p>
             <table>
-              <tr>
-                <th scope="col">RHF</th>
-                <th scope="col">Antall 2. tert. 2017</th>
-                <th scope="col">Antall 2. tert. 2018</th>
-              </tr>
-              <tr>
-                <th scope="row">Helse Sør-Øst RHF</th>
-                <td>437</td>
-                <td>511</td>
-              </tr>
-              <tr>
-                <th scope="row">Helse Vest RHF</th>
-                <td>180</td>
-                <td>201</td>
-              </tr>
-              <tr>
-                <th scope="row">Helse Midt-Norge RHF</th>
-                <td>100</td>
-                <td>114</td>
-              </tr>
-              <tr>
-                <th scope="row">Helse Nord RHF</th>
-                <td>78</td>
-                <td>57</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th scope="col">RHF</th>
+                  <th scope="col">Antall 2. tert. 2017</th>
+                  <th scope="col">Antall 2. tert. 2018</th>
+                </tr>
+                <tr>
+                  <th scope="row">Helse Sør-Øst RHF</th>
+                  <td>437</td>
+                  <td>511</td>
+                </tr>
+                <tr>
+                  <th scope="row">Helse Vest RHF</th>
+                  <td>180</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <th scope="row">Helse Midt-Norge RHF</th>
+                  <td>100</td>
+                  <td>114</td>
+                </tr>
+                <tr>
+                  <th scope="row">Helse Nord RHF</th>
+                  <td>78</td>
+                  <td>57</td>
+                </tr>
+                </tbody>
             </table>
+
+            <h2>Flere funn</h2>
+            <p>
+              I andre tertial 2018 ble det benyttet tvangsmidler overfor 878*
+              pasienter i døgnbehandling. I samme periode 2017 var antallet
+              789*.
+            </p>
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">Helse Sør-Øst RHF</th>
+                  <td>Alle datauttrekk og beregninger gjøres likt for alle tidsserier.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Helse Vest RHF</th>
+                  <td>Alle datauttrekk og beregninger gjøres likt for alle tidsserier.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Helse Midt-Norge RHF</th>
+                  <td>Alle datauttrekk og beregninger gjøres likt for alle tidsserier.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Helse Nord RHF</th>
+                  <td>Alle datauttrekk og beregninger gjøres likt for alle tidsserier.</td>
+                </tr>
+              </tbody>
+            </table>
+
             <p>
               Kun Helse Nord RHF hadde en nedgang i antall pasienter med minst
               ett tvangsmiddelvedtak.

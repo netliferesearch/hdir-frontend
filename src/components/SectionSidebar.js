@@ -5,6 +5,8 @@ import debounce from 'lodash.debounce';
 import shortid from 'shortid';
 import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
+import createUniqueHeaders from './../utils/createUniqueHeadersUtil';
+
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -38,54 +40,68 @@ const sectionSidebarClasses = bottom =>
   });
 
 // Part of the component as it own component, we also make it use itself.
-const ListItem = ({ props, onClick }) => {
+const ListItem = ({ props }) => {
+  
+  function findNextTabStop(el) {
+    var universe = document.querySelectorAll('input, button, select, textarea, a[href]');
+    var list = Array.prototype.filter.call(universe, function(item) {return item.tabIndex >= "0"});
+    var index = list.indexOf(el);
+    return list[index + 1] || list[0];
+  }
   
   // On click, we find the corresponding heading
   // We add tabindex, so tabindex order isn't broken. Then we focus on it.
   const setFocus = () => {
     const heading = document.getElementById(props.url.replace('#','')) || '';
-    const headingElement = heading && heading.closest('.b-chapter-heading');
+    heading && heading.setAttribute('tabindex', -1);
     setTimeout(function(){ 
-      headingElement && headingElement.setAttribute('tabindex', -1);
-      headingElement && headingElement.focus();
+      heading && heading.focus();
     }, 0);
   }
   
-  return (
-    <>{
-      // eslint-disable-next-line jsx-a11y/anchor-is-valid
-      }<a
-        href={!props.active && props.url ? props.url : ''}
-        role={props.active ? 'presentation' : ''}
-        onClick={setFocus}
-        className={linkClasses(props.small, props.active, props.children)}
-      >
-        {props.title && (
-          <div className="b-section-sidebar__title">{props.title}</div>
-        )}
-        {(props.prefix || props.description) && (
-          <div className="b-section-sidebar__meta">
-            {props.prefix && (
-              <div className="b-section-sidebar__prefix" role="presentation">
-                {props.prefix}
-              </div>
-            )}
-            {props.description && (
-              <div className="b-section-sidebar__description">
-                {props.description}
-              </div>
-            )}
-          </div>
-        )}
-      </a>
-      {props.children &&
-        props.children.map(child => (
-          <ListItem
-            props={{ ...child, small: true }}
-            key={shortid.generate()}
-          />
-        ))}
+  const renderItemContent = (
+    <>
+      {props.title && (
+        <div className="b-section-sidebar__title">{props.title}</div>
+      )}
+      {(props.prefix || props.description) && (
+        <div className="b-section-sidebar__meta">
+          {props.prefix && (
+            <div className="b-section-sidebar__prefix" role="presentation">
+              {props.prefix}
+            </div>
+          )}
+          {props.description && (
+            <div className="b-section-sidebar__description">
+              {props.description}
+            </div>
+          )}
+        </div>
+      )}
     </>
+  )
+  const renderItemActive = (
+    <div
+      className={linkClasses(props.small, props.active, props.children)}
+    >
+      {renderItemContent}
+    </div>
+  );
+  const renderItemInactive = (
+    <a
+      href={props.url}
+      onClick={setFocus}
+      className={linkClasses(props.small, props.active, props.children)}
+    >
+      {renderItemContent}
+    </a>
+  );
+  return (
+    (!props.active && props.url)
+      ?
+      renderItemInactive
+      :
+      renderItemActive
   );
 };
 
@@ -111,6 +127,11 @@ const SectionSidebar = props => {
     // Fetches all headings on mount, if we don't have a list
     if (!hasItems(props.list) && !hasItems(headings)) {
       setHeadings([...document.querySelectorAll('.t-body-text h2')]);
+    }
+    // Gives all headings a url-safe id based on its text
+    if (!hasItems(props.list) && hasItems(headings)) {
+      // Util that create unique id for the h2 tags
+      createUniqueHeaders(headings)
     }
     if (hasItems(headings)) {
       Stickyfill.add(sidebarRef.current);
@@ -148,16 +169,23 @@ const SectionSidebar = props => {
       };
     }
   }, [props.list, headings]);
+  
+  // Gives all headings a url-safe id based on its text
+  if (!hasItems(props.list) && hasItems(headings)) {
+    // Util that create unique id for the h2 tags
+    createUniqueHeaders(headings);
+  }
 
   // Creates a list with links with either the headings, or the list it received
+  // Bugfix for IE: Remove # symbol from text
   const list = !hasItems(props.list)
     ? headings.map(h => ({
-        description: h.innerText,
+        description: h.innerText.replace('#', ''),
         prefix: '↓',
         url: `#${h.id}`
       }))
     : props.list;
-
+    
   const renderContent = () => (
     <>
       <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
@@ -203,6 +231,7 @@ const SectionSidebar = props => {
       </div>
     </>
   );
+
 
   return (
     <>

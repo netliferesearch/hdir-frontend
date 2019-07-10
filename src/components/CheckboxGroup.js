@@ -11,7 +11,7 @@ const legendClasses = border =>
   
   // Sorts values alphabetically
   const sort = (values) => {
-    return values.sort((a, b) => ('' + a.value).localeCompare(b.value))
+    return values.sort((a, b) => ('' + a.label).replace(/\W/g, '').localeCompare(b.label.replace(/\W/g, '')))
   }
 
 const CheckboxGroup = props => (
@@ -20,7 +20,6 @@ const CheckboxGroup = props => (
       <legend className={legendClasses(props.border)}>{props.heading}</legend>
     )}
     {sort(props.options).map((option, index) => {
-      console.log(option)
       return (
         <label className="b-checkbox-group__label" key={shortid.generate()}>
           <input
