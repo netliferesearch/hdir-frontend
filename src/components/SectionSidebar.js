@@ -42,13 +42,6 @@ const sectionSidebarClasses = bottom =>
 // Part of the component as it own component, we also make it use itself.
 const ListItem = ({ props }) => {
   
-  function findNextTabStop(el) {
-    var universe = document.querySelectorAll('input, button, select, textarea, a[href]');
-    var list = Array.prototype.filter.call(universe, function(item) {return item.tabIndex >= "0"});
-    var index = list.indexOf(el);
-    return list[index + 1] || list[0];
-  }
-  
   // On click, we find the corresponding heading
   // We add tabindex, so tabindex order isn't broken. Then we focus on it.
   const setFocus = () => {
@@ -58,7 +51,6 @@ const ListItem = ({ props }) => {
       heading && heading.focus();
     }, 0);
   }
-  
   const renderItemContent = (
     <>
       {props.title && (
