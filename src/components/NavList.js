@@ -46,7 +46,7 @@ const NavList = props => {
       aria-label="unique-text-explaining-this"
     >
       {props.heading && (
-        <h2 className="b-nav-list__heading h4">{props.heading}</h2>
+        <h2 className="b-nav-list__heading">{props.heading}</h2>
       )}
       <ul className={listItemsClasses(props.columns)}>
         {list.map(item => (
