@@ -24,17 +24,15 @@ const BrowserWaring = () => {
       {showBrowserWarning &&
         <div className="l-container">
           <Alert status="danger">
-            <div className="row">
-              <div className="">
-                <b>Du kjører {`${browserName} version ${browserVersion}`}</b> <br/>
-                Dette er en eldre nettleser. For din egen sikkerhet og brukeropplevelse oppfordrer vi deg til å oppdatere nettleseren din til en nyere versjon.
-              </div>
+              <b>Du kjører {browserName} versjon {browserVersion}</b>
+              <p>
+                Dette er en gammel nettleser. For din egen sikkerhet og brukeropplevelse oppfordrer vi deg til å oppdatere nettleseren din til en nyere versjon.
+              </p>
               <div className=" l-mt-1">
                 <Button secondary small onClick={() => setClosed(!showBrowserWarning)}>
                   Lukk
                 </Button>
               </div>
-            </div>
           </Alert>
         </div>
       }
