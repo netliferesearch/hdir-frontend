@@ -5,6 +5,8 @@ import classNames from 'classnames';
 import URLSearchParams from 'url-search-params';
 import useInterval from '../js/hooks/useInterval';
 
+import stripStringForHtmlUtil from './../utils/stripStringForHtmlUtil';
+
 const searchPageUrl = process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
   ? process.env.REACT_APP_ENONICXP_SEARCH_RESULT_PAGE
   : '/søkeresultat';
@@ -26,7 +28,7 @@ const renderSuggestion = suggestion => (
       </div>
     )}
     {suggestion.intro && (
-      <div className="suggestion-intro">{suggestion.intro}</div>
+      <div className="suggestion-intro">{stripStringForHtmlUtil(suggestion.intro)}</div>
     )}
     {suggestion.topic && (
       <div className="suggestion-topic">{suggestion.topic}</div>
