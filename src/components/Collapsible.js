@@ -108,7 +108,7 @@ const Collapsible = props => {
       {!props.subheading && props.subheadingContent && (
         <div className="l-mt-1"> {props.subheadingContent}</div>
       )}
-      {props.subheading && props.subheadingContent && (
+      {props.subheading && (
         collapsed ? (
           <div className="b-collapsible__subheading-collapsible l-mt-1">
           <Collapsible
