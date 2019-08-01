@@ -43,6 +43,13 @@ const allItems = [
     url: 'http://norge.no'
   },
   {
+    title: 'æøå - html',
+    category: 'news',
+    publishDate: '2. April 2015',
+    intro: '<p><b>Test av norske bokstaver</b>, æøå i html tags <script></script></p>\n',
+    url: 'http://norge.no'
+  },
+  {
     title: 'This is news #5',
     category: 'news',
     publishDate: '5. April 2018',
