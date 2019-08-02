@@ -35,7 +35,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
             )}
           </div>
         </div>
@@ -81,7 +81,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
             )}
           </div>
         </div>
@@ -111,7 +111,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
             )}
           </div>
           {fields.topic && (
@@ -142,7 +142,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
             )}
           </div>
         </div>
@@ -173,7 +173,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
             )}
           </div>
           {fields.topic && (
