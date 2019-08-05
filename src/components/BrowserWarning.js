@@ -1,0 +1,43 @@
+import React, { useState } from 'react';
+import Alert from './Alert';
+import Button from './Button';
+import Bowser from "bowser";
+
+const browser = Bowser.getParser(window.navigator.userAgent);
+const browserName = browser.getBrowserName();
+const browserVersion = parseInt(browser.getBrowser().version, 10);
+
+const supportedBrowserVersion = {
+  'Firefox': 65, // Current 68
+  'Microsoft Edge': 15, // Current 18
+  'Chrome': 73, // Current 76
+  'Internet Explorer': 11, // Last and latest 11
+  'Safari': 9, // Current 12
+}
+
+const checkIfOldBrowser = browserVersion < supportedBrowserVersion[browserName];
+
+const BrowserWarning = () => {
+  const [showBrowserWarning, setClosed] = useState(checkIfOldBrowser);
+  return(
+    <React.Fragment>
+      {showBrowserWarning &&
+        <div className="l-container">
+          <Alert status="danger">
+              <b>Du kjører {browserName} versjon {browserVersion}</b>
+              <p>
+                Dette er en gammel nettleser. For din egen sikkerhet og brukeropplevelse oppfordrer vi deg til å oppdatere nettleseren din til en nyere versjon.
+              </p>
+              <div className=" l-mt-1">
+                <Button secondary small onClick={() => setClosed(!showBrowserWarning)}>
+                  Lukk
+                </Button>
+              </div>
+          </Alert>
+        </div>
+      }
+    </React.Fragment>
+  )
+};
+
+export default BrowserWarning;
