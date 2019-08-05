@@ -17,7 +17,7 @@ const supportedBrowserVersion = {
 
 const checkIfOldBrowser = browserVersion < supportedBrowserVersion[browserName];
 
-const BrowserWaring = () => {
+const BrowserWarning = () => {
   const [showBrowserWarning, setClosed] = useState(checkIfOldBrowser);
   return(
     <React.Fragment>
@@ -40,4 +40,4 @@ const BrowserWaring = () => {
   )
 };
 
-export default BrowserWaring;
+export default BrowserWarning;

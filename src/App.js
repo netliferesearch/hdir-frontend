@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Box from './components/Box';
 import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
-import BrowserWaring from './components/BrowserWaring';
+import BrowserWarning from './components/BrowserWarning';
 // Import pages
 import ArticlePage from './pages/ArticlePage';
 import ArticlePageNoH2 from './pages/ArticlePageNoH2';
@@ -68,7 +68,7 @@ class App extends Component {
         <BrowserRouter>
           <ScrollToTop>
             <GlobalScopeScripts/>
-            <BrowserWaring/>
+            <BrowserWarning/>
             <Loading message="PDF-versjon opprettes. Dette kan ta litt tid."/>
             <MainHeader
               name={this.props.name}
