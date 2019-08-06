@@ -41,6 +41,16 @@ const sectionSidebarClasses = bottom =>
 
 // Part of the component as it own component, we also make it use itself.
 const ListItem = ({ props }) => {
+  
+  // On click, we find the corresponding heading
+  // We add tabindex, so tabindex order isn't broken. Then we focus on it.
+  const setFocus = () => {
+    const heading = document.getElementById(props.url.replace('#','')) || '';
+    heading && heading.setAttribute('tabindex', -1);
+    setTimeout(function(){ 
+      heading && heading.focus();
+    }, 0);
+  }
   const renderItemContent = (
     <>
       {props.title && (
@@ -72,6 +82,7 @@ const ListItem = ({ props }) => {
   const renderItemInactive = (
     <a
       href={props.url}
+      onClick={setFocus}
       className={linkClasses(props.small, props.active, props.children)}
     >
       {renderItemContent}

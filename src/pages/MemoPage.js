@@ -40,17 +40,6 @@ const MemoPage = () => (
           <aside className="col-md-3 col-xs-12 l-mb-4">
             <SectionSidebar
               heading="Innhold på denne siden"
-              list={[
-                {
-                  title: '§ 18. Melding om helsepersonells virksomhet',
-                  url: '#'
-                },
-                {
-                  title:
-                    '§ 19. Melding til arbeidsgiver om bierverv og andre engasjement i annen virksomhet',
-                  url: '#'
-                }
-              ]}
             />
           </aside>
           <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">

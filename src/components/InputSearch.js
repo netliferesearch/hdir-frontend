@@ -192,19 +192,20 @@ const InputSearch = props => {
           triggerSearch();
         }}
       >
-        <label htmlFor="side-søk" className="visually-hidden">
+        <label htmlFor="side-søk" className="visually-hidden" tabIndex="-1">
           Søk på siden
         </label>
         <input
           type="search"
           id="side-søk"
+          tabIndex="-1"
           onChange={e => {
             setValue(e.target.value);
           }}
           value={value}
           className="visually-hidden"
         />
-        <button type="submit" className="visually-hidden">
+        <button type="submit" className="visually-hidden" tabIndex="-1">
           Søk
         </button>
       </form>
