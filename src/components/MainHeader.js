@@ -62,14 +62,14 @@ const MainHeader = props => {
         <div className="b-main-header">
           <a href="/" className="b-main-header__logo-link">
             <div className="l-hide-to-md">
-              <div className="b-main-header__logo" aria-label={name}>
+              <div className="b-main-header__logo" aria-label={`${name} logo`}>
                 {name}
               </div>
             </div>
             <div className="l-hide-from-md">
               <div
                 className="b-main-header__logo b-main-header__logo--small"
-                aria-label={name}
+                aria-label={`${name} logo mobil`}
               >
                 {name}
               </div>
@@ -85,7 +85,7 @@ const MainHeader = props => {
           )}
 
           <div className="l-hide-to-lg">
-            <nav className="b-main-header__nav" aria-label="Header navigation">
+            <nav className="b-main-header__nav" aria-label="Hovedmeny">
               {links.map(link => (
                 <a
                   href={link.href}
@@ -122,7 +122,7 @@ const MainHeader = props => {
           </div>
 
           <div className="l-hide-from-lg">
-            <nav className="b-main-header__nav" aria-label="Header navigation">
+            <nav className="b-main-header__nav" aria-label="Hovedmeny mobil">
               <button
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}
                 className="b-button b-button--secondary-dark b-button--small"
