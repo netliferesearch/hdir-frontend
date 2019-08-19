@@ -1,3 +1,14 @@
+/*
+  ~ ~ ~ IMPORTANT ~ ~ ~
+
+  This component is NOT part of a React application made available to the backend!
+  It should therefore have no conditional logic related to rendering - as it does now.
+
+  That kind of logic is currently applied through vanilla javascript, here:
+  https://github.com/netliferesearch/hdir-vanilla-js/blob/master/src/collapsible.js
+
+*/
+
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -109,19 +120,20 @@ const Collapsible = props => {
         <div className="l-mt-1"> {props.subheadingContent}</div>
       )}
       {props.subheading && props.subheadingContent && (
-        collapsed ? (
+        collapsed
+          ?
           <div className="b-collapsible__subheading-collapsible l-mt-1">
-          <Collapsible
-          heading={props.subheading}
-          subtle={Boolean(props.subheadingContent)}
-          size="small"
-          smallContent
-          >
-          <p>{props.subheadingContent}</p>
-          </Collapsible>
+            <Collapsible
+              heading={props.subheading}
+              subtle={Boolean(props.subheadingContent)}
+              size="small"
+              smallContent
+            >
+              <p>{props.subheadingContent}</p>
+            </Collapsible>
           </div>
-        ) :
-        <p className="b-collapsible__meta-heading">{props.subheading}</p>
+          :
+          <p className="b-collapsible__meta-heading">{props.subheading}</p>
       )}
       {!collapsed && props.alert && (
         <div className="l-mt-1">
