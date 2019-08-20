@@ -41,13 +41,13 @@ const sectionSidebarClasses = bottom =>
 
 // Part of the component as it own component, we also make it use itself.
 const ListItem = ({ props }) => {
-  
+
   // On click, we find the corresponding heading
   // We add tabindex, so tabindex order isn't broken. Then we focus on it.
   const setFocus = () => {
     const heading = document.getElementById(props.url.replace('#','')) || '';
     heading && heading.setAttribute('tabindex', -1);
-    setTimeout(function(){ 
+    setTimeout(function(){
       heading && heading.focus();
     }, 0);
   }
@@ -72,6 +72,19 @@ const ListItem = ({ props }) => {
       )}
     </>
   )
+  const renderItemContentChildren = (
+    <>
+      {props.children && props.children.map(child => (
+        <ListItem
+          props={{
+            ...child,
+            small: true
+          }}
+          key={shortid.generate()}
+        />
+      ))}
+    </>
+  );
   const renderItemActive = (
     <div
       className={linkClasses(props.small, props.active, props.children)}
@@ -89,11 +102,15 @@ const ListItem = ({ props }) => {
     </a>
   );
   return (
-    (!props.active && props.url)
-      ?
-      renderItemInactive
-      :
-      renderItemActive
+    <>
+      {(!props.active && props.url)
+        ?
+        renderItemInactive
+        :
+        renderItemActive
+      }
+      {renderItemContentChildren}
+    </>
   );
 };
 
@@ -161,7 +178,7 @@ const SectionSidebar = props => {
       };
     }
   }, [props.list, headings]);
-  
+
   // Gives all headings a url-safe id based on its text
   if (!hasItems(props.list) && hasItems(headings)) {
     // Util that create unique id for the h2 tags
@@ -177,7 +194,8 @@ const SectionSidebar = props => {
         url: `#${h.id}`
       }))
     : props.list;
-    
+
+  const theList = [];
   const renderContent = () => (
     <>
       <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
@@ -207,7 +225,7 @@ const SectionSidebar = props => {
         <nav aria-describedby="section-sidebar-heading">
           {list.map((item, index) => {
             if (!hasItems(props.list)) {
-              return (
+              theList.push(
                 <ListItem
                   props={{
                     ...item,
@@ -216,9 +234,19 @@ const SectionSidebar = props => {
                   key={shortid.generate()}
                 />
               );
+            } else {
+              theList.push(
+                <ListItem
+                  props={{
+                    ...item
+                  }}
+                  key={shortid.generate()}
+                />
+              );
             }
-            return <ListItem props={item} key={shortid.generate()} />;
+            return null;
           })}
+          {theList}
         </nav>
       </div>
     </>

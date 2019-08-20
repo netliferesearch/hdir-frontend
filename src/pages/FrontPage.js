@@ -16,6 +16,7 @@ const pages = [
   {link: '/høringer', desc: 'Høringer'},
   {link: '/høringer-forside', desc: 'Høringer forside'},
   {link: '/kapittel', desc: 'Kapittel'},
+  {link: '/kapittel-med-underkapitler', desc: 'Kapittel med underkapitler'},
   {link: '/ledig-stilling', desc: 'Ledig stilling'},
   {link: '/lis-forside', desc: 'LIS-forside'},
   {link: '/lis-læringsaktiviteter', desc: 'LIS-læringsaktiviteter'},
