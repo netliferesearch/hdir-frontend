@@ -138,7 +138,7 @@ const TreatmentPageA = () => (
                           heading="Beskrivelse av aktiviteten"
                           size="small"
                           id={shortid.generate()}
-                          bold
+                          bold={false}
                         >
                           <p>abc abc abc.</p>
                         </Collapsible>
@@ -147,7 +147,7 @@ const TreatmentPageA = () => (
                           heading="Begrunnelse"
                           size="small"
                           id={shortid.generate()}
-                          bold
+                          bold={false}
                         >
                           <p>abc abc abc.</p>
                         </Collapsible>
@@ -156,7 +156,7 @@ const TreatmentPageA = () => (
                           heading="Informasjon til pasienten"
                           size="small"
                           id={shortid.generate()}
-                          bold
+                          bold={false}
                         >
                           <p>abc abc abc.</p>
                         </Collapsible>

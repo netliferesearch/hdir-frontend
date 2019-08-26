@@ -50,13 +50,13 @@ h5,
 }
 
 // Heading weights
+.h0, // 'h0' is only used to reset styles on dynamic headings we don't know the type of
 .h1,
 .h2,
 .h3,
 .h4,
 .h5,
-.h6,
-.h0 {
+.h6 {
   &--light {
     font-weight: lighter;
   }
