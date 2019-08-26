@@ -34,7 +34,12 @@ const headingClasses = (size, bold) =>
     h3: size === 'large',
     h4: size === 'medium',
     normal: size === 'small',
-    'h0--bold': bold // a hack :( one special case they want the header to be bold
+    // These additional 'bold' classes are here because HDIR wants to keep semantic choices whilst
+    //  still having control over 'bold' styles on headings.
+    //  Note that one has to explicitly specify if the 'bold' prop is false. Leaving it undefined
+    //  won't set the 'h0--hormal' class to the heading
+    'h0--bold': bold === true,
+    'h0--normal': bold === false
   });
 
 const collapsibleClasses = (size, subtle, noBorder) =>
@@ -84,7 +89,7 @@ const Collapsible = props => {
     } else {
       if (props.size === 'large') return 'h2';
       else if (props.size === 'medium') return 'h3';
-      else if (props.size === 'small') return 'h0';
+      else if (props.size === 'small') return 'h4';
     }
   };
 
@@ -127,6 +132,7 @@ const Collapsible = props => {
               heading={props.subheading}
               subtle={Boolean(props.subheadingContent)}
               size="small"
+              bold={props.bold}
               smallContent
             >
               <p>{props.subheadingContent}</p>
