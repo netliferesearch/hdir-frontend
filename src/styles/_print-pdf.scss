@@ -9,6 +9,12 @@
 }
 
 .print-pdf {
+  a[href^="http://"],
+  a[href^="https://"],
+  a[href^="//"] {
+    color: blue !important;
+    text-decoration: underline !important;
+  }
   padding: 0 20px 20px;
   // Every 'div' that is a diract child of 'body' is a single page
   & > div {

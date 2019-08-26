@@ -3,6 +3,12 @@
     background-color: white;
     color: black;
   }
+  a[href^="http://"],
+  a[href^="https://"],
+  a[href^="//"] {
+    color: blue !important;
+    text-decoration: underline !important;
+  }
   .b-main-header {
     display: none;
   }
