@@ -23,15 +23,15 @@
     display: inline-block;
   }
 }
-h2:hover > .js-copy-icon,
-.js-show-copy-icon:hover > .js-copy-icon,
-.js-copy-icon:hover {
-  cursor: pointer;
-  display: inline-block;
-}
-// The normal 'h2' headings, on articles
-h2[id]:hover {
+// This class is given to a h2 when it has an 'id', so we can check that instead of
+//  checking for h2[id]:hover, which is not enough... When we do the later we get
+// undesirable negative margin on hover on some h2s [HDF-262]
+.js-show-copy-icon:hover {
   position: relative;
+  cursor: pointer;
+  .js-copy-icon {
+    display: inline-block;
+  }
   @include mq($from: desktop) {
     left: -22px;
   }
