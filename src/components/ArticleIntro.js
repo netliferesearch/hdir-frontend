@@ -26,23 +26,33 @@ const ArticleIntro = props => (
     </div>
     {props.image && (
       <div className={imageWrapperClasses(props.feature)}>
-        <div
-          className="b-article-intro__image"
-          style={{ backgroundImage: `url(${props.image})` }}
-          role="img"
-          aria-labelledby="intro-image-description"
-        />
         {!props.feature ? (
-          <p
-            className="b-article-intro__image-text"
-            id="intro-image-description"
-          >
-            {props.imageDescription}
-          </p>
+          <>
+            <img
+              className="b-article-intro__image"
+              src={props.image}
+              alt={props.imageDescription}
+              aria-labelledby="intro-image-description"
+            />
+            <p
+              className="b-article-intro__image-text"
+              id="intro-image-description"
+            >
+              {props.imageDescription}
+            </p>
+          </>
         ) : (
-          <div className="visually-hidden" id="intro-image-description">
-            {props.imageDescription}
-          </div>
+          <>
+            <div
+              className="b-article-intro__image"
+              style={{ backgroundImage: `url(${props.image})` }}
+              role="img"
+              aria-labelledby="intro-image-description"
+            />
+            <div className="visually-hidden" id="intro-image-description">
+              {props.imageDescription}
+            </div>
+          </>
         )}
       </div>
     )}
