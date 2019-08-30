@@ -88,10 +88,10 @@ const TreatmentPageA = () => (
                       icon="../icons/clock.svg"
                       size="small"
                     />
-                    <p className="t--small t--grey">
+                    <div className="t--small t--grey">
                       Fra henvisning er mottatt til første fremmøte ved
                       spesialisthelsetjenesten
-                    </p>
+                    </div>
                   </>
                 }
                 id={shortid.generate()}
