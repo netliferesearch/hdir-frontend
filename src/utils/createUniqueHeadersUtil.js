@@ -12,6 +12,14 @@ const prepend = (parent, elToPrepend) => {
 const createUniqueHeaders = items => {
   // Note: 'nextItem' here is a single heading (h2)
   return items.reduce((item, nextItem) => {
+    // Check if we already added # to heading, if so, skip
+    const alreadyAdded = nextItem.innerHTML.includes('#')
+    if (alreadyAdded) { 
+        return [
+        ...item,
+        nextItem
+      ] 
+    }
     // Create kebabt url like this -> one-long-string
     const kebabUrl = urlKebabCase(nextItem.innerText);
     // Filter for duplicates
@@ -28,7 +36,7 @@ const createUniqueHeaders = items => {
     // Give it a class
     headingTxtEl.className = 'js-copy-icon-text'
     // Extract h2's content
-    const headingTxt = nextItem.innerHTML.replace('#', '');
+    const headingTxt = nextItem.innerHTML;
     // Assign it to new element
     headingTxtEl.innerHTML = headingTxt;
     // And remove it from h2
