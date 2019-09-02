@@ -46,13 +46,14 @@
   * {
     visibility: hidden;
   }
-  main {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
   main,
   main * {
     visibility: visible;
+  }
+  // Hide publication/update date. This override should remain where it is,
+  //  so it cascades correctly!
+  .b-page-meta {
+    visibility: hidden;
+    display: none;
   }
 }

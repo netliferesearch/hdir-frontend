@@ -74,10 +74,10 @@ const TreatmentPageA = () => (
                       icon="../icons/clock.svg"
                       size="small"
                     />
-                    <p className="t--small t--grey">
+                    <div className="t--small t--grey">
                       7 kalenderdager fra henvisning mottatt til første fremmøte
                       utredende avdeling
-                    </p>
+                    </div>
                   </>
                 }
                 id={shortid.generate()}
@@ -177,10 +177,10 @@ const TreatmentPageA = () => (
                       icon="../icons/clock.svg"
                       size="small"
                     />
-                    <p className="t--small t--grey">
+                    <div className="t--small t--grey">
                       21 kalenderdager fra første fremmøte i utredende avdeling
                       til avsluttet utredning (beslutning tas)
-                    </p>
+                    </div>
                   </>
                 }
                 id={shortid.generate()}
@@ -281,11 +281,11 @@ const TreatmentPageA = () => (
                       icon="../icons/clock.svg"
                       size="small"
                     />
-                    <p className="t--small t--grey">
+                    <div className="t--small t--grey">
                       7 kalenderdager (medikamentell behandling)/14
                       kalenderdager (kirurgi eller cellegift) fra avsluttet
                       utredning til start behandling
-                    </p>
+                    </div>
                   </>
                 }
                 id={shortid.generate()}
