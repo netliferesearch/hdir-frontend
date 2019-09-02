@@ -74,10 +74,15 @@ const TreatmentPageA = () => (
                       icon="../icons/clock.svg"
                       size="small"
                     />
-                    <div className="t--small t--grey">
+                    <ul className="b-narrow-list">
+                      <li className="b-narrow-list__item t--small t--grey">
                       7 kalenderdager fra henvisning mottatt til første fremmøte
                       utredende avdeling
-                    </div>
+                      </li>
+                      <li className="b-narrow-list__item t--small t--grey">
+                      Noe annet om forløpstid her
+                      </li>
+                    </ul>
                   </>
                 }
                 id={shortid.generate()}
@@ -177,10 +182,19 @@ const TreatmentPageA = () => (
                       icon="../icons/clock.svg"
                       size="small"
                     />
-                    <div className="t--small t--grey">
+                    <ul className="b-narrow-list">
+                      <li className="b-narrow-list__item t--small t--grey">
+                      7 kalenderdager fra henvisning mottatt til første fremmøte
+                      utredende avdeling
+                      </li>
+                      <li className="b-narrow-list__item t--small t--grey">
                       21 kalenderdager fra første fremmøte i utredende avdeling
                       til avsluttet utredning (beslutning tas)
-                    </div>
+                      </li>
+                      <li className="b-narrow-list__item t--small t--grey">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                      </li>
+                    </ul>
                   </>
                 }
                 id={shortid.generate()}
@@ -281,11 +295,12 @@ const TreatmentPageA = () => (
                       icon="../icons/clock.svg"
                       size="small"
                     />
-                    <div className="t--small t--grey">
-                      7 kalenderdager (medikamentell behandling)/14
-                      kalenderdager (kirurgi eller cellegift) fra avsluttet
-                      utredning til start behandling
-                    </div>
+                    <ul className="b-narrow-list">
+                      <li className="b-narrow-list__item t--small t--grey">
+                      7 kalenderdager fra henvisning mottatt til første fremmøte
+                      utredende avdeling
+                      </li>
+                    </ul>
                   </>
                 }
                 id={shortid.generate()}

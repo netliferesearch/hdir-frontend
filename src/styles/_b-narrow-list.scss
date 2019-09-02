@@ -1,0 +1,18 @@
+.b-narrow-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.b-narrow-list__item {
+  padding-left: 1.6rem;
+  position: relative;
+  
+  &:before {
+    content: '–';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 3px;
+  }
+}
