@@ -2,6 +2,7 @@
   border-width: 4px;
   border-style: solid;
   background-color: white;
+  margin-top: calc((5vw + 5vh) / 2);
   &--high {
     border-color: $red;
     color: $red;
