@@ -33,18 +33,6 @@
   }
 }
 
-.editor-align-center {
-  margin: 2em 0;
-  @include mq($from: $tablet) {
-    max-width: 70%;
-    margin: 2em auto 2em auto;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
 figcaption {
   font-size: $meta-text;
 }
