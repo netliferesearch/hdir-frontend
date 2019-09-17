@@ -206,6 +206,14 @@ const ArticlePage = () => (
               Norske og internasjonale studier viser at 30 – 50 prosent av den
               voksne befolkningen vil få en psykisk lidelse i løpet av livet.
             </p>
+            <figure class="editor-align-justify">
+              <img alt="Stopptober-materiell.png" src="https://www.helsedirektoratet.no/tema/tobakk-royk-og-snus/stopptober/_/image/1e786d6a-13cc-4f54-972e-8556eddac5a4:ff3d3416f23bd48e955313352cb77bf6453c50df/width-768/Stopptober-materiell.png" />
+              <figcaption>Under kan du blant annet bestille plakat, kalender, button eller flyer.</figcaption>
+            </figure>
+            <figure class="editor-align-right">
+              <img alt="Stopptober-materiell.png" src="https://www.helsedirektoratet.no/tema/tobakk-royk-og-snus/stopptober/_/image/1e786d6a-13cc-4f54-972e-8556eddac5a4:ff3d3416f23bd48e955313352cb77bf6453c50df/width-768/Stopptober-materiell.png" />
+              <figcaption>Under kan du blant annet bestille plakat, kalender, button eller flyer.</figcaption>
+            </figure>
             <h2>Forebyggende arbeid</h2>
             <p>
               Dette omfatter tiltak som kan bidra til å forhindre at psykiske
