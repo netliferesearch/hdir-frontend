@@ -11,7 +11,7 @@ const supportedBrowserVersion = {
   'Firefox': 65, // Current 68
   'Microsoft Edge': 15, // Current 18
   'Chrome': 73, // Current 76
-  'Internet Explorer': 12, // Last and latest 11
+  'Internet Explorer': 11, // Last and latest 11
   'Safari': 9, // Current 12
 }
 
