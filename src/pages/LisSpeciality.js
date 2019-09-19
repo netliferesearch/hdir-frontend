@@ -3,6 +3,7 @@ import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
 import NavList from '../components/NavList';
 import Link from '../components/Link';
+import Button from '../components/Button';
 
 const LisSpeciality = () => (
   <>
@@ -31,9 +32,9 @@ const LisSpeciality = () => (
           Om metode og prosess
         </Link>
         <br />
-        <Link href="#a" small icon="../icons/print.svg">
+        <Button clean small icon="../icons/print.svg">
           Skriv ut hele retningslinjen
-        </Link>
+        </Button>
       </div>
     </div>
 

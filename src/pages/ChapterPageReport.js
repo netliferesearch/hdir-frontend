@@ -4,6 +4,7 @@ import SectionSidebar from '../components/SectionSidebar';
 import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
 import Box from '../components/Box';
+import Button from '../components/Button';
 import Card from '../components/Card';
 import Breadcrumbs from '../components/Breadcrumbs';
 
@@ -122,9 +123,9 @@ const ChapterPageReport = () => (
           Om metode og prosess
         </Link>
         <br />
-        <Link href="#a" small icon="../icons/print.svg">
+        <Button clean small icon="../icons/print.svg" onClick={() => window.location.href='file.doc'}>
           Skriv ut hele retningslinjen
-        </Link>
+        </Button>
       </div>
 
       <div className="l-mt-4">

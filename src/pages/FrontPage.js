@@ -31,7 +31,6 @@ const pages = [
   {link: '/medisinListe', desc: 'MedisinListe'},
   {link: '/pdf-print-preview', desc: 'Print PDF Preview'},
   {link: '/produkt', desc: 'Produkt'},
-  {link: '/produkt', desc: 'Produkt'},
   {link: '/rapport', desc: 'Rapport'},
   {link: '/rapport-kapittel', desc: 'Rapport kapittel'},
   {link: '/rapport-liste', desc: 'Rapportliste'},

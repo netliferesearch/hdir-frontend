@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PageMeta from '../components/PageMeta';
-import Link from '../components/Link';
+import Button from '../components/Button';
 import Box from '../components/Box';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -148,9 +148,9 @@ const StatisticsSubpage = () => (
               editDate="12. august 2018"
             />
             <div className="l-mt-1">
-              <Link href="#a" small icon="../icons/print.svg">
+              <Button clean small icon="../icons/print.svg">
                 Skriv ut hele retningslinjen
-              </Link>
+              </Button>
             </div>
           </div>
         </div>

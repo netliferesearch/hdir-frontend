@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleIntro from '../components/ArticleIntro';
 import Link from '../components/Link';
+import Button from '../components/Button';
 import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';
 import SectionSidebar from '../components/SectionSidebar';
@@ -91,9 +92,9 @@ const HearingPage = () => (
             Print
           </Link>
           <br />
-          <Link href="#a" small icon="../icons/pdf.svg">
+          <Button clean small icon="../icons/print.svg">
             Lag PDF
-          </Link>
+          </Button>
         </div>
       </div>
     </div>
