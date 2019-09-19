@@ -108,7 +108,8 @@ const MainHeader = props => {
                     src={searchIcon}
                     alt=""
                     className="b-icon b-icon--small"
-                    role="presentation"
+                    role="button"
+                    tabindex="-1"
                   />
                 </button>
               )}
