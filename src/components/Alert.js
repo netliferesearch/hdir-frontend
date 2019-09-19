@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import shortid from 'shortid';
 
 const boxClasses = (status, small, inline) =>
   classNames({
@@ -21,11 +22,15 @@ const boxIconClasses = status =>
     'b-alert__icon--danger': status === 'danger',
     'b-alert__icon--info': status === 'info'
   });
+  
+const id = shortid.generate();
 
 const Alert = props => (
-  <section className={boxClasses(props.status, props.small, props.inline)}>
+  <section 
+    className={boxClasses(props.status, props.small, props.inline)} 
+    aria-labelledby={id}>
     {!props.hideIcon && <div className={boxIconClasses(props.status)} />}
-    {props.title && <div className="b-alert__title">{props.title}</div>}
+    {props.title && <div className="b-alert__title" id={id}>{props.title}</div>}
     <div className="b-alert__content">{props.children}</div>
   </section>
 );
