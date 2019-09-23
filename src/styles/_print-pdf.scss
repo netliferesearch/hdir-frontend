@@ -22,22 +22,22 @@
     border-bottom: 10px solid black;
     margin-bottom: 40px;
   }
-  .tabbed {
+  div.tabbed {
     margin-left: 20px;
   }
-  .tabbed-1 {
+  div.tabbed-1 {
     margin-left: 20px;
   }
-  .tabbed-2 {
+  div.tabbed-2 {
     margin-left: 40px;
   }
-  .tabbed-3 {
+  div.tabbed-3 {
     margin-left: 60px;
   }
-  .tabbed-4 {
+  div.tabbed-4 {
     margin-left: 80px;
   }
-  .tabbed-5 {
+  div.tabbed-5 {
     margin-left: 100px;
   }
   font-size: 16px;
@@ -46,12 +46,14 @@
   h3, .h3,
   h4, .h4,
   h5, .h5 {
-    margin-bottom: 10px;
+    margin-top: 10px;
+    line-height: 1.2em;
   }
   h1, .h1 {
     font-size: 40px;
   }
   h2, .h2 {
+    margin-top: 30px;
     font-size: 30px;
   }
   h3, .h3 {
@@ -62,5 +64,12 @@
   }
   h5, .h5 {
     font-size: 18px;
+  }
+  h4 + h2 {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 1.5em;
+    margin-top: 0;
   }
 }
