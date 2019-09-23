@@ -87,7 +87,7 @@ const MainHeader = props => {
           )}
 
           <div className="l-hide-to-lg">
-            <nav className="b-main-header__nav" aria-label="Hovedmeny">
+            <nav className="b-main-header__nav" role="navigation" aria-label="Hovedmeny">
               {links.map(link => (
                 <a
                   href={link.href}
@@ -125,7 +125,7 @@ const MainHeader = props => {
           </div>
 
           <div className="l-hide-from-lg">
-            <nav className="b-main-header__nav" aria-label="Hovedmeny mobil">
+            <nav className="b-main-header__nav" role="navigation" aria-label="Hovedmeny mobil">
               <button
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}
                 className="b-button b-button--secondary-dark b-button--small"

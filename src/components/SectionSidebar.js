@@ -222,7 +222,7 @@ const SectionSidebar = props => {
             <span id="section-sidebar-heading">{props.heading}</span>
           )}
         </div>
-        <nav aria-describedby="section-sidebar-heading">
+        <nav aria-describedby="section-sidebar-heading" role="navigation">
           {list.map((item, index) => {
             if (!hasItems(props.list)) {
               theList.push(

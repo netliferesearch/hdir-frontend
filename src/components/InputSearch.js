@@ -88,6 +88,7 @@ const InputSearch = props => {
           title="Søk"
           aria-labelledby="search-input-label"
           {...inputProps}
+          role="search"
           ref={inputElement}
           className={classNames({
             'b-input-search__field': true,
