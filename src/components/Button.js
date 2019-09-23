@@ -8,6 +8,7 @@ const buttonClasses = (
   small,
   secondary,
   plain,
+  clean,
   secondaryDark
 ) =>
   classNames({
@@ -17,6 +18,7 @@ const buttonClasses = (
     'b-button--arrow': arrow,
     'b-button--small': small,
     'b-button--plain': plain,
+    'b-button--clean': clean,
     'b-button--secondary-dark': secondaryDark
   });
 
@@ -27,19 +29,35 @@ const Button = props => {
     props.small,
     props.secondary,
     props.plain,
+    props.clean,
     props.secondaryDark
   );
 
-  return <button className={allClassNames} onClick={props.onClick}>{props.children}</button>;
+  return (
+    <button className={allClassNames} onClick={props.onClick}>
+      {props.icon && (
+        <div
+          className="b-link__icon"
+          role="presentation"
+          style={{ backgroundImage: `url(${props.icon})` }}
+        />
+      )}
+      {props.icon ? 
+        (<span className="b-button__underline">{props.children}</span>) 
+      : props.children}
+    </button>
+  );
 };
 
 Button.propTypes = {
   arrow: PropTypes.bool,
+  icon: PropTypes.string,
   download: PropTypes.bool,
   small: PropTypes.bool,
   secondary: PropTypes.bool,
   secondaryDark: PropTypes.bool,
-  plain: PropTypes.bool
+  plain: PropTypes.bool,
+  clean: PropTypes.bool
 };
 
 export default Button;

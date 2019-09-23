@@ -2,6 +2,7 @@ import React from 'react';
 import shortid from 'shortid';
 
 import Link from '../components/Link';
+import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
 import Collapsible from '../components/Collapsible';
 import Box from '../components/Box';
@@ -448,9 +449,9 @@ const TreatmentPageA = () => (
       <div className="row">
         <div className="col-xs-12">
           <div className="l-mt-4">
-            <Link href="#a" small icon="../icons/print.svg">
+            <Button clean small icon="../icons/print.svg">
               Skriv ut hele pakkeforløpet
-            </Link>
+            </Button>
           </div>
         </div>
       </div>

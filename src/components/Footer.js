@@ -21,7 +21,7 @@ const Footer = () => (
       </div>
 
       <div className="col-lg-7 col-sm-8 col-xs-12">
-        <div className="row">
+        <div className="row" role="navigation">
           <div className="col-xs-12 col-md-6 col-lg-4">
             <a href="#a" className="b-footer__link">
               Om oss

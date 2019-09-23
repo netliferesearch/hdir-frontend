@@ -3,6 +3,7 @@ import React from 'react';
 import SectionSidebar from '../components/SectionSidebar';
 import PageMeta from '../components/PageMeta';
 import Link from '../components/Link';
+import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
 import LongShortHeading from '../components/LongShortHeading';
@@ -117,9 +118,9 @@ const MemoChapterPage = () => (
               Om metode og prosess
             </Link>
             <br />
-            <Link href="#a" small icon="../icons/print.svg">
+            <Button clean small icon="../icons/print.svg">
               Skriv ut hele retningslinjen
-            </Link>
+            </Button>
             <br />
             <PageMeta
               publishDate="11. august 2008"
