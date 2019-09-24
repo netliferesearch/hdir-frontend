@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import shortid from 'shortid';
 
 const headingClasses = alertLevel =>
   classNames({
@@ -18,10 +19,12 @@ const alertClasses = alertLevel =>
     'b-alert-bar--low': alertLevel === 'low'
   });
 
+const id = shortid.generate();
+
 const AlertBar = props => (
-  <section role="alert" className={alertClasses(props.alertLevel)}>
+  <section role="alert" className={alertClasses(props.alertLevel)} aria-labelledby={id}>
     <div className="l-container">
-      <h1 className={headingClasses(props.alertLevel)}>{props.heading}</h1>
+      <h1 id={id} className={headingClasses(props.alertLevel)}>{props.heading}</h1>
       <div className="l-mt-2">{props.children}</div>
       {props.lastUpdated && (
         <div className="b-alert-bar__date">
