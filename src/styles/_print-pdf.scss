@@ -22,6 +22,10 @@
     border-bottom: 10px solid black;
     margin-bottom: 40px;
   }
+  .atom-main-content { // "Anbefaling" intro text
+    padding-left: 20px;
+    border-left: 7px solid #ddd;
+  }
   div.tabbed {
     margin-left: 20px;
     margin-bottom: 40px;
@@ -74,7 +78,7 @@
     margin-bottom: 1.5em;
     margin-top: 0;
     font-size: 13px;
-    line-height: 1.5em;
+    line-height: 1.4;
   }
   
   // Override spacing classes
