@@ -24,6 +24,8 @@
   }
   div.tabbed {
     margin-left: 20px;
+    margin-bottom: 40px;
+    font-size: 70%; // => all headers are smaller
   }
   div.tabbed-1 {
     margin-left: 20px;
@@ -50,20 +52,20 @@
     line-height: 1.2em;
   }
   h1, .h1 {
-    font-size: 40px;
+    font-size: 2.6em;
   }
   h2, .h2 {
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 2.2em;
   }
   h3, .h3 {
-    font-size: 24px;
+    font-size: 1.6em;
   }
   h4, .h4 {
-    font-size: 20px;
+    font-size: 1.5em;
   }
   h5, .h5 {
-    font-size: 18px;
+    font-size: 1.3em;
   }
   h4 + h2 {
     margin-top: 0;
@@ -71,5 +73,12 @@
   p {
     margin-bottom: 1.5em;
     margin-top: 0;
+    font-size: 13px;
+    line-height: 1.5em;
+  }
+  
+  // Override spacing classes
+  .l-mb-3 {
+    margin-bottom: 30px;
   }
 }
