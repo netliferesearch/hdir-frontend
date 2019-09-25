@@ -24,12 +24,14 @@
   }
   .atom-main-content { // "Anbefaling" intro text
     padding-left: 20px;
-    border-left: 7px solid #ddd;
+    border-left: 6px solid #ddd;
   }
   div.tabbed {
     margin-left: 20px;
     margin-bottom: 40px;
+    padding-top: 20px;
     font-size: 70%; // => all headers are smaller
+    border-top: 1px solid black;
   }
   div.tabbed-1 {
     margin-left: 20px;
