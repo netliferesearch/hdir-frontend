@@ -24,7 +24,8 @@ const boxIconClasses = status =>
   
 const Alert = props => (
   <section 
-    className={boxClasses(props.status, props.small, props.inline)}>
+    className={boxClasses(props.status, props.small, props.inline)}
+    aria-label="Fill out">
     {!props.hideIcon && <div className={boxIconClasses(props.status)} />}
     {props.title && <div className="b-alert__title">{props.title}</div>}
     <div className="b-alert__content">{props.children}</div>
