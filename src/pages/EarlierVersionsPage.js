@@ -39,7 +39,8 @@ const EarlierVersionsPage = () => (
                       heading:
                         'Ny forskrift om helsestasjons- og skolehelsetjenesten',
                       publishDate: '3. desember 2018',
-                      lead: 'Alle anbefalinger er oppdatert med henvisninger til ny forskrift om helsestasjons- og skolehelsetjenesten, som trådte i kraft 1. november 2018. '
+                      lead: 'Alle anbefalinger er oppdatert med henvisninger til ny forskrift om helsestasjons- og skolehelsetjenesten, som trådte i kraft 1. november 2018. ',
+                      download: '#'
                     }
                   },
                   {
@@ -48,7 +49,8 @@ const EarlierVersionsPage = () => (
                       heading:
                         'Ny, kjønnsnøytral tittel',
                       publishDate: '1. desember 2018',
-                      lead: 'Fra 1. januar 2019 er tittelet "helsesøster" endret til "helsesykepleier". Dette er oppdatert i alle anbefalinger.'
+                      lead: 'Fra 1. januar 2019 er tittelet "helsesøster" endret til "helsesykepleier". Dette er oppdatert i alle anbefalinger.',
+                      download: '#'
                     }
                   },
                   {
@@ -60,7 +62,8 @@ const EarlierVersionsPage = () => (
                       lead: `<ul><li>Anbefalingen erstatter tidligere innhold om hodeomkrets i PDF. Nasjonal vekstkurve fra Vekststudien i Bergen anbefales nå for vurdering av hodeomkrets. Målemetode og henvisningskriterier er tydeliggjort, og det er lagt inn informasjon om hvordan premature barns hodeomkrets korrigeres for alder.</li>
 <li>Nytt kapittel "Veiing og måling" er opprettet under Helsestasjon 0-5 år. I kapittelet ligger anbefaling Hodeomkrets og anbefaling Veiing og måling (under revidering). </li>
 <li>Under anbefalingen Veiing og måling lenkes det opp til nåværende retningslinje (PDF).</li>
-<li>I skolehelsetjenesten er anbefalingen Veiing og måling (under revidering) lagt inn i kapittelet "Helseundersøkelse og helsesamtale". Det lenkes opp til nåværende retningslinje (PDF), som er gjeldende inntil ferdigstillelse.</li></ul>`
+<li>I skolehelsetjenesten er anbefalingen Veiing og måling (under revidering) lagt inn i kapittelet "Helseundersøkelse og helsesamtale". Det lenkes opp til nåværende retningslinje (PDF), som er gjeldende inntil ferdigstillelse.</li></ul>`,
+                      download: '#'
                     }
                   },
                   {
@@ -69,6 +72,7 @@ const EarlierVersionsPage = () => (
                       heading:
                         'Nytt arbeidsdokument for Skolehelsetjenesten i grunn- og videregående skole',
                       publishDate: '10. november 2018',
+                      download: '#'
                     }
                   }
                 ]}

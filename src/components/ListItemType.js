@@ -194,15 +194,17 @@ const ListItemType = props => {
         >
           <div className="b-list-item">
             <div className="b-list-item-type__text">
-              {fields.heading && 
-                <h3><a href={url}>{fields.heading}</a></h3>
-              }
-
-              {fields.publishDate && (
-                <div className="b-list-item-type__date">
-                  {fields.publishDate}
-                </div>
+              {fields.download && (
+                <div className="b-list-item-type__download b-list-item-type--float" aria-label="Last ned PDF">PDF ↓</div>
               )}
+              {fields.heading && 
+                <h3>{fields.heading}</h3>
+              }
+              <div className="b-list-item-type__date">
+                {fields.publishDate && (
+                    fields.publishDate
+                )}
+              </div>
             </div>
             {fields.lead && (
               <div className="b-list-item-type__subheading">
