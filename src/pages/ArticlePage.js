@@ -60,9 +60,14 @@ const ArticlePage = () => (
                       Hyperkinetisk forstyrrelse (ADHD og ADD) hos barn og
                       ungdom (fra 6 år til og med 17 år)
                     </td>
+                    <td>
+                      Hyperkinetisk forstyrrelse (ADHD og ADD) hos barn og
+                      ungdom (fra 6 år til og med 17 år)
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">Diagnosekoder</th>
+                    <td>ICD-10: F90 / ICPC-2: P81</td>
                     <td>ICD-10: F90 / ICPC-2: P81</td>
                   </tr>
                   <tr>
@@ -78,9 +83,28 @@ const ArticlePage = () => (
                       <br />
                       ICPC-2: P81
                     </td>
+                    <td>
+                      § 3 ICD-10: F90
+                      <p>&nbsp;</p>
+                      Før 1. januar 2018:
+                      <br />
+                      § 3a, jf. § 2
+                      <br />
+                      ICD-10: F90
+                      <br />
+                      ICPC-2: P81
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">Tidsbegrensning</th>
+                    <td>
+                      Vedtakene tidsbegrenses i 2 år.
+                      <p>&nbsp;</p>
+                      Dersom brukeren fyller 18 år i løpet av disse to
+                      årene, og det ikke er gjort unntak fra
+                      aldersbegrensningen, skal vedtaket tidsbegrenses til
+                      fylte 18 år.
+                    </td>
                     <td>
                       Vedtakene tidsbegrenses i 2 år.
                       <p>&nbsp;</p>

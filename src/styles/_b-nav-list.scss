@@ -167,6 +167,9 @@
 
     &--no-pointer {
       cursor: default;
+      .b-list-item-type:after {
+        display:none;
+      }
     }
 
     // DEPRECATED - might be used in Enonic somewhere.
