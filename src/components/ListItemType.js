@@ -209,7 +209,7 @@ const ListItemType = props => {
             {fields.lead && (
               <div className="b-list-item-type__subheading">
                 <Collapsible
-                  heading="Beskrivelse"
+                  heading="Endringer i denne versjonen"
                   size="small"
                 >
                     <p className="b-list-item-type__lead" dangerouslySetInnerHTML={{__html: fields.lead}} />
