@@ -7,6 +7,7 @@ const pages = [
   {link: '/anbefaling', desc: 'Anbefaling'},
   {link: '/artikkel', desc: 'Artikkel'},
   {link: '/artikkel-med-skjema', desc: 'Artikkel med skjema'},
+  {link: '/artikkel-med-iframe', desc: 'Artikkel med iframe'},
   {link: '/autorisasjon-forside', desc: 'Autorisasjon forside'},
   {link: '/autorisasjon-steg', desc: 'Autorisasjon steg'},
   {link: '/autorisasjon-steg-2', desc: 'Autorisasjon steg 2'},

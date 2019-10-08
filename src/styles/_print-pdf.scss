@@ -7,8 +7,8 @@
     margin-bottom: 1cm;
   }
 }
-.print-page-break {
-  page-break-after: always;
+* {
+  page-break-inside: avoid;
 }
 .print-pdf {
   a[href^="http://"],
