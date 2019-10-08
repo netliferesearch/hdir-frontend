@@ -70,6 +70,9 @@
     font-size: 70%; // => all headers are smaller
     border-top: 1px solid black;
   }
+  div.tabbed div.tabbed {
+    font-size: 100%; // Prevent tabbed-in-tabbed-in-tabbed ruining font size
+  } 
   div.tabbed-1 {
     margin-left: 20px;
   }

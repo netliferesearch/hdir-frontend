@@ -13,9 +13,9 @@ const PrintPdfPreview = () => (
       <h4>Kapittel: 1</h4>
       <h2>Diagnostikk av diabetes, risikovurdering og oppfølging av personer med høy risiko for å utvikle diabetes</h2>
       <br/>
-      <div>
-        <h4>Sterk anbefaling</h4>
-        <h2>Diagnostiske kriterier for diabetes</h2>
+      <div className="tabbed">
+        <h4 className="tabbed">Sterk anbefaling</h4>
+        <h2 className="tabbed">Diagnostiske kriterier for diabetes</h2>
         <br/>
         <p></p>
         <p>Diagnosen diabetes stilles ved:</p>
@@ -29,13 +29,13 @@ const PrintPdfPreview = () => (
           plasma-glukose ≥ 11,1 mmol/L og symptomer på diabetes er det ikke behov for ny prøve før diagnosen stilles.</p>
         <p>For diagnostikk av svangerskapsdiabetes gjelder egne glukosebaserte kriterier.</p>
         <p></p>
-        <div className="l-mb-3">
+        <div className="l-mb-3 tabbed">
           <div>
             <div>
               <h3>Praktisk – slik kan anbefalingen følges
               </h3>
             </div>
-            <div>
+            <div className="tabbed">
               <h3>Måling og analyse av HbA1c</h3>
               <p>Blodprøve til analyse av HbA1c til diagnostikk av diabetes utenfor svangerskap kan tas når som helst på
                 døgnet. Resultatet er normalt et uttrykk for gjennomsnittlig plasma-glukosekonsentrasjon de siste 2-3
