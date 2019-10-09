@@ -3,6 +3,7 @@
   border-left: 4px solid $grey;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &--small {
     font-size: $meta-text;
@@ -74,6 +75,7 @@
 
   &__title {
     flex-shrink: 0;
+    flex-grow: 1;
     font-weight: bold;
     margin-right: 1rem;
     margin-top: 0.25em;
