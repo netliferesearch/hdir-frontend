@@ -23,8 +23,7 @@ const EarlierVersionsPage = () => (
       <main id="main">
         <div className="l-mt-3">
           <ArticleIntro
-            heading="Tidligere versjoner"
-            lead="«Behandling og rehabilitering av rusproblemer og avhengighet»"
+            heading="Tidligere versjoner: Nasjonal faglig retningslinje for diabetes"
           />
         </div>
         <div className="row l-mt-4">
