@@ -1,14 +1,37 @@
 @page {
   size: A4;
-  margin: 1cm;
+  margin: 2cm;
   counter-increment: page;
+  background-attachment: inherit;
+  overflow: visible;
+
   @bottom-center {
-    content: "Side " counter(page) "/" counter(pages);
+    content: "Side "counter(page) "/"counter(pages);
     margin-bottom: 1cm;
   }
 }
+
+@page :first {
+  background-image: url("https://www.helsedirektoratet.no/_/asset/helsedirektoratet:1570538453/img/pdf-cover.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  // margin-bottom: 580px;
+
+  @bottom-center {
+    content: ""
+  }
+}
+
+@media print {
+  .toc a::after {
+    content: leader('.') target-counter(attr(href), page);
+  }
+}
+
+
 .print-page-break {
   page-break-after: always;
+  overflow: visible;
 }
 .print-pdf {
   a[href^="http://"],
@@ -33,6 +56,7 @@
   }
   h1, .h1 {
     font-size: 2.6em;
+    margin-bottom: 30px;
   }
   h2, .h2 {
     margin-top: 30px;
@@ -97,5 +121,49 @@
   }
   .b-collapsible {
     padding-left: 0;
+  }
+}
+
+
+
+// TOC/Front page table
+.toc-table {
+  border: none !important;
+  margin-top: 100px;
+}
+
+.toc-right-column {
+  border: none !important;
+}
+
+.toc-right-text {
+  margin-bottom: 2px;
+}
+
+.toc-left-column {
+  border: none !important;
+  vertical-align: top;
+  text-align: left;
+}
+
+.toc-left-title {
+  margin-top: 20px;
+}
+
+.cover-table {
+  border: none !important;
+}
+
+.cover-right {
+  border: none !important;
+}
+
+.cover-left {
+  border: none !important;
+  vertical-align: top;
+  text-align: left;
+  
+  h4 {
+    font-size: 1.3em;
   }
 }
