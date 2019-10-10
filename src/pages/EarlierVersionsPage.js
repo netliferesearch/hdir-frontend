@@ -63,6 +63,14 @@ const EarlierVersionsPage = () => (
                       download: '#'
                     }
                   },
+                  {
+                    type: 'archive',
+                    fields: {
+                      heading:
+                        '12. november 2018',
+                      download: '#'
+                    }
+                  },
                 ]}
               />
             </div>
