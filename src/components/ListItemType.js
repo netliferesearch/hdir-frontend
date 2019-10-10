@@ -195,7 +195,7 @@ const ListItemType = props => {
           <div className="b-list-item">
             <div className="b-list-item-type__text">
               {fields.download && (
-                <div className="b-list-item-type__download b-list-item-type--float" aria-label="Last ned PDF">PDF ↓</div>
+                <a href="#" className="b-list-item-type__download b-list-item-type--float b-list-item-type--link" aria-label="Last ned PDF">PDF ↓</a>
               )}
               {fields.heading && 
                 <h3>{fields.heading}</h3>
