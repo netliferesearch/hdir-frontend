@@ -3,9 +3,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import SquareImage from '../components/SquareImage';
+import Collapsible from '../components/Collapsible';
 
 const ListItemType = props => {
-  const { type: type = '', fields: fields = null } = props.itemType;
+  const { 
+    type: type = '', 
+    fields: fields = null, 
+    url: url = '#' 
+  } = props.itemType;
 
   return (
     <>
@@ -179,6 +184,39 @@ const ListItemType = props => {
           {fields.topic && (
             <div className="b-list-item-type__topic">{fields.topic}</div>
           )}
+        </div>
+      )}
+      {type === 'archive' && (
+        <div
+          className={classNames({
+            'b-list-item-type': true,
+          })}
+        >
+          <div className="b-list-item">
+            <div className="b-list-item-type__text">
+              {fields.download && (
+                <div className="b-list-item-type__download b-list-item-type--float" aria-label="Last ned PDF">PDF ↓</div>
+              )}
+              {fields.heading && 
+                <h3>{fields.heading}</h3>
+              }
+              <div className="b-list-item-type__date">
+                {fields.publishDate && (
+                    fields.publishDate
+                )}
+              </div>
+            </div>
+            {fields.lead && (
+              <div className="b-list-item-type__subheading">
+                <Collapsible
+                  heading="Endringer i denne versjonen"
+                  size="small"
+                >
+                    <p className="b-list-item-type__lead" dangerouslySetInnerHTML={{__html: fields.lead}} />
+                </Collapsible>
+              </div>
+            )}
+          </div>
         </div>
       )}
 
