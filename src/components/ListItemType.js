@@ -178,7 +178,10 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF</div>
+            )}
+            {fields.openPdf && (
+              <div className="b-list-item-type__download b-list-item-type__download--open" aria-label="Åpne PDF">PDF</div>
             )}
           </div>
           {fields.topic && (

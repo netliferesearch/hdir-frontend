@@ -115,7 +115,7 @@ const ReportListPage = () => (
                   type: 'generic',
                   url: '#6',
                   fields: {
-                    download: 'true',
+                    openPdf: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
                     subheading: 'Publisert: 16. januar 2020'
@@ -125,7 +125,7 @@ const ReportListPage = () => (
                   type: 'generic',
                   url: '#6',
                   fields: {
-                    download: 'true',
+                    openPdf: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
                     subheading: 'Publisert: 16. januar 2020'
