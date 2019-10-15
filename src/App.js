@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import ArticlePage from './pages/ArticlePage';
 import ArticlePageNoH2 from './pages/ArticlePageNoH2';
 import ArticlePageWithForm from './pages/ArticlePageWithForm';
+import ArticlePageWithIframe from './pages/ArticlePageWithIframe';
 import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
@@ -98,6 +99,10 @@ class App extends Component {
               <Route
                 path="/artikkel-med-skjema"
                 component={ArticlePageWithForm}
+              />
+              <Route
+                path="/artikkel-med-iframe"
+                component={ArticlePageWithIframe}
               />
               <Route path="/hdir-tema" component={ThemePage} />
               <Route path="/helfo-forside" component={FrontPageHelfo} />
