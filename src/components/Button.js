@@ -34,7 +34,7 @@ const Button = props => {
   );
 
   return (
-    <button className={allClassNames} onClick={props.onClick}>
+    <button className={allClassNames} onClick={props.onClick} {...props}>
       {props.icon && (
         <div
           className="b-link__icon"

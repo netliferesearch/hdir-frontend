@@ -36,11 +36,11 @@ const ArticlePageWithIframe = () => (
         </div>
         <div className="l-mt-3">
           <div className="l-mb-2">
-            <Button secondary onClick={() => requestFullscreen(document.getElementById('id1'))}>Fullskjerm</Button>
+            <Button secondary data-id="iframe-open" data-target="iframe">Fullskjerm</Button>
           </div>
-          <div className="videoWrapper videoWrapper__iframe" id="id1">
+          <div className="videoWrapper videoWrapper__iframe" id="iframe">
             <div className="videoWrapper__close">
-              <Button secondary onClick={() => exitFullscreen(document.getElementById('id1'))}>Lukk</Button>
+              <Button secondary data-id="iframe-close" data-target="iframe">Lukk</Button>
             </div>
             <iframe title="Title here" width="100%" height="600" src="https://statistikk.helsedirektoratet.no/bi/Dashboard/71613538-62de-4ab2-8409-8638fc6c25db?e=false&vo=viewonly" frameBorder="0" allowFullScreen=""></iframe>
           </div>
