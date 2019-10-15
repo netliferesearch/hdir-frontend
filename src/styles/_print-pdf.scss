@@ -1,9 +1,21 @@
+@page:first {
+  background-image: url("https://www.helsedirektoratet.no/_/asset/helsedirektoratet:1570538453/img/pdf-cover.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  padding-bottom: 580px;
+
+  @bottom-center {
+    content: ""
+  }
+}
+
 @page {
   size: A4;
   margin: 2cm;
   counter-increment: page;
   background-attachment: inherit;
   overflow: visible;
+  margin-bottom: 2cm;
 
   @bottom-center {
     content: "Side "counter(page) "/"counter(pages);
@@ -11,16 +23,6 @@
   }
 }
 
-@page :first {
-  background-image: url("https://www.helsedirektoratet.no/_/asset/helsedirektoratet:1570538453/img/pdf-cover.png");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  // margin-bottom: 580px;
-
-  @bottom-center {
-    content: ""
-  }
-}
 
 @media print {
   .toc a::after {
@@ -42,7 +44,7 @@
   }
   // Typography
   font-size: 13px;
-  .b-collapsible__content--small, .b-collapsible__category, li, p {
+  .b-collapsible__content--small, .b-collapsible__category, li, p, td {
     font-size: 13px;
     line-height: 1.4;
   }
@@ -62,6 +64,9 @@
     margin-top: 30px;
     font-size: 2.2em;
   }
+  .print-section-level-1>h2 {
+    margin-bottom: 15px;
+  }
   h3, .h3 {
     font-size: 1.6em;
   }
@@ -73,6 +78,7 @@
   }
   h4 + h2 {
     margin-top: 0;
+    margin-bottom: 0;
   }
   p {
     margin-bottom: 1.5em;
@@ -91,12 +97,20 @@
     margin-left: 20px;
     margin-bottom: 40px;
     padding-top: 20px;
-    font-size: 70%; // => all headers are smaller
     border-top: 1px solid black;
+    h1 {
+      font-size: calc(2.6em - 30%);
+    }
+    h2 {
+      font-size: calc(2.2em - 30%);
+    }
+    h3 {
+      font-size: calc(1.6em - 30%);
+    }
+    h3 {
+      font-size: calc(1.3em - 30%);
+    }
   }
-  div.tabbed div.tabbed {
-    font-size: 100%; // Prevent tabbed-in-tabbed-in-tabbed ruining font size
-  } 
   div.tabbed-1 {
     margin-left: 20px;
   }
@@ -121,6 +135,14 @@
   }
   .b-collapsible {
     padding-left: 0;
+  }
+  
+  // Override other stuff
+  table {
+    margin-bottom: 10px;
+  }
+  table td {
+    padding: 0.5rem;
   }
 }
 
