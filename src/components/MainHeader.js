@@ -109,7 +109,7 @@ const MainHeader = props => {
                     alt=""
                     className="b-icon b-icon--small"
                     role="button"
-                    tabindex="-1"
+                    tabIndex="-1"
                   />
                 </button>
               )}
