@@ -8,6 +8,17 @@ import Button from '../components/Button';
 import SectionSidebar from '../components/SectionSidebar';
 import Statistics from '../components/Statistics';
 
+/*
+  Just to make the iframe button work on the prototype,
+  we have to re-load the js so it can find the element,
+  if we got here using the react router.
+*/
+const reloadExternalJs = () => {
+  const addScript = document.createElement('script');
+  addScript.setAttribute('src', './javascript/hdir-vanilla.js');
+  document.body.appendChild(addScript);
+}
+
 const ArticlePageWithIframe = () => (
   <>
     <div className="l-container">
@@ -34,6 +45,7 @@ const ArticlePageWithIframe = () => (
             lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
           />
         </div>
+        {reloadExternalJs()}
         <div className="l-mt-3">
           <div className="l-mb-2">
             <Button secondary data-id="iframe-open" data-target="iframe" aria-controls="iframe" aria-label="Vis innhold i fullskjerm">Fullskjerm</Button>
