@@ -54,6 +54,10 @@ if (!process.env.REACT_APP_ENONICXP) {
 }
 
 if (multiSelectElements.length) {
+    // missing forEach on NodeList for IE11
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
   multiSelectElements.forEach(element => {
     const buttonText = element.getAttribute('data-button-text');
     const confirmText = element.getAttribute('data-confirm-text');
