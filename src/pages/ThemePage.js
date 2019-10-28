@@ -473,7 +473,14 @@ const ThemePage = () => (
 
         <div className="row l-mt-4">
           <div className="col-xs-12">
-            <h2>Trykkmateriell</h2>
+            <h2>
+              <img
+                src="./icons/Trykkmateriell.svg"
+                className="b-icon b-icon--heading"
+                alt=""
+                role="presentation"
+              />
+              Trykkmateriell</h2>
             <div className="l-mt-1">
               <hr className="b-hr b-hr--thick" />
             </div>
