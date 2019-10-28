@@ -41,7 +41,7 @@
       position: absolute;
       top: 0.4em;
       right: 0;
-      @include pseudo-arrow($arrow-down);
+      @include pseudo-arrow($arrow-right);
       margin-right: -1rem;
       
       @include mq($until: $tablet) {
