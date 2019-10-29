@@ -115,6 +115,11 @@ const InputSearch = props => {
   }
 
   function onSuggestionSelected(event, { suggestion }) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'autosuggest',
+      'page': suggestion.title
+    });
     window.location = suggestion.url;
   }
 
