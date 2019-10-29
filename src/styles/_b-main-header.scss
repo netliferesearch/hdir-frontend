@@ -22,7 +22,7 @@
     @include underline(transparent);
 
     &--small {
-      background-image: url($logo-small);
+      background-image: url($logo_small);
       background-size: contain;
       font-size: 0;
     }
