@@ -160,7 +160,21 @@ storiesOf('MainHeader', module)
       inputSearchLabel={text('Input search label', 'Søk')}
       exampleSuggestions={object('List', ['aaa', 'bbbb', 'ccccc'])}
     />
-  ));
+  ))
+  .addWithStaticMarkup('QA Environment', () => (
+    <MainHeader
+      name={text('Name', 'Helsedirektoratet')}
+      hideSearch={boolean('Hide search', false)}
+      links={object('List', [
+        { name: 'Om Helsedirektoratet', href: '#' },
+        { name: 'English', href: '#' }
+      ])}
+      inputSearchLabel={text('Input search label', 'Søk')}
+      exampleSuggestions={object('List', ['aaa', 'bbbb', 'ccccc'])}
+      qaEnvironment={boolean('QA Environment', true)}
+    />
+));
+
 
 storiesOf('TransportBlock', module)
   .addDecorator(withKnobs)

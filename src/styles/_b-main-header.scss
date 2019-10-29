@@ -7,6 +7,12 @@
   border-bottom: 1px solid $grey-light;
   margin-bottom: calc(0.5vw + 1.75rem);
 
+  &--qa {
+  border-width: 4px;
+  border-bottom-style: solid;
+  border-image: repeating-linear-gradient(-8deg, $orange, $orange 1px, transparent 1px, transparent 2px) 1;
+  }
+
   &__logo {
     height: 2rem;
     width: 100%;
@@ -19,6 +25,10 @@
       background-image: url($logo-small);
       background-size: contain;
       font-size: 0;
+    }
+    &--qa {
+      height: 3rem;
+      background-image: url($logo-qa);
     }
   }
   &__logo-link {

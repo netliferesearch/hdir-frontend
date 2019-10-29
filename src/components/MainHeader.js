@@ -39,6 +39,7 @@ const MainHeader = props => {
     inputSearchLabel = '',
     links = [],
     name = '',
+    qaEnvironment = false,
   } = props;
   return (
     <>
@@ -61,10 +62,10 @@ const MainHeader = props => {
         </SearchTray>
       )}
       <div className="l-container">
-        <div className="b-main-header">
+        <div className={"b-main-header" + (qaEnvironment? " b-main-header--qa": "")}>
           <a href="/" className="b-main-header__logo-link">
             <div className="l-hide-to-md">
-              <div className="b-main-header__logo" aria-label={`${name} logo`}>
+              <div className={"b-main-header__logo" + (qaEnvironment? " b-main-header__logo--qa": "")} aria-label={`${name} logo`}>
                 {name}
               </div>
             </div>
@@ -171,6 +172,7 @@ MainHeader.propTypes = {
   inputSearchLabel: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.object),
   name: PropTypes.string,
+  qaEnvironment: PropTypes.bool,
 };
 
 MainHeader.defaultProps = {
