@@ -118,7 +118,7 @@ const InputSearch = props => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'event': 'autosuggest',
-      'category': 'Autosuggestion link click',
+      'category': 'Autosuggestion click',
       'action': suggestion.url,
       'label': value,
       'value': suggestion.index
