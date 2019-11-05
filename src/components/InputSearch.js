@@ -118,7 +118,10 @@ const InputSearch = props => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'event': 'autosuggest',
-      'page': suggestion.title
+      'category': 'Autosuggestion link click',
+      'action': suggestion.url,
+      'label': value,
+      'value': suggestion.index
     });
     window.location = suggestion.url;
   }
@@ -130,12 +133,14 @@ const InputSearch = props => {
       fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
         .then(res => res.json())
         .then(data => {
-          if (data.length) {
+          // Adding indexes to suggestions, so we know where in the list the item is
+          const suggestionsWithIndexes = data.map((item, index) => ({index: index + 1, ...item}));
+          if (suggestionsWithIndexes.length) {
             setSuggestions([
-              ...data,
+              ...suggestionsWithIndexes,
               {
                 // The last row that is highlighted
-                ...data[data.length - 1],
+                ...suggestionsWithIndexes[data.length - 1],
                 title: value,
                 category: '',
                 file: '',
