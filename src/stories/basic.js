@@ -1,18 +1,30 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { HashRouter } from 'react-router-dom';
 import Wrapper from './components/Wrapper.js'
 
 import {
   withKnobs,
   text,
   boolean,
-  object,
   select
 } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 
 import Link from '../components/Link';
+
+storiesOf('Grunnstiler/Designstiler', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Typografi', () => (
+    <Wrapper title="Typografi">
+      <iframe style={{border: 0}} title="Typografi iframe" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSJQReaflejvdjUWtGpiv7F%2FHelsedirektoratet-Designmanual%3Fnode-id%3D1%253A59" allowFullScreen></iframe>
+    </Wrapper>
+  ))
+  .addWithStaticMarkup('Farger', () => (
+    <Wrapper title="Farger">
+      <iframe style={{border: 0}} title="Farger iframe" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSJQReaflejvdjUWtGpiv7F%2FHelsedirektoratet-Designmanual%3Fnode-id%3D61%253A196" allowFullScreen></iframe>
+    </Wrapper>
+  ));
 
 storiesOf('Grunnstiler/Lenke', module)
   .addDecorator(withKnobs)
