@@ -28,10 +28,13 @@ import FooterHelfo from '../components/FooterHelfo';
 import Heading from '../components/Heading';
 import InputSearch from '../components/InputSearch';
 import Link from '../components/Link';
+import List from '../components/List';
 import LinkList from '../components/LinkList';
+import ListItemType from '../components/ListItemType';
 import ListHeading from '../components/ListHeading';
 import LongShortHeading from '../components/LongShortHeading';
 import MultiSelector from '../components/MultiSelector';
+import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import PressRelease from '../components/PressRelease';
 import Questionnaire from '../components/Questionnaire';
@@ -138,7 +141,7 @@ storiesOf('Komponenter/Header', module)
     </Wrapper>
   ))
   .addWithStaticMarkup('QA Environment', () => (
-    <Wrapper title="Header" lead="To be displayed on QA environment." wide>
+    <Wrapper title="Header" lead="Vises på testmiljøet" wide>
     <MainHeader
       name={text('Name', 'Helsedirektoratet')}
       hideSearch={boolean('Hide search', false)}
@@ -669,22 +672,6 @@ storiesOf('Komponenter/Ekspanderbar liste', module)
     </Wrapper>
   ));
 
-storiesOf('Komponenter/Filterliste', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Standard', () => (
-    <Wrapper title="Filterliste">
-      <FilterList
-        list={object('List', [
-          'Alt',
-          'Retningslinjer',
-          'Pakkeforløp',
-          'Rundskriv'
-        ])}
-      />
-    </Wrapper>
-  ));
-
 storiesOf('Komponenter/Footer', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -766,7 +753,7 @@ storiesOf('Komponenter/Søk', module)
   ));
 
 
-storiesOf('Komponenter/Liste', module)
+storiesOf('Komponenter/Lister', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Liste-heading', () => (
@@ -778,6 +765,18 @@ storiesOf('Komponenter/Liste', module)
           'Sist publisert',
           'Først publisert',
           'Alfabetisk rekkefølge'
+        ])}
+      />
+    </Wrapper>
+  ))
+  .addWithStaticMarkup('Filterliste', () => (
+    <Wrapper title="Filterliste">
+      <FilterList
+        list={object('List', [
+          'Alt',
+          'Retningslinjer',
+          'Pakkeforløp',
+          'Rundskriv'
         ])}
       />
     </Wrapper>
@@ -832,6 +831,255 @@ storiesOf('Komponenter/Liste', module)
       ])}
     />
     </Wrapper>
+  ))
+  .addWithStaticMarkup('Navigasjonsliste', () => (
+    <Wrapper title="Navigasjonsliste">
+      <NavList
+        heading={text('Heading', '')}
+        columns={boolean('Columns', false)}
+        noArrow={boolean('No arrow', false)}
+        small={boolean('Small', false)}
+        ordered={boolean('Ordered', false)}
+        list={object('List', [
+          {
+            title: 'KAPITTEL 1',
+            url: '#',
+            meta: 'Nasjonale faglige retningslinjer'
+          },
+          {
+            title: 'KAPITTEL 2',
+            url: '#',
+            meta: 'Nasjonale faglige retningslinjer',
+            infoText: 'PDF (3,5 MB)',
+            file: true
+          },
+          {
+            title: 'KAPITTEL 3',
+            url: '#',
+            infoText: 'This is infoText: more text in another column',
+            meta: 'Nasjonale faglige retningslinjer',
+            active: true
+          }
+        ])}
+      />
+    </Wrapper>
+  ))
+  .addWithStaticMarkup('Nyhetsliste', () => (
+    <Wrapper title="Nyhetsliste" lead="Kun nyheter">
+    <List
+      heading={text('Heading', '')}
+      list={object('List', [
+        {
+          type: 'news',
+          url: '#1',
+          fields: {
+            download: 'true',
+            category: '',
+            heading:
+              'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
+            publishDate: '3. desember 2018',
+            lead:
+              'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
+            topic: ''
+          }
+        },
+        {
+          type: 'news',
+          url: '#1',
+          fields: {
+            download: 'true',
+            category: '',
+            heading: '– Legg til rette for influensavaksinering',
+            publishDate: '4. desember 2018',
+            lead:
+              '– Det er viktig at arbeidsgiverne legger til rette for at helsepersonell skal kunne ta influensavaksine, sier helsedirektør Bjørn Guldvog.',
+            topic: ''
+          }
+        }
+      ])}
+    />
+    </Wrapper>
+  ))
+  .addWithStaticMarkup('Artikkelliste', () => (
+    <Wrapper title="Artikkelliste" lead="For alle innholdstyper">
+    <List
+      heading={text('Heading', '')}
+      list={object('List', [
+        {
+          type: 'news',
+          url: '#1',
+          fields: {
+            category: '',
+            heading:
+              'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
+            publishDate: '3. desember 2018',
+            lead:
+              'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
+            topic: ''
+          }
+        },
+        {
+          type: 'news',
+          url: '#1',
+          fields: {
+            download: 'true',
+            category: '',
+            heading:
+              'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
+            publishDate: '3. desember 2018',
+            lead:
+              'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
+            topic: ''
+          }
+        },
+        {
+          type: 'person',
+          fields: {
+            category: '',
+            name: 'Ole Magnus Støvern',
+            email: 'ole.stovern@netlife.com',
+            phoneNumber: '+47 123 45 678',
+            position: 'Developer',
+            department: 'Oslo',
+            topic: ''
+          }
+        },
+        {
+          type: 'grantFunding',
+          url: '#2',
+          fields: {
+            download: 'true',
+            category: '',
+            heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
+            deadline: 'Søknadsfrist: 11. oktober 2018',
+            topic:
+              'If this module is shown on a search page, it might have a text like this for topics'
+          }
+        },
+        {
+          type: 'grantFunding',
+          url: '#2',
+          fields: {
+            category: '',
+            heading: 'Kommunalt kompetanse- og innovasjonstilskudd',
+            deadline: 'Søknadsfrist: 11. oktober 2018',
+            topic:
+              'If this module is shown on a search page, it might have a text like this for topics'
+          }
+        },
+        {
+          type: 'pressRelease',
+          url: '#3',
+          fields: {
+            download: 'true',
+            category: 'Brosjyre',
+            heading: 'Hvordan sjonglere (illustrert)',
+            image:
+              'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+            publishDate: '01. januar 2003',
+            topic: ''
+          }
+        },
+        {
+          type: 'pressRelease',
+          url: '#3',
+          fields: {
+            category: 'Brosjyre',
+            heading: 'Hvordan sjonglere (illustrert)',
+            image:
+              'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
+            publishDate: '01. januar 2003',
+            topic: ''
+          }
+        },
+        {
+          type: 'conference',
+          url: '#4',
+          fields: {
+            download: 'true',
+            category: '',
+            heading: 'Kurs i hendelsesanalyse og pasientsikkerhet',
+            dateFrom: '3. november 1990',
+            dateTo: '6. desember 2018',
+            location: 'Oslo',
+            registrationDeadline: '15. oktober',
+            lead: 'This is some text describing the event. It is nice to have.',
+            topic: ''
+          }
+        }
+      ])}
+    />
+    </Wrapper>
+  ));
+  
+storiesOf('Komponenter/Listeelement-typer', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addWithStaticMarkup('Nyhetstype', () => (
+    <ListItemType
+      itemType={{
+        type: 'news',
+        fields: object('Fields', {
+          heading: 'A new thing happened',
+          publishDate: '3. desember 2018',
+          lead: 'asdsdf'
+        })
+      }}
+    />
+  ))
+  .addWithStaticMarkup('Konferanse', () => (
+    <ListItemType
+      itemType={{
+        type: 'conference',
+        fields: object('Fields', {
+          heading: 'Christmas 2',
+          dateFrom: '2. november 1990',
+          dateTo: '3. november 1990',
+          registrationDeadline: '3. februar 1990',
+          address: 'Dronninggata 28, 3004 Drammen',
+          lead: 'We can write some stuff in here too'
+        })
+      }}
+    />
+  ))
+  .addWithStaticMarkup('Bevilgning', () => (
+    <ListItemType
+      itemType={{
+        type: 'grantFunding',
+        fields: object('Fields', {
+          heading: 'A new thing happened',
+          deadline: '3. desember 2018',
+          topic: ''
+        })
+      }}
+    />
+  ))
+  .addWithStaticMarkup('Pressemelding', () => (
+    <ListItemType
+      itemType={{
+        type: 'pressRelease',
+        fields: object('Fields', {
+          heading: 'Hvordan sjonglere (illustrert)',
+          category: 'Brosjyre',
+          image: 'https://placehold.it/300x300',
+          publishDate: '1. januar 2003'
+        })
+      }}
+    />
+  ))
+  .addWithStaticMarkup('Person', () => (
+    <ListItemType
+      itemType={{
+        type: 'person',
+        fields: object('Fields', {
+          name: 'Donald Trump',
+          email: 'donald@whitehouse.gov',
+          phoneNumber: '+1 123 456 789',
+          position: 'President',
+          department: 'The Cabinet '
+        })
+      }}
+    />
   ));
 
 storiesOf('Komponenter/Flervelger', module)
