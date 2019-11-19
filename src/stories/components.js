@@ -209,32 +209,6 @@ storiesOf('Komponenter/Sidemeny', module)
     </Wrapper>
   ));
 
-storiesOf('Komponenter/Spacing', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Vertikal spacing', () => (
-    <Wrapper title="Spacing">
-      <div>
-        <Box>0</Box>
-        <div className="l-mt-1">
-          <Box>1 top</Box>
-        </div>
-        <div className="l-mt-2">
-          <Box>2 top</Box>
-        </div>
-        <div className="l-mt-3">
-          <Box>3 top</Box>
-        </div>
-        <div className="l-mt-4">
-          <Box>4 top</Box>
-        </div>
-        <div className="l-mt-5">
-          <Box>5 top</Box>
-        </div>
-      </div>
-    </Wrapper>
-  ));
-
 storiesOf('Komponenter/Varsling', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
