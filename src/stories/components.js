@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { HashRouter } from 'react-router-dom';
 
 import {
   withKnobs,
@@ -209,30 +208,6 @@ storiesOf('Komponenter/Sidemeny', module)
     </Wrapper>
   ));
 
-storiesOf('Komponenter/Spacing', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
-  .addWithStaticMarkup('Vertikal spacing', () => (
-    <Wrapper title="Spacing">
-      <Box>0</Box>
-      <div className="l-mt-1">
-        <Box>1 top</Box>
-      </div>
-      <div className="l-mt-2">
-        <Box>2 top</Box>
-      </div>
-      <div className="l-mt-3">
-        <Box>3 top</Box>
-      </div>
-      <div className="l-mt-4">
-        <Box>4 top</Box>
-      </div>
-      <div className="l-mt-5">
-        <Box>5 top</Box>
-      </div>
-    </Wrapper>
-  ));
-
 storiesOf('Komponenter/Varsling', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
@@ -310,25 +285,25 @@ storiesOf('Komponenter/Artikkelintro', module)
   .addDecorator(checkA11y)
     .addWithStaticMarkup('Artikkelintro', () => (
       <Wrapper title="Artikkelintro" wide>
-      <div className="l-container">
-        <div className="row">
-          <div className="col-xs-12">
-            <ArticleIntro
-              heading={text('Heading', 'Arbeid og psykisk helse')}
-              lead={text(
-                'Lead',
-                'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
-              )}
-              image={text(
-                'Image url (empty string will change the layout)',
-                './photo.jpg'
-              )}
-              imageDescription={text('Image description', 'Bildetekst')}
-              feature={boolean('Feature', false)}
-            />
+        <div className="l-container">
+          <div className="row">
+            <div className="col-xs-12">
+              <ArticleIntro
+                heading={text('Heading', 'Arbeid og psykisk helse')}
+                lead={text(
+                  'Lead',
+                  'Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse.'
+                )}
+                image={text(
+                  'Image url (empty string will change the layout)',
+                  './photo.jpg'
+                )}
+                imageDescription={text('Image description', 'Bildetekst')}
+                feature={boolean('Feature', false)}
+              />
+            </div>
           </div>
         </div>
-      </div>
       </Wrapper>
     ));
 
@@ -337,25 +312,27 @@ storiesOf('Komponenter/Knapp', module)
   .addDecorator(checkA11y)
     .addWithStaticMarkup('Alle knapper', () => (
       <Wrapper title="Alle knapper">
-        <Button>{text('Content', 'Submit')}</Button>
-        <br /><br />
-        <Button arrow={boolean('Arrow', true)}>{text('Content', 'Arrow')}</Button>
-        <br /><br />
-        <Button download={boolean('Download', true)}>
-          {text('Content', 'Download')}
-        </Button>
-        <br /><br />
-        <Button small={boolean('Small', true)}>{text('Content', 'Small')}</Button>
-        <br /><br />
-        <Button secondary={boolean('Secondary', true)}>
-          {text('Content', 'Secondary')}
-        </Button>
-        <br /><br />
-        <Button plain={boolean('Plain', true)}>{text('Content', 'Plain')}</Button>
-        <br /><br />
-        <Button secondaryDark={boolean('Secondary dark', true)}>
-          {text('Content', 'SecondaryDark')}
-        </Button>
+        <div>
+          <Button>{text('Content', 'Submit')}</Button>
+          <br /><br />
+          <Button arrow={boolean('Arrow', true)}>{text('Content', 'Arrow')}</Button>
+          <br /><br />
+          <Button download={boolean('Download', true)}>
+            {text('Content', 'Download')}
+          </Button>
+          <br /><br />
+          <Button small={boolean('Small', true)}>{text('Content', 'Small')}</Button>
+          <br /><br />
+          <Button secondary={boolean('Secondary', true)}>
+            {text('Content', 'Secondary')}
+          </Button>
+          <br /><br />
+          <Button plain={boolean('Plain', true)}>{text('Content', 'Plain')}</Button>
+          <br /><br />
+          <Button secondaryDark={boolean('Secondary dark', true)}>
+            {text('Content', 'SecondaryDark')}
+          </Button>
+        </div>
       </Wrapper>
     ))
     .addWithStaticMarkup('Standard', () => (
@@ -974,7 +951,7 @@ storiesOf('Komponenter/Pressemeldinger', module)
         </div>
       </div>
     </Wrapper>
-  ))
+  ));
 
 storiesOf('Komponenter/Sitatstil', module)
   .addDecorator(withKnobs)
@@ -1036,10 +1013,10 @@ storiesOf('Komponenter/Spørreskjema', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Standard', () => 
-  <Wrapper title="Spørreskjema standard">
-    <Questionnaire />
-  </Wrapper>
-)
+    <Wrapper title="Spørreskjema standard">
+      <Questionnaire />
+    </Wrapper>
+  )
   .addWithStaticMarkup('Med layout', () => (
     <Wrapper title="Spørreskjema med layout">
       <Box color="grey" square noPadding>
@@ -1081,7 +1058,7 @@ storiesOf('Komponenter/Radiobuttons', module)
         ])}
       />
     </Wrapper>
-  ))
+  ));
 
 storiesOf('Komponenter/Statistikk', module)
   .addDecorator(withKnobs)
@@ -1097,7 +1074,7 @@ storiesOf('Komponenter/Statistikk', module)
         icon={text('Icon', './icons/pie.svg')}
       />
     </Wrapper>
-  ))
+  ));
 
 storiesOf('Komponenter/Nedtrekksmeny', module)
   .addDecorator(withKnobs)
@@ -1122,7 +1099,7 @@ storiesOf('Komponenter/Nedtrekksmeny', module)
         ])}
       />
     </Wrapper>
-  ))
+  ));
 
 storiesOf('Komponenter/Tabell', module)
   .addDecorator(withKnobs)
