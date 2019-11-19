@@ -904,7 +904,7 @@ storiesOf('Komponenter/Metadata', module)
   .addWithStaticMarkup('Standard', () => (
     <Wrapper title="Metadata">
       <PageMeta
-        publishDate={text('Publish date', '01. januar 2015')}
+        publishDate={text('Publish date', '1. januar 2015')}
         editDate={text('Edit date', '1. januar 2018')}
         url={text('URL', '#')}
       />
@@ -924,7 +924,7 @@ storiesOf('Komponenter/Pressemeldinger', module)
               'Barns miljø og sikkerhet / når barnet skader seg'
             )}
             info={text('Info', 'Plakat (pdf)')}
-            releaseDate={text('Release date', '01. juni 2009')}
+            releaseDate={text('Release date', '1. juni 2009')}
             url={text('url', '#')}
             image={text(
               'Image',
@@ -940,7 +940,7 @@ storiesOf('Komponenter/Pressemeldinger', module)
               'Barns miljø og sikkerhet / når barnet skader seg'
             )}
             info={text('Info', 'Plakat (pdf)')}
-            releaseDate={text('Release date', '01. juni 2009')}
+            releaseDate={text('Release date', '1. juni 2009')}
             url={text('url', '#')}
             image={text(
               'Image',
