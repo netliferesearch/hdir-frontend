@@ -8,7 +8,7 @@ setAddon(staticMarkup);
 
 addParameters({
   options: {
-    name: 'Helsedirektoratet Storybook',
+    name: 'HDIR/Helfo designmanual',
     isFullscreen: false,
     showPanel: true,
     // more configuration here
