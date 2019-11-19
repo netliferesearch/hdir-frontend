@@ -76,7 +76,7 @@ const PressReleasePage = () => (
                     heading: 'Barns miljø og sikkerhet / når barnet skader seg',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009',
+                    publishDate: '1. juni 2009',
                     download: true
                   }
                 },
@@ -89,7 +89,7 @@ const PressReleasePage = () => (
                       'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -100,7 +100,7 @@ const PressReleasePage = () => (
                     heading: 'Barns miljø og sikkerhet / når barnet skader seg',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -112,7 +112,7 @@ const PressReleasePage = () => (
                       'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -123,7 +123,7 @@ const PressReleasePage = () => (
                     heading: 'Barns miljø og sikkerhet / når barnet skader seg',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -135,7 +135,7 @@ const PressReleasePage = () => (
                       'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -146,7 +146,7 @@ const PressReleasePage = () => (
                     heading: 'Barns miljø og sikkerhet / når barnet skader seg',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -158,7 +158,7 @@ const PressReleasePage = () => (
                       'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -169,7 +169,7 @@ const PressReleasePage = () => (
                     heading: 'Barns miljø og sikkerhet / når barnet skader seg',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -181,7 +181,7 @@ const PressReleasePage = () => (
                       'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -192,7 +192,7 @@ const PressReleasePage = () => (
                     heading: 'Barns miljø og sikkerhet / når barnet skader seg',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -204,7 +204,7 @@ const PressReleasePage = () => (
                       'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -215,7 +215,7 @@ const PressReleasePage = () => (
                     heading: 'Barns miljø og sikkerhet / når barnet skader seg',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 },
                 {
@@ -227,7 +227,7 @@ const PressReleasePage = () => (
                       'Hva kan det være? Svangerskapsdiabetes? Disse symptomene må du være obs på.',
                     image:
                       'https://cf5.s3.souqcdn.com/item/2017/04/19/77/74/24/6/item_XL_7774246_30779294.jpg',
-                    publishDate: '01. juni 2009'
+                    publishDate: '1. juni 2009'
                   }
                 }
               ]}

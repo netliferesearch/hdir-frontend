@@ -1329,7 +1329,7 @@ storiesOf('Komponenter/Knapp', module)
           inline={boolean('Inline', false)}
           title={text('Title', '')}
         >
-          {text('Content', 'This is some content, it can be anything')}
+          {text('Content', 'Søknadsfrist 6.desember 2020')}
         </Alert>
       </Wrapper>
     ))
@@ -1340,7 +1340,7 @@ storiesOf('Komponenter/Knapp', module)
             'Heading',
             'WHO erklærer Public Health Emergency of International Concern (PHEIC) i forbindelse med influensautbrudd.'
           )}
-          lastUpdated={text('Text', 'Mandag 06. oktober 08:15')}
+          lastUpdated={text('Text', 'Mandag 6. oktober 08:15')}
           alertLevel={select(
             'Alert level',
             {
@@ -1362,7 +1362,7 @@ storiesOf('Komponenter/Knapp', module)
             'Heading',
             'WHO erklærer Public Health Emergency of International Concern (PHEIC) i forbindelse med influensautbrudd.'
           )}
-          lastUpdated={text('Last updated', 'Mandag 06. oktober 08:15')}
+          lastUpdated={text('Last updated', 'Mandag 6. oktober 08:15')}
           alertLevel={select(
             'Alert level',
             {
