@@ -5,6 +5,8 @@ import Collapsible from '../components/Collapsible';
 import SectionSidebar from '../components/SectionSidebar';
 import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
+import PageMeta from '../components/PageMeta';
+import Button from '../components/Button';
 
 const GrantsSubPage = () => (
   <>
@@ -199,6 +201,21 @@ const GrantsSubPage = () => (
                   diabetes» fra 2009 og foreligger kun i digitalt format.
                 </p>
               </Collapsible>
+            </div>
+            <div className="l-mt-3">
+              <div className="row">
+                <div className="col-md-12 col-xs-12">
+                  <PageMeta
+                    publishDate="11. august 2008"
+                    editDate="12. august 2018"
+                  />
+                  <div className="col-md-4 l-mt-1">
+                    <Button clean small icon="../icons/print.svg">
+                      Skriv ut/lag PDF
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
