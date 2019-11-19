@@ -29,7 +29,7 @@ const PrintPdfPreview = () => (
           <p>
             <span>Først publisert: 02. desember 2018</span>
             <br />
-            <span>Sist faglig oppdatert: 29. mai 2019</span>
+            <span>Sist endret: 29. mai 2019</span>
           </p>
         </td>
         <td width="30%" className="cover-right"></td>
