@@ -110,7 +110,7 @@ const ListItemType = props => {
               )}
               {fields.publishDate && (
                 <div className="b-list-item-type__date">
-                  <strong>Sist faglig oppdatert: </strong>
+                  <strong>Sist endret: </strong>
                   {fields.publishDate}
                 </div>
               )}
