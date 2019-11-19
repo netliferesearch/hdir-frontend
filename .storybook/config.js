@@ -1,4 +1,4 @@
-import { configure, setAddon, addDecorator } from '@storybook/react';
+import { configure, setAddon, addDecorator, addParameters } from '@storybook/react';
 import 'loki/configure-react';
 import staticMarkup from 'react-storybook-addon-static-markup';
 
@@ -6,10 +6,17 @@ require('../src/styles/App.scss'); // For dev mode: Toggle between App.scss and 
 
 setAddon(staticMarkup);
 
+addParameters({
+  options: {
+    name: 'Helsedirektoratet Storybook',
+    isFullscreen: false,
+    showPanel: true,
+    // more configuration here
+  },
+});
+
 function loadStories() {
   require('../src/stories');
 }
 
 configure(loadStories, module);
-
-
