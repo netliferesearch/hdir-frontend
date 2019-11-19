@@ -15,11 +15,6 @@ import Link from '../components/Link';
 storiesOf('Grunnstiler/Designstiler', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .add('Typografi', () => (
-    <Wrapper title="Typografi" lead="Åpne Figma-filen for å se reglene for typografi.">
-      <iframe style={{border: 0}} title="Typografi iframe" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSJQReaflejvdjUWtGpiv7F%2FHelsedirektoratet-Designmanual%3Fnode-id%3D1%253A59" allowFullScreen></iframe>
-    </Wrapper>
-  ))
   .add('Farger', () => (
     <Wrapper title="Farger" lead="Åpne Figma-filen for å se reglene for fargebruk.">
       <iframe style={{border: 0}} title="Farger iframe" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSJQReaflejvdjUWtGpiv7F%2FHelsedirektoratet-Designmanual%3Fnode-id%3D61%253A196" allowFullScreen></iframe>
@@ -49,6 +44,11 @@ storiesOf('Grunnstiler/Designstiler', module)
           </div>
         </div>
       </>
+    </Wrapper>
+  ))
+  .add('Typografi', () => (
+    <Wrapper title="Typografi" lead="Åpne Figma-filen for å se reglene for typografi.">
+      <iframe style={{border: 0}} title="Typografi iframe" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSJQReaflejvdjUWtGpiv7F%2FHelsedirektoratet-Designmanual%3Fnode-id%3D1%253A59" allowFullScreen></iframe>
     </Wrapper>
   ));
   
