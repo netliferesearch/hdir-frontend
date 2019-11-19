@@ -252,7 +252,7 @@ const TreatmentPageA = () => (
                           </p>
                           <div className="l-mt-3 t-sm-right">
                             <Link href="#a" secondary small>
-                              Sist endret: 11. august 2018
+                              Sist faglig oppdatert: 11. august 2018
                             </Link>
                           </div>
                         </Collapsible>

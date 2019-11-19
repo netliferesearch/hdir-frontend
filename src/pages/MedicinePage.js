@@ -39,7 +39,7 @@ const MedicinePage = () => (
                 <Box color="green" square>
                   <p>
                     <b>
-                      Sist endret: 8/14, 9/15, 8/16, 1/18, 8/18, 2/19
+                      Sist faglig oppdatert: 8/14, 9/15, 8/16, 1/18, 8/18, 2/19
                     </b>
                   </p>
                   <p>
