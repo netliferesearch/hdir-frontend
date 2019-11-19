@@ -1,13 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { HashRouter } from 'react-router-dom';
 import Wrapper from './components/Wrapper.js'
 
 import {
   withKnobs,
   text,
-  boolean,
-  object,
   select
 } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';

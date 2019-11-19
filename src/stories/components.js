@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { HashRouter } from 'react-router-dom';
 
 import {
   withKnobs,
@@ -952,7 +951,7 @@ storiesOf('Komponenter/Pressemeldinger', module)
         </div>
       </div>
     </Wrapper>
-  ))
+  ));
 
 storiesOf('Komponenter/Sitatstil', module)
   .addDecorator(withKnobs)
@@ -1014,10 +1013,10 @@ storiesOf('Komponenter/Spørreskjema', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addWithStaticMarkup('Standard', () => 
-  <Wrapper title="Spørreskjema standard">
-    <Questionnaire />
-  </Wrapper>
-)
+    <Wrapper title="Spørreskjema standard">
+      <Questionnaire />
+    </Wrapper>
+  )
   .addWithStaticMarkup('Med layout', () => (
     <Wrapper title="Spørreskjema med layout">
       <Box color="grey" square noPadding>
@@ -1059,7 +1058,7 @@ storiesOf('Komponenter/Radiobuttons', module)
         ])}
       />
     </Wrapper>
-  ))
+  ));
 
 storiesOf('Komponenter/Statistikk', module)
   .addDecorator(withKnobs)
@@ -1075,7 +1074,7 @@ storiesOf('Komponenter/Statistikk', module)
         icon={text('Icon', './icons/pie.svg')}
       />
     </Wrapper>
-  ))
+  ));
 
 storiesOf('Komponenter/Nedtrekksmeny', module)
   .addDecorator(withKnobs)
@@ -1100,7 +1099,7 @@ storiesOf('Komponenter/Nedtrekksmeny', module)
         ])}
       />
     </Wrapper>
-  ))
+  ));
 
 storiesOf('Komponenter/Tabell', module)
   .addDecorator(withKnobs)
