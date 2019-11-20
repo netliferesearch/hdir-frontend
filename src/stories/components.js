@@ -49,7 +49,7 @@ import Wrapper from './components/Wrapper.js'
 
 
 
-storiesOf('Komponenter/Artikkelintro', module)
+storiesOf('Komponenter', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
     .addWithStaticMarkup('Artikkelintro', () => (
@@ -77,11 +77,11 @@ storiesOf('Komponenter/Artikkelintro', module)
     ));
     
   
-  storiesOf('Komponenter/Boks', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-      .addWithStaticMarkup('Boks standard', () => (
-        <Wrapper title="Standard boks">
+      .addWithStaticMarkup('Boks', () => (
+        <Wrapper title="Boks">
           <Box
             color={select(
               'Color',
@@ -102,7 +102,7 @@ storiesOf('Komponenter/Artikkelintro', module)
         </Wrapper>
       ));
       
-  storiesOf('Komponenter/Brødsmulesti', module)
+  storiesOf('Komponenter', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
     .addWithStaticMarkup('Brødsmulesti', () => (
@@ -128,11 +128,11 @@ storiesOf('Komponenter/Artikkelintro', module)
     
     
 
-  storiesOf('Komponenter/Checkbox-gruppe', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-      .addWithStaticMarkup('Standard', () => (
-        <Wrapper title="Checkbox-gruppe standard">
+      .addWithStaticMarkup('Checkbox-gruppe', () => (
+        <Wrapper title="Checkbox-gruppe">
           <CheckboxGroup
             heading={text('Heading', 'Heading')}
             name={text('Name', 'usedForForms')}
@@ -242,10 +242,10 @@ storiesOf('Komponenter/Artikkelintro', module)
     ))
 
   
-  storiesOf('Komponenter/Flervelger', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Standard', () => (
+    .addWithStaticMarkup('Flervelger', () => (
       <Wrapper title="Flervelger">
       <MultiSelector
         buttonText={text('Button text', 'Velg tema')}
@@ -306,7 +306,7 @@ storiesOf('Komponenter/Artikkelintro', module)
       </Wrapper>
     ))
   
-  storiesOf('Komponenter/Grid', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
     .addWithStaticMarkup('Grid', () => (
@@ -442,9 +442,9 @@ storiesOf('Komponenter/Header', module)
 
 
 
-storiesOf('Komponenter/Kapittel-overskrift', module)
-  .addWithStaticMarkup('Standard', () => (
-    <Wrapper title="Kapittel-overskrift standard">
+storiesOf('Komponenter', module)
+  .addWithStaticMarkup('Kapittel-overskrift', () => (
+    <Wrapper title="Kapittel-overskrift">
       <ChapterHeading
         heading={text('Heading', 'Heading')}
         subheading={text('Subheading', 'Subheading')}
@@ -1022,10 +1022,10 @@ storiesOf('Komponenter/Knapp', module)
       />
     ));
     
-    storiesOf('Komponenter/Metadata', module)
+    storiesOf('Komponenter', module)
       .addDecorator(withKnobs)
       .addDecorator(checkA11y)
-      .addWithStaticMarkup('Standard', () => (
+      .addWithStaticMarkup('Metadata', () => (
         <Wrapper title="Metadata">
           <PageMeta
             publishDate={text('Publish date', '1. januar 2015')}
@@ -1036,10 +1036,10 @@ storiesOf('Komponenter/Knapp', module)
       ))
 
   
-  storiesOf('Komponenter/Nedtrekksmeny', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Standard', () => (
+    .addWithStaticMarkup('Nedtrekksmeny', () => (
       <Wrapper title="Nedtrekksmeny">
         <Select
           label={text('Label', 'Tilpass siden til meg')}
@@ -1062,11 +1062,11 @@ storiesOf('Komponenter/Knapp', module)
     ));
 
 
-      storiesOf('Komponenter/Pressemeldinger', module)
+      storiesOf('Komponenter', module)
         .addDecorator(withKnobs)
         .addDecorator(checkA11y)
-        .addWithStaticMarkup('Standard', () => (
-          <Wrapper title="Pressemeldinger standard">
+        .addWithStaticMarkup('Pressemeldinger', () => (
+          <Wrapper title="Pressemeldinger">
             <div className="row">
               <div className="col-xs-12 col-md-6">
                 <PressRelease
@@ -1105,10 +1105,10 @@ storiesOf('Komponenter/Knapp', module)
         ));
 
 
-      storiesOf('Komponenter/Radiobuttons', module)
+      storiesOf('Komponenter', module)
         .addDecorator(withKnobs)
         .addDecorator(checkA11y)
-        .addWithStaticMarkup('Standard', () => (
+        .addWithStaticMarkup('Radiobuttons', () => (
           <Wrapper title="Radiobuttons">
             <RadioButtonGroup
               heading={text('Heading', 'Heading')}
@@ -1139,11 +1139,11 @@ storiesOf('Komponenter/Knapp', module)
         ));
 
 
-  storiesOf('Komponenter/Sidemeny', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('SectionSidebar', () => (
-      <Wrapper title="Sidebar">
+    .addWithStaticMarkup('Sidemeny', () => (
+      <Wrapper title="Sidemeny">
         <SectionSidebar
           heading={text('Heading', 'Some heading')}
           headingUrl={text('Heading Url', '#a')}
@@ -1257,10 +1257,10 @@ storiesOf('Komponenter/Knapp', module)
       ));
   
 
-  storiesOf('Komponenter/Statistikk', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Standard', () => (
+    .addWithStaticMarkup('Statistikk', () => (
       <Wrapper title="Statistikk">
         <Statistics
           bigText={text('Big text', '99.9%')}
@@ -1274,10 +1274,10 @@ storiesOf('Komponenter/Knapp', module)
     ));
 
   
-  storiesOf('Komponenter/Søk', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Standard', () => (
+    .addWithStaticMarkup('Søk', () => (
       <Wrapper title="Standard søkefelt">
         <InputSearch dark={boolean('Dark mode', false)} label={text('Label', '')} />
       </Wrapper>
@@ -1285,17 +1285,17 @@ storiesOf('Komponenter/Knapp', module)
 
 
   
-  storiesOf('Komponenter/Tabell', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Standard', () => 
-      <Wrapper title="Tabell standard">
+    .addWithStaticMarkup('Tabell', () => 
+      <Wrapper title="Tabell">
         <TableExample />
       </Wrapper>
   );
 
   
-  storiesOf('Komponenter/Transportblokk', module)
+  storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
     .addWithStaticMarkup('Transportblokk', () => (

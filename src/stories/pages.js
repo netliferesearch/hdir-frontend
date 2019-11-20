@@ -46,7 +46,7 @@ import TransportPage from '../pages/TransportPage';
 
 
 
-storiesOf('Malverk/Abonnerings-innstillinger', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Abonnerings-innstillinger', () => (
     <HashRouter>
       <SubscriptionSettingsPage />
@@ -54,7 +54,7 @@ storiesOf('Malverk/Abonnerings-innstillinger', module)
   ));
   
   
-storiesOf('Malverk/Anbefaling', module)  
+storiesOf('Malverk', module)  
 .addWithStaticMarkup('Anbefalingsside', () => (
   <HashRouter>
     <RecommendationPage />
@@ -181,15 +181,15 @@ storiesOf('Malverk/Memo', module)
     </HashRouter>
   ));
   
-storiesOf('Malverk/Normativt', module)
-  .addWithStaticMarkup('Normative innhold side', () => (
+storiesOf('Malverk', module)
+  .addWithStaticMarkup('Normativt', () => (
     <HashRouter>
       <NormativeContentPage />
     </HashRouter>
   ));
   
   
-storiesOf('Malverk/Nyhetsliste', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Nyhetsliste', () => (
     <HashRouter>
       <NewsListPage />
@@ -197,21 +197,21 @@ storiesOf('Malverk/Nyhetsliste', module)
   ));
 
   
-storiesOf('Malverk/Profesjonsvelger', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Profesjonsvelger', () => (
     <HashRouter>
       <ProfessionSelector />
     </HashRouter>
   ));
   
-storiesOf('Malverk/Pressemeldinger', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Pressemelding', () => (
     <HashRouter>
       <PressReleasePage />
     </HashRouter>
   ));
   
-storiesOf('Malverk/Produktside', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Produktside', () => (
     <HashRouter>
       <ProductPage />
@@ -255,28 +255,28 @@ storiesOf('Malverk/Rapport', module)
     ));
     
   
-storiesOf('Malverk/Stillingsutlysning', module)
-  .addWithStaticMarkup('JobPostingPage', () => (
+storiesOf('Malverk', module)
+  .addWithStaticMarkup('Stillingsutlysning', () => (
     <HashRouter>
       <JobPostingPage />
     </HashRouter>
   ));
   
-storiesOf('Malverk/Søk', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Søkeresultater', () => (
     <HashRouter>
       <SearchResultPage />
     </HashRouter>
   ))
   
-  storiesOf('Malverk/Temasider', module)
-  .addWithStaticMarkup('Hdir temaside', () => (
+  storiesOf('Malverk', module)
+  .addWithStaticMarkup('Temaside HDIR', () => (
     <HashRouter>
     <ThemePage />
     </HashRouter>
   ));
     
-  storiesOf('Malverk/Tidligere versjoner', module)
+  storiesOf('Malverk', module)
     .addWithStaticMarkup('Tidligere versjoner', () => (
       <HashRouter>
         <EarlierVersionsPage />
@@ -297,7 +297,7 @@ storiesOf('Malverk/Tilskudd', module)
   ));
   
   
-storiesOf('Malverk/Transportside', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Transportside', () => (
     <HashRouter>
       <TransportPage />
