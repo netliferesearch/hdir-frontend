@@ -12,7 +12,7 @@ import { checkA11y } from '@storybook/addon-a11y';
 import Box from '../components/Box';
 import Link from '../components/Link';
 
-storiesOf('Grunnstiler/Designstiler', module)
+storiesOf('Grunnstiler', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .add('Farger', () => (
