@@ -40,7 +40,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF</div>
             )}
           </div>
         </div>
@@ -86,7 +86,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF</div>
             )}
           </div>
         </div>
@@ -116,7 +116,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF</div>
             )}
           </div>
           {fields.topic && (
@@ -147,7 +147,7 @@ const ListItemType = props => {
               )}
             </div>
             {fields.download && (
-              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF ↓</div>
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF</div>
             )}
           </div>
         </div>
@@ -198,7 +198,7 @@ const ListItemType = props => {
           <div className="b-list-item">
             <div className="b-list-item-type__text">
               {fields.download && (
-                <a href="#" className="b-list-item-type__download b-list-item-type--float b-list-item-type--link" aria-label="Last ned PDF">PDF ↓</a>
+                <a href="#" className="b-list-item-type__download b-list-item-type--float b-list-item-type--link" aria-label="Last ned PDF">PDF</a>
               )}
               {fields.heading && 
                 <h3>{fields.heading}</h3>

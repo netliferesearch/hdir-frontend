@@ -5,6 +5,8 @@ import Collapsible from '../components/Collapsible';
 import SectionSidebar from '../components/SectionSidebar';
 import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
+import PageMeta from '../components/PageMeta';
+import Button from '../components/Button';
 
 const GrantsSubPage = () => (
   <>
@@ -200,10 +202,26 @@ const GrantsSubPage = () => (
                 </p>
               </Collapsible>
             </div>
+            
           </div>
         </div>
       </div>
     </main>
+    <div className="l-container l-mt-3 l-mb-5">
+      <div className="row">
+        <div className="col-md-8 col-xs-12 col-md-offset-4">
+          <PageMeta
+            publishDate="11. august 2008"
+            editDate="12. august 2018"
+          />
+          <div className="l-mt-1">
+            <Button clean small icon="../icons/print.svg">
+              Skriv ut/lag PDF
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div className="l-mt-4">
       <Box color="grey" square noPadding>
         <div className="l-container">

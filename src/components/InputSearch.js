@@ -23,7 +23,7 @@ const renderSuggestion = suggestion => (
           <div className="suggestion-category">{suggestion.category}</div>
         )}
         {suggestion.file && (
-          <div className="suggestion-download">{suggestion.file} ↓</div>
+          <div className="suggestion-download">{suggestion.file}</div>
         )}
       </div>
     )}

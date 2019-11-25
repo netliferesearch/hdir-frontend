@@ -44,6 +44,59 @@ import SubscriptionSettingsPage from '../pages/SubscriptionSettingsPage';
 import ThemePage from '../pages/ThemePage';
 import TransportPage from '../pages/TransportPage';
 
+
+
+storiesOf('Malverk', module)
+  .addWithStaticMarkup('Abonnerings-innstillinger', () => (
+    <HashRouter>
+      <SubscriptionSettingsPage />
+    </HashRouter>
+  ));
+  
+  
+storiesOf('Malverk', module)  
+.addWithStaticMarkup('Anbefalingsside', () => (
+  <HashRouter>
+    <RecommendationPage />
+  </HashRouter>
+))
+
+
+storiesOf('Malverk/Artikkel', module)
+.addWithStaticMarkup('Artikkelside', () => (
+  <HashRouter>
+    <ArticlePage />
+  </HashRouter>
+))
+.addWithStaticMarkup('Artikkelside ingen h2', () => (
+  <HashRouter>
+    <ArticlePageNoH2 />
+  </HashRouter>
+))
+.addWithStaticMarkup('Artikkelside med iframe', () => (
+  <HashRouter>
+    <ArticlePageWithIframe />
+  </HashRouter>
+));
+
+
+storiesOf('Malverk/Autorisering', module)
+.addWithStaticMarkup('Autorisering', () => (
+  <HashRouter>
+    <AuthorizationFrontPage />
+  </HashRouter>
+))
+.addWithStaticMarkup('Autorisering steg', () => (
+  <HashRouter>
+    <AuthorizationStepPage />
+  </HashRouter>
+))
+.addWithStaticMarkup('Autorisering steg 2', () => (
+  <HashRouter>
+    <AuthorizationStepPage2 />
+  </HashRouter>
+));
+
 storiesOf('Malverk/Forsider', module)
   .addWithStaticMarkup('Hdir forside', () => (
     <HashRouter>
@@ -55,50 +108,7 @@ storiesOf('Malverk/Forsider', module)
       <FrontPageHelfo />
     </HashRouter>
   ));
-  
-storiesOf('Malverk/Artikkel', module)
-  .addWithStaticMarkup('Artikkelside', () => (
-    <HashRouter>
-      <ArticlePage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Artikkelside ingen h2', () => (
-    <HashRouter>
-      <ArticlePageNoH2 />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Artikkelside med iframe', () => (
-    <HashRouter>
-      <ArticlePageWithIframe />
-    </HashRouter>
-  ));
-  
-storiesOf('Malverk/Kapittelside', module)
-  .addWithStaticMarkup('Kapittelside', () => (
-    <HashRouter>
-      <ChapterPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Kapittelside rapport', () => (
-    <HashRouter>
-      <ChapterPageReport />
-    </HashRouter>
-  ));
-  
-storiesOf('Malverk/Tidligere versjoner', module)
-  .addWithStaticMarkup('Tidligere versjoner', () => (
-    <HashRouter>
-      <EarlierVersionsPage />
-    </HashRouter>
-  ));
-  
-storiesOf('Malverk/Temasider', module)
-  .addWithStaticMarkup('Hdir temaside', () => (
-    <HashRouter>
-      <ThemePage />
-    </HashRouter>
-  ));
-  
+
 storiesOf('Malverk/Høringer', module)
   .addWithStaticMarkup('Høring', () => (
     <HashRouter>
@@ -111,6 +121,20 @@ storiesOf('Malverk/Høringer', module)
     </HashRouter>
   ));
   
+  
+storiesOf('Malverk/Kapittelside', module)
+  .addWithStaticMarkup('Kapittelside', () => (
+    <HashRouter>
+      <ChapterPage />
+    </HashRouter>
+  ))
+  .addWithStaticMarkup('Kapittelside rapport', () => (
+    <HashRouter>
+      <ChapterPageReport />
+    </HashRouter>
+  ));
+
+
 storiesOf('Malverk/LIS', module)
   .addWithStaticMarkup('LIS front page', () => (
     <HashRouter>
@@ -157,95 +181,40 @@ storiesOf('Malverk/Memo', module)
     </HashRouter>
   ));
   
-storiesOf('Malverk/Normativt', module)
-  .addWithStaticMarkup('Normative innhold side', () => (
+storiesOf('Malverk', module)
+  .addWithStaticMarkup('Normativt', () => (
     <HashRouter>
       <NormativeContentPage />
     </HashRouter>
   ));
   
-storiesOf('Malverk/Profesjonsvelger', module)
-  .addWithStaticMarkup('Profesjonsvelger', () => (
-    <HashRouter>
-      <ProfessionSelector />
-    </HashRouter>
-  ));
   
-storiesOf('Malverk/Produktside', module)
-  .addWithStaticMarkup('Produktside', () => (
-    <HashRouter>
-      <ProductPage />
-    </HashRouter>
-  ));
-  
-storiesOf('Malverk/Rapport', module)
-  .addWithStaticMarkup('Rapport uten bilde', () => (
-    <HashRouter>
-      <ReportPageWithoutImage />
-    </HashRouter>
-  ));
-  
-storiesOf('Malverk/Anbefaling', module)  
-  .addWithStaticMarkup('Anbefalingsside', () => (
-    <HashRouter>
-      <RecommendationPage />
-    </HashRouter>
-  ))
-  
-storiesOf('Malverk/Søk', module)
-  .addWithStaticMarkup('Søkeresultater', () => (
-    <HashRouter>
-      <SearchResultPage />
-    </HashRouter>
-  ))
-  
-storiesOf('Malverk/Autorisering', module)
-  .addWithStaticMarkup('Autorisering', () => (
-    <HashRouter>
-      <AuthorizationFrontPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Autorisering steg', () => (
-    <HashRouter>
-      <AuthorizationStepPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Autorisering steg 2', () => (
-    <HashRouter>
-      <AuthorizationStepPage2 />
-    </HashRouter>
-  ));
-  
-storiesOf('Malverk/Tilskudd', module)
-  .addWithStaticMarkup('Tilskudd side', () => (
-    <HashRouter>
-      <GrantsPage />
-    </HashRouter>
-  ))
-  .addWithStaticMarkup('Tilskudd underside', () => (
-    <HashRouter>
-      <GrantsSubPage />
-    </HashRouter>
-  ));
-  
-storiesOf('Malverk/Stillingsutlysning', module)
-  .addWithStaticMarkup('JobPostingPage', () => (
-    <HashRouter>
-      <JobPostingPage />
-    </HashRouter>
-  ));
-  
-storiesOf('Malverk/Nyhetsliste', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Nyhetsliste', () => (
     <HashRouter>
       <NewsListPage />
     </HashRouter>
   ));
 
-storiesOf('Malverk/Pressemeldinger', module)
+  
+storiesOf('Malverk', module)
+  .addWithStaticMarkup('Profesjonsvelger', () => (
+    <HashRouter>
+      <ProfessionSelector />
+    </HashRouter>
+  ));
+  
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Pressemelding', () => (
     <HashRouter>
       <PressReleasePage />
+    </HashRouter>
+  ));
+  
+storiesOf('Malverk', module)
+  .addWithStaticMarkup('Produktside', () => (
+    <HashRouter>
+      <ProductPage />
     </HashRouter>
   ));
   
@@ -259,34 +228,76 @@ storiesOf('Malverk/Rapport', module)
     <HashRouter>
       <ReportPage />
     </HashRouter>
+  ))
+  .addWithStaticMarkup('Rapportside uten bilde', () => (
+    <HashRouter>
+      <ReportPageWithoutImage />
+    </HashRouter>
   ));
   
-
-storiesOf('Malverk/Statistikk', module)
-  .addWithStaticMarkup('Statistikkside', () => (
+  
+  
+  storiesOf('Malverk/Statistikk', module)
+    .addWithStaticMarkup('Statistikkside', () => (
+      <HashRouter>
+        <StatisticsPage />
+      </HashRouter>
+    ))
+    .addWithStaticMarkup('Statistikk underside', () => (
+      <HashRouter>
+        <StatisticsSubpage />
+      </HashRouter>
+    ))
+    .addWithStaticMarkup('Statistikk underside 2', () => (
+      <HashRouter>
+        <StatisticsSubpage2 />
+      </HashRouter>
+    ));
+    
+  
+storiesOf('Malverk', module)
+  .addWithStaticMarkup('Stillingsutlysning', () => (
     <HashRouter>
-      <StatisticsPage />
+      <JobPostingPage />
+    </HashRouter>
+  ));
+  
+storiesOf('Malverk', module)
+  .addWithStaticMarkup('Søkeresultater', () => (
+    <HashRouter>
+      <SearchResultPage />
     </HashRouter>
   ))
-  .addWithStaticMarkup('Statistikk underside', () => (
+  
+  storiesOf('Malverk', module)
+  .addWithStaticMarkup('Temaside HDIR', () => (
     <HashRouter>
-      <StatisticsSubpage />
+    <ThemePage />
+    </HashRouter>
+  ));
+    
+  storiesOf('Malverk', module)
+    .addWithStaticMarkup('Tidligere versjoner', () => (
+      <HashRouter>
+        <EarlierVersionsPage />
+      </HashRouter>
+    ));
+  
+  
+storiesOf('Malverk/Tilskudd', module)
+  .addWithStaticMarkup('Tilskudd side', () => (
+    <HashRouter>
+      <GrantsPage />
     </HashRouter>
   ))
-  .addWithStaticMarkup('Statistikk underside 2', () => (
+  .addWithStaticMarkup('Tilskudd underside', () => (
     <HashRouter>
-      <StatisticsSubpage2 />
+      <GrantsSubPage />
     </HashRouter>
   ));
   
-storiesOf('Malverk/Abonnerings-innstillinger', module)
-  .addWithStaticMarkup('Abonnerings-innstillinger', () => (
-    <HashRouter>
-      <SubscriptionSettingsPage />
-    </HashRouter>
-  ));
   
-storiesOf('Malverk/Transportside', module)
+storiesOf('Malverk', module)
   .addWithStaticMarkup('Transportside', () => (
     <HashRouter>
       <TransportPage />
