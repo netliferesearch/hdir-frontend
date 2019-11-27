@@ -203,7 +203,7 @@ const NewsListPage = (props) => (
     <div className="l-container l-mt-3">
       <Box color="blue" square>
         <form className="row">
-          <div className="col-md-6">
+          <div className="col-md-5 col-xl-4">
             <h2 className="h3">Abonner på nytt eller oppdatert innhold</h2>
             <label
               htmlFor="email-subscription"
