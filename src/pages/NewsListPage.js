@@ -8,7 +8,7 @@ import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';
 import Alert from '../components/Alert';
 
-const NewsListPage = () => (
+const NewsListPage = (props) => (
   <main id="main">
     <div className="l-container">
       <div className="l-mt-3">
@@ -199,38 +199,45 @@ const NewsListPage = () => (
         </section>
       </div>
     </div>
-
-    <div className="l-container">
-      <div className="l-mt-5">
-        <Collapsible heading="Abonnér på endringer – Nasjonal faglig retningslinje for svangerskapsdiabetes">
-          <form>
-            <div className="b-input-text">
-              <label
-                htmlFor="email-subscription"
-                className="b-input-text__label"
-              >
-                Fyll inn e-postadressen din for å motta varsler om endringer.
-              </label>
+    
+    <div className="l-container l-mt-3">
+      <Box color="blue" square>
+        <form className="row">
+          <div className="col-md-6">
+            <h2 className="h3">Abonner på nytt eller oppdatert innhold</h2>
+            <label
+              htmlFor="email-subscription"
+              className="b-input-text__label"
+            >
+              Fyll inn e-postadressen din for å motta varsler om <br /><strong>"Name for whatever you subscribe to"</strong>
+            </label>
+          </div>
+          <div className="col-md-6 l-mb-1">
+            <div className="l-flex b-input-text">
               <input
                 type="text"
                 id="email-subscription"
-                className="b-input-text__input"
+                className="b-input-text__input b-input-text__input--mt-1 col-md-7 l-mt-1 l-mr-1"
               />
-              <div className="b-input-text__description">
-                Du får straks en e-post som bekrefter ditt abonnement. Der
-                finner du også melihet til å melde deg av.
+              <div className="l-mt-1">
+                <Button>Abonnér</Button>
               </div>
-              <div className="b-input-text__error">
-                Skriv inn en gylig epost-adresse.
-              </div>
-              <Button>Abonnér</Button>
             </div>
-          </form>
-          <Alert status="success">
-            Abonnementet ditt er registrert. Du får straks e-post fra oss.
-          </Alert>
-        </Collapsible>
-      </div>
+            <div className="b-input-text__description" style={{display: 'none'}}>
+              Du får straks en e-post som bekrefter ditt abonnement. Der
+              finner du også melihet til å melde deg av.
+            </div>
+            <div className="b-input-text__error" style={{display: 'none'}}>
+              Skriv inn en gylig epost-adresse.
+            </div>
+            { props.submitted && 
+              <Alert status="success">
+              Abonnementet ditt er registrert. Du får straks e-post fra oss.
+              </Alert>
+             }
+          </div>
+        </form>
+      </Box>
     </div>
 
     <div className="l-mt-4">

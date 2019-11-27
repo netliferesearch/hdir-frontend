@@ -13,6 +13,9 @@
     border: 2px solid $secondary-color;
     background: white;
   }
+  &__input--mt-1 {
+    margin-top: calc((5vw + 5vh) / 7.5);
+  }
   &__error {
     color: $red;
     font-size: $meta-text;
