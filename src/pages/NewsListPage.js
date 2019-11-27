@@ -223,20 +223,21 @@ const NewsListPage = (props) => (
                 <Button>Abonnér</Button>
               </div>
             </div>
-            <div className="b-input-text__description" style={{display: 'none'}}>
-              Du får straks en e-post som bekrefter ditt abonnement. Der
-              finner du også melihet til å melde deg av.
-            </div>
             <div className="b-input-text__error" style={{display: 'none'}}>
-              Skriv inn en gylig epost-adresse.
+            Skriv inn en gyldig epost-adresse.
             </div>
-            { props.submitted && 
-              <Alert status="success">
-              Abonnementet ditt er registrert. Du får straks e-post fra oss.
-              </Alert>
-             }
           </div>
         </form>
+        <div className="b-input-text__description l-mt-1" style={{display: 'none'}}>
+          Du får straks en e-post som bekrefter ditt abonnement. Der
+          finner du også mulighet til å melde deg av.
+        </div>
+        
+        { props.submitted && 
+          <Alert status="success">
+          Abonnementet ditt er registrert. Du får straks e-post fra oss.
+          </Alert>
+        }
       </Box>
     </div>
 
