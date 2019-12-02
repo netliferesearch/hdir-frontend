@@ -27,7 +27,6 @@ if (!process.env.REACT_APP_ENONICXP) {
       rootElement.getAttribute('data-hide-search') !== null
     );
     const links = JSON.parse(rootElement.getAttribute('data-links'));
-    const linksMobile = JSON.parse(rootElement.getAttribute('data-links-mobile'));
 
     // For pre-rendering with React Snap
     if (rootElement.hasChildNodes()) {
@@ -36,7 +35,6 @@ if (!process.env.REACT_APP_ENONICXP) {
           name={name}
           hideSearch={hideSearch}
           links={links}
-          linksMobile={linksMobile}
           inputSearchLabel="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
         />,
         rootElement
@@ -47,7 +45,6 @@ if (!process.env.REACT_APP_ENONICXP) {
           name={name}
           hideSearch={hideSearch}
           links={links}
-          linksMobile={linksMobile}
           inputSearchLabel="Søk etter reningslinjer, anbefalinger, lover, statistikk, tilskudd..."
         />,
         rootElement
@@ -89,7 +86,6 @@ if (headerElement) {
     headerElement.getAttribute('data-hide-search') !== null
   );
   const links = JSON.parse(headerElement.getAttribute('data-links'));
-  const linksMobile = JSON.parse(headerElement.getAttribute('data-links-mobile'));
   const exampleSuggestions =
     JSON.parse(headerElement.getAttribute('data-example-suggestions')) || [];
 
@@ -100,7 +96,6 @@ if (headerElement) {
       name={name}
       hideSearch={hideSearch}
       links={links}
-      linksMobile={linksMobile}
       inputSearchLabel={label}
       exampleSuggestions={exampleSuggestions}
     />,
