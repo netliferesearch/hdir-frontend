@@ -4,7 +4,7 @@ import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
 import URLSearchParams from 'url-search-params';
 import useInterval from '../js/hooks/useInterval';
-import _ from 'lodash';
+import debounce from 'lodash.debounce';
 
 import stripStringForHtmlUtil from './../utils/stripStringForHtmlUtil';
 
@@ -116,7 +116,7 @@ const InputSearch = props => {
   }
   
   // Debounce autosuggestions
-  const debouncedSearch = _.debounce((value) => onSuggestionsFetchRequested(value), 800);
+  const debouncedSearch = debounce((value) => onSuggestionsFetchRequested(value), 800);
 
   function onSuggestionSelected(event, { suggestion }) {
     // Last row clicked, don't send GTM tag
