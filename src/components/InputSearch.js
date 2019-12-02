@@ -4,6 +4,7 @@ import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
 import URLSearchParams from 'url-search-params';
 import useInterval from '../js/hooks/useInterval';
+import _ from 'lodash';
 
 import stripStringForHtmlUtil from './../utils/stripStringForHtmlUtil';
 
@@ -113,8 +114,14 @@ const InputSearch = props => {
   function onChange(event, { newValue }) {
     setValue(newValue);
   }
+  
+  const debouncedSearch = _.debounce((value) => onSuggestionsFetchRequested(value), 800);
 
   function onSuggestionSelected(event, { suggestion }) {
+    // Last row clicked, don't send GTM tag
+    if (suggestion.skip) {
+      window.location = suggestion.url;
+    }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'event': 'autosuggest',
@@ -140,6 +147,7 @@ const InputSearch = props => {
               ...suggestionsWithIndexes,
               {
                 // The last row that is highlighted
+                skip: true,
                 ...suggestionsWithIndexes[data.length - 1],
                 title: value,
                 category: '',
@@ -187,7 +195,7 @@ const InputSearch = props => {
       <div aria-hidden>
         <Autosuggest
           suggestions={props.showSuggestions ? suggestions : []}
-          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+          onSuggestionsFetchRequested={debouncedSearch}
           onSuggestionsClearRequested={() => setSuggestions([])}
           onSuggestionSelected={onSuggestionSelected}
           renderInputComponent={renderInputComponent}
