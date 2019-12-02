@@ -115,6 +115,7 @@ const InputSearch = props => {
     setValue(newValue);
   }
   
+  // Debounce autosuggestions
   const debouncedSearch = _.debounce((value) => onSuggestionsFetchRequested(value), 800);
 
   function onSuggestionSelected(event, { suggestion }) {
