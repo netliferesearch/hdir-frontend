@@ -128,6 +128,7 @@ if (searchElement) {
 if (sectionSidebarElement) {
   const heading = sectionSidebarElement.getAttribute('data-heading');
   const icon = sectionSidebarElement.getAttribute('data-icon');
+  const iconAltText = sectionSidebarElement.getAttribute('data-icon-alt-text');
   const headingUrl = sectionSidebarElement.getAttribute('data-heading-url');
   const list =
     sectionSidebarElement.getAttribute('data-list') === null
@@ -138,6 +139,7 @@ if (sectionSidebarElement) {
     <SectionSidebar
       heading={heading}
       icon={icon}
+      icon={iconAltText}
       list={list}
       headingUrl={headingUrl}
     />,
