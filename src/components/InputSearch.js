@@ -44,7 +44,7 @@ const InputSearch = props => {
   const inputElement = useRef(null);
   
   /* We are using callback to make throtte work in this component function */
-  const delayedSuggestionsFetchRequested = useCallback(throttle((value) => onSuggestionsFetchRequested(value), 800), []);
+  const delayedSuggestionsFetchRequested = useCallback(throttle((value) => onSuggestionsFetchRequested(value), 600), []);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
