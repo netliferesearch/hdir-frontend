@@ -139,7 +139,7 @@ if (sectionSidebarElement) {
     <SectionSidebar
       heading={heading}
       icon={icon}
-      icon={iconAltText}
+      iconAltText={iconAltText}
       list={list}
       headingUrl={headingUrl}
     />,
