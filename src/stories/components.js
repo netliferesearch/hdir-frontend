@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
 import {
   withKnobs,
   text,
@@ -52,7 +51,7 @@ import Wrapper from './components/Wrapper.js'
 storiesOf('Komponenter', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-    .addWithStaticMarkup('Artikkelintro', () => (
+    .add('Artikkelintro', () => (
       <Wrapper title="Artikkelintro" wide>
         <div className="l-container">
           <div className="row">
@@ -80,7 +79,7 @@ storiesOf('Komponenter', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-      .addWithStaticMarkup('Boks', () => (
+      .add('Boks', () => (
         <Wrapper title="Boks">
           <Box
             color={select(
@@ -105,7 +104,7 @@ storiesOf('Komponenter', module)
   storiesOf('Komponenter', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-    .addWithStaticMarkup('Brødsmulesti', () => (
+    .add('Brødsmulesti', () => (
       <Wrapper title="Brødsmulesti">
         <Breadcrumbs
           paths={object('Paths', [
@@ -131,7 +130,7 @@ storiesOf('Komponenter', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-      .addWithStaticMarkup('Checkbox-gruppe', () => (
+      .add('Checkbox-gruppe', () => (
         <Wrapper title="Checkbox-gruppe">
           <CheckboxGroup
             heading={text('Heading', 'Heading')}
@@ -166,7 +165,7 @@ storiesOf('Komponenter', module)
   storiesOf('Komponenter/Ekspanderbar liste', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Standard', () => (
+    .add('Standard', () => (
       <Wrapper title="Ekspanderbar liste">
         <Collapsible
           heading={text('Heading', 'Heading')}
@@ -193,7 +192,7 @@ storiesOf('Komponenter', module)
         </Collapsible>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Med JSX-innhold', () => (
+    .add('Med JSX-innhold', () => (
       <Wrapper title="Ekspanderbar liste med JSX-innhold">
       <Collapsible
         heading={text('Heading', 'Heading')}
@@ -222,7 +221,7 @@ storiesOf('Komponenter', module)
   storiesOf('Komponenter/Footer', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('HDIR Standard', () => (
+    .add('HDIR Standard', () => (
       <Wrapper title="HDIR Standard">
         <Box square color="blueDark">
           <div className="l-container">
@@ -231,7 +230,7 @@ storiesOf('Komponenter', module)
         </Box>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Helfo Standard', () => (
+    .add('Helfo Standard', () => (
       <Wrapper title="Helfo standard">
         <Box square color="blueDark">
           <div className="l-container">
@@ -245,7 +244,7 @@ storiesOf('Komponenter', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Flervelger', () => (
+    .add('Flervelger', () => (
       <Wrapper title="Flervelger">
       <MultiSelector
         buttonText={text('Button text', 'Velg tema')}
@@ -309,7 +308,7 @@ storiesOf('Komponenter', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Grid', () => (
+    .add('Grid', () => (
       <Wrapper title="Grid" wide>
       <div className="l-container grid-example">
         <p>
@@ -361,7 +360,7 @@ storiesOf('Komponenter', module)
   storiesOf('Komponenter/Headings', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Standard', () => (
+    .add('Standard', () => (
       <Wrapper title="Standard heading">
         <Heading
           h={select(
@@ -382,7 +381,7 @@ storiesOf('Komponenter', module)
         </Heading>
       </Wrapper>
     ))
-    .addWithStaticMarkup('LongShortHeading uten link', () => (
+    .add('LongShortHeading uten link', () => (
       <Wrapper title="Helfo standard" lead="Viser kortvariant med overskriftsstil og lang variant som mindre tekst.">
         <LongShortHeading
           long={text(
@@ -394,7 +393,7 @@ storiesOf('Komponenter', module)
         />
       </Wrapper>
     ))
-    .addWithStaticMarkup('LongShortHeading med link', () => (
+    .add('LongShortHeading med link', () => (
       <Wrapper title="Helfo standard" lead="Viser kortvariant med overskriftsstil og lang variant som mindre tekst. Har også link til utdypende info om innholdstypen.">
         <LongShortHeading
           long={text("Long heading", "Nasjonal faglig retningslinje for svangerskapsdiabetes")}
@@ -410,7 +409,7 @@ storiesOf('Komponenter', module)
 storiesOf('Komponenter/Header', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup('Standard', () => (
+  .add('Standard', () => (
     <Wrapper title="Header" wide>
       <MainHeader
         name={text('Name', 'Helsedirektoratet')}
@@ -424,26 +423,26 @@ storiesOf('Komponenter/Header', module)
       />
     </Wrapper>
   ))
-  .addWithStaticMarkup('QA Environment', () => (
+  .add('QA Environment', () => (
     <Wrapper title="Header" lead="Vises på testmiljøet" wide>
-    <MainHeader
-      name={text('Name', 'Helsedirektoratet')}
-      hideSearch={boolean('Hide search', false)}
-      links={object('List', [
-        { name: 'Om Helsedirektoratet', href: '#' },
-        { name: 'English', href: '#' }
-      ])}
-      inputSearchLabel={text('Input search label', 'Søk')}
-      exampleSuggestions={object('List', ['aaa', 'bbbb', 'ccccc'])}
-      qaEnvironment={boolean('QA Environment', true)}
-    />
+      <MainHeader
+        name={text('Name', 'Helsedirektoratet')}
+        hideSearch={boolean('Hide search', false)}
+        links={object('List', [
+          { name: 'Om Helsedirektoratet', href: '#' },
+          { name: 'English', href: '#' }
+        ])}
+        inputSearchLabel={text('Input search label', 'Søk')}
+        exampleSuggestions={object('List', ['aaa', 'bbbb', 'ccccc'])}
+        qaEnvironment={boolean('QA Environment', true)}
+        />
     </Wrapper>
 ));
 
 
 
 storiesOf('Komponenter', module)
-  .addWithStaticMarkup('Kapittel-overskrift', () => (
+  .add('Kapittel-overskrift', () => (
     <Wrapper title="Kapittel-overskrift">
       <ChapterHeading
         heading={text('Heading', 'Heading')}
@@ -462,7 +461,7 @@ storiesOf('Komponenter', module)
 storiesOf('Komponenter/Kort', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-    .addWithStaticMarkup('Standard', () => (
+    .add('Standard', () => (
       <Wrapper title="Kort standard">
         <Card
           heading={text('Heading', 'This is a heading')}
@@ -481,7 +480,7 @@ storiesOf('Komponenter/Kort', module)
         </Card>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Med statistikk', () => (
+    .add('Med statistikk', () => (
       <Wrapper title="Kort med statistikk">
         <Card
           heading={text('Heading', 'This is a heading')}
@@ -504,7 +503,7 @@ storiesOf('Komponenter/Kort', module)
         </Card>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Horisontal', () => (
+    .add('Horisontal', () => (
       <Wrapper title="Kort horisontal">
         <Card
           heading={text('Heading', 'This is a heading')}
@@ -528,7 +527,7 @@ storiesOf('Komponenter/Kort', module)
         </Card>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Med bilde', () => (
+    .add('Med bilde', () => (
       <Wrapper title="Kort med bilde">
         <Card
           url={text('URL', '#')}
@@ -552,7 +551,7 @@ storiesOf('Komponenter/Kort', module)
 storiesOf('Komponenter/Knapp', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-    .addWithStaticMarkup('Alle knapper', () => (
+    .add('Alle knapper', () => (
       <Wrapper title="Alle knapper">
         <div>
           <Button>{text('Content', 'Submit')}</Button>
@@ -577,7 +576,7 @@ storiesOf('Komponenter/Knapp', module)
         </div>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Standard', () => (
+    .add('Standard', () => (
       <Wrapper title="Standard knapp">
         <Button
           arrow={boolean('Arrow', false)}
@@ -591,7 +590,7 @@ storiesOf('Komponenter/Knapp', module)
         </Button>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Pil høyre', () => (
+    .add('Pil høyre', () => (
       <Wrapper title="Knapp m. pil høyre">
         <Button
           arrow={boolean('Arrow', true)}
@@ -605,7 +604,7 @@ storiesOf('Komponenter/Knapp', module)
         </Button>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Nedlastingsknapp', () => (
+    .add('Nedlastingsknapp', () => (
       <Wrapper title="Nedlastingsknapp">
         <Button
           arrow={boolean('Arrow', false)}
@@ -619,7 +618,7 @@ storiesOf('Komponenter/Knapp', module)
         </Button>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Liten knapp', () => (
+    .add('Liten knapp', () => (
       <Wrapper title="Liten knapp">
         <Button
           arrow={boolean('Arrow', false)}
@@ -633,7 +632,7 @@ storiesOf('Komponenter/Knapp', module)
         </Button>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Sekundær knapp', () => (
+    .add('Sekundær knapp', () => (
       <Wrapper title="Sekundær knapp">
         <Button
           arrow={boolean('Arrow', false)}
@@ -647,7 +646,7 @@ storiesOf('Komponenter/Knapp', module)
         </Button>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Enkel knapp', () => (
+    .add('Enkel knapp', () => (
       <Wrapper title="Enkel knapp">
         <Button
           arrow={boolean('Arrow', false)}
@@ -661,7 +660,7 @@ storiesOf('Komponenter/Knapp', module)
         </Button>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Sekundær mørk', () => (
+    .add('Sekundær mørk', () => (
       <Wrapper title="Sekundær mørk knapp">
         <Button
           arrow={boolean('Arrow', false)}
@@ -675,7 +674,7 @@ storiesOf('Komponenter/Knapp', module)
         </Button>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Valgt sekundær', () => (
+    .add('Valgt sekundær', () => (
       <Wrapper title="Valgt sekundær knapp">
         <Button
           arrow={boolean('Arrow', false)}
@@ -696,7 +695,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter/Lister', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Liste-heading', () => (
+    .add('Liste-heading', () => (
       <Wrapper title="Headinglinje på liste">
         <ListHeading
           heading={text('Heading', '250 rapporter')}
@@ -709,7 +708,7 @@ storiesOf('Komponenter/Knapp', module)
         />
       </Wrapper>
     ))
-    .addWithStaticMarkup('Filterliste', () => (
+    .add('Filterliste', () => (
       <Wrapper title="Filterliste">
         <FilterList
           list={object('List', [
@@ -721,7 +720,7 @@ storiesOf('Komponenter/Knapp', module)
         />
       </Wrapper>
     ))
-    .addWithStaticMarkup('Link-liste med bilder', () => (
+    .add('Link-liste med bilder', () => (
       <Wrapper title="Linkliste med bilder">
       <LinkList
         list={object('Options', [
@@ -772,7 +771,7 @@ storiesOf('Komponenter/Knapp', module)
       />
       </Wrapper>
     ))
-    .addWithStaticMarkup('Navigasjonsliste', () => (
+    .add('Navigasjonsliste', () => (
       <Wrapper title="Navigasjonsliste">
         <NavList
           heading={text('Heading', '')}
@@ -804,7 +803,7 @@ storiesOf('Komponenter/Knapp', module)
         />
       </Wrapper>
     ))
-    .addWithStaticMarkup('Nyhetsliste', () => (
+    .add('Nyhetsliste', () => (
       <Wrapper title="Nyhetsliste" lead="Kun nyheter">
       <List
         heading={text('Heading', '')}
@@ -840,7 +839,7 @@ storiesOf('Komponenter/Knapp', module)
       />
       </Wrapper>
     ))
-    .addWithStaticMarkup('Artikkelliste', () => (
+    .add('Artikkelliste', () => (
       <Wrapper title="Artikkelliste" lead="For alle innholdstyper">
       <List
         heading={text('Heading', '')}
@@ -955,7 +954,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter/Listeelement-typer', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Nyhetstype', () => (
+    .add('Nyhetstype', () => (
       <ListItemType
         itemType={{
           type: 'news',
@@ -967,7 +966,7 @@ storiesOf('Komponenter/Knapp', module)
         }}
       />
     ))
-    .addWithStaticMarkup('Konferanse', () => (
+    .add('Konferanse', () => (
       <ListItemType
         itemType={{
           type: 'conference',
@@ -982,7 +981,7 @@ storiesOf('Komponenter/Knapp', module)
         }}
       />
     ))
-    .addWithStaticMarkup('Bevilgning', () => (
+    .add('Bevilgning', () => (
       <ListItemType
         itemType={{
           type: 'grantFunding',
@@ -994,7 +993,7 @@ storiesOf('Komponenter/Knapp', module)
         }}
       />
     ))
-    .addWithStaticMarkup('Pressemelding', () => (
+    .add('Pressemelding', () => (
       <ListItemType
         itemType={{
           type: 'pressRelease',
@@ -1007,7 +1006,7 @@ storiesOf('Komponenter/Knapp', module)
         }}
       />
     ))
-    .addWithStaticMarkup('Person', () => (
+    .add('Person', () => (
       <ListItemType
         itemType={{
           type: 'person',
@@ -1025,7 +1024,7 @@ storiesOf('Komponenter/Knapp', module)
     storiesOf('Komponenter', module)
       .addDecorator(withKnobs)
       .addDecorator(checkA11y)
-      .addWithStaticMarkup('Metadata', () => (
+      .add('Metadata', () => (
         <Wrapper title="Metadata">
           <PageMeta
             publishDate={text('Publish date', '1. januar 2015')}
@@ -1039,7 +1038,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Nedtrekksmeny', () => (
+    .add('Nedtrekksmeny', () => (
       <Wrapper title="Nedtrekksmeny">
         <Select
           label={text('Label', 'Tilpass siden til meg')}
@@ -1065,7 +1064,7 @@ storiesOf('Komponenter/Knapp', module)
       storiesOf('Komponenter', module)
         .addDecorator(withKnobs)
         .addDecorator(checkA11y)
-        .addWithStaticMarkup('Pressemeldinger', () => (
+        .add('Pressemeldinger', () => (
           <Wrapper title="Pressemeldinger">
             <div className="row">
               <div className="col-xs-12 col-md-6">
@@ -1108,7 +1107,7 @@ storiesOf('Komponenter/Knapp', module)
       storiesOf('Komponenter', module)
         .addDecorator(withKnobs)
         .addDecorator(checkA11y)
-        .addWithStaticMarkup('Radiobuttons', () => (
+        .add('Radiobuttons', () => (
           <Wrapper title="Radiobuttons">
             <RadioButtonGroup
               heading={text('Heading', 'Heading')}
@@ -1142,7 +1141,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Sidemeny', () => (
+    .add('Sidemeny', () => (
       <Wrapper title="Sidemeny">
         <SectionSidebar
           heading={text('Heading', 'Some heading')}
@@ -1185,12 +1184,12 @@ storiesOf('Komponenter/Knapp', module)
     storiesOf('Komponenter/Sitatstil', module)
       .addDecorator(withKnobs)
       .addDecorator(checkA11y)
-      .addWithStaticMarkup('Standard', () => (
+      .add('Standard', () => (
         <Wrapper title="Sitatstil standard">
           <Quote>{text('Text', 'nasjonal faglig retningslinje')}</Quote>
         </Wrapper>
       ))
-      .addWithStaticMarkup('Med flere paragrafer', () => (
+      .add('Med flere paragrafer', () => (
         <Wrapper title="Sitatstil med flere paragrafer">
           <Quote>
             <p>
@@ -1241,12 +1240,12 @@ storiesOf('Komponenter/Knapp', module)
     storiesOf('Komponenter/Spørreskjema', module)
       .addDecorator(withKnobs)
       .addDecorator(checkA11y)
-      .addWithStaticMarkup('Standard', () => 
+      .add('Standard', () => 
         <Wrapper title="Spørreskjema standard">
           <Questionnaire />
         </Wrapper>
       )
-      .addWithStaticMarkup('Med layout', () => (
+      .add('Med layout', () => (
         <Wrapper title="Spørreskjema med layout">
           <Box color="grey" square noPadding>
             <div className="l-container">
@@ -1260,7 +1259,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Statistikk', () => (
+    .add('Statistikk', () => (
       <Wrapper title="Statistikk">
         <Statistics
           bigText={text('Big text', '99.9%')}
@@ -1277,7 +1276,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Søk', () => (
+    .add('Søk', () => (
       <Wrapper title="Standard søkefelt">
         <InputSearch dark={boolean('Dark mode', false)} label={text('Label', '')} />
       </Wrapper>
@@ -1288,7 +1287,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Tabell', () => 
+    .add('Tabell', () => 
       <Wrapper title="Tabell">
         <TableExample />
       </Wrapper>
@@ -1298,7 +1297,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Transportblokk', () => (
+    .add('Transportblokk', () => (
       <Wrapper title="Transportblokk">
         <TransportBlock
           title={text('Title', 'Tittel')}
@@ -1311,7 +1310,7 @@ storiesOf('Komponenter/Knapp', module)
   storiesOf('Komponenter/Varsling', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
-    .addWithStaticMarkup('Varsling Standard', () => (
+    .add('Varsling Standard', () => (
       <Wrapper title="Varsling standard">
         <Alert
           status={select(
@@ -1333,7 +1332,7 @@ storiesOf('Komponenter/Knapp', module)
         </Alert>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Varslingslinje Standard', () => (
+    .add('Varslingslinje Standard', () => (
       <Wrapper title="Varslingslinje standard">
         <AlertBar
           heading={text(
@@ -1355,7 +1354,7 @@ storiesOf('Komponenter/Knapp', module)
         </AlertBar>
       </Wrapper>
     ))
-    .addWithStaticMarkup('Varslingslinje med knapp', () => (
+    .add('Varslingslinje med knapp', () => (
       <Wrapper title="Varslingslinje med knapp">
         <AlertBar
           heading={text(

@@ -16,12 +16,12 @@ storiesOf('Grunnstiler', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .add('Farger', () => (
-    <Wrapper title="Farger" lead="Åpne Figma-filen for å se reglene for fargebruk.">
+    <Wrapper noMarkup title="Farger" lead="Åpne Figma-filen for å se reglene for fargebruk.">
       <iframe style={{border: 0}} title="Farger iframe" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSJQReaflejvdjUWtGpiv7F%2FHelsedirektoratet-Designmanual%3Fnode-id%3D61%253A196" allowFullScreen></iframe>
     </Wrapper>
   ))
   .add('Spacing', () => (
-    <Wrapper title="Spacing" lead="Åpne Figma-filen for å se reglene for spacing.">
+    <Wrapper noMarkup title="Spacing" lead="Åpne Figma-filen for å se reglene for spacing.">
       <>
         <iframe style={{border: 0}} title="Farger iframe" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSJQReaflejvdjUWtGpiv7F%2FHelsedirektoratet-Designmanual%3Fnode-id%3D118%253A576" allowFullScreen></iframe>
         <h2>Vertikal spacing-klasser</h2>
@@ -47,7 +47,7 @@ storiesOf('Grunnstiler', module)
     </Wrapper>
   ))
   .add('Typografi', () => (
-    <Wrapper title="Typografi" lead="Åpne Figma-filen for å se reglene for typografi.">
+    <Wrapper noMarkup title="Typografi" lead="Åpne Figma-filen for å se reglene for typografi.">
       <iframe style={{border: 0}} title="Typografi iframe" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSJQReaflejvdjUWtGpiv7F%2FHelsedirektoratet-Designmanual%3Fnode-id%3D1%253A59" allowFullScreen></iframe>
     </Wrapper>
   ));
@@ -55,7 +55,7 @@ storiesOf('Grunnstiler', module)
 storiesOf('Grunnstiler/Lenke', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addWithStaticMarkup('Alle', () => (
+  .add('Alle', () => (
     <Wrapper title="Lenker" lead="Alle lenketyper">
       <div>
         <p><b>With 'icon' defined + 'small' set to 'true'</b></p>
@@ -333,7 +333,7 @@ storiesOf('Grunnstiler/Lenke', module)
       </div>
     </Wrapper>
   ))
-  .addWithStaticMarkup('Standard lenke', () => (
+  .add('Standard lenke', () => (
     <Wrapper title="Lenker" lead="Standard lenke">
       <Link
         href={text('href', '#')}
