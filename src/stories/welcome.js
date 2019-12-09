@@ -4,7 +4,7 @@ import Wrapper from './components/Wrapper.js'
 
 storiesOf('Velkommen', module)
   .add('Kom i gang', () => (
-    <Wrapper title="Kom i gang" lead="HDIR og HELFO: Digital designmanual">
+    <Wrapper noMarkup title="Kom i gang" lead="HDIR og HELFO: Digital designmanual">
     <>
       <p>Formålet med denne digitale designmanualen er å dokumentere alle delene av nettsidene, i form av komponenter. </p>
       <p>En komponent er en bestanddel av en større helhet. En nettside er bygd opp av mange deler, som bokser, titler, bilder, lister osv. Disse er komponentene nettsiden består av. I designsystemet må vi fokusere både på komponentene og helheten.</p>
