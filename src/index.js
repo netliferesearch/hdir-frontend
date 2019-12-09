@@ -94,6 +94,7 @@ if (headerElement) {
     JSON.parse(headerElement.getAttribute('data-example-suggestions')) || [];
 
   const label = headerElement.getAttribute('data-label') || '';
+  const qaEnvironment = headerElement.getAttribute('data-qaenvironment') || '';
 
   render(
     <MainHeader
@@ -103,6 +104,7 @@ if (headerElement) {
       linksMobile={linksMobile}
       inputSearchLabel={label}
       exampleSuggestions={exampleSuggestions}
+      qaEnvironment={qaEnvironment}
     />,
     headerElement
   );
