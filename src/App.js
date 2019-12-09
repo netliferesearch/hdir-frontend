@@ -90,6 +90,7 @@ class App extends Component {
                 'Statistikk',
                 'Tilskudd'
               ]}
+              qaEnvironment={this.props.qaEnvironment}
             />
             <Switch>
               <Route exact path="/" component={FrontPage} />
@@ -193,6 +194,7 @@ class App extends Component {
 
 App.propTypes = {
   name: PropTypes.string,
+  qaEnvironment: PropTypes.bool,
   links: PropTypes.arrayOf(PropTypes.object),
   linksMobile: PropTypes.arrayOf(PropTypes.object),
   inputSearchLabel: PropTypes.string
