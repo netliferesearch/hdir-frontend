@@ -94,7 +94,7 @@ if (headerElement) {
     JSON.parse(headerElement.getAttribute('data-example-suggestions')) || [];
 
   const label = headerElement.getAttribute('data-label') || '';
-  const qaEnvironment = headerElement.getAttribute('data-qaenvironment') || '';
+  const qaEnvironment = headerElement.getAttribute('data-qaenvironment') === 'true';
 
   render(
     <MainHeader
