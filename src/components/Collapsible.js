@@ -25,6 +25,7 @@ const buttonClasses = (active, size, subtle) =>
     'b-collapsible__button--active': active,
     'b-collapsible__button--subtle': subtle,
     'b-collapsible__button--small': size === 'small',
+    'b-collapsible__button--tiny': size === 'tiny',
     'b-collapsible__button--medium': size === 'medium'
   });
 
@@ -42,12 +43,15 @@ const headingClasses = (size, bold) =>
     'h0--normal': bold === false
   });
 
-const collapsibleClasses = (size, subtle, noBorder) =>
+const collapsibleClasses = (size, subtle, noBorder, background, active) =>
   classNames({
     'b-collapsible': true,
     'b-collapsible--subtle': subtle,
+    'b-collapsible--active': active,
+    'b-collapsible--background': background,
     'b-collapsible--medium': size === 'medium',
     'b-collapsible--small': size === 'small',
+    'b-collapsible--tiny': size === 'tiny',
     'b-collapsible--no-border': noBorder
   });
 
@@ -97,7 +101,7 @@ const Collapsible = props => {
 
   return (
     <div
-      className={collapsibleClasses(props.size, props.subtle, props.noBorder)}
+      className={collapsibleClasses(props.size, props.subtle, props.noBorder, props.background, collapsed)}
       ref={parentElement}
     >
       {props.category && (
@@ -175,12 +179,14 @@ Collapsible.propTypes = {
   collapsed: PropTypes.bool,
   code: PropTypes.string,
   id: PropTypes.string,
-  bold: PropTypes.bool
+  bold: PropTypes.bool,
+  background: PropTypes.bool
 };
 
 Collapsible.defaultProps = {
   size: 'large',
-  collapsed: false
+  collapsed: false,
+  background: true
 };
 
 export default Collapsible;

@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const boxClasses = (color, square, noPadding) =>
+const boxClasses = (color, square, noPadding, tinyPadding) =>
   classNames({
     'b-box': true,
     'b-box--square': square,
     'b-box--no-padding': noPadding,
+    'b-box--tiny-padding': tinyPadding,
     'b-box--green': color === 'green',
     'b-box--white': color === 'white',
     'b-box--blue': color === 'blue',
@@ -15,7 +16,7 @@ const boxClasses = (color, square, noPadding) =>
   });
 
 const Box = props => (
-  <section className={boxClasses(props.color, props.square, props.noPadding)}>
+  <section className={boxClasses(props.color, props.square, props.noPadding, props.tinyPadding)}>
     {props.children}
   </section>
 );
@@ -23,6 +24,7 @@ const Box = props => (
 Box.propTypes = {
   square: PropTypes.bool,
   noPadding: PropTypes.bool,
+  tinyPadding: PropTypes.bool,
   color: PropTypes.oneOf([
     '',
     'green',

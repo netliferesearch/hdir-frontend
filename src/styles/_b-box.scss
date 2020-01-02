@@ -15,6 +15,9 @@
   &--no-padding {
     padding: 2rem 0;
   }
+  &--tiny-padding {
+    padding: .3rem 1rem;
+  }
 
   &--green {
     background-color: $green-light;

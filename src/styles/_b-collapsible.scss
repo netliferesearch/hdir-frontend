@@ -1,8 +1,19 @@
 .b-collapsible {
-  $left-space: 1.5em;
-  padding-left: $left-space;
-  border-top: 4px solid $black;
-  padding-top: 2em;
+  $space: 1.75em;
+  $spaceSmall: 0.75em;
+  padding: $space;
+  border: 1px solid transparent;
+
+  .b-collapsible {
+    background: none;
+    border: none;
+    padding: $spaceSmall $space;
+    margin-left: 0;
+    
+    &--tiny {
+      padding: $spaceSmall/2 0;
+    }
+  }
 
   &--medium {
     border-width: 1px;
@@ -10,16 +21,32 @@
   &--small {
     border-width: 1px;
     border: 0;
-    padding-top: 0;
     margin-top: 0;
+  }
+  &--tiny {
+    margin-top: 0;
+    padding: 0;
   }
 
   &--subtle {
-    margin-left: -$left-space;
+    margin-left: -$space;
+    padding-left: 0;
+    
+    &.b-collapsible {
+      padding-left: 0;
+    }
   }
 
   &--no-border {
     border: 0;
+  }
+  
+  &--active {
+    background: white;
+    border: 1px solid $grey-light;
+    padding: $space;
+    margin-left: -$space*0.5;
+    padding-left: $space*1.5;
   }
 
   &__code {
@@ -56,15 +83,15 @@
       display: block;
       position: absolute;
       content: ' ';
-      width: 0.75em;
-      height: 0.75em;
-      margin-left: -$left-space;
+      width: 16px;
+      height: 16px;
+      margin-left: -$space;
       transform: rotate(90deg);
       background-image: url(../static/icons/chevron.svg);
       background-repeat: no-repeat;
       background-size: contain;
       left: 0;
-      top: 0.25em;
+      top: 5px;
     }
 
     &:active {
@@ -86,18 +113,51 @@
 
     &--medium {
       &:before {
-        top: 0.25em;
+        top: 5px;
         width: 0.66em;
         height: 0.66em;
       }
     }
     &--small {
-      padding-bottom: 1px;
       &:before {
-        margin-left: -$left-space;
-        top: 0.25em;
-        width: 0.66em;
-        height: 0.66em;
+        margin-left: -$space;
+        top: 0.15em;
+      }
+    }
+    &--tiny {
+      display: inline-block;
+      width: auto;
+      padding-right: 20px;
+      position: relative;
+      
+      h5 {
+        border-bottom: 1px solid $blue;
+        padding-bottom: 4px;
+        display: inline-block;
+        text-transform: none;
+      }
+      
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: block;
+        position: absolute;
+        content: ' ';
+        width: 16px;
+        height: 16px;
+        margin-left: -$space;
+        transform: rotate(180deg);
+        background-image: url(../static/icons/chevron.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: 0;
+        top: 0;
+        
+      }
+      &.b-collapsible__button--active:after {
+        transform: rotate(0deg);
+        top: 5px;
       }
     }
 
@@ -110,8 +170,14 @@
   }
   &__content {
     animation: fadeInUp 300ms ease;
-    margin-top: 0.5rem;
-    margin-left: -$left-space;
+    
+    h4 {
+      margin-top: $space;
+      text-transform: none;
+    }
+    h5 {
+      text-transform: none;
+    }
 
     &--small {
       font-size: $meta-text;

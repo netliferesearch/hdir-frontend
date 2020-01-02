@@ -5,6 +5,7 @@ import { default as LinkComp } from '../components/Link'; // It uses "default as
 const pages = [
   {link: '/abonnement-tilpassing', desc: 'Abonnement Tilpassing'},
   {link: '/anbefaling', desc: 'Anbefaling'},
+  {link: '/anbefaling-antibiotika', desc: 'Anbefaling antibiotika'},
   {link: '/artikkel', desc: 'Artikkel'},
   {link: '/artikkel-med-skjema', desc: 'Artikkel med skjema'},
   {link: '/artikkel-med-iframe', desc: 'Artikkel med iframe'},
