@@ -5,11 +5,16 @@ import classNames from 'classnames';
 const imageClasses = size =>
   classNames({
     'b-icon-with-text__image': true,
-    'b-icon-with-text__image--small': size === 'small'
+    'b-icon-with-text__image--small': size === 'small',
+  });
+const wrapperClasses = size =>
+  classNames({
+    'b-icon-with-text': true,
+    'b-icon-with-text--clean': size === 'clean'
   });
 
 const IconWithText = props => (
-  <div className="b-icon-with-text">
+  <div className={wrapperClasses(props.size)}>
     <img
       src={props.icon}
       alt=""
@@ -24,7 +29,7 @@ const IconWithText = props => (
 IconWithText.propTypes = {
   icon: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['medium', 'small'])
+  size: PropTypes.oneOf(['medium', 'small', 'clean'])
 };
 
 IconWithText.defaultProps = {

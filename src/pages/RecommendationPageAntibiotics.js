@@ -2,6 +2,7 @@ import React from 'react';
 import Collapsible from '../components/Collapsible';
 import Link from '../components/Link';
 import Box from '../components/Box';
+import IconWithText from '../components/IconWithText';
 
 const RecommendationPageAntibiotics = () => (
   <>
@@ -38,15 +39,21 @@ const RecommendationPageAntibiotics = () => (
               >
                 <Box
                 color="grey" square tinyPadding>
-                  <h4>Penicillinallergi</h4>
-                  <p>Ampicillin</p>
-                  <p>Skal ikke gis til pasienter med penicillinallergi</p>
+                  <p>
+                    <IconWithText text="Penicillinallergi" size="clean" icon="../icons/warning_high.svg" />
+                    Ampicillin <br />
+                    Skal ikke gis til pasienter med penicillinallergi
+                  </p>
                   
-                  <h4>Gentamicin</h4>
-                  <p>Aminoglykosider bør unngås i andre og tredje trimester</p>
+                  <p>
+                    <IconWithText text="Gentamicin" size="clean" icon="../icons/warning_high.svg" />
+                    Aminoglykosider bør unngås i andre og tredje trimester
+                  </p>
                   
-                  <h4>Metronidazol</h4>
-                  <p>Tilbakeholden med bruk av høye doser i første trimester</p>
+                  <p>
+                    <IconWithText text="Metronidazol" size="clean" icon="../icons/warning_high.svg" />
+                    Tilbakeholden med bruk av høye doser i første trimester
+                  </p>
                   
                 </Box>
               </Collapsible>
