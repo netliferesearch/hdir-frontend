@@ -8,6 +8,7 @@ const RecommendationPageAntibiotics = () => (
   <>
     <div className="l-container l-mt-3">
       <main id="main">
+        <p>Klikk på behandling og Kontraindikasjoner for eksempelinnhold.</p>
           <Collapsible
             background
             collapsed

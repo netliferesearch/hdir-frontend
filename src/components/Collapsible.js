@@ -186,7 +186,7 @@ Collapsible.propTypes = {
 Collapsible.defaultProps = {
   size: 'large',
   collapsed: false,
-  background: true
+  background: false
 };
 
 export default Collapsible;

@@ -18,7 +18,7 @@ const ChapterPage = () => (
           h="h1"
           line="none"
         />
-        <div className="l-mt-3 row">
+        <div className="row">
           <aside className="col-md-4 l-hide-to-lg l-bleed-right">
             <SectionSidebar
               heading="Nasjonal faglig retningslinje for svangerskapsdiabetes"
@@ -70,8 +70,9 @@ const ChapterPage = () => (
                 enim ad minim veniam, quis nostrud exercitation ullamco.
               </p>
             </Collapsible>
-            <div className="l-mt-1">
+            <div>
               <Collapsible
+                background
                 heading="Anbefaling 1"
                 subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
@@ -102,12 +103,13 @@ const ChapterPage = () => (
                 </div>
               </Collapsible>
             </div>
-            <div className="l-mt-3">
+            <div>
               <Collapsible
                 heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
                 subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="anbefaling1"
+                background
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -132,12 +134,13 @@ const ChapterPage = () => (
                 </div>
               </Collapsible>
             </div>
-            <div className="l-mt-3">
+            <div>
               <Collapsible
                 heading="Anbefaling 3"
                 subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="someId3"
+                background
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -155,7 +158,7 @@ const ChapterPage = () => (
                   å nå behandlingsmålene for glukose
                 </p>
                 <p>etc.</p>
-                <div className="l-mt-2">
+                <div>
                   <Collapsible
                     heading="Seksjon under: 1 – SUBHEADING UTEN INNHOLD"
                     size="medium"
@@ -169,7 +172,7 @@ const ChapterPage = () => (
                     </p>
                   </Collapsible>
                 </div>
-                <div className="l-mt-2">
+                <div>
                   <Collapsible
                     heading="Seksjon under: 2 – SUBHEADING UTEN INNHOLD"
                     size="medium"
@@ -205,8 +208,8 @@ const ChapterPage = () => (
                 </div>
               </Collapsible>
             </div>
-            <div className="l-mt-2">
-              <hr className="b-hr b-hr--black b-hr--thick" />
+            <div>
+              <hr className="b-hr" />
             </div>
             <ChapterHeading
               heading="Underkapittel 1.1"
@@ -214,8 +217,8 @@ const ChapterPage = () => (
               line="none"
               url="#a"
             />
-            <div className="l-mt-2">
-              <hr className="b-hr b-hr--black b-hr--thick" />
+            <div>
+              <hr className="b-hr" />
             </div>
             <ChapterHeading
               heading="Underkapittel 1.2"
@@ -223,12 +226,12 @@ const ChapterPage = () => (
               line="none"
               url="#a"
             />
-            <div className="l-mt-2">
+            <div>
               <Link wideButton arrow color="purple">
                 Henvis pasienten til helsenorge.no for mer informasjon
               </Link>
             </div>
-            <div className="l-mt-3">
+            <div>
               <PageMeta
                 publishDate="11. oktober 2008"
                 editDate="11. august 2018"

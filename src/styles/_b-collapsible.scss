@@ -1,7 +1,7 @@
 .b-collapsible {
   $space: 1.75em;
   $spaceSmall: 0.75em;
-  padding: $space;
+  padding: $spaceSmall $space;
   border: 1px solid transparent;
 
   .b-collapsible {
@@ -31,6 +31,8 @@
   &--subtle {
     margin-left: -$space;
     padding-left: 0;
+    background: none;
+    border: none;
     
     &.b-collapsible {
       padding-left: 0;
@@ -41,11 +43,11 @@
     border: 0;
   }
   
-  &--active {
+  &--active.b-collapsible--background {
     background: white;
     border: 1px solid $grey-light;
-    padding: $space;
     margin-left: -$space*0.5;
+    margin-bottom: $space;
     padding-left: $space*1.5;
   }
 
@@ -177,6 +179,9 @@
     }
     h5 {
       text-transform: none;
+    }
+    button h4 {
+      margin: 0;
     }
 
     &--small {
