@@ -32,8 +32,8 @@ const buttonClasses = (active, size, subtle) =>
 const headingClasses = (size, bold) =>
   classNames({
     'b-collapsible__heading': true,
-    h3: size === 'large',
-    h4: size === 'medium',
+    h2: size === 'large',
+    h3: size === 'medium',
     normal: size === 'small',
     // These additional 'bold' classes are here because HDIR wants to keep semantic choices whilst
     //  still having control over 'bold' styles on headings.
