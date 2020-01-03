@@ -26,6 +26,7 @@ const RecommendationPage = () => (
           h="h3"
           heading="Behandling"
           size="small"
+          collapsed
         >
         <h4>Standard behandlingregime</h4>
         <p>Vanlig behandlingsvarighet: 5 dager</p>
