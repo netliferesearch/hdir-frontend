@@ -46,13 +46,17 @@ const RecommendationPage = () => (
               </p>
               
               <p>
-                <IconWithText text="Gentamicin" size="clean" icon="../icons/warning_high.svg" />
-                Aminoglykosider bør unngås i andre og tredje trimester
+                <IconWithText text="Graviditet" size="clean" icon="../icons/warning_high.svg" />
+                Gentamicin: <br />
+                Aminoglykosider bør unngås i andre og tredje trimester. <a href="#">Les mer.</a><br />
+                Metronidazol:<br />
+                Tilbakeholden med bruk av høye doser i første trimester. <a href="#">Les mer.</a>
               </p>
               
               <p>
-                <IconWithText text="Metronidazol" size="clean" icon="../icons/warning_high.svg" />
-                Tilbakeholden med bruk av høye doser i første trimester
+                <IconWithText text="Ammende" size="clean" icon="../icons/warning_high.svg" />
+                Metronidazol<br />
+                Overgang til morsmelk er moderat til høy. Andre midler bør benyttes om det finnes alternativer.
               </p>
               
             </Box>

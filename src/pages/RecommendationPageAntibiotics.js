@@ -130,6 +130,7 @@ const RecommendationPageAntibiotics = () => (
           
           <Collapsible
             heading="Sekundær peritonitt"
+            background
           >
             <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
             <Collapsible
