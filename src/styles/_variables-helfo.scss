@@ -67,6 +67,17 @@ $large-text: 1.8rem;
 $medium-large-text: 1.2rem;
 $meta-text: 0.8725rem;
 
+$h1: calc(36px + 1 * (100vw - 400px) / (1440 - 400));
+$h1Mobile: calc(24px + 1 * (100vw - 400px) / (1440 - 400));
+$h2: calc(24px + 1 * (100vw - 400px) / (1440 - 400));
+$h2Mobile: calc(21px + 1 * (100vw - 400px) / (1440 - 400));
+$h3: calc(20px + 1 * (100vw - 400px) / (1440 - 400));
+$h3Mobile: calc(19px + 1 * (100vw - 400px) / (1440 - 400));
+$h4: calc(18px + 1 * (100vw - 400px) / (1440 - 400));
+$h4Mobile: calc(17px + 1 * (100vw - 400px) / (1440 - 400));
+$h5: calc(16px + 1 * (100vw - 400px) / (1440 - 400));
+$h5Mobile: calc(16px + 1 * (100vw - 400px) / (1440 - 400));
+
 // Layout
 $container-small: 4vw;
 $container-medium: 6vw;
