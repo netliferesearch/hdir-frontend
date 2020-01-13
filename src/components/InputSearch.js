@@ -49,11 +49,8 @@ const InputSearch = props => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
-
     setValue(searchQuery ? searchQuery : '')
-  }, []);
-
-  useEffect(() => {
+    console.log(inputElement)
     props.autoFocus
       ? inputElement.current.focus()
       : inputElement.current.blur();
@@ -131,7 +128,7 @@ const InputSearch = props => {
       'label': value,
       'value': suggestion.index
     });
-    window.location = suggestion.url;
+    // window.location = suggestion.url;
   }
 
   // Autosuggest will call this function every time you need to update suggestions.

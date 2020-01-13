@@ -7,11 +7,15 @@
   .b-collapsible {
     background: none;
     border: none;
-    padding: $spaceSmall $space;
+    padding: $spaceSmall $space $spaceSmall $space*1.5;
     margin-left: 0;
     
     &--tiny {
       padding: $spaceSmall/2 0;
+    }
+    
+    .b-collapsible--small:nth-child(odd) {
+      background: $grey-lighter;
     }
   }
 
@@ -26,6 +30,7 @@
   &--tiny {
     margin-top: 0;
     padding: 0;
+    display: block;
   }
 
   &--subtle {
@@ -38,10 +43,11 @@
       padding-left: 0;
     }
     
-    h4 {
+    h4.b-collapsible__heading {
       font-size: $meta-text;
       font-weight: normal;
       text-transform: uppercase;
+      padding-top: 0;
     }
   }
 
@@ -55,6 +61,7 @@
     margin-left: -$space*0.5;
     margin-bottom: $space;
     padding-left: $space*1.5;
+    padding-right: $space;
   }
 
   &__code {
@@ -85,6 +92,14 @@
 
     &:hover {
       color: $link-color;
+    }
+    
+    &:focus {
+      outline: none;
+      color: $blue;
+      h5 {
+        font-weight: bold;
+      }
     }
 
     &:before {
@@ -133,16 +148,18 @@
       }
     }
     &--tiny {
-      display: inline-block;
-      width: auto;
+      display: block;
+      max-width: 400px;
       padding-right: 20px;
       position: relative;
+      border-bottom: 2px dashed $blue;
       
-      h5 {
-        border-bottom: 1px solid $blue;
+      h3,h4,h5 {
         padding-bottom: 4px;
-        display: inline-block;
+        display: block;
         text-transform: none;
+        font-size: $medium-large-text;
+        font-weight: normal;
       }
       
       &:before {
@@ -151,21 +168,21 @@
       &:after {
         display: block;
         position: absolute;
-        content: ' ';
+        content: '+';
+        font-size: 20px;
+        color: $blue;
         width: 16px;
         height: 16px;
         margin-left: -$space;
-        transform: rotate(180deg);
-        background-image: url(../static/icons/chevron.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
+        transform: rotate(0deg);
         right: 0;
         top: 0;
         
       }
       &.b-collapsible__button--active:after {
-        transform: rotate(0deg);
-        top: 7px;
+        transform: rotate(45deg);
+        font-size: 26px;
+        right: -3px;
       }
     }
 
@@ -178,9 +195,11 @@
   }
   &__content {
     animation: fadeInUp 300ms ease;
+    padding-bottom: $space;
     
     h4 {
-      margin-top: $space;
+      padding-top: $space;
+      display: inline-block !important;
     }
     h5 {
       text-transform: none;
@@ -192,12 +211,6 @@
     &--small {
       font-size: $meta-text;
       margin-left: 0;
-    }
-  }
-  &__heading {
-    &:hover {
-      cursor: pointer;
-      // text-decoration: underline;
     }
   }
   &__subheading {
