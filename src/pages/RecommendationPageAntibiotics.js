@@ -70,19 +70,12 @@ const RecommendationPageAntibiotics = () => (
                 </Collapsible>
                 <Collapsible
                   h="h5"
-                  heading="Doseringer for spesielle hensyn"
+                  heading="Dosering ved overvekt"
                   size="tiny"
                 >
                 <p>
-                <strong>Ved overvekt</strong><br />
                 Ampicillin<br />
                 TBW > 100: 2g x 4
-                </p>
-                <p>
-                <strong>Ved redusert nyrefunksjon</strong><br />
-                Ampicillin<br />
-                GFR 20-10: 0.25 -2 g x 4 <br />
-                GFR &lt; 10: 0.25-1 g x 4
                 </p>
                 </Collapsible>
                 <Collapsible
