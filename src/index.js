@@ -94,6 +94,7 @@ if (headerElement) {
     JSON.parse(headerElement.getAttribute('data-example-suggestions')) || [];
 
   const label = headerElement.getAttribute('data-label') || '';
+  const qaEnvironment = headerElement.getAttribute('data-qaenvironment') === 'true';
 
   render(
     <MainHeader
@@ -103,6 +104,7 @@ if (headerElement) {
       linksMobile={linksMobile}
       inputSearchLabel={label}
       exampleSuggestions={exampleSuggestions}
+      qaEnvironment={qaEnvironment}
     />,
     headerElement
   );
@@ -133,6 +135,7 @@ if (searchElement) {
 if (sectionSidebarElement) {
   const heading = sectionSidebarElement.getAttribute('data-heading');
   const icon = sectionSidebarElement.getAttribute('data-icon');
+  const iconAltText = sectionSidebarElement.getAttribute('data-icon-alt-text');
   const headingUrl = sectionSidebarElement.getAttribute('data-heading-url');
   const list =
     sectionSidebarElement.getAttribute('data-list') === null
@@ -143,6 +146,7 @@ if (sectionSidebarElement) {
     <SectionSidebar
       heading={heading}
       icon={icon}
+      iconAltText={iconAltText}
       list={list}
       headingUrl={headingUrl}
     />,

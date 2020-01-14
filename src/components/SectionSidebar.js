@@ -208,7 +208,7 @@ const SectionSidebar = props => {
           {props.icon && (
             <img
               src={props.icon}
-              alt=""
+              alt={props.iconAltText ? props.iconAltText : ''}
               role="presentation"
               className="b-section-sidebar__icon"
               aria-hidden
@@ -269,6 +269,7 @@ SectionSidebar.propTypes = {
   heading: PropTypes.string,
   headingUrl: PropTypes.string,
   icon: PropTypes.string,
+  iconAltText: PropTypes.string,
   list: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
