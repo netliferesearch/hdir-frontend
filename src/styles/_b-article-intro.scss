@@ -63,12 +63,17 @@
   }
   &__image-text {
     margin: 0rem 0 1rem 0;
-    font-size: $meta-text;
     color: $grey;
+    font-size: $font-xs;
+    @include mq($until: $tablet) {
+      font-size: $font-xs-mobile;
+    }
   }
   &__intro {
-    font-size: $medium-large-text;
-    font-weight: bold;
+    font-size: $font-l;
+    @include mq($until: $tablet) {
+      font-size: $font-l-mobile;
+    }
   }
   &__topic {
     font-weight: normal;
