@@ -31,7 +31,8 @@
       url('../static/fonts/lekton-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-$base-font-size: calc(17px + 1 * (100vw - 400px) / (1440 - 400));
+// $base-font-size: calc(17px + 1 * (100vw - 400px) / (1440 - 400));
+$base-font-size: $font-body;
 
 html {
   font-size: $base-font-size;
