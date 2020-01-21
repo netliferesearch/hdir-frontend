@@ -37,20 +37,17 @@ const TreatmentPageA = () => (
         </div>
         <div className="row l-mt-1">
           <div className="col-xs-12 col-md-6 l-mt-1">
-            <IconWithText text="Pakkeforløp" icon="../icons/Pakkeforløp.svg" />
-          </div>
-          <div className="col-xs-12 col-md-6 l-mt-1 t-small t-lg-right">
-            <Link href="#a">Hva er et pakkeforløp?</Link>
+            <IconWithText text="Pakkeforløp" subtext="Hva er dette?" link="#" icon="../icons/Pakkeforløp.svg" />
           </div>
         </div>
         <div className="row bottom-xs l-mt-2">
-          <div className="col-xs-12 col-md-4 col-lg-7">
-            <div className="t--small t--grey">VIS FORLØPET SOM</div>
+          <div className="col-xs-12 col-md-7 col-lg-8">
+            <div className="t--small">Vis forløpet som:</div>
             <div className="l-mt-1">
               <FilterList list={['Tekst', 'Flytdiagram']} />
             </div>
           </div>
-          <div className="col-xs-12 col-md-8 col-lg-5">
+          <div className="col-xs-12 col-md-5 col-lg-4">
             <div className="l-mt-1">
               <Select
                 label="Vis viktigste for:"

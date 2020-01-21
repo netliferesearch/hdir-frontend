@@ -60,7 +60,7 @@ table {
   display: flex;
   align-items: center;
   &__image {
-    height: 2em;
+    height: 2.5em;
     width: auto;
     margin-right: 0.75em;
 
@@ -69,9 +69,10 @@ table {
       margin-right: 0.6em;
     }
   }
+  &__text-wrapper {
+    display: inline-block;
+  }
   &__text {
-    text-transform: uppercase;
-    font-size: $meta-text;
-    font-weight: bold;
+    display: block;
   }
 }

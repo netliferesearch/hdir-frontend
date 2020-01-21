@@ -17,18 +17,25 @@ const IconWithText = props => (
       className={imageClasses(props.size)}
       aria-hidden
     />
-    <span className="b-icon-with-text__text">{props.text}</span>
+    <div className="b-icon-with-text__text-wrapper">
+      <span className="b-icon-with-text__text">{props.text}</span>
+      <a className="b-icon-with-text__text" href={props.link}>{props.subtext}</a>
+    </div>
   </div>
 );
 
 IconWithText.propTypes = {
   icon: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  subtext: PropTypes.string,
+  link: PropTypes.string,
   size: PropTypes.oneOf(['medium', 'small'])
 };
 
 IconWithText.defaultProps = {
-  size: 'medium'
+  size: 'medium',
+  subtext: '',
+  link: '',
 };
 
 export default IconWithText;
