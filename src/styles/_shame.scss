@@ -74,5 +74,10 @@ table {
   }
   &__text {
     display: block;
+    font-size: $font-xs;
   }
+}
+
+.u-right-sm {
+  margin-right: $space-sm;
 }

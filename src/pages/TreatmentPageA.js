@@ -32,18 +32,18 @@ const TreatmentPageA = () => (
         ]}
       />
       <main id="main">
-        <div className="l-mt-3">
-          <ChapterHeading heading="Lungekreft" line="none" h="h1" />
-        </div>
-        <div className="row l-mt-1">
-          <div className="col-xs-12 col-md-6 l-mt-1">
+        <div className="row l-mt-3">
+          <div className="col-xs-12 col-md-8">
+            <ChapterHeading heading="Lungekreft" line="none" h="h1" />
+          </div>
+          <div className="col-xs-12 col-md-4 b-flex b-flex--right">
             <IconWithText text="Pakkeforløp" subtext="Hva er dette?" link="#" icon="../icons/Pakkeforløp.svg" />
           </div>
         </div>
         <div className="row bottom-xs l-mt-2">
-          <div className="col-xs-12 col-md-7 col-lg-8">
-            <div className="t--small">Vis forløpet som:</div>
-            <div className="l-mt-1">
+          <div className="col-xs-12 col-md-7 col-lg-8 b-flex b-flex--center">
+            <div className="t--small u-right-sm">Vis forløpet som:</div>
+            <div className="">
               <FilterList list={['Tekst', 'Flytdiagram']} />
             </div>
           </div>
@@ -61,7 +61,7 @@ const TreatmentPageA = () => (
 
         <div className="row">
           <div className="col-xs-12">
-            <div className="l-mt-3">
+            <div className="l-mt-2">
               <Collapsible
                 heading="Inngang til pakkeforløpet"
                 smallContent
