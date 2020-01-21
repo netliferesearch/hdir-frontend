@@ -123,7 +123,7 @@
       flex-direction: column;
     }
     @include link-init($black);
-    padding: 1em;
+    padding: $space-sm;
 
     &:hover {
       &[href] {
@@ -161,7 +161,7 @@
         @include pseudo-arrow($arrow-right);
         top: 1.35em;
         position: absolute;
-        right: 1rem;
+        right: $space-sm;
       }
     }
 
@@ -201,6 +201,7 @@
   //
   &__item-description {
     width: 30%;
+    text-transform: uppercase;
     flex-shrink: 0;
     @include mq($until: $tablet) {
       width: calc(100% - 2em);
