@@ -20,7 +20,7 @@
     &--border {
       width: 100%;
       padding-bottom: calc(#{map-get($space-map, xs)} - 7px);
-      border-bottom: 4px solid $black;
+      border-bottom: 1px solid $grey-light;
       margin-bottom: calc(#{map-get($space-map, xs)} - 7px);
     }
   }
