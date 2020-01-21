@@ -1,6 +1,11 @@
 .b-flex {
   display: flex;
 }
+.b-flex--skip-mobile {
+  @include mq($until: $tablet) {
+    display: block;
+  }
+}
 .b-flex--right {
   justify-content: flex-end;
 }

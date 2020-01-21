@@ -36,7 +36,7 @@ const TreatmentPageA = () => (
           <div className="col-xs-12 col-md-8">
             <ChapterHeading heading="Lungekreft" line="none" h="h1" />
           </div>
-          <div className="col-xs-12 col-md-4 b-flex b-flex--right">
+          <div className="col-xs-12 col-md-4 b-flex b-flex--right b-flex--skip-mobile">
             <IconWithText text="Pakkeforløp" subtext="Hva er dette?" link="#" icon="../icons/Pakkeforløp.svg" />
           </div>
         </div>
