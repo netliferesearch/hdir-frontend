@@ -8,6 +8,7 @@
   font-size: $font-body;
   white-space: nowrap;
   cursor: pointer;
+  transition: all .1s ease-out;
 
   &--download {
     &:after {
@@ -42,7 +43,7 @@
 
   &--secondary {
     border: 2px solid $link-color;
-    color: $link-color !important;
+    color: $link-color;
     background: white;
     &.b-button--arrow {
       &:after {
@@ -53,22 +54,45 @@
       &:after {
         @include pseudo-arrow($arrow-down);
       }
+    }
+    
+    &:hover {
+      background: $link-color;
+      color: $white;
+    }
+  }
+  &.b-button--search {
+    &:after {
+      @include pseudo-arrow($search);
+    }
+    &:hover:after {
+      @include pseudo-arrow($search-white);
     }
   }
 
   &--secondary-dark {
     border: 2px solid $primary-color;
-    color: $primary-color !important;
+    color: $primary-color;
     background: white;
     &.b-button--arrow {
       &:after {
         @include pseudo-arrow($arrow-right);
+      }
+      &:hover:after {
+        @include pseudo-arrow($arrow-white-right);
       }
     }
     &.b-button--download {
       &:after {
         @include pseudo-arrow($arrow-down);
       }
+      &:hover:after {
+        @include pseudo-arrow($arrow-white-down);
+      }
+    }
+    &:hover {
+      background: $link-color;
+      color: $white;
     }
   }
   
