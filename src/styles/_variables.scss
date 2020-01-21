@@ -6,6 +6,7 @@ $blue-dark: #025169;
 $blue: #0667c6;
 $blue-light: #82b3e2;
 $blue-lighter: #e6f3ff;
+$blue-lightest: #F6FBFF;
 $yellow-dark: #d39000;
 $yellow: #ffc900;
 $yellow-light: #fef4ce;
@@ -94,6 +95,15 @@ $font-sm: $font-h5;
 $font-sm-mobile: $font-h5-mobile;
 $font-xs: 14px;
 $font-xs-mobile: 14px;
+
+/* Spacing */
+$space-xxs: 0.25rem;
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 4rem;
+$space-xxl: 8rem;
 
 // Layout
 $container-small: 4vw;

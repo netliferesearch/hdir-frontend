@@ -61,11 +61,49 @@ $base-font-weight: normal;
 $base-font-family: 'Work Sans', sans-serif;
 $text-color: $black;
 
-// Font sizes
+
+// OLD Font sizes
 $extra-large-text: 2.5rem;
 $large-text: 1.8rem;
 $medium-large-text: 1.2rem;
 $meta-text: 0.8725rem;
+
+/* Typography */
+$font-body: 16px;
+$font-body-mobile: 16px;
+
+$font-h1: 36px;
+$font-h1-mobile: 24px;
+$font-h2: 24px;
+$font-h2-mobile: 21px;
+$font-h3: 20px;
+$font-h3-mobile: 19px;
+$font-h4: 18px;
+$font-h4-mobile: 17px;
+$font-h5: 16px;
+$font-h5-mobile: 16px;
+
+$font-xxl: $font-h1;
+$font-xxl-mobile: $font-h1-mobile;
+$font-xl: $font-h2;
+$font-xl-mobile: $font-h2-mobile;
+$font-l: $font-h3;
+$font-l-mobile: $font-h3-mobile;
+$font-md: $font-h4;
+$font-md-mobile: $font-h4-mobile;
+$font-sm: $font-h5;
+$font-sm-mobile: $font-h5-mobile;
+$font-xs: 14px;
+$font-xs-mobile: 14px;
+
+/* Spacing */
+$space-xxs: 0.25rem;
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 4rem;
+$space-xxl: 8rem;
 
 // Layout
 $container-small: 4vw;

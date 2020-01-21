@@ -57,8 +57,8 @@
   }
 
   &--secondary-dark {
-    border: 2px solid $secondary-color;
-    color: $secondary-color !important;
+    border: 2px solid $primary-color;
+    color: $primary-color !important;
     background: white;
     &.b-button--arrow {
       &:after {
