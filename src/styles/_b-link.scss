@@ -90,6 +90,7 @@
       }
       &:hover {
         text-decoration: underline;
+        border-width: 1px;
       }
     }
     &--small {
@@ -104,11 +105,19 @@
       background-color: white;
       color: $link-color !important;
       border: 1px solid $link-color;
+      &:hover {
+        border-width: 0px;
+      }
     }
     &--shadow {
       background-color: white;
       color: $link-color !important;
       box-shadow: 0 1px 5px $grey-light;
+      border-width: 0px;
+      &:hover {
+        box-shadow: 0 1px 15px $grey-light;
+        border-width: 0px;
+      }
     }
     &--no-underline {
       @include underline(transparent);

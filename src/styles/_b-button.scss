@@ -9,6 +9,11 @@
   white-space: nowrap;
   cursor: pointer;
   transition: all .1s ease-out;
+  
+  &:hover {
+    background: transparent;
+    color: $link-color;
+  }
 
   &--download {
     &:after {
