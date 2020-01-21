@@ -3,9 +3,9 @@
   color: white;
   background-color: $link-color;
   border: 2px solid $link-color;
-  padding: 0.5em 2em;
+  padding: $space-sm $space-lg;
   border-radius: 2em;
-  font-size: $base-font-size;
+  font-size: $font-body;
   white-space: nowrap;
   cursor: pointer;
 
@@ -22,7 +22,7 @@
   }
 
   &--small {
-    font-size: $meta-text;
+    font-size: $font-body;
   }
   
   &--clean {
