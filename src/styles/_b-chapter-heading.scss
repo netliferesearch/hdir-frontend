@@ -1,7 +1,7 @@
 .b-chapter-heading {
   display: block;
   position: relative;
-  border-top: 4px solid $black;
+  border-top: 1px solid $link-color;
   padding: 0 0 1em 0;
   @include underline(transparent);
 
@@ -45,7 +45,7 @@
 
   &--line-bottom {
     border-top: 0;
-    border-bottom: 4px solid $black !important;
+    border-bottom: 1px solid $link-color !important;
     padding-bottom: 1em;
   }
   
