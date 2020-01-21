@@ -42,8 +42,7 @@
     }
 
     &:focus ~ .b-checkbox-group__indicator {
-      outline: 3px solid black;
-      border-radius: 0;
+      background: $grey-light;
     }
 
     &:checked ~ .b-checkbox-group__indicator {
