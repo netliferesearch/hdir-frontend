@@ -24,8 +24,8 @@ const buttonClasses = (active, size, subtle) =>
     'b-collapsible__button': true,
     'b-collapsible__button--active': active,
     'b-collapsible__button--subtle': subtle,
-    'b-collapsible__button--small': size === 'small',
     'b-collapsible__button--tiny': size === 'tiny',
+    'b-collapsible__button--small': size === 'small',
     'b-collapsible__button--medium': size === 'medium'
   });
 
@@ -35,6 +35,7 @@ const headingClasses = (size, bold) =>
     h2: size === 'large',
     h3: size === 'medium',
     normal: size === 'small',
+    normal: size === 'tiny',
     // These additional 'bold' classes are here because HDIR wants to keep semantic choices whilst
     //  still having control over 'bold' styles on headings.
     //  Note that one has to explicitly specify if the 'bold' prop is false. Leaving it undefined
@@ -82,8 +83,14 @@ const Collapsible = props => {
   useEffect(() => {
     setCollapsed(props.collapsed);
   }, [props.collapsed]);
-
+  
+  const id = props.id || uuidv4();
+  
   const toggleCollapse = () => {
+    const parent = document.querySelectorAll(`[data-parent-id="${id}"]`);
+    if (parent.length > 0) {
+      parent[0].classList.toggle('b-collapsible--active');
+    }
     setCollapsed(!collapsed);
   };
 
@@ -94,13 +101,13 @@ const Collapsible = props => {
       if (props.size === 'large') return 'h2';
       else if (props.size === 'medium') return 'h3';
       else if (props.size === 'small') return 'h4';
+      else if (props.size === 'tiny') return 'h5';
     }
   };
 
-  const id = props.id || 'changeThis_everyIdShouldBeUnique';
-
   return (
     <div
+      data-parent-id={id}
       className={collapsibleClasses(props.size, props.subtle, props.noBorder, props.background, collapsed)}
       ref={parentElement}
     >
@@ -154,7 +161,7 @@ const Collapsible = props => {
       )}
 
       <div
-        id={uuidv4()}
+        id={id}
         aria-hidden={!collapsed}
         hidden={!collapsed}
         className={contentClasses(props.smallContent)}
