@@ -58,6 +58,10 @@ table {
 .b-icon-with-text {
   display: flex;
   align-items: center;
+  @include mq($until: tablet) {
+    border-bottom: 1px solid $grey-light;
+    padding-bottom: $space-sm;
+  }
   &__image {
     height: 2.5em;
     width: auto;
