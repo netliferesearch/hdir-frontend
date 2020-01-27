@@ -121,6 +121,7 @@
 
     @include mq($until: $tablet) {
       flex-direction: column;
+      padding: $space-sm 0;
     }
     @include link-init($black);
     padding: $space-sm;
