@@ -11,6 +11,10 @@ const LongShortHeading = props => {
             {props.short}
           </span>
         )}
+        
+        {!props.short && <span>{props.long}</span>}
+      </h1>
+      <div>
         {props.short && props.long && (
           <div className="b-long-short-heading__sub">
             {props.icon && (
@@ -22,16 +26,17 @@ const LongShortHeading = props => {
                 className="b-long-short-heading__sub-icon"
               />
             )}
-            {props.long}
+            <div className="b-long-short-heading__text">
+              {props.long}
+              {props.url && 
+                <Link href={props.url} arrow>
+                  {props.linkText}
+                </Link>
+              }
+            </div>
           </div>
         )}
-        {!props.short && <span>{props.long}</span>}
-      </h1>
-      {props.url && <div className="b-long-short-heading__link">
-        <Link href={props.url} arrow>
-          {props.linkText}
-        </Link>
-      </div>}
+      </div>
     </div>
   );
 };
