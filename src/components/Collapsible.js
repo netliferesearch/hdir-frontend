@@ -86,14 +86,6 @@ const Collapsible = props => {
   
   const id = props.id || uuidv4();
   
-  const toggleCollapse = () => {
-    const parent = document.querySelectorAll(`[data-parent-id="${id}"]`);
-    if (parent.length > 0) {
-      parent[0].classList.toggle('b-collapsible--active');
-    }
-    setCollapsed(!collapsed);
-  };
-
   const headingSelector = () => {
     if (props.h) {
       return props.h;
@@ -118,7 +110,7 @@ const Collapsible = props => {
         className={buttonClasses(collapsed, props.size, props.subtle)}
         aria-expanded={collapsed}
         aria-controls={id}
-        onClick={toggleCollapse}
+        onClick={e => setCollapsed(!collapsed)}
       >
         <Heading h={headingSelector()} className={headingClasses(props.size, props.bold)}>
           {props.heading}
