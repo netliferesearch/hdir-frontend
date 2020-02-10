@@ -24,17 +24,19 @@
 
   &__heading {
     display: flex;
+    padding-top: $space-sm;
     padding-bottom: $space-sm;
-    margin-bottom: $space-xs;
-    font-weight: bold;
+    @include underline($grey-light);
+    border-top: 1px solid $grey-light;
 
     a {
       @include underline(transparent);
     }
 
     &--thick {
+      padding-top: 0;
       padding-bottom: $space-sm;
-      border-bottom: 1px solid $grey-light;
+      border-top: 0;
     }
   }
   &__icon {
@@ -48,7 +50,7 @@
     padding: $space-xs  $space-xxs;
     color: $link-color !important;
     font-size: $font-xs;
-    @include underline(transparent);
+    @include underline($grey-light);
 
     &:first-child {
       border-top: 0;
