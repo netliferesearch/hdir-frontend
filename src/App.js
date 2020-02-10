@@ -182,7 +182,7 @@ class App extends Component {
               MedicinePage
               <Route component={NotFound} />
             </Switch>
-            <Box noPadding square color="blueDark">
+            <Box square color="blueDark">
               <div className="l-container l-mt-2">
                 <Footer />
               </div>
