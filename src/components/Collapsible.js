@@ -19,14 +19,15 @@ import uuidv4 from 'uuid/v4';
 import Alert from './Alert';
 import Heading from './Heading';
 
-const buttonClasses = (active, size, subtle) =>
+const buttonClasses = (active, size, subtle, button) =>
   classNames({
     'b-collapsible__button': true,
     'b-collapsible__button--active': active,
     'b-collapsible__button--subtle': subtle,
     'b-collapsible__button--tiny': size === 'tiny',
     'b-collapsible__button--small': size === 'small',
-    'b-collapsible__button--medium': size === 'medium'
+    'b-collapsible__button--medium': size === 'medium',
+    'b-button b-button--secondary': button,
   });
 
 const headingClasses = (size, bold) =>
@@ -160,6 +161,25 @@ const Collapsible = props => {
       >
         {props.children}
       </div>
+      { props.background && collapsed &&
+        (
+          <div className="b-collapsible__footer">
+            <button
+              className={buttonClasses(collapsed, 'secondary', false, true)}
+              aria-expanded={collapsed}
+              aria-controls={id}
+              onClick={e => setCollapsed(!collapsed)}
+              >
+              Lukk
+            </button>
+            { props.date ? 
+              <div className="b-collapsible__meta-date">
+                {props.date}
+              </div>
+            : null}
+          </div>
+        )
+      }
     </div>
   );
 };
@@ -168,6 +188,7 @@ Collapsible.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   subheadingContent: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  date: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,

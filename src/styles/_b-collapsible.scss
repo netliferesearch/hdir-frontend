@@ -7,7 +7,7 @@
   .b-collapsible {
     background: none;
     border: none;
-    padding: $spaceSmall $space $spaceSmall $space*1.5;
+    padding: $spaceSmall $space $spaceSmall $space;
     margin-left: 0;
     
     &--tiny {
@@ -79,8 +79,8 @@
 
   &__button {
     position: relative;
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: auto;
     background: none;
     border: 0;
     text-align: left;
@@ -118,6 +118,17 @@
 
     &:active {
       color: $black;
+    }
+    
+    /* Dont add before-arrows when simple button inside Collapsible */
+    &.b-button {
+      &:before {
+        display: none;  
+      }
+      &:hover,:focus {
+        background: $primary-color;
+        color: white !important;
+      }
     }
 
     &--subtle {
@@ -220,5 +231,14 @@
   &__meta-heading {
     font-size: $meta-text;
     margin-top: 10px;
+  }
+  &__footer {
+    margin-bottom: $spaceSmall;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__meta-date {
+    font-size: $meta-text;
   }
 }
