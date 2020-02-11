@@ -8,12 +8,6 @@ $base-font-family: 'Work Sans', sans-serif;
 $base-line-height: 1.6;
 $text-color: $black;
 
-// OLD Font sizes
-$extra-large-text: 2.5rem;
-$large-text: 1.8rem;
-$medium-large-text: 1.2rem;
-$meta-text: 0.8725rem;
-
 /* Typography */
 $font-body: 16px;
 $font-body-mobile: 16px;
@@ -41,6 +35,12 @@ $font-sm: $font-h5;
 $font-sm-mobile: $font-h5-mobile;
 $font-xs: 14px;
 $font-xs-mobile: 14px;
+
+// DEPRECATED Font sizes
+$extra-large-text: $font-xxl;
+$large-text: $font-l;
+$medium-large-text: $font-md;
+$meta-text: $font-sm;
 
 /* Spacing */
 $space-xxs: 0.25rem;
