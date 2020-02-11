@@ -112,7 +112,7 @@
       background-image: url(../static/icons/chevron.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      left: 0;
+      left: 5px;
       top: 5px;
     }
 
@@ -186,7 +186,7 @@
         margin-left: -$space;
         transform: rotate(0deg);
         right: 0;
-        top: 0;
+        top: -2px;
         
       }
       &.b-collapsible__button--active:after {
@@ -211,7 +211,8 @@
       padding-top: $space;
       display: inline-block !important;
     }
-    h5 {
+    .b-collapsible__heading {
+      padding: 0;
       text-transform: none;
     }
     button h4 {
