@@ -22,29 +22,42 @@ const buttonClasses = (
     'b-button--secondary-dark': secondaryDark
   });
 
-const Button = props => {
+const Button = ({ 
+  arrow,
+  download,
+  small,
+  secondary,
+  plain,
+  clean,
+  secondaryDark,
+  onClick,
+  icon,
+  children,
+  ...rest
+}) => {
+  
   const allClassNames = buttonClasses(
-    props.arrow,
-    props.download,
-    props.small,
-    props.secondary,
-    props.plain,
-    props.clean,
-    props.secondaryDark
+    arrow,
+    download,
+    small,
+    secondary,
+    plain,
+    clean,
+    secondaryDark,
   );
-
+  
   return (
-    <button className={allClassNames} onClick={props.onClick} {...props}>
-      {props.icon && (
+    <button className={allClassNames} onClick={onClick} {...rest}>
+      {icon && (
         <div
           className="b-link__icon"
           role="presentation"
-          style={{ backgroundImage: `url(${props.icon})` }}
+          style={{ backgroundImage: `url(${icon})` }}
         />
       )}
-      {props.icon ? 
-        (<span className="b-button__underline">{props.children}</span>) 
-      : props.children}
+      {icon ? 
+        (<span className="b-button__underline">{children}</span>) 
+      : children}
     </button>
   );
 };

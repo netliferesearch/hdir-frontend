@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SquareImage = props => (
-  <div className="b-square-image" role="img" aria-label={props.alt}>
+const SquareImage = ({ alt, src }) => (
+  <div className="b-square-image" role="img" aria-label={alt}>
     <div
       className="b-square-image__background"
-      style={{ backgroundImage: `url(${props.src})` }}
+      style={{ backgroundImage: `url(${src})` }}
     />
     <div className="b-square-image__image-wrapper">
       <div
         className="b-square-image__image"
-        style={{ backgroundImage: `url(${props.src})` }}
+        style={{ backgroundImage: `url(${src})` }}
       />
     </div>
   </div>

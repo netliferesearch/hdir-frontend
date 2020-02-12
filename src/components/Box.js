@@ -14,9 +14,9 @@ const boxClasses = (color, square, noPadding) =>
     'b-box--yellow': color === 'yellow'
   });
 
-const Box = props => (
-  <section className={boxClasses(props.color, props.square, props.noPadding)}>
-    {props.children}
+const Box = ({ color, square, noPadding, children }) => (
+  <section className={boxClasses(color, square, noPadding)}>
+    {children}
   </section>
 );
 

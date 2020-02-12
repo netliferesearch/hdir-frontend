@@ -8,9 +8,9 @@ const imageClasses = ratio =>
     'b-image--16-9': ratio === '16:9'
   });
 
-const Image = props => (
-  <div className={imageClasses(props.ratio)}>
-    <img src={props.src} alt={props.alt} />
+const Image = ({ ratio, src, alt }) => (
+  <div className={imageClasses(ratio)}>
+    <img src={src} alt={alt} />
   </div>
 );
 
