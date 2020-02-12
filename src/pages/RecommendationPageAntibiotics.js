@@ -134,13 +134,24 @@ const RecommendationPageAntibiotics = () => (
                 heading="Begrunnelse - dette er anbefalingen basert på"
                 size="small"
               >
+              <Collapsible
+                h="h4"
+                heading="Sammmendrag"
+                size="small"
+              >
+              </Collapsible>
+              <Collapsible
+                h="h4"
+                heading="Vurdering"
+                size="small"
+              >
+              </Collapsible>
                 <Collapsible
                   h="h4"
                   heading="Forskningsgrunnlag"
                   size="small"
-                  collapsed
                 >
-                  <div className="row l-mt-2">
+                  <div className="row l-mt-1">
                     <strong className="col-xs-12 col-md-3 top-xs">Populasjon</strong>
                     <div className="col-xs-12 col-md-9">Pasienter med type 2 diabetes</div>
                   </div>
