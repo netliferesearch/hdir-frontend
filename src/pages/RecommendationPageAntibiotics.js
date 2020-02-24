@@ -190,31 +190,6 @@ const RecommendationPageAntibiotics = () => (
               </Collapsible>
             </Collapsible>
             
-            <Collapsible
-              heading="Sekundær peritonitt"
-              background
-            >
-              <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
-              <Collapsible
-                h="h3"
-                heading="Behandling"
-                size="small"
-                collapsed
-              >
-              <p>Vanlig behandlingsvarighet: 5 dager</p>
-              <p>Ampicillin iv 1,2 g x 4 iv<br />
-               + Gentamicin 5 mg/kg x 1 iv  <br />
-              + Metronidazol 1g x 1 iv</p>
-                <Collapsible
-                  h="h3"
-                  heading="Kontraindikasjoner"
-                  size="tiny"
-                >
-                Penicillinallergi
-                </Collapsible>
-              </Collapsible>
-              
-            </Collapsible>
           </article>
       </main>
     </div>
