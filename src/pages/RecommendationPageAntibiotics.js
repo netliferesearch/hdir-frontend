@@ -194,7 +194,7 @@ const RecommendationPageAntibiotics = () => (
       </main>
     </div>
     <div className="l-mt-4">
-      <Box color="transparent" square noPadding>
+      <Box square>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
