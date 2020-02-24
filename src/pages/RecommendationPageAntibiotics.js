@@ -29,17 +29,21 @@ const RecommendationPageAntibiotics = () => (
               >
                 <p>...Hva er en sterk anbefaling...</p>
               </Collapsible>
-              <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
               <Collapsible
                 h="h3"
                 heading="Behandling"
                 size="small"
                 collapsed
               >
+              <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
               <p>Minimum behandlingstid ved ukomplisert forløp (inkludert oral behandling): 5 døgn</p>
-              <p>Ampicillin iv 1,2 g x 4 iv<br />
-               + Gentamicin 5 mg/kg x 1 iv  <br />
-              + Metronidazol 1g x 1 iv</p>
+              <h4>Standard behandling</h4>
+              
+              <p>Anidulafungin 200 mg x 1 iv ladningsdose etterfulgt av<br />
+              Anidulafungin 100 mg x 1 iv</p>
+              <p>Ampicillin iv 1,2 g x 4 iv <span className="t--infotext">– Infunderes over 3 timer</span><br />
+               + Gentamicin 5 mg/kg x 1 iv <span className="t--infotext">– 6 timers intervall</span> <br />
+              + Metronidazol 1g x 1 iv <span className="t--infotext">– I dialyseposen</span></p>
                 <Collapsible
                   h="h5"
                   heading="Kontraindikasjoner"
