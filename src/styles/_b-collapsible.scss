@@ -11,7 +11,7 @@
     margin-left: 0;
     
     &--tiny {
-      padding: $spaceSmall/2 0;
+      padding: $spaceSmall 0 $spaceSmall/2;
     }
     
     .b-collapsible--small:nth-child(odd) {
@@ -207,6 +207,12 @@
     animation: fadeInUp 300ms ease;
     padding-bottom: $space;
     
+    p {
+      margin-bottom: 0;
+    }
+    h4 + div {
+      margin-top: $spaceSmall;
+    }
     h4 {
       padding-top: $space;
       display: inline-block !important;

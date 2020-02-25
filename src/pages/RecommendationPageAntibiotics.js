@@ -40,8 +40,8 @@ const RecommendationPageAntibiotics = () => (
               <h4>Standard behandling</h4>
               
               <p>Anidulafungin 200 mg x 1 iv ladningsdose etterfulgt av<br />
-              Anidulafungin 100 mg x 1 iv</p>
-              <p>Ampicillin iv 1,2 g x 4 iv <span className="t--infotext">– Infunderes over 3 timer</span><br />
+              Anidulafungin 100 mg x 1 iv<br />
+              + Ampicillin iv 1,2 g x 4 iv <span className="t--infotext">– Infunderes over 3 timer</span><br />
                + Gentamicin 5 mg/kg x 1 iv <span className="t--infotext">– 6 timers intervall</span> <br />
               + Metronidazol 1g x 1 iv <span className="t--infotext">– I dialyseposen</span></p>
                 <Collapsible
@@ -83,17 +83,7 @@ const RecommendationPageAntibiotics = () => (
                 TBW > 100: 2g x 4
                 </p>
                 </Collapsible>
-                <Collapsible
-                  h="h5"
-                  heading="Overgang til oral behandling"
-                  size="tiny"
-                >
-                  <p>Vanlig behandlingsvarighet: 5-7 dager etter iv behandling</p>
-                  <p>
-                  Ciprofloksacin 500 mg x 2 oral  
-                  <br />+ metronidazol 400 mg x 3 oral 
-                  </p>
-                </Collapsible>
+                
                 <h4>Alternative behandlingsregimer </h4>
                 <Collapsible
                   h="h5"
