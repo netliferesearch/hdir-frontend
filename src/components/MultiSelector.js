@@ -5,8 +5,14 @@ import classNames from 'classnames';
 import CheckboxGroup from './CheckboxGroup';
 import Button from './Button';
 
-const MultiSelector = props => {
-  const [options, setOptions] = useState(props.options);
+const MultiSelector = ({ 
+  options: optionsProp,
+  buttonText, 
+  confirmText, 
+  checkboxGroupName, 
+  handleChange 
+}) => {
+  const [options, setOptions] = useState(optionsProp);
   const [open, setOpen] = useState(false);
   const boxElement = useRef();
   const buttonElement = useRef();
@@ -15,8 +21,8 @@ const MultiSelector = props => {
   const closeSelector = useCallback(() => {
     setOpen(false);
     // Resets the options to prop values if its closed
-    setOptions(props.options);
-  }, [props.options]);
+    setOptions(options);
+  }, [options]);
 
   const handleOutsideClick = useCallback(
     e => {
@@ -63,13 +69,13 @@ const MultiSelector = props => {
         aria-expanded={open}
         ref={buttonElement}
       >
-        {props.buttonText}
+        {buttonText}
       </button>
       {open && (
         <div className="b-multi-selector__box" ref={boxElement}>
           <div className="b-multi-selector__checkboxes">
             <CheckboxGroup
-              name={props.checkboxGroupName}
+              name={checkboxGroupName}
               options={options}
               handleChange={setOptions}
             />
@@ -79,11 +85,11 @@ const MultiSelector = props => {
               secondary
               small
               onClick={() => {
-                props.handleChange(options, props.checkboxGroupName);
+                handleChange(options, checkboxGroupName);
                 closeSelector();
               }}
             >
-              {props.confirmText}
+              {confirmText}
             </Button>
             <Button plain small onClick={closeSelector}>
               Avbryt

@@ -32,32 +32,47 @@ const linkClasses = (
     'b-link__link--no-underline': noUnderline
   });
 
-const Link = props => (
+const Link = ({
+  icon, 
+  href, 
+  arrow, 
+  arrowLeft, 
+  small, 
+  secondary, 
+  button, 
+  buttonSecondary, 
+  buttonInherit, 
+  color, 
+  wideButton, 
+  heading, 
+  noUnderline, 
+  children
+  }) => (
   <div className="b-link">
-    {props.icon && (
+    {icon && (
       <div
         className="b-link__icon"
         role="presentation"
-        style={{ backgroundImage: `url(${props.icon})` }}
+        style={{ backgroundImage: `url(${icon})` }}
       />
     )}
     <a
-      href={props.href}
+      href={href}
       className={linkClasses(
-        props.arrow,
-        props.arrowLeft,
-        props.small,
-        props.secondary,
-        props.button,
-        props.buttonSecondary,
-        props.buttonInherit,
-        props.color,
-        props.wideButton,
-        props.heading,
-        props.noUnderline
+        arrow,
+        arrowLeft,
+        small,
+        secondary,
+        button,
+        buttonSecondary,
+        buttonInherit,
+        color,
+        wideButton,
+        heading,
+        noUnderline
       )}
     >
-      {props.children}
+      {children}
     </a>
   </div>
 );

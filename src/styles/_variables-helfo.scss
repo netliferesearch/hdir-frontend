@@ -61,22 +61,39 @@ $base-font-weight: normal;
 $base-font-family: 'Work Sans', sans-serif;
 $text-color: $black;
 
-// Font sizes
+// OLD Font sizes
 $extra-large-text: 2.5rem;
 $large-text: 1.8rem;
 $medium-large-text: 1.2rem;
 $meta-text: 0.8725rem;
 
-$h1: calc(36px + 1 * (100vw - 400px) / (1440 - 400));
-$h1Mobile: calc(24px + 1 * (100vw - 400px) / (1440 - 400));
-$h2: calc(24px + 1 * (100vw - 400px) / (1440 - 400));
-$h2Mobile: calc(21px + 1 * (100vw - 400px) / (1440 - 400));
-$h3: calc(20px + 1 * (100vw - 400px) / (1440 - 400));
-$h3Mobile: calc(19px + 1 * (100vw - 400px) / (1440 - 400));
-$h4: calc(18px + 1 * (100vw - 400px) / (1440 - 400));
-$h4Mobile: calc(17px + 1 * (100vw - 400px) / (1440 - 400));
-$h5: calc(16px + 1 * (100vw - 400px) / (1440 - 400));
-$h5Mobile: calc(16px + 1 * (100vw - 400px) / (1440 - 400));
+/* Typography */
+$font-body: 16px;
+$font-body-mobile: 16px;
+
+$font-h1: 36px;
+$font-h1-mobile: 24px;
+$font-h2: 24px;
+$font-h2-mobile: 21px;
+$font-h3: 20px;
+$font-h3-mobile: 19px;
+$font-h4: 18px;
+$font-h4-mobile: 17px;
+$font-h5: 16px;
+$font-h5-mobile: 16px;
+
+$font-xxl: $font-h1;
+$font-xxl-mobile: $font-h1-mobile;
+$font-xl: $font-h2;
+$font-xl-mobile: $font-h2-mobile;
+$font-l: $font-h3;
+$font-l-mobile: $font-h3-mobile;
+$font-md: $font-h4;
+$font-md-mobile: $font-h4-mobile;
+$font-sm: $font-h5;
+$font-sm-mobile: $font-h5-mobile;
+$font-xs: 14px;
+$font-xs-mobile: 14px;
 
 // Layout
 $container-small: 4vw;

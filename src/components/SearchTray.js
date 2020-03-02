@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SearchTray = props => {
+const SearchTray = ({ children }) => {
   return (
     <div className="b-search-tray b-search-tray--blue">
-      <div className="b-search-tray__item">{props.children}</div>
+      <div className="b-search-tray__item">{children}</div>
     </div>
   );
 };

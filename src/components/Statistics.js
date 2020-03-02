@@ -8,22 +8,22 @@ const textWrapperClasses = flex =>
     'b-statistics__text-wrapper--flex': flex
   });
 
-const Statistics = props => (
+const Statistics = ({ icon, flexText, bigText, smallText }) => (
   <div className="b-statistics">
-    {props.icon && (
+    {icon && (
       <img
         className="b-statistics__icon"
-        src={props.icon}
+        src={icon}
         alt=""
         role="presentation"
       />
     )}
-    <div className={textWrapperClasses(props.flexText)}>
-      {props.bigText && (
-        <div className="b-statistics__big-text">{props.bigText}</div>
+    <div className={textWrapperClasses(flexText)}>
+      {bigText && (
+        <div className="b-statistics__big-text">{bigText}</div>
       )}
-      {props.smallText && (
-        <div className="b-statistics__small-text">{props.smallText}</div>
+      {smallText && (
+        <div className="b-statistics__small-text">{smallText}</div>
       )}
     </div>
   </div>

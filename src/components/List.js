@@ -16,20 +16,20 @@ const listItemsClasses = columns =>
     'b-nav-list__items--columns': columns
   });
 
-const List = props => {
+const List = ({ id, heading, columns, list }) => {
   return (
     <nav
       className="b-nav-list"
-      id={props.id}
+      id={id}
       aria-label="unique-text-explaining-this"
     >
-      {props.heading && (
-        <h3 className="b-nav-list__heading h4">{props.heading}</h3>
+      {heading && (
+        <h3 className="b-nav-list__heading h4">{heading}</h3>
       )}
-      <ul className={listItemsClasses(props.columns)}>
-        {props.list.map(item => (
+      <ul className={listItemsClasses(columns)}>
+        {list.map(item => (
           <li
-            className={listItemClasses(props.columns)}
+            className={listItemClasses(columns)}
             key={shortid.generate()}
           >
             {item.url ? (
