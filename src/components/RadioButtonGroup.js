@@ -9,16 +9,16 @@ const legendClasses = border =>
     'b-radio-button-group__legend--border': border
   });
 
-const RadioButtonGroup = props => (
+const RadioButtonGroup = ({ heading, options, name, border }) => (
   <fieldset className="b-radio-button-group">
-    {props.heading && (
-      <legend className={legendClasses(props.border)}>{props.heading}</legend>
+    {heading && (
+      <legend className={legendClasses(border)}>{heading}</legend>
     )}
-    {props.options.map(option => {
+    {options.map(option => {
       return (
         <label className="b-radio-button-group__label" key={shortid.generate()}>
           <input
-            name={props.name}
+            name={name}
             type="radio"
             className="b-radio-button-group__input"
             value={option.value}

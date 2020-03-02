@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Heading = props => {
-  if (props.h === 'h1')
-    return <h1 className={props.className}>{props.children}</h1>;
-  else if (props.h === 'h2')
-    return <h2 className={props.className}>{props.children}</h2>;
-  else if (props.h === 'h3')
-    return <h3 className={props.className}>{props.children}</h3>;
-  else if (props.h === 'h4')
-    return <h4 className={props.className}>{props.children}</h4>;
-  else if (props.h === 'h5')
-    return <h5 className={props.className}>{props.children}</h5>;
-  else if (props.h === 'h6')
-    return <h6 className={props.className}>{props.children}</h6>;
-  else if (props.h === 'h0')
-    return <div className={props.className}>{props.children}</div>;
+const Heading = ({ className, children, h }) => {
+  if (h === 'h1')
+    return <h1 className={className}>{children}</h1>;
+  else if (h === 'h2')
+    return <h2 className={className}>{children}</h2>;
+  else if (h === 'h3')
+    return <h3 className={className}>{children}</h3>;
+  else if (h === 'h4')
+    return <h4 className={className}>{children}</h4>;
+  else if (h === 'h5')
+    return <h5 className={className}>{children}</h5>;
+  else if (h === 'h6')
+    return <h6 className={className}>{children}</h6>;
+  else if (h === 'h0')
+    return <div className={className}>{children}</div>;
   else return '';
 };
 

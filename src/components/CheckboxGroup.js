@@ -14,24 +14,24 @@ const legendClasses = border =>
     return values.sort((a, b) => ('' + a.label).replace(/\W/g, '').localeCompare(b.label.replace(/\W/g, '')))
   }
 
-const CheckboxGroup = props => (
+const CheckboxGroup = ({ heading, border, options, name, handleChange }) => (
   <fieldset className="b-checkbox-group">
-    {props.heading && (
-      <legend className={legendClasses(props.border)}>{props.heading}</legend>
+    {heading && (
+      <legend className={legendClasses(border)}>{heading}</legend>
     )}
-    {sort(props.options).map((option, index) => {
+    {sort(options).map((option, index) => {
       return (
         <label className="b-checkbox-group__label" key={shortid.generate()}>
           <input
-            name={props.name}
+            name={name}
             type="checkbox"
             className="b-checkbox-group__input"
             value={option.value}
             checked={option.checked}
             onChange={() =>
               // Returns an updates list with the item toggeled
-              props.handleChange(
-                sort(props.options).map((newOption, i) =>
+              handleChange(
+                sort(options).map((newOption, i) =>
                   i === index
                     ? {
                         ...newOption,

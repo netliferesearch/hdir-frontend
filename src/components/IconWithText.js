@@ -16,13 +16,13 @@ const wrapperClasses = size =>
 const IconWithText = props => (
   <div className={wrapperClasses(props.size)}>
     <img
-      src={props.icon}
+      src={icon}
       alt=""
       role="presentation"
-      className={imageClasses(props.size)}
+      className={imageClasses(size)}
       aria-hidden
     />
-    <span className="b-icon-with-text__text">{props.text}</span>
+    <span className="b-icon-with-text__text">{text}</span>
   </div>
 );
 

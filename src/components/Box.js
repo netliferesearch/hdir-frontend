@@ -19,6 +19,7 @@ const boxClasses = (color, square, noPadding, tinyPadding) =>
 const Box = props => (
   <section className={boxClasses(props.color, props.square, props.noPadding, props.tinyPadding)}>
     {props.children}
+
   </section>
 );
 

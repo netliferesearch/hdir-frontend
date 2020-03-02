@@ -9,7 +9,6 @@ const ListItemType = props => {
   const { 
     type: type = '', 
     fields: fields = null, 
-    url: url = '#' 
   } = props.itemType;
 
   return (
@@ -198,7 +197,7 @@ const ListItemType = props => {
           <div className="b-list-item">
             <div className="b-list-item-type__text">
               {fields.download && (
-                <a href="#" className="b-list-item-type__download b-list-item-type--float b-list-item-type--link" aria-label="Last ned PDF">PDF</a>
+                <a href="#pdf" className="b-list-item-type__download b-list-item-type--float b-list-item-type--link" aria-label="Last ned PDF">PDF</a>
               )}
               {fields.heading && 
                 <h3>{fields.heading}</h3>

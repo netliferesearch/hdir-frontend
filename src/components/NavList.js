@@ -36,70 +36,74 @@ const listLinkClasses = (noArrow, active, ordered, file, url) =>
     'b-nav-list__link--ordered': ordered
   });
 
-const NavList = props => {
-  const { list: list = [] } = props;
-
-  return (
-    <nav
-      className={listClasses(props.small)}
-      id={props.id}
-      aria-label="unique-text-explaining-this"
-    >
-      {props.heading && (
-        <h2 className="b-nav-list__heading">{props.heading}</h2>
-      )}
-      <ul className={listItemsClasses(props.columns)}>
-        {list.map(item => (
-          <li
-            className={listItemClasses(props.columns)}
-            key={shortid.generate()}
+const NavList = ({ 
+  id,
+  small, 
+  heading, 
+  columns, 
+  noArrow, 
+  ordered, 
+  list: list = [] 
+}) => (
+  <nav
+    className={listClasses(small)}
+    id={id}
+    aria-label="unique-text-explaining-this"
+  >
+    {heading && (
+      <h2 className="b-nav-list__heading">{heading}</h2>
+    )}
+    <ul className={listItemsClasses(columns)}>
+      {list.map(item => (
+        <li
+          className={listItemClasses(columns)}
+          key={shortid.generate()}
+        >
+          <a
+            href={item.url}
+            className={listLinkClasses(
+              noArrow,
+              item.active,
+              ordered,
+              item.file,
+              item.url
+            )}
           >
-            <a
-              href={item.url}
-              className={listLinkClasses(
-                props.noArrow,
-                item.active,
-                props.ordered,
-                item.file,
-                item.url
-              )}
-            >
-              {item.description && (
-                <div className="b-nav-list__item-description">
-                  {item.description}
-                </div>
-              )}
-              <div className="b-nav-list__item-title">
-                {item.title}
-                {/* Is is possible to use a array of meta texts or just a string */}
-                {item.meta && Array.isArray(item.meta) ? (
-                  <div className="b-nav-list__item-meta">
-                    {item.meta.map((x, i) => {
-                      if (i === 0) return item.meta[0];
-                      return <div className="t--tab-left">{x}</div>;
-                    })}
-                  </div>
-                ) : (
-                  <div className="b-nav-list__item-meta">{item.meta}</div>
-                )}
+            {item.description && (
+              <div className="b-nav-list__item-description">
+                {item.description}
               </div>
-              {item.infoText && (
-                <div className={itemInfoClasses(item.file)}>
-                  {item.infoText}
+            )}
+            <div className="b-nav-list__item-title">
+              {item.title}
+              {/* Is is possible to use a array of meta texts or just a string */}
+              {item.meta && Array.isArray(item.meta) ? (
+                <div className="b-nav-list__item-meta">
+                  {item.meta.map((x, i) => {
+                    if (i === 0) return item.meta[0];
+                    return <div className="t--tab-left">{x}</div>;
+                  })}
                 </div>
+              ) : (
+                <div className="b-nav-list__item-meta">{item.meta}</div>
               )}
-              {item.topic && (
-                <div className="b-nav-list__item-info b-nav-list__item-info--highlight">
-                  {item.topic}
-                </div>
-              )}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-};
+            </div>
+            {item.infoText && (
+              <div className={itemInfoClasses(item.file)}>
+                {item.infoText}
+              </div>
+            )}
+            {item.topic && (
+              <div className="b-nav-list__item-info b-nav-list__item-info--highlight">
+                {item.topic}
+              </div>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+);
 
 NavList.propTypes = {
   heading: PropTypes.string,
