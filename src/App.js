@@ -47,6 +47,7 @@ import PrintPdfPreview from './pages/PrintPdfPreview';
 import ProductPage from './pages/ProductPage';
 import ProfessionSelector from './pages/ProfessionSelector';
 import RecommendationPage from './pages/RecommendationPage';
+import RecommendationPageAntibiotics from './pages/RecommendationPageAntibiotics';
 import ReportListPage from './pages/ReportListPage';
 import ReportPage from './pages/ReportPage';
 import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
@@ -118,6 +119,7 @@ class App extends Component {
               <Route path="/høringer" component={HearingPage} />
               <Route path="/høringer-forside" component={ParentHearingPage} />
               <Route path="/anbefaling" component={RecommendationPage} />
+              <Route path="/anbefaling-antibiotika" component={RecommendationPageAntibiotics} />
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
               <Route path="/rapport" component={ReportPage} />
@@ -180,7 +182,7 @@ class App extends Component {
               MedicinePage
               <Route component={NotFound} />
             </Switch>
-            <Box noPadding square color="blueDark">
+            <Box square color="blueDark">
               <div className="l-container l-mt-2">
                 <Footer />
               </div>
