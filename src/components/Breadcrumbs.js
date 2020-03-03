@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
-const Breadcrumbs = props => (
+const Breadcrumbs = ({ paths }) => (
   <nav className="b-breadcrumbs" aria-label="Brødsmulesti">
-    {props.paths.map(path =>
+    {paths.map(path =>
       path.href ? (
         <a
           href={path.href}

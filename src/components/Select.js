@@ -16,25 +16,25 @@ const selectElementClasses = simple =>
     'b-select__select--simple': simple
   });
 
-const Select = props => (
-  <div className={selectClasses(props.stacked, props.simple)}>
+const Select = ({ stacked, simple, label, placeholder, options }) => (
+  <div className={selectClasses(stacked, simple)}>
     <label htmlFor="profession-selector" className="b-select__label">
-      {props.label}
+      {label}
     </label>
     <select
       id="profession-selector"
-      className={selectElementClasses(props.simple)}
+      className={selectElementClasses(simple)}
     >
       {/* This value is suppose to be empty.
           It should also have the attribute selected. defaultValue should be value.
           JSX requires we write it this way.
       */}
-      {props.placeholder && (
+      {placeholder && (
         <option defaultValue="" disabled className="b-select__option">
-          {props.placeholder}
+          {placeholder}
         </option>
       )}
-      {props.options.map(option => (
+      {options.map(option => (
         <option key={shortid.generate()} className="b-select__option">
           {option}
         </option>

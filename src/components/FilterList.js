@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
-const FilterList = props => {
+const FilterList = ({ list }) => {
   const [selected, setSelected] = useState(
-    props.list.length ? props.list[0] : []
+    list.length ? list[0] : []
   );
 
   function select(event, item) {
@@ -16,7 +16,7 @@ const FilterList = props => {
   return (
     <div className="b-filter-list">
       <ul className="b-filter-list__list">
-        {props.list.map(item => (
+        {list.map(item => (
           <li className="b-filter-list__list-item" key={shortid.generate()}>
             <a
               href="#a"
