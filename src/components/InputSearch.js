@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import classNames from 'classnames';
 import URLSearchParams from 'url-search-params';
 import useInterval from '../js/hooks/useInterval';
+import { debounce } from 'lodash';
 
 import stripStringForHtmlUtil from './../utils/stripStringForHtmlUtil';
 
@@ -41,12 +42,15 @@ const InputSearch = props => {
   const [suggestions, setSuggestions] = useState([]);
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const inputElement = useRef(null);
+  
+  /* We are using callback to make throtte work in this component function */
+  const delayedSuggestionsFetchRequested = useCallback(debounce((value) => onSuggestionsFetchRequested(value), 200), []);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
 
-    setValue(searchQuery ? searchQuery : '');
+    setValue(searchQuery ? searchQuery : '')
   }, []);
 
   useEffect(() => {
@@ -113,8 +117,12 @@ const InputSearch = props => {
   function onChange(event, { newValue }) {
     setValue(newValue);
   }
-
+  
   function onSuggestionSelected(event, { suggestion }) {
+    // Last row clicked, don't send GTM tag
+    if (suggestion.skip) {
+      window.location = suggestion.url;
+    }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'event': 'autosuggest',
@@ -127,12 +135,13 @@ const InputSearch = props => {
   }
 
   // Autosuggest will call this function every time you need to update suggestions.
-  function onSuggestionsFetchRequested({ value }) {
-    const encodedValue = encodeURI(value);
-    if (value.length >= 3) {
+  const onSuggestionsFetchRequested = ({ value }) => {
+    if (value && value.length >= 3) {
+      const encodedValue = encodeURI(value);
       fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
         .then(res => res.json())
         .then(data => {
+          console.log('fetching', value)
           // Adding indexes to suggestions, so we know where in the list the item is
           const suggestionsWithIndexes = data.map((item, index) => ({index: index + 1, ...item}));
           if (suggestionsWithIndexes.length) {
@@ -140,6 +149,7 @@ const InputSearch = props => {
               ...suggestionsWithIndexes,
               {
                 // The last row that is highlighted
+                skip: true,
                 ...suggestionsWithIndexes[data.length - 1],
                 title: value,
                 category: '',
@@ -187,7 +197,7 @@ const InputSearch = props => {
       <div aria-hidden>
         <Autosuggest
           suggestions={props.showSuggestions ? suggestions : []}
-          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+          onSuggestionsFetchRequested={delayedSuggestionsFetchRequested}
           onSuggestionsClearRequested={() => setSuggestions([])}
           onSuggestionSelected={onSuggestionSelected}
           renderInputComponent={renderInputComponent}

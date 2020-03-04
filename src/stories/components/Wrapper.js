@@ -1,5 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { ShowStaticMarkup } from 'react-storybook-addon-static-markup';
+
+const wrapperHtml = (children) => {
+  return (
+  <div className="l-container">
+    <main className="t-body-text">
+      {children}
+    </main>
+  </div>);
+}
+
+const renderMarkup = (opts) => {
+  const { noMarkup, children } = opts;
+  return noMarkup ? children : <ShowStaticMarkup>{children}</ShowStaticMarkup>
+}
 
 const Wrapper = props => (
   <section>
@@ -13,21 +28,22 @@ const Wrapper = props => (
         </div>
       </div>
     </header>
-    { props.wide ? (
-      props.children
-    ) : 
-      <div className="l-container">
-        <main className="t-body-text">
-          { props.children }
-        </main>
-      </div>
-    }
+    { props.wide ? 
+      renderMarkup({
+        children: props.children, 
+        noMarkup: props.noMarkup
+      }) 
+    : wrapperHtml(renderMarkup({
+      children: props.children, 
+      noMarkup: props.noMarkup
+    })) }
   </section>
 );
 
 Wrapper.propTypes = {
   title: PropTypes.string,
   lead: PropTypes.string,
+  noMarkup: PropTypes.bool,
 };
 
 export default Wrapper;

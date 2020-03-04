@@ -38,6 +38,7 @@ const MainHeader = props => {
     hideSearch = false,
     inputSearchLabel = '',
     links = [],
+    linksMobile = [],
     name = '',
     qaEnvironment = false,
   } = props;
@@ -83,7 +84,7 @@ const MainHeader = props => {
             <MainHeaderMobileNav
               name={name}
               showNav={setMobileNavOpen}
-              links={links}
+              links={linksMobile}
             />
           )}
           
@@ -171,6 +172,7 @@ MainHeader.propTypes = {
   hideSearch: PropTypes.bool,
   inputSearchLabel: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.object),
+  linksMobile: PropTypes.arrayOf(PropTypes.object),
   name: PropTypes.string,
   qaEnvironment: PropTypes.bool,
 };

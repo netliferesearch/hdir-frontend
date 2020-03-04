@@ -23,27 +23,38 @@ h6,
 // Heading sizes
 h1,
 .h1 {
-  font-size: $extra-large-text;
+  font-size: $font-h1;
+  @include mq($until: $tablet) {
+    font-size: $font-h1-mobile;
+  }
 }
 h2,
 .h2 {
-  font-size: $large-text;
-  font-weight: bold;
+  font-size: $font-h2;
+  @include mq($until: $tablet) {
+    font-size: $font-h2-mobile;
+  }
 }
 h3,
 .h3 {
-  font-size: $medium-large-text;
+  font-size: $font-h3;
+  @include mq($until: $tablet) {
+    font-size: $font-h3-mobile;
+  }
 }
 h4,
 .h4 {
-  font-size: $base-font-size;
-  font-weight: bold;
+  font-size: $font-h4;
+  @include mq($until: $tablet) {
+    font-size: $font-h4-mobile;
+  }
 }
 h5,
 .h5 {
-  font-size: $meta-text;
-  text-transform: uppercase;
-  font-weight: normal;
+  font-size: $font-h5;
+  @include mq($until: $tablet) {
+    font-size: $font-h5-mobile;
+  }
   &--thin {
     color: $grey;
   }
