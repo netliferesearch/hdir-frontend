@@ -14,6 +14,17 @@ It should support IE11+ and two versions old or newer for the evergreen browsers
 
 It can also be found published on Netlify: http://hdir-frontend.netlify.com
 
+## Merge Flow
+
+Develop new features on separate feature-branches, using the following naming pattern: `HDF-123_name_of_task`. When ready for testing, merge into `develop` branch.
+Minor fixes can be committed directly to the `develop` branch.
+
+The next step is a review branch called `test`. This is used to separate the `develop` stuff (where all kinds of features and fixes may be) from specific features being developed for a certain time period. 
+
+The final step is the `master` branch. This branch should always correspond to what is ready for production. 
+
+Always use Pull Requests to merge between the branches when developing new features.
+
 ## Development
 
 1. `npm install`
