@@ -15,7 +15,7 @@ const NinjaStateRecommendation = () => (
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
           <p>Ninja state av anbefaling:</p>
           <br /><br />
-          <div className="b-collapsible b-collapsible--active">
+          <div className="b-collapsible b-collapsible--active b-collapsible--subtle">
             <h2 className="b-collapsible__heading h2" id="sekundaer-peritonitt">
               <span className="js-copy-icon">#</span>
               <span className="js-copy-icon-text">Sekundær peritonitt</span>
