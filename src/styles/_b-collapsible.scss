@@ -14,6 +14,10 @@
       padding: $spaceSmall 0 $spaceSmall/2;
     }
     
+    &__content {
+      padding-bottom: 0;
+    }
+    
     .b-collapsible--small:nth-child(odd) {
       background: $grey-lighter;
     }
