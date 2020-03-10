@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Select from './Select';
 
-const ListHeading = props => (
+const ListHeading = ({ heading, selectLabel, selectOptions }) => (
   <div className="b-list-heading">
-    <h4 className="b-list-heading__heading">{props.heading}</h4>
-    {props.selectLabel && props.selectOptions && (
-      <Select label={props.selectLabel} options={props.selectOptions} simple />
+    <h4 className="b-list-heading__heading">{heading}</h4>
+    {selectLabel && selectOptions && (
+      <Select label={selectLabel} options={selectOptions} simple />
     )}
   </div>
 );

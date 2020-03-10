@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Quote = props => (
+const Quote = ({ children }) => (
   <div className="b-quote">
-    <q className="b-quote__blockquote">{props.children}</q>
+    <q className="b-quote__blockquote">{children}</q>
     <div className="b-quote__source">Kilde: lovdata.no</div>
   </div>
 );

@@ -21,14 +21,14 @@ const alertClasses = alertLevel =>
 
 const id = shortid.generate();
 
-const AlertBar = props => (
-  <section role="alert" className={alertClasses(props.alertLevel)} aria-labelledby={id}>
+const AlertBar = ({ alertLevel, heading, children, lastUpdated }) => (
+  <section role="alert" className={alertClasses(alertLevel)} aria-labelledby={id}>
     <div className="l-container">
-      <h1 id={id} className={headingClasses(props.alertLevel)}>{props.heading}</h1>
-      <div className="l-mt-2">{props.children}</div>
-      {props.lastUpdated && (
+      <h1 id={id} className={headingClasses(alertLevel)}>{heading}</h1>
+      <div className="l-mt-2">{children}</div>
+      {lastUpdated && (
         <div className="b-alert-bar__date">
-          Sist oppdatert: {props.lastUpdated}
+          Sist oppdatert: {lastUpdated}
         </div>
       )}
     </div>

@@ -74,4 +74,10 @@ table {
     font-size: $meta-text;
     font-weight: bold;
   }
+  &--clean {
+    .b-icon-with-text__text {
+      text-transform: none;
+      font-size: $medium-large-text;
+    }
+  }
 }

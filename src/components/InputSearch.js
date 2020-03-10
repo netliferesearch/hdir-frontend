@@ -49,7 +49,6 @@ const InputSearch = props => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
-
     setValue(searchQuery ? searchQuery : '')
   }, []);
 
