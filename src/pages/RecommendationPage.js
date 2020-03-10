@@ -35,7 +35,7 @@ const RecommendationPage = () => (
         + Metronidazol 1g x 1 iv</p>
           <Collapsible
             h="h5"
-            heading="Kontraindikasjoner"
+            heading="Spesielle hensyn"
             size="tiny"
           >
             <Box
