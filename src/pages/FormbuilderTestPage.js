@@ -72,8 +72,8 @@ export const formbuilderGeneratedMarkup = () => (
           <div>
             <input
               type="radio"
-              id="Hva%20er%20din%20rolle%20i%20prosjektet%3F"
-              name="Hva%20er%20din%20rolle%20i%20prosjektet%3F"
+              id="Hva%20er%20din%20rolle%20i%20prosjektet%3F1"
+              name="Hva%20er%20din%20rolle%20i%20prosjektet%3F1"
               value="utvikler"
               text="option"
               checked="checked"
@@ -85,8 +85,8 @@ export const formbuilderGeneratedMarkup = () => (
           <div>
             <input
               type="radio"
-              id="Hva%20er%20din%20rolle%20i%20prosjektet%3F"
-              name="Hva%20er%20din%20rolle%20i%20prosjektet%3F"
+              id="Hva%20er%20din%20rolle%20i%20prosjektet%3F2"
+              name="Hva%20er%20din%20rolle%20i%20prosjektet%3F2"
               value="prosjektleder"
               text="option"
               onChange={() => {}}
@@ -103,7 +103,7 @@ export const formbuilderGeneratedMarkup = () => (
             id="Hva%20er%20din%20alder%3F"
             name="Hva%20er%20din%20alder%3F"
           >
-            <option value="" selected="selected" disabled="disabled">
+            <option value="" defaultValue="selected" disabled="disabled">
               Velg alder
             </option>
             <option value="1829" text="option">
@@ -154,8 +154,8 @@ export const formbuilderGeneratedMarkup = () => (
             <label>
               <input
                 type="checkbox"
-                id="Hva%20er%20din%20arbeidserfaring%3F"
-                name="Hva%20er%20din%20arbeidserfaring%3F"
+                id="Hva%20er%20din%20arbeidserfaring%3F1"
+                name="Hva%20er%20din%20arbeidserfaring%3F1"
                 value="html"
                 text="option"
                 onChange={() => {}}
@@ -165,8 +165,8 @@ export const formbuilderGeneratedMarkup = () => (
             <label>
               <input
                 type="checkbox"
-                id="Hva%20er%20din%20arbeidserfaring%3F"
-                name="Hva%20er%20din%20arbeidserfaring%3F"
+                id="Hva%20er%20din%20arbeidserfaring%3F2"
+                name="Hva%20er%20din%20arbeidserfaring%3F2"
                 value="js"
                 text="option"
                 onChange={() => {}}
@@ -176,8 +176,8 @@ export const formbuilderGeneratedMarkup = () => (
             <label>
               <input
                 type="checkbox"
-                id="Hva%20er%20din%20arbeidserfaring%3F"
-                name="Hva%20er%20din%20arbeidserfaring%3F"
+                id="Hva%20er%20din%20arbeidserfaring%3F3"
+                name="Hva%20er%20din%20arbeidserfaring%3F3"
                 value="cnet"
                 text="option"
                 onChange={() => {}}

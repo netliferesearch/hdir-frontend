@@ -8,16 +8,16 @@ const imageClasses = size =>
     'b-icon-with-text__image--small': size === 'small'
   });
 
-const IconWithText = props => (
+const IconWithText = ({ icon, size, text }) => (
   <div className="b-icon-with-text">
     <img
-      src={props.icon}
+      src={icon}
       alt=""
       role="presentation"
-      className={imageClasses(props.size)}
+      className={imageClasses(size)}
       aria-hidden
     />
-    <span className="b-icon-with-text__text">{props.text}</span>
+    <span className="b-icon-with-text__text">{text}</span>
   </div>
 );
 

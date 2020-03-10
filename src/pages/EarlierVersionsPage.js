@@ -4,7 +4,6 @@ import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
 import List from '../components/List';
 import Button from '../components/Button';
-import NavList from '../components/NavList';
 
 const EarlierVersionsPage = () => (
   <>

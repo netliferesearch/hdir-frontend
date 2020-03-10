@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavList from './NavList';
 
-const MainHeaderMobileNav = props => {
+const MainHeaderMobileNav = ({ name, showNav, links }) => {
   return (
     <div className="l-container" role="dialog">
       <nav
@@ -16,12 +16,12 @@ const MainHeaderMobileNav = props => {
             href="/"
             className="b-main-header__logo b-main-header__logo--small"
           >
-            {props.name}
+            {name}
           </a>
 
           <button
             className="b-button b-button--small b-button--secondary-dark"
-            onClick={() => props.showNav(false)}
+            onClick={() => showNav(false)}
             aria-controls="mobile-menu"
             aria-expanded="true"
           >
@@ -31,7 +31,7 @@ const MainHeaderMobileNav = props => {
         <div className="l-mt-1">
           <div className="b-main-header__menu-overlay-links">
             <NavList
-              list={props.links.map(item => ({
+              list={links.map(item => ({
                 title: item.name,
                 url: item.href
               }))}

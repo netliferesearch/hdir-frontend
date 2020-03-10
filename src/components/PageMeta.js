@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PageMeta = props => (
+const PageMeta = ({ publishDate, editDate, url }) => (
   <p className="b-page-meta">
-    {props.publishDate && (
+    {publishDate && (
       <span className="b-page-meta__text">
-        Først publisert: {props.publishDate}
+        Først publisert: {publishDate}
       </span>
     )}
-    {props.editDate && (
-      <span className="b-page-meta__text">Sist endret: {props.editDate}</span>
+    {editDate && (
+      <span className="b-page-meta__text">Sist endret: {editDate}</span>
     )}
 
-    {props.url && (
-      <a href={props.url} className="b-page-meta__link">
+    {url && (
+      <a href={url} className="b-page-meta__link">
         Se tidligere utgaver
       </a>
     )}

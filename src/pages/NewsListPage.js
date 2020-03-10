@@ -5,7 +5,6 @@ import ListHeading from '../components/ListHeading';
 import Button from '../components/Button';
 import CheckboxGroup from '../components/CheckboxGroup';
 import Box from '../components/Box';
-import Collapsible from '../components/Collapsible';
 import Alert from '../components/Alert';
 
 const NewsListPage = (props) => (

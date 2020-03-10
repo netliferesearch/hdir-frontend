@@ -15,42 +15,42 @@ const imageWrapperClasses = feature =>
     'b-article-intro__image-wrapper--feature': feature
   });
 
-const ArticleIntro = props => (
+const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription }) => (
   <div className="b-article-intro">
-    <div className={imageToggle(props.image, props.feature)}>
+    <div className={imageToggle(image, feature)}>
       <h1>
-        <div className="b-article-intro__topic">{props.topic}</div>
-        {props.heading}
+        <div className="b-article-intro__topic">{topic}</div>
+        {heading}
       </h1>
-      <p className="b-article-intro__intro">{props.lead}</p>
+      <p className="b-article-intro__intro">{lead}</p>
     </div>
-    {props.image && (
-      <div className={imageWrapperClasses(props.feature)}>
-        {!props.feature ? (
+    {image && (
+      <div className={imageWrapperClasses(feature)}>
+        {!feature ? (
           <>
             <img
               className="b-article-intro__image"
-              src={props.image}
-              alt={props.imageDescription}
+              src={image}
+              alt={imageDescription}
               aria-labelledby="intro-image-description"
             />
             <p
               className="b-article-intro__image-text"
               id="intro-image-description"
             >
-              {props.imageDescription}
+              {imageDescription}
             </p>
           </>
         ) : (
           <>
             <div
               className="b-article-intro__image"
-              style={{ backgroundImage: `url(${props.image})` }}
+              style={{ backgroundImage: `url(${image})` }}
               role="img"
               aria-labelledby="intro-image-description"
             />
             <div className="visually-hidden" id="intro-image-description">
-              {props.imageDescription}
+              {imageDescription}
             </div>
           </>
         )}
