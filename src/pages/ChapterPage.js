@@ -74,10 +74,16 @@ const ChapterPage = () => (
               <Collapsible
                 background
                 heading="Anbefaling 1"
-                subheading="Sterk anbefaling"
-                subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="someId1.1"
               >
+              <Collapsible
+                heading="Sterk anbefaling"
+                subtle
+                size="small"
+                smallContent
+              >
+                <p>...Hva er en sterk anbefaling...</p>
+              </Collapsible>
                 <Alert status="success">
                   Vær oppmerksom på at dette atomet er på høring.
                 </Alert>
@@ -97,20 +103,22 @@ const ChapterPage = () => (
                   å nå behandlingsmålene for glukose
                 </p>
                 <p>etc.</p>
-                <hr className="b-hr b-hr--grey-light b-hr--padded" />
-                <div className="t-sm-right">
-                  <PageMeta editDate="11. august 2018" />
-                </div>
               </Collapsible>
             </div>
             <div>
               <Collapsible
                 heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
-                subheading="Sterk anbefaling"
-                subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="anbefaling1"
                 background
               >
+              <Collapsible
+                heading="Sterk anbefaling"
+                subtle
+                size="small"
+                smallContent
+              >
+                <p>...Hva er en sterk anbefaling...</p>
+              </Collapsible>
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
                   oppnå tilfredsstillende blodsukker fastende og etter måltider,
@@ -127,21 +135,23 @@ const ChapterPage = () => (
                   å nå behandlingsmålene for glukose
                 </p>
                 <p>etc.</p>
-                <hr className="b-hr b-hr--grey-light b-hr--padded" />
-
-                <div className="t-sm-right">
-                  <PageMeta editDate="11. august 2018" />
-                </div>
               </Collapsible>
             </div>
             <div>
               <Collapsible
-                heading="Anbefaling 3"
-                subheading="Sterk anbefaling"
-                subheadingContent="Dette er en beskrivelse av sterk anbefaling"
+                heading="Anbefaling 3 (h2)"
                 id="someId3"
+                date="Sist oppdatert: 16.oktober 2020"
                 background
               >
+              <Collapsible
+                heading="Sterk anbefaling"
+                subtle
+                size="small"
+                smallContent
+              >
+                <p>...Hva er en sterk anbefaling...</p>
+              </Collapsible>
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
                   oppnå tilfredsstillende blodsukker fastende og etter måltider,
@@ -160,7 +170,7 @@ const ChapterPage = () => (
                 <p>etc.</p>
                 <div>
                   <Collapsible
-                    heading="Seksjon under: 1 – SUBHEADING UTEN INNHOLD"
+                    heading="Seksjon under: 1 (h3)"
                     size="medium"
                   >
                     <p>
@@ -174,7 +184,7 @@ const ChapterPage = () => (
                 </div>
                 <div>
                   <Collapsible
-                    heading="Seksjon under: 2 – SUBHEADING UTEN INNHOLD"
+                    heading="Seksjon under: 2 (h3)"
                     size="medium"
                     id="someId4"
                   >
@@ -185,10 +195,26 @@ const ChapterPage = () => (
                       svangerskapet. Det anbefales at kostanamnese benyttes i
                       dette arbeidet.
                     </p>
+                    <h4>Overskrift h4</h4>
                     <Collapsible
-                      heading="Seksjon under: 1.2"
+                      heading="Seksjon h5"
                       size="small"
-                      h="h4"
+                      h="h5"
+                      smallContent
+                    >
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent eget convallis metus. Sed vitae imperdiet enim.
+                        Suspendisse commodo nulla et arcu sodales, et sagittis
+                        nisi fermentum. Integer commodo, ipsum ut vulputate
+                        consequat, dolor risus egestas eros, sed consectetur
+                        turpis neque et magna.
+                      </p>
+                    </Collapsible>
+                    <Collapsible
+                      heading="Seksjon h5 2"
+                      size="small"
+                      h="h5"
                       smallContent
                     >
                       <p>
@@ -201,10 +227,6 @@ const ChapterPage = () => (
                       </p>
                     </Collapsible>
                   </Collapsible>
-                </div>
-                <hr className="b-hr b-hr--grey-light b-hr--padded" />
-                <div className="t-sm-right">
-                  <PageMeta editDate="11. august 2018" />
                 </div>
               </Collapsible>
             </div>
