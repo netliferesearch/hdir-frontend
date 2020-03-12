@@ -85,8 +85,8 @@ const InputSearch = props => {
           title="Søk"
           aria-labelledby="search-input-label"
           {...inputProps}
-          role="search"
           autoFocus={props.autoFocus}
+          role="search"
           className={classNames({
             'b-input-search__field': true,
             'b-input-search__field--dark': props.dark
