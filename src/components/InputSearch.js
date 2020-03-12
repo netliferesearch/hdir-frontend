@@ -53,12 +53,6 @@ const InputSearch = props => {
     setValue(searchQuery ? searchQuery : '')
   }, []);
 
-  useEffect(() => {
-    props.autoFocus
-      ? inputElement.current.focus()
-      : inputElement.current.blur();
-  }, [props.autoFocus]);
-
   useInterval(() => {
     setPlaceholderIndex(
       placeholderIndex < props.exampleSuggestions.length - 1
@@ -92,8 +86,8 @@ const InputSearch = props => {
           title="Søk"
           aria-labelledby="search-input-label"
           {...inputProps}
+          autoFocus={props.autoFocus}
           role="search"
-          ref={inputElement}
           className={classNames({
             'b-input-search__field': true,
             'b-input-search__field--dark': props.dark
@@ -141,7 +135,6 @@ const InputSearch = props => {
       fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
         .then(res => res.json())
         .then(data => {
-          console.log('fetching', value)
           // Adding indexes to suggestions, so we know where in the list the item is
           const suggestionsWithIndexes = data.map((item, index) => ({index: index + 1, ...item}));
           if (suggestionsWithIndexes.length) {
@@ -174,6 +167,7 @@ const InputSearch = props => {
   const inputProps = {
     value: value,
     onChange: onChange,
+    ref: inputElement,
     onKeyDown: event => {
       // 13 = enter key
       if (event.keyCode === 13 && value) {
