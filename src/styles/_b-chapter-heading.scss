@@ -7,15 +7,16 @@
   &--link {
     position: relative;
     @include link-init($black);
-    padding: $space-sm $space-xs $space-lg $space-sm;
-    border-bottom: 1px solid $link-color;
+    padding: $space-md $space-xs $space-md $space-sm;
+    border-bottom: 1px solid $grey-light !important;
     &:hover {
       color: $link-color;
       background: rgba(0, 30, 0, 0.03);
     }
 
-    .b-chapter-heading__main-heading::after {
+    .b-chapter-heading__main-heading::before {
       visibility: visible;
+      display: inline-block;
     }
     .h2 {
       padding-right: $space-sm;
@@ -24,16 +25,18 @@
 
   &__main-heading {
     display: flex;
-    justify-content: space-between;
-    &:after {
+    align-items: center;
+    &:before {
       visibility: hidden;
+      display: none;
 
       content: '';
-      height: 1.3em;
-      width: 1.3em;
+      height: 1em;
+      width: .8em;
+      padding-right: $space-xs;
 
       background-image: url($arrow-right);
-      background-size: 1.3em;
+      background-size: .8em;
       background-repeat: no-repeat;
     }
   }

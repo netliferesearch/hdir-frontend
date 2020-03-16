@@ -6,248 +6,133 @@ import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
 import Alert from '../components/Alert';
 import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
 import Link from '../components/Link';
+import IconWithText from '../components/IconWithText';
 
 const ChapterPage = () => (
   <>
     <main id="main">
-      <div className="l-container l-mt-2">
-        <ChapterHeading
-          heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
-          subheading="KAPITTEL 1"
-          h="h1"
-          line="none"
+      <div className="l-container">
+        <Breadcrumbs
+          paths={[
+            {
+              name: 'Forsiden',
+              href: '#a'
+            },
+            {
+              name: 'Helsestasjons- og skolehelsetjenesten',
+              href: '#a'
+            }
+          ]}
         />
-        <div className="row">
-          <aside className="col-md-4 l-hide-to-lg l-bleed-right">
+        <div className="l-content">
+          <aside className="col-md-4 l-hide-to-lg l-sidebar l-bleed-right">
             <SectionSidebar
-              heading="Nasjonal faglig retningslinje for svangerskapsdiabetes"
+              heading="Nasjonal faglig retningslinje"
               headingUrl="#a"
               icon="../icons/Konferanser.svg"
               list={[
                 {
-                  title: 'KAPITTEL 1',
+                  url: '#',
+                  description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
+                },
+                {
+                  url: '#',
+                  description: '2. Fellesdel: Samhandling og samarbeid',
+                },
+                {
+                  url: '#',
+                  description: '3. Fellesdel: Opplysningsplikt'
+                },
+                {
                   url: '#',
                   description:
-                    'Kost og fysisk aktivitet ved svangerskaps-diabetes',
+                    '4. Helsestasjon 0–5 år',
+                  active: true,
                   children: [
                     {
-                      description: 'Underkapittel',
-                      url: '#',
-                      prefix: '1.1'
-                    },
-                    {
-                      description: 'Underkapittel',
+                      description: '4.1 Veiing og måling',
                       active: true,
                       url: '#',
-                      prefix: '1.2'
                     }
                   ]
                 },
                 {
-                  title: 'KAPITTEL 2',
                   url: '#',
-                  description: 'Diagnostikk og tiltak'
+                  description: '5. Skolehelsetjenesten 5–20 år'
                 },
                 {
-                  title: 'KAPITTEL 3',
                   url: '#',
-                  description: 'Nytt kapittel'
+                  description: '6. Helsestasjon for ungdom'
+                },
+                {
+                  url: '#',
+                  description: '7. Metode og prosess'
                 }
               ]}
             />
           </aside>
-          <div className="col-md-7 col-md-offset-1 l-bleed-left">
+          <div className="l-article">
+          <ChapterHeading
+            heading="4.1 Veiing og måling"
+            h="h1"
+            line="none"
+          />
+          <Collapsible
+            background
+            heading="Hodeomkrets: Helsestasjonen bør måle hodeomkrets på barn 0-2 år"
+          >
             <Collapsible
-              heading="Om behandling av svangerskapsdiabetes"
+              heading="Sterk anbefaling"
+              subtle
               size="small"
               smallContent
-              id="someId1"
             >
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
+              <p>...Hva er en sterk anbefaling...</p>
             </Collapsible>
-            <div>
-              <Collapsible
-                background
-                heading="Anbefaling 1"
-                id="someId1.1"
-              >
-              <Collapsible
-                heading="Sterk anbefaling"
-                subtle
-                size="small"
-                smallContent
-              >
-                <p>...Hva er en sterk anbefaling...</p>
-              </Collapsible>
-                <Alert status="success">
-                  Vær oppmerksom på at dette atomet er på høring.
-                </Alert>
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                  5.3 mmol/l, 2 timer etter måltid: {'<'}
-                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                  Kvinnen kan rådes til å følge et kosthold med en
-                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
-                  å nå behandlingsmålene for glukose
-                </p>
-                <p>etc.</p>
-              </Collapsible>
-            </div>
-            <div>
-              <Collapsible
-                heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
-                id="anbefaling1"
-                background
-              >
-              <Collapsible
-                heading="Sterk anbefaling"
-                subtle
-                size="small"
-                smallContent
-              >
-                <p>...Hva er en sterk anbefaling...</p>
-              </Collapsible>
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                  5.3 mmol/l, 2 timer etter måltid: {'<'}
-                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                  Kvinnen kan rådes til å følge et kosthold med en
-                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
-                  å nå behandlingsmålene for glukose
-                </p>
-                <p>etc.</p>
-              </Collapsible>
-            </div>
-            <div>
-              <Collapsible
-                heading="Anbefaling 3 (h2)"
-                id="someId3"
-                date="Sist oppdatert: 16.oktober 2020"
-                background
-              >
-              <Collapsible
-                heading="Sterk anbefaling"
-                subtle
-                size="small"
-                smallContent
-              >
-                <p>...Hva er en sterk anbefaling...</p>
-              </Collapsible>
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                  5.3 mmol/l, 2 timer etter måltid: {'<'}
-                  6.7 mmol/l (se anbefaling: Opplæring i egenmåling av glukose).
-                  Kvinnen kan rådes til å følge et kosthold med en
-                  karbohydratkvalitet og -mengde per måltid som gjør det enklere
-                  å nå behandlingsmålene for glukose
-                </p>
-                <p>etc.</p>
-                <div>
-                  <Collapsible
-                    heading="Seksjon under: 1 (h3)"
-                    size="medium"
-                  >
-                    <p>
-                      Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                      oppnå tilfredsstillende blodsukker fastende og etter
-                      måltider, og for å forhindre for stor vektøkning i
-                      svangerskapet. Det anbefales at kostanamnese benyttes i
-                      dette arbeidet.
-                    </p>
-                  </Collapsible>
-                </div>
-                <div>
-                  <Collapsible
-                    heading="Seksjon under: 2 (h3)"
-                    size="medium"
-                    id="someId4"
-                  >
-                    <p>
-                      Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                      oppnå tilfredsstillende blodsukker fastende og etter
-                      måltider, og for å forhindre for stor vektøkning i
-                      svangerskapet. Det anbefales at kostanamnese benyttes i
-                      dette arbeidet.
-                    </p>
-                    <h4>Overskrift h4</h4>
-                    <Collapsible
-                      heading="Seksjon h5"
-                      size="small"
-                      h="h5"
-                      smallContent
-                    >
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent eget convallis metus. Sed vitae imperdiet enim.
-                        Suspendisse commodo nulla et arcu sodales, et sagittis
-                        nisi fermentum. Integer commodo, ipsum ut vulputate
-                        consequat, dolor risus egestas eros, sed consectetur
-                        turpis neque et magna.
-                      </p>
-                    </Collapsible>
-                    <Collapsible
-                      heading="Seksjon h5 2"
-                      size="small"
-                      h="h5"
-                      smallContent
-                    >
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent eget convallis metus. Sed vitae imperdiet enim.
-                        Suspendisse commodo nulla et arcu sodales, et sagittis
-                        nisi fermentum. Integer commodo, ipsum ut vulputate
-                        consequat, dolor risus egestas eros, sed consectetur
-                        turpis neque et magna.
-                      </p>
-                    </Collapsible>
-                  </Collapsible>
-                </div>
-              </Collapsible>
-            </div>
-            <div>
-              <hr className="b-hr" />
-            </div>
-            <ChapterHeading
-              heading="Underkapittel 1.1"
-              subheading="kapittel 1.1"
-              line="none"
-              url="#a"
-            />
-            <div>
-              <hr className="b-hr" />
-            </div>
-            <ChapterHeading
-              heading="Underkapittel 1.2"
-              subheading="kapittel 1.2"
-              line="none"
-              url="#a"
-            />
+            <p>Alle barn bør få målt hodeomkrets regelmessig i løpet av første leveår, og på indikasjon frem til 2 års alder.</p>
+            <p>Måling av hodeomkrets bør gjennomføres ved de faste konsultasjonene på helsestasjonen, samtidig med måling av vekt og lengde ved:</p>
+            <ul>
+              <li>7.–10. levedøgn (hjemmebesøk)</li>
+              <li>6 ukers alder</li>
+              <li>3 måneders alder</li>
+              <li>5 måneders alder</li>
+              <li>6 måneders alder</li>
+              <li>10 måneders alder</li>
+              <li>12 måneders alder</li>
+            </ul>
+            <p>Ved andre konsultasjoner bør måling av hodeomkrets gjøres på indikasjon eller etter foreldrenes ønske, se anbefalingen Helsestasjonsprogrammet. </p>
+            <p>Ved vurdering av hodeomkrets anbefales det å benytte nasjonal <a href="#test">vekstkurve fra Vekststudien i Bergen.</a></p>
+            <Collapsible
+              h="h3"
+              heading="Praktisk"
+              size="small"
+            >
+            </Collapsible>
+            <Collapsible
+              h="h3"
+              heading="Begrunnelse"
+              size="small"
+            >
+            </Collapsible>
+          </Collapsible>
+          
+          <Collapsible
+            background
+            heading="Veiing og måling: Helsestasjon bør måle vekt og lengde/høyde på barn 0-5 år"
+          >
+          Innhold
+          </Collapsible >
+        
+          <ChapterHeading
+            heading="1.1 Underkapittel"
+            url="#a"
+          />
+          <ChapterHeading
+            heading="1.2 Underkapittel"
+            url="#a"
+          />
             <div>
               <Link wideButton arrow color="purple">
                 Henvis pasienten til helsenorge.no for mer informasjon

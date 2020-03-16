@@ -1,13 +1,13 @@
 .b-collapsible {
   $space: 1.75em;
   $spaceSmall: 0.75em;
-  padding: $spaceSmall $space;
+  padding: $space-sm;
   border: 1px solid transparent;
 
   .b-collapsible {
     background: none;
     border: none;
-    padding: $spaceSmall $space $spaceSmall $space;
+    padding: $space-sm $space $space-sm $space-xs;
     margin-left: 0;
     
     &--tiny {
@@ -66,9 +66,9 @@
   &--active.b-collapsible--background {
     background: white;
     border: 1px solid $grey-light;
-    margin-left: -$space*0.5;
+    margin-left: -$space-lg;
     margin-bottom: $space;
-    padding-left: $space*1.5;
+    padding-left: $space-xl*.75;
     padding-right: $space;
   }
 
@@ -114,14 +114,14 @@
       display: block;
       position: absolute;
       content: ' ';
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       margin-left: -$space;
       transform: rotate(90deg);
       background-image: url(../static/icons/chevron.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      left: 5px;
+      left: 0px;
       top: 7px;
     }
 

@@ -13,7 +13,7 @@ const wrapperClasses = size =>
     'b-icon-with-text--clean': size === 'clean'
   });
 
-const IconWithText = ({size, icon, text}) => (
+const IconWithText = ({size, icon, text, link, subtext}) => (
   <div className={wrapperClasses(size)}>
     <img
       src={icon}
@@ -23,8 +23,8 @@ const IconWithText = ({size, icon, text}) => (
       aria-hidden
     />
     <div className="b-icon-with-text__text-wrapper">
-      <span className="b-icon-with-text__text">{props.text}</span>
-      <a className="b-icon-with-text__text" href={props.link}>{props.subtext}</a>
+      <span className="b-icon-with-text__text">{text}</span>
+      <a className="b-icon-with-text__text" href={link}>{subtext}</a>
     </div>
   </div>
 );
