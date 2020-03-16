@@ -11,7 +11,10 @@ const LongShortHeading = ({ short, long, url, icon, linkText }) => {
             {short}
           </span>
         )}
-        {short && long && (
+        {!props.short && <span>{props.long}</span>}
+      </h1>
+      <div>
+        {props.short && props.long && (
           <div className="b-long-short-heading__sub">
             {icon && (
               <img
@@ -22,16 +25,17 @@ const LongShortHeading = ({ short, long, url, icon, linkText }) => {
                 className="b-long-short-heading__sub-icon"
               />
             )}
-            {long}
+            <div className="b-long-short-heading__text">
+              {props.long}
+              {props.url && 
+                <Link href={props.url} arrow>
+                  {props.linkText}
+                </Link>
+              }
+            </div>
           </div>
         )}
-        {!short && <span>{long}</span>}
-      </h1>
-      {url && <div className="b-long-short-heading__link">
-        <Link href={url} arrow>
-          {linkText}
-        </Link>
-      </div>}
+      </div>
     </div>
   );
 };

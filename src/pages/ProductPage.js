@@ -23,7 +23,7 @@ const ProductPage = () => (
         <div className="col-xs-12 l-mt-4">
           <ChapterHeading
             heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
-            subheading="kapittel 1"
+            subheading="Kapittel 1"
             url="/kapittel"
           />
           <hr className="b-hr b-hr--blue" />
@@ -61,7 +61,7 @@ const ProductPage = () => (
         <div className="col-xs-12 l-mt-4">
           <ChapterHeading
             heading="Diagnostikk og tiltak"
-            subheading="kapittel 2"
+            subheading="Kapittel 2"
             url="#a"
           />
           <hr className="b-hr b-hr--blue" />

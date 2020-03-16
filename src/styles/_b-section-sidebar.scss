@@ -24,16 +24,19 @@
 
   &__heading {
     display: flex;
-    padding-bottom: 0.75em;
-    font-weight: bold;
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+    @include underline($grey-light);
+    border-top: 1px solid $grey-light;
 
     a {
       @include underline(transparent);
     }
 
     &--thick {
-      padding-bottom: 0.5em;
-      border-bottom: 4px solid $black;
+      padding-top: 0;
+      padding-bottom: $space-sm;
+      border-top: 0;
     }
   }
   &__icon {
@@ -44,17 +47,16 @@
   }
   &__link {
     display: block;
-    padding: 0.75em 0.5em;
-    border-top: 1px solid $link-color;
+    padding: $space-xs  $space-xxs;
     color: $link-color !important;
-    @include underline(transparent);
+    font-size: $font-xs;
+    @include underline($grey-light);
 
     &:first-child {
       border-top: 0;
     }
 
     &:last-child {
-      border-bottom: 1px solid $link-color;
     }
 
     &:hover {

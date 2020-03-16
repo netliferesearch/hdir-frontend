@@ -71,7 +71,8 @@
     flex-direction: row;
     min-height: 2.4rem;
     justify-content: space-between;
-    padding-top: calc(0.5vw + 1.2rem);
+    align-items: center;
+    padding-top: calc(1.5vw + 1rem);
   }
   &__menu-overlay-links {
     // animation-name: fadeInUp;
