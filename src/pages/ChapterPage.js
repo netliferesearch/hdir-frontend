@@ -27,7 +27,7 @@ const ChapterPage = () => (
           ]}
         />
         <div className="l-content">
-          <aside className="col-md-4 l-hide-to-lg l-sidebar l-bleed-right">
+          <aside className="l-hide-to-lg l-sidebar l-bleed-right">
             <SectionSidebar
               heading="Nasjonal faglig retningslinje"
               headingUrl="#a"
