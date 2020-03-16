@@ -68,6 +68,11 @@
       margin-bottom: 0;
     }
     
+    &--children:hover {
+      >.b-section-sidebar__sub-link:last-child {
+        margin-left: $space-md*1.2;
+      }
+    }
 
     &--active {
       color: $black !important;
@@ -84,10 +89,19 @@
     padding: $space-xs $space-sm $space-xs;
     font-weight: 300;
     border: 0;
+    background-image: url($arrow-right);
+    background-size: .8em;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-left: $space-md;
+    transition: margin .1s ease-out;
     
     &--active {
       background: $primary-color-lighter;
       font-weight: 600;
+      background: none;
+      margin-left: $space-xs;
+      
     }
   }
   &__title {
