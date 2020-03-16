@@ -7,11 +7,11 @@
   &--link {
     position: relative;
     @include link-init($black);
-    padding: $space-md $space-xs $space-md $space-sm;
+    padding: $space-md $space-xs $space-md 0;
     border-bottom: 1px solid $grey-light !important;
     &:hover {
       color: $link-color;
-      background: rgba(0, 30, 0, 0.03);
+      background: $primary-color-lightest;
     }
 
     .b-chapter-heading__main-heading::before {
