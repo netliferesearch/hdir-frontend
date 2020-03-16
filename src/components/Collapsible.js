@@ -187,7 +187,7 @@ Collapsible.propTypes = {
   subheading: PropTypes.string,
   subheadingContent: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   date: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
   h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,
