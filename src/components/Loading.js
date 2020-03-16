@@ -22,12 +22,8 @@ const renderSpinner = color => (
   </svg>
 );
 
-const Loading = props => {
+const Loading = ({ message = '', color = '', }) => {
   const [theStatus, setTheStatus] = useState([]);
-  const {
-    message = '',
-    color = '',
-  } = props;
   const theColor = color && validateColor(color) ? color : '#025169';
   useEffect(() => {
     watch(window, "loadingStatus", () => {

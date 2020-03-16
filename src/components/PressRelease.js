@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SquareImage from './SquareImage';
 
-const PressRelease = props => (
-  <a href={props.url} className="b-press-release">
+const PressRelease = ({ url, image, alt, info, title, releaseDate }) => (
+  <a href={url} className="b-press-release">
     <div className="b-press-release__image-wrapper">
-      <SquareImage src={props.image} alt={props.alt} />
+      <SquareImage src={image} alt={alt} />
     </div>
     <div className="b-press-release__text-wrapper">
-      <div className="b-press-release__info">{props.info}</div>
-      <div className="b-press-release__title">{props.title}</div>
-      <div className="b-press-release__release-date">{props.releaseDate}</div>
+      <div className="b-press-release__info">{info}</div>
+      <div className="b-press-release__title">{title}</div>
+      <div className="b-press-release__release-date">{releaseDate}</div>
     </div>
   </a>
 );

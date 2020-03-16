@@ -2,11 +2,15 @@
   background-image: url("https://www.helsedirektoratet.no/_/asset/helsedirektoratet:1570538453/img/pdf-cover.png");
   background-position: bottom right;
   background-repeat: no-repeat;
-  padding-bottom: 580px;
+  padding-bottom: 530px;
 
   @bottom-center {
     content: ""
   }
+}
+@page frontpage-no-image:first {
+  background: none;
+  padding-bottom: 0;
 }
 
 @page {
@@ -136,6 +140,9 @@
   }
   .b-collapsible {
     padding-left: 0;
+  }
+  .b-collapsible--subtle {
+    margin-left: 0;
   }
   
   // Override other stuff

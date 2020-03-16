@@ -22,13 +22,13 @@ const boxIconClasses = status =>
     'b-alert__icon--info': status === 'info'
   });
   
-const Alert = props => (
+const Alert = ({ status, small, inline, hideIcon, title, children }) => (
   <section 
-    className={boxClasses(props.status, props.small, props.inline)}
+    className={boxClasses(status, small, inline)}
     aria-label="Fill out">
-    {!props.hideIcon && <div className={boxIconClasses(props.status)} />}
-    {props.title && <div className="b-alert__title">{props.title}</div>}
-    <div className="b-alert__content">{props.children}</div>
+    {!hideIcon && <div className={boxIconClasses(status)} />}
+    {title && <div className="b-alert__title">{title}</div>}
+    <div className="b-alert__content">{children}</div>
   </section>
 );
 
