@@ -21,7 +21,11 @@
     .h2 {
       padding-right: $space-sm;
     }
+    &:last-child {
+      border-bottom: 0 !important;
+    }
   }
+  
 
   &__main-heading {
     display: flex;
