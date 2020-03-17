@@ -25,37 +25,13 @@ const ChapterPage = () => (
           }
         ]}
       />
-      <div className="l-content">
+      <div className="l-layout">
         <aside className="l-hide-to-lg l-sidebar l-bleed-right">
           <SectionSidebar
             heading="Nasjonal faglig retningslinje"
             headingUrl="#a"
             icon="../icons/Konferanser.svg"
             list={[
-              {
-                url: '#',
-                description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
-              },
-              {
-                url: '#',
-                description: '2. Fellesdel: Samhandling og samarbeid',
-              },
-              {
-                url: '#',
-                description: '3. Fellesdel: Opplysningsplikt'
-              },
-              {
-                url: '#',
-                description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
-              },
-              {
-                url: '#',
-                description: '2. Fellesdel: Samhandling og samarbeid',
-              },
-              {
-                url: '#',
-                description: '3. Fellesdel: Opplysningsplikt'
-              },
               {
                 url: '#',
                 description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
