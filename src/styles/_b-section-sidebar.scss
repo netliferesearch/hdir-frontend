@@ -16,11 +16,13 @@
 
     &::-webkit-scrollbar {
       -webkit-appearance: none;
-      width: 12px;
+      width: 10px;
+      border-radius: 4px;
     }
     &::-webkit-scrollbar-thumb {
       background-color: rgba(0, 0, 0, 0.5);
       -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+      border-radius: 4px;
     }
   }
 
@@ -51,25 +53,23 @@
   }
   &__link {
     display: block;
-    padding: $space-xs 0 $space-xxs;
+    padding: $space-xs 0 $space-xxs 0;
     font-size: $font-xs;
     @include underline($grey-light);
-    border-top: 1px solid transparent;
-    box-shadow: none;
+    border-top: 1px solid $grey-light;
 
-    &:hover {
+    &:hover:not(.b-section-sidebar__link--children) {
       color: $black !important;
       background-color: $primary-color-lightest;
       border-top: 1px solid $primary-color-light;
-      border-bottom: 1px solid $primary-color-light;
-      margin-bottom: -1px;
-      
-      &:last-child {
-        margin-bottom: 0; // avoid hidden border bottom
-      }
+     
+     &+.b-section-sidebar__link {
+       border-top: 1px solid $primary-color-light;
+     }
     }
-    &--children:hover, &--active:hover {
-      margin-bottom: 0;
+    
+    &:last-child:hover {
+      border-bottom: 1px solid $primary-color-light;
     }
     
     &--children:hover {
@@ -83,9 +83,11 @@
       color: $black !important;
       background-color: $primary-color-lightest;
       border-top: 1px solid $primary-color-light;
-      border-bottom: 1px solid $primary-color-light;
       font-weight: 600;
       display: block;
+      &+.b-section-sidebar__link {
+        border-top: 1px solid $primary-color-light;
+      }
     }
   }
   &__sub-link {
@@ -113,7 +115,11 @@
     display: flex;
     padding-bottom: $space-xxs;
     padding-left: $space-xs;
+    padding-right: $space-sm;
+  }
+  &__meta-prefix {
     padding-right: $space-xs;
+    color: $primary-color;
   }
   &__description {
   }

@@ -46,6 +46,30 @@ const ChapterPage = () => (
               },
               {
                 url: '#',
+                description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
+              },
+              {
+                url: '#',
+                description: '2. Fellesdel: Samhandling og samarbeid',
+              },
+              {
+                url: '#',
+                description: '3. Fellesdel: Opplysningsplikt'
+              },
+              {
+                url: '#',
+                description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
+              },
+              {
+                url: '#',
+                description: '2. Fellesdel: Samhandling og samarbeid',
+              },
+              {
+                url: '#',
+                description: '3. Fellesdel: Opplysningsplikt'
+              },
+              {
+                url: '#',
                 description:
                   '4. Helsestasjon 0–5 år',
                 active: true,
