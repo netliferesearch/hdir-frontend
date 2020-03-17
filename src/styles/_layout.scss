@@ -34,6 +34,10 @@ body {
   @include mq($from: wide) {
     padding: $space-sm $space-xs $space-sm $space-xl;
   }
+  
+  &--topline {
+    border-top: 1px solid $grey-light;
+  }
 }
 
 .l-flex {

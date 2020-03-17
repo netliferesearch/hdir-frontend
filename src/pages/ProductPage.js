@@ -6,93 +6,130 @@ import Box from '../components/Box';
 import Link from '../components/Link';
 import PageMeta from '../components/PageMeta';
 import LongShortHeading from '../components/LongShortHeading';
+import SectionSidebar from '../components/SectionSidebar';
+import InputSearch from '../components/InputSearch';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const ProductPage = () => (
-  <div className="l-container l-mt-3">
+  <div className="l-container">
+    <Breadcrumbs
+      paths={[
+        {
+          name: 'Forsiden',
+          href: '#a'
+        }
+      ]}
+    />
     <main id="main">
-      <div className="row">
-        <div className="col-xs-12">
-          <LongShortHeading
-            long="Nasjonal faglig retningslinje"
-            short="Svangerskapsdiabetes"
-            icon={'./icons/Retningslinjer_Veiledere_Faglige_råd.svg'}
-            url="#a"
-            linkText="Hva er nasjonal faglig retningslinje"
+      <div className="l-mt-3">
+        <LongShortHeading
+          long="Nasjonal faglig retningslinje"
+          short="Svangerskapsdiabetes"
+          icon={'./icons/Retningslinjer_Veiledere_Faglige_råd.svg'}
+          url="#a"
+          linkText="Hva er nasjonal faglig retningslinje"
+        />
+      </div>
+      <div class="l-mt-3 l-mb-2">
+        <InputSearch
+          autoFocus={true}
+          label={'Søk i retningslinjen'}
+          exampleSuggestions={[]}
+        />
+      </div>
+      <div className="l-layout">
+        <aside className="l-hide-to-lg l-sidebar l-bleed-right">
+          <SectionSidebar
+            list={[
+              {
+                url: '#',
+                description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
+              },
+              {
+                url: '#',
+                description: '2. Fellesdel: Samhandling og samarbeid',
+              },
+              {
+                url: '#',
+                description: '3. Fellesdel: Opplysningsplikt'
+              },
+              {
+                url: '#',
+                description:
+                  '4. Helsestasjon 0–5 år',
+              },
+              {
+                url: '#',
+                description: '5. Skolehelsetjenesten 5–20 år'
+              },
+              {
+                url: '#',
+                description: '6. Helsestasjon for ungdom'
+              },
+              {
+                url: '#',
+                description: '7. Metode og prosess'
+              }
+            ]}
           />
-        </div>
-        <div className="col-xs-12 l-mt-4">
-          <ChapterHeading
-            heading="Diagnostikk og tiltak for å finne uoppdaget diabetes og svangerskapsdiabetes"
-            subheading="Kapittel 1"
-            url="/kapittel"
-          />
-          <hr className="b-hr b-hr--blue" />
-          <div className="l-hide-to-md">
-            <div className="js-expand-list" data-start-limit="2">
-              <NavList
-                small
-                list={[
-                  {
-                    description: 'Sterk anbefaling',
-                    title: 'Anbefaling 1',
-                    url: '#'
-                  },
-                  {
-                    description: 'Sterk anbefaling',
-                    title:
-                      'Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi',
-                    url: '/kapittel#anbefaling1'
-                  },
-                  {
-                    description: 'Sterk anbefaling',
-                    title: 'Anbefaling 3',
-                    url: '#'
-                  }
-                ]}
-              />
-              <div className="l-mt-2 t-sm-center">
-                <button className="b-button b-button--secondary b-button--small">
-                  ↓ Vis alle (3)
-                </button>
+        </aside>
+        <div className="l-article l-article--topline">
+          <div className="col-xs-12 l-mt-2">
+            <ChapterHeading
+              heading="1. Fellesdel: Ledelse, styring og brukermedvirkning"
+              url="/kapittel"
+              clean
+            />
+            <hr className="b-hr b-hr--blue" />
+            <div className="l-hide-to-md">
+              <div className="js-expand-list" data-start-limit="2">
+                <NavList
+                  list={[
+                    {
+                      title: 'Styringssystem',
+                      url: '#'
+                    },
+                    {
+                      title:
+                        'Ansvars- og oppgavefordeling',
+                      url: '/kapittel#anbefaling1'
+                    },
+                    {
+                      title: 'Kompetanse',
+                      url: '#'
+                    }
+                  ]}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-xs-12 l-mt-3">
+            <ChapterHeading
+              heading="2. Fellesdel: Samhandling og samarbeid"
+              url="#a"
+              clean
+            />
+            <hr className="b-hr b-hr--blue" />
+            <div className="l-hide-to-md">
+              <div className="js-expand-list">
+                <NavList
+                  list={[
+                    {
+                      title: 'Koordinerende enhet',
+                      url: '#a'
+                    },
+                    {
+                      title: 'Barnevernet',
+                      url: '#a'
+                    }
+                  ]}
+                />
               </div>
             </div>
           </div>
         </div>
-        <div className="col-xs-12 l-mt-4">
-          <ChapterHeading
-            heading="Diagnostikk og tiltak"
-            subheading="Kapittel 2"
-            url="#a"
-          />
-          <hr className="b-hr b-hr--blue" />
-          <div className="l-hide-to-md">
-            <div className="js-expand-list">
-              <NavList
-                small
-                list={[
-                  {
-                    description: 'Kapittel 2.1',
-                    title: 'Det foreslås at HbA1c tas ved',
-                    url: '#a'
-                  },
-                  {
-                    description: 'Kapittel 2.2',
-                    title:
-                      'Tilby glukosebelastning til gravide i uke 24-28 med en eller flere karakteristika (alder, etnisitet, arvelighet, kroppsmasseindeks og hendelser i tidligere svangerskap)',
-                    url: '#a'
-                  }
-                ]}
-              />
-              <div className="l-mt-2 t-sm-center">
-                <button className="b-button b-button--secondary b-button--small ">
-                  ↓ Vis alle (7)
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-xs-12 l-mt-4">
+      </div>
+        <div className="col-xs-12 l-mt-2">
           <Box>
             <h3 className="h4">RELATERTE PRODUKTER</h3>
             <div className="l-mt-1">
@@ -115,7 +152,7 @@ const ProductPage = () => (
             </div>
           </Box>
         </div>
-        <div className="col-xs-12 l-mt-4">
+        <div className="col-xs-12 l-mt-2">
           <Box color="green">
             <ChapterHeading
               heading="Materiell til helsekontorer"
@@ -148,9 +185,8 @@ const ProductPage = () => (
             </div>
           </Box>
         </div>
-      </div>
     </main>
-    <div className="l-mt-4">
+    <div className="l-mt-2">
       <PageMeta
         publishDate="11. august 2008"
         editDate="11. august 2018"
@@ -162,7 +198,7 @@ const ProductPage = () => (
         Skriv ut hele retningslinjen
       </Button>
 
-      <div className="col-xs-12 l-mt-4 l-mb-5">
+      <div className="col-xs-12 l-mt-2 l-mb-5">
         <Link href="#a" wideButton arrow color="purple">
           For å lese om symptomer, kostholdsråd og andre tips ved
           svangerskapsdiabetes, kan du gå til helsenorge.no.

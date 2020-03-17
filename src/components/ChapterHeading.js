@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Heading from './Heading';
 
-const headingClasses = (line, url) =>
+const headingClasses = (line, url, clean) =>
   classNames({
     'b-chapter-heading': true,
     'b-chapter-heading--link': url,
     // top is the default
     'b-chapter-heading--line-bottom': line === 'bottom',
-    'b-chapter-heading--line-none': line === 'none'
+    'b-chapter-heading--line-none': line === 'none',
+    'b-chapter-heading--clean': clean
   });
 
 const bigHeader = h =>
@@ -28,10 +29,10 @@ const smallHeader = h =>
 
 // Is H2 as wrapper an OK assumption?
 // TODO: Add the Heading-component instead
-const ChapterHeading = ({ url, line, h, subheading, heading }) => (
+const ChapterHeading = ({ url, line, h, subheading, heading, clean }) => (
   <>
     {url ? (
-      <a href={url} className={headingClasses(line, url)}>
+      <a href={url} className={headingClasses(line, url, clean)}>
         <Heading h={h}>
           {subheading && (
             <span className={smallHeader(h)}>{subheading}</span>
@@ -42,7 +43,7 @@ const ChapterHeading = ({ url, line, h, subheading, heading }) => (
         </Heading>
       </a>
     ) : (
-      <div className={headingClasses(line)}>
+      <div className={headingClasses(line, clean)}>
         <Heading h={h}>
           {subheading && (
             <span className={smallHeader(h)}>{subheading}</span>
@@ -61,7 +62,8 @@ ChapterHeading.propTypes = {
   subheading: PropTypes.string,
   line: PropTypes.oneOf(['top', 'bottom', 'none']).isRequired,
   h: PropTypes.oneOf(['h1', 'h2', 'h3']).isRequired,
-  url: PropTypes.string
+  url: PropTypes.string,
+  clean: PropTypes.bool,
 };
 
 ChapterHeading.defaultProps = {

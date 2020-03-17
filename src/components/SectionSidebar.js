@@ -208,7 +208,7 @@ const SectionSidebar = props => {
       <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
         <div
           className={classNames({
-            'b-section-sidebar__heading': true,
+            'b-section-sidebar__heading': props.heading,
             'b-section-sidebar__heading--thick': !hasItems(props.list)
           })}
         >

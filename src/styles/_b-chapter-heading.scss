@@ -55,6 +55,17 @@
     padding-bottom: 1em;
   }
   
+  &--clean {
+    border: 0 !important;
+    padding: $space-sm 0;
+    .b-chapter-heading__main-heading {
+      &:before {
+        display: none;
+      }
+      
+    }
+  }
+  
   &:focus {
     outline: 0;
     border-top: 4px solid $blue;

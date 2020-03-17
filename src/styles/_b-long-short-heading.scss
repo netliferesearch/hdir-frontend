@@ -4,16 +4,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 
   &__sub {
     font-size: $meta-text;
     display: flex;
     align-items: center;
+    margin-top: $space-sm;
   }
   &__sub-icon {
     height: 3em;
     width: 3em;
-    margin-right: 1em;
+    margin-right: $space-xs;
   }
   &__text {
     display: block;
