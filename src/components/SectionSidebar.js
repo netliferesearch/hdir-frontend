@@ -79,12 +79,12 @@ const ListItem = ({ props }) => {
         {child.description}
         </span>
       ))}
-      {props.children &&
+      {props.readMoreLabel &&
         (
           <span
             className={subLinkClasses({active: false})} 
             key={shortid.generate()}>
-            Se hele kapittel
+            {props.readMoreLabel}
             </span>
           )
       }
@@ -283,6 +283,7 @@ SectionSidebar.propTypes = {
       description: PropTypes.string,
       prefix: PropTypes.string,
       url: PropTypes.string.isRequired,
+      readMoreLabel: PropTypes.string,
       active: PropTypes.bool,
       children: PropTypes.arrayOf(
         PropTypes.shape({

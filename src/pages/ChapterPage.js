@@ -56,7 +56,8 @@ const ChapterPage = () => (
                       active: true,
                       url: '#',
                     }
-                  ]
+                  ],
+                  readMoreLabel: 'Se hele kapittel 4'
                 },
                 {
                   url: '#',
