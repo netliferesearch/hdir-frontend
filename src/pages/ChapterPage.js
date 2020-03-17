@@ -50,14 +50,6 @@ const ChapterPage = () => (
                   description:
                     '4. Helsestasjon 0–5 år',
                   active: true,
-                  children: [
-                    {
-                      description: '4.1 Veiing og måling',
-                      active: true,
-                      url: '#',
-                    }
-                  ],
-                  readMoreLabel: 'Se hele kapittel 4'
                 },
                 {
                   url: '#',
@@ -76,64 +68,40 @@ const ChapterPage = () => (
           </aside>
           <div className="l-article">
           <ChapterHeading
-            heading="4.1 Veiing og måling"
+            heading="4. Helsestasjon 0–5 år"
             h="h1"
             line="none"
           />
+          <ChapterHeading
+            heading="4.1 Veiing og måling"
+            url="#a"
+          />
+          <ChapterHeading
+            heading="4.2 Hørsel, syn og språk"
+            url="#a"
+          />
           <Collapsible
             background
-            heading="Hodeomkrets: Helsestasjonen bør måle hodeomkrets på barn 0-2 år"
+            heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
           >
-            <Collapsible
-              heading="Sterk anbefaling"
-              subtle
-              size="small"
-              smallContent
-            >
-              <p>...Hva er en sterk anbefaling...</p>
-            </Collapsible>
-            <p>Alle barn bør få målt hodeomkrets regelmessig i løpet av første leveår, og på indikasjon frem til 2 års alder.</p>
-            <p>Måling av hodeomkrets bør gjennomføres ved de faste konsultasjonene på helsestasjonen, samtidig med måling av vekt og lengde ved:</p>
-            <ul>
-              <li>7.–10. levedøgn (hjemmebesøk)</li>
-              <li>6 ukers alder</li>
-              <li>3 måneders alder</li>
-              <li>5 måneders alder</li>
-              <li>6 måneders alder</li>
-              <li>10 måneders alder</li>
-              <li>12 måneders alder</li>
-            </ul>
-            <p>Ved andre konsultasjoner bør måling av hodeomkrets gjøres på indikasjon eller etter foreldrenes ønske, se anbefalingen Helsestasjonsprogrammet. </p>
-            <p>Ved vurdering av hodeomkrets anbefales det å benytte nasjonal <a href="#test">vekstkurve fra Vekststudien i Bergen.</a></p>
-            <Collapsible
-              h="h3"
-              heading="Praktisk"
-              size="small"
-            >
-            </Collapsible>
-            <Collapsible
-              h="h3"
-              heading="Begrunnelse"
-              size="small"
-            >
-            </Collapsible>
-          </Collapsible>
-          
+          </Collapsible >
           <Collapsible
             background
-            heading="Veiing og måling: Helsestasjon bør måle vekt og lengde/høyde på barn 0-5 år"
+            heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
           >
-          Innhold
+          </Collapsible >
+          <Collapsible
+            background
+            heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
+          >
+          </Collapsible >
+          <Collapsible
+            background
+            heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
+          >
           </Collapsible >
         
-          <ChapterHeading
-            heading="1.1 Underkapittel"
-            url="#a"
-          />
-          <ChapterHeading
-            heading="1.2 Underkapittel"
-            url="#a"
-          />
+          
             <div>
               <Link wideButton arrow color="purple">
                 Henvis pasienten til helsenorge.no for mer informasjon

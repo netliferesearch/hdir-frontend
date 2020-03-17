@@ -1,14 +1,16 @@
 .b-chapter-heading {
   display: block;
   position: relative;
-  padding: 0 $space-md $space-xs 0;
+  padding: 0 $space-md $space-md 0;
   @include underline(transparent);
 
   &--link {
     position: relative;
     @include link-init($black);
     padding: $space-md $space-xs $space-md 0;
+    border-top: 1px solid $grey-light !important;
     border-bottom: 1px solid $grey-light !important;
+    margin-top: -1px;
     &:hover {
       color: $link-color;
       background: $primary-color-lightest;
@@ -20,9 +22,6 @@
     }
     .h2 {
       padding-right: $space-sm;
-    }
-    &:last-child {
-      border-bottom: 0 !important;
     }
   }
   

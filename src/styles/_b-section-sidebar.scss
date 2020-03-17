@@ -85,7 +85,6 @@
       border-top: 1px solid $primary-color-light;
       border-bottom: 1px solid $primary-color-light;
       font-weight: 600;
-      padding-bottom: $space-xs;
       display: block;
     }
   }
@@ -104,9 +103,8 @@
     &--active {
       background: $primary-color-lighter;
       font-weight: 600;
-      background: none;
-      margin-left: $space-xs;
-      
+      padding-left: $space-md;
+      margin-left: 0;
     }
   }
   &__title {
