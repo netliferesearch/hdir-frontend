@@ -30,7 +30,6 @@ const ChapterPage = () => (
           <aside className="l-hide-to-lg l-sidebar l-bleed-right">
             <SectionSidebar
               heading="Nasjonal faglig retningslinje"
-              headingUrl="#a"
               icon="../icons/Konferanser.svg"
               list={[
                 {
