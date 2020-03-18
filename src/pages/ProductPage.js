@@ -25,7 +25,7 @@ const ProductPage = () => (
         <LongShortHeading
           long="Nasjonal faglig retningslinje"
           short="Svangerskapsdiabetes"
-          icon={'./icons/Retningslinjer_Veiledere_Faglige_råd.svg'}
+          icon={'./icons/Retningslinjer_Veiledere_Faglige_rad.svg'}
           url="#a"
           linkText="Hva er nasjonal faglig retningslinje"
         />
