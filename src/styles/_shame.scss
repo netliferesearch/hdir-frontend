@@ -79,6 +79,12 @@ table {
     display: block;
     font-size: $font-xs;
   }
+  &--clean {
+    .b-icon-with-text__text {
+      text-transform: none;
+      font-size: $medium-large-text;
+    }
+  }
 }
 
 .u-right-sm {

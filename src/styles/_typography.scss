@@ -158,4 +158,9 @@ small {
   &--uppercase {
     text-transform: uppercase;
   }
+  &--infotext {
+    display: inline-block;
+    margin-left: 1em;
+    font-size: $meta-text;
+  }
 }

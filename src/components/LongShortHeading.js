@@ -2,24 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from './Link';
 
-const LongShortHeading = props => {
+const LongShortHeading = ({ short, long, url, icon, linkText }) => {
   return (
     <div className="b-long-short-heading">
       <h1>
-        {props.short && (
-          <span aria-hidden={Boolean(props.long).toString()}>
-            {props.short}
+        {short && (
+          <span aria-hidden={Boolean(long).toString()}>
+            {short}
           </span>
         )}
-        
         {!props.short && <span>{props.long}</span>}
       </h1>
       <div>
         {props.short && props.long && (
           <div className="b-long-short-heading__sub">
-            {props.icon && (
+            {icon && (
               <img
-                src={props.icon}
+                src={icon}
                 role="presentation"
                 alt=""
                 aria-hidden="true"

@@ -15,15 +15,24 @@ const linkClasses = arrow =>
     'b-card__link--right-arrow': arrow === 'right'
   });
 
-const Card = props => (
-  <a href="#a" className={cardClasses(props.horizontal)}>
-    {props.children && <div className="b-card__feature">{props.children}</div>}
-    <div className={linkClasses(props.arrow)}>
-      {props.heading && <h3 className="b-card__heading">{props.heading}</h3>}
-      {props.topic && <div className="b-card__topic">{props.topic}</div>}
-      {props.text && <div className="b-card__text">{props.text}</div>}
-      {props.content && <div>{props.content}</div>}
-      {props.mainContent}
+const Card = ({ 
+  horizontal, 
+  children, 
+  heading, 
+  topic, 
+  text, 
+  content, 
+  mainContent, 
+  arrow 
+}) => (
+  <a href="#a" className={cardClasses(horizontal)}>
+    {children && <div className="b-card__feature">{children}</div>}
+    <div className={linkClasses(arrow)}>
+      {heading && <h3 className="b-card__heading">{heading}</h3>}
+      {topic && <div className="b-card__topic">{topic}</div>}
+      {text && <div className="b-card__text">{text}</div>}
+      {content && <div>{content}</div>}
+      {mainContent}
     </div>
   </a>
 );

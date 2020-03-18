@@ -1,6 +1,5 @@
 import React from 'react';
 import ArticleIntro from '../components/ArticleIntro';
-import Link from '../components/Link';
 import Button from '../components/Button';
 import Box from '../components/Box';
 import Collapsible from '../components/Collapsible';

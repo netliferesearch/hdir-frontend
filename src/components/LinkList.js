@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
-const LinkList = props => (
+const LinkList = ({ list }) => (
   <nav className="b-link-list">
-    {props.list.map(item =>
+    {list.map(item =>
       item.active ? (
         <div
           className="b-link-list__item b-link-list__item--active"
