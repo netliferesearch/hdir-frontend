@@ -11,10 +11,10 @@ const LongShortHeading = ({ short, long, url, icon, linkText }) => {
             {short}
           </span>
         )}
-        {!props.short && <span>{props.long}</span>}
+        {!short && <span>{long}</span>}
       </h1>
       <div>
-        {props.short && props.long && (
+        {short && long && (
           <div className="b-long-short-heading__sub">
             {icon && (
               <img
@@ -26,10 +26,10 @@ const LongShortHeading = ({ short, long, url, icon, linkText }) => {
               />
             )}
             <div className="b-long-short-heading__text">
-              {props.long}
-              {props.url && 
-                <Link href={props.url} arrow>
-                  {props.linkText}
+              {long}
+              {url && 
+                <Link href={url} arrow>
+                  {linkText}
                 </Link>
               }
             </div>
