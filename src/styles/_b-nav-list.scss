@@ -129,7 +129,7 @@
     &:hover {
       &[href] {
         color: $link-color;
-        background: rgba(0, 30, 0, 0.03);
+        background: $primary-color-lightest;
       }
     }
 

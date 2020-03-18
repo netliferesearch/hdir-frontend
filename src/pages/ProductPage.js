@@ -84,6 +84,7 @@ const ProductPage = () => (
             <div className="l-hide-to-md">
               <div className="js-expand-list" data-start-limit="2">
                 <NavList
+                  noArrow
                   list={[
                     {
                       title: 'Styringssystem',
@@ -113,6 +114,7 @@ const ProductPage = () => (
             <div className="l-hide-to-md">
               <div className="js-expand-list">
                 <NavList
+                  noArrow
                   list={[
                     {
                       title: 'Koordinerende enhet',
