@@ -9,6 +9,7 @@ import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Link from '../components/Link';
 import IconWithText from '../components/IconWithText';
+import ProductSearch from '../components/ProductSearch';
 
 const ChapterPage = () => (
   <>
@@ -66,6 +67,7 @@ const ChapterPage = () => (
             />
           </aside>
           <div className="l-article">
+          <ProductSearch label="Søk i retningslinjen" />
           <ChapterHeading
             heading="4. Helsestasjon 0–5 år"
             h="h1"
