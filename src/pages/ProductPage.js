@@ -74,7 +74,7 @@ const ProductPage = () => (
           />
         </aside>
         <div className="l-article l-article--topline">
-          <div className="col-xs-12 l-mt-2">
+          <div className="col-xs-12 l-mt-1">
             <ChapterHeading
               heading="1. Fellesdel: Ledelse, styring og brukermedvirkning"
               url="/kapittel"
