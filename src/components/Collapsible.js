@@ -131,17 +131,15 @@ const Collapsible = props => {
       {props.subheading && props.subheadingContent && (
         collapsed
           ?
-          <div className="b-collapsible__subheading-collapsible l-mt-1">
-            <Collapsible
-              heading={props.subheading}
-              subtle={Boolean(props.subheadingContent)}
-              size="small"
-              bold={props.bold}
-              smallContent
-            >
-              <p>{props.subheadingContent}</p>
-            </Collapsible>
-          </div>
+          <Collapsible
+            heading={props.subheading}
+            subtle={Boolean(props.subheadingContent)}
+            size="small"
+            bold={props.bold}
+            smallContent
+          >
+            <p>{props.subheadingContent}</p>
+          </Collapsible>
           :
           <p className="b-collapsible__meta-heading">{props.subheading}</p>
       )}

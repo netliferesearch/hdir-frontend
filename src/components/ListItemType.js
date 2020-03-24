@@ -156,7 +156,7 @@ const ListItemType = props => {
         <div
           className={classNames({
             'b-list-item-type': true,
-            'b-list-item-type--no-arrow': fields.download
+            'b-list-item-type--no-arrow': fields.download || fields.openPdf,
           })}
         >
           <div className="b-list-item-type__flex-wrapper">

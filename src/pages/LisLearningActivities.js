@@ -29,7 +29,7 @@ const LisLearningActivities = () => (
         <div className="row l-mt-3">
           <aside className="col-md-3 col-xs-12 l-mb-4">
             <SectionSidebar
-              heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
+              heading="Spesialutdanning innen barnekirurgi"
               list={[
                 { title: 'Læringsmål', url: '#a' },
                 { title: 'Læringsaktiviteter', url: '#a' },

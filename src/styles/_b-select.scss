@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   &:after {
+    transition: all .1s ease-out;
     position: absolute;
     display: block;
     bottom: 1.15em;
@@ -31,7 +32,10 @@
     display: table;
 
     &:after {
-      top: 2.4em;
+      top: 2.6em;
+    }
+    &:hover:after {
+      top: 2.8em;
     }
   }
 
