@@ -7,11 +7,74 @@ import SectionSidebar from '../components/SectionSidebar';
 import Alert from '../components/Alert';
 import Box from '../components/Box';
 import Link from '../components/Link';
+import Breadcrumbs from '../components/Breadcrumbs';
+import ProductSearch from '../components/ProductSearch';
 
 const ChapterPage = () => (
   <>
-    <main id="main">
-      <div className="l-container l-mt-2">
+  <main id="main">
+    <div className="l-container">
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Helsestasjons- og skolehelsetjenesten',
+            href: '#a'
+          }
+        ]}
+      />
+      <div className="l-layout">
+        <aside className="l-hide-to-lg l-sidebar l-bleed-right">
+          <SectionSidebar
+            heading="Nasjonal faglig retningslinje"
+            icon="../icons/Konferanser.svg"
+            list={[
+              {
+                url: '#',
+                description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
+              },
+              {
+                url: '#',
+                description: '2. Fellesdel: Samhandling og samarbeid',
+              },
+              {
+                url: '#',
+                description: '3. Fellesdel: Opplysningsplikt'
+              },
+              {
+                url: '#',
+                description:
+                  '4. Helsestasjon 0–5 år',
+                active: true,
+                children: [
+                  {
+                    description: '4.1 Veiing og måling',
+                    active: true,
+                    url: '#',
+                  }
+                ],
+                readMoreLabel: 'Se hele kapittel 4'
+              },
+              {
+                url: '#',
+                description: '5. Skolehelsetjenesten 5–20 år'
+              },
+              {
+                url: '#',
+                description: '6. Helsestasjon for ungdom'
+              },
+              {
+                url: '#',
+                description: '7. Metode og prosess'
+              }
+            ]}
+          />
+        </aside>
+        <div className="l-article">
+        <ProductSearch label="Søk i retningslinjen" />
         <ChapterHeading
           heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
           subheading="KAPITTEL 1"
