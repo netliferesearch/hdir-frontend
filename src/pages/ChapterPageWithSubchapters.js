@@ -134,12 +134,12 @@ const ChapterPage = () => (
           heading="1.2 Underkapittel"
           url="#a"
         />
-          <div>
+          <div className="l-mt-4">
             <Link wideButton arrow color="purple">
               Henvis pasienten til helsenorge.no for mer informasjon
             </Link>
           </div>
-          <div>
+          <div className="l-mt-2">
             <PageMeta
               publishDate="11. oktober 2008"
               editDate="11. august 2018"
@@ -150,41 +150,8 @@ const ChapterPage = () => (
     </div>
   </main>
 
-  <div className="l-container">
-    <div className="l-mt-4 l-mb-4">
-      <Collapsible heading="Abonnér på endringer – Nasjonal faglig retningslinje for svangerskapsdiabetes">
-        <form>
-          <div className="b-input-text">
-            <label
-              htmlFor="email-subscription"
-              className="b-input-text__label"
-            >
-              Fyll inn e-postadressen din for å motta varsler om endringer.
-            </label>
-            <input
-              type="text"
-              id="email-subscription"
-              className="b-input-text__input"
-            />
-            <div className="b-input-text__description">
-              Du får straks en e-post som bekrefter ditt abonnement. Der
-              finner du også melihet til å melde deg av.
-            </div>
-            <div className="b-input-text__error">
-              Skriv inn en gylig epost-adresse.
-            </div>
-            <Button>Abonnér</Button>
-          </div>
-        </form>
-        <Alert status="success">
-          Abonnementet ditt er registrert. Du får straks e-post fra oss.
-        </Alert>
-      </Collapsible>
-    </div>
-  </div>
-
   <div className="l-mt-4">
-    <Box color="grey" square noPadding>
+    <Box color="grey" square>
       <div className="l-container">
         <strong>Kontakt:</strong>
         <br />
