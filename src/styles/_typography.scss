@@ -124,6 +124,11 @@ small {
   h5,
   h6 {
     margin-top: 1.5em;
+    
+    &:focus {
+      outline: 0;
+      color: $primary-color;
+    }
   }
   // Removes heading styles for blocks
   [class^='b-'] {
@@ -144,7 +149,6 @@ small {
     margin-top: 0;
   }
   ul {
-    margin-top: 0.5em;
   }
 }
 

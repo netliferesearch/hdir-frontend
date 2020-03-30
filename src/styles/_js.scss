@@ -16,6 +16,7 @@
 // The copy icon for headers generated with createUniqueHeadersUtil
 .js-copy-icon {
   display: none;
+  width: 20px;
   &:hover {
     text-decoration: underline;
   }
@@ -28,12 +29,13 @@
 // undesirable negative margin on hover on some h2s [HDF-262]
 .js-show-copy-icon:hover {
   position: relative;
+  display: flex;
   cursor: pointer;
   .js-copy-icon {
     display: inline-block;
   }
   @include mq($from: desktop) {
-    left: -22px;
+    left: -20px;
   }
 }
 // The 'h2' headings shown as actual 'chapter' on chapter page

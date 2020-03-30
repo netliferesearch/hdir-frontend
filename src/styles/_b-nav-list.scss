@@ -2,7 +2,7 @@
 
 .b-nav-list {
   &__heading {
-    border-bottom: 6px solid $black;
+    border-bottom: 1px solid $primary-color;
     padding-bottom: 0.25rem;
     font-weight: bold;
     line-height: $base-line-height; // this is a reset
@@ -121,9 +121,10 @@
 
     @include mq($until: $tablet) {
       flex-direction: column;
+      padding: $space-sm 0;
     }
     @include link-init($black);
-    padding: 1em;
+    padding: $space-sm;
 
     &:hover {
       &[href] {
@@ -161,7 +162,7 @@
         @include pseudo-arrow($arrow-right);
         top: 1.35em;
         position: absolute;
-        right: 1rem;
+        right: $space-sm;
       }
     }
 
@@ -201,6 +202,7 @@
   //
   &__item-description {
     width: 30%;
+    text-transform: uppercase;
     flex-shrink: 0;
     @include mq($until: $tablet) {
       width: calc(100% - 2em);

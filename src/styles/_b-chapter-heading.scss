@@ -1,14 +1,13 @@
 .b-chapter-heading {
   display: block;
   position: relative;
-  border-top: 4px solid $black;
-  padding: 0 0 1em 0;
+  padding: 0 $space-md $space-xs 0;
   @include underline(transparent);
 
   &--link {
     position: relative;
     @include link-init($black);
-    padding: 1em;
+    padding: $space-sm $space-xs $space-lg $space-sm;
     border-bottom: 1px solid $link-color;
     &:hover {
       color: $link-color;
@@ -18,6 +17,9 @@
     .b-chapter-heading__main-heading::after {
       visibility: visible;
     }
+    .h2 {
+      padding-right: $space-sm;
+    }
   }
 
   &__main-heading {
@@ -25,15 +27,13 @@
     justify-content: space-between;
     &:after {
       visibility: hidden;
-      padding-left: 0.5em;
-      margin-top: 0.15em;
 
       content: '';
-      height: 1em;
-      width: 1em;
+      height: 1.3em;
+      width: 1.3em;
 
       background-image: url($arrow-right);
-      background-size: 0.8em;
+      background-size: 1.3em;
       background-repeat: no-repeat;
     }
   }
@@ -45,7 +45,7 @@
 
   &--line-bottom {
     border-top: 0;
-    border-bottom: 4px solid $black !important;
+    border-bottom: 1px solid $link-color !important;
     padding-bottom: 1em;
   }
   
