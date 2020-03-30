@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Collapsible from '../components/Collapsible';
 import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
@@ -10,129 +10,200 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import Link from '../components/Link';
 import IconWithText from '../components/IconWithText';
 import ProductSearch from '../components/ProductSearch';
+import NavList from '../components/NavList';
 
-const ChapterPage = () => (
-  <>
-    <main id="main">
-      <div className="l-container">
-        <Breadcrumbs
-          paths={[
-            {
-              name: 'Forsiden',
-              href: '#a'
-            },
-            {
-              name: 'Helsestasjons- og skolehelsetjenesten',
-              href: '#a'
-            }
-          ]}
-        />
-        <div className="l-layout">
-          <aside className="l-hide-to-lg l-sidebar l-bleed-right">
-            <SectionSidebar
-              heading="Nasjonal faglig retningslinje"
-              icon="../icons/Konferanser.svg"
-              list={[
-                {
-                  url: '#',
-                  description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
-                },
-                {
-                  url: '#',
-                  description: '2. Fellesdel: Samhandling og samarbeid',
-                },
-                {
-                  url: '#',
-                  description: '3. Fellesdel: Opplysningsplikt'
-                },
-                {
-                  url: '#',
-                  description:
-                    '4. Helsestasjon 0–5 år',
-                  active: true,
-                },
-                {
-                  url: '#',
-                  description: '5. Skolehelsetjenesten 5–20 år'
-                },
-                {
-                  url: '#',
-                  description: '6. Helsestasjon for ungdom'
-                },
-                {
-                  url: '#',
-                  description: '7. Metode og prosess'
-                }
-              ]}
-            />
-          </aside>
-          <div className="l-article">
-          <ProductSearch label="Søk i retningslinjen" />
-          <ChapterHeading
-            heading="4. Helsestasjon 0–5 år"
-            h="h1"
-            line="none"
+const ChapterPage = () => {
+  const [searchResults, setSearchResults] = useState('');
+  
+  return (
+    <>
+      <main id="main">
+        <div className="l-container">
+          <Breadcrumbs
+            paths={[
+              {
+                name: 'Forsiden',
+                href: '#a'
+              },
+              {
+                name: 'Helsestasjons- og skolehelsetjenesten',
+                href: '#a'
+              }
+            ]}
           />
-          <ChapterHeading
-            heading="4.1 Veiing og måling"
-            url="#a"
-          />
-          <ChapterHeading
-            heading="4.2 Hørsel, syn og språk"
-            url="#a"
-          />
-          <Collapsible
-            background
-            heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
-          >
-          </Collapsible >
-          <Collapsible
-            background
-            heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
-          >
-          </Collapsible >
-          <Collapsible
-            background
-            heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
-          >
-          </Collapsible >
-          <Collapsible
-            background
-            heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
-          >
-          </Collapsible >
-        
-          
-            <div className="l-mt-4">
-              <Link wideButton arrow color="purple">
-                Henvis pasienten til helsenorge.no for mer informasjon
-              </Link>
-            </div>
-            <div className="l-mt-2">
-              <PageMeta
-                publishDate="11. oktober 2008"
-                editDate="11. august 2018"
+          <div className="l-layout">
+            <aside className="l-hide-to-lg l-sidebar l-bleed-right">
+              <SectionSidebar
+                heading="Nasjonal faglig retningslinje"
+                icon="../icons/Konferanser.svg"
+                list={[
+                  {
+                    url: '#',
+                    description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
+                  },
+                  {
+                    url: '#',
+                    description: '2. Fellesdel: Samhandling og samarbeid',
+                  },
+                  {
+                    url: '#',
+                    description: '3. Fellesdel: Opplysningsplikt'
+                  },
+                  {
+                    url: '#',
+                    description:
+                      '4. Helsestasjon 0–5 år',
+                    active: true,
+                  },
+                  {
+                    url: '#',
+                    description: '5. Skolehelsetjenesten 5–20 år'
+                  },
+                  {
+                    url: '#',
+                    description: '6. Helsestasjon for ungdom'
+                  },
+                  {
+                    url: '#',
+                    description: '7. Metode og prosess'
+                  }
+                ]}
               />
+            </aside>
+            <div className="l-article">
+            <ProductSearch
+              label="Søk i retningslinjen"
+              fnChange={(value) => setSearchResults(value)}
+            />
+            {
+              searchResults ? (
+                <>
+                  <h2>6 treff på «{searchResults}» i retningslinjen</h2>
+                  
+                  <div className="col-xs-12 l-mt-3">
+                    <ChapterHeading
+                      heading="Anbefalinger"
+                      h={'h3'}
+                      clean
+                    />
+                    <hr className="b-hr b-hr--blue" />
+                    <NavList
+                      noArrow
+                      list={[
+                        {
+                          title: ["Lavterskel", <strong>tilbud</strong>],
+                          meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
+                          url: '#a'
+                        },
+                        {
+                          title: ["Tilpasset ", <strong>tilbud</strong>],
+                          meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
+                          url: '#a'
+                        },
+                        {
+                          title: 'Tannehelsetjenesten',
+                          meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
+                          url: '#a'
+                        },
+                        {
+                          title: ["Oversikt over ", <strong>tilbud</strong>],
+                          meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
+                          url: '#a'
+                        },
+                      ]}
+                    />
+                  </div>
+                  <div className="col-xs-12 l-mt-3">
+                    <ChapterHeading
+                      heading="Kapitler"
+                      h={'h3'}
+                      clean
+                    />
+                    <hr className="b-hr b-hr--blue" />
+                    <NavList
+                      noArrow
+                      list={[
+                        {
+                          title: '4.1 Veiing og måling',
+                          url: '#a'
+                        },
+                      ]}
+                    />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <ChapterHeading
+                    heading="4. Helsestasjon 0–5 år"
+                    h="h1"
+                    line="none"
+                  />
+                  <ChapterHeading
+                    heading="4.1 Veiing og måling"
+                    url="#a"
+                  />
+                  <ChapterHeading
+                    heading="4.2 Hørsel, syn og språk"
+                    url="#a"
+                  />
+                  <Collapsible
+                    background
+                    heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
+                  >
+                  </Collapsible >
+                  <Collapsible
+                    background
+                    heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
+                  >
+                  </Collapsible >
+                  <Collapsible
+                    background
+                    heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
+                  >
+                  </Collapsible >
+                  <Collapsible
+                    background
+                    heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
+                  >
+                  </Collapsible >
+                </>
+              )
+            }
+            
+          
+            
+              <div className="l-mt-4">
+                <Link wideButton arrow color="purple">
+                  Henvis pasienten til helsenorge.no for mer informasjon
+                </Link>
+              </div>
+              <div className="l-mt-2">
+                <PageMeta
+                  publishDate="11. oktober 2008"
+                  editDate="11. august 2018"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <div className="l-mt-4">
-      <Box color="grey" square>
-        <div className="l-container">
-          <strong>Kontakt:</strong>
-          <br />
-          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-          <br />
-          <a href="#a">navn.etternavn@helsedir.no</a>
-          <br />
-          <a href="#a">999 99 999</a>
-        </div>
-      </Box>
-    </div>
-  </>
-);
+      <div className="l-mt-4">
+        <Box color="grey" square>
+          <div className="l-container">
+            <strong>Kontakt:</strong>
+            <br />
+            <a href="#a">spesialisthelsetjenester@helsedir.no</a>
+            <br />
+            <a href="#a">navn.etternavn@helsedir.no</a>
+            <br />
+            <a href="#a">999 99 999</a>
+          </div>
+        </Box>
+      </div>
+    </>
+  )
+  
+};
 
 export default ChapterPage;

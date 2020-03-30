@@ -17,7 +17,7 @@ const buttonClasses = () =>
     'b-button--plain': true,
   });
 
-const ProductSearch = ({ label }) => {
+const ProductSearch = ({ label, fnChange }) => {
   const [toggled, setToggled] = useState(false);
   
   function toggle(event) {
@@ -38,7 +38,12 @@ const ProductSearch = ({ label }) => {
       {
         toggled && (
           <div className={mainClasses(false, toggled)}>
-            <InputSearch label={label} autoFocus={toggled} />
+            <InputSearch
+              label={label}
+              autoFocus={toggled}
+              showSuggestions={false}
+              fnChange={toggled ? fnChange : null}
+            />
           </div>
         )
       }
@@ -48,6 +53,7 @@ const ProductSearch = ({ label }) => {
 
 ProductSearch.propTypes = {
   label: PropTypes.string,
+  fnChange: PropTypes.func,
 };
 
 export default ProductSearch;
