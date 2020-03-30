@@ -26,11 +26,18 @@ const hasItems = arr => (arr && arr.length) ? true : false;
 const activeChild = children =>
   children ? children.some(x => x.active) : false;
 
-const linkClasses = (small, active, children) =>
+const linkClasses = ({small = false, active = false, children = false, parent = false} = {}) =>
   classNames({
-    'b-section-sidebar__link': true,
+    'b-section-sidebar__link': parent,
     'b-section-sidebar__link--small': small,
-    'b-section-sidebar__link--active': active || activeChild(children)
+    'b-section-sidebar__link--active': active,
+    'b-section-sidebar__link--children': children
+  });
+
+const subLinkClasses = ({active = false} = {}) =>
+  classNames({
+    'b-section-sidebar__sub-link': true,
+    'b-section-sidebar__sub-link--active': active
   });
 
 const sectionSidebarClasses = bottom =>
@@ -52,57 +59,57 @@ const ListItem = ({ props }) => {
     }, 0);
   }
   const renderItemContent = (
-    <>
-      {props.title && (
-        <div className="b-section-sidebar__title">{props.title}</div>
-      )}
-      {(props.prefix || props.description) && (
-        <div className="b-section-sidebar__meta">
-          {props.prefix && (
-            <div className="b-section-sidebar__prefix" role="presentation">
-              {props.prefix}
-            </div>
-          )}
-          {props.description && (
-            <div className="b-section-sidebar__description">
-              {props.description}
-            </div>
-          )}
-        </div>
-      )}
-    </>
+    (props.prefix || props.description) && (
+      <div className="b-section-sidebar__meta">
+        {props.prefix && (
+            <span className="b-section-sidebar__meta-prefix">{props.prefix}</span>
+        )}
+        {props.description && (
+            props.description
+        )}
+      </div>
+    )
   )
   const renderItemContentChildren = (
     <>
       {props.children && props.children.map(child => (
-        <ListItem
-          props={{
-            ...child,
-            small: true
-          }}
-          key={shortid.generate()}
-        />
+        <span
+          className={subLinkClasses({active: child.active})}
+          key={shortid.generate()}>
+        {child.description}
+        </span>
       ))}
+      {props.readMoreLabel &&
+        (
+          <span
+            className={subLinkClasses({active: false})} 
+            key={shortid.generate()}>
+            {props.readMoreLabel}
+            </span>
+          )
+      }
     </>
   );
   const renderItemActive = (
-    <div
-      className={linkClasses(props.small, props.active, props.children)}
-    >
-      {renderItemContent}
-    </div>
+      renderItemContent
   );
   const renderItemInactive = (
+    <span
+      className={linkClasses()}
+    >
+      {renderItemContent}
+    </span>
+  );
+  return (
     <a
       href={props.url}
       onClick={setFocus}
-      className={linkClasses(props.small, props.active, props.children)}
+      className={linkClasses({
+        small: props.small, 
+        children: props.children, 
+        active: props.active,
+        parent: true})}
     >
-      {renderItemContent}
-    </a>
-  );
-  return (
-    <>
       {(!props.active && props.url)
         ?
         renderItemInactive
@@ -110,7 +117,7 @@ const ListItem = ({ props }) => {
         renderItemActive
       }
       {renderItemContentChildren}
-    </>
+    </a>
   );
 };
 
@@ -201,7 +208,7 @@ const SectionSidebar = props => {
       <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
         <div
           className={classNames({
-            'b-section-sidebar__heading': true,
+            'b-section-sidebar__heading': props.heading,
             'b-section-sidebar__heading--thick': !hasItems(props.list)
           })}
         >
@@ -276,6 +283,7 @@ SectionSidebar.propTypes = {
       description: PropTypes.string,
       prefix: PropTypes.string,
       url: PropTypes.string.isRequired,
+      readMoreLabel: PropTypes.string,
       active: PropTypes.bool,
       children: PropTypes.arrayOf(
         PropTypes.shape({

@@ -1,4 +1,7 @@
 .b-breadcrumbs {
+  padding-bottom: $space-lg;
+  border-bottom: 1px solid $grey-light;
+  
   &__location {
     font-size: $font-xs;
     color: $grey;

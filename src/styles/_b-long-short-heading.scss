@@ -4,16 +4,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 
+  &__sub-wrapper {
+    width: 100%;
+    @include mq($from: tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
   &__sub {
     font-size: $meta-text;
+    display: flex;
+    align-items: center;
+    margin-top: $space-sm;
+  }
+  &__link {
+    margin-top: $space-sm;
     display: flex;
     align-items: center;
   }
   &__sub-icon {
     height: 3em;
     width: 3em;
-    margin-right: 1em;
+    margin-right: $space-xs;
   }
   &__text {
     display: block;
