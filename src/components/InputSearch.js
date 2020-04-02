@@ -113,6 +113,9 @@ const InputSearch = props => {
   }
 
   function onChange(event, { newValue }) {
+    if (!props.showSuggestions) {
+      props.fnChange(newValue)
+    }
     setValue(newValue);
   }
   
@@ -237,12 +240,13 @@ InputSearch.propTypes = {
   dark: PropTypes.bool,
   showSuggestions: PropTypes.bool,
   autoFocus: PropTypes.bool,
+  fnChange: PropTypes.func,
   exampleSuggestions: PropTypes.arrayOf(PropTypes.string)
 };
 
 InputSearch.defaultProps = {
   showSuggestions: true,
-  exampleSuggestions: []
+  exampleSuggestions: [],
 };
 
 export default InputSearch;

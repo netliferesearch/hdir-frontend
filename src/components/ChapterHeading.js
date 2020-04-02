@@ -43,7 +43,7 @@ const ChapterHeading = ({ url, line, h, subheading, heading, clean }) => (
         </Heading>
       </a>
     ) : (
-      <div className={headingClasses(line, clean)}>
+      <div className={headingClasses(line, false, clean)}>
         <Heading h={h}>
           {subheading && (
             <span className={smallHeader(h)}>{subheading}</span>

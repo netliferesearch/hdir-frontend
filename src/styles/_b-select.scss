@@ -39,6 +39,26 @@
     }
   }
 
+  &--custom-position {
+    width: 100%;
+
+    &:after {
+      top: 3.4em;
+    }
+    &:hover:after {
+      top: 3.6em;
+    }
+    .b-select__label {
+      font-weight: bold;
+      color: $black;
+      margin-bottom: 0.75em;
+    }
+    .b-select__select {
+      padding: .9em 2.5em .9em 1em;
+      border-radius: 4px;
+    }
+  }
+
   &__label {
     display: inline-block;
     margin-right: 1em;
