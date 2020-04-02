@@ -380,7 +380,6 @@ const ProductPage = () => {
               </div>
             </div>
             
-            
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="5. Skolehelsetjenesten 5–20 år"
