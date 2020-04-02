@@ -9,6 +9,7 @@ import LongShortHeading from '../components/LongShortHeading';
 import SectionSidebar from '../components/SectionSidebar';
 import InputSearch from '../components/InputSearch';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Select from '../components/Select';
 
 const ProductPage = () => {
   const [searchResults, setSearchResults] = useState('');
@@ -33,13 +34,18 @@ const ProductPage = () => {
             linkText="Hva er nasjonal faglig retningslinje"
           />
         </div>
-        <div class="l-mt-3 l-mb-2">
-          <InputSearch
-            autoFocus={true}
-            label={'Søk i retningslinjen'}
-            showSuggestions={false}
-            fnChange={(value) => setSearchResults(value)}
-          />
+        <div className="row l-mb-2 l-mt-2">
+          <div className="col-xs-12 col-md-8 l-mt-1">
+            <InputSearch
+              autoFocus={true}
+              label={'Søk i retningslinjen'}
+              showSuggestions={false}
+              fnChange={(value) => setSearchResults(value)}
+            />
+          </div>
+          <div className="col-xs-12 col-md-4 l-mt-1">
+            <Select label="Vis kun innhold for" placeholder="Velg" options={['Option 1', 'Option 2']} stacked custompos />
+          </div>
         </div>
         <div className="l-layout">
           <aside className="l-hide-to-lg l-sidebar l-bleed-right">
