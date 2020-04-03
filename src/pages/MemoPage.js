@@ -1,209 +1,144 @@
 import React from 'react';
-
-import SectionSidebar from '../components/SectionSidebar';
-import PageMeta from '../components/PageMeta';
-import Link from '../components/Link';
+import Collapsible from '../components/Collapsible';
 import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
-import Quote from '../components/Quote';
+import PageMeta from '../components/PageMeta';
+import SectionSidebar from '../components/SectionSidebar';
+import Alert from '../components/Alert';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Link from '../components/Link';
+import IconWithText from '../components/IconWithText';
+import ProductSearch from '../components/ProductSearch';
+import Quote from '../components/Quote';
 
-const MemoPage = () => (
+const ChapterPage = () => (
   <>
-    <div className="l-container">
-      <Breadcrumbs
-        paths={[
-          {
-            name: 'Forsiden',
-            href: '#a'
-          },
-          {
-            name: 'Konferanse',
-            href: '#a'
-          },
-          {
-            name: 'Arbeid og psykisk helse',
-            href: '#a'
-          }
-        ]}
-      />
-      <main id="main">
-        <div className="l-mt-3">
-          <ChapterHeading
-            heading="Særskilte regler i tilknytning til autorisasjon, krav om politattest m.v."
-            subheading="KAPITTEL 4"
-            line="none"
-            h="h1"
-          />
-        </div>
-        <div className="row l-mt-4">
-          <aside className="col-md-3 col-xs-12 l-mb-4">
+    <main id="main">
+      <div className="l-container">
+        <Breadcrumbs
+          paths={[
+            {
+              name: 'Forsiden',
+              href: '#a'
+            },
+            {
+              name: 'Rundskriv',
+              href: '#a'
+            },
+            {
+              name: 'Helsepersonelloven med kommentarer',
+              href: '#a'
+            }
+          ]}
+        />
+        <div className="l-layout">
+          <aside className="l-hide-to-lg l-sidebar l-bleed-right">
             <SectionSidebar
-              heading="Innhold på denne siden"
+              heading="Rundskriv"
+              icon="../icons/Rundskriv_Veileder_til_lov.svg"
+              list={[
+                {
+                  url: '#',
+                  description: '1. Lovens formål, virkeområde og definisjoner'
+                },
+                {
+                  url: '#',
+                  description: '2. Krav til helsepersonells yrkesutøvelse',
+                  active: true,
+                },
+                {
+                  url: '#',
+                  description: '3. Krav til organisering og virksomhet'
+                },
+                {
+                  url: '#',
+                  description: '4. Særskilte regler i tilknytning til autorisasjon, krav om politiattest m.v.',
+                },
+                {
+                  url: '#',
+                  description: '5. Taushetsplikt og opplysningsrett'
+                },
+                {
+                  url: '#',
+                  description: '6. Opplysningsplikt m.v.'
+                },
+                {
+                  url: '#',
+                  description: '7. Meldeplikt'
+                },
+                {
+                  url: '#',
+                  description: '8. Dokumentasjonsplikt'
+                },
+                {
+                  url: '#',
+                  description: '9. Vilkår for autorisasjon, lisens og spesialistgodkjenning'
+                },
+                {
+                  url: '#',
+                  description: '10. Tildeling og bortfall av autorisasjon, lisens og spesialistgodkjenning'
+                },
+                {
+                  url: '#',
+                  description: '11. Reaksjoner mv. ved brudd på lovens bestemmelser'
+                },
+                {
+                  url: '#',
+                  description: '12. Statens helsepersonellnemnd og Apotekklagenemnda'
+                },
+                {
+                  url: '#',
+                  description: '13. Forskjellige bestemmelser'
+                },
+                {
+                  url: '#',
+                  description: '14. Om helsepersonelloven'
+                },
+              ]}
             />
           </aside>
-          <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
-            <h2>§ 18. Melding om helsepersonells virksomhet</h2>
-            <h3>Lovtekst:</h3>
-            <Quote>
-              <p>
-                Rundt 15 prosent av det legemeldte sykefraværet i Norge skyldes
-                psykiske lidelser. Andelen uføretrygdede med en psykisk lidelse
-                er på noe over 30 prosent. Blant personer som faller ut av
-                arbeidslivet, utgjør personer med psykiske lidelser en stor og
-                økende gruppe.
-              </p>
-              <p>
-                Norske og internasjonale studier viser at 30 – 50 prosent av den
-                voksne befolkningen vil få en psykisk lidelse i løpet av livet.
-              </p>
-              <ul>
-                <li>a. Befolkning</li>
-                <li>b. Skjermer</li>
-                <li>c. Tastaturer</li>
-              </ul>
-              <p>
-                Dette omfatter tiltak som kan bidra til å forhindre at psykiske
-                plager og lidelser oppstår (primærforebygging).
-              </p>
-              <p className="b-quote__footnote">
-                Fotnote:
-                <br />0 Tilføyd ved lov 24 juni 2011 nr. 30 (ikr. 1 jan 2012
-                iflg. res. 16 des 2011 nr. 1252). Endres ved lov 16 juni 2017
-                nr. 55 (ikr. fra den tid Kongen bestemmer).
-              </p>
-            </Quote>
-            <h3>Kommentarer til § 18:</h3>
-            <p>
-              Bestemmelsen pålegger helsepersonell i privat virksomhet å melde
-              om åpning, overtakelse, inntreden eller opphør i virksomhet som
-              yter helsetjenester.
-            </p>
-            <p>
-              Formålet med første ledd er å gi myndighetene oversikt over
-              helsepersonelldekningen, og dermed ha mulighet til å iverksette
-              styringstiltak ved behov. Andre ledd skal gi tilsynsmyndigheten
-              mulighet til å vurdere tilsynsmessig oppfølgning.
-            </p>
-            <h4>Første ledd</h4>
-            <p>
-              Omfatter alt helsepersonell med autorisasjon og lisens når disse
-              utøver arbeid som helsepersonell i privat virksomhet. Meldeplikten
-              er for eksempel aktuell når en fysioterapeut, kiropraktor eller
-              tannlege starter selvstendig virksomhet i en kommune.
-            </p>
-            <p>
-              Meldeplikten er obligatorisk. Helsepersonell i privat
-              spesialisthelsetjeneste skal gi melding til regionalt
-              helseforetak, mens helsepersonell i annen virksomhet skal gi
-              melding til kommunen. Dette gjelder også for eksempel spesialister
-              i sykehus som påtar seg oppgaver i privat virksomhet utenfor
-              spesialisthelsetjenesten.
-            </p>
-            <h4>Andre ledd</h4>
-            <p>
-              Andre ledd første punktum er en pliktbestemmelse for
-              helsepersonell. Det følger av bestemmelsen at helsepersonell som
-              åpner, overtar eller trer inn i virksomhet som skal yte helsehjelp
-              til barn eller personer med utviklingshemming, skal fremlegge
-              politiattest for kommune eller regionalt helseforetak. Plikten til
-              å fremlegge politiattest følger av helsepersonelloven § 20 a Andre
-              punktum er en pliktbestemmelse for kommune og regionale
-              helseforetak. Bestemmelsen pålegger kommunen eller helseforetaket
-              straks å sende en politiattest med anmerkninger videre til
-              Fylkesmannen.
-            </p>
-            <h4>Tredje ledd</h4>
-            <p>
-              Tredje ledd er en forskriftshjemmel for å kunne gi utfyllende
-              bestemmelser om meldeplikten etter første ledd. Det er ikke gitt
-              slik forskrift.
-            </p>
-            <h2>
-              § 19. Melding til arbeidsgiver om bierverv og andre engasjement i
-              annen virksomhet
-            </h2>
-            <h3>Lovtekst</h3>
-            <Quote>
-              <p>
-                «Helsepersonell med autorisasjon eller lisens skal av eget
-                tiltak gi arbeidsgiveren opplysninger om bierverv og
-                engasjement, eierinteresser o.l. i annen virksomhet som vil
-                kunne komme i konflikt med hovedarbeidsgivers interesser.
-              </p>
-              <ul>
-                <li>1. Befolkning</li>
-                <li>2. Skjermer</li>
-                <li>3. Tastaturer</li>
-              </ul>
-              <p>
-                Arbeidsgiveren kan i tillegg kreve at helsepersonell med
-                autorisasjon eller lisens gir opplysninger om all helsefaglig
-                virksomhet som helsepersonellet utfører som selvstendig
-                næringsdrivende, for andre arbeids- eller oppdragsgivere i Norge
-                eller i utlandet, og om eierinteresser, samarbeidsforhold o.l.
-              </p>
-              <p>
-                Det skal gis opplysning om virksomhetens navn og arten og
-                omfanget av helsepersonells bierverv eller engasjement.
-              </p>
-              <p>
-                Denne bestemmelsen begrenser ikke plikten til å opplyse om
-                bierverv som følger av avtale eller andre rettsregler.»
-              </p>
-              <p className="b-quote__footnote">
-                Fotnote:
-                <br />0 Tilføyd ved lov 24 juni 2011 nr. 30 (ikr. 1 jan 2012
-                iflg. res. 16 des 2011 nr. 1252). Endres ved lov 16 juni 2017
-                nr. 55 (ikr. fra den tid Kongen bestemmer).
-              </p>
-            </Quote>
-            <a href="#a">Les mer § X på lovdata.no</a>
-            <h3>Kommentar til § 19:</h3>
-            <p>
-              Bestemmelsen pålegger helsepersonell å informere hovedarbeidsgiver
-              om bierverv, engasjement, eierinteresser mv. som kan komme i
-              konflikt med hovedarbeidsgivers interesser.
-            </p>
-            <p>
-              Formålet er å avdekke lojalitetskonflikter, inhabilitet og forhold
-              som hindrer faglig forsvarlig yrkesutøvelse. Det er viktig for
-              tilliten til den offentlige helsetjenesten at det ikke oppstår
-              tvil om at avgjørelser tas av hensyn til pasienten og en fornuftig
-              forvaltning av offentlige interesser, og ikke av hensyn til
-              helsepersonellets egne interesser.
-            </p>
-            <p>
-              Likeledes kan en arbeidsgiver i privat virksomhet begrense en
-              ansatts bierverv for eksempel for å sikre at den totale
-              arbeidsbelastningen ikke går ut over hovedstillingen.
-            </p>
-          </article>
-        </div>
-      </main>
-
-      <div className="l-mt-4">
-        <div className="row">
-          <div className="col-md-8 col-xs-12 col-md-offset-4">
-            <Link href="#a" small icon="../icons/method.svg">
-              Om metode og prosess
-            </Link>
-            <br />
-            <Button clean small icon="../icons/print.svg">
-              Skriv ut hele retningslinjen
-            </Button>
-            <br />
-            <PageMeta
-              publishDate="11. august 2008"
-              editDate="11. august 2018"
+          <div className="l-article">
+            <ProductSearch label="Søk i rundskrivet" />
+            <ChapterHeading
+              heading="1.Krav til helsepersonells yrkesutøvelse"
+              h="h1"
+              line="none"
             />
+            <Collapsible
+              background
+              heading="§ 4. Forsvarlighet"
+              date="Sist faglig oppdatert: 28. juni 2018"
+            >
+              <Quote>
+              <h3>Lovtekst:</h3>
+              <p>Helsepersonell skal utføre sitt arbeid i samsvar med de krav til faglig forsvarlighet og omsorgsfull hjelp som kan forventes ut fra helsepersonellets kvalifikasjoner, arbeidets karakter og situasjonen for øvrig.</p>
+
+              <p>Helsepersonell skal innrette seg etter sine faglige kvalifikasjoner, og skal innhente bistand eller henvise pasienter videre der dette er nødvendig og mulig. Dersom pasientens behov tilsier det, skal yrkesutøvelsen skje ved samarbeid og samhandling med annet kvalifisert personell. Helsepersonell har plikt til å delta i arbeid med individuell plan når en pasient eller bruker har rett til slik plan etter pasient- og brukerrettighetsloven § 2-5.</p>
+
+              <p>Ved samarbeid med annet helsepersonell, skal legen og tannlegen ta beslutninger i henholdsvis medisinske og odontologiske spørsmål som gjelder undersøkelse og behandling av den enkelte pasient.</p>
+
+              <p>Departementet kan i forskrift bestemme at visse typer helsehjelp bare kan gis av personell med særskilte kvalifikasjoner.</p>
+              </Quote>
+              <h3>Kommentarer</h3>
+              <p>Helsepersonelloven § 4 er en sentral bestemmelse i helseretten. Bestemmelsen stiller krav til helsepersonells utførelse av arbeidet. Dette skal være faglig forsvarlig og helsepersonellet skal gi omsorgsfull hjelp. Bestemmelsen er grunnlag for de vurderinger som gjøres i tilsynssaker mot helsepersonell.</p>
+              <p>Det enkelte helsepersonells plikt til forsvarlig yrkesutøvelse må sees i sammenheng med den plikt helse- og omsorgstjenesten har til forsvarlig virksomhet, se&nbsp;<a href="https://lovdata.no/NL/lov/1999-07-02-61/%c2%a72-2">spesialisthelsetjenesteloven § 2-2</a>,&nbsp;<a href="https://lovdata.no/NL/lov/2011-06-24-30/%c2%a74-1">helse- og omsorgstjenesteloven § 4-1</a>&nbsp;og&nbsp;<a href="https://lovdata.no/NL/lov/1983-06-03-54/%c2%a71-3">tannhelsetjenesteloven § 1-3a</a>. Kravet til forsvarlighet i tjenestelovgivningen pålegger virksomheten en plikt til organisering og etablering av rutiner og prosedyrer som sikrer forsvarlige helsetjenester. Plikten innebærer også at virksomhetens eier og ledelse har ansvar for å legge forholdene til rette slik at det enkelte helsepersonell kan utføre sine oppgaver på en forsvarlig måte. Se nærmere om dette under kommentarene til&nbsp;<a href="https://lovdata.no/NL/lov/1999-07-02-64/%c2%a716">helsepersonelloven § 16</a>. Det vises også til&nbsp;<a href="https://lovdata.no/forskrift/2016-10-28-1250">forskrift om ledelse og kvalitetsforbedring i helse- og omsorgstjenesten (FOR-2016-10-28-1250)&nbsp;</a>og til&nbsp;<a href="https://www.regjeringen.no/no/dokumenter/rundskriv-i-2013/id728043/">Helse- og omsorgsdepartementets rundskriv I-2/2013 Lederansvaret i sykehus.</a></p>
+
+              <h3>Første ledd:</h3>
+              <p>Første ledd stiller krav til helsepersonell om å utøve arbeidet sitt i samsvar med krav til faglig forsvarlighet og omsorgsfull hjelp.</p>
+            </Collapsible >
+            <Collapsible
+              background
+              heading="§ 5. Bruk av medhjelpere"
+            >
+            </Collapsible >
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
     <div className="l-mt-4">
-      <Box color="grey" square noPadding>
+      <Box color="grey" square>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
@@ -218,4 +153,4 @@ const MemoPage = () => (
   </>
 );
 
-export default MemoPage;
+export default ChapterPage;
