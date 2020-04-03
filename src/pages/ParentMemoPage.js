@@ -28,7 +28,7 @@ const MemoChapterPage = () => (
           <LongShortHeading
             long="Rundskriv"
             short="Helsepersonelloven med kommentarer"
-            icon={'https://placehold.it/64x64'}
+            icon={'../icons/Rundskriv_Veileder_til_lov.svg'}
             url="#a"
             linkText="Hva er rundskriv?"
           />
