@@ -21,6 +21,9 @@ body {
 .l-sidebar {
   width: 100%;
   max-width: 350px;
+  @include mq($from: desktop) {
+    min-width: 350px;
+  }
 }
 
 .l-article {
