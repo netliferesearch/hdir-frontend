@@ -12,7 +12,7 @@ import IconWithText from '../components/IconWithText';
 import ProductSearch from '../components/ProductSearch';
 import Quote from '../components/Quote';
 
-const ChapterPage = () => (
+const MemoPage = () => (
   <>
     <main id="main">
       <div className="l-container">
@@ -153,4 +153,4 @@ const ChapterPage = () => (
   </>
 );
 
-export default ChapterPage;
+export default MemoPage;
