@@ -101,7 +101,7 @@ const MemoPage = () => (
           <div className="l-article">
             <ProductSearch label="Søk i rundskrivet" />
             <ChapterHeading
-              heading="1.Krav til helsepersonells yrkesutøvelse"
+              heading="2. Krav til helsepersonells yrkesutøvelse"
               h="h1"
               line="none"
             />
