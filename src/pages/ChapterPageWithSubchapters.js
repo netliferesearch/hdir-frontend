@@ -105,12 +105,13 @@ const ChapterPage = () => (
                 enim ad minim veniam, quis nostrud exercitation ullamco.
               </p>
             </Collapsible>
-            <div className="l-mt-1">
+            <div>
               <Collapsible
                 heading="Anbefaling 1"
                 subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="someId1.1"
+                background
               >
                 <Alert status="success">
                   Vær oppmerksom på at dette atomet er på høring.
@@ -137,12 +138,13 @@ const ChapterPage = () => (
                 </div>
               </Collapsible>
             </div>
-            <div className="l-mt-3">
+            <div>
               <Collapsible
                 heading="Det foreslås at HbA1c tas ved første svangerskapskonsultasjon for å oppdage udiagnostisert diabetes/hyperglykemi"
                 subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="anbefaling1"
+                background
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -167,12 +169,13 @@ const ChapterPage = () => (
                 </div>
               </Collapsible>
             </div>
-            <div className="l-mt-3">
+            <div>
               <Collapsible
                 heading="Anbefaling 3"
                 subheading="Sterk anbefaling"
                 subheadingContent="Dette er en beskrivelse av sterk anbefaling"
                 id="someId3"
+                background
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -190,7 +193,7 @@ const ChapterPage = () => (
                   å nå behandlingsmålene for glukose
                 </p>
                 <p>etc.</p>
-                <div className="l-mt-2">
+                <div>
                   <Collapsible
                     heading="Seksjon under: 1 – SUBHEADING UTEN INNHOLD"
                     size="medium"
@@ -204,7 +207,7 @@ const ChapterPage = () => (
                     </p>
                   </Collapsible>
                 </div>
-                <div className="l-mt-2">
+                <div>
                   <Collapsible
                     heading="Seksjon under: 2 – SUBHEADING UTEN INNHOLD"
                     size="medium"
@@ -240,8 +243,8 @@ const ChapterPage = () => (
                 </div>
               </Collapsible>
             </div>
-            <div className="l-mt-2">
-              <hr className="b-hr b-hr--black b-hr--thick" />
+            <div>
+              <hr className="b-hr" />
             </div>
             <ChapterHeading
               heading="Underkapittel 1.1"
@@ -250,7 +253,7 @@ const ChapterPage = () => (
               url="#a"
             />
             <div className="l-mt-2">
-              <hr className="b-hr b-hr--black b-hr--thick" />
+              <hr className="b-hr" />
             </div>
             <ChapterHeading
               heading="Underkapittel 1.2"
