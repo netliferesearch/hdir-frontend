@@ -82,7 +82,10 @@ const Collapsible = props => {
       const newHash = `#${id}`;
       // When collapsed, add hash to url
       window.history.replaceState(null, null, newHash);
+      return;
     }
+    // Clean hash
+    window.history.replaceState(null, null, window.location.pathname);
   }, [collapsed, props.collapsed]);
 
   useEffect(() => {

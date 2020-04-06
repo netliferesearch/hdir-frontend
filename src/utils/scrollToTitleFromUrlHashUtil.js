@@ -29,11 +29,52 @@ export default function scrollToTitleFromUrlHash() {
   // Find hash in document and scroll to that title (h2)
   waitForIt(`#${lastHash}`)
     .then((el) => {
-      consoleIfNotInProduction(el, `[scrollToTitleFromUrlHash]: Scrolling to '${`#${lastHash}`}'!`);
-      return (el) ? el.scrollIntoView() : false;
+      return (el) ? handleTarget(el) : false;
     })
     .catch((err) => err);
-  return lastHash; // For test
+    return lastHash; // For test
+}
+  
+const isCollapsible = (el) => el.classList.contains('b-collapsible__content');
+
+const getParentCollapsible = (el) => el.parentNode.closest(`.b-collapsible__content`);
+
+const getCollapsibleTrigger = (el) => el.parentNode.querySelector('button');
+
+const handleTarget = (el) => {
+  const isCollapsbile = isCollapsible(el);
+  if (!el) {
+    return;
+  }
+  
+  // Normal heading, not Collapsible
+  if (!isCollapsbile) {
+    el.scrollIntoView()
+    consoleIfNotInProduction(el, `[scrollToTitleFromUrlHash]: Scrolling to '${`#${el.id}`}'!`);
+    return;
+  }
+
+  // Missing trigger
+  if (!getCollapsibleTrigger(el)) {
+    console.log('doesnt have trigger')
+    return;
+  }
+
+  // If Collapsible has parent Collapsbile, expand that one as well
+  const parentCollapsbile = getParentCollapsible(el);
+  console.log('parentCollapsbile', parentCollapsbile)
+  if (parentCollapsbile) {
+    const parent = parentCollapsbile;
+    console.log('parent', parent)
+    const parentTrigger = getCollapsibleTrigger(parent);
+    console.log('parentTrigger', parentTrigger)
+    parentTrigger.click();
+  }
+
+  // Open the collapsible by triggering its button
+  getCollapsibleTrigger(el).click();
+
+  return;
 }
 
 // sleep helper to make the check again after some time
