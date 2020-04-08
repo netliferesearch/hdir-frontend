@@ -34,18 +34,28 @@ export default function scrollToTitleFromUrlHash() {
     .catch((err) => err);
     return lastHash; // For test
 }
-  
+
+// Helpers
 const isCollapsible = (el) => el.classList.contains('b-collapsible__content');
-
-const getParentCollapsible = (el) => el.parentNode.closest(`.b-collapsible__content`);
-
 const getCollapsibleTrigger = (el) => el.parentNode.querySelector('button');
 
+// Traverse the DOM, starting from element, moving upwards
+const traverseCollapsibles = (el) => {
+  let elements = [];
+  while (el = el.parentElement) { // go up till <html>
+    if (el.classList.contains('b-collapsible')) {
+      const collapsibleButton = el.querySelector('button');
+      elements.push(collapsibleButton);
+    }
+  }
+  return elements;
+}
+
 const handleTarget = (el) => {
-  const isCollapsbile = isCollapsible(el);
   if (!el) {
     return;
   }
+  const isCollapsbile = isCollapsible(el);
   
   // Normal heading, not Collapsible
   if (!isCollapsbile) {
@@ -56,23 +66,16 @@ const handleTarget = (el) => {
 
   // Missing trigger
   if (!getCollapsibleTrigger(el)) {
-    console.log('doesnt have trigger')
     return;
   }
 
-  // If Collapsible has parent Collapsbile, expand that one as well
-  const parentCollapsbile = getParentCollapsible(el);
-  console.log('parentCollapsbile', parentCollapsbile)
-  if (parentCollapsbile) {
-    const parent = parentCollapsbile;
-    console.log('parent', parent)
-    const parentTrigger = getCollapsibleTrigger(parent);
-    console.log('parentTrigger', parentTrigger)
-    parentTrigger.click();
-  }
-
-  // Open the collapsible by triggering its button
-  getCollapsibleTrigger(el).click();
+  // Traverse and open collapsibles
+  // We first reverse the array, so the outer collapsibles are opened first, then the innermost.
+  // Also, checking if the current button (trigger) is already opened by default. If so, skip.
+  traverseCollapsibles(el).reverse().forEach(collapsible => !collapsible.classList.contains('b-collapsible__button--active') && collapsible.click());
+  
+  // Scroll to element
+  el.scrollIntoView()
 
   return;
 }
