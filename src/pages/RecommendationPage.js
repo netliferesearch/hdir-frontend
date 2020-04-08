@@ -101,6 +101,14 @@ const RecommendationPage = () => (
             id="test4"
           >
             <p>tekst</p>
+             <Collapsible
+                h="h5"
+                heading="Test5"
+                size="small"
+                id="test5"
+              >
+                <p>tekst</p>
+              </Collapsible>
           </Collapsible>
           <Collapsible
             h="h5"
