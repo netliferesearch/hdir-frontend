@@ -20,15 +20,14 @@
       format('woff');
 }
 
-/* lekton-italic - latin */
+/* work-sans-italic - latin */
 @font-face {
   font-family: 'Work Sans';
   font-style: italic;
   font-weight: 400;
-  src: local('Lekton-Italic'),
-    url('../static/fonts/lekton-v9-latin-regular.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../static/fonts/lekton-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Work Sans Italic'), local('WorkSans-Italic'),
+    /* Super Modern Browsers */ url('../static/fonts/WorkSans-Italic.woff')  format('woff'),
+    /* Safari, Android, iOS */ url('../static/fonts/WorkSans-Italic.ttf')  format('truetype');
 }
 
 // $base-font-size: calc(17px + 1 * (100vw - 400px) / (1440 - 400));
