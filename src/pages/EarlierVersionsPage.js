@@ -31,6 +31,7 @@ const EarlierVersionsPage = () => (
             <div className="l-mt-4">
               <List
                 heading="25 versjoner"
+                h="h2"
                 list={[
                   {
                     type: 'archive',

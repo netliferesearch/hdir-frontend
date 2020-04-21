@@ -10,7 +10,6 @@ const RecommendationPage = () => (
       <main id="main">
       <Collapsible
         background
-        collapsed
         heading="Sekundær peritonitt"
       >
         <Collapsible
@@ -125,6 +124,21 @@ const RecommendationPage = () => (
           size="small"
         >
         </Collapsible>
+      </Collapsible>
+
+       <Collapsible
+        background
+        heading="Sekundær peritonitt"
+      >
+        <Collapsible
+          heading="Sterk anbefaling"
+          subtle
+          size="small"
+          smallContent
+        >
+          <p>...Hva er en sterk anbefaling...</p>
+        </Collapsible>
+        <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
       </Collapsible>
       </main>
       <div className="row">
