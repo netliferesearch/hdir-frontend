@@ -1,4 +1,5 @@
 $black: #212121;
+$white: white;
 $grey: #504f4f;
 $grey-light: #d8dada;
 $grey-lighter: #f7f7f7;
@@ -26,6 +27,9 @@ $yellow-warning: #f0c617;
 $red-warning: #ad0017;
 $secondary-color: $blue-dark;
 $primary-color: $orange-dark;
+$primary-color-light: $red-light;
+$primary-color-lighter: $yellow-light;
+$primary-color-lightest: $yellow-light;
 $link-color: $orange-dark;
 
 // List of colors
@@ -105,12 +109,4 @@ $logo: '../static/helfo_logo.svg';
 $logo-small: '../static/helfo_logo.svg';
 $logo-qa: '../static/helfo_logo.svg';
 
-// Arrows
-$arrow-down: '../static/icons/arrow_down_helfo.svg';
-$arrow-left: '../static/icons/arrow_left_helfo.svg';
-$arrow-right: '../static/icons/arrow_right_helfo.svg';
-$arrow-up: '../static/icons/arrow_up_helfo.svg';
-$arrow-white-down: '../static/icons/arrow_down_white.svg';
-$arrow-white-left: '../static/icons/arrow_left_white.svg';
-$arrow-white-right: '../static/icons/arrow_right_white.svg';
-$arrow-white-up: '../static/icons/arrow_up_white.svg';
+@import './variables-common';

@@ -102,17 +102,10 @@ const MainHeader = props => {
               {!hideSearch && !searchOpen && (
                 <button
                   onClick={toggleSearch}
-                  className="b-button b-button--secondary-dark b-button--small"
+                  className="b-button b-button--secondary-dark b-button--small b-button--search"
                   aria-controls="searchTray"
                 >
                   Søk{' '}
-                  <img
-                    src={searchIcon}
-                    alt=""
-                    className="b-icon b-icon--small"
-                    role="button"
-                    tabIndex="-1"
-                  />
                 </button>
               )}
               {!hideSearch && searchOpen && (

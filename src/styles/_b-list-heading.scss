@@ -1,12 +1,11 @@
 .b-list-heading {
   display: flex;
   justify-content: space-between;
-  border-bottom: 4px solid $black;
-  padding-bottom: calc(#{map-get($space-map, xs)} - 7px);
+  border-bottom: 1px solid $grey-light;
+  padding-bottom: $space-sm;
   @include mq($until: tablet) {
     flex-direction: column;
   }
   &__heading {
-    text-transform: uppercase;
   }
 }

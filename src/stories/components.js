@@ -695,7 +695,7 @@ storiesOf('Komponenter', module)
           short={text("Short heading", "Svangerskapsdiabetes")}
           icon={'./icons/Retningslinjer_Veiledere_Faglige_råd.svg'}
           url="#a"
-          linkText={text("Link text: ", "Hva er nasjonal faglig retningslinje")}
+          linkText={text("Link text: ", "Hva er dette?")}
         />
       </Wrapper>
     ));

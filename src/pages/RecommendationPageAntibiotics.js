@@ -17,7 +17,6 @@ const RecommendationPageAntibiotics = () => (
           <br /><br />
             <Collapsible
               background
-              collapsed
               heading="Sekundær peritonitt"
               date="Sist oppdatert: 16.oktober 2020"
             >
@@ -180,6 +179,20 @@ const RecommendationPageAntibiotics = () => (
               </Collapsible>
             </Collapsible>
             
+            <Collapsible
+              background
+              heading="Noe annet"
+            >
+              <Collapsible
+                heading="Sterk anbefaling"
+                subtle
+                size="small"
+                smallContent
+              >
+                <p>...Hva er en sterk anbefaling...</p>
+              </Collapsible>
+              <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
+            </Collapsible>
           </article>
       </main>
     </div>
