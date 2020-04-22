@@ -17,6 +17,7 @@ function findActiveHeading(headings, scrollPos, setActiveHeading) {
   const scrolledPastItems = htmlHeadings.filter(
     h => h.offsetTop < scrollPos() + headingSpace
   );
+  console.log(scrolledPastItems)
 
   setActiveHeading(scrolledPastItems.length);
 }
