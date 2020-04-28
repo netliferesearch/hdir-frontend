@@ -124,7 +124,7 @@ const InputSearch = props => {
       'label': value,
       'value': suggestion.index
     });
-    // window.location = suggestion.url;
+    window.location = suggestion.url;
   }
 
   // Autosuggest will call this function every time you need to update suggestions.
