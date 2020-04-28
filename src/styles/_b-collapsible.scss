@@ -218,7 +218,17 @@
     
     p {
       margin-bottom: 0;
+      
+      &:first-child {
+        margin-top: 0;
+      }
     }
+    // Specific for "kontradiskjon" collapsibles
+    .b-collapsible__content--contra p {
+      margin-top: 0;
+      margin-bottom: $space;
+    }
+    
     h4 + div {
       margin-top: $spaceSmall;
     }
