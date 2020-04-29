@@ -13,7 +13,7 @@ const wrapperClasses = size =>
     'b-icon-with-text--clean': size === 'clean'
   });
 
-const IconWithText = ({size, icon, text}) => (
+const IconWithText = ({ size, icon, text }) => (
   <div className={wrapperClasses(size)}>
     <img
       src={icon}

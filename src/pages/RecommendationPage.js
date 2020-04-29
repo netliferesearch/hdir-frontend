@@ -125,8 +125,7 @@ const RecommendationPage = () => (
         >
         </Collapsible>
       </Collapsible>
-
-       <Collapsible
+      <Collapsible
         background
         heading="Sekundær peritonitt"
       >
