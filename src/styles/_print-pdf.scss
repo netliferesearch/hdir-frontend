@@ -102,6 +102,14 @@
     border-bottom: 10px solid black;
     margin-bottom: 40px;
   }
+  // Images fix
+  figure img {
+    max-width: 100%;
+  }
+  .editor-align-justify img, .justify img {
+    width: 100%;
+  }
+  
   .atom-main-content { // "Anbefaling" intro text
     padding-left: 20px;
     border-left: 6px solid #ddd;

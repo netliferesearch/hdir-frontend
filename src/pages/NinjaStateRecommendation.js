@@ -5,7 +5,7 @@ import Box from '../components/Box';
 import IconWithText from '../components/IconWithText';
 import SectionSidebar from '../components/SectionSidebar';
 
-const RecommendationPageAntibiotics = () => (
+const NinjaStateRecommendation = () => (
   <>
     <div className="l-container l-mt-3">
       <main id="main" className="row l-mt-4">
@@ -13,13 +13,13 @@ const RecommendationPageAntibiotics = () => (
           <SectionSidebar heading="Innhold på denne siden" />
         </aside>
         <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
-          <p>Klikk på behandling og Kontraindikasjoner for eksempelinnhold.</p>
+          <p>Ninja state av anbefaling:</p>
           <br /><br />
-            <Collapsible
-              background
-              heading="Sekundær peritonitt"
-              date="Sist oppdatert: 16.oktober 2020"
-            >
+          <div className="b-collapsible b-collapsible--active b-collapsible--clean">
+            <h2 className="b-collapsible__heading h2" id="sekundaer-peritonitt">
+              <span className="js-copy-icon">#</span>
+              <span className="js-copy-icon-text">Sekundær peritonitt</span>
+            </h2>
               <Collapsible
                 heading="Sterk anbefaling"
                 subtle
@@ -45,7 +45,7 @@ const RecommendationPageAntibiotics = () => (
               + Metronidazol 1g x 1 iv <span className="t--infotext">– I dialyseposen</span></p>
                 <Collapsible
                   h="h5"
-                  heading="Kontraindikasjoner"
+                  heading="Spesielle hensyn"
                   size="tiny"
                 >
                   <Box
@@ -109,7 +109,7 @@ const RecommendationPageAntibiotics = () => (
                   + Metronidazol 1x1 iv</p>
                   <Collapsible
                     h="h5"
-                    heading="Kontraindikasjoner"
+                    heading="Spesielle hensyn"
                     size="tiny"
                   >
                   <p>tekst</p>
@@ -162,7 +162,7 @@ const RecommendationPageAntibiotics = () => (
                     size="tiny"
                   >
                   <div id="collapsible-forskningsgrunnlag-tekst1c873ac8-0e47-49a6-b601-efa38ecf843c" className="b-collapsible__content" hidden="" aria-hidden="true">
-                  <div><p><a href="https://helsedirektoratet.no/retningslinjer/diabetes/dokumenter-diabetes/PICO%201.1%20-%20Summary%20of%20findings%20tabell.pdf" target="_blank">Evidensprofil (PDF)</a></p><p>Følgende utfall ble vurdert som relevante for problemstillingen (gradert etter hvor viktige vi tror de er for pasienten) og er vist i vedlagte evidensprofil:<br />1. Død – KRITISK<br />2. Livskvalitet – KRITISK<br />3. Hjerteinfarkt/hjerneslag – KRITISK<br />4. Ketoacidose/annen alvorlig hyperglykemi – VIKTIG<br />5. HbA1c – VIKTIG<br />6. (Alvorlig) hypoglykemi – KRITISK<br />7. Bivirkninger – VIKTIG<br />8. Vektendring – MINDRE VIKTIG<br />9. Synstruende retinopati – KRITISK<br />10. Amputasjon – KRITISK<br />11. ESRD - KRITISK<br />12. Makroalbuminuri - KRITISK<br />13. Mikroalbuminuri - VIKTIG<br />14. Dobling av plasma kreatinin - KRITISK<br />15. Død fra renal sykdom - KRITISK</p><p>I tillegg til disse utfallene ble også insidens av autonom nevropati og insidens av perifer nevropati vurdert (Buehler AM, 2013), og kategorisert som kritiske Risikoreduksjon ved intervensjon for insidens av perifer nevropati var 6 %, dvs. 26 færre av 1000. Kvaliteten på evidensen er moderat og nedgradert pga fare for høy bias da deltagerne ikke var blindet for intervensjonen. Risikoforskjell med intervensjon for insidens av autonom nevropati var 26 flere per 1000. RR 1.15 (95% KI 0.72-1.86). Kvaliteten på evidensen anses som lav og er nedgradert pga høy risiko for bias og publiseringsskjevhet.</p><p>I en metaanalyse fra Coca et al. er data fra intensiv blodglukosebehandling hos 15.000 - 28.000 deltakere oppsummert for nyrespesifikke utfallsmål (nr. 11-15 i listen ovenfor) (Coca SG, 2012). Studiene er open label, som øker muligheten for bias. Funnel plot for flere av effektmålene reiser mistanke om publikasjonsskjevhet. Ingen studier tar høyde for hvorvidt pasientene har diabetes nefropati (som er den absolutt vanligste nyreskaden ved diabetes type 1) eller hypertensiv nyreskade/ nefrosklerose (som ved diabetes type 2 er en minst like vanlig nyreskade som diabetes nefropati). Ved sistnevnte diagnose er ikke intensivert glukoseregulering forventet å ha like stor effekt på effektmålene som ved diabetes nefropati. I følge litteraturen kan det også forekomme blandingsformer av diabetes nefropati og hypertensiv nyreskade hos pasienten med diabetes type 2.</p><p>I den systematiske oversikten som best besvarte PICO, og som danner grunnlaget for Evidensprofilen, var følgende utfallsmål IKKE inkludert: HbA1c, ketoacidose, bivirkninger og vektendring.</p><p>En Cochrane review fra 2013 konkluderer med at intensiv behandling reduserer risiko for mikrovaskulære senkomplikasjoner (manifestasjon av retinopati med 21 %, relativ risiko (RR) 0,79 med 95 % konfidensintervall (KI) 0,68-0,92, og manifestasjon av nefropati med 25 %, RR 0,75 med 95 % KI 0,59-0,95,) samt amputasjoner av underekstremiteter (RR 0,65 med 95 % KI 0,45-0,94) uten signifikant effekt på risiko for total eller kardiovaskulær dødelighet, ikke fatalt hjerteinfarkt eller ikke fatalt hjerneslag (Hemmingsen B, 2013).</p><p>Bare to studier hadde undersøkt effekten på helserelatert livskvalitet og fant ingen signifikant effekt (ADDITION Netherlands og ACCORD 2008).</p><p>ADDITION Netherlands: No negative effects of a multi-factorial, intensified treatment on self-reported health status, treatment satisfaction, and diabetes-related distress in screen-detected type 2 diabetes patients. The ADDITION-Netherlands study. van den Donk M, Gorter KJ, Rutten GE. Quality of Life Research, 2010<br />ACCORD 2008: Effects of Intensive Glucose Lowering in Type 2 Diabetes. The Action to Control Cardiovascular Risk in Diabetes Study Group<sup><a class="showFootNotesLayer" href="http://www.nejm.org/doi/full/10.1056/NEJMoa0802743#FN1" rel="#footNotesLayer"><u>*</u></a></sup><span>N Engl J Med 2008; 358:2545-2559</span><a href="http://www.nejm.org/toc/nejm/358/24/"><u>June 12, 2008</u></a><span>DOI: 10.1056/NEJMoa0802743</span></p><p>Ved diabetes type 2 finnes det en stor randomisert, kontrollert intervensjonsstudie (UKPDS 33, 1998) som har undersøkt effekten av intensiv mot mindre intensiv blodsukkerkontroll (snitt HbA1c 7,0 % mot 7,9 %) over lang tid (10 år) hos pasienter med nyoppdaget diabetes på risiko for enhver diabeteskomplikasjon, mikrovaskulære komplikasjoner, hjerte-/karsykdom og død. Studien fant at intensiv behandling basert på insulin eller sulfonylurea reduserte summen av diabetiske senkomplikasjoner med 12 %, mikrovaskulære senkomplikasjoner med 25 %, men påvirket ikke risiko for død eller hjerte-/karsykdom signifikant. I en undergruppe av overvektige reduserte intensivert behandling med metformin både dødelighet og risiko for hjerteinfarkt signifikant (UKPDS, 1998). I en epidemiologisk analyse av UKPDS-data undersøkte Stratton et al sammenhengen mellom blodsukkerkontroll og mikro- og makrovaskulære komplikasjoner, og fant en signifikant, tydelig sammenheng mellom HbA1c og risiko for komplikasjoner (UKPDS 35, 2000).</p><p>I en oppfølgingsundersøkelse 10 år etter at den randomiserte studien var avsluttet, er det rapportert at så vel risiko for hjerteinfarkt som for tidlig død var lavere i gruppen som ble intensivt behandlet de 10 år studien varte (Holmann RR, 2008). Det finnes i tillegg tre store, randomiserte, kontrollerte undersøkelser av intensiv versus ikke-intensiv behandling ved diabetes type 2. Inkludert var pasienter som ikke hadde nyoppdaget diabetes, hvor målet for blodsukkerkontroll var strengere enn i UKPDS og hvor varigheten av studiene var betydelig kortere: ACCORD (7) , ADVANCE (8) og VADT (9). De aktuelle studier er også oppsummert i flere metaanalyser, bla Turnbull et al fra 2009 (10). ACCORD-studien ble stoppet prematurt på grunn av økt total dødelighet i intensiv behandlet gruppe. Behandlingsmålet i denne gruppen var HbA1c &lt;6 %. Tilsvarende økt dødelighet ble ikke observert i ADVANCE eller VADT. Ingen av studiene fant at intensiv behandling reduserte risiko for død eller kardiovaskulære hendelser, men den positive effekten på mikrovaskulære komplikasjoner som ble observert i UKPDS ble bekreftet.</p><p>Når det gjelder risiko for alvorlig hyperglykemi (ketotisk eller ikke ketotisk koma) har vi ikke funnet rapporter som har sammenliknet intensiv mot ikke-intensiv blodsukkersenkende behandling.</p><p>Risiko for hypoglykemi øker ved intensiv blodsukkersenkende behandling. Hemmingsen et al (2) rapporterer en relativ risiko for mild og moderat hypoglykemi på 1,54 (95% KI 1,35-1,75) og for alvorlig hypoglykemi relativ risiko 2,18 (95% KI 1,53-3,11). Risikoen for alvorlig hypoglykemi varierte i betydelig grad mellom de randomiserte studiene nevnt over.</p><p>Vektøkning er vanligvis sterkere ved intensiv blodsukkersenkende behandling, men varierer med de ulike medikamentene og vil omtales i relasjon til disse.</p>
+                  <div><p><a href="https://helsedirektoratet.no/retningslinjer/diabetes/dokumenter-diabetes/PICO%201.1%20-%20Summary%20of%20findings%20tabell.pdf" target="_blank">Evidensprofil (PDF)</a></p><p>Følgende utfall ble vurdert som relevante for problemstillingen (gradert etter hvor viktige vi tror de er for pasienten) og er vist i vedlagte evidensprofil:<br />1. Død – KRITISK<br />2. Livskvalitet – KRITISK<br />3. Hjerteinfarkt/hjerneslag – KRITISK<br />4. Ketoacidose/annen alvorlig hyperglykemi – VIKTIG<br />5. HbA1c – VIKTIG<br />6. (Alvorlig) hypoglykemi – KRITISK<br />7. Bivirkninger – VIKTIG<br />8. Vektendring – MINDRE VIKTIG<br />9. Synstruende retinopati – KRITISK<br />10. Amputasjon – KRITISK<br />11. ESRD - KRITISK<br />12. Makroalbuminuri - KRITISK<br />13. Mikroalbuminuri - VIKTIG<br />14. Dobling av plasma kreatinin - KRITISK<br />15. Død fra renal sykdom - KRITISK</p><p>I tillegg til disse utfallene ble også insidens av autonom nevropati og insidens av perifer nevropati vurdert (Buehler AM, 2013), og kategorisert som kritiske Risikoreduksjon ved intervensjon for insidens av perifer nevropati var 6 %, dvs. 26 færre av 1000. Kvaliteten på evidensen er moderat og nedgradert pga fare for høy bias da deltagerne ikke var blindet for intervensjonen. Risikoforskjell med intervensjon for insidens av autonom nevropati var 26 flere per 1000. RR 1.15 (95% KI 0.72-1.86). Kvaliteten på evidensen anses som lav og er nedgradert pga høy risiko for bias og publiseringsskjevhet.</p><p>I en metaanalyse fra Coca et al. er data fra intensiv blodglukosebehandling hos 15.000 - 28.000 deltakere oppsummert for nyrespesifikke utfallsmål (nr. 11-15 i listen ovenfor) (Coca SG, 2012). Studiene er open label, som øker muligheten for bias. Funnel plot for flere av effektmålene reiser mistanke om publikasjonsskjevhet. Ingen studier tar høyde for hvorvidt pasientene har diabetes nefropati (som er den absolutt vanligste nyreskaden ved diabetes type 1) eller hypertensiv nyreskade/ nefrosklerose (som ved diabetes type 2 er en minst like vanlig nyreskade som diabetes nefropati). Ved sistnevnte diagnose er ikke intensivert glukoseregulering forventet å ha like stor effekt på effektmålene som ved diabetes nefropati. I følge litteraturen kan det også forekomme blandingsformer av diabetes nefropati og hypertensiv nyreskade hos pasienten med diabetes type 2.</p><p>I den systematiske oversikten som best besvarte PICO, og som danner grunnlaget for Evidensprofilen, var følgende utfallsmål IKKE inkludert: HbA1c, ketoacidose, bivirkninger og vektendring.</p><p>En Cochrane review fra 2013 konkluderer med at intensiv behandling reduserer risiko for mikrovaskulære senkomplikasjoner (manifestasjon av retinopati med 21 %, relativ risiko (RR) 0,79 med 95 % konfidensintervall (KI) 0,68-0,92, og manifestasjon av nefropati med 25 %, RR 0,75 med 95 % KI 0,59-0,95,) samt amputasjoner av underekstremiteter (RR 0,65 med 95 % KI 0,45-0,94) uten signifikant effekt på risiko for total eller kardiovaskulær dødelighet, ikke fatalt hjerteinfarkt eller ikke fatalt hjerneslag (Hemmingsen B, 2013).</p><p>Bare to studier hadde undersøkt effekten på helserelatert livskvalitet og fant ingen signifikant effekt (ADDITION Netherlands og ACCORD 2008).</p><p>ADDITION Netherlands: No negative effects of a multi-factorial, intensified treatment on self-reported health status, treatment satisfaction, and diabetes-related distress in screen-detected type 2 diabetes patients. The ADDITION-Netherlands study. van den Donk M, Gorter KJ, Rutten GE. Quality of Life Research, 2010<br />ACCORD 2008: Effects of Intensive Glucose Lowering in Type 2 Diabetes. The Action to Control Cardiovascular Risk in Diabetes Study Group<sup><a className="showFootNotesLayer" href="http://www.nejm.org/doi/full/10.1056/NEJMoa0802743#FN1" rel="#footNotesLayer"><u>*</u></a></sup><span>N Engl J Med 2008; 358:2545-2559</span><a href="http://www.nejm.org/toc/nejm/358/24/"><u>June 12, 2008</u></a><span>DOI: 10.1056/NEJMoa0802743</span></p><p>Ved diabetes type 2 finnes det en stor randomisert, kontrollert intervensjonsstudie (UKPDS 33, 1998) som har undersøkt effekten av intensiv mot mindre intensiv blodsukkerkontroll (snitt HbA1c 7,0 % mot 7,9 %) over lang tid (10 år) hos pasienter med nyoppdaget diabetes på risiko for enhver diabeteskomplikasjon, mikrovaskulære komplikasjoner, hjerte-/karsykdom og død. Studien fant at intensiv behandling basert på insulin eller sulfonylurea reduserte summen av diabetiske senkomplikasjoner med 12 %, mikrovaskulære senkomplikasjoner med 25 %, men påvirket ikke risiko for død eller hjerte-/karsykdom signifikant. I en undergruppe av overvektige reduserte intensivert behandling med metformin både dødelighet og risiko for hjerteinfarkt signifikant (UKPDS, 1998). I en epidemiologisk analyse av UKPDS-data undersøkte Stratton et al sammenhengen mellom blodsukkerkontroll og mikro- og makrovaskulære komplikasjoner, og fant en signifikant, tydelig sammenheng mellom HbA1c og risiko for komplikasjoner (UKPDS 35, 2000).</p><p>I en oppfølgingsundersøkelse 10 år etter at den randomiserte studien var avsluttet, er det rapportert at så vel risiko for hjerteinfarkt som for tidlig død var lavere i gruppen som ble intensivt behandlet de 10 år studien varte (Holmann RR, 2008). Det finnes i tillegg tre store, randomiserte, kontrollerte undersøkelser av intensiv versus ikke-intensiv behandling ved diabetes type 2. Inkludert var pasienter som ikke hadde nyoppdaget diabetes, hvor målet for blodsukkerkontroll var strengere enn i UKPDS og hvor varigheten av studiene var betydelig kortere: ACCORD (7) , ADVANCE (8) og VADT (9). De aktuelle studier er også oppsummert i flere metaanalyser, bla Turnbull et al fra 2009 (10). ACCORD-studien ble stoppet prematurt på grunn av økt total dødelighet i intensiv behandlet gruppe. Behandlingsmålet i denne gruppen var HbA1c &lt;6 %. Tilsvarende økt dødelighet ble ikke observert i ADVANCE eller VADT. Ingen av studiene fant at intensiv behandling reduserte risiko for død eller kardiovaskulære hendelser, men den positive effekten på mikrovaskulære komplikasjoner som ble observert i UKPDS ble bekreftet.</p><p>Når det gjelder risiko for alvorlig hyperglykemi (ketotisk eller ikke ketotisk koma) har vi ikke funnet rapporter som har sammenliknet intensiv mot ikke-intensiv blodsukkersenkende behandling.</p><p>Risiko for hypoglykemi øker ved intensiv blodsukkersenkende behandling. Hemmingsen et al (2) rapporterer en relativ risiko for mild og moderat hypoglykemi på 1,54 (95% KI 1,35-1,75) og for alvorlig hypoglykemi relativ risiko 2,18 (95% KI 1,53-3,11). Risikoen for alvorlig hypoglykemi varierte i betydelig grad mellom de randomiserte studiene nevnt over.</p><p>Vektøkning er vanligvis sterkere ved intensiv blodsukkersenkende behandling, men varierer med de ulike medikamentene og vil omtales i relasjon til disse.</p>
                   
                   <Collapsible
                     h="h5"
@@ -177,22 +177,7 @@ const RecommendationPageAntibiotics = () => (
                   </Collapsible>
                 </Collapsible>
               </Collapsible>
-            </Collapsible>
-            
-            <Collapsible
-              background
-              heading="Noe annet"
-            >
-              <Collapsible
-                heading="Sterk anbefaling"
-                subtle
-                size="small"
-                smallContent
-              >
-                <p>...Hva er en sterk anbefaling...</p>
-              </Collapsible>
-              <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
-            </Collapsible>
+            </div>
           </article>
       </main>
     </div>
@@ -212,4 +197,4 @@ const RecommendationPageAntibiotics = () => (
   </>
 );
 
-export default RecommendationPageAntibiotics;
+export default NinjaStateRecommendation;
