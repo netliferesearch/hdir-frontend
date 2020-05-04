@@ -49,35 +49,37 @@ const ProductSearch = ({ label, productId }) => {
     ] 
   }
 
-  const dummyDataRecommentdations = [
-    {
-      title: getHighlightedText("Lavterskel tilbud", searchString),
-      meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-      url: '#a'
-    },
-    {
-      title: getHighlightedText("Tilpasset tilbud", searchString),
-      meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-      url: '#a'
-    },
-    {
-      title: getHighlightedText('Tannehelsetjenesten', searchString),
-      meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-      url: '#a'
-    },
-    {
-      title: getHighlightedText("Oversikt over tilbud", searchString),
-      meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-      url: '#a'
-    },
-  ]
-
-  const dummyDataChapters = [
-    {
-      title: getHighlightedText("4.1 Veiing og måling", searchString),
-      url: '#a'
-    },
-  ]
+  const dummyData = {
+    total: 5,
+    anbefaling: [
+      {
+        title: getHighlightedText("Lavterskel tilbud", searchString),
+        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
+        url: '#a'
+      },
+      {
+        title: getHighlightedText("Tilpasset tilbud", searchString),
+        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
+        url: '#a'
+      },
+      {
+        title: getHighlightedText('Tannehelsetjenesten', searchString),
+        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
+        url: '#a'
+      },
+      {
+        title: getHighlightedText("Oversikt over tilbud", searchString),
+        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
+        url: '#a'
+      },
+    ],
+    kapittel: [
+      {
+        title: getHighlightedText("4.1 Veiing og måling", searchString),
+        url: '#a'
+      },
+    ]
+  }
 
   const fullLabel = `Søk i ${label}`
   
@@ -105,7 +107,14 @@ const ProductSearch = ({ label, productId }) => {
       </div>
       { toggled && (
         <>
-          <h2>6 treff på «{searchString}» i retningslinjen</h2>
+          {
+            dummyData.total > 0 ? (
+              <h2>{dummyData.total} treff på «{searchString}» i retningslinjen</h2>
+            ) :
+            (
+                <h2>{dummyData.total} treff i retningslinjen</h2>
+            )
+          }
           <div className="col-xs-12 l-mt-3">
             <ChapterHeading
               heading="Anbefalinger"
@@ -115,7 +124,7 @@ const ProductSearch = ({ label, productId }) => {
             <hr className="b-hr b-hr--blue" />
             <NavList
               noArrow
-              list={dummyDataRecommentdations}
+              list={dummyData.anbefaling}
             />
           </div>
           <div className="col-xs-12 l-mt-3 l-mb-3">
@@ -127,7 +136,7 @@ const ProductSearch = ({ label, productId }) => {
             <hr className="b-hr b-hr--blue" />
             <NavList
               noArrow
-              list={dummyDataChapters}
+              list={dummyData.kapittel}
             />
           </div>
         </>
