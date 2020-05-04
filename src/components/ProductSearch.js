@@ -49,7 +49,7 @@ const ProductSearch = ({ label, productId }) => {
     ] 
   }
 
-  const dummydata = [
+  const dummyDataRecommentdations = [
     {
       title: getHighlightedText("Lavterskel tilbud", searchString),
       meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
@@ -72,7 +72,12 @@ const ProductSearch = ({ label, productId }) => {
     },
   ]
 
-  console.log(dummydata)
+  const dummyDataChapters = [
+    {
+      title: getHighlightedText("4.1 Veiing og måling", searchString),
+      url: '#a'
+    },
+  ]
 
   const fullLabel = `Søk i ${label}`
   
@@ -110,7 +115,7 @@ const ProductSearch = ({ label, productId }) => {
             <hr className="b-hr b-hr--blue" />
             <NavList
               noArrow
-              list={dummydata}
+              list={dummyDataRecommentdations}
             />
           </div>
           <div className="col-xs-12 l-mt-3 l-mb-3">
@@ -122,12 +127,7 @@ const ProductSearch = ({ label, productId }) => {
             <hr className="b-hr b-hr--blue" />
             <NavList
               noArrow
-              list={[
-                {
-                  title: '4.1 Veiing og måling',
-                  url: '#a'
-                },
-              ]}
+              list={dummyDataChapters}
             />
           </div>
         </>
