@@ -61,7 +61,7 @@ const InputSearch = props => {
     );
   }, 2000);
   
-  const id = uuidv4();
+  const id = props.id || uuidv4();
 
   const renderInputComponent = inputProps => (
     <div className="b-input-search">
@@ -236,6 +236,7 @@ const InputSearch = props => {
 };
 
 InputSearch.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string,
   dark: PropTypes.bool,
   showSuggestions: PropTypes.bool,

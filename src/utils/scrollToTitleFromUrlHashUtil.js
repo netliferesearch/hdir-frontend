@@ -29,11 +29,55 @@ export default function scrollToTitleFromUrlHash() {
   // Find hash in document and scroll to that title (h2)
   waitForIt(`#${lastHash}`)
     .then((el) => {
-      consoleIfNotInProduction(el, `[scrollToTitleFromUrlHash]: Scrolling to '${`#${lastHash}`}'!`);
-      return (el) ? el.scrollIntoView() : false;
+      return (el) ? handleTarget(el) : false;
     })
     .catch((err) => err);
-  return lastHash; // For test
+    return lastHash; // For test
+}
+
+// Helpers
+const isCollapsible = (el) => el.classList.contains('b-collapsible__content');
+const getCollapsibleTrigger = (el) => el.parentNode.querySelector('button');
+
+// Traverse the DOM, starting from element, moving upwards
+const traverseCollapsibles = (el) => {
+  let elements = [];
+  while (el = el.parentElement) { // go up till <html>
+    if (el.classList.contains('b-collapsible')) {
+      const collapsibleButton = el.querySelector('button');
+      elements.push(collapsibleButton);
+    }
+  }
+  return elements;
+}
+
+const handleTarget = (el) => {
+  if (!el) {
+    return;
+  }
+  const isCollapsbile = isCollapsible(el);
+  
+  // Normal heading, not Collapsible
+  if (!isCollapsbile) {
+    el.scrollIntoView()
+    consoleIfNotInProduction(el, `[scrollToTitleFromUrlHash]: Scrolling to '${`#${el.id}`}'!`);
+    return;
+  }
+
+  // Missing trigger
+  if (!getCollapsibleTrigger(el)) {
+    return;
+  }
+
+  // Traverse and open collapsibles
+  // We first reverse the array, so the outer collapsibles are opened first, then the innermost.
+  // Also, checking if the current button (trigger) is already opened by default. If so, skip.
+  traverseCollapsibles(el).reverse().forEach(collapsible => !collapsible.classList.contains('b-collapsible__button--active') && collapsible.click());
+  
+  // Scroll to element
+  el.scrollIntoView()
+
+  return;
 }
 
 // sleep helper to make the check again after some time
