@@ -5,6 +5,7 @@ import 'whatwg-fetch';
 import App from './App';
 import MainHeader from '../src/components/MainHeader';
 import InputSearch from '../src/components/InputSearch';
+import ProductSearch from '../src/components/ProductSearch';
 import SectionSidebar from '../src/components/SectionSidebar';
 import MultiSelector from './components/MultiSelector';
 import Loading from './components/Loading';
@@ -14,6 +15,7 @@ import { checkboxFilter } from './js/searchFilter';
 const rootElement = document.getElementById('root');
 const headerElement = document.getElementById('header');
 const searchElement = document.getElementById('search');
+const productSearchElement = document.getElementById('product-search');
 const sectionSidebarElement = document.getElementById('sectionSidebar');
 const multiSelectElements = document.querySelectorAll('.js-multi-selector');
 const globalScopeScriptsElement = document.getElementById('globalScopeScripts');
@@ -129,6 +131,18 @@ if (searchElement) {
       exampleSuggestions={exampleSuggestions}
     />,
     searchElement
+  );
+}
+if (productSearchElement) {
+  const label = searchElement.getAttribute('data-label') || '';
+  const productId = searchElement.getAttribute('data-content-id') || '';
+
+  render(
+    <ProductSearch
+      productId={productId}
+      label={label}
+    />,
+    productSearchElement
   );
 }
 

@@ -13,7 +13,7 @@ import ProductSearch from '../components/ProductSearch';
 import NavList from '../components/NavList';
 
 const ChapterPage = () => {
-  const [searchResults, setSearchResults] = useState('');
+  
   
   return (
     <>
@@ -72,103 +72,42 @@ const ChapterPage = () => {
             </aside>
             <div className="l-article">
             <ProductSearch
-              label="Søk i retningslinjen"
-              fnChange={(value) => setSearchResults(value)}
+              label="retningslinjen"
+              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
             />
-            {
-              searchResults ? (
-                <>
-                  <h2>6 treff på «{searchResults}» i retningslinjen</h2>
-                  
-                  <div className="col-xs-12 l-mt-3">
-                    <ChapterHeading
-                      heading="Anbefalinger"
-                      h={'h3'}
-                      clean
-                    />
-                    <hr className="b-hr b-hr--blue" />
-                    <NavList
-                      noArrow
-                      list={[
-                        {
-                          title: ["Lavterskel", <strong>tilbud</strong>],
-                          meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                          url: '#a'
-                        },
-                        {
-                          title: ["Tilpasset ", <strong>tilbud</strong>],
-                          meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                          url: '#a'
-                        },
-                        {
-                          title: 'Tannehelsetjenesten',
-                          meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                          url: '#a'
-                        },
-                        {
-                          title: ["Oversikt over ", <strong>tilbud</strong>],
-                          meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                          url: '#a'
-                        },
-                      ]}
-                    />
-                  </div>
-                  <div className="col-xs-12 l-mt-3">
-                    <ChapterHeading
-                      heading="Kapitler"
-                      h={'h3'}
-                      clean
-                    />
-                    <hr className="b-hr b-hr--blue" />
-                    <NavList
-                      noArrow
-                      list={[
-                        {
-                          title: '4.1 Veiing og måling',
-                          url: '#a'
-                        },
-                      ]}
-                    />
-                  </div>
-                </>
-              ) : (
-                <>
-                  <ChapterHeading
-                    heading="4. Helsestasjon 0–5 år"
-                    h="h1"
-                    line="none"
-                  />
-                  <ChapterHeading
-                    heading="4.1 Veiing og måling"
-                    url="#a"
-                  />
-                  <ChapterHeading
-                    heading="4.2 Hørsel, syn og språk"
-                    url="#a"
-                  />
-                  <Collapsible
-                    background
-                    heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
-                  >
-                  </Collapsible >
-                  <Collapsible
-                    background
-                    heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
-                  >
-                  </Collapsible >
-                  <Collapsible
-                    background
-                    heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
-                  >
-                  </Collapsible >
-                  <Collapsible
-                    background
-                    heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
-                  >
-                  </Collapsible >
-                </>
-              )
-            }
+            <ChapterHeading
+              heading="4. Helsestasjon 0–5 år"
+              h="h1"
+              line="none"
+            />
+            <ChapterHeading
+              heading="4.1 Veiing og måling"
+              url="#a"
+            />
+            <ChapterHeading
+              heading="4.2 Hørsel, syn og språk"
+              url="#a"
+            />
+            <Collapsible
+              background
+              heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
+            >
+            </Collapsible >
             
           
             

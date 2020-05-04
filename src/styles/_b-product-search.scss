@@ -6,7 +6,8 @@
     margin-top: $space-sm;
     margin-bottom: $space-lg;
   }
-}
-.b-product-search.hidden {
-  display: none;
+
+  &--hidden {
+    display: none;
+  }
 }

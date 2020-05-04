@@ -43,7 +43,7 @@ const InputSearch = props => {
   const [suggestions, setSuggestions] = useState([]);
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const inputElement = useRef(null);
-  
+
   /* We are using callback to make throtte work in this component function */
   const delayedSuggestionsFetchRequested = useCallback(debounce((value) => onSuggestionsFetchRequested(value), 200), []);
 
@@ -68,7 +68,7 @@ const InputSearch = props => {
       {props.label && (
         <label
           id="search-input-label"
-          for={id}
+          htmlFor={id}
           className={classNames({
             'b-input-search__label': true,
             'b-input-search__label--dark': props.dark
@@ -113,7 +113,7 @@ const InputSearch = props => {
   }
 
   function onChange(event, { newValue }) {
-    if (!props.showSuggestions) {
+    if (!props.showSuggestions && props.fnChange) {
       props.fnChange(newValue)
     }
     setValue(newValue);
