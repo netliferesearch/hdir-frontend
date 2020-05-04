@@ -38,46 +38,35 @@ const ProductSearch = ({ label, productId }) => {
       })
     }
 
-  function endofstring(searchStr, findStr) {
-    return searchStr.lastIndexOf(findStr) > 0 ? searchStr.lastIndexOf(findStr) + findStr.length : -1;
-  }
-
-  const hightlightWords = (string, match) => {
-    if (match.length < 4) {
-      return string;
+  const getHighlightedText = (text, highlight) => {
+    if (highlight.length < 4) {
+      return text;
     }
-    const matchedPos = string.indexOf(match);
-    const matchedWord = string.split(" ").find(function (v) {
-      return v.indexOf(match) > -1;
-    });
-    console.log('matchedWord', matchedWord)
-    const formatMatchedWord = <strong>{matchedWord}</strong>
-    const pre = string.substring(0, matchedPos) || null;
-    const postIndex = endofstring(string, matchedWord);
-    const post = string.substring(postIndex, string.length)
+    // Split on highlight term and include term into parts, ignore case
+    const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
     return [
-      pre, formatMatchedWord, post
-    ]
+      parts.map(part => part.toLowerCase() === highlight.toLowerCase() ? <strong>{part}</strong> : part)
+    ] 
   }
 
   const dummydata = [
     {
-      title: hightlightWords("Lavterskel tilbud", searchString),
+      title: getHighlightedText("Lavterskel tilbud", searchString),
       meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
       url: '#a'
     },
     {
-      title: hightlightWords("Tilpasset tilbud", searchString),
+      title: getHighlightedText("Tilpasset tilbud", searchString),
       meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
       url: '#a'
     },
     {
-      title: hightlightWords('Tannehelsetjenesten', searchString),
+      title: getHighlightedText('Tannehelsetjenesten', searchString),
       meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
       url: '#a'
     },
     {
-      title: hightlightWords("Oversikt over tilbud", searchString),
+      title: getHighlightedText("Oversikt over tilbud", searchString),
       meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
       url: '#a'
     },
