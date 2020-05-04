@@ -216,7 +216,7 @@
   &__content {
     animation: fadeInUp 300ms ease;
     padding-bottom: $space;
-    
+
     p {
       margin-bottom: 0;
       
@@ -229,7 +229,7 @@
       margin-top: 0;
       margin-bottom: $space;
     }
-
+    
     h4 + div {
       margin-top: $spaceSmall;
     }
@@ -250,6 +250,7 @@
     .b-collapsible__button--active {
       margin-bottom: $spaceSmall;
     }
+    
     &--small {
       font-size: $meta-text;
       margin-left: 0;
