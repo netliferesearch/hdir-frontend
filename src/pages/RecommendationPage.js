@@ -34,7 +34,7 @@ const RecommendationPage = () => (
         + Metronidazol 1g x 1 iv</p>
           <Collapsible
             h="h5"
-            heading="Kontraindikasjoner"
+            heading="Spesielle hensyn"
             size="tiny"
           >
             <Box
@@ -130,12 +130,12 @@ const RecommendationPage = () => (
         heading="Sekundær peritonitt"
       >
         <Collapsible
-            heading="Sterk anbefaling"
-            subtle
-            size="small"
-            smallContent
-          >
-            <p>...Hva er en sterk anbefaling...</p>
+          heading="Sterk anbefaling"
+          subtle
+          size="small"
+          smallContent
+        >
+          <p>...Hva er en sterk anbefaling...</p>
         </Collapsible>
         <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
       </Collapsible>

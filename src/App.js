@@ -48,6 +48,7 @@ import ProductPage from './pages/ProductPage';
 import ProfessionSelector from './pages/ProfessionSelector';
 import RecommendationPage from './pages/RecommendationPage';
 import RecommendationPageAntibiotics from './pages/RecommendationPageAntibiotics';
+import NinjaStateRecommendation from './pages/NinjaStateRecommendation';
 import ReportListPage from './pages/ReportListPage';
 import ReportPage from './pages/ReportPage';
 import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
@@ -120,6 +121,7 @@ class App extends Component {
               <Route path="/høringer-forside" component={ParentHearingPage} />
               <Route path="/anbefaling" component={RecommendationPage} />
               <Route path="/anbefaling-antibiotika" component={RecommendationPageAntibiotics} />
+              <Route path="/ninja-state" component={NinjaStateRecommendation} />
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
               <Route path="/rapport" component={ReportPage} />
