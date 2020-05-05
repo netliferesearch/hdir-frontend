@@ -33,4 +33,7 @@
 	.videoWrapper__close {
 		display: inline-block;
 	}
+	iframe {
+		height: 100vh !important;
+	}
 }
