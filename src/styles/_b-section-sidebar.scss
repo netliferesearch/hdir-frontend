@@ -71,13 +71,6 @@
     &:last-child:hover {
       border-bottom: 1px solid $primary-color-light;
     }
-    
-    &--children:hover {
-      >.b-section-sidebar__sub-link:last-child {
-        margin-left: $space-md*1.2;
-      }
-    }
-    
 
     &--active {
       color: $black !important;
@@ -101,12 +94,17 @@
     background-position: left center;
     margin-left: $space-md;
     transition: margin .1s ease-out;
+    box-shadow: none;
     
     &--active {
       background: $primary-color-lighter;
       font-weight: 600;
       padding-left: $space-md;
       margin-left: 0;
+    }
+
+    &:last-child:hover {
+      margin-left: $space-md*1.2;
     }
   }
   &__title {
