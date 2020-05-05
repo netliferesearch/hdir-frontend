@@ -74,11 +74,12 @@ const ListItem = ({ props }) => {
   const renderItemContentChildren = (
     <>
       {props.children && props.children.map(child => (
-        <span
+        <a
           className={subLinkClasses({active: child.active})}
-          key={shortid.generate()}>
+          key={shortid.generate()}
+          href={child.url}>
         {child.description}
-        </span>
+        </a>
       ))}
       {props.readMoreLabel &&
         (
@@ -102,23 +103,26 @@ const ListItem = ({ props }) => {
     </span>
   );
   return (
-    <a
-      href={props.url}
-      onClick={setFocus}
+    <div 
       className={linkClasses({
-        small: props.small, 
-        children: props.children, 
+        small: props.small,
+        children: props.children,
         active: props.active,
-        parent: true})}
-    >
-      {(!props.active && props.url)
-        ?
-        renderItemInactive
-        :
-        renderItemActive
-      }
-      {renderItemContentChildren}
-    </a>
+        parent: true
+      })}>
+      <a
+        href={props.url}
+        onClick={setFocus}
+      >
+        {(!props.active && props.url)
+          ?
+          renderItemInactive
+          :
+          renderItemActive
+        }
+      </a>
+        {renderItemContentChildren}
+    </div>
   );
 };
 

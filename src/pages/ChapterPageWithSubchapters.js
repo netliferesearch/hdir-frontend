@@ -45,7 +45,7 @@ const ChapterPage = () => (
                 description: '3. Fellesdel: Opplysningsplikt'
               },
               {
-                url: '#',
+                url: '#1',
                 description:
                   '4. Helsestasjon 0–5 år',
                 active: true,
@@ -53,10 +53,13 @@ const ChapterPage = () => (
                   {
                     description: '4.1 Veiing og måling',
                     active: true,
-                    url: '#',
-                  }
+                    url: '#2',
+                  },
+                  {
+                    description: 'Se hele kapittel 4',
+                    url: '#1',
+                  },
                 ],
-                readMoreLabel: 'Se hele kapittel 4'
               },
               {
                 url: '#',
