@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { debounce } from 'lodash';
 import InputSearch from './InputSearch'
 import ChapterHeading from './ChapterHeading'
 import NavList from './NavList'
@@ -20,6 +21,8 @@ const contentClasses = (toggled) =>
 
 const ProductSearch = ({ label, productId }) => {
   const [toggled, setToggled] = useState(false);
+  const [toggleMoreRecommendations, setToggleMoreRecommendations] = useState(false);
+  const [toggleMoreChapters, setToggleMoreChapters] = useState(false);
   const [searchResults, setSearchResults] = useState('');
   const [searchString, setSearchString] = useState('');
   const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/realtimesearch';
@@ -28,15 +31,28 @@ const ProductSearch = ({ label, productId }) => {
     setToggled(!toggled);
   }
 
-  function change(value) {
-    setSearchString(value);
-    fetch(`${liveSearchUrl}?searchQuery=${value.toLowerCase()}&contentId=${productId}`)
+  const doSearch = debounce((value) =>
+    fetch(`${liveSearchUrl}?searchQuery=${value}&contentId=${productId}`)
       .then(res => res.json())
       .then(data => {
-        console.log(data)
-        setSearchResults(data)
+        setSearchResults(data);
+        setToggleMoreRecommendations(false);
+        setToggleMoreChapters(false);
       })
-    }
+    , 350)
+
+  const debouncedChange = useCallback(
+    (value) => {
+      if (value.length > 2) {
+        setSearchString(value);
+        doSearch(value);
+      }
+      if (value.length === 0) {
+        setSearchResults('');
+      }
+    },
+    [doSearch],
+  );
 
   const getHighlightedText = (text, highlight) => {
     if (highlight.length < 4) {
@@ -49,97 +65,126 @@ const ProductSearch = ({ label, productId }) => {
     ] 
   }
 
-  const dummyData = {
-    total: 5,
-    anbefaling: [
-      {
-        title: getHighlightedText("Lavterskel tilbud", searchString),
-        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-        url: '#a'
-      },
-      {
-        title: getHighlightedText("Tilpasset tilbud", searchString),
-        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-        url: '#a'
-      },
-      {
-        title: getHighlightedText('Tannehelsetjenesten', searchString),
-        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-        url: '#a'
-      },
-      {
-        title: getHighlightedText("Oversikt over tilbud", searchString),
-        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-        url: '#a'
-      },
-    ],
-    kapittel: [
-      {
-        title: getHighlightedText("4.1 Veiing og måling", searchString),
-        url: '#a'
-      },
-    ]
-  }
+  // Construct an object containing all results/data
+  const modifiedResult = () => ({
+    total: searchResults.total || null,
+    anbefaling: 
+      searchResults.anbefaling && searchResults.anbefaling.length > 0 ? searchResults.anbefaling.map(result => {
+        return {
+          title: getHighlightedText(result.title, searchString),
+          meta: '',
+          url: result.url
+        }
+      }) : [],
+    kapittel:
+      searchResults.kapittel && searchResults.kapittel.length > 0 ? searchResults.kapittel.map(result => {
+        return {
+          title: getHighlightedText(result.title, searchString),
+          meta: '',
+          url: result.url
+        }
+      }) :[]
+  })
 
-  const fullLabel = `Søk i ${label}`
-  
+  // Split arrays in two, so we can have "See all" toggle buttons
+  const recommendations = modifiedResult().anbefaling.splice(0, 7);
+  const recommendationsRest = modifiedResult().anbefaling.length > 7 ? modifiedResult().anbefaling.splice(7) : null;
+  const chapters = modifiedResult().kapittel.splice(0, 7);
+  const chaptersRest = modifiedResult().kapittel.length > 7 ? modifiedResult().kapittel.splice(7) : null;
+
   return (
     <>
       <div className={mainClasses()}>
-        <Button 
+        <Button
           onClick={toggle}
           clean
-          icon={!toggled ? '../icons/search.svg' : '../icons/'}>
+          icon={!toggled ? '../icons/search.svg' : '../icons/close.svg'}>
           {
-            toggled ? 'Skjul søk' : fullLabel
+            toggled ? 'Skjul søk' : `Søk i ${label}`
           }
         </Button>
         <div className={contentClasses(toggled)}>
-          {toggled}
           <InputSearch
-            label={fullLabel}
+            id="produktsok"
+            label={`Søk i ${label}`}
             autoFocus={toggled}
             showSuggestions={false}
-            fnChange={toggled ? change : null}
+            fnChange={toggled ? debouncedChange : null}
             productId={productId}
           />
         </div>
       </div>
       { toggled && (
-        <>
-          {
-            dummyData.total > 0 ? (
-              <h2>{dummyData.total} treff på «{searchString}» i retningslinjen</h2>
-            ) :
-            (
-                <h2>{dummyData.total} treff i retningslinjen</h2>
-            )
-          }
-          <div className="col-xs-12 l-mt-3">
-            <ChapterHeading
-              heading="Anbefalinger"
-              h={'h3'}
-              clean
-            />
-            <hr className="b-hr b-hr--blue" />
-            <NavList
-              noArrow
-              list={dummyData.anbefaling}
-            />
-          </div>
-          <div className="col-xs-12 l-mt-3 l-mb-3">
-            <ChapterHeading
-              heading="Kapitler"
-              h={'h3'}
-              clean
-            />
-            <hr className="b-hr b-hr--blue" />
-            <NavList
-              noArrow
-              list={dummyData.kapittel}
-            />
-          </div>
-        </>
+        <div className="l-mb-4">
+            {
+              searchString && modifiedResult().total > 0 ? (
+              <h2>{modifiedResult().total} treff på «{searchString}» i {label}</h2>
+              ) : null
+            }
+            {
+            recommendations.length > 0 ? (
+                <div className="col-xs-12 l-mt-2">
+                  <ChapterHeading
+                    heading="Anbefalinger"
+                    h={'h3'}
+                    clean
+                  />
+                  <hr className="b-hr b-hr--blue" />
+                  <NavList
+                    noArrow
+                  list={recommendations}
+                  />
+                  {
+                    recommendationsRest ? (
+                    <div className="l-mt-1">
+                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>Vis alle</Button>
+                    </div>
+                    ) : null
+                  }
+                  
+                  {
+                    toggleMoreRecommendations ? (
+                    <NavList
+                      noArrow
+                      list={recommendationsRest}
+                    />
+                    ) : null
+                  }
+                </div>
+              ) : null
+            }
+            {
+              chapters.length > 0 ? (
+                <div className="col-xs-12 l-mt-2 l-mb-3">
+                  <ChapterHeading
+                    heading="Kapitler"
+                    h={'h3'}
+                    clean
+                  />
+                  <hr className="b-hr b-hr--blue" />
+                  <NavList
+                    noArrow
+                    list={chapters}
+                  />
+                  {
+                    chaptersRest ? (
+                      <div className="l-mt-1">
+                        <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>Vis alle</Button>
+                      </div>
+                    ) : null
+                  }
+                  {
+                    toggleMoreChapters ? (
+                      <NavList
+                        noArrow
+                        list={chaptersRest}
+                      />
+                    ) : null
+                  }
+                </div>
+              ) : null
+            }
+        </div>
       )}
     </>
   );

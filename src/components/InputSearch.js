@@ -43,10 +43,10 @@ const InputSearch = props => {
   const [suggestions, setSuggestions] = useState([]);
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const inputElement = useRef(null);
-
+  
   /* We are using callback to make throtte work in this component function */
   const delayedSuggestionsFetchRequested = useCallback(debounce((value) => onSuggestionsFetchRequested(value), 200), []);
-
+  
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
@@ -108,6 +108,9 @@ const InputSearch = props => {
   );
 
   function triggerSearch() {
+    if (!props.showSuggestions && props.fnChange) {
+      return;
+    }
     const encodedValue = encodeURI(value);
     window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
   }
@@ -143,6 +146,7 @@ const InputSearch = props => {
         .then(res => res.json())
         .then(data => {
           // Adding indexes to suggestions, so we know where in the list the item is
+          console.log(data)
           const suggestionsWithIndexes = data.map((item, index) => ({index: index + 1, ...item}));
           if (suggestionsWithIndexes.length) {
             setSuggestions([

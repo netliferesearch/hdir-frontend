@@ -74,7 +74,7 @@ const ChapterPage = () => (
           />
         </aside>
         <div className="l-article">
-        <ProductSearch label="Søk i retningslinjen" />
+        <ProductSearch label="retningslinjen" productId="0e87de78-2cb4-4a70-93a7-0d687443b71e" />
         <ChapterHeading
           heading="4.1 Veiing og måling"
           h="h1"
