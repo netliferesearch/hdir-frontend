@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import URLSearchParams from 'url-search-params';
 import useInterval from '../js/hooks/useInterval';
 import { debounce } from 'lodash';
+import uuidv4 from 'uuid/v4';
 
 import stripStringForHtmlUtil from './../utils/stripStringForHtmlUtil';
 
@@ -59,19 +60,22 @@ const InputSearch = props => {
         : 0
     );
   }, 2000);
+  
+  const id = props.id || uuidv4();
 
   const renderInputComponent = inputProps => (
     <div className="b-input-search">
       {props.label && (
-        <div
+        <label
           id="search-input-label"
+          for={id}
           className={classNames({
             'b-input-search__label': true,
             'b-input-search__label--dark': props.dark
           })}
         >
           {props.label}
-        </div>
+        </label>
       )}
       <div className="b-input-search__inputs">
         {!value && (
@@ -84,6 +88,7 @@ const InputSearch = props => {
         <input
           title="Søk"
           aria-labelledby="search-input-label"
+          id={id}
           {...inputProps}
           autoFocus={props.autoFocus}
           role="search"
@@ -108,6 +113,9 @@ const InputSearch = props => {
   }
 
   function onChange(event, { newValue }) {
+    if (!props.showSuggestions) {
+      props.fnChange(newValue)
+    }
     setValue(newValue);
   }
   
@@ -228,16 +236,18 @@ const InputSearch = props => {
 };
 
 InputSearch.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string,
   dark: PropTypes.bool,
   showSuggestions: PropTypes.bool,
   autoFocus: PropTypes.bool,
+  fnChange: PropTypes.func,
   exampleSuggestions: PropTypes.arrayOf(PropTypes.string)
 };
 
 InputSearch.defaultProps = {
   showSuggestions: true,
-  exampleSuggestions: []
+  exampleSuggestions: [],
 };
 
 export default InputSearch;

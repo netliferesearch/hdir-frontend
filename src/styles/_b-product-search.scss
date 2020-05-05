@@ -1,0 +1,12 @@
+.b-product-search {
+  margin-top: $space-xs;
+  margin-bottom: $space-md;
+
+  &__content {
+    margin-top: $space-sm;
+    margin-bottom: $space-lg;
+  }
+}
+.b-product-search.hidden {
+  display: none;
+}

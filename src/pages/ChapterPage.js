@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Collapsible from '../components/Collapsible';
 import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
@@ -6,55 +6,74 @@ import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
 import Alert from '../components/Alert';
 import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
 import Link from '../components/Link';
+import IconWithText from '../components/IconWithText';
+import ProductSearch from '../components/ProductSearch';
+import NavList from '../components/NavList';
 
-const ChapterPage = () => (
-  <>
-    <main id="main">
-      <div className="l-container l-mt-2">
-        <ChapterHeading
-          heading="Kost og fysisk aktivitet ved svangerskaps-diabetes"
-          subheading="KAPITTEL 1"
-          h="h1"
-          line="none"
-        />
-        <div className="row">
-          <aside className="col-md-4 l-hide-to-lg l-bleed-right">
-            <SectionSidebar
-              heading="Nasjonal faglig retningslinje for svangerskapsdiabetes"
-              headingUrl="#a"
-              icon="../icons/Konferanser.svg"
-              list={[
-                {
-                  title: 'KAPITTEL 1',
-                  url: '#',
-                  description:
-                    'Kost og fysisk aktivitet ved svangerskaps-diabetes',
-                  children: [
-                    {
-                      description: 'Underkapittel',
-                      url: '#',
-                      prefix: '1.1'
-                    },
-                    {
-                      description: 'Underkapittel',
-                      active: true,
-                      url: '#',
-                      prefix: '1.2'
-                    }
-                  ]
-                },
-                {
-                  title: 'KAPITTEL 2',
-                  url: '#',
-                  description: 'Diagnostikk og tiltak'
-                },
-                {
-                  title: 'KAPITTEL 3',
-                  url: '#',
-                  description: 'Nytt kapittel'
-                }
-              ]}
+const ChapterPage = () => {
+  const [searchResults, setSearchResults] = useState('');
+  
+  return (
+    <>
+      <main id="main">
+        <div className="l-container">
+          <Breadcrumbs
+            paths={[
+              {
+                name: 'Forsiden',
+                href: '#a'
+              },
+              {
+                name: 'Helsestasjons- og skolehelsetjenesten',
+                href: '#a'
+              }
+            ]}
+          />
+          <div className="l-layout">
+            <aside className="l-hide-to-lg l-sidebar l-bleed-right">
+              <SectionSidebar
+                heading="Nasjonal faglig retningslinje"
+                icon="../icons/Konferanser.svg"
+                list={[
+                  {
+                    url: '#',
+                    description: '1. Fellesdel: Ledelse, styring og brukermedvirkning'
+                  },
+                  {
+                    url: '#',
+                    description: '2. Fellesdel: Samhandling og samarbeid',
+                  },
+                  {
+                    url: '#',
+                    description: '3. Fellesdel: Opplysningsplikt'
+                  },
+                  {
+                    url: '#',
+                    description:
+                      '4. Helsestasjon 0–5 år',
+                    active: true,
+                  },
+                  {
+                    url: '#',
+                    description: '5. Skolehelsetjenesten 5–20 år'
+                  },
+                  {
+                    url: '#',
+                    description: '6. Helsestasjon for ungdom'
+                  },
+                  {
+                    url: '#',
+                    description: '7. Metode og prosess'
+                  }
+                ]}
+              />
+            </aside>
+            <div className="l-article">
+            <ProductSearch
+              label="Søk i retningslinjen"
+              fnChange={(value) => setSearchResults(value)}
             />
           </aside>
           <div className="col-md-7 col-md-offset-1 l-bleed-left">
@@ -173,16 +192,7 @@ const ChapterPage = () => (
                     heading="Seksjon under: 1 (h3)"
                     size="medium"
                   >
-                    <p>
-                      Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                      oppnå tilfredsstillende blodsukker fastende og etter
-                      måltider, og for å forhindre for stor vektøkning i
-                      svangerskapet. Det anbefales at kostanamnese benyttes i
-                      dette arbeidet.
-                    </p>
-                  </Collapsible>
-                </div>
-                <div>
+                  </Collapsible >
                   <Collapsible
                     heading="Seksjon under: 2 (h3)"
                     size="medium"
@@ -261,56 +271,24 @@ const ChapterPage = () => (
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <div className="l-container">
-      <div className="l-mt-4 l-mb-4">
-        <Collapsible heading="Abonnér på endringer – Nasjonal faglig retningslinje for svangerskapsdiabetes">
-          <form>
-            <div className="b-input-text">
-              <label
-                htmlFor="email-subscription"
-                className="b-input-text__label"
-              >
-                Fyll inn e-postadressen din for å motta varsler om endringer.
-              </label>
-              <input
-                type="text"
-                id="email-subscription"
-                className="b-input-text__input"
-              />
-              <div className="b-input-text__description">
-                Du får straks en e-post som bekrefter ditt abonnement. Der
-                finner du også melihet til å melde deg av.
-              </div>
-              <div className="b-input-text__error">
-                Skriv inn en gylig epost-adresse.
-              </div>
-              <Button>Abonnér</Button>
-            </div>
-          </form>
-          <Alert status="success">
-            Abonnementet ditt er registrert. Du får straks e-post fra oss.
-          </Alert>
-        </Collapsible>
+      <div className="l-mt-4">
+        <Box color="grey" square>
+          <div className="l-container">
+            <strong>Kontakt:</strong>
+            <br />
+            <a href="#a">spesialisthelsetjenester@helsedir.no</a>
+            <br />
+            <a href="#a">navn.etternavn@helsedir.no</a>
+            <br />
+            <a href="#a">999 99 999</a>
+          </div>
+        </Box>
       </div>
-    </div>
-
-    <div className="l-mt-4">
-      <Box color="grey" square noPadding>
-        <div className="l-container">
-          <strong>Kontakt:</strong>
-          <br />
-          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-          <br />
-          <a href="#a">navn.etternavn@helsedir.no</a>
-          <br />
-          <a href="#a">999 99 999</a>
-        </div>
-      </Box>
-    </div>
-  </>
-);
+    </>
+  )
+  
+};
 
 export default ChapterPage;

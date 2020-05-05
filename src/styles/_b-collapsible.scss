@@ -1,13 +1,13 @@
 .b-collapsible {
   $space: 1.75em;
   $spaceSmall: 0.75em;
-  padding: $spaceSmall $space;
+  padding: $space-sm $space-md;
   border: 1px solid transparent;
 
   .b-collapsible {
     background: none;
     border: none;
-    padding: $spaceSmall $space $spaceSmall $space;
+    padding: $space-sm $space $space-sm $space-xs;
     margin-left: 0;
     
     &--tiny {
@@ -66,9 +66,9 @@
   &--active.b-collapsible--background {
     background: white;
     border: 1px solid $grey-light;
-    margin-left: -$space*0.5;
+    margin-left: -$space-lg;
     margin-bottom: $space;
-    padding-left: $space*1.5;
+    padding-left: $space-xl*.88;
     padding-right: $space;
   }
 
@@ -114,14 +114,14 @@
       display: block;
       position: absolute;
       content: ' ';
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       margin-left: -$space;
       transform: rotate(90deg);
       background-image: url(../static/icons/chevron.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      left: 5px;
+      left: 0px;
       top: 7px;
     }
 
@@ -139,10 +139,17 @@
         color: white !important;
       }
     }
-
+    &--small {
+      padding-left: $space;
+      &:before {
+        margin-left: -$spaceSmall/4;
+        top: 0.15em;
+      }
+    }
     &--subtle {
       font-size: $meta-text;
       box-shadow: none !important;
+      padding-left: 0;
       > * {
         display: inline !important;
         border-bottom: 1px dashed $black;
@@ -152,7 +159,6 @@
         display: none;
       }
     }
-
     &--medium {
       &:before {
         top: 5px;
@@ -160,12 +166,7 @@
         height: 0.66em;
       }
     }
-    &--small {
-      &:before {
-        margin-left: -$space;
-        top: 0.15em;
-      }
-    }
+    
     &--tiny {
       display: block;
       max-width: 400px;
@@ -232,9 +233,12 @@
     h4 + div {
       margin-top: $spaceSmall;
     }
-    h4 {
+    h3, h4 {
       padding-top: $space;
       display: inline-block !important;
+    }
+    h3:first-child {
+      padding-top: 0;
     }
     .b-collapsible__heading {
       padding: 0;
@@ -266,6 +270,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: $space;
   }
   &__meta-date {
     font-size: $meta-text;
