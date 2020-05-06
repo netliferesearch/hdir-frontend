@@ -11,6 +11,10 @@
 	width: 100%;
 	height: 100%;
 }
+.t-body-text .videoWrapper iframe {
+	height: auto;
+}
+
 .videoWrapper__close {
 	position: fixed;
 	width: 100px;
