@@ -13,7 +13,7 @@ import ProductSearch from '../components/ProductSearch';
 import NavList from '../components/NavList';
 
 const ChapterPage = () => {
-  
+  const [toggle, setToggle] = useState(false);
   
   return (
     <>
@@ -71,6 +71,21 @@ const ChapterPage = () => {
               />
             </aside>
             <div className="l-article">
+              <div className="b-profession-picker  b-profession-picker--negative-margin">
+                { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
+                }
+                <label for="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+                {
+                  toggle ? (
+                    <div class="b-select l-mt-1 l-mb-3" id="profession-picker">
+                      <select id="profession-selector" class="b-select__select">
+                        <option disabled="" class="b-select__option">Velg målgruppe</option>
+                        <option class="b-select__option">Lege</option>
+                      </select>
+                    </div>
+                  ) : null
+                }
+              </div>
             <ProductSearch
               label="retningslinjen"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"

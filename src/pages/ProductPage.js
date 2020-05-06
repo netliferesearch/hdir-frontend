@@ -77,7 +77,7 @@ const ProductPage = () => {
               <label for="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
               {
                 toggle ? (
-                  <div class="b-select l-mt-1 l-mb-2" id="profession-picker">
+                  <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
                     <select id="profession-selector" class="b-select__select">
                       <option disabled="" class="b-select__option">Velg målgruppe</option>
                       <option class="b-select__option">Lege</option>
