@@ -33,7 +33,7 @@ body {
     padding: $space-sm $space-xs $space-sm $space-xl;
   }
   @include mq($from: wide) {
-    padding: $space-sm $space-xs $space-sm $space-xl;
+    padding: $space-md $space-xs $space-sm $space-xl;
   }
   
   &--topline {

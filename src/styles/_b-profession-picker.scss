@@ -1,0 +1,16 @@
+.b-profession-picker {
+  text-align: right;
+  &__label {
+    text-align: right;
+
+  }
+  &__button {
+    font-size: $font-xs;
+    border-bottom: 1px solid $primary-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color
+    }
+  }
+}

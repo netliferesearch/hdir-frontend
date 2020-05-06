@@ -12,7 +12,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import Select from '../components/Select';
 
 const ProductPage = () => {
-  const [searchResults, setSearchResults] = useState('');
+  const [toggle, setToggle] = useState(false);
   
   return (
     <div className="l-container">
@@ -25,7 +25,7 @@ const ProductPage = () => {
         ]}
       />
       <main id="main">
-        <div className="l-mt-3">
+        <div className="l-mt-2">
           <LongShortHeading
             long="Nasjonal faglig retningslinje"
             short="Svangerskapsdiabetes"
@@ -34,25 +34,7 @@ const ProductPage = () => {
             linkText="Hva er nasjonal faglig retningslinje"
           />
         </div>
-        <div className="row l-mb-2 l-mt-2">
-          <div className="col-xs-12 col-md-8 l-mt-1">
-            {/* <InputSearch
-              autoFocus={true}
-              label={'Søk i retningslinjen'}
-              showSuggestions={false}
-              fnChange={(value) => setSearchResults(value)}
-            /> */}
-            <ProductSearch
-              label="retningslinjen"
-              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
-              collapsed
-            />
-          </div>
-          <div className="col-xs-12 col-md-4 l-mt-1">
-            <Select label="Vis kun innhold for" placeholder="Velg" options={['Option 1', 'Option 2']} stacked custompos />
-          </div>
-        </div>
-        <div className="l-layout">
+        <div className="l-layout l-mt-2">
           <aside className="l-hide-to-lg l-sidebar l-bleed-right">
             <SectionSidebar
               list={[
@@ -89,65 +71,28 @@ const ProductPage = () => {
             />
           </aside>
           <div className="l-article l-article--topline">
-          {
-            searchResults ? (
-              <>
-                <h2 className="l-mt-1">6 treff på «{searchResults}» i retningslinjen</h2>
-                
-                <div className="col-xs-12 l-mt-2">
-                  <ChapterHeading
-                    heading="Anbefalinger"
-                    h={'h3'}
-                    clean
-                  />
-                  <hr className="b-hr b-hr--blue" />
-                  <NavList
-                    noArrow
-                    list={[
-                      {
-                        title: ["Lavterskel", <strong>tilbud</strong>],
-                        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                        url: '#a'
-                      },
-                      {
-                        title: ["Tilpasset ", <strong>tilbud</strong>],
-                        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                        url: '#a'
-                      },
-                      {
-                        title: 'Tannehelsetjenesten',
-                        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                        url: '#a'
-                      },
-                      {
-                        title: ["Oversikt over ", <strong>tilbud</strong>],
-                        meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                        url: '#a'
-                      },
-                    ]}
-                  />
-                </div>
-                <div className="col-xs-12 l-mt-3">
-                  <ChapterHeading
-                    heading="Kapitler"
-                    h={'h3'}
-                    clean
-                  />
-                  <hr className="b-hr b-hr--blue" />
-                  <NavList
-                    noArrow
-                    list={[
-                      {
-                        title: '4.1 Veiing og måling',
-                        url: '#a'
-                      },
-                    ]}
-                  />
-                </div>
-              </>
-            ) : (
-              <>
-            <div className="col-xs-12 l-mt-1">
+            <div className="b-profession-picker">
+              { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
+              } 
+              <label for="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+              {
+                toggle ? (
+                  <div class="b-select l-mt-1 l-mb-2" id="profession-picker">
+                    <select id="profession-selector" class="b-select__select">
+                      <option disabled="" class="b-select__option">Velg målgruppe</option>
+                      <option class="b-select__option">Lege</option>
+                    </select>
+                  </div>
+                ) : null
+              }
+            </div>
+            <ProductSearch
+              label="retningslinjen"
+              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              collapsed
+            />
+            
+            <div className="col-xs-12 l-mt-2">
               <ChapterHeading
                 heading="1. Fellesdel: Ledelse, styring og brukermedvirkning"
                 url="/kapittel"
@@ -503,9 +448,6 @@ const ProductPage = () => {
               />
               <hr className="b-hr b-hr--blue" />
             </div>
-            
-            </>)
-          }
             
           </div>
         </div>
