@@ -7,9 +7,10 @@ import ChapterHeading from './ChapterHeading'
 import NavList from './NavList'
 import Button from './Button'
 
-const mainClasses = () =>
+const mainClasses = (collapsed) =>
   classNames({
     'b-product-search': true,
+    'b-product-search--collapsed': collapsed,
   });
 
 const contentClasses = (toggled) =>
@@ -19,7 +20,7 @@ const contentClasses = (toggled) =>
     'b-product-search--hidden': !toggled
   });
 
-const ProductSearch = ({ label, productId }) => {
+const ProductSearch = ({ label, productId, collapsed }) => {
   const [toggled, setToggled] = useState(false);
   const [toggleMoreRecommendations, setToggleMoreRecommendations] = useState(false);
   const [toggleMoreChapters, setToggleMoreChapters] = useState(false);
@@ -27,6 +28,10 @@ const ProductSearch = ({ label, productId }) => {
   const [searchString, setSearchString] = useState('');
   const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/realtimesearch';
   
+  if (collapsed && !toggled) {
+    setToggled(true);
+  }
+
   function toggle() {
     setToggled(!toggled);
   }
@@ -94,6 +99,20 @@ const ProductSearch = ({ label, productId }) => {
 
   return (
     <>
+    { collapsed ? (
+      <div className={mainClasses(collapsed)}>
+        <div className={contentClasses(true)}>
+          <InputSearch
+            id="produktsok"
+            label={`Søk i ${label}`}
+            autoFocus={toggled}
+            showSuggestions={false}
+            fnChange={toggled ? debouncedChange : null}
+            productId={productId}
+          />
+        </div>
+      </div>
+    ) : (
       <div className={mainClasses()}>
         <Button
           onClick={toggle}
@@ -114,11 +133,14 @@ const ProductSearch = ({ label, productId }) => {
           />
         </div>
       </div>
-      { toggled && (
+    )}
+      {toggled && modifiedResult().total > 0 && (
         <div className="l-mb-4">
             {
               searchString && modifiedResult().total > 0 ? (
-              <h2>{modifiedResult().total} treff på «{searchString}» i {label}</h2>
+              <h2 className="b-product-search__title">
+                {modifiedResult().total} treff på «{searchString}» i {label}
+              </h2>
               ) : null
             }
             {
@@ -193,6 +215,7 @@ const ProductSearch = ({ label, productId }) => {
 ProductSearch.propTypes = {
   label: PropTypes.string,
   productId: PropTypes.string,
+  collapsed: PropTypes.bool,
 };
 
 export default ProductSearch;

@@ -7,7 +7,7 @@ import Link from '../components/Link';
 import PageMeta from '../components/PageMeta';
 import LongShortHeading from '../components/LongShortHeading';
 import SectionSidebar from '../components/SectionSidebar';
-import InputSearch from '../components/InputSearch';
+import ProductSearch from '../components/ProductSearch';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Select from '../components/Select';
 
@@ -36,11 +36,16 @@ const ProductPage = () => {
         </div>
         <div className="row l-mb-2 l-mt-2">
           <div className="col-xs-12 col-md-8 l-mt-1">
-            <InputSearch
+            {/* <InputSearch
               autoFocus={true}
               label={'Søk i retningslinjen'}
               showSuggestions={false}
               fnChange={(value) => setSearchResults(value)}
+            /> */}
+            <ProductSearch
+              label="retningslinjen"
+              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              collapsed
             />
           </div>
           <div className="col-xs-12 col-md-4 l-mt-1">
