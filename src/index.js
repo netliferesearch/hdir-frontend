@@ -134,8 +134,8 @@ if (searchElement) {
   );
 }
 if (productSearchElement) {
-  const label = searchElement.getAttribute('data-label') || '';
-  const productId = searchElement.getAttribute('data-content-id') || '';
+  const label = productSearchElement.getAttribute('data-label') || '';
+  const productId = productSearchElement.getAttribute('data-content-id') || '';
 
   render(
     <ProductSearch
