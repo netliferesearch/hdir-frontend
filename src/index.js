@@ -136,11 +136,13 @@ if (searchElement) {
 if (productSearchElement) {
   const label = productSearchElement.getAttribute('data-label') || '';
   const productId = productSearchElement.getAttribute('data-content-id') || '';
+  const collapsed = productSearchElement.getAttribute('data-collapsed') || '';
 
   render(
     <ProductSearch
       productId={productId}
       label={label}
+      collapsed={collapsed}
     />,
     productSearchElement
   );
