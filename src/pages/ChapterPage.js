@@ -91,7 +91,7 @@ const ChapterPage = () => {
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
             />
             <ChapterHeading
-              heading="4. Helsestasjon 0–5 år"
+              heading="4. Særskilte regler i tilknytning til autorisasjon, krav om politattest m.v."
               h="h1"
               line="none"
             />
