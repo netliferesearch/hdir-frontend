@@ -46,7 +46,8 @@ import TableExample from '../components/TableExample';
 import TransportBlock from '../components/TransportBlock';
 import Wrapper from './components/Wrapper.js'
 import IconWithText from '../components/IconWithText';
-
+import ProductSearch from '../components/ProductSearch';
+import { dummyFlatTree } from '../components/dummyFlatTree'
 
 
   storiesOf('Komponenter/Anbefaling', module)
@@ -1329,6 +1330,69 @@ storiesOf('Komponenter/Knapp', module)
         </Wrapper>
       ))
 
+
+
+
+    storiesOf('Komponenter/Målgruppevelger', module)
+      .addDecorator(withKnobs)
+      .addDecorator(checkA11y)
+      .add('Målgruppevelger', () => (
+        <Wrapper title="Målgruppevelger" lead="The button should have an onclick function: document.getElementById('profession-picker__content').classList.toggle('hide') ">
+          <div className="b-profession-picker">
+            <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => document.getElementById('profession-picker__content').classList.toggle('hide')} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+            <div class="b-select l-mt-1 l-mb-3 col-md-6 hide" id="profession-picker__content">
+              <select id="profession-selector" class="b-select__select">
+                <option disabled="" class="b-select__option">Velg målgruppe</option>
+                <option class="b-select__option">Lege</option>
+              </select>
+            </div>
+          </div>
+        </Wrapper>
+      ))
+      .add('Målgruppevelger valgt (picked)', () => (
+        <Wrapper title="Målgruppevelger" lead="The button should have an onclick function: document.getElementById('profession-picker__content').classList.toggle('hide') ">
+          <div className="b-profession-picker">
+            <label htmlFor="profession-selector" className="b-profession-picker__label">Innhold tilpasset til: <strong>Lege </strong><button onClick={() => document.getElementById('profession-picker__content').classList.toggle('hide')} className="b-button--clean b-profession-picker__button">Endre</button></label>
+            <div class="b-select l-mt-1 l-mb-3 col-md-6 hide" id="profession-picker__content">
+              <select id="profession-selector" class="b-select__select">
+                <option disabled="" class="b-select__option">Lege</option>
+                <option class="b-select__option">Lege</option>
+              </select>
+            </div>
+          </div>
+        </Wrapper>
+      ))
+      
+      .add('Målgruppevelger kapittel (chapter page)', () => (
+        <Wrapper title="Målgruppevelger" lead="The wrapper has an extra css-class 'b-professional-picker--negative-margin'. Also, the button should have an onclick function: document.getElementById('profession-picker__content').classList.toggle('hide') ">
+          <div className="b-profession-picker b-profession-picker--negative-margin">
+            <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => document.getElementById('profession-picker__content').classList.toggle('hide')} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+            <div class="b-select l-mt-1 l-mb-3 col-md-6 hide" id="profession-picker__content">
+              <select id="profession-selector" class="b-select__select">
+                <option disabled="" class="b-select__option">Velg målgruppe</option>
+                <option class="b-select__option">Lege</option>
+              </select>
+            </div>
+          </div>
+        </Wrapper>
+      ))
+      
+      .add('Målgruppevelger kapittel (chapter page, picked)', () => (
+        <Wrapper title="Målgruppevelger" lead="The wrapper has an extra css-class 'b-professional-picker--negative-margin'. Also, the button should have an onclick function: document.getElementById('profession-picker__content').classList.toggle('hide') ">
+          <div className="b-profession-picker b-professional-picker--negative-margin">
+            <label htmlFor="profession-selector" className="b-profession-picker__label">Innhold tilpasset til: <strong>Lege </strong><button onClick={() => document.getElementById('profession-picker__content').classList.toggle('hide')} className="b-button--clean b-profession-picker__button">Endre</button></label>
+            <div class="b-select l-mt-1 l-mb-3 col-md-6 hide" id="profession-picker__content">
+              <select id="profession-selector" class="b-select__select">
+                <option disabled="" class="b-select__option">Lege</option>
+                <option class="b-select__option">Lege</option>
+              </select>
+            </div>
+          </div>
+        </Wrapper>
+      ))
+      
+      ;
+
   
   storiesOf('Komponenter', module)
     .addDecorator(withKnobs)
@@ -1397,6 +1461,26 @@ storiesOf('Komponenter/Knapp', module)
             </div>
           </Wrapper>
         ));
+
+
+
+
+      storiesOf('Komponenter', module)
+        .addDecorator(withKnobs)
+        .addDecorator(checkA11y)
+        .add('Produktsøk', () => (
+          <Wrapper title="Produktsøk" lead="">
+            <ProductSearch
+              label="retningslinjen"
+              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
+              collapsed
+            />
+          </Wrapper>
+        ));
+
+
 
 
       storiesOf('Komponenter', module)
