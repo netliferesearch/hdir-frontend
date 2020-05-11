@@ -7,6 +7,7 @@ import ChapterHeading from './ChapterHeading'
 import NavList from './NavList'
 import Button from './Button'
 
+
 const mainClasses = (collapsed) =>
   classNames({
     'b-product-search': true,
@@ -20,7 +21,7 @@ const contentClasses = (toggled) =>
     'b-product-search--hidden': !toggled
   });
 
-const ProductSearch = ({ label, productId, collapsed }) => {
+const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => {
   const [toggled, setToggled] = useState(false);
   const [toggleMoreRecommendations, setToggleMoreRecommendations] = useState(false);
   const [toggleMoreChapters, setToggleMoreChapters] = useState(false);
@@ -36,21 +37,29 @@ const ProductSearch = ({ label, productId, collapsed }) => {
     setToggled(!toggled);
   }
 
-  const doSearch = debounce((value) =>
-    fetch(`${liveSearchUrl}?searchQuery=${value}&contentId=${productId}`)
+  const doSearch = debounce((formData) =>
+    fetch(`${liveSearchUrl}`, {
+      method: 'POST',
+      body: formData
+    })
       .then(res => res.json())
       .then(data => {
         setSearchResults(data);
         setToggleMoreRecommendations(false);
         setToggleMoreChapters(false);
       })
-    , 350)
+    , 300)
 
   const debouncedChange = useCallback(
     (value) => {
       if (value.length > 2) {
         setSearchString(value);
-        doSearch(value);
+        let formData = new FormData();
+        formData.append('contentId', productId);
+        formData.append('searchQuery', value);
+        formData.append('malgruppe', malgruppe);
+        formData.append('flatTree', flatTree);
+        doSearch(formData);
       }
       if (value.length === 0) {
         setSearchResults('');
@@ -60,7 +69,7 @@ const ProductSearch = ({ label, productId, collapsed }) => {
   );
 
   const getHighlightedText = (text, highlight) => {
-    if (highlight.length < 4) {
+    if (highlight.length < 2) {
       return text;
     }
     // Split on highlight term and include term into parts, ignore case
@@ -77,7 +86,7 @@ const ProductSearch = ({ label, productId, collapsed }) => {
       searchResults.anbefaling && searchResults.anbefaling.length > 0 ? searchResults.anbefaling.map(result => {
         return {
           title: getHighlightedText(result.title, searchString),
-          meta: '',
+          meta: result.chapter,
           url: result.url
         }
       }) : [],
@@ -159,7 +168,7 @@ const ProductSearch = ({ label, productId, collapsed }) => {
                   {
                     recommendationsRest ? (
                     <div className="l-mt-1">
-                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>Vis alle</Button>
+                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>Vis alle ({recommendationsRest.length})</Button>
                     </div>
                     ) : null
                   }
@@ -191,7 +200,7 @@ const ProductSearch = ({ label, productId, collapsed }) => {
                   {
                     chaptersRest ? (
                       <div className="l-mt-1">
-                        <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>Vis alle</Button>
+                      <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>Vis alle ({chaptersRest.length})</Button>
                       </div>
                     ) : null
                   }

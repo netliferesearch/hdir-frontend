@@ -8,6 +8,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import Link from '../components/Link';
 import ProductSearch from '../components/ProductSearch';
 import Quote from '../components/Quote';
+import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ChapterPage = () => {
   const [toggle, setToggle] = useState(false);
@@ -65,6 +66,8 @@ const ChapterPage = () => {
             <ProductSearch
               label="rundskrivet"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
             />
             <ChapterHeading
               heading="3. Krav til organisering og virksomhet"

@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
 import Button from '../components/Button';
-import Box from '../components/Box';
 import Link from '../components/Link';
 import PageMeta from '../components/PageMeta';
 import LongShortHeading from '../components/LongShortHeading';
 import SectionSidebar from '../components/SectionSidebar';
 import ProductSearch from '../components/ProductSearch';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Select from '../components/Select';
+import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ProductPage = () => {
   const [toggle, setToggle] = useState(false);
@@ -73,6 +72,8 @@ const ProductPage = () => {
             <ProductSearch
               label="rundskrivet"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
               collapsed
             />
 

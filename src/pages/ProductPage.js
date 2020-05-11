@@ -10,6 +10,7 @@ import SectionSidebar from '../components/SectionSidebar';
 import ProductSearch from '../components/ProductSearch';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Select from '../components/Select';
+import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ProductPage = () => {
   const [toggle, setToggle] = useState(false);
@@ -89,6 +90,8 @@ const ProductPage = () => {
             <ProductSearch
               label="retningslinjen"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
               collapsed
             />
             

@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import Collapsible from '../components/Collapsible';
-import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
-import Alert from '../components/Alert';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Link from '../components/Link';
-import IconWithText from '../components/IconWithText';
 import ProductSearch from '../components/ProductSearch';
-import NavList from '../components/NavList';
+import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ChapterPage = () => {
   const [toggle, setToggle] = useState(false);
@@ -89,6 +86,8 @@ const ChapterPage = () => {
             <ProductSearch
               label="retningslinjen"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
             />
             <ChapterHeading
               heading="4. Særskilte regler i tilknytning til autorisasjon, krav om politattest m.v."
