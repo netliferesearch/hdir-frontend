@@ -14,8 +14,12 @@
     margin-bottom: - $space-lg;
 
     @include mq($until: tablet) {
-    margin-bottom: $space-sm;
+      margin-bottom: $space-sm;
+    }
   }
+
+  &__label {
+    font-size: $font-xs;
   }
   
   &__button {
