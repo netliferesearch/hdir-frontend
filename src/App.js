@@ -21,6 +21,7 @@ import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import ChapterPage from './pages/ChapterPage';
 import ChapterPageWithSubchapters from './pages/ChapterPageWithSubchapters';
 import ChapterPageReport from './pages/ChapterPageReport';
+import ChapterPageWithLead from './pages/ChapterPageWithLead';
 import EarlierVersionsPage from './pages/EarlierVersionsPage';
 import FormbuilderTestPage from './pages/FormbuilderTestPage';
 import FrontPage from './pages/FrontPage';
@@ -118,6 +119,7 @@ class App extends Component {
                 component={ReportPageWithoutImage}
               />
               <Route path="/kapittel" component={ChapterPage} />
+              <Route path="/kapittel-med-ingress" component={ChapterPageWithLead} />
               <Route path="/kapittel-med-underkapitler" component={ChapterPageWithSubchapters} />
               <Route path="/høringer" component={HearingPage} />
               <Route path="/høringer-forside" component={ParentHearingPage} />

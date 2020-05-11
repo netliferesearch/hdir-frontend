@@ -71,19 +71,13 @@ const ProductPageMalgruppe = () => {
           </aside>
           <div className="l-article l-article--topline">
             <div className="b-profession-picker">
-              { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
-              }
-              <label htmlFor="profession-selector" className="b-profession-picker__label">Innhold tilpasset til: <strong>Lege</strong> <button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Endre</button></label>
-              {
-                toggle ? (
-                  <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
-                    <select id="profession-selector" class="b-select__select">
-                      <option disabled="" class="b-select__option">Lege</option>
-                      <option class="b-select__option">Lege</option>
-                    </select>
-                  </div>
-                ) : null
-              }
+              <label htmlFor="profession-selector" className="b-profession-picker__label">Innhold tilpasset til: <strong>Lege </strong><button className="b-button--clean b-profession-picker__button" id="profession-picker">Endre</button></label>
+              <div className="b-select l-mt-1 l-mb-3 col-md-6 hide" id="profession-picker__content">
+                <select id="profession-selector" className="b-select__select">
+                  <option disabled="" className="b-select__option">Lege</option>
+                  <option className="b-select__option">Lege</option>
+                </select>
+              </div>
             </div>
             <ProductSearch
               label="retningslinjen"
