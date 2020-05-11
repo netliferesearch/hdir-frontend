@@ -1,0 +1,9 @@
+.print-pdf {
+  a[href^="http://"],
+  a[href^="https://"],
+  a[href^="//"] {
+    color: blue !important;
+    text-decoration: underline !important;
+    box-shadow: none;
+  }
+}

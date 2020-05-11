@@ -123,8 +123,6 @@ const ChapterPage = () => {
             >
             </Collapsible >
             
-          
-            
               <div className="l-mt-4">
                 <Link wideButton arrow color="purple">
                   Henvis pasienten til helsenorge.no for mer informasjon
@@ -156,7 +154,7 @@ const ChapterPage = () => {
       </div>
     </>
   )
-  
+
 };
 
 export default ChapterPage;

@@ -45,6 +45,7 @@
   a[href^="//"] {
     color: blue !important;
     text-decoration: underline !important;
+    box-shadow: none;
   }
   // Typography
   font-size: 13px;
@@ -89,11 +90,26 @@
     margin-bottom: 1.5em;
     margin-top: 0;
   }
+  // Images fix
+  figure img {
+    max-width: 100%;
+  }
+  .editor-align-justify img, .justify img {
+    width: 100%;
+  }
   // Every 'div' that is a diract child of 'body' is a single page
   & > div {
     border-bottom: 10px solid black;
     margin-bottom: 40px;
   }
+  // Images fix
+  figure img {
+    max-width: 100%;
+  }
+  .editor-align-justify img, .justify img {
+    width: 100%;
+  }
+  
   .atom-main-content { // "Anbefaling" intro text
     padding-left: 20px;
     border-left: 6px solid #ddd;

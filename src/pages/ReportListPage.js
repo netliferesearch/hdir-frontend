@@ -27,7 +27,7 @@ const ReportListPage = () => (
         <div className="col-xs-12 col-sm-6 l-mt-1">
           <Card
             heading="Ventetider og pasientrettigheter 2017"
-            text="17. mars 2018"
+            text="17. mars 2018 "
             url="#a"
             arrow="right"
           >
@@ -118,7 +118,7 @@ const ReportListPage = () => (
                     openPdf: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -128,7 +128,7 @@ const ReportListPage = () => (
                     openPdf: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -137,26 +137,7 @@ const ReportListPage = () => (
                   fields: {
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
-                  }
-                },
-                {
-                  type: 'generic',
-                  url: '#6',
-                  fields: {
-                    download: 'true',
-                    heading:
-                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
-                  }
-                },
-                {
-                  type: 'generic',
-                  url: '#6',
-                  fields: {
-                    heading:
-                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -166,7 +147,16 @@ const ReportListPage = () => (
                     download: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -176,16 +166,7 @@ const ReportListPage = () => (
                     download: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
-                  }
-                },
-                {
-                  type: 'generic',
-                  url: '#6',
-                  fields: {
-                    heading:
-                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -195,7 +176,7 @@ const ReportListPage = () => (
                     download: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -204,17 +185,7 @@ const ReportListPage = () => (
                   fields: {
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
-                  }
-                },
-                {
-                  type: 'generic',
-                  url: '#6',
-                  fields: {
-                    download: 'true',
-                    heading:
-                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -224,7 +195,7 @@ const ReportListPage = () => (
                     download: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -233,7 +204,7 @@ const ReportListPage = () => (
                   fields: {
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -243,7 +214,17 @@ const ReportListPage = () => (
                     download: 'true',
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: '16. januar 2020'
                   }
                 },
                 {
@@ -252,7 +233,26 @@ const ReportListPage = () => (
                   fields: {
                     heading:
                       'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
-                    subheading: 'Publisert: 16. januar 2020'
+                    subheading: '16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    download: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: '16. januar 2020'
+                  }
+                },
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: '16. januar 2020'
                   }
                 }
               ]}
