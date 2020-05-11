@@ -137,12 +137,16 @@ if (productSearchElement) {
   const label = productSearchElement.getAttribute('data-label') || '';
   const productId = productSearchElement.getAttribute('data-content-id') || '';
   const collapsed = productSearchElement.getAttribute('data-collapsed') || '';
+  const malgruppe = productSearchElement.getAttribute('data-malgruppe') || '';
+  const flatTree = productSearchElement.getAttribute('data-flatTree') || '';
 
   render(
     <ProductSearch
       productId={productId}
       label={label}
       collapsed={collapsed}
+      malgruppe={malgruppe}
+      flatTree={flatTree}
     />,
     productSearchElement
   );

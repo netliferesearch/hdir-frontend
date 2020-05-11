@@ -168,7 +168,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
                   {
                     recommendationsRest ? (
                     <div className="l-mt-1">
-                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>Vis alle ({recommendationsRest.length})</Button>
+                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>Vis alle ({modifiedResult().anbefaling.length})</Button>
                     </div>
                     ) : null
                   }
@@ -200,7 +200,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
                   {
                     chaptersRest ? (
                       <div className="l-mt-1">
-                      <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>Vis alle ({chaptersRest.length})</Button>
+                      <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>Vis alle ({modifiedResult().kapittel.length})</Button>
                       </div>
                     ) : null
                   }
