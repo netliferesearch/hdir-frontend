@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import Collapsible from '../components/Collapsible';
-import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
-import Alert from '../components/Alert';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Link from '../components/Link';
-import IconWithText from '../components/IconWithText';
 import ProductSearch from '../components/ProductSearch';
-import NavList from '../components/NavList';
+import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ChapterPage = () => {
-  const [searchResults, setSearchResults] = useState('');
-
+  const [toggle, setToggle] = useState(false);
+  
   return (
     <>
       <main id="main">
@@ -71,107 +68,61 @@ const ChapterPage = () => {
               />
             </aside>
             <div className="l-article">
-              <ProductSearch
-                label="Søk i retningslinjen"
-                fnChange={(value) => setSearchResults(value)}
-              />
-              {
-                searchResults ? (
-                  <>
-                    <h2>6 treff på «{searchResults}» i retningslinjen</h2>
-
-                    <div className="col-xs-12 l-mt-3">
-                      <ChapterHeading
-                        heading="Anbefalinger"
-                        h={'h3'}
-                        clean
-                      />
-                      <hr className="b-hr b-hr--blue" />
-                      <NavList
-                        noArrow
-                        list={[
-                          {
-                            title: ["Lavterskel", <strong>tilbud</strong>],
-                            meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                            url: '#a'
-                          },
-                          {
-                            title: ["Tilpasset ", <strong>tilbud</strong>],
-                            meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                            url: '#a'
-                          },
-                          {
-                            title: 'Tannehelsetjenesten',
-                            meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                            url: '#a'
-                          },
-                          {
-                            title: ["Oversikt over ", <strong>tilbud</strong>],
-                            meta: '1. Fellesdel: Ledelse, styring og brukermedvirkning',
-                            url: '#a'
-                          },
-                        ]}
-                      />
+              <div className="b-profession-picker  b-profession-picker--negative-margin">
+                { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
+                }
+                <label for="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+                {
+                  toggle ? (
+                    <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
+                      <select id="profession-selector" class="b-select__select">
+                        <option disabled="" class="b-select__option">Velg målgruppe</option>
+                        <option class="b-select__option">Lege</option>
+                      </select>
                     </div>
-                    <div className="col-xs-12 l-mt-3">
-                      <ChapterHeading
-                        heading="Kapitler"
-                        h={'h3'}
-                        clean
-                      />
-                      <hr className="b-hr b-hr--blue" />
-                      <NavList
-                        noArrow
-                        list={[
-                          {
-                            title: '4.1 Veiing og måling',
-                            url: '#a'
-                          },
-                        ]}
-                      />
-                    </div>
-                  </>
-                ) : (
-                    <>
-                      <ChapterHeading
-                        heading="4. Helsestasjon 0–5 år"
-                        h="h1"
-                        line="none"
-                      />
-                      <ChapterHeading
-                        heading="4.1 Veiing og måling"
-                        url="#a"
-                      />
-                      <ChapterHeading
-                        heading="4.2 Hørsel, syn og språk"
-                        url="#a"
-                      />
-                      <Collapsible
-                        background
-                        heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
-                      >
-                      </Collapsible >
-                      <Collapsible
-                        background
-                        heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
-                      >
-                      </Collapsible >
-                      <Collapsible
-                        background
-                        heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
-                      >
-                      </Collapsible >
-                      <Collapsible
-                        background
-                        heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
-                      >
-                      </Collapsible >
-                    </>
-                  )
-              }
-
-
-
+                  ) : null
+                }
+              </div>
+            <ProductSearch
+              label="retningslinjen"
+              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
+            />
+            <ChapterHeading
+              heading="4. Særskilte regler i tilknytning til autorisasjon, krav om politattest m.v."
+              h="h1"
+              line="none"
+            />
+            <ChapterHeading
+              heading="4.1 Veiing og måling"
+              url="#a"
+            />
+            <ChapterHeading
+              heading="4.2 Hørsel, syn og språk"
+              url="#a"
+            />
+            <Collapsible
+              background
+              heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
+            >
+            </Collapsible >
+            
               <div className="l-mt-4">
                 <Link wideButton arrow color="purple">
                   Henvis pasienten til helsenorge.no for mer informasjon

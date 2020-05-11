@@ -2,17 +2,15 @@ import React, { useState } from 'react';
 import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
 import Button from '../components/Button';
-import Box from '../components/Box';
 import Link from '../components/Link';
 import PageMeta from '../components/PageMeta';
 import LongShortHeading from '../components/LongShortHeading';
 import SectionSidebar from '../components/SectionSidebar';
 import ProductSearch from '../components/ProductSearch';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Select from '../components/Select';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 
-const ProductPage = () => {
+const ProductPageMalgruppe = () => {
   const [toggle, setToggle] = useState(false);
   
   return (
@@ -74,13 +72,13 @@ const ProductPage = () => {
           <div className="l-article l-article--topline">
             <div className="b-profession-picker">
               { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
-              } 
-              <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+              }
+              <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Innhold tilpasset til: Lege (endre)</button></label>
               {
                 toggle ? (
                   <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
                     <select id="profession-selector" class="b-select__select">
-                      <option disabled="" class="b-select__option">Velg målgruppe</option>
+                      <option disabled="" class="b-select__option">Lege</option>
                       <option class="b-select__option">Lege</option>
                     </select>
                   </div>
@@ -333,6 +331,7 @@ const ProductPage = () => {
               </div>
             </div>
             
+            
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="5. Skolehelsetjenesten 5–20 år"
@@ -477,4 +476,4 @@ const ProductPage = () => {
   )
 };
 
-export default ProductPage;
+export default ProductPageMalgruppe;

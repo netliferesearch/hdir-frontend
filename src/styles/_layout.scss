@@ -20,10 +20,9 @@ body {
 
 .l-sidebar {
   width: 100%;
+  min-width: 350px;
   max-width: 350px;
-  @include mq($from: desktop) {
-    min-width: 350px;
-  }
+  border-right: 1px solid $grey-light;
 }
 
 .l-article {
@@ -35,7 +34,7 @@ body {
     padding: $space-sm $space-xs $space-sm $space-xl;
   }
   @include mq($from: wide) {
-    padding: $space-sm $space-xs $space-sm $space-xl;
+    padding: $space-md $space-xs $space-sm $space-xl;
   }
   
   &--topline {

@@ -46,7 +46,7 @@ const InputSearch = props => {
   
   /* We are using callback to make throtte work in this component function */
   const delayedSuggestionsFetchRequested = useCallback(debounce((value) => onSuggestionsFetchRequested(value), 200), []);
-
+  
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
@@ -68,7 +68,7 @@ const InputSearch = props => {
       {props.label && (
         <label
           id="search-input-label"
-          for={id}
+          htmlFor={id}
           className={classNames({
             'b-input-search__label': true,
             'b-input-search__label--dark': props.dark
@@ -108,12 +108,15 @@ const InputSearch = props => {
   );
 
   function triggerSearch() {
+    if (!props.showSuggestions && props.fnChange) {
+      return;
+    }
     const encodedValue = encodeURI(value);
     window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
   }
 
   function onChange(event, { newValue }) {
-    if (!props.showSuggestions) {
+    if (!props.showSuggestions && props.fnChange) {
       props.fnChange(newValue)
     }
     setValue(newValue);

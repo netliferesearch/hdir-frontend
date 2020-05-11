@@ -1,141 +1,105 @@
-import React from 'react';
-
-import SectionSidebar from '../components/SectionSidebar';
-import PageMeta from '../components/PageMeta';
-import Link from '../components/Link';
-import Button from '../components/Button';
-import ChapterHeading from '../components/ChapterHeading';
-import Box from '../components/Box';
-import LongShortHeading from '../components/LongShortHeading';
-import InputSearch from '../components/InputSearch';
-import Select from '../components/Select';
-import Breadcrumbs from '../components/Breadcrumbs';
+import React, { useState } from 'react';
 import NavList from '../components/NavList';
+import ChapterHeading from '../components/ChapterHeading';
+import Button from '../components/Button';
+import Link from '../components/Link';
+import PageMeta from '../components/PageMeta';
+import LongShortHeading from '../components/LongShortHeading';
+import SectionSidebar from '../components/SectionSidebar';
+import ProductSearch from '../components/ProductSearch';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { dummyFlatTree } from '../components/dummyFlatTree'
 
-const MemoChapterPage = () => (
-  <>
+const ProductPage = () => {
+  const [toggle, setToggle] = useState(false);
+
+  return (
     <div className="l-container">
       <Breadcrumbs
         paths={[
           {
             name: 'Forsiden',
             href: '#a'
-          },
+          }
         ]}
       />
       <main id="main">
-        <div className="l-mt-3">
+        <div className="l-mt-2">
           <LongShortHeading
-            long="Rundskriv"
+            long="Rundskriv for helsepersonelloven med kommentarer"
             short="Helsepersonelloven med kommentarer"
-            icon={'../icons/Rundskriv_Veileder_til_lov.svg'}
+            icon={'./icons/Rundskriv_Veileder_til_lov.svg'}
             url="#a"
-            linkText="Hva er rundskriv?"
+            linkText="Hva er rundskriv"
           />
         </div>
-        <div className="row l-mb-2 l-mt-2">
-          <div className="col-xs-12 col-md-8 l-mt-1">
-            <InputSearch
-              autoFocus={true}
-              label={'Søk i rundskrivet'}
-              showSuggestions={false}
-              fnChange={(value) => null}
-            />
-          </div>
-          <div className="col-xs-12 col-md-4 l-mt-1">
-            <Select label="Vis kun innhold for" placeholder="Velg" options={['Option 1', 'Option 2']} stacked custompos />
-          </div>
-        </div>
-        <div className="l-layout">
+        <div className="l-layout l-mt-2">
           <aside className="l-hide-to-lg l-sidebar l-bleed-right">
             <SectionSidebar
-              heading="Rundskriv"
-              icon="../icons/Rundskriv_Veileder_til_lov.svg"
               list={[
                 {
                   url: '#',
-                  description: '1. Lovens formål, virkeområde og definisjoner'
+                  description: '1. Lovens formål, virkeområder og definisjoner'
                 },
                 {
                   url: '#',
                   description: '2. Krav til helsepersonells yrkesutøvelse',
+                },
+                {
+                  url: '#',
+                  description: '3. Krav til organisering og virksomhet',
                   active: true,
-                },
-                {
-                  url: '#',
-                  description: '3. Krav til organisering og virksomhet'
-                },
-                {
-                  url: '#',
-                  description: '4. Særskilte regler i tilknytning til autorisasjon, krav om politiattest m.v.',
-                },
-                {
-                  url: '#',
-                  description: '5. Taushetsplikt og opplysningsrett'
-                },
-                {
-                  url: '#',
-                  description: '6. Opplysningsplikt m.v.'
-                },
-                {
-                  url: '#',
-                  description: '7. Meldeplikt'
-                },
-                {
-                  url: '#',
-                  description: '8. Dokumentasjonsplikt'
-                },
-                {
-                  url: '#',
-                  description: '9. Vilkår for autorisasjon, lisens og spesialistgodkjenning'
-                },
-                {
-                  url: '#',
-                  description: '10. Tildeling og bortfall av autorisasjon, lisens og spesialistgodkjenning'
-                },
-                {
-                  url: '#',
-                  description: '11. Reaksjoner mv. ved brudd på lovens bestemmelser'
-                },
-                {
-                  url: '#',
-                  description: '12. Statens helsepersonellnemnd og Apotekklagenemnda'
-                },
-                {
-                  url: '#',
-                  description: '13. Forskjellige bestemmelser'
-                },
-                {
-                  url: '#',
-                  description: '14. Om helsepersonelloven'
                 },
               ]}
             />
           </aside>
-          <article className="l-article l-article--topline">
+          <div className="l-article l-article--topline">
+            <div className="b-profession-picker">
+              { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
+              }
+              <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+              {
+                toggle ? (
+                  <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
+                    <select id="profession-selector" class="b-select__select">
+                      <option disabled="" class="b-select__option">Velg målgruppe</option>
+                      <option class="b-select__option">Lege</option>
+                    </select>
+                  </div>
+                ) : null
+              }
+            </div>
+            <ProductSearch
+              label="rundskrivet"
+              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
+              collapsed
+            />
+
             <div className="col-xs-12 l-mt-2">
               <ChapterHeading
                 heading="1. Lovens formål, virkeområde og definisjoner"
-                url="#a"
+                url="/kapittel"
                 clean
               />
               <hr className="b-hr b-hr--blue" />
               <div className="l-hide-to-md">
-                <div className="js-expand-list">
+                <div className="js-expand-list" data-start-limit="2">
                   <NavList
                     noArrow
                     list={[
                       {
                         title: '§ 1. Lovens formål',
-                        url: '#a'
+                        url: '#'
                       },
                       {
                         title: '§ 2. Lovens virkeområde',
-                        url: '#a'
+                        url: '#'
                       },
                       {
                         title: '§ 3. Definisjoner',
-                        url: '#a'
+                        url: '#'
                       },
                     ]}
                   />
@@ -143,7 +107,7 @@ const MemoChapterPage = () => (
               </div>
             </div>
 
-            <div className="col-xs-12 l-mt-2">
+            <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="2. Krav til helsepersonells yrkesutøvelse"
                 url="#a"
@@ -156,56 +120,77 @@ const MemoChapterPage = () => (
                     noArrow
                     list={[
                       {
-                        title: '§ 4. Forsvarlighet',
-                        url: '#a'
+                        title: '§ 1. Lovens formål',
+                        url: '#'
                       },
                       {
-                        title: '§ 5. Bruk av medhjelpere',
-                        url: '#a'
+                        title: '§ 2. Lovens virkeområde',
+                        url: '#'
                       },
                       {
-                        title: 'and so on',
-                        url: '#a'
+                        title: '§ 3. Definisjoner',
+                        url: '#'
                       },
                     ]}
                   />
                 </div>
               </div>
             </div>
-          </article>
+
+            <div className="col-xs-12 l-mt-3">
+              <ChapterHeading
+                heading="3. Krav til organisering og virksomhet"
+                url="#a"
+                clean
+              />
+              <hr className="b-hr b-hr--blue" />
+              <div className="l-hide-to-md">
+                <div className="js-expand-list">
+                  <NavList
+                    noArrow
+                    list={[
+                      {
+                        title: '§ 1. Lovens formål',
+                        url: '#'
+                      },
+                      {
+                        title: '§ 2. Lovens virkeområde',
+                        url: '#'
+                      },
+                      {
+                        title: '§ 3. Definisjoner',
+                        url: '#'
+                      },
+                    ]}
+                  />
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </main>
+      <div className="l-mt-4">
+        <PageMeta
+          publishDate="11. august 2008"
+          editDate="11. august 2018"
+          url="#a"
+        />
+      </div>
+      <div className="l-mt-2">
+        <Button clean small icon="../icons/print.svg">
+          Skriv ut hele retningslinjen
+        </Button>
 
-      <div className="row">
-        <div className="col-md-8 col-xs-12 col-md-offset-4">
-          <div className="l-mt-4">
-            <Button clean small icon="../icons/print.svg">
-              Skriv ut / lag PDF
-            </Button>
-            <br />
-            <PageMeta
-              publishDate="11. august 2008"
-              editDate="11. august 2018"
-            />
-          </div>
+        <div className="col-xs-12 l-mt-2 l-mb-5">
+          <Link href="#a" wideButton arrow color="purple">
+            For å lese om symptomer, kostholdsråd og andre tips ved
+            svangerskapsdiabetes, kan du gå til helsenorge.no.
+          </Link>
         </div>
       </div>
     </div>
+  )
+};
 
-    <div className="l-mt-5">
-      <Box color="grey" square noPadding>
-        <div className="l-container">
-          <strong>Kontakt:</strong>
-          <br />
-          <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-          <br />
-          <a href="#a">navn.etternavn@helsedir.no</a>
-          <br />
-          <a href="#a">999 99 999</a>
-        </div>
-      </Box>
-    </div>
-  </>
-);
-
-export default MemoChapterPage;
+export default ProductPage;

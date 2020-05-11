@@ -45,6 +45,7 @@ import ParentMemoPage from './pages/ParentMemoPage';
 import PressReleasePage from './pages/PressReleasePage';
 import PrintPdfPreview from './pages/PrintPdfPreview';
 import ProductPage from './pages/ProductPage';
+import ProductPageMalgruppe from './pages/ProductPageMalgruppe';
 import ProfessionSelector from './pages/ProfessionSelector';
 import RecommendationPage from './pages/RecommendationPage';
 import RecommendationPageAntibiotics from './pages/RecommendationPageAntibiotics';
@@ -97,6 +98,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={FrontPage} />
               <Route path="/produkt" component={ProductPage} />
+              <Route path="/produkt-malgruppevelger" component={ProductPageMalgruppe} />
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/artikkel" component={ArticlePage} />
               <Route path="/artikkel-ingen-h2" component={ArticlePageNoH2} />

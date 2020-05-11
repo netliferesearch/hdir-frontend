@@ -1,8 +1,6 @@
 .b-section-sidebar {
   position: sticky;
   top: $space-md;
-  border-right: 1px solid $grey-light;
-  height: 100%;
 
   &--bottom {
     > nav {
