@@ -78,7 +78,7 @@ const ProductPageMalgruppe = () => {
                 toggle ? (
                   <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
                     <select id="profession-selector" class="b-select__select">
-                      <option disabled="" class="b-select__option">Velg målgruppe</option>
+                      <option disabled="" class="b-select__option">Lege</option>
                       <option class="b-select__option">Lege</option>
                     </select>
                   </div>
