@@ -74,7 +74,7 @@ const ProductPage = () => {
             <div className="b-profession-picker">
               { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
               } 
-              <label for="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+              <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
               {
                 toggle ? (
                   <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">

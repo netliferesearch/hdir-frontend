@@ -12,6 +12,10 @@
 
   &--negative-margin {
     margin-bottom: - $space-lg;
+
+    @include mq($until: tablet) {
+    margin-bottom: $space-sm;
+  }
   }
   
   &__button {
