@@ -68,20 +68,14 @@ const ChapterPage = () => {
               />
             </aside>
             <div className="l-article">
-              <div className="b-profession-picker  b-profession-picker--negative-margin">
-                { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
-                }
-                <label for="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
-                {
-                  toggle ? (
-                    <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
-                      <select id="profession-selector" class="b-select__select">
-                        <option disabled="" class="b-select__option">Velg målgruppe</option>
-                        <option class="b-select__option">Lege</option>
-                      </select>
-                    </div>
-                  ) : null
-                }
+              <div className="b-profession-picker b-profession-picker--negative-margin">
+                <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => document.getElementById('profession-picker__content').classList.toggle('hide')} className="b-button--clean b-profession-picker__button" id="profession-picker">Tilpass innholdet til meg</button></label>
+                <div class="b-select l-mt-1 l-mb-3 col-md-6 hide" id="profession-picker__content">
+                  <select id="profession-selector" class="b-select__select">
+                    <option disabled="" class="b-select__option">Velg målgruppe</option>
+                    <option class="b-select__option">Lege</option>
+                  </select>
+                </div>
               </div>
             <ProductSearch
               label="retningslinjen"

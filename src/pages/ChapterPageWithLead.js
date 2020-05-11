@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import Collapsible from '../components/Collapsible';
-import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
-import Alert from '../components/Alert';
 import Box from '../components/Box';
-import Link from '../components/Link';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Link from '../components/Link';
 import ProductSearch from '../components/ProductSearch';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 
-const ChapterPage = () => {
+const ChapterPageWithLead = () => {
   const [toggle, setToggle] = useState(false);
-
+  
   return (
     <>
       <main id="main">
@@ -53,14 +51,6 @@ const ChapterPage = () => {
                     description:
                       '4. Helsestasjon 0–5 år',
                     active: true,
-                    children: [
-                      {
-                        description: '4.1 Veiing og måling',
-                        active: true,
-                        url: '#',
-                      }
-                    ],
-                    readMoreLabel: 'Se hele kapittel 4'
                   },
                   {
                     url: '#',
@@ -87,75 +77,53 @@ const ChapterPage = () => {
                   </select>
                 </div>
               </div>
-              <ProductSearch
-                label="retningslinjen"
-                productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
-                flatTree={dummyFlatTree}
-                malGruppe={''}
-              />
-              <ChapterHeading
-                heading="4.1 Veiing og måling"
-                h="h1"
-                line="none"
-              />
-              <Collapsible
-                background
-                heading="Hodeomkrets: Helsestasjonen bør måle hodeomkrets på barn 0-2 år"
-              >
-                <Collapsible
-                  heading="Sterk anbefaling"
-                  subtle
-                  size="small"
-                  smallContent
-                >
-                  <p>...Hva er en sterk anbefaling...</p>
-                </Collapsible>
-                <p>Alle barn bør få målt hodeomkrets regelmessig i løpet av første leveår, og på indikasjon frem til 2 års alder.</p>
-                <p>Måling av hodeomkrets bør gjennomføres ved de faste konsultasjonene på helsestasjonen, samtidig med måling av vekt og lengde ved:</p>
-                <ul>
-                  <li>7.–10. levedøgn (hjemmebesøk)</li>
-                  <li>6 ukers alder</li>
-                  <li>3 måneders alder</li>
-                  <li>5 måneders alder</li>
-                  <li>6 måneders alder</li>
-                  <li>10 måneders alder</li>
-                  <li>12 måneders alder</li>
-                </ul>
-                <p>Ved andre konsultasjoner bør måling av hodeomkrets gjøres på indikasjon eller etter foreldrenes ønske, se anbefalingen Helsestasjonsprogrammet. </p>
-                <p>Ved vurdering av hodeomkrets anbefales det å benytte nasjonal <a href="#test">vekstkurve fra Vekststudien i Bergen.</a></p>
-                <Collapsible
-                  h="h3"
-                  heading="Praktisk"
-                  size="small"
-                >
-                </Collapsible>
-                <Collapsible
-                  h="h3"
-                  heading="Begrunnelse"
-                  size="small"
-                >
-                </Collapsible>
-              </Collapsible>
-
-              <Collapsible
-                background
-                heading="Veiing og måling: Helsestasjon bør måle vekt og lengde/høyde på barn 0-5 år"
-              >
-                Innhold
-        </Collapsible >
-
-              <ChapterHeading
-                heading="1.1 Underkapittel"
-                url="#a"
-              />
-              <ChapterHeading
-                heading="1.2 Underkapittel"
-                url="#a"
-              />
+            <ProductSearch
+              label="retningslinjen"
+              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
+            />
+            <ChapterHeading
+              heading="4. Særskilte regler i tilknytning til autorisasjon, krav om politattest m.v."
+              h="h1"
+              line="none"
+            />
+            <div className="b-lead">
+              <p>Hjerneslag er både en akuttmedisinsk tilstand og kronisk tilstand og derfor trengs en bred tilnærming og en helhetlig behandlingskjede for å ivareta de behov slagrammede trenger i de ulike faser i behandlingsforløpet. I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+            </div>
+            <ChapterHeading
+              heading="4.1 Veiing og måling"
+              url="#a"
+            />
+            <ChapterHeading
+              heading="4.2 Hørsel, syn og språk"
+              url="#a"
+            />
+            <Collapsible
+              background
+              heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
+            >
+            </Collapsible >
+            <Collapsible
+              background
+              heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
+            >
+            </Collapsible >
+            
               <div className="l-mt-4">
                 <Link wideButton arrow color="purple">
                   Henvis pasienten til helsenorge.no for mer informasjon
-            </Link>
+                </Link>
               </div>
               <div className="l-mt-2">
                 <PageMeta
@@ -183,6 +151,7 @@ const ChapterPage = () => {
       </div>
     </>
   )
+
 };
 
-export default ChapterPage;
+export default ChapterPageWithLead;
