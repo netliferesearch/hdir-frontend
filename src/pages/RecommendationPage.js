@@ -10,7 +10,7 @@ const RecommendationPage = () => (
       <main id="main">
       <Collapsible
         background
-        collapsed
+        id="test"
         heading="Sekundær peritonitt"
       >
         <Collapsible
@@ -27,6 +27,7 @@ const RecommendationPage = () => (
           heading="Behandling"
           size="small"
           collapsed
+          id="behandling"
         >
         <h4>Standard behandlingregime</h4>
         <p>Vanlig behandlingsvarighet: 5 dager</p>
@@ -37,6 +38,7 @@ const RecommendationPage = () => (
             h="h5"
             heading="Spesielle hensyn"
             size="tiny"
+            id="behandling-spesielle"
           >
             <Box
             color="grey" square tinyPadding>
@@ -65,6 +67,7 @@ const RecommendationPage = () => (
           <Collapsible
             h="h5"
             heading="Doseringer for spesielle hensyn"
+            id="behandling-doseringer"
             size="tiny"
           >
           <p>
@@ -95,8 +98,17 @@ const RecommendationPage = () => (
             h="h5"
             heading="Behandling ved redusert leverfunksjon"
             size="small"
+            id="test4"
           >
             <p>tekst</p>
+             <Collapsible
+                h="h5"
+                heading="Test5"
+                size="small"
+                id="test5"
+              >
+                <p>tekst</p>
+              </Collapsible>
           </Collapsible>
           <Collapsible
             h="h5"
@@ -117,6 +129,7 @@ const RecommendationPage = () => (
           h="h3"
           heading="Praktisk - Slik kan anbefalingen følges"
           size="small"
+          id="praktisk"
         >
         </Collapsible>
         <Collapsible
@@ -126,7 +139,22 @@ const RecommendationPage = () => (
         >
         </Collapsible>
       </Collapsible>
-      </main>
+      <Collapsible
+        background
+        id="test2"
+        heading="Sekundær peritonitt"
+      >
+        <Collapsible
+          heading="Sterk anbefaling"
+          subtle
+          size="small"
+          smallContent
+        >
+          <p>...Hva er en sterk anbefaling...</p>
+        </Collapsible>
+        <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
+      </Collapsible>
+    </main>
       <div className="row">
         <div className="col-xs-12 col-md-9">
           <div className="l-mt-3 t-sm-right">

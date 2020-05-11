@@ -66,6 +66,7 @@ const contentClasses = smallContent =>
 const Collapsible = props => {
   const [collapsed, setCollapsed] = useState(false);
   const parentElement = useRef(null);
+  const id = props.id || uuidv4();
 
   useEffect(() => {
     if (
@@ -78,14 +79,20 @@ const Collapsible = props => {
   useEffect(() => {
     if (collapsed && !props.collapsed) {
       zenscroll.intoView(parentElement.current, 300);
+      const newHash = `#${id}`;
+
+
+      // When collapsed, add hash to url
+      window.history.replaceState(null, null, newHash);
+      return;
     }
+    // Clean hash
+    // window.history.replaceState(null, null, window.location.pathname);
   }, [collapsed, props.collapsed]);
 
   useEffect(() => {
     setCollapsed(props.collapsed);
   }, [props.collapsed]);
-  
-  const id = props.id || uuidv4();
   
   const headingSelector = () => {
     if (props.h) {
@@ -187,7 +194,7 @@ Collapsible.propTypes = {
   subheading: PropTypes.string,
   subheadingContent: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   date: PropTypes.string,
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'tiny']),
   h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,
   subtle: PropTypes.bool,

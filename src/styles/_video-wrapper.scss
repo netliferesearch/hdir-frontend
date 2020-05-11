@@ -9,7 +9,11 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	border: 0;
 	height: 100%;
+}
+.t-body-text .videoWrapper iframe {
+	height: auto;
 }
 .videoWrapper__close {
 	position: fixed;
@@ -32,5 +36,8 @@
 	z-index: 998;
 	.videoWrapper__close {
 		display: inline-block;
+	}
+	iframe {
+		height: 100vh !important;
 	}
 }
