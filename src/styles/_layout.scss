@@ -14,6 +14,34 @@ body {
   }
 }
 
+.l-layout {
+  display: flex;
+}
+
+.l-sidebar {
+  width: 100%;
+  min-width: 350px;
+  max-width: 350px;
+  border-right: 1px solid $grey-light;
+}
+
+.l-article {
+  flex-grow: 1;
+  @include mq($until: desktop) {
+    padding: $space-sm 0 $space-sm 0;
+  }
+  @include mq($from: desktop) {
+    padding: $space-sm $space-xs $space-sm $space-xl;
+  }
+  @include mq($from: wide) {
+    padding: $space-md $space-xs $space-sm $space-xl;
+  }
+  
+  &--topline {
+    border-top: 1px solid $grey-light;
+  }
+}
+
 .l-flex {
   @include mq($from: tablet) {
     display: flex;

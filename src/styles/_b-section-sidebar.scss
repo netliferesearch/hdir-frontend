@@ -1,6 +1,6 @@
 .b-section-sidebar {
   position: sticky;
-  top: 2rem;
+  top: $space-md;
 
   &--bottom {
     > nav {
@@ -14,26 +14,33 @@
 
     &::-webkit-scrollbar {
       -webkit-appearance: none;
-      width: 7px;
+      width: 10px;
+      border-radius: 4px;
     }
     &::-webkit-scrollbar-thumb {
       background-color: rgba(0, 0, 0, 0.5);
       -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+      border-radius: 4px;
     }
   }
 
   &__heading {
     display: flex;
-    padding-bottom: 0.75em;
-    font-weight: bold;
+    align-items: center;
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+    padding-left: $space-xs;
+    @include underline($grey-light);
+    font-size: $font-xs;
 
     a {
       @include underline(transparent);
     }
 
     &--thick {
-      padding-bottom: 0.5em;
-      border-bottom: 4px solid $black;
+      padding-top: 0;
+      padding-bottom: $space-sm;
+      border-top: 0;
     }
   }
   &__icon {
@@ -44,39 +51,71 @@
   }
   &__link {
     display: block;
-    padding: 0.75em 0.5em;
-    border-top: 1px solid $link-color;
-    color: $link-color !important;
-    @include underline(transparent);
+    padding: $space-xs 0 $space-xxs 0;
+    font-size: $font-xs;
+    @include underline($grey-light);
+    border-top: 1px solid $grey-light;
 
-    &:first-child {
-      border-top: 0;
-    }
-
-    &:last-child {
-      border-bottom: 1px solid $link-color;
-    }
-
-    &:hover {
-      background-color: $grey-lighter;
+    &:hover:not(.b-section-sidebar__link--children) {
       color: $black !important;
+      background-color: $primary-color-lightest;
+      border-top: 1px solid $primary-color-light;
+     
+     &+.b-section-sidebar__link {
+       border-top: 1px solid $primary-color-light;
+     }
+    }
+    
+    &:last-child:hover {
+      border-bottom: 1px solid $primary-color-light;
     }
 
-    &--small {
-      border: 0;
-    }
     &--active {
       color: $black !important;
-
-      &:hover {
-        background-color: transparent;
+      background-color: $primary-color-lightest;
+      border-top: 1px solid $primary-color-light;
+      font-weight: 600;
+      display: block;
+      &+.b-section-sidebar__link {
+        border-top: 1px solid $primary-color-light;
       }
+    }
+  }
+  &__sub-link {
+    display: block;
+    padding: $space-xs $space-sm $space-xs;
+    font-weight: 300;
+    border: 0;
+    background-image: url($arrow-right);
+    background-size: .8em;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-left: $space-md;
+    transition: margin .1s ease-out;
+    box-shadow: none;
+    
+    &--active {
+      background: $primary-color-lighter;
+      font-weight: 600;
+      padding-left: $space-md;
+      margin-left: 0;
+    }
+
+    &:last-child:hover {
+      margin-left: $space-md*1.2;
     }
   }
   &__title {
   }
   &__meta {
     display: flex;
+    padding-bottom: $space-xxs;
+    padding-left: $space-xs;
+    padding-right: $space-sm;
+  }
+  &__meta-prefix {
+    padding-right: $space-xs;
+    color: $primary-color;
   }
   &__description {
   }

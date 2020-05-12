@@ -27,7 +27,7 @@ const ReportListPage = () => (
         <div className="col-xs-12 col-sm-6 l-mt-1">
           <Card
             heading="Ventetider og pasientrettigheter 2017"
-            text="17. mars 2018"
+            text="17. mars 2018 "
             url="#a"
             arrow="right"
           >
