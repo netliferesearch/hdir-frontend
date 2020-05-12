@@ -27,10 +27,10 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
   const [loading, setLoading] = useState(false);
   const [toggleMoreRecommendations, setToggleMoreRecommendations] = useState(false);
   const [toggleMoreChapters, setToggleMoreChapters] = useState(false);
-  const [searchResults, setSearchResults] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
-  const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/realtimesearch';
-  
+  const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
+
   if (collapsed && !toggled) {
     setToggled(true);
   }
@@ -47,6 +47,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
     })
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         setSearchResults(data);
         console.log(data);
         setToggleMoreRecommendations(false);
