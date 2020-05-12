@@ -30,41 +30,6 @@ const ReportListPage = () => (
           </div>
         </div>
       <div className="l-layout l-mt-1">
-        {/* <div className="row l-mt-2">
-          <div className="col-xs-12">
-            <span>NYESTE RAPPORTER</span>
-          </div>
-          <div className="col-xs-12 col-sm-6 l-mt-1">
-            <Card
-              heading="Ventetider og pasientrettigheter 2017"
-              text="17. mars 2018 "
-              url="#a"
-              arrow="right"
-            >
-              <Box square color="blueDark">
-                <div className="h1 t-sm-center">-3</div>
-                <div className="t-sm-center">
-                  Ventetiden gikk ned med tre dager fra 2016 til 2017.
-                </div>
-              </Box>
-            </Card>
-          </div>
-          <div className="col-xs-12 col-sm-6 l-mt-1">
-            <Card
-              heading="Ventetider og pasientrettigheter 2017"
-              text="21. januar 2018"
-              url="#a"
-              arrow="right"
-            >
-              <Box square color="blueDark">
-                <div className="h3">
-                  Gjennomsnittlig ventetid i 2017 er på 58 dager for somatisk
-                  sektor.
-                </div>
-              </Box>
-            </Card>
-          </div>
-        </div> */}
         <aside className="l-hide-to-lg l-sidebar l-bleed-right">
           <hr className="b-hr b-hr--thick" />
           <div className="l-mt-2">
