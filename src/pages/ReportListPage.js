@@ -78,7 +78,8 @@ const ReportListPage = () => (
                 },
                 {
                   value: 'Akuttmedisin',
-                  label: 'Akuttmedisin'
+                  label: 'Akuttmedisin',
+                  checked: true
                 },
                 {
                   value: 'antibiotika',
@@ -123,6 +124,8 @@ const ReportListPage = () => (
             />
           </div>
           <div className="js-expand-list" data-start-limit="10">
+            <h2 className=" l-mb-1 l-mt-1">10 rapporter innen «akuttmedisin»</h2>
+            <hr className="b-hr b-hr--thick" />
             <List
               list={[
                 {
