@@ -63,6 +63,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
       }
       if (value.length === 0) {
         setSearchResults('');
+        setSearchString('');
       }
     },
     [doSearch],
@@ -143,7 +144,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         </div>
       </div>
     )}
-      {toggled && modifiedResult().total > 0 && (
+      {toggled && searchString.length > 0 && modifiedResult().total > 0 && (
         <div className="l-mb-4">
             {
               searchString && modifiedResult().total > 0 ? (
