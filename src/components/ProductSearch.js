@@ -29,7 +29,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
   const [toggleMoreChapters, setToggleMoreChapters] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
-  const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/realtimesearch';
+  const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
 
   if (collapsed && !toggled) {
     setToggled(true);
