@@ -29,7 +29,7 @@ const ReportListPage = () => (
             />
           </div>
         </div>
-      <div className="l-layout l-mt-2">
+      <div className="l-layout l-mt-1">
         {/* <div className="row l-mt-2">
           <div className="col-xs-12">
             <span>NYESTE RAPPORTER</span>
