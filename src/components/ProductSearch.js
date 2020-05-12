@@ -25,10 +25,10 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
   const [toggled, setToggled] = useState(false);
   const [toggleMoreRecommendations, setToggleMoreRecommendations] = useState(false);
   const [toggleMoreChapters, setToggleMoreChapters] = useState(false);
-  const [searchResults, setSearchResults] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
   const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/realtimesearch';
-  
+
   if (collapsed && !toggled) {
     setToggled(true);
   }
@@ -44,6 +44,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
     })
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         setSearchResults(data);
         setToggleMoreRecommendations(false);
         setToggleMoreChapters(false);
@@ -62,7 +63,10 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         doSearch(formData);
       }
       if (value.length === 0) {
-        setSearchResults('');
+        setSearchString('');
+        setSearchResults([]);
+        modifiedResult({total: 0});
+        console.log(modifiedResult());
       }
     },
     [doSearch],
@@ -143,7 +147,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         </div>
       </div>
     )}
-      {toggled && modifiedResult().total > 0 && (
+      {toggled && searchString && modifiedResult().total > 0 && (
         <div className="l-mb-4">
             {
               searchString && modifiedResult().total > 0 ? (
