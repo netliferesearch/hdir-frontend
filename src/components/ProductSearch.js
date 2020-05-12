@@ -63,10 +63,15 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         doSearch(formData);
       }
       if (value.length === 0) {
+<<<<<<< HEAD
         setSearchString('');
         setSearchResults([]);
         modifiedResult({total: 0});
         console.log(modifiedResult());
+=======
+        setSearchResults('');
+        setSearchString('');
+>>>>>>> 0c0655d8bf222baaa0486ae01283f6e89d76e55c
       }
     },
     [doSearch],
@@ -147,7 +152,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         </div>
       </div>
     )}
-      {toggled && searchString && modifiedResult().total > 0 && (
+      {toggled && searchString.length > 0 && modifiedResult().total > 0 && (
         <div className="l-mb-4">
             {
               searchString && modifiedResult().total > 0 ? (
