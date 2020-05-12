@@ -1,10 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { debounce } from 'lodash';
 import InputSearch from './InputSearch'
 import ChapterHeading from './ChapterHeading'
 import NavList from './NavList'
+import Loading from './Loading'
 import Button from './Button'
 
 
@@ -23,6 +24,7 @@ const contentClasses = (toggled) =>
 
 const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => {
   const [toggled, setToggled] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [toggleMoreRecommendations, setToggleMoreRecommendations] = useState(false);
   const [toggleMoreChapters, setToggleMoreChapters] = useState(false);
   const [searchResults, setSearchResults] = useState('');
@@ -37,7 +39,8 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
     setToggled(!toggled);
   }
 
-  const doSearch = debounce((formData) =>
+  // const doSearch = (formData) =>
+  const fetchResults = (formData) => 
     fetch(`${liveSearchUrl}`, {
       method: 'POST',
       body: formData
@@ -45,21 +48,26 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
       .then(res => res.json())
       .then(data => {
         setSearchResults(data);
+        console.log(data);
         setToggleMoreRecommendations(false);
         setToggleMoreChapters(false);
-      })
-    , 300)
+        setLoading(false);
+      });
 
+  const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
+  
   const debouncedChange = useCallback(
     (value) => {
       if (value.length > 2) {
         setSearchString(value);
+        setLoading(true);
         let formData = new FormData();
         formData.append('contentId', productId);
         formData.append('searchQuery', value);
         formData.append('malgruppe', malgruppe);
         formData.append('flatTree', flatTree);
         doSearch(formData);
+        console.log(value)
       }
       if (value.length === 0) {
         setSearchResults('');
@@ -144,6 +152,24 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         </div>
       </div>
     )}
+      
+      { loading ? (
+        <div>
+          <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50">
+            <path fill="#0667c6" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+              <animateTransform
+                attributeType="xml"
+                attributeName="transform"
+                type="rotate"
+                from="0 25 25"
+                to="360 25 25"
+                dur="0.8s"
+                repeatCount="indefinite" />
+            </path>
+          </svg>
+        </div>
+      ) : null}
+
       {toggled && searchString.length > 0 && modifiedResult().total > 0 && (
         <div className="l-mb-4">
             {
