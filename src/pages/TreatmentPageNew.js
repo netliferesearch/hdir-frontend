@@ -5,6 +5,7 @@ import ChapterHeading from '../components/ChapterHeading';
 import IconWithText from '../components/IconWithText';
 import NavList from '../components/NavList';
 import SectionSidebar from '../components/SectionSidebar';
+import FilterList from '../components/FilterList';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Link from '../components/Link';
@@ -67,6 +68,12 @@ const TreatmentPageNew = () => {
               flatTree={dummyFlatTree}
               malGruppe={''}
             />
+              <div className="col-xs-12 col-md-7 col-lg-8 b-flex b-flex--center l-mb-2">
+                <div className="t--small u-right-sm">Vis forløpet som:</div>
+                <div className="">
+                  <FilterList list={['Tekst', 'Flytdiagram']} />
+                </div>
+              </div>
               <Collapsible
                 heading="Inngang til pakkeforløpet"
                 smallContent
