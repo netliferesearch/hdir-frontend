@@ -68,6 +68,11 @@ const TreatmentPageNew = () => {
               flatTree={dummyFlatTree}
               malGruppe={''}
             />
+              <ChapterHeading
+                heading="Pakkeforløp for psykoseutvikling"
+                h="h1"
+                line="none"
+              />
               <div className="col-xs-12 col-md-7 col-lg-8 b-flex b-flex--center l-mb-2">
                 <div className="t--small u-right-sm">Vis forløpet som:</div>
                 <div className="">
