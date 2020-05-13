@@ -101,16 +101,8 @@
       }
     }
     >.b-collapsible__meta-content-mobile {
-      font-size: $font-xs;
-      width: 90%;
-      padding-left: $space-lg;
-      .b-icon-with-text {
-        text-transform: uppercase;
-        padding: 0;
-        border: 0;
-      }
-      @include mq($from: wide) {
-        display: none;
+      @include mq($until: wide) {
+        display: block;
       }
     }
     >.b-collapsible__footer {
@@ -147,6 +139,18 @@
       display: block;
     }
   }
+
+  &__meta-content-mobile {
+      font-size: $font-xs;
+      width: 90%;
+      padding-left: $space-lg;
+      .b-icon-with-text {
+        text-transform: uppercase;
+        padding: 0;
+        border: 0;
+      }
+      display: none;
+    }
 
   &__code {
     font-weight: normal;
