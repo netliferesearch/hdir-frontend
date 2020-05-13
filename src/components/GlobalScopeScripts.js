@@ -4,16 +4,16 @@
 // Import dependencies
 import { Component } from 'react';
 // Import utilities
-import scrollToTitleFromUrlHash from './../utils/scrollToTitleFromUrlHashUtil';
+// import scrollToTitleFromUrlHash from './../utils/scrollToTitleFromUrlHashUtil';
 
 class GlobalScopeScripts extends Component {
   componentDidMount(){
     // Initiate logic for scrolling to header/section based on hash in url
-    scrollToTitleFromUrlHash();
+    // scrollToTitleFromUrlHash();
   }
   componentDidUpdate(){
     // Initiate logic for scrolling to header/section based on hash in url
-    scrollToTitleFromUrlHash();
+    // scrollToTitleFromUrlHash();
   }
   render() {
     return null
