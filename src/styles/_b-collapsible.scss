@@ -67,6 +67,9 @@
     padding: 0;
     position: relative;
 
+    .b-collapsible {
+      margin-left: $space-sm;
+    }
     >.b-collapsible__button {
       margin-top: $space-sm;
       margin-bottom: $space-sm;
