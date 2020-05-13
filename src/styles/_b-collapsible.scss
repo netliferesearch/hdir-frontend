@@ -62,6 +62,67 @@
   &--no-border {
     border: 0;
   }
+
+  &--columns.b-collapsible--background.b-collapsible--active {
+    padding: 0;
+    position: relative;
+
+    >.b-collapsible__button {
+      margin-top: $space-sm;
+      margin-bottom: $space-sm;
+      margin-left: $space-xl;
+      padding-right: $space-sm;
+      @include mq($from: wide) {
+        width: 62%;
+      }
+    }
+    >.b-collapsible__content {
+      padding-left: $space-xl;
+      @include mq($from: wide) {
+        width: 62%;
+      }
+    }
+    >.b-collapsible__meta-content {
+      width: 30%;
+      font-size: $font-xs;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      border-left: 1px solid $grey-light;
+      box-sizing: border-box;
+
+      .b-icon-with-text {
+        text-transform: uppercase;
+        margin-bottom: $space-sm;
+      }
+    }
+    >.b-collapsible__meta-content-mobile {
+      font-size: $font-xs;
+      width: 90%;
+      padding-left: $space-lg;
+      .b-icon-with-text {
+        text-transform: uppercase;
+        padding: 0;
+        border: 0;
+      }
+      @include mq($from: wide) {
+        display: none;
+      }
+    }
+    >.b-collapsible__footer {
+      margin-left: $space-xl;
+      padding-bottom: $space;
+      width: 100%;
+      justify-content: flex-start;
+      button {
+        margin-right: $space;
+      }
+      .b-button--primary {
+        display: none;
+      }
+    }
+  }
   
   &--active.b-collapsible--background {
     background: white;
@@ -70,6 +131,18 @@
     margin-bottom: $space;
     padding-left: $space-xl*.88;
     padding-right: $space;
+  }
+
+  &__meta-content {
+    background: $grey-lighter;
+    display: none;
+    padding: $space;
+  }
+
+  &--active .b-collapsible__meta-content {
+    @include mq($from: wide) {
+      display: block;
+    }
   }
 
   &__code {
@@ -271,7 +344,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: $space;
   }
   &__meta-date {
     font-size: $meta-text;
