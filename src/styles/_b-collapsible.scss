@@ -68,6 +68,9 @@
     position: relative;
 
     .b-collapsible {
+      @include mq($until: wide) {
+        margin-left: 0;
+      }
       margin-left: $space-sm;
     }
     >.b-collapsible__button {
