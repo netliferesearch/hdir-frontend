@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { debounce } from 'lodash';
@@ -31,9 +31,11 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
   const [searchString, setSearchString] = useState('');
   const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
 
-  if (collapsed && !toggled) {
-    setToggled(true);
-  }
+  useEffect(() => {
+    if (collapsed === true && toggled === false) {
+      setToggled(true);
+    }
+  }, []);
 
   function toggle() {
     setToggled(!toggled);
@@ -118,7 +120,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
 
   return (
     <>
-    { collapsed ? (
+    { collapsed === true ? (
       <div className={mainClasses(collapsed)}>
         <div className={contentClasses(true)}>
           <InputSearch
@@ -136,9 +138,9 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         <Button
           onClick={toggle}
           clean
-          icon={!toggled ? '../icons/search.svg' : '../icons/close.svg'}>
+          icon={!toggled === true ? '../icons/search.svg' : '../icons/close.svg'}>
           {
-            toggled ? 'Skjul søk' : `Søk i ${label}`
+            toggled === true ? 'Skjul søk' : `Søk i ${label}`
           }
         </Button>
         <div className={contentClasses(toggled)}>
@@ -154,7 +156,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
       </div>
     )}
       
-      { loading ? (
+      {loading === true ? (
         <div>
           <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50">
             <path fill="#0667c6" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
@@ -171,10 +173,10 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         </div>
       ) : null}
 
-      {toggled && searchString.length > 0 && modifiedResult().total > 0 && (
+      {toggled === true && searchString.length > 0 && modifiedResult().total > 0 && (
         <div className="l-mb-4">
             {
-              searchString && modifiedResult().total > 0 ? (
+              searchString === true && modifiedResult().total > 0 ? (
               <h2 className="b-product-search__title">
                 {modifiedResult().total} treff på «{searchString}» i {label}
               </h2>
@@ -202,7 +204,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
                   }
                   
                   {
-                    toggleMoreRecommendations ? (
+                    toggleMoreRecommendations === true ? (
                     <NavList
                       noArrow
                       list={recommendationsRest}
@@ -233,7 +235,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
                     ) : null
                   }
                   {
-                    toggleMoreChapters ? (
+                    toggleMoreChapters === true ? (
                       <NavList
                         noArrow
                         list={chaptersRest}
