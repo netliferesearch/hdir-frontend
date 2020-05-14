@@ -58,9 +58,12 @@ const ChapterPage = () => {
                         description: '4.1 Veiing og måling',
                         active: true,
                         url: '#',
+                      },
+                      {
+                        description: 'Se hele kapittel 4',
+                        url: '#',
                       }
                     ],
-                    readMoreLabel: 'Se hele kapittel 4'
                   },
                   {
                     url: '#',
