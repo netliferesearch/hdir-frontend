@@ -70,7 +70,6 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         formData.append('malgruppe', malgruppe);
         formData.append('flatTree', flatTree);
         doSearch(formData);
-        console.log(value)
       }
       if (value.length === 0) {
         setSearchResults('');
