@@ -35,7 +35,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
     if (collapsed === true && toggled === false) {
       setToggled(true);
     }
-  }, []);
+  }, [collapsed]);
 
   function toggle() {
     setToggled(!toggled);
@@ -51,7 +51,6 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
       .then(data => {
         console.log(data)
         setSearchResults(data);
-        console.log(data);
         setToggleMoreRecommendations(false);
         setToggleMoreChapters(false);
         setLoading(false);
@@ -119,7 +118,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
 
   return (
     <>
-    { collapsed === true ? (
+    { collapsed ? (
       <div className={mainClasses(collapsed)}>
         <div className={contentClasses(true)}>
           <InputSearch
@@ -137,10 +136,10 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         <Button
           onClick={toggle}
           clean
-          icon={toggled === false ? `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjEgKDcyNjMxKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5zZWFyY2g8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJzZWFyY2giIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMDAwMDAwLCAxLjAwMDAwMCkiIHN0cm9rZT0iIzAyNTE2OSI+CiAgICAgICAgICAgIDxnIGlkPSJJbnRlcmZhY2UtRXNzZW50aWFsX194MkZfX1NlYXJjaF9feDJGX19zZWFyY2giIHN0cm9rZS13aWR0aD0iMS4wNDM0Ij4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cF8zNzIiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJzZWFyY2giPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOC4zLDE2LjcgQzEyLjksMTYuNyAxNi42LDEzIDE2LjYsOC40IEMxNi42LDMuOCAxMywwIDguMywwIEMzLjcsMCAwLDMuNyAwLDguMyBDMCwxMi45IDMuNywxNi43IDguMywxNi43IFoiIGlkPSJPdmFsXzI4OCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQuMiwxNC4zIEwyNCwyNCIgaWQ9IlNoYXBlXzE4NzIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTguNSwzIEM1LjUsMyAzLDUuNSAzLDguNSIgaWQ9Ik92YWxfMjg4XzJfIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=` 
+          icon={!toggled ? `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjEgKDcyNjMxKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5zZWFyY2g8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJzZWFyY2giIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMDAwMDAwLCAxLjAwMDAwMCkiIHN0cm9rZT0iIzAyNTE2OSI+CiAgICAgICAgICAgIDxnIGlkPSJJbnRlcmZhY2UtRXNzZW50aWFsX194MkZfX1NlYXJjaF9feDJGX19zZWFyY2giIHN0cm9rZS13aWR0aD0iMS4wNDM0Ij4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cF8zNzIiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJzZWFyY2giPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOC4zLDE2LjcgQzEyLjksMTYuNyAxNi42LDEzIDE2LjYsOC40IEMxNi42LDMuOCAxMywwIDguMywwIEMzLjcsMCAwLDMuNyAwLDguMyBDMCwxMi45IDMuNywxNi43IDguMywxNi43IFoiIGlkPSJPdmFsXzI4OCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQuMiwxNC4zIEwyNCwyNCIgaWQ9IlNoYXBlXzE4NzIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTguNSwzIEM1LjUsMyAzLDUuNSAzLDguNSIgaWQ9Ik92YWxfMjg4XzJfIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=` 
           : `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHBhdGggZD0iTTM3LjMwNCAxMS4yODJsMS40MTQgMS40MTQtMjYuMDIyIDI2LjAyLTEuNDE0LTEuNDEzeiIgZmlsbD0iMDY2N0M2IiAvPjxwYXRoIGQ9Ik0xMi42OTYgMTEuMjgybDI2LjAyMiAyNi4wMi0xLjQxNCAxLjQxNS0yNi4wMjItMjYuMDJ6IiBmaWxsPSIwNjY3QzYiIC8+PC9zdmc+`}>
           {
-            toggled === true ? 'Skjul søk' : `Søk i ${label}`
+            toggled ? 'Skjul søk' : `Søk i ${label}`
           }
         </Button>
         <div className={contentClasses(toggled)}>
@@ -156,7 +155,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
       </div>
     )}
       
-      {loading === true ? (
+      {loading ? (
         <div>
           <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50">
             <path fill="#0667c6" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
@@ -173,10 +172,10 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
         </div>
       ) : null}
 
-      {toggled === true && searchString.length > 0 && modifiedResult().total > 0 && (
+      {toggled && searchString.length > 0 && modifiedResult().total > 0 && (
         <div className="l-mb-4">
             {
-              searchString === true && modifiedResult().total > 0 ? (
+              searchString && modifiedResult().total > 0 ? (
               <h2 className="b-product-search__title">
                 {modifiedResult().total} treff på «{searchString}» i {label}
               </h2>
@@ -204,7 +203,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
                   }
                   
                   {
-                    toggleMoreRecommendations === true ? (
+                    toggleMoreRecommendations ? (
                     <NavList
                       noArrow
                       list={recommendationsRest}
