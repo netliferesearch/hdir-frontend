@@ -101,7 +101,7 @@ const TreatmentPageNew = () => {
               </div>
               <Collapsible
                 heading="1. Henvisning og start"
-                id="1-henvisning-og-start"
+                id="nr1-henvisning-og-start"
                 smallContent
                 background
                 metaContent={
@@ -161,9 +161,22 @@ const TreatmentPageNew = () => {
 
               <Collapsible
                 heading="2. Kartlegging og utredning"
-                id="2-kartlegging"
+                id="nr2-kartlegging"
                 background
                 smallContent
+                metaContent={
+                  <>
+                    <IconWithText
+                      text="Forløpstid"
+                      icon="../icons/clock.svg"
+                      size="small"
+                    />
+                    <p>
+                      7 kalenderdager fra henvisning mottatt til første fremmøte
+                      utredende avdeling
+                    </p>
+                  </>
+                }
               >
                 <p>abc abc.</p>
               </Collapsible>

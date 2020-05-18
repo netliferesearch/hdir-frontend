@@ -29,6 +29,9 @@
 
   &--medium {
     border-width: 1px;
+    .b-collapsible__content {
+      padding-left: 0 !important;
+    }
   }
   &--small {
     border-width: 1px;
