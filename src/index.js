@@ -136,9 +136,10 @@ if (searchElement) {
 if (productSearchElement) {
   const label = productSearchElement.getAttribute('data-label') || '';
   const productId = productSearchElement.getAttribute('data-content-id') || '';
-  const collapsed = productSearchElement.getAttribute('data-collapsed') || '';
+  const collapsed = Boolean(productSearchElement.getAttribute('data-collapsed') === "true" || false);
   const malgruppe = productSearchElement.getAttribute('data-malgruppe') || '';
   const flatTree = productSearchElement.getAttribute('data-flatTree') || '';
+  const endpoint = productSearchElement.getAttribute('data-endpoint') || '';
 
   render(
     <ProductSearch
@@ -147,6 +148,7 @@ if (productSearchElement) {
       collapsed={collapsed}
       malgruppe={malgruppe}
       flatTree={flatTree}
+      endpoint={endpoint}
     />,
     productSearchElement
   );
