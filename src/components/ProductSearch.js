@@ -29,7 +29,9 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe }) => 
   const [toggleMoreChapters, setToggleMoreChapters] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
-  const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
+  const liveSearchUrl = process.env.REACT_APP_ENONICXP_REALTIMESEARCH
+    ? process.env.REACT_APP_ENONICXP_REALTIMESEARCH
+    : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
 
   if (collapsed && !toggled) {
     setToggled(true);
