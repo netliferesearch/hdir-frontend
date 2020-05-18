@@ -37,17 +37,37 @@ const TreatmentPageNew = () => {
                 icon="../icons/Pakkeforløp.svg"
                 list={[
                   {
-                    url: '#',
-                    description: '1. Lungekreft',
+                    url: '#1-henvisning-og-start',
+                    description: '1. Henvisning og start',
                     active: true
                   },
                   {
                     url: '#',
-                    description: '2. Lungekreft'
+                    description: '2. Kartlegging og utredning'
                   },
                   {
                     url: '#',
-                    description: '3. Lungekreft'
+                    description: '3. Behandling og oppfølging'
+                  },
+                  {
+                    url: '#',
+                    description: '4. Avslutning og videre oppfølging'
+                  },
+                  {
+                    url: '#',
+                    description: '5. Barn, foreldre og andre pårørende'
+                  },
+                  {
+                    url: '#',
+                    description: '6. Forløpstider'
+                  },
+                  {
+                    url: '#',
+                    description: '7. Registrering av koder'
+                  },
+                  {
+                    url: '#',
+                    description: '8. Implementering og verktøy'
                   },
                 ]}
               />
@@ -69,7 +89,7 @@ const TreatmentPageNew = () => {
               malGruppe={''}
             />
               <ChapterHeading
-                heading="Pakkeforløp for psykoseutvikling"
+                heading="Psykoselidelser, inkludert mistanke om psykoseutvikling – barn, unge og voksne"
                 h="h1"
                 line="none"
               />
@@ -80,7 +100,8 @@ const TreatmentPageNew = () => {
                 </div>
               </div>
               <Collapsible
-                heading="Inngang til pakkeforløpet"
+                heading="1. Henvisning og start"
+                id="1-henvisning-og-start"
                 smallContent
                 background
                 metaContent={
@@ -99,7 +120,7 @@ const TreatmentPageNew = () => {
                 id="test1"
               >
                 <Collapsible
-                  heading="Mistanke om psykoseutvikling"
+                  heading="Grunnlag for henvisning"
                   size="medium"
                   category="AKTIVITET"
                   id="test2"
@@ -108,7 +129,7 @@ const TreatmentPageNew = () => {
                 </Collapsible>
 
                 <Collapsible
-                  heading="Vurdering av av varseltegn og symptomer"
+                  heading="Særlige forhold – barn og unge"
                   size="medium"
                   category="AKTIVITET"
                   id="test3"
@@ -116,7 +137,7 @@ const TreatmentPageNew = () => {
                   <p>abc abc.</p>
                 </Collapsible>
                 <Collapsible
-                  heading="Dialog med pasient og/eller foreldre, ev. pårørende"
+                  heading="Kartlegging og henvisning"
                   category="AKTIVITET"
                   size="medium"
                   id="test4"
@@ -124,44 +145,18 @@ const TreatmentPageNew = () => {
                   <p>abc abc.</p>
                 </Collapsible>
                 <Collapsible
-                  heading="Pakkeforløpet starter"
+                  heading="Dialog med pasient og/eller foreldre, ev. pårørende"
                   category="AKTIVITET"
                   size="medium"
                 >
-                  <>
-                    <p>
-                      Hensikten med første samtale er å avklare hva som er
-                      pasientens og/eller foreldres, ev. pårørendes behov,
-                      mål og ønsker for behandling og oppfølging. Ved behov,
-                      bør det legges til rette for samtale utenfor
-                      institusjonen. Behandler skal bidra til å etablere en
-                      trygg ramme for åpenhet og tillit.
-                    </p>
-                    <Collapsible
-                      heading="Beskrivelse av aktiviteten"
-                      size="small"
-                      id="test5"
-                      bold={false}
-                    >
-                      <p>abc abc abc.</p>
-                    </Collapsible>
-                    <Collapsible
-                      heading="Begrunnelse"
-                      size="small"
-                      id={shortid.generate()}
-                      bold={false}
-                    >
-                      <p>abc abc abc.</p>
-                    </Collapsible>
-                    <Collapsible
-                      heading="Informasjon til pasienten"
-                      size="small"
-                      id={shortid.generate()}
-                      bold={false}
-                    >
-                      <p>abc abc abc.</p>
-                    </Collapsible>
-                  </>
+                  <p>abc abc.</p>
+                </Collapsible>
+                <Collapsible
+                  heading="Start pakkeforløp"
+                  category="AKTIVITET"
+                  size="medium"
+                >
+                  <p>abc abc.</p>
                 </Collapsible>
               </Collapsible>
               <ChapterHeading
