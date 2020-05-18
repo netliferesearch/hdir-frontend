@@ -31,15 +31,14 @@
 
   &__main-heading {
     display: flex;
-    align-items: center;
     &:before {
       visibility: hidden;
       display: none;
 
       content: '';
       height: 1em;
-      width: .8em;
-      padding-right: $space-xs;
+      flex: 0 0 30px;
+      margin-top: 0.15em;
 
       background-image: url($arrow-right);
       background-size: .8em;

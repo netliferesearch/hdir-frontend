@@ -136,7 +136,8 @@ if (searchElement) {
 if (productSearchElement) {
   const label = productSearchElement.getAttribute('data-label') || '';
   const productId = productSearchElement.getAttribute('data-content-id') || '';
-  const collapsed = productSearchElement.getAttribute('data-collapsed') || '';
+  const collapsed = Boolean(productSearchElement.getAttribute('data-collapsed') === "true" || false);
+  console.log(collapsed)
   const malgruppe = productSearchElement.getAttribute('data-malgruppe') || '';
   const flatTree = productSearchElement.getAttribute('data-flatTree') || '';
 
