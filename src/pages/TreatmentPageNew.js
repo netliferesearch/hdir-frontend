@@ -117,7 +117,6 @@ const TreatmentPageNew = () => {
                     </p>
                   </>
                 }
-                id="test1"
               >
                 <Collapsible
                   heading="Grunnlag for henvisning"
@@ -159,6 +158,16 @@ const TreatmentPageNew = () => {
                   <p>abc abc.</p>
                 </Collapsible>
               </Collapsible>
+
+              <Collapsible
+                heading="2. Kartlegging og utredning"
+                id="2-kartlegging"
+                background
+                smallContent
+              >
+                <p>abc abc.</p>
+              </Collapsible>
+
               <ChapterHeading
                 heading="Om pakkeforløpet"
                 url="#a"
