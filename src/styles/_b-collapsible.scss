@@ -7,8 +7,12 @@
   .b-collapsible {
     background: none;
     border: none;
-    padding: $space-sm $space $space-sm $space-xs;
+    padding: $space-sm $space $space-sm 0;
     margin-left: 0;
+
+    .b-collapsible__content {
+      padding-left: $space;
+    }
     
     &--tiny {
       padding: $spaceSmall 0 $spaceSmall/2;
@@ -35,6 +39,9 @@
     margin-top: 0;
     padding: 0;
     display: block;
+    .b-collapsible__content {
+      padding-left: 0 !important;
+    }
   }
   &--clean {
     margin-top: 0;
@@ -240,7 +247,7 @@
       padding-top: $space;
       display: inline-block !important;
     }
-    h3:first-child {
+    h3:first-child, h4:first-child {
       padding-top: 0;
     }
     .b-collapsible__heading {
