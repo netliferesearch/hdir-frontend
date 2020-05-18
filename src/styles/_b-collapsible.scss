@@ -29,13 +29,17 @@
 
   &--medium {
     border-width: 1px;
+    .b-collapsible__content {
+      padding-left: 0 !important;
+    }
   }
   &--small {
     border-width: 1px;
     border: 0;
     margin-top: 0;
-    padding-left: $space-xs !important;
-
+    .b-collapsible--small {
+      padding-left: $space-xs !important;
+    }
     .b-collapsible--small .b-collapsible--small {
       padding-left: 0 !important;
     }
