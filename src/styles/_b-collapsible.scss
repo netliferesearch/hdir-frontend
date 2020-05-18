@@ -34,6 +34,11 @@
     border-width: 1px;
     border: 0;
     margin-top: 0;
+    padding-left: $space-xs !important;
+
+    .b-collapsible--small {
+      padding-left: 0 !important;
+    }
   }
   &--tiny {
     margin-top: 0;
@@ -150,7 +155,7 @@
       padding-left: $space;
       &:before {
         margin-left: -$spaceSmall/4;
-        top: 0.15em;
+        top: 0;
       }
       h4 {
         font-size: $font-h5;
