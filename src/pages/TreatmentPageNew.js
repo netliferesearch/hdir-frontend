@@ -35,41 +35,6 @@ const TreatmentPageNew = () => {
               <SectionSidebar
                 heading="Pakkeforløp"
                 icon="../icons/Pakkeforløp.svg"
-                list={[
-                  {
-                    url: '#1-henvisning-og-start',
-                    description: '1. Henvisning og start',
-                    active: true
-                  },
-                  {
-                    url: '#',
-                    description: '2. Kartlegging og utredning'
-                  },
-                  {
-                    url: '#',
-                    description: '3. Behandling og oppfølging'
-                  },
-                  {
-                    url: '#',
-                    description: '4. Avslutning og videre oppfølging'
-                  },
-                  {
-                    url: '#',
-                    description: '5. Barn, foreldre og andre pårørende'
-                  },
-                  {
-                    url: '#',
-                    description: '6. Forløpstider'
-                  },
-                  {
-                    url: '#',
-                    description: '7. Registrering av koder'
-                  },
-                  {
-                    url: '#',
-                    description: '8. Implementering og verktøy'
-                  },
-                ]}
               />
             </aside>
             <div className="l-article">
