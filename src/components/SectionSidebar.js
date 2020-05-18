@@ -156,10 +156,7 @@ const SectionSidebar = props => {
   useEffect(() => {
     // Fetches all headings on mount, if we don't have a list
     if (!hasItems(props.list) && !hasItems(headings)) {
-      setHeadings([...document.querySelectorAll('.t-body-text h2')]);
-      if (!hasItems(headings)) {
-        setHeadings([...document.querySelectorAll('.l-article h2')]);
-      }
+      setHeadings([...document.querySelectorAll('.t-body-text h2')].concat(...document.querySelectorAll('.l-article h2')));
     }
     // Gives all headings a url-safe id based on its text
     if (!hasItems(props.list) && hasItems(headings)) {
