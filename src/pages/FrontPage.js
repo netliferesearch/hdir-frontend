@@ -26,9 +26,12 @@ const pages = [
   { heading: 'Forsider' },
   {link: '/hdir-forside', desc: 'Helsedirektoratet forside'},
   {link: '/helfo-forside', desc: 'Helfo forside'},
-
+  
   { heading: 'Listesider' },
-  {link: '/rapport-liste', desc: 'Rapportliste'},
+  {link: '/rapport-liste', desc: 'Rapporter'},
+  {link: '/brosjyrer-liste', desc: 'Brosjyrer'},
+  {link: '/nyhetsliste', desc: 'Nyheter'},
+  { link: '/tilskudd', desc: 'Tilskudd' },
 
   { heading: 'Andre malsider' },
   {link: '/abonnement-tilpassing', desc: 'Abonnement Tilpassing'},
@@ -43,7 +46,6 @@ const pages = [
   {link: '/lis-læringsaktiviteter', desc: 'LIS-læringsaktiviteter'},
   {link: '/lis-læringsmål', desc: 'LIS-læringsmål'},
   {link: '/lis-spesialitet', desc: 'LIS-spesialitet'},
-  {link: '/nyhetsliste', desc: 'Nyhetsliste'},
   {link: '/medisin', desc: 'Medisin'},
   {link: '/medisinListe', desc: 'MedisinListe'},
   {link: '/pdf-print-preview', desc: 'Print PDF Preview'},
@@ -58,10 +60,8 @@ const pages = [
   {link: '/statistikk-underside-2', desc: 'Statistikkunderside (smal)'},
   {link: '/søkeresultat', desc: 'Søkeresultat'},
   {link: '/tidligere-versjoner', desc: 'Tidligere versjoner'},
-  {link: '/tilskudd', desc: 'Tilskuddside'},
   {link: '/tilskudd-underside', desc: 'Tilskudd underside'},
   {link: '/transportside', desc: 'Transportside'},
-  {link: '/trykksaker', desc: 'Trykksaker'},
   {link: '/yrke-velger', desc: 'Yrkesvelger'},
 ];
 

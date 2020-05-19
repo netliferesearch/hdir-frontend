@@ -38,12 +38,12 @@ import LisSpeciality from './pages/LisSpeciality';
 import MemoPage from './pages/MemoPage';
 import MedicinePage from './pages/MedicinePage';
 import MedicineListPage from './pages/MedicineListPage';
-import NewsListPage from './pages/NewsListPage';
+import ListNews from './pages/ListNews';
 import NormativeContentPage from './pages/NormativeContentPage';
 import NotFound from './pages/NotFound';
 import ParentHearingPage from './pages/ParentHearingPage';
 import ParentMemoPage from './pages/ParentMemoPage';
-import PressReleasePage from './pages/PressReleasePage';
+import ListBrochures from './pages/ListBrochures';
 import PrintPdfPreview from './pages/PrintPdfPreview';
 import ProductPage from './pages/ProductPage';
 import ProductPageMalgruppe from './pages/ProductPageMalgruppe';
@@ -161,7 +161,7 @@ class App extends Component {
                 component={SubscriptionSettingsPage}
               />
               <Route path="/transportside" component={TransportPage} />
-              <Route path="/nyhetsliste" component={NewsListPage} />
+              <Route path="/nyhetsliste" component={ListNews} />
               <Route path="/tilskudd" component={GrantsPage} />
               <Route
                 path="/statistikk-underside"
@@ -172,7 +172,7 @@ class App extends Component {
                 component={StatisticsSubpage2}
               />
               <Route path="/rapport-liste" component={ReportListPage} />
-              <Route path="/trykksaker" component={PressReleasePage} />
+              <Route path="/brosjyrer-liste" component={ListBrochures} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route

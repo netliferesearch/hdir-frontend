@@ -1,25 +1,36 @@
 import React from 'react';
-
 import List from '../components/List';
 import Button from '../components/Button';
-import Box from '../components/Box';
+import ListHeading from '../components/ListHeading';
 import CheckboxGroup from '../components/CheckboxGroup';
+import Box from '../components/Box';
+import Breadcrumbs from '../components/Breadcrumbs';
+import ArticleIntro from '../components/ArticleIntro';
+import ProductSearch from '../components/ProductSearch';
+import { dummyFlatTree } from '../components/dummyFlatTree';
 
-const PressReleasePage = () => (
-  <main id="main">
-    <div className="l-container">
-      <div className="row l-mt-3">
-        <div className="col-xs-12">
-          <h1>Brosjyrer</h1>
-        </div>
-      </div>
-      <div className="row l-mt-2">
-        <aside className="col-md-3 col-xs-12 l-mb-4">
-          <div className="h4">Filter</div>
-          <div className="l-mt-1">
-            <hr className="b-hr b-hr--thick" />
+const ListBrochures = () => (
+  <div className="l-container">
+    <Breadcrumbs
+      paths={[
+        {
+          name: 'Forsiden',
+          href: '#a'
+        }
+      ]}
+    />
+    <main id="main">
+        <div className="row l-mt-2">
+          <div className="col-xs-12">
+            <ArticleIntro
+              heading="Brosjyrer"
+            />
           </div>
-          <div className="l-mt-1">
+        </div>
+      <div className="l-layout l-mt-1">
+        <aside className="l-hide-to-lg l-sidebar l-bleed-right">
+          <hr className="b-hr b-hr--thick" />
+          <div className="l-mt-2">
             <CheckboxGroup
               heading="Velg tema"
               name="statistikktype"
@@ -30,7 +41,8 @@ const PressReleasePage = () => (
                 },
                 {
                   value: 'Akuttmedisin',
-                  label: 'Akuttmedisin'
+                  label: 'Akuttmedisin',
+                  checked: true
                 },
                 {
                   value: 'antibiotika',
@@ -64,8 +76,19 @@ const PressReleasePage = () => (
             />
           </div>
         </aside>
-        <section className="col-xs-12 col-md-8 col-md-offset-1">
+        <article className="l-article l-article--topline">
+          <div className="l-mt-1 l-mb-2">
+            <ProductSearch
+              label="brosjyrer"
+              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
+              flatTree={dummyFlatTree}
+              malGruppe={''}
+              collapsed
+            />
+          </div>
           <div className="js-expand-list" data-start-limit="10">
+            <h2 className=" l-mb-1 l-mt-1">10 brosjyrer innen «akuttmedisin»</h2>
+            <hr className="b-hr b-hr--thick" />
             <List
               list={[
                 {
@@ -236,21 +259,11 @@ const PressReleasePage = () => (
               <Button secondary>↓ Vis alle</Button>
             </div>
           </div>
-        </section>
+        </article>
       </div>
-    </div>
-    <Box color="grey" square noPadding>
-      <div className="l-container">
-        <strong>Kontakt:</strong>
-        <br />
-        <a href="#a">spesialisthelsetjenester@helsedir.no</a>
-        <br />
-        <a href="#a">navn.etternavn@helsedir.no</a>
-        <br />
-        <a href="#a">999 99 999</a>
-      </div>
-    </Box>
-  </main>
+    </main>
+  </div>
+
 );
 
-export default PressReleasePage;
+export default ListBrochures;
