@@ -58,7 +58,7 @@ const TreatmentPageNew = () => {
                 h="h1"
                 line="none"
               />
-              <div className="col-xs-12 col-md-7 col-lg-8 b-flex b-flex--center l-mb-2">
+              <div className="b-flex b-flex--center b-flex--skip-mobile l-mb-2">
                 <div className="t--small u-right-sm">Vis forløpet som:</div>
                 <div className="">
                   <FilterList list={['Tekst', 'Flytdiagram']} />
