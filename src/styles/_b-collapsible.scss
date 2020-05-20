@@ -371,9 +371,12 @@
   &__footer {
     margin-top: $space;
     margin-bottom: $spaceSmall;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
+  }
+  &--active .b-collapsible__footer {
+    display: flex;
   }
   &__meta-date {
     font-size: $meta-text;
