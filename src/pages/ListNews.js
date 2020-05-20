@@ -6,7 +6,7 @@ import CheckboxGroup from '../components/CheckboxGroup';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
-import ProductSearch from '../components/ProductSearch';
+import ListSearch from '../components/ListSearch';
 import RadioButtonGroup from '../components/RadioButtonGroup';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
@@ -99,11 +99,25 @@ const ListNews = (props) => (
         </aside>
         <article className="l-article l-article--topline">
           <div className="l-mt-1 l-mb-2">
-            <ProductSearch
+            <ListSearch
               label="nyheter"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
               flatTree={dummyFlatTree}
               malGruppe={''}
+              dummyData={
+                {
+                  type: 'news',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
+                    publishDate: '3. desember 2018',
+                    lead:
+                      'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
+                    topic: ''
+                  }
+                }
+              }
               collapsed
             />
           </div>

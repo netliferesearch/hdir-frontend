@@ -6,7 +6,7 @@ import CheckboxGroup from '../components/CheckboxGroup';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
-import ProductSearch from '../components/ProductSearch';
+import ListSearch from '../components/ListSearch';
 import RadioButtonGroup from '../components/RadioButtonGroup';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
@@ -99,11 +99,22 @@ const ListGrants = (props) => (
         </aside>
         <article className="l-article l-article--topline">
           <div className="l-mt-1 l-mb-2">
-            <ProductSearch
+            <ListSearch
               label="tilskudd"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
               flatTree={dummyFlatTree}
               malGruppe={''}
+              dummyData={
+                {
+                  type: 'grantFunding',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    deadline: 'Søknadsfrist: 15. mai 2019'
+                  }
+                }
+              }
               collapsed
             />
           </div>

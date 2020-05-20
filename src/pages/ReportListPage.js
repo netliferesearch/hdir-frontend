@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import CheckboxGroup from '../components/CheckboxGroup';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
-import ProductSearch from '../components/ProductSearch';
+import ListSearch from '../components/ListSearch';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
 const ReportListPage = () => (
@@ -78,11 +78,23 @@ const ReportListPage = () => (
         </aside>
         <article className="l-article l-article--topline">
           <div className="l-mt-1 l-mb-2">
-            <ProductSearch
+            <ListSearch
               label="rapporter"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
               flatTree={dummyFlatTree}
               malGruppe={''}
+              dummyData={
+                {
+                  type: 'generic',
+                  url: '#6',
+                  fields: {
+                    openPdf: 'true',
+                    heading:
+                      'Dokumentasjon i helsestasjons- og skolehelsetjenesten',
+                    subheading: '16. januar 2020'
+                  }
+                }
+              }
               collapsed
             />
           </div>
