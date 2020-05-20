@@ -51,6 +51,29 @@ const ListGrants = (props) => (
           <div className="l-mt-1">
             <hr className="b-hr" />
           </div>
+          <div className="l-mt-2">
+            <RadioButtonGroup
+              heading="Søknadsfrist"
+              name="soknadsfrist"
+              options={[
+                {
+                  value: 'Alle',
+                  label: 'Alle'
+                },
+                {
+                  value: 'Utlopt',
+                  label: 'Utløpt'
+                },
+                {
+                  value: 'Ikkeutlopt',
+                  label: 'Ikke utløpt'
+                }
+              ]}
+            />
+          </div>
+          <div className="l-mt-1">
+            <hr className="b-hr" />
+          </div>
           <div className="l-mt-1">
             <CheckboxGroup
               heading="Velg tema"
