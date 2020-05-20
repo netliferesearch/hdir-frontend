@@ -129,7 +129,6 @@ const TreatmentPageNew = () => {
                 heading="2. Kartlegging og utredning"
                 id="nr2-kartlegging"
                 background
-                collapsed
                 smallContent
                 metaContent={
                   <>
