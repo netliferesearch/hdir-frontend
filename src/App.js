@@ -27,7 +27,7 @@ import FormbuilderTestPage from './pages/FormbuilderTestPage';
 import FrontPage from './pages/FrontPage';
 import FrontPageHdir from './pages/FrontPageHdir';
 import FrontPageHelfo from './pages/FrontPageHelfo';
-import GrantsPage from './pages/GrantsPage';
+import ListGrants from './pages/ListGrants';
 import GrantsSubPage from './pages/GrantsSubPage';
 import HearingPage from './pages/HearingPage';
 import JobPostingPage from './pages/JobPostingPage';
@@ -162,7 +162,7 @@ class App extends Component {
               />
               <Route path="/transportside" component={TransportPage} />
               <Route path="/nyhetsliste" component={ListNews} />
-              <Route path="/tilskudd" component={GrantsPage} />
+              <Route path="/tilskudd" component={ListGrants} />
               <Route
                 path="/statistikk-underside"
                 component={StatisticsSubpage}

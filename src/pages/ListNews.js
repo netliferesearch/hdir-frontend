@@ -7,6 +7,7 @@ import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
 import ProductSearch from '../components/ProductSearch';
+import RadioButtonGroup from '../components/RadioButtonGroup';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
 const ListNews = (props) => (
@@ -32,6 +33,25 @@ const ListNews = (props) => (
         <aside className="l-hide-to-lg l-sidebar l-bleed-right">
           <hr className="b-hr b-hr--thick" />
           <div className="l-mt-2">
+            <RadioButtonGroup
+              heading="Velg søkergruppe"
+              name="sokergruppe"
+              options={[
+                {
+                  value: 'Alle',
+                  label: 'Alle'
+                },
+                {
+                  value: 'KommuneFylkeskommune',
+                  label: 'Kommune / fylkeskommune'
+                }
+              ]}
+            />
+          </div>
+          <div className="l-mt-1">
+            <hr className="b-hr" />
+          </div>
+          <div className="l-mt-1">
             <CheckboxGroup
               heading="Velg tema"
               name="statistikktype"
@@ -203,30 +223,6 @@ const ListNews = (props) => (
                 {
                   type: 'news',
                   url: '#1',
-                  fields: {
-                    heading:
-                      'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
-                    publishDate: '3. desember 2018',
-                    lead:
-                      'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
-                    topic: ''
-                  }
-                },
-                {
-                  type: 'news',
-                  url: '#2',
-                  fields: {
-                    heading:
-                      'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
-                    publishDate: '3. desember 2018',
-                    lead:
-                      'Vitamin D er nødvendig for kalsiumopptak. Anbefalingene for inntak av vitamin D ble økt i 2014, og nå foreslår Nasjonalt råd for ernæring nye tiltak for å sikre at befolkningen skal få i seg nok.',
-                    topic: ''
-                  }
-                },
-                {
-                  type: 'news',
-                  url: '#3',
                   fields: {
                     heading:
                       'Nasjonalt råd for ernæring foreslår nye tiltak for å øke inntaket av vitamin D',
