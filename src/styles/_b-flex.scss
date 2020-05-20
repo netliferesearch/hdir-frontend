@@ -4,6 +4,10 @@
 .b-flex--skip-mobile {
   @include mq($until: $tablet) {
     display: block;
+
+    >div {
+      margin-bottom: $space-xs;
+    }
   }
 }
 .b-flex--right {

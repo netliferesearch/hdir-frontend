@@ -87,7 +87,7 @@
       @include mq($until: wide) {
         margin-left: 0;
       }
-      margin-left: $space-sm;
+      margin-left: $space;
     }
     >.b-collapsible__button {
       margin-top: $space-sm;
@@ -125,7 +125,7 @@
       }
     }
     >.b-collapsible__footer {
-      margin-left: $space-xl;
+      margin-left: $space-lg;
       padding-bottom: $space;
       width: 100%;
       justify-content: flex-start;
@@ -371,9 +371,12 @@
   &__footer {
     margin-top: $space;
     margin-bottom: $spaceSmall;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
+  }
+  &--active .b-collapsible__footer {
+    display: flex;
   }
   &__meta-date {
     font-size: $meta-text;
