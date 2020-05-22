@@ -12,6 +12,8 @@ body {
   @include mq($from: wide) {
     padding: 0 $container-large;
   }
+  max-width: 1150px;
+  margin: auto;
 }
 
 .l-layout {
@@ -39,6 +41,9 @@ body {
   
   &--topline {
     border-top: 1px solid $grey-light;
+  }
+  &--full-width {
+    padding-left: 0;
   }
 }
 

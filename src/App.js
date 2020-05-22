@@ -39,11 +39,13 @@ import MemoPage from './pages/MemoPage';
 import MedicinePage from './pages/MedicinePage';
 import MedicineListPage from './pages/MedicineListPage';
 import ListNews from './pages/ListNews';
+import ListHearings from './pages/ListHearings';
 import NormativeContentPage from './pages/NormativeContentPage';
 import NotFound from './pages/NotFound';
 import ParentHearingPage from './pages/ParentHearingPage';
 import ParentMemoPage from './pages/ParentMemoPage';
 import ListBrochures from './pages/ListBrochures';
+import ListConferences from './pages/ListConferences';
 import PrintPdfPreview from './pages/PrintPdfPreview';
 import ProductPage from './pages/ProductPage';
 import ProductPageMalgruppe from './pages/ProductPageMalgruppe';
@@ -129,6 +131,7 @@ class App extends Component {
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
               <Route path="/rapport" component={ReportPage} />
+              <Route path="/horinger" component={ListHearings} />
               <Route
                 path="/normerende-innhold"
                 component={NormativeContentPage}
@@ -173,6 +176,7 @@ class App extends Component {
               />
               <Route path="/rapport-liste" component={ReportListPage} />
               <Route path="/brosjyrer-liste" component={ListBrochures} />
+              <Route path="/konferanser-liste" component={ListConferences} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route

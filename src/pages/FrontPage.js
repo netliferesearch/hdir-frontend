@@ -32,6 +32,8 @@ const pages = [
   {link: '/brosjyrer-liste', desc: 'Brosjyrer'},
   {link: '/nyhetsliste', desc: 'Nyheter'},
   { link: '/tilskudd', desc: 'Tilskudd' },
+  { link: '/horinger', desc: 'Høringer' },
+  { link: '/konferanser-liste', desc: 'Konferanser' },
 
   { heading: 'Andre malsider' },
   {link: '/abonnement-tilpassing', desc: 'Abonnement Tilpassing'},

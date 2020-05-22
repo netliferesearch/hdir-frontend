@@ -28,55 +28,7 @@ const ReportListPage = () => (
           </div>
         </div>
       <div className="l-layout l-mt-1">
-        <aside className="l-hide-to-lg l-sidebar l-bleed-right">
-          <hr className="b-hr b-hr--thick" />
-          <div className="l-mt-2">
-            <CheckboxGroup
-              heading="Velg tema"
-              name="statistikktype"
-              options={[
-                {
-                  value: 'Abort',
-                  label: 'Abort'
-                },
-                {
-                  value: 'Akuttmedisin',
-                  label: 'Akuttmedisin',
-                  checked: true
-                },
-                {
-                  value: 'antibiotika',
-                  label: 'antibiotika'
-                },
-                {
-                  value: 'CFS/ME',
-                  label: 'CFS/ME'
-                },
-                {
-                  value: 'Diabetes',
-                  label: 'Diabetes'
-                },
-                {
-                  value: 'Fødsel og barsel',
-                  label: 'Fødsel og barsel'
-                },
-                {
-                  value: 'Hjerneslag',
-                  label: 'Hjerneslag'
-                },
-                {
-                  value: 'Kols',
-                  label: 'Kols'
-                },
-                {
-                  value: 'Overvekt og fedme',
-                  label: 'Overvekt og fedme'
-                }
-              ]}
-            />
-          </div>
-        </aside>
-        <article className="l-article l-article--topline">
+        <article className="l-article l-article--topline l-article--full-width">
           <div className="l-mt-1 l-mb-2">
             <ListSearch
               label="rapporter"
@@ -99,7 +51,7 @@ const ReportListPage = () => (
             />
           </div>
           <div className="js-expand-list" data-start-limit="10">
-            <h2 className=" l-mb-1 l-mt-1">10 rapporter innen «akuttmedisin»</h2>
+            <h2 className=" l-mb-1 l-mt-1">10 rapporter</h2>
             <hr className="b-hr b-hr--thick" />
             <List
               list={[

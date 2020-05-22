@@ -70,7 +70,7 @@ const ListItemType = props => {
               )}
               {fields.registrationDeadline && (
                 <p className="b-list-item-type__deadline">
-                  <strong>Frist: </strong>
+                  <strong>Påmeldingsfrist: </strong>
                   {fields.registrationDeadline}
                 </p>
               )}
