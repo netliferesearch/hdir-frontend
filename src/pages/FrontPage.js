@@ -50,6 +50,7 @@ const pages = [
   {link: '/lis-spesialitet', desc: 'LIS-spesialitet'},
   {link: '/medisin', desc: 'Medisin'},
   {link: '/medisinListe', desc: 'MedisinListe'},
+  { link: '/pakkeforløp', desc: 'Pakkeforløp (nytt design)' },
   {link: '/pdf-print-preview', desc: 'Print PDF Preview'},
   {link: '/rapport', desc: 'Rapport'},
   {link: '/rapport-kapittel', desc: 'Rapport kapittel'},

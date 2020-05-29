@@ -63,9 +63,7 @@ import StatisticsSubpage2 from './pages/StatisticsSubpage2';
 import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import ThemePage from './pages/ThemePage';
 import TransportPage from './pages/TransportPage';
-import TreatmentPageA from './pages/TreatmentPageA';
-import TreatmentPageC from './pages/TreatmentPageC';
-import TreatmentPageE from './pages/TreatmentPageE';
+import TreatmentPageNew from './pages/TreatmentPageNew';
 
 
 class App extends Component {
@@ -183,9 +181,7 @@ class App extends Component {
                 path="/skjemabygger-enonic"
                 component={FormbuilderTestPage}
               />
-              <Route path="/pakkeforløp-a" component={TreatmentPageA} />
-              <Route path="/pakkeforløp-c" component={TreatmentPageC} />
-              <Route path="/pakkeforløp-e" component={TreatmentPageE} />
+              <Route path="/pakkeforløp" component={TreatmentPageNew} />
               <Route path="/pdf-print-preview" component={PrintPdfPreview} />
               <Route path="/medisin" component={MedicinePage} />
               <Route path="/medisinListe" component={MedicineListPage} />
