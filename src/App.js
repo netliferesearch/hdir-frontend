@@ -27,7 +27,7 @@ import FormbuilderTestPage from './pages/FormbuilderTestPage';
 import FrontPage from './pages/FrontPage';
 import FrontPageHdir from './pages/FrontPageHdir';
 import FrontPageHelfo from './pages/FrontPageHelfo';
-import GrantsPage from './pages/GrantsPage';
+import ListGrants from './pages/ListGrants';
 import GrantsSubPage from './pages/GrantsSubPage';
 import HearingPage from './pages/HearingPage';
 import JobPostingPage from './pages/JobPostingPage';
@@ -38,12 +38,14 @@ import LisSpeciality from './pages/LisSpeciality';
 import MemoPage from './pages/MemoPage';
 import MedicinePage from './pages/MedicinePage';
 import MedicineListPage from './pages/MedicineListPage';
-import NewsListPage from './pages/NewsListPage';
+import ListNews from './pages/ListNews';
+import ListHearings from './pages/ListHearings';
 import NormativeContentPage from './pages/NormativeContentPage';
 import NotFound from './pages/NotFound';
 import ParentHearingPage from './pages/ParentHearingPage';
 import ParentMemoPage from './pages/ParentMemoPage';
-import PressReleasePage from './pages/PressReleasePage';
+import ListBrochures from './pages/ListBrochures';
+import ListConferences from './pages/ListConferences';
 import PrintPdfPreview from './pages/PrintPdfPreview';
 import ProductPage from './pages/ProductPage';
 import ProductPageMalgruppe from './pages/ProductPageMalgruppe';
@@ -127,6 +129,7 @@ class App extends Component {
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
               <Route path="/rapport" component={ReportPage} />
+              <Route path="/horinger" component={ListHearings} />
               <Route
                 path="/normerende-innhold"
                 component={NormativeContentPage}
@@ -159,8 +162,8 @@ class App extends Component {
                 component={SubscriptionSettingsPage}
               />
               <Route path="/transportside" component={TransportPage} />
-              <Route path="/nyhetsliste" component={NewsListPage} />
-              <Route path="/tilskudd" component={GrantsPage} />
+              <Route path="/nyhetsliste" component={ListNews} />
+              <Route path="/tilskudd" component={ListGrants} />
               <Route
                 path="/statistikk-underside"
                 component={StatisticsSubpage}
@@ -170,7 +173,8 @@ class App extends Component {
                 component={StatisticsSubpage2}
               />
               <Route path="/rapport-liste" component={ReportListPage} />
-              <Route path="/trykksaker" component={PressReleasePage} />
+              <Route path="/brosjyrer-liste" component={ListBrochures} />
+              <Route path="/konferanser-liste" component={ListConferences} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route
