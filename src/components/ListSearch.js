@@ -49,9 +49,7 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
-        // setSearchResults(data);
-        console.log(data);
+        setSearchResults(data);
         setToggleMoreResults(false);
         setLoading(false);
       });
@@ -71,10 +69,9 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
         formData.append('type', tema);
         formData.append('flatTree', flatTree);
         doSearch(formData);
-        console.log(value)
       }
       if (value.length === 0) {
-        // setSearchResults('');
+        setSearchResults('');
         setSearchString('');
       }
     },
