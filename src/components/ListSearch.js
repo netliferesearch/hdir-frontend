@@ -21,7 +21,7 @@ const contentClasses = (toggled) =>
     'b-product-search--hidden': !toggled
   });
 
-const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyData }) => {
+const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyData, tema, type }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [toggleMoreResults, setToggleMoreResults] = useState(false);
@@ -67,6 +67,8 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
         formData.append('contentId', productId);
         formData.append('searchQuery', value);
         formData.append('malgruppe', malgruppe);
+        formData.append('tema', type);
+        formData.append('type', tema);
         formData.append('flatTree', flatTree);
         doSearch(formData);
         console.log(value)

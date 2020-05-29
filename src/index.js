@@ -6,6 +6,7 @@ import App from './App';
 import MainHeader from '../src/components/MainHeader';
 import InputSearch from '../src/components/InputSearch';
 import ProductSearch from '../src/components/ProductSearch';
+import ListSearch from '../src/components/ListSearch';
 import SectionSidebar from '../src/components/SectionSidebar';
 import MultiSelector from './components/MultiSelector';
 import Loading from './components/Loading';
@@ -15,6 +16,7 @@ import { checkboxFilter } from './js/searchFilter';
 const rootElement = document.getElementById('root');
 const headerElement = document.getElementById('header');
 const searchElement = document.getElementById('search');
+const listSearchElement = document.getElementById('list-search');
 const productSearchElement = document.getElementById('product-search');
 const sectionSidebarElement = document.getElementById('sectionSidebar');
 const multiSelectElements = document.querySelectorAll('.js-multi-selector');
@@ -149,6 +151,28 @@ if (productSearchElement) {
       flatTree={flatTree}
     />,
     productSearchElement
+  );
+}
+if (listSearchElement) {
+  const label = listSearchElement.getAttribute('data-label') || '';
+  const productId = listSearchElement.getAttribute('data-content-id') || '';
+  const collapsed = listSearchElement.getAttribute('data-collapsed') || '';
+  const malgruppe = listSearchElement.getAttribute('data-malgruppe') || '';
+  const flatTree = listSearchElement.getAttribute('data-flatTree') || '';
+  const tema = listSearchElement.getAttribute('data-type') || '';
+  const type = listSearchElement.getAttribute('data-tema') || '';
+
+  render(
+    <ListSearch
+      productId={productId}
+      label={label}
+      collapsed={collapsed}
+      malgruppe={malgruppe}
+      flatTree={flatTree}
+      tema={tema}
+      type={type}
+    />,
+    listSearchElement
   );
 }
 

@@ -35,6 +35,8 @@ const ReportListPage = () => (
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
               flatTree={dummyFlatTree}
               malGruppe={''}
+              tema={''}
+              type={''}
               dummyData={
                 {
                   type: 'generic',
