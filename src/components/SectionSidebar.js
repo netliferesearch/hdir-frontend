@@ -7,6 +7,16 @@ import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
 import createUniqueHeaders from './../utils/createUniqueHeadersUtil';
 
+// We need to iterate the parent elements to get the real offsetTop
+const getOffsetTop = element => {
+  let offsetTop = 0;
+  while (element) {
+    offsetTop += element.offsetTop;
+    element = element.offsetParent;
+  }
+  return offsetTop;
+}
+
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -15,9 +25,8 @@ function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // Makes the nodeList to an array of htmlElements
   const htmlHeadings = [...headings];
   const scrolledPastItems = htmlHeadings.filter(
-    h => h.offsetTop < scrollPos() + headingSpace
+    h => getOffsetTop(h) < scrollPos() + headingSpace
   );
-  console.log(scrolledPastItems)
 
   setActiveHeading(scrolledPastItems.length);
 }
@@ -147,7 +156,13 @@ const SectionSidebar = props => {
   useEffect(() => {
     // Fetches all headings on mount, if we don't have a list
     if (!hasItems(props.list) && !hasItems(headings)) {
-      setHeadings([...document.querySelectorAll('.t-body-text h2')]);
+      const headings1 = [...document.querySelectorAll('.t-body-text h2')];
+      const headings2 = [...document.querySelectorAll('.l-article h2')];
+      const elements = headings1.concat(headings2);
+      console.log('headings1', headings1);
+      console.log('headings2', headings2);
+      console.log('elements', elements);
+      setHeadings(elements);
     }
     // Gives all headings a url-safe id based on its text
     if (!hasItems(props.list) && hasItems(headings)) {
@@ -196,6 +211,7 @@ const SectionSidebar = props => {
     // Util that create unique id for the h2 tags
     createUniqueHeaders(headings);
   }
+  
 
   // Creates a list with links with either the headings, or the list it received
   // Bugfix for IE: Remove # symbol from text
