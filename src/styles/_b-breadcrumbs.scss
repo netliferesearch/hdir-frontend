@@ -1,6 +1,7 @@
 .b-breadcrumbs {
-  padding-bottom: $space-lg;
+  padding-bottom: $space-lg * 0.88; // 1.75 rem
   border-bottom: 1px solid $grey-light;
+  align-items: center;
   
   &__location {
     font-size: $font-xs;
