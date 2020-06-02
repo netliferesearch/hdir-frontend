@@ -3,12 +3,16 @@
   color: white;
   background-color: $link-color;
   border: 2px solid $link-color;
-  padding: $space-xs*1.5 $space-md;
+  padding: $space-xs*1.25 $space-md;
   border-radius: 2em;
   font-size: $font-body;
   white-space: nowrap;
   cursor: pointer;
   transition: all .1s ease-out;
+
+  @include mq($until: $tablet) {
+    padding: $space-xs $space-md;
+  }
   
   &:hover {
     background: transparent;
@@ -49,7 +53,7 @@
   &--secondary {
     border: 2px solid $link-color;
     color: $link-color;
-    background: white;
+    background: transparent;
     &.b-button--arrow {
       &:after {
         @include pseudo-arrow($arrow-right);
@@ -76,9 +80,9 @@
   }
 
   &--secondary-dark {
-    border: 2px solid $primary-color;
-    color: $primary-color;
-    background: white;
+    border: 2px solid $blue-dark;
+    color: $blue-dark;
+    background: transparent;
     &.b-button--arrow {
       &:after {
         @include pseudo-arrow($arrow-right);
