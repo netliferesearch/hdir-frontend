@@ -14,9 +14,7 @@ const pages = [
   {link: '/normerende-innhold', desc: 'Normerende'},
 
   { heading: 'Pakkeforløp' },
-  { link: '/pakkeforløp-a', desc: 'Pakkeforløp [A]' },
-  { link: '/pakkeforløp-c', desc: 'Pakkeforløp [C]' },
-  { link: '/pakkeforløp-e', desc: 'Pakkeforløp [E]' },
+  { link: '/pakkeforløp', desc: 'Pakkeforløp' },
 
   { heading: 'Artikkelsider' },
   {link: '/artikkel', desc: 'Artikkel'},
@@ -50,7 +48,6 @@ const pages = [
   {link: '/lis-spesialitet', desc: 'LIS-spesialitet'},
   {link: '/medisin', desc: 'Medisin'},
   {link: '/medisinListe', desc: 'MedisinListe'},
-  { link: '/pakkeforløp', desc: 'Pakkeforløp (nytt design)' },
   {link: '/pdf-print-preview', desc: 'Print PDF Preview'},
   {link: '/rapport', desc: 'Rapport'},
   {link: '/rapport-kapittel', desc: 'Rapport kapittel'},
