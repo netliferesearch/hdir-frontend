@@ -21,12 +21,13 @@ import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import ChapterPage from './pages/ChapterPage';
 import ChapterPageWithSubchapters from './pages/ChapterPageWithSubchapters';
 import ChapterPageReport from './pages/ChapterPageReport';
+import ChapterPageWithLead from './pages/ChapterPageWithLead';
 import EarlierVersionsPage from './pages/EarlierVersionsPage';
 import FormbuilderTestPage from './pages/FormbuilderTestPage';
 import FrontPage from './pages/FrontPage';
 import FrontPageHdir from './pages/FrontPageHdir';
 import FrontPageHelfo from './pages/FrontPageHelfo';
-import GrantsPage from './pages/GrantsPage';
+import ListGrants from './pages/ListGrants';
 import GrantsSubPage from './pages/GrantsSubPage';
 import HearingPage from './pages/HearingPage';
 import JobPostingPage from './pages/JobPostingPage';
@@ -37,14 +38,17 @@ import LisSpeciality from './pages/LisSpeciality';
 import MemoPage from './pages/MemoPage';
 import MedicinePage from './pages/MedicinePage';
 import MedicineListPage from './pages/MedicineListPage';
-import NewsListPage from './pages/NewsListPage';
+import ListNews from './pages/ListNews';
+import ListHearings from './pages/ListHearings';
 import NormativeContentPage from './pages/NormativeContentPage';
 import NotFound from './pages/NotFound';
 import ParentHearingPage from './pages/ParentHearingPage';
 import ParentMemoPage from './pages/ParentMemoPage';
-import PressReleasePage from './pages/PressReleasePage';
+import ListBrochures from './pages/ListBrochures';
+import ListConferences from './pages/ListConferences';
 import PrintPdfPreview from './pages/PrintPdfPreview';
 import ProductPage from './pages/ProductPage';
+import ProductPageMalgruppe from './pages/ProductPageMalgruppe';
 import ProfessionSelector from './pages/ProfessionSelector';
 import RecommendationPage from './pages/RecommendationPage';
 import RecommendationPageAntibiotics from './pages/RecommendationPageAntibiotics';
@@ -59,9 +63,7 @@ import StatisticsSubpage2 from './pages/StatisticsSubpage2';
 import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import ThemePage from './pages/ThemePage';
 import TransportPage from './pages/TransportPage';
-import TreatmentPageA from './pages/TreatmentPageA';
-import TreatmentPageC from './pages/TreatmentPageC';
-import TreatmentPageE from './pages/TreatmentPageE';
+import TreatmentPageNew from './pages/TreatmentPageNew';
 
 
 class App extends Component {
@@ -97,6 +99,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={FrontPage} />
               <Route path="/produkt" component={ProductPage} />
+              <Route path="/produkt-malgruppevelger" component={ProductPageMalgruppe} />
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/artikkel" component={ArticlePage} />
               <Route path="/artikkel-ingen-h2" component={ArticlePageNoH2} />
@@ -116,6 +119,7 @@ class App extends Component {
                 component={ReportPageWithoutImage}
               />
               <Route path="/kapittel" component={ChapterPage} />
+              <Route path="/kapittel-med-ingress" component={ChapterPageWithLead} />
               <Route path="/kapittel-med-underkapitler" component={ChapterPageWithSubchapters} />
               <Route path="/høringer" component={HearingPage} />
               <Route path="/høringer-forside" component={ParentHearingPage} />
@@ -125,6 +129,7 @@ class App extends Component {
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
               <Route path="/rapport" component={ReportPage} />
+              <Route path="/horinger" component={ListHearings} />
               <Route
                 path="/normerende-innhold"
                 component={NormativeContentPage}
@@ -157,8 +162,8 @@ class App extends Component {
                 component={SubscriptionSettingsPage}
               />
               <Route path="/transportside" component={TransportPage} />
-              <Route path="/nyhetsliste" component={NewsListPage} />
-              <Route path="/tilskudd" component={GrantsPage} />
+              <Route path="/nyhetsliste" component={ListNews} />
+              <Route path="/tilskudd" component={ListGrants} />
               <Route
                 path="/statistikk-underside"
                 component={StatisticsSubpage}
@@ -168,16 +173,15 @@ class App extends Component {
                 component={StatisticsSubpage2}
               />
               <Route path="/rapport-liste" component={ReportListPage} />
-              <Route path="/trykksaker" component={PressReleasePage} />
+              <Route path="/brosjyrer-liste" component={ListBrochures} />
+              <Route path="/konferanser-liste" component={ListConferences} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route
                 path="/skjemabygger-enonic"
                 component={FormbuilderTestPage}
               />
-              <Route path="/pakkeforløp-a" component={TreatmentPageA} />
-              <Route path="/pakkeforløp-c" component={TreatmentPageC} />
-              <Route path="/pakkeforløp-e" component={TreatmentPageE} />
+              <Route path="/pakkeforløp" component={TreatmentPageNew} />
               <Route path="/pdf-print-preview" component={PrintPdfPreview} />
               <Route path="/medisin" component={MedicinePage} />
               <Route path="/medisinListe" component={MedicineListPage} />

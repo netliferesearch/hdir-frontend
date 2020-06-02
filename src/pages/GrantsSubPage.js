@@ -23,7 +23,7 @@ const GrantsSubPage = () => (
           <aside className="col-md-3 col-xs-12 l-mb-4">
             <SectionSidebar heading="Innhold på denne siden" />
           </aside>
-          <div className="col-md-7 col-md-offset-1">
+          <div className="col-xs-12 col-md-7 col-md-offset-1 t-body-text">
             <Link href="#a" button>
               Søk på tilskudd (Altinn)
             </Link>

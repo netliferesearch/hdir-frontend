@@ -70,7 +70,7 @@ const ListItemType = props => {
               )}
               {fields.registrationDeadline && (
                 <p className="b-list-item-type__deadline">
-                  <strong>Frist: </strong>
+                  <strong>Påmeldingsfrist: </strong>
                   {fields.registrationDeadline}
                 </p>
               )}
@@ -109,7 +109,7 @@ const ListItemType = props => {
               )}
               {fields.publishDate && (
                 <div className="b-list-item-type__date">
-                  <strong>Sist faglig oppdatert: </strong>
+                  <span>Sist faglig oppdatert: </span>
                   {fields.publishDate}
                 </div>
               )}
@@ -156,7 +156,7 @@ const ListItemType = props => {
         <div
           className={classNames({
             'b-list-item-type': true,
-            'b-list-item-type--no-arrow': fields.download
+            'b-list-item-type--no-arrow': fields.download || fields.openPdf,
           })}
         >
           <div className="b-list-item-type__flex-wrapper">
