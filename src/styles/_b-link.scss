@@ -59,7 +59,7 @@
       @extend .b-link__link--button;
       border: 2px solid $link-color;
       color: $link-color !important;
-      background: white;
+      background: transparent;
       &:hover {
         background: $link-color;
         color: $white !important;
@@ -69,7 +69,7 @@
       @extend .b-link__link--button;
       border: 2px solid currentColor;
       color: inherit !important;
-      background: white;
+      background: transparent;
     }
     &--heading {
       @include link-init($primary-color, true, $primary-color);
