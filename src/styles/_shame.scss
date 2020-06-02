@@ -94,3 +94,9 @@ table {
 .hide {
   display: none;
 }
+
+.l-mb-2-mobile {
+  @include mq($until: $tablet) {
+    margin-bottom: 1.5em;
+  }
+}
