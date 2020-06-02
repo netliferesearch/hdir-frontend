@@ -1,26 +1,175 @@
 .b-collapsible {
-  $left-space: 1.5em;
-  padding-left: $left-space;
-  border-top: 4px solid $black;
-  padding-top: 2em;
+  $space: 1.75em;
+  $spaceSmall: 0.75em;
+  padding: $space-sm $space-md;
+  border: 1px solid transparent;
+
+  .b-collapsible {
+    background: none;
+    border: none;
+    padding: $space-sm $space $space-sm 0;
+    margin-left: 0;
+
+    .b-collapsible__content {
+      padding-left: $space;
+    }
+    
+    &--tiny {
+      padding: $spaceSmall 0 $spaceSmall/2;
+    }
+    
+    &__content {
+      padding-bottom: 0;
+    }
+    
+    .b-collapsible--small:nth-child(odd) {
+      background: $grey-lighter;
+    }
+  }
 
   &--medium {
     border-width: 1px;
+    .b-collapsible__content {
+      padding-left: 0 !important;
+    }
   }
   &--small {
     border-width: 1px;
     border: 0;
-    padding-top: 0;
     margin-top: 0;
+    .b-collapsible--small {
+      padding-left: $space-xs !important;
+    }
+    .b-collapsible--small .b-collapsible--small {
+      padding-left: 0 !important;
+    }
   }
-
+  &--tiny {
+    margin-top: 0;
+    padding: 0;
+    display: block;
+    .b-collapsible__content {
+      padding-left: 0 !important;
+    }
+  }
+  &--clean {
+    margin-top: 0;
+    padding: 0;
+    display: block;
+  }
   &--subtle {
-    margin-left: -$left-space;
+    margin-left: 0;
+    padding-left: 0;
+    background: none;
+    border: none;
+    
+    &.b-collapsible {
+      padding-left: 0;
+    }
+    
+    h4.b-collapsible__heading {
+      font-size: $meta-text;
+      font-weight: normal;
+      text-transform: uppercase;
+      padding-top: 0;
+    }
   }
 
   &--no-border {
     border: 0;
   }
+
+  &--columns.b-collapsible--background.b-collapsible--active {
+    padding: 0;
+    position: relative;
+
+    .b-collapsible {
+      @include mq($until: wide) {
+        margin-left: 0;
+      }
+      margin-left: $space;
+    }
+    >.b-collapsible__button {
+      margin-top: $space-sm;
+      margin-bottom: $space-sm;
+      margin-left: $space-xl;
+      padding-right: $space-sm;
+      @include mq($from: wide) {
+        width: 62%;
+      }
+    }
+    >.b-collapsible__content {
+      padding-left: $space-xl;
+      @include mq($from: wide) {
+        width: 62%;
+      }
+    }
+    >.b-collapsible__meta-content {
+      width: 30%;
+      font-size: $font-xs;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      border-left: 1px solid $grey-light;
+      box-sizing: border-box;
+
+      .b-icon-with-text {
+        text-transform: uppercase;
+        margin-bottom: $space-sm;
+      }
+    }
+    >.b-collapsible__meta-content-mobile {
+      @include mq($until: wide) {
+        display: block;
+      }
+    }
+    >.b-collapsible__footer {
+      margin-left: $space-lg;
+      padding-bottom: $space;
+      width: 100%;
+      justify-content: flex-start;
+      button {
+        margin-right: $space;
+      }
+      .b-button--primary {
+        display: none;
+      }
+    }
+  }
+  
+  &--active.b-collapsible--background {
+    background: white;
+    border: 1px solid $grey-light;
+    margin-left: -$space-lg;
+    margin-bottom: $space;
+    padding-left: $space-xl*.88;
+    padding-right: $space;
+  }
+
+  &__meta-content {
+    background: $grey-lighter;
+    display: none;
+    padding: $space;
+  }
+
+  &--active .b-collapsible__meta-content {
+    @include mq($from: wide) {
+      display: block;
+    }
+  }
+
+  &__meta-content-mobile {
+      font-size: $font-xs;
+      width: 90%;
+      padding-left: $space-lg;
+      .b-icon-with-text {
+        text-transform: uppercase;
+        padding: 0;
+        border: 0;
+      }
+      display: none;
+    }
 
   &__code {
     font-weight: normal;
@@ -38,8 +187,8 @@
 
   &__button {
     position: relative;
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: auto;
     background: none;
     border: 0;
     text-align: left;
@@ -51,29 +200,58 @@
     &:hover {
       color: $link-color;
     }
+    
+    &:focus {
+      outline: none;
+      color: $blue;
+      h5 {
+        font-weight: bold;
+      }
+    }
 
     &:before {
       display: block;
       position: absolute;
       content: ' ';
-      width: 0.75em;
-      height: 0.75em;
-      margin-left: -$left-space;
+      width: 20px;
+      height: 20px;
+      margin-left: -$space;
       transform: rotate(90deg);
       background-image: url(../static/icons/chevron.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      left: 0;
-      top: 0.25em;
+      left: 0px;
+      top: 7px;
     }
 
     &:active {
       color: $black;
     }
-
+    
+    /* Dont add before-arrows when simple button inside Collapsible */
+    &.b-button {
+      &:before {
+        display: none;  
+      }
+      &:hover,:focus {
+        background: $primary-color;
+        color: white !important;
+      }
+    }
+    &--small {
+      padding-left: $space;
+      &:before {
+        margin-left: -$spaceSmall/4;
+        top: 0;
+      }
+      h4 {
+        font-size: $font-h5;
+      }
+    }
     &--subtle {
       font-size: $meta-text;
       box-shadow: none !important;
+      padding-left: 0;
       > * {
         display: inline !important;
         border-bottom: 1px dashed $black;
@@ -83,21 +261,50 @@
         display: none;
       }
     }
-
     &--medium {
       &:before {
-        top: 0.25em;
+        top: 5px;
         width: 0.66em;
         height: 0.66em;
       }
     }
-    &--small {
-      padding-bottom: 1px;
+    
+    &--tiny {
+      display: block;
+      max-width: 400px;
+      padding-right: 20px;
+      position: relative;
+      border-bottom: 2px dashed $blue;
+      
+      h3,h4,h5 {
+        padding-bottom: 4px;
+        display: block;
+        text-transform: none;
+        font-size: $medium-large-text;
+        font-weight: normal;
+      }
+      
       &:before {
-        margin-left: -$left-space;
-        top: 0.25em;
-        width: 0.66em;
-        height: 0.66em;
+        display: none;
+      }
+      &:after {
+        display: block;
+        position: absolute;
+        content: '+';
+        font-size: 20px;
+        color: $blue;
+        width: 16px;
+        height: 16px;
+        margin-left: -$space;
+        transform: rotate(0deg);
+        right: 0;
+        top: -2px;
+        
+      }
+      &.b-collapsible__button--active:after {
+        transform: rotate(45deg);
+        font-size: 26px;
+        right: -3px;
       }
     }
 
@@ -110,18 +317,46 @@
   }
   &__content {
     animation: fadeInUp 300ms ease;
-    margin-top: 0.5rem;
-    margin-left: -$left-space;
+    padding-bottom: $space;
 
+    p {
+      margin-bottom: 0;
+      
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    // Specific for "kontradiskjon" collapsibles
+    .b-collapsible__content--contra p {
+      margin-top: 0;
+      margin-bottom: $space;
+    }
+    
+    h4 + div {
+      margin-top: $spaceSmall;
+    }
+    h3, h4 {
+      padding-top: $space;
+      display: inline-block !important;
+    }
+    h3:first-child, h4:first-child {
+      padding-top: 0;
+    }
+    .b-collapsible__heading {
+      padding: 0;
+      text-transform: none;
+    }
+    button h4 {
+      margin: 0;
+    }
+    .b-collapsible__button--active {
+      margin-bottom: $spaceSmall;
+    }
+    
     &--small {
       font-size: $meta-text;
       margin-left: 0;
-    }
-  }
-  &__heading {
-    &:hover {
-      cursor: pointer;
-      // text-decoration: underline;
+      
     }
   }
   &__subheading {
@@ -132,5 +367,18 @@
   &__meta-heading {
     font-size: $meta-text;
     margin-top: 10px;
+  }
+  &__footer {
+    margin-top: $space;
+    margin-bottom: $spaceSmall;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--active .b-collapsible__footer {
+    display: flex;
+  }
+  &__meta-date {
+    font-size: $meta-text;
   }
 }

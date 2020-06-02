@@ -1,0 +1,25 @@
+.b-product-search {
+  margin-top: $space-xs;
+  margin-bottom: $space-md;
+
+  &__title {
+    margin-top: $space-sm;
+  }
+
+  &__content {
+    margin-top: $space-sm;
+    margin-bottom: $space-lg;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--collapsed {
+    margin: 0;
+
+    .b-product-search__content {
+      margin: 0;
+    }
+  }
+}
