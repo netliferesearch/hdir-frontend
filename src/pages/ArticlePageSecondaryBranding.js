@@ -45,33 +45,30 @@ const ArticlePageSecondaryBranding = () => (
             <p>
               Noe om veilederne her.
             </p>
-           
+
+            <div className="l-mt-4">
+              <hr className="b-hr b-hr--grey-light" />
+              <div className="l-mt-1 b-secondary-logos">
+                <div className="b-secondary-logos__logolist">
+                  <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+
+                </div>
+                <div className="b-secondary-logos__text">
+                  <p>
+                    Veilederne er utgitt av Helsedirektoratet. <br />
+                    Faglig innhold levert av Folkehelseinstituttet
+                  </p>
+                </div>
+              </div>
+            </div>
+            
           </article>
         </div>
       </main>
     </div>
 
-    <div className="l-container l-mt-1">
-      <div className="row">
-        <div className="col-md-8 col-xs-12 col-md-offset-4">
-        <hr className="b-hr b-hr--grey-light" />
-        <div className="l-mt-1 b-secondary-logos">
-          <div className="b-secondary-logos__logolist">
-            <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
 
-          </div>
-          <div className="b-secondary-logos__text">
-            <p>
-              Veilederne er utgitt av Helsedirektoratet. <br />
-              Faglig innhold levert av Folkehelseinstituttet
-            </p>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="l-container l-mt-3 l-mb-5">
+    <div className="l-container l-mt-2 l-mb-5">
       <div className="row">
         <div className="col-md-8 col-xs-12 col-md-offset-4">
           <PageMeta publishDate="11. august 2008" editDate="12. august 2018" />

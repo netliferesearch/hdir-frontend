@@ -228,6 +228,27 @@ const ChapterPage = () => (
                 Henvis pasienten til helsenorge.no for mer informasjon
               </Link>
             </div>
+
+            <div className="l-mt-3">
+              <hr className="b-hr b-hr--grey-light" />
+              <div className="l-mt-1 b-secondary-logos">
+                <div className="b-secondary-logos__logolist">
+                  <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+                  <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+                  <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+                  <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+                  <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+
+                </div>
+                <div className="b-secondary-logos__text">
+                  <p>
+                    Veilederne er utgitt av Helsedirektoratet. <br />
+          Faglig innhold levert av Folkehelseinstituttet
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="l-mt-3">
               <PageMeta
                 publishDate="11. oktober 2008"
@@ -238,6 +259,7 @@ const ChapterPage = () => (
         </div>
       </div>
     </main>
+
 
     <div className="l-container">
       <div className="l-mt-4 l-mb-4">
