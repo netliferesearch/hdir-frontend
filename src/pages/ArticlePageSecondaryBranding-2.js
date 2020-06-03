@@ -10,7 +10,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import SectionSidebar from '../components/SectionSidebar';
 import Statistics from '../components/Statistics';
 
-const ArticlePageSecondaryBranding = () => (
+const ArticlePageSecondaryBrandingTwo = () => (
 
   <>
     <div className="l-container">
@@ -57,6 +57,8 @@ const ArticlePageSecondaryBranding = () => (
         <hr className="b-hr b-hr--grey-light" />
         <div className="l-mt-1 b-secondary-logos">
           <div className="b-secondary-logos__logolist">
+            <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+            <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
             <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
 
           </div>
@@ -110,4 +112,4 @@ const ArticlePageSecondaryBranding = () => (
   </>
 );
 
-export default ArticlePageSecondaryBranding;
+export default ArticlePageSecondaryBrandingTwo;

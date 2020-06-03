@@ -10,7 +10,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import SectionSidebar from '../components/SectionSidebar';
 import Statistics from '../components/Statistics';
 
-const ArticlePageSecondaryBranding = () => (
+const ArticlePageSecondaryBrandingFour = () => (
 
   <>
     <div className="l-container">
@@ -58,11 +58,14 @@ const ArticlePageSecondaryBranding = () => (
         <div className="l-mt-1 b-secondary-logos">
           <div className="b-secondary-logos__logolist">
             <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+            <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
 
           </div>
           <div className="b-secondary-logos__text">
             <p>
               Veilederne er utgitt av Helsedirektoratet. <br />
+              Faglig innhold levert av Folkehelseinstituttet
+              Faglig innhold levert av Folkehelseinstituttet
               Faglig innhold levert av Folkehelseinstituttet
             </p>
           </div>
@@ -110,4 +113,4 @@ const ArticlePageSecondaryBranding = () => (
   </>
 );
 
-export default ArticlePageSecondaryBranding;
+export default ArticlePageSecondaryBrandingFour;
