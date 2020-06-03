@@ -1,0 +1,33 @@
+.b-secondary-logos {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__logolist {
+    flex-basis: 100px;
+    display: flex;
+    margin-bottom: 1em;
+    align-items: flex-start;
+    
+    img {
+      margin-right: .5em;
+
+      &:last-child {
+        margin-right: 1em;
+      }
+    }
+  }
+  
+  &__text {
+    font-size: $font-xs;
+    min-width: 300px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin-bottom: 1em;
+    
+    p {
+      border-left: 1px solid $grey;
+      padding-left: 1em;
+      margin: 0;
+    }
+  }
+}

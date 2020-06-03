@@ -12,6 +12,7 @@ import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 // Import pages
 import ArticlePage from './pages/ArticlePage';
+import ArticlePageSecondaryBranding from './pages/ArticlePageSecondaryBranding';
 import ArticlePageNoH2 from './pages/ArticlePageNoH2';
 import ArticlePageWithForm from './pages/ArticlePageWithForm';
 import ArticlePageWithIframe from './pages/ArticlePageWithIframe';
@@ -97,6 +98,7 @@ class App extends Component {
               <Route path="/produkt" component={ProductPage} />
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/artikkel" component={ArticlePage} />
+              <Route path="/artikkel-sekundar-branding" component={ArticlePageSecondaryBranding} />
               <Route path="/artikkel-ingen-h2" component={ArticlePageNoH2} />
               <Route
                 path="/artikkel-med-skjema"
