@@ -1,6 +1,9 @@
 .b-secondary-logos {
   display: flex;
   flex-wrap: wrap;
+  @include mq($until: $tablet) {
+    display: block;
+  }
 
   &__logolist {
     flex-basis: 100px;
