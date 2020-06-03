@@ -7,6 +7,9 @@
     display: flex;
     margin-bottom: 1em;
     align-items: flex-start;
+    @include mq($until: $tablet) {
+      flex-wrap: wrap;
+    }
     
     img {
       margin-right: .5em;
