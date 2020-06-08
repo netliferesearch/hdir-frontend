@@ -21,7 +21,7 @@ const contentClasses = (toggled) =>
     'b-product-search--hidden': !toggled
   });
 
-const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyData, tema, type }) => {
+const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyData, tema, type, endpoint }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [toggleMoreResults, setToggleMoreResults] = useState(false);
@@ -32,7 +32,9 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
     ]
   });
   const [searchString, setSearchString] = useState('');
-  const liveSearchUrl = 'https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/realtimesearch';
+  const liveSearchUrl = endpoint
+    ? endpoint
+    : 'https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/realtimesearch';
 
   if (collapsed && !toggled) {
     setToggled(true);
@@ -67,8 +69,7 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
         formData.append('searchQuery', value);
         formData.append('malgruppe', malgruppe);
         formData.append('tema', tema);
-        formData.append('type', tema);
-        // formData.append('type', 'helsedirektoratet:nyhet');
+        formData.append('type', type);
         formData.append('flatTree', flatTree);
         doSearch(formData);
       }
