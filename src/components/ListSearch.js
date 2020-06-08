@@ -63,10 +63,12 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
         setLoading(true);
         let formData = new FormData();
         formData.append('contentId', productId);
+        // formData.append('contentId', '86eadeff-b6a8-4945-abe8-b1a098e5da24');
         formData.append('searchQuery', value);
         formData.append('malgruppe', malgruppe);
-        formData.append('tema', type);
+        formData.append('tema', tema);
         formData.append('type', tema);
+        // formData.append('type', 'helsedirektoratet:nyhet');
         formData.append('flatTree', flatTree);
         doSearch(formData);
       }
@@ -90,11 +92,21 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
   }
 
   // Construct an object containing all results/data
-  const modifiedResult = () => ({
-    total: searchResults.total || null,
-    results: 
-      searchResults && searchResults.results.length > 0 ? searchResults.results.map(result => result) : []
-  })
+  const modifiedResult = () => {
+    if (searchResults.length > 0) {
+      return {
+      total: searchResults.total || null,
+      results: 
+        searchResults && searchResults.results.length > 0 ? searchResults.results.map(result => result) : []
+      }
+    }
+    else {
+      return {
+        total: 0,
+        results: []
+      }
+    }
+  }
   // const modifiedResult = () => ({
   //   total: searchResults.total || null,
   //   results: 
