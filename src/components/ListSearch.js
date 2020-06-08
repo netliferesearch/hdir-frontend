@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { debounce } from 'lodash';
@@ -25,20 +25,17 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [toggleMoreResults, setToggleMoreResults] = useState(false);
-  const [searchResults, setSearchResults] = useState({
-    total: 1,
-    results: [
-      dummyData
-    ]
-  });
+  const [searchResults, setSearchResults] = useState({});
   const [searchString, setSearchString] = useState('');
   const liveSearchUrl = endpoint
     ? endpoint
-    : 'https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/realtimesearch';
+    : 'https://helsedirektoratet-helsenett-xpqa.enonic.cloud/rapporter/_/service/helsedirektoratet/realtimesearch';
 
-  if (collapsed && !toggled) {
-    setToggled(true);
-  }
+  useEffect(() => {
+    if (collapsed === true && toggled === false) {
+      setToggled(true);
+    }
+  }, [collapsed]);
 
   function toggle() {
     setToggled(!toggled);
@@ -51,6 +48,7 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
     })
       .then(res => res.json())
       .then(data => {
+        console.log('data', data)
         setSearchResults(data);
         setToggleMoreResults(false);
         setLoading(false);
@@ -64,13 +62,13 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
         setSearchString(value);
         setLoading(true);
         let formData = new FormData();
-        formData.append('contentId', productId);
+        productId && formData.append('contentId', productId);
         // formData.append('contentId', '86eadeff-b6a8-4945-abe8-b1a098e5da24');
         formData.append('searchQuery', value);
-        formData.append('malgruppe', malgruppe);
-        formData.append('tema', tema);
-        formData.append('type', type);
-        formData.append('flatTree', flatTree);
+        malgruppe && formData.append('malgruppe', malgruppe);
+        tema && formData.append('tema', tema);
+        type && formData.append('type', type);
+        flatTree && formData.append('flatTree', flatTree);
         doSearch(formData);
       }
       if (value.length === 0) {
@@ -91,42 +89,9 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
       parts.map(part => part.toLowerCase() === highlight.toLowerCase() ? <strong>{part}</strong> : part)
     ] 
   }
-
-  // Construct an object containing all results/data
-  const modifiedResult = () => {
-    if (searchResults.length > 0) {
-      return {
-      total: searchResults.total || null,
-      results: 
-        searchResults && searchResults.results.length > 0 ? searchResults.results.map(result => result) : []
-      }
-    }
-    else {
-      return {
-        total: 0,
-        results: []
-      }
-    }
-  }
-  // const modifiedResult = () => ({
-  //   total: searchResults.total || null,
-  //   results: 
-  //     searchResults && searchResults.results.length > 0 ? searchResults.results.map(result => {
-  //       return {
-  //         type: result.type,
-  //         url: result.url,
-  //         fields: {
-  //           heading: getHighlightedText(result.fields.heading, searchString),
-  //           deadline: result.fields.deadline
-  //         }
-  //       }
-  //     }) : []
-  // })
-
   // Split arrays in two, so we can have "See all" toggle buttons
-  const results = modifiedResult().results.length > 0 ? modifiedResult().results.splice(0, 7) : null;
-  const resultsRest = modifiedResult().results.length > 7 ? modifiedResult().results.splice(7) : null;
-
+  const results = searchResults && searchResults.result ? searchResults.result.splice(0, 7) : [];
+  const resultsRest = searchResults && searchResults.result && searchResults.result.length > 7 ? searchResults.result.splice(7) : [];
   return (
     <>
     { collapsed ? (
@@ -181,13 +146,12 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
           </svg>
         </div>
       ) : null}
-
-      {toggled && searchString.length > 0 && modifiedResult().total > 0 && (
+      {toggled && searchString.length > 0 && searchResults.result && searchResults.result.length > 0 && (
         <div className="l-mb-4">
             {
-              searchString && modifiedResult().total > 0 ? (
+              searchString && searchResults.total > 0 ? (
               <h2 className="b-product-search__title">
-                {modifiedResult().total} treff på «{searchString}» i {label}
+                {searchResults.total} treff på «{searchString}» i {label}
               </h2>
               ) : null
             }
@@ -207,7 +171,7 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
                   {
                     resultsRest ? (
                     <div className="l-mt-1">
-                      <Button onClick={() => setToggleMoreResults(!toggleMoreResults)} secondary>Vis alle ({modifiedResult().length})</Button>
+                      <Button onClick={() => setToggleMoreResults(!toggleMoreResults)} secondary>Vis alle ({searchResults.total})</Button>
                     </div>
                     ) : null
                   }
