@@ -14,7 +14,7 @@ const ProductPageMalgruppe = () => {
   const [toggle, setToggle] = useState(false);
   
   return (
-    <div className="l-container">
+    <div className="l-container l-mb-2">
       <Breadcrumbs
         paths={[
           {
@@ -456,15 +456,8 @@ const ProductPageMalgruppe = () => {
       </div>
       <div className="l-mt-2">
         <Button clean small icon="../icons/print.svg">
-          Skriv ut hele retningslinjen
+          Skriv ut / lag PDF
         </Button>
-
-        <div className="col-xs-12 l-mt-2 l-mb-5">
-          <Link href="#a" wideButton arrow color="purple">
-            For å lese om symptomer, kostholdsråd og andre tips ved
-            svangerskapsdiabetes, kan du gå til helsenorge.no.
-          </Link>
-        </div>
       </div>
     </div>
   )

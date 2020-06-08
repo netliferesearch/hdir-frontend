@@ -12,6 +12,7 @@ const RecommendationPage = () => (
         background
         id="test"
         heading="Sekundær peritonitt"
+        date="Sist faglig oppdatert: 11. juni 2020"
       >
         <Collapsible
           heading="Sterk anbefaling"
@@ -143,6 +144,7 @@ const RecommendationPage = () => (
         background
         id="test2"
         heading="Sekundær peritonitt"
+        date="Sist faglig oppdatert: 11. juni 2020"
       >
         <Collapsible
           heading="Sterk anbefaling"
@@ -155,15 +157,6 @@ const RecommendationPage = () => (
         <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
       </Collapsible>
     </main>
-      <div className="row">
-        <div className="col-xs-12 col-md-9">
-          <div className="l-mt-3 t-sm-right">
-            <Link href="#a" secondary small>
-              Sist faglig oppdatert: 11. august 2018
-            </Link>
-          </div>
-        </div>
-      </div>
     </div>
     <div className="l-mt-4">
       <Box color="grey" square noPadding>

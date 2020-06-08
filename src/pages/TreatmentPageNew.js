@@ -1,9 +1,10 @@
 import React from 'react';
 import shortid from 'shortid';
+import Button from '../components/Button';
 import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
 import IconWithText from '../components/IconWithText';
-import NavList from '../components/NavList';
+import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
 import FilterList from '../components/FilterList';
 import Box from '../components/Box';
@@ -158,61 +159,15 @@ const TreatmentPageNew = () => {
             </div>
           </div>
           <div className="l-mt-4">
-            <Link wideButton arrow color="purple">
-              Les mer om symptomer, årsaker og behandling av lungekreft på{' '}
-              <span style={{ textDecoration: 'underline' }}>
-                helsenorge.no
-                </span>
-                .
-              </Link>
+            <PageMeta
+              editDate="11. august 2018"
+            />
           </div>
-          <div className="row">
-            <div className="col-xs-12 l-mt-4">
-              <Box color="green">
-                <ChapterHeading
-                  heading="Materiell til pasienter og pårørende"
-                  subheading="LAST NED TRYKKSAKER"
-                  h="h3"
-                  line="none"
-                />
-                <NavList
-                  small
-                  list={[
-                    {
-                      title: 'FAKTAARK',
-                      url: '#a',
-                      meta: 'Pakkeforløp på 1-2-3',
-                      infoText: 'PDF',
-                      file: true
-                    }
-                  ]}
-                />
-              </Box>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-12 l-mt-4">
-              <Box>
-                <h3 className="h4">RELATERTE PRODUKTER</h3>
-                <div className="l-mt-1">
-                  <NavList
-                    small
-                    list={[
-                      {
-                        title: 'Relatert retninglinje',
-                        topic: 'Nasjonal faglig retninglinje',
-                        url: '#a'
-                      },
-                      {
-                        title: 'Lungekreft, mesoteliom og thymom',
-                        topic: 'Handlinngsprogram',
-                        url: '#b'
-                      }
-                    ]}
-                  />
-                </div>
-              </Box>
-            </div>
+          <div className="l-mt-2">
+            <Button clean small icon="../icons/print.svg">
+              Skriv ut / lag PDF
+            </Button>
+
           </div>
         </div>
       </main>

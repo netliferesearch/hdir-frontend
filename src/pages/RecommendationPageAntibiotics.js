@@ -182,6 +182,7 @@ const RecommendationPageAntibiotics = () => (
             <Collapsible
               background
               heading="Noe annet"
+              date="Sist faglig oppdatert: 11. juni 2020"
             >
               <Collapsible
                 heading="Sterk anbefaling"

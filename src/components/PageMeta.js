@@ -9,7 +9,7 @@ const PageMeta = ({ publishDate, editDate, url }) => (
       </span>
     )}
     {editDate && (
-      <span className="b-page-meta__text">Sist endret: {editDate}</span>
+      <span className="b-page-meta__text">Sist faglig oppdatert: {editDate}</span>
     )}
 
     {url && (

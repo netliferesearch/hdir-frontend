@@ -104,6 +104,7 @@ const ChapterPage = () => {
               <Collapsible
                 background
                 heading="Hodeomkrets: Helsestasjonen bør måle hodeomkrets på barn 0-2 år"
+                date="Sist faglig oppdatert: 11. juni 2020"
               >
                 <Collapsible
                   heading="Sterk anbefaling"
@@ -143,9 +144,10 @@ const ChapterPage = () => {
               <Collapsible
                 background
                 heading="Veiing og måling: Helsestasjon bør måle vekt og lengde/høyde på barn 0-5 år"
+                date="Sist faglig oppdatert: 11. juni 2020"
               >
                 Innhold
-        </Collapsible >
+              </Collapsible >
 
               <ChapterHeading
                 heading="1.1 Underkapittel"
@@ -156,15 +158,14 @@ const ChapterPage = () => {
                 url="#a"
               />
               <div className="l-mt-4">
-                <Link wideButton arrow color="purple">
-                  Henvis pasienten til helsenorge.no for mer informasjon
-            </Link>
-              </div>
-              <div className="l-mt-2">
                 <PageMeta
-                  publishDate="11. oktober 2008"
                   editDate="11. august 2018"
                 />
+              </div>
+              <div className="l-mt-2">
+                <Button clean small icon="../icons/print.svg">
+                  Skriv ut / lag PDF
+                </Button>
               </div>
             </div>
           </div>
