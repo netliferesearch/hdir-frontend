@@ -5,7 +5,7 @@ import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Link from '../components/Link';
+import Button from '../components/Button';
 import ProductSearch from '../components/ProductSearch';
 import Quote from '../components/Quote';
 import { dummyFlatTree } from '../components/dummyFlatTree'
@@ -79,6 +79,7 @@ const ChapterPage = () => {
             <Collapsible
               background
               heading="§ 18. Melding om helsepersonells virksomhet"
+              date="Sist faglig oppdatert: 11. juni 2020"
             >
                 <br />
                 <h3>Lovtekst:</h3>
@@ -162,6 +163,7 @@ const ChapterPage = () => {
               <Collapsible
                 background
                 heading="§ 19. Melding til arbeidsgiver om bierverv og andre engasjement i annen virksomhet"
+                date="Sist faglig oppdatert: 11. juni 2020"
               > 
                 <br />
                 <h3>Lovtekst</h3>
@@ -222,15 +224,14 @@ const ChapterPage = () => {
               </Collapsible>
             
               <div className="l-mt-4">
-                <Link wideButton arrow color="purple">
-                  Henvis pasienten til helsenorge.no for mer informasjon
-                </Link>
-              </div>
-              <div className="l-mt-2">
                 <PageMeta
-                  publishDate="11. oktober 2008"
                   editDate="11. august 2018"
                 />
+              </div>
+              <div className="l-mt-2">
+                <Button clean small icon="../icons/print.svg">
+                  Skriv ut / lag PDF
+                </Button>
               </div>
             </div>
           </div>

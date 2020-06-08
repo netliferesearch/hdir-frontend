@@ -177,6 +177,7 @@ const NinjaStateRecommendation = () => (
                   </Collapsible>
                 </Collapsible>
               </Collapsible>
+              <div class="b-collapsible__meta-date l-mt-4">Sist faglig oppdatert: 11. juni 2020</div>
             </div>
           </article>
       </main>

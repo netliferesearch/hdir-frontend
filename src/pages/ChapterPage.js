@@ -5,7 +5,7 @@ import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Link from '../components/Link';
+import Button from '../components/Button';
 import ProductSearch from '../components/ProductSearch';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 
@@ -99,34 +99,37 @@ const ChapterPage = () => {
             <Collapsible
               background
               heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
+              date="Sist faglig oppdatert: 11. juni 2020"
             >
             </Collapsible >
             <Collapsible
               background
               heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
+              date="Sist faglig oppdatert: 11. juni 2020"
             >
             </Collapsible >
             <Collapsible
               background
               heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
+              date="Sist faglig oppdatert: 11. juni 2020"
             >
             </Collapsible >
             <Collapsible
               background
               heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
+              date="Sist faglig oppdatert: 11. juni 2020"
             >
             </Collapsible >
             
               <div className="l-mt-4">
-                <Link wideButton arrow color="purple">
-                  Henvis pasienten til helsenorge.no for mer informasjon
-                </Link>
-              </div>
-              <div className="l-mt-2">
                 <PageMeta
-                  publishDate="11. oktober 2008"
                   editDate="11. august 2018"
                 />
+              </div>
+              <div className="l-mt-2">
+                <Button clean small icon="../icons/print.svg">
+                  Skriv ut / lag PDF
+                </Button>
               </div>
             </div>
           </div>

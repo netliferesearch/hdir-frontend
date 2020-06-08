@@ -127,7 +127,6 @@ const ChapterPageWithLead = () => {
               </div>
               <div className="l-mt-2">
                 <PageMeta
-                  publishDate="11. oktober 2008"
                   editDate="11. august 2018"
                 />
               </div>
