@@ -36,6 +36,7 @@ import LisLearning from './pages/LisLearning';
 import LisLearningActivities from './pages/LisLearningActivities';
 import LisSpeciality from './pages/LisSpeciality';
 import MemoPage from './pages/MemoPage';
+import MemoPageEdit from './pages/MemoPageEdit';
 import MedicinePage from './pages/MedicinePage';
 import MedicineListPage from './pages/MedicineListPage';
 import ListNews from './pages/ListNews';
@@ -127,6 +128,7 @@ class App extends Component {
               <Route path="/anbefaling-antibiotika" component={RecommendationPageAntibiotics} />
               <Route path="/ninja-state" component={NinjaStateRecommendation} />
               <Route path="/rundskriv" component={MemoPage} />
+              <Route path="/rundskriv-edit" component={MemoPageEdit} />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
               <Route path="/rapport" component={ReportPage} />
               <Route path="/horinger" component={ListHearings} />
