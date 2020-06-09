@@ -76,12 +76,8 @@ const MemoPageEdit = () => {
             />
             
 
-            <Collapsible
-              background
-              heading="Merknader til § 5 – 1. ledd"
-              date="Sist faglig oppdatert: 11. juni 2020"
-            >
-              <br />
+            <div className="l-mt-2 l-mb-3">
+              <h2>Merknader til § 5 – 1. ledd</h2>
               <Collapsible
                 h="h3"
                 heading="§5 – 1.ledd"
@@ -115,33 +111,37 @@ const MemoPageEdit = () => {
               </p>
                   </Quote>
                 </Collapsible>
-              <h3>Merknad</h3>
-              <p>
-                Stønad etter honorartakst innebærer at pasienten fritas fra å betale egenandel.
-              </p>
-              <p>
-                Formålet med første ledd er å gi myndighetene oversikt over
-                helsepersonelldekningen, og dermed ha mulighet til å iverksette
-                styringstiltak ved behov. Andre ledd skal gi tilsynsmyndigheten
-                mulighet til å vurdere tilsynsmessig oppfølgning.
-              </p>
-            </Collapsible >
-            <Collapsible
-              background
-              heading="Merknader til takst 123 – beskrivelse"
-              date="Sist faglig oppdatert: 11. juni 2020"
-            >
-              <h3 className="l-mt-1">Merknad</h3>
-              <p>
-                Stønad etter honorartakst innebærer at pasienten fritas fra å betale egenandel.
-              </p>
-              <p>
-                Formålet med første ledd er å gi myndighetene oversikt over
-                helsepersonelldekningen, og dermed ha mulighet til å iverksette
-                styringstiltak ved behov. Andre ledd skal gi tilsynsmyndigheten
-                mulighet til å vurdere tilsynsmessig oppfølgning.
-              </p>
-            </Collapsible >
+                <div className="l-ml-2">
+                  <h3 className="l-mb-1">Merknad</h3>
+                  <p>
+                    Stønad etter honorartakst innebærer at pasienten fritas fra å betale egenandel.
+                  </p>
+                  <p>
+                    Formålet med første ledd er å gi myndighetene oversikt over
+                    helsepersonelldekningen, og dermed ha mulighet til å iverksette
+                    styringstiltak ved behov. Andre ledd skal gi tilsynsmyndigheten
+                    mulighet til å vurdere tilsynsmessig oppfølgning.
+                  </p>
+                  <p>Sist faglig oppdatert: 11. juni 2020</p>
+                </div>
+              </div>
+
+              <div className="l-mt-2 l-mb-3">
+                <h2 className="l-mb-1">Merknader til takst 123 – beskrivelse</h2>
+                <div className="l-ml-2">
+                  <h3>Merknad</h3>
+                  <p>
+                    Stønad etter honorartakst innebærer at pasienten fritas fra å betale egenandel.
+                  </p>
+                  <p>
+                    Formålet med første ledd er å gi myndighetene oversikt over
+                    helsepersonelldekningen, og dermed ha mulighet til å iverksette
+                    styringstiltak ved behov. Andre ledd skal gi tilsynsmyndigheten
+                    mulighet til å vurdere tilsynsmessig oppfølgning.
+                  </p>
+                  <p>Sist faglig oppdatert: 11. juni 2020</p>
+                </div>
+            </div>
              
               <div className="l-mt-4">
                 <PageMeta
