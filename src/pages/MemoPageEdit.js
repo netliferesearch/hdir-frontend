@@ -28,23 +28,8 @@ const MemoPageEdit = () => {
           <div className="l-layout">
             <aside className="l-hide-to-lg l-sidebar l-bleed-right">
               <SectionSidebar
-                heading="Nasjonal faglig retningslinje"
+                heading="Rundskriv"
                 icon="./icons/Rundskriv_Veileder_til_lov.svg"
-                list={[
-                  {
-                    url: '#',
-                    description: '1. Lovens formål, virkeområder og definisjoner'
-                  },
-                  {
-                    url: '#',
-                    description: '2. Krav til helsepersonells yrkesutøvelse',
-                  },
-                  {
-                    url: '#',
-                    description: '3. Krav til organisering og virksomhet',
-                    active: true,
-                  },
-                ]}
               />
             </aside>
             <div className="l-article">
