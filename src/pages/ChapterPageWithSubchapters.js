@@ -19,6 +19,7 @@ const ChapterPage = () => {
       <main id="main">
         <div className="l-container">
           <Breadcrumbs
+            border
             paths={[
               {
                 name: 'Forsiden',
