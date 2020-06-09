@@ -103,7 +103,9 @@ const FrontPage = () => (
     </div>
     <div className="l-container l-mt-3 l-mb-5">
       <h1>Prototype</h1>
-      {renderPageItems(pages)}
+      <div className="frontpage-list">
+        {renderPageItems(pages)}
+      </div>
     </div>
   </div>
 );
