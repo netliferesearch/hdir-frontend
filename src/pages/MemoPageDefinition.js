@@ -81,6 +81,7 @@ const ChapterPage = () => {
                 background
                 heading="§ 19. Melding til arbeidsgiver om bierverv og andre engasjement i annen virksomhet"
                 date="Sist faglig oppdatert: 11. juni 2020"
+                id="test"
               > 
                 <br />
                 <h3>Lovtekst</h3>
