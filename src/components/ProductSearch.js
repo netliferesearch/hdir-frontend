@@ -248,6 +248,15 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
             }
         </div>
       )}
+      {
+        toggled && searchString.length > 0 && !loading && searchResults.total === 0 ? (
+          <div className="l-mb-4">
+            <div className="col-xs-12 l-mt-2 l-mb-3">
+              <p>0 treff på «{searchString}» i {label}</p>
+            </div>
+          </div>
+        ) : null
+      }
     </>
   );
 }
