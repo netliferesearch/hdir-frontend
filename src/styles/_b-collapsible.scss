@@ -4,6 +4,12 @@
   padding: $space-sm $space-md;
   border: 1px solid transparent;
 
+  &__button {
+    .b-collapsible__code {
+      float: right;
+    }
+  }
+
   .b-collapsible {
     background: none;
     border: none;
@@ -190,8 +196,8 @@
 
   &__button {
     position: relative;
-    display: inline-block;
-    width: auto;
+    display: block;
+    width: 100%;
     background: none;
     border: 0;
     text-align: left;
@@ -377,6 +383,11 @@
     display: none;
     justify-content: space-between;
     align-items: center;
+
+    .b-collapsible__button {
+      display: inline-block;
+      width: auto;
+    }
   }
   &--active .b-collapsible__footer {
     display: flex;

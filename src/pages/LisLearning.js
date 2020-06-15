@@ -33,9 +33,9 @@ const LisLearning = () => (
             <SectionSidebar
               heading="Spesialutdanning innen barnekirurgi"
               list={[
-                { title: 'Læringsmål', url: '#a' },
-                { title: 'Læringsaktiviteter', url: '#a' },
-                { title: 'Link til annen fritekst', url: '#a' }
+                { description: 'Læringsmål', url: '#a' },
+                { description: 'Læringsaktiviteter', url: '#a' },
+                { description: 'Link til annen fritekst', url: '#a' }
               ]}
             />
           </aside>
@@ -117,9 +117,6 @@ const LisLearning = () => (
                   alert="Some alert"
                   code="BAK 003"
                 >
-                  <Alert status="success">
-                    Vær oppmerksom på at dette atomet er på høring
-                  </Alert>
                   <p>
                     Kvinnen bør få kostveiledning og jevnlig oppfølging for å
                     oppnå tilfredsstillende blodsukker fastende og etter
@@ -142,7 +139,7 @@ const LisLearning = () => (
             <div className="l-mt-4">
               <ChapterHeading
                 heading="Perioperativ behandling"
-                line="none"
+                line="bottom"
                 h="h2"
               />
               <Collapsible
@@ -167,12 +164,6 @@ const LisLearning = () => (
                   å nå behandlingsmålene for glukose
                 </p>
               </Collapsible>
-              <div className="l-mt-2">
-                <Alert status="success">
-                  Vær oppmerksom på at dette atomet er på høring, og det er
-                  veldig viktig å få med seg
-                </Alert>
-              </div>
               <div className="l-mt-2">
                 <Collapsible heading="Utdypende tekst" size="medium">
                   <p>
