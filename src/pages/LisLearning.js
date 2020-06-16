@@ -5,12 +5,12 @@ import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
 import FilterList from '../components/FilterList';
 import Collapsible from '../components/Collapsible';
-import Alert from '../components/Alert';
+import Button from '../components/Button';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const LisLearning = () => (
   <>
-    <div className="l-container">
+    <div className="l-container l-mb-2 custom-lis">
       <Breadcrumbs
         paths={[
           {
@@ -209,24 +209,25 @@ const LisLearning = () => (
                   </p>
                 </Collapsible>
               </div>
+              <div className="l-mt-4">
+                <PageMeta
+                  publishDate="11. august 2008"
+                />
+              </div>
+              <div className="l-mt-2">
+                <Button clean small icon="../icons/print.svg">
+                  Skriv ut / lag PDF
+                </Button>
+              </div>
             </div>
           </article>
         </div>
       </main>
 
-      <div className="l-container l-mt-3 l-mb-5">
-        <div className="row">
-          <div className="col-md-8 col-xs-12 col-md-offset-4">
-            <PageMeta
-              publishDate="11. august 2008"
-              editDate="11. august 2018"
-            />
-          </div>
-        </div>
-      </div>
+      
     </div>
 
-    <Box color="grey" square noPadding>
+    <Box color="grey" square>
       <div className="l-container">
         <strong>Kontakt:</strong>
         <br />
