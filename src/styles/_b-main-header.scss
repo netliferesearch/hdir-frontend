@@ -79,3 +79,9 @@
     // animation-duration: 0.3s;
   }
 }
+
+// Temp fix for wrongly used class
+.l-container h1.b-main-header {
+  border: 0;
+  padding: 0;
+}
