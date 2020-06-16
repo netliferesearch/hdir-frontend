@@ -1,7 +1,7 @@
 .b-chapter-heading {
   display: block;
   position: relative;
-  padding: 0 $space-md $space-md 0;
+  padding: 0 $space-md $space-sm 0;
   @include underline(transparent);
 
   &--link {

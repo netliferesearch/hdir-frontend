@@ -124,7 +124,7 @@
       padding: $space-sm 0;
     }
     @include link-init($black);
-    padding: $space-sm;
+    padding: $space-sm*.8;
 
     &:hover {
       &[href] {
@@ -217,6 +217,6 @@
     }
   }
   &--small {
-    font-size: $meta-text;
+    font-size: $font-xs;
   }
 }
