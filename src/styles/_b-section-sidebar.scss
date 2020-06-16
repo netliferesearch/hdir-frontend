@@ -38,9 +38,11 @@
     }
 
     &--thick {
-      padding-top: $space-sm;
-      padding-bottom: $space-sm;
+      padding-top: 0;
+      padding-bottom: $space-xs;
       border-top: 0;
+      font-weight: 700;
+      font-size: $font-sm;
     }
   }
   &__icon {
