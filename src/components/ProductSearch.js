@@ -85,23 +85,39 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
     // Checking if target exists before proceeding, in case the internal link is for something else
 
     const collapsibleInternalLink = [
-      ...document.querySelectorAll("a[href^='#']")
+      ...document.querySelectorAll(".results a[href]")
     ];
     collapsibleInternalLink.forEach(item => {
       item.addEventListener("click", (event) => {
-        const target = item.getAttribute("href").replace("#", "");
+        const target = item.getAttribute("href");
+
+        // No hash, exit
+        if (!target.includes('#')) {
+          return;
+        }
+
+        const targetUrl = target.split("#")[0];
+        const targetHash = target.split("#")[1];
+        const currentUrl = window.location.href.replace(window.location.hash, "");
+
+        // Another URL, exit
+        if (targetUrl !== currentUrl) {
+          return;
+        }
         
-        if (document.getElementById(target)) {
-          const targetCollapsible = document.getElementById(target);
+        if (document.getElementById(targetHash)) {
+          const targetCollapsible = document.getElementById(targetHash);
           const targetCollapsibleTrigger = targetCollapsible.parentNode.querySelectorAll('button')[0];
           const isActive = targetCollapsible.parentNode.classList.contains('b-collapsible--active');
 
           // TOOD: If collapsible is already open, make sure the offset position is correct
           if (isActive) {
             targetCollapsibleTrigger.parentNode.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            event.preventDefault();
             return
           }
           targetCollapsibleTrigger.click();
+          event.preventDefault();
         }
       }, false);
     });
@@ -203,7 +219,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
       ) : null}
 
       {toggled && searchString.length > 0 && modifiedResult().total > 0 && (
-        <div className="l-mb-4">
+        <div className="l-mb-4 results">
             {
               searchString && modifiedResult().total > 0 ? (
               <h2 className="b-product-search__title">
