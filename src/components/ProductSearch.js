@@ -51,11 +51,11 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setSearchResults(data);
         setToggleMoreRecommendations(false);
         setToggleMoreChapters(false);
         setLoading(false);
+        updateInternalLinksToCollapsibles();
       });
 
   const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
@@ -79,6 +79,34 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
     },
     [doSearch],
   );
+
+  const updateInternalLinksToCollapsibles = () => {
+    // If internal link to collapsible (i.e. search results), we need to trigger target collapsible
+    // Checking if target exists before proceeding, in case the internal link is for something else
+
+    const collapsibleInternalLink = [
+      ...document.querySelectorAll("a[href^='#']")
+    ];
+    collapsibleInternalLink.forEach(item => {
+      item.addEventListener("click", (event) => {
+        const target = item.getAttribute("href").replace("#", "");
+        
+        if (document.getElementById(target)) {
+          const targetCollapsible = document.getElementById(target);
+          const targetCollapsibleTrigger = targetCollapsible.parentNode.querySelectorAll('button')[0];
+          const isActive = targetCollapsible.parentNode.classList.contains('b-collapsible--active');
+
+          // TOOD: If collapsible is already open, make sure the offset position is correct
+          if (isActive) {
+            targetCollapsibleTrigger.parentNode.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            return
+          }
+          targetCollapsibleTrigger.click();
+        }
+      }, false);
+    });
+
+  }
 
   const getHighlightedText = (text, highlight) => {
     if (highlight.length < 2) {
