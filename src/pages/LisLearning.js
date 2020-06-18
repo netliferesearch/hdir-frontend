@@ -5,12 +5,12 @@ import ChapterHeading from '../components/ChapterHeading';
 import Box from '../components/Box';
 import FilterList from '../components/FilterList';
 import Collapsible from '../components/Collapsible';
-import Alert from '../components/Alert';
+import Button from '../components/Button';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const LisLearning = () => (
   <>
-    <div className="l-container">
+    <div className="l-container l-mb-2 custom-lis">
       <Breadcrumbs
         paths={[
           {
@@ -31,11 +31,11 @@ const LisLearning = () => (
         <div className="row l-mt-3">
           <aside className="col-md-3 col-xs-12 l-mb-4">
             <SectionSidebar
-              heading="SPESIALUTDANNING INNEN BARNEKIRURGI"
+              heading="Spesialutdanning innen barnekirurgi"
               list={[
-                { title: 'Læringsmål', url: '#a' },
-                { title: 'Læringsaktiviteter', url: '#a' },
-                { title: 'Link til annen fritekst', url: '#a' }
+                { description: 'Læringsmål', url: '#a' },
+                { description: 'Læringsaktiviteter', url: '#a' },
+                { description: 'Link til annen fritekst', url: '#a' }
               ]}
             />
           </aside>
@@ -117,9 +117,6 @@ const LisLearning = () => (
                   alert="Some alert"
                   code="BAK 003"
                 >
-                  <Alert status="success">
-                    Vær oppmerksom på at dette atomet er på høring
-                  </Alert>
                   <p>
                     Kvinnen bør få kostveiledning og jevnlig oppfølging for å
                     oppnå tilfredsstillende blodsukker fastende og etter
@@ -142,7 +139,7 @@ const LisLearning = () => (
             <div className="l-mt-4">
               <ChapterHeading
                 heading="Perioperativ behandling"
-                line="none"
+                line="bottom"
                 h="h2"
               />
               <Collapsible
@@ -167,12 +164,6 @@ const LisLearning = () => (
                   å nå behandlingsmålene for glukose
                 </p>
               </Collapsible>
-              <div className="l-mt-2">
-                <Alert status="success">
-                  Vær oppmerksom på at dette atomet er på høring, og det er
-                  veldig viktig å få med seg
-                </Alert>
-              </div>
               <div className="l-mt-2">
                 <Collapsible heading="Utdypende tekst" size="medium">
                   <p>
@@ -218,24 +209,25 @@ const LisLearning = () => (
                   </p>
                 </Collapsible>
               </div>
+              <div className="l-mt-4">
+                <PageMeta
+                  publishDate="11. august 2008"
+                />
+              </div>
+              <div className="l-mt-2">
+                <Button clean small icon="../icons/print.svg">
+                  Skriv ut / lag PDF
+                </Button>
+              </div>
             </div>
           </article>
         </div>
       </main>
 
-      <div className="l-container l-mt-3 l-mb-5">
-        <div className="row">
-          <div className="col-md-8 col-xs-12 col-md-offset-4">
-            <PageMeta
-              publishDate="11. august 2008"
-              editDate="11. august 2018"
-            />
-          </div>
-        </div>
-      </div>
+      
     </div>
 
-    <Box color="grey" square noPadding>
+    <Box color="grey" square>
       <div className="l-container">
         <strong>Kontakt:</strong>
         <br />

@@ -29,7 +29,7 @@ import NewsListPage from '../pages/NewsListPage';
 import NormativeContentPage from '../pages/NormativeContentPage';
 import ParentHearingPage from '../pages/ParentHearingPage';
 import ParentMemoPage from '../pages/ParentMemoPage';
-import PressReleasePage from '../pages/PressReleasePage';
+import ListBrochures from '../pages/ListBrochures';
 import ProductPage from '../pages/ProductPage';
 import ProfessionSelector from '../pages/ProfessionSelector';
 import RecommendationPage from '../pages/RecommendationPage';
@@ -205,9 +205,9 @@ storiesOf('Malverk', module)
   ));
   
 storiesOf('Malverk', module)
-  .add('Pressemelding', () => (
+  .add('Brosjyrer liste', () => (
     <HashRouter>
-      <PressReleasePage />
+      <ListBrochures />
     </HashRouter>
   ));
   

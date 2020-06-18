@@ -1,4 +1,5 @@
 $black: #212121;
+$white: white;
 $grey: #504f4f;
 $grey-light: #d8dada;
 $grey-lighter: #f7f7f7;
@@ -26,6 +27,9 @@ $yellow-warning: #f0c617;
 $red-warning: #ad0017;
 $secondary-color: $blue-dark;
 $primary-color: $orange-dark;
+$primary-color-light: $red-light;
+$primary-color-lighter: $yellow-light;
+$primary-color-lightest: $yellow-light;
 $link-color: $orange-dark;
 
 // List of colors
@@ -66,7 +70,6 @@ $extra-large-text: 2.5rem;
 $large-text: 1.8rem;
 $medium-large-text: 1.2rem;
 $meta-text: 0.8725rem;
-
 
 /* Typography */
 $font-body: 16px;
@@ -115,3 +118,7 @@ $arrow-white-down: '../static/icons/arrow_down_white.svg';
 $arrow-white-left: '../static/icons/arrow_left_white.svg';
 $arrow-white-right: '../static/icons/arrow_right_white.svg';
 $arrow-white-up: '../static/icons/arrow_up_white.svg';
+$search: '../static/icons/search.svg';
+$search-white: '../static/icons/search_white.svg';
+
+@import './variables-common';

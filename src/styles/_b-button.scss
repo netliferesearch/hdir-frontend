@@ -3,11 +3,21 @@
   color: white;
   background-color: $link-color;
   border: 2px solid $link-color;
-  padding: 0.5em 2em;
+  padding: $space-xs*1.25 $space-md;
   border-radius: 2em;
-  font-size: $base-font-size;
+  font-size: $font-body;
   white-space: nowrap;
   cursor: pointer;
+  transition: all .1s ease-out;
+
+  @include mq($until: $tablet) {
+    padding: $space-xs $space-md;
+  }
+  
+  &:hover {
+    background: transparent;
+    color: $link-color;
+  }
 
   &--download {
     &:after {
@@ -22,7 +32,7 @@
   }
 
   &--small {
-    font-size: $meta-text;
+    font-size: $font-body;
   }
   
   &--clean {
@@ -42,8 +52,8 @@
 
   &--secondary {
     border: 2px solid $link-color;
-    color: $link-color !important;
-    background: white;
+    color: $link-color;
+    background: transparent;
     &.b-button--arrow {
       &:after {
         @include pseudo-arrow($arrow-right);
@@ -53,22 +63,45 @@
       &:after {
         @include pseudo-arrow($arrow-down);
       }
+    }
+    
+    &:hover {
+      background: $link-color;
+      color: $white;
+    }
+  }
+  &.b-button--search {
+    &:after {
+      @include pseudo-arrow($search);
+    }
+    &:hover:after {
+      @include pseudo-arrow($search-white);
     }
   }
 
   &--secondary-dark {
-    border: 2px solid $secondary-color;
-    color: $secondary-color !important;
-    background: white;
+    border: 2px solid $blue-dark;
+    color: $blue-dark;
+    background: transparent;
     &.b-button--arrow {
       &:after {
         @include pseudo-arrow($arrow-right);
+      }
+      &:hover:after {
+        @include pseudo-arrow($arrow-white-right);
       }
     }
     &.b-button--download {
       &:after {
         @include pseudo-arrow($arrow-down);
       }
+      &:hover:after {
+        @include pseudo-arrow($arrow-white-down);
+      }
+    }
+    &:hover {
+      background: $link-color;
+      color: $white;
     }
   }
   

@@ -1,0 +1,36 @@
+.b-profession-picker {
+  text-align: right;
+  
+  @include mq($until: tablet) {
+    margin-bottom: $space-sm;
+    text-align: left;
+  }
+
+  .b-select {
+    margin-left: auto;
+  }
+
+  &--negative-margin {
+    margin-bottom: - $space-lg;
+
+    @include mq($until: tablet) {
+      margin-bottom: $space-sm;
+    }
+  }
+
+  &__label {
+    font-size: $font-xs;
+  }
+  
+  &__button {
+    font-size: $font-xs;
+    border-bottom: 1px solid $primary-color;
+    padding-bottom: 2px;
+    cursor: pointer;
+    margin: 0;
+
+    &:hover {
+      color: $primary-color
+    }
+  }
+}

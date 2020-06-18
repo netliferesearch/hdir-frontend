@@ -7,6 +7,16 @@ import Stickyfill from 'stickyfilljs';
 import { detect } from 'detect-browser';
 import createUniqueHeaders from './../utils/createUniqueHeadersUtil';
 
+// We need to iterate the parent elements to get the real offsetTop
+const getOffsetTop = element => {
+  let offsetTop = 0;
+  while (element) {
+    offsetTop += element.offsetTop;
+    element = element.offsetParent;
+  }
+  return offsetTop;
+}
+
 // Looks at the scroll position updates the active heading state based on the position
 function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // 20px gives us some headroom above the heading, so it always becomes active when linked to
@@ -15,7 +25,7 @@ function findActiveHeading(headings, scrollPos, setActiveHeading) {
   // Makes the nodeList to an array of htmlElements
   const htmlHeadings = [...headings];
   const scrolledPastItems = htmlHeadings.filter(
-    h => h.offsetTop < scrollPos() + headingSpace
+    h => getOffsetTop(h) < scrollPos() + headingSpace
   );
 
   setActiveHeading(scrolledPastItems.length);
@@ -26,11 +36,18 @@ const hasItems = arr => (arr && arr.length) ? true : false;
 const activeChild = children =>
   children ? children.some(x => x.active) : false;
 
-const linkClasses = (small, active, children) =>
+const linkClasses = ({small = false, active = false, children = false, parent = false} = {}) =>
   classNames({
-    'b-section-sidebar__link': true,
+    'b-section-sidebar__link': parent,
     'b-section-sidebar__link--small': small,
-    'b-section-sidebar__link--active': active || activeChild(children)
+    'b-section-sidebar__link--active': active,
+    'b-section-sidebar__link--children': children
+  });
+
+const subLinkClasses = ({active = false} = {}) =>
+  classNames({
+    'b-section-sidebar__sub-link': true,
+    'b-section-sidebar__sub-link--active': active
   });
 
 const sectionSidebarClasses = bottom =>
@@ -52,65 +69,69 @@ const ListItem = ({ props }) => {
     }, 0);
   }
   const renderItemContent = (
-    <>
-      {props.title && (
-        <div className="b-section-sidebar__title">{props.title}</div>
-      )}
-      {(props.prefix || props.description) && (
-        <div className="b-section-sidebar__meta">
-          {props.prefix && (
-            <div className="b-section-sidebar__prefix" role="presentation">
-              {props.prefix}
-            </div>
-          )}
-          {props.description && (
-            <div className="b-section-sidebar__description">
-              {props.description}
-            </div>
-          )}
-        </div>
-      )}
-    </>
+    (props.prefix || props.description) && (
+      <div className="b-section-sidebar__meta">
+        {props.prefix && (
+            <span className="b-section-sidebar__meta-prefix">{props.prefix}</span>
+        )}
+        {props.description && (
+            props.description
+        )}
+      </div>
+    )
   )
   const renderItemContentChildren = (
     <>
       {props.children && props.children.map(child => (
-        <ListItem
-          props={{
-            ...child,
-            small: true
-          }}
+        <a
+          className={subLinkClasses({active: child.active})}
           key={shortid.generate()}
-        />
+          href={child.url}>
+        {child.description}
+        </a>
       ))}
+      {props.readMoreLabel &&
+        (
+          <span
+            className={subLinkClasses({active: false})} 
+            key={shortid.generate()}>
+            {props.readMoreLabel}
+            </span>
+          )
+      }
     </>
   );
   const renderItemActive = (
-    <div
-      className={linkClasses(props.small, props.active, props.children)}
-    >
-      {renderItemContent}
-    </div>
+      renderItemContent
   );
   const renderItemInactive = (
-    <a
-      href={props.url}
-      onClick={setFocus}
-      className={linkClasses(props.small, props.active, props.children)}
+    <span
+      className={linkClasses()}
     >
       {renderItemContent}
-    </a>
+    </span>
   );
   return (
-    <>
-      {(!props.active && props.url)
-        ?
-        renderItemInactive
-        :
-        renderItemActive
-      }
-      {renderItemContentChildren}
-    </>
+    <div 
+      className={linkClasses({
+        small: props.small,
+        children: props.children,
+        active: props.active,
+        parent: true
+      })}>
+      <a
+        href={props.url}
+        onClick={setFocus}
+      >
+        {(!props.active && props.url)
+          ?
+          renderItemInactive
+          :
+          renderItemActive
+        }
+      </a>
+        {renderItemContentChildren}
+    </div>
   );
 };
 
@@ -135,7 +156,13 @@ const SectionSidebar = props => {
   useEffect(() => {
     // Fetches all headings on mount, if we don't have a list
     if (!hasItems(props.list) && !hasItems(headings)) {
-      setHeadings([...document.querySelectorAll('.t-body-text h2')]);
+      const headings1 = [...document.querySelectorAll('.t-body-text h2')];
+      const headings2 = [...document.querySelectorAll('.l-article h2')];
+      const elements = headings1.concat(headings2);
+      console.log('headings1', headings1);
+      console.log('headings2', headings2);
+      console.log('elements', elements);
+      setHeadings(elements);
     }
     // Gives all headings a url-safe id based on its text
     if (!hasItems(props.list) && hasItems(headings)) {
@@ -184,6 +211,7 @@ const SectionSidebar = props => {
     // Util that create unique id for the h2 tags
     createUniqueHeaders(headings);
   }
+  
 
   // Creates a list with links with either the headings, or the list it received
   // Bugfix for IE: Remove # symbol from text
@@ -201,7 +229,7 @@ const SectionSidebar = props => {
       <div className={sectionSidebarClasses(bottom)} ref={sidebarRef}>
         <div
           className={classNames({
-            'b-section-sidebar__heading': true,
+            'b-section-sidebar__heading': props.heading,
             'b-section-sidebar__heading--thick': !hasItems(props.list)
           })}
         >
@@ -276,6 +304,7 @@ SectionSidebar.propTypes = {
       description: PropTypes.string,
       prefix: PropTypes.string,
       url: PropTypes.string.isRequired,
+      readMoreLabel: PropTypes.string,
       active: PropTypes.bool,
       children: PropTypes.arrayOf(
         PropTypes.shape({

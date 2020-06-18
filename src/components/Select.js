@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import classNames from 'classnames';
 
-const selectClasses = (stacked, simple) =>
+const selectClasses = (stacked, simple, custompos) =>
   classNames({
     'b-select': true,
     'b-select--stacked': stacked,
+    'b-select--custom-position': custompos,
     'b-select--simple': simple
   });
 
@@ -16,8 +17,8 @@ const selectElementClasses = simple =>
     'b-select__select--simple': simple
   });
 
-const Select = ({ stacked, simple, label, placeholder, options }) => (
-  <div className={selectClasses(stacked, simple)}>
+const Select = ({ stacked, custompos, simple, label, placeholder, options }) => (
+  <div className={selectClasses(stacked, simple, custompos)}>
     <label htmlFor="profession-selector" className="b-select__label">
       {label}
     </label>
@@ -48,6 +49,7 @@ Select.propTypes = {
   placeholder: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.string),
   stacked: PropTypes.bool,
+  custompos: PropTypes.bool,
   simple: PropTypes.bool
 };
 

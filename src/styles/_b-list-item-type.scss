@@ -75,12 +75,14 @@
   &__deadline {
     font-size: $meta-text;
     color: $red !important;
+    margin-bottom: 0;
   }
   &__deadline--open {
     font-size: $meta-text;
     color: $green-warning !important;
   }
   &__lead {
+    margin-bottom: 0;
   }
 
   &__flex-wrapper {
@@ -99,6 +101,9 @@
   &__text {
     flex: 3;
     padding-right: 0.5rem;
+    h3 {
+      font-size: $font-md;
+    }
   }
   &__category {
     font-size: $meta-text;
@@ -108,11 +113,11 @@
     margin: 1rem 0 0 0;
   }
   &__date {
-    font-size: $meta-text;
+    font-size: $font-xs;
     margin-top: 0.5em;
   }
   &__subheading {
-    font-size: $meta-text;
+    font-size: $font-xs;
     margin-top: 0.5em;
     > * {
       &:first-child {

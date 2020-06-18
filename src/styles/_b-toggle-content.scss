@@ -1,0 +1,41 @@
+.b-toggle-content button {
+  display: none;
+}
+.b-toggle-content.toggle-mode button {
+  display: inline-block;
+}
+
+.toggle-mode .b-toggle-content__text {
+  position: relative;
+  height: 100px;
+  overflow-y: hidden;
+  &:after {
+    content:'';
+    width:100%;
+    height:100px;    
+    position:absolute;
+    left:0;
+    bottom:0;
+    background-image:linear-gradient(to top, $white, rgba(255,255,255,0));
+    pointer-events: none;
+    z-index: 9;
+  }
+  p:first-child {
+    margin-top: 0;
+  }
+}
+
+.b-toggle-content.show {
+
+  .b-toggle-content__text {
+    height: auto;
+    overflow-y: visible;
+
+    &:after {
+      display: none;
+    }
+  }
+  button {
+    display: none;
+  }
+}

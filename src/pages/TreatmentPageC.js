@@ -29,18 +29,17 @@ const TreatmentPageA = () => (
       />
       <main id="main">
         <div className="l-mt-3">
-          <ChapterHeading
-            heading="Mistanke om psykoseutvikling og psykoselidelser"
-            line="none"
-            h="h1"
-          />
         </div>
-        <div className="row l-mt-1">
-          <div className="col-xs-12 col-md-6 l-mt-1">
-            <IconWithText text="Pakkeforløp" icon="../icons/Pakkeforløp.svg" />
+        <div className="row l-mt-3">
+          <div className="col-xs-12 col-md-8">
+            <ChapterHeading
+              heading="Mistanke om psykoseutvikling og psykoselidelser"
+              line="none"
+              h="h1"
+            />
           </div>
-          <div className="col-xs-12 col-md-6 l-mt-1 t-small t-lg-right">
-            <Link href="#a">Hva er et pakkeforløp?</Link>
+          <div className="col-xs-12 col-md-4 b-flex b-flex--right  b-flex--skip-mobile">
+            <IconWithText text="Pakkeforløp" subtext="Hva er dette?" link="#" icon="../icons/Pakkeforløp.svg" />
           </div>
         </div>
 

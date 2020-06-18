@@ -5,7 +5,7 @@
   padding: calc(0.5vw + 1rem) 0;
   padding-top: calc(1.5vw + 1rem);
   border-bottom: 1px solid $grey-light;
-  margin-bottom: calc(0.5vw + 1.75rem);
+  margin-bottom: $space-md;
 
   &--qa {
   border-width: 4px;
@@ -14,7 +14,7 @@
   }
 
   &__logo {
-    height: 2rem;
+    height: 2.1rem;
     width: 100%;
     background-image: url($logo);
     background-repeat: no-repeat;
@@ -71,10 +71,17 @@
     flex-direction: row;
     min-height: 2.4rem;
     justify-content: space-between;
-    padding-top: calc(0.5vw + 1.2rem);
+    align-items: center;
+    padding-top: calc(1.5vw + 1rem);
   }
   &__menu-overlay-links {
     // animation-name: fadeInUp;
     // animation-duration: 0.3s;
   }
+}
+
+// Temp fix for wrongly used class
+.l-container h1.b-main-header {
+  border: 0;
+  padding: 0;
 }

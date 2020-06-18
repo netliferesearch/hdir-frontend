@@ -19,7 +19,9 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription }
   <div className="b-article-intro">
     <div className={imageToggle(image, feature)}>
       <h1>
-        <div className="b-article-intro__topic">{topic}</div>
+        { topic ? (
+          <div className="b-article-intro__topic">{topic}</div>
+        ) : null}
         {heading}
       </h1>
       <p className="b-article-intro__intro">{lead}</p>
