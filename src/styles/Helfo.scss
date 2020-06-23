@@ -31,4 +31,9 @@ body {
   background-color: rgba(#fff4e6, 0.21);
 }
 
+// Shame: Override
+.b-section-sidebar__link {
+  font-size: $font-sm;
+}
+
 @import './print-pdf-helfo';

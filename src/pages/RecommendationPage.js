@@ -2,563 +2,161 @@ import React from 'react';
 import Collapsible from '../components/Collapsible';
 import Link from '../components/Link';
 import Box from '../components/Box';
+import IconWithText from '../components/IconWithText';
 
 const RecommendationPage = () => (
   <>
     <div className="l-container l-mt-3">
       <main id="main">
-        <div className="row">
-          <div className="col-xs-12 col-md-9">
-            <h1 className="h2">
-              Kvinner med svangerskapsdiabetes bør få kostråd og rådgivning
-              basert på kostanamnese ved behandling av svangerskapsdiabetes
-            </h1>
-            <div className="l-mt-1">
-              <Collapsible
-                heading="Sterk anbefaling"
-                subtle
+      <Collapsible
+        background
+        id="test"
+        heading="Sekundær peritonitt"
+        date="Sist faglig oppdatert: 11. juni 2020"
+      >
+        <Collapsible
+          heading="Sterk anbefaling"
+          subtle
+          size="small"
+          smallContent
+        >
+          <p>...Hva er en sterk anbefaling...</p>
+        </Collapsible>
+        <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
+        <Collapsible
+          h="h3"
+          heading="Behandling"
+          size="small"
+          collapsed
+          id="behandling"
+        >
+        <h4>Standard behandlingregime</h4>
+        <p>Vanlig behandlingsvarighet: 5 dager</p>
+        <p>Ampicillin iv 1,2 g x 4 iv<br />
+         + Gentamicin 5 mg/kg x 1 iv  <br />
+        + Metronidazol 1g x 1 iv</p>
+          <Collapsible
+            h="h5"
+            heading="Spesielle hensyn"
+            size="tiny"
+            id="behandling-spesielle"
+          >
+            <Box
+            color="grey" square tinyPadding>
+              <p>
+                <IconWithText text="Penicillinallergi" size="clean" icon="../icons/warning_high.svg" />
+                Ampicillin <br />
+                Skal ikke gis til pasienter med penicillinallergi
+              </p>
+              
+              <p>
+                <IconWithText text="Graviditet" size="clean" icon="../icons/warning_high.svg" />
+                Gentamicin: <br />
+                Aminoglykosider bør unngås i andre og tredje trimester. <a href="#">Les mer.</a><br />
+                Metronidazol:<br />
+                Tilbakeholden med bruk av høye doser i første trimester. <a href="#">Les mer.</a>
+              </p>
+              
+              <p>
+                <IconWithText text="Ammende" size="clean" icon="../icons/warning_high.svg" />
+                Metronidazol<br />
+                Overgang til morsmelk er moderat til høy. Andre midler bør benyttes om det finnes alternativer.
+              </p>
+              
+            </Box>
+          </Collapsible>
+          <Collapsible
+            h="h5"
+            heading="Doseringer for spesielle hensyn"
+            id="behandling-doseringer"
+            size="tiny"
+          >
+          <p>
+          <strong>Ved overvekt</strong><br />
+          Ampicillin<br />
+          TBW > 100: 2g x 4
+          </p>
+          <p>
+          <strong>Ved redusert nyrefunksjon</strong><br />
+          Ampicillin<br />
+          GFR 20-10: 0.25 -2 g x 4 <br />
+          GFR &lt; 10: 0.25-1 g x 4
+          </p>
+          </Collapsible>
+          <Collapsible
+            h="h5"
+            heading="Overgang til oral behandling"
+            size="tiny"
+          >
+            <p>Vanlig behandlingsvarighet: 5-7 dager etter iv behandling</p>
+            <p>
+            Ciprofloksacin 500 mg x 2 oral  
+            <br />+ metronidazol 400 mg x 3 oral 
+            </p>
+          </Collapsible>
+          <h4>Alternative behandlingsregimer </h4>
+          <Collapsible
+            h="h5"
+            heading="Behandling ved redusert leverfunksjon"
+            size="small"
+            id="test4"
+          >
+            <p>tekst</p>
+             <Collapsible
+                h="h5"
+                heading="Test5"
                 size="small"
-                smallContent
+                id="test5"
               >
-                <p>...Hva er en sterk anbefaling...</p>
+                <p>tekst</p>
               </Collapsible>
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-xs-12 col-md-9">
-            <div className="l-mt-3">
-              <div className="l-mb-3">
-                <p>
-                  Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                  oppnå tilfredsstillende blodsukker fastende og etter måltider,
-                  og for å forhindre for stor vektøkning i svangerskapet. Det
-                  anbefales at kostanamnese benyttes i dette arbeidet.
-                </p>
-                <p>
-                  Kostrådene baseres på kostanamnesen og styres etter
-                  glukoseverdier ved egenmåling. Mål: Fastende: 5.3 mmol/l, 2
-                  timer etter måltid: 6.7 mmol/l (se anbefaling: Opplæring i
-                  egenmåling av glukose). Kvinnen kan rådes til å følge et
-                  kosthold med en karbohydratkvalitet og -mengde per måltid som
-                  gjør det enklere å nå behandlingsmålene for glukose
-                </p>
-
-                <div className="l-mb-3">
-                  <Collapsible
-                    heading="Praktisk – Slik følger du anbefalingen"
-                    size="large"
-                  >
-                    <p>
-                      For å bidra til god blodsukkerregulering, vil kvinner med
-                      svangerskapsdiabetes ha nytte av å innta et kosthold med
-                      lav glykemisk indeks, innta flere og gjerne regelmessige
-                      måltider, fordele inntaket av karbohydrater jevnt mellom
-                      måltidene og begrense inntaket av søte mat- og
-                      drikkevarer. Dette er i samsvar med Helsedirektoratets
-                      kostråd og Helsedirektoratet generelle kostråd for
-                      gravide. Det viktigste er å ha et høyt inntak av fiber og
-                      å unngå hurtigresorberbare karbohydrater, med andre ord en
-                      moderat lav-GI-kost.
-                    </p>
-                    <p>
-                      Glukosestigningen etter et måltid avhenger primært av
-                      mengde og kvalitet av karbohydratene i måltidet. Gravide
-                      kvinner anbefales å innta minimum 175 gram karbohydrat per
-                      dag (IOM 2007, Reader 2007). Enkelte karbohydratrike
-                      matvarer bør begrenses i mengde og heller fordeles over
-                      flere måltider dersom ikke postprandiale glukosemål nås.
-                      Kostrådene tilpasses kvinnens KMI og anbefalte vektøkning.
-                    </p>
-                    <p>Glykemisk indeks</p>
-                    <p>
-                      (GI) Begrepet benyttes om matvarer med mye fiber og
-                      langsomt absorberbare karbohydrater. GI er en måte å
-                      inndele karbohydratrike matvarer ut i fra den effekten de
-                      har på glukosenivået. En GI på 0 betyr ingen/svært liten
-                      effekt, mens GI på 100 vil si at matvaren har samme
-                      glukosestigende effekt som glukose.
-                    </p>
-                    <p>
-                      En kost med lav GI inkluderer matvarer som i hovedsak har
-                      en GI-verdi under 70. Dette er ikke det samme som en
-                      karbohydratredusert kost, der det legges vekt på å
-                      redusere mengden karbohydrat. Kost med lav GI kan ha et
-                      høyt karbohydratinnhold, men kvaliteten på
-                      karbohydratkildene er det viktige.
-                    </p>
-                    <p>
-                      Typisk vil en kost med lav GI kunne inneholde
-                      karbohydratrike matvarer som belgvekster, hele
-                      korn/sammalt mel, grove brød og kornprodukter,
-                      fullkornspasta/-ris, og det legges også vekt på matvarer
-                      og matretter som er lite bearbeidet (f.eks. kornblandinger
-                      av hele valsede korn og nøtter framfor cornflakes og
-                      lignende frokostblandinger, rå grønnsaker framfor kokte
-                      etc.).
-                    </p>
-                  </Collapsible>
-                </div>
-                <div className="l-mb-3">
-                  <div className="l-mb-3">
-                    <Collapsible
-                      heading="Begrunnelse – Dette er anbefalingen basert på"
-                      size="large"
-                    >
-                      <div className="l-mb-1">
-                        <Collapsible h="h3" heading="Sammendrag" size="small">
-                          <p>
-                            Individuelle kostråd for å senke fastende glukose og
-                            redusere postprandial glukosestigning er målet med
-                            behandlingen av svangerskapsdiabetes. Det er
-                            veletablert klinisk praksis som også alle
-                            behandlingsstudier bygger på og grunnlaget for den
-                            sterke anbefalingen om å gi konkrete kostråd.
-                          </p>
-                          <p>
-                            Det finnes lite evidens for hva som er den beste
-                            fordelingen av næringsstoffer og det optimale
-                            energiinntaket basert på den gravides vekt før/under
-                            graviditeten. Forskningsfeltet møter betydelige
-                            metodologiske utfordringer, da det vil være uetisk å
-                            sette opp studier der kontrollgruppen ikke får
-                            tilgang til standard informasjon om hvilken kost som
-                            anses god.
-                          </p>
-                          <p>
-                            Rasjonalet for å foreslå en vurdering av
-                            karbohydratkvalitet og -mengde bygger på kunnskap om
-                            at kost med lav glykemisk indeks er å foretrekke
-                            fremfor andre kosthold for å redusere glukosenivået
-                            (Viana LV, 2014). Studiene inkludert i denne
-                            metaanalysen ble delt inn etter type
-                            kostintervensjon (4 studier (n=257) med lav-GI kost,
-                            2 studier (n=425) med kost med total
-                            energirestriksjon (ca 30% av energibehovet) og 2
-                            studier (n=182) med lavkarbohydratkost). Ved lav-GI
-                            koststudiene oppnådde intervensjonsgruppene en
-                            glykemisk indeks på 47-49, noe som indikerer en god
-                            etterlevelse hos pasienter med svangerskapsdiabetes,
-                            og evidensen fra denne oppsummeringen danner
-                            grunnlaget for at kost med lav glykemisk indeks
-                            foreslås fremfor andre kosttyper.
-                          </p>
-                          <p>
-                            Det finnes evidens av moderat kvalitet for at den
-                            samlede behandlingspakken der kostråd og oppfølging
-                            er sentralt, reduserer flere klinisk viktige utfall
-                            (Hartling L, 2013): - preeklampsi med 38%, -
-                            fastsittende skuldre med 58% - stort barn i forhold
-                            til gestasjonsalder (LGA) med 58% - makrosomi med
-                            50%{' '}
-                          </p>
-                          <p>
-                            Det er ikke holdepunkt for ugunstige virkninger av
-                            behandlingen, som økning i keisersnitt, overføring
-                            av den nyfødte til intensivavdelinger, eller økning
-                            i andel barn som er små i forhold til
-                            gestasjonsalder. Heller ikke er det holdepunkt for
-                            økning i angst eller depresjon hos mor, selv om
-                            evidensen er lav for disse utfall. Det er ikke
-                            evidens for at behandlingen reduserer perinatal død
-                            (veldig få hendelser i nyere studier), senere fedme
-                            eller diabetes hos barnet eller senere diabetes hos
-                            mor.
-                          </p>
-                        </Collapsible>
-                      </div>
-                      <div className="l-mb-1">
-                        <Collapsible h="h3" heading="Vurdering" size="small">
-                          <h3>Fordeler og ulemper</h3>
-                          <p>
-                            <b>
-                              Fordeler av den samlede behandlingen, der kostråd
-                              med konkret oppfølging, er grunnpillaren:
-                            </b>
-                          </p>
-                          <p>
-                            Av 1000 kvinner vil 44 færre få preeklampsi, det vil
-                            bli 20 færre barn med fastsittende skuldre under
-                            fødsel, 90 færre barn over 4 kg og 80 færre barn som
-                            er store for gestasjonsalder ved konvensjonell
-                            behandling (oppfølging og kostråd) sammenlignet med
-                            ingen behandling. Ved å følge kostråd som referert i
-                            kunnskapsgrunnlaget (se også praktisk info) vil
-                            flere kvinner oppnå god blodsukkerkontroll uten
-                            insulin eller andre medikamenter. Ulemper ved den
-                            samlede behandlingen: Det er ikke holdepunkter for
-                            ulemper som økt keisersnittforekomst, økt overføring
-                            til intensivavdeling for nyfødte, eller økning i
-                            andel vekstretarderte barn.
-                          </p>
-                          <p>
-                            De potensielt uønskede effektene vurderes som små.
-                            Fordeler med kostråd om karbohydratkvalitet og
-                            -mengde: Av 1000 kvinner med svangerskapsdiabetes
-                            som følger en kost med lav glykemisk indeks vil 132
-                            færre trenge insulin sammenlignet med de som følger
-                            en kontrollkost. Barn av mødre som fulgte en
-                            lavglykemisk kost hadde en fødselsvekt som var 162
-                            gram lavere enn barn til kvinner som fulgte en
-                            kontrollkost. Det var ingen forskjell i antall barn
-                            med lav fødselsvekt for gestasjonsalder (SGA) mellom
-                            intervensjon- og kontrollkost. Det var ingen
-                            forskjell i ufall for en energirestriktiv kost eller
-                            en lavkarbohydratkost i forhold til kontrollkost
-                          </p>
-                          <h3>Kvalitet på dokumentasjonen</h3>
-                          <p>
-                            <b>For samlet behandling:</b>
-                          </p>
-                          <p>
-                            Vi har moderat tillit til effektestimatene for
-                            preeklampsi, fastsittende skulder, makrosomi og barn
-                            som er store for gestasjonsalder (LGA). Vi har lav
-                            eller veldig lav tillit til effektestimatene for
-                            øvrige utfall. For kostråd om karbohydratkvalitet og
-                            -mengde: Det er Lav tillit til effektestimatene for
-                            kvinner med svangerskapsdiabetes som følger en
-                            lavglykemisk kost for utfall som
-                          </p>
-                          <ul>
-                            <li> Andel kvinner som trenger insulin</li>
-                            <li> Fødselsvekt </li>
-                            <li> Andel SGA barn </li>
-                          </ul>
-                          <p>
-                            Det er Svært lav tillitt til effektestimatene for
-                            kvinner med svangerskapsdiabetes som følger en
-                            energirestriktiv kost for utfall som
-                          </p>
-                          <ul>
-                            <li> Makrosomi</li>
-                            <li> Neonatal hypoglykemi</li>
-                            <li> Keisersnitt</li>
-                          </ul>
-                          <p>
-                            Det er Lav tillitt til effektestimatene for kvinner
-                            med svangerskapsdiabetes som følger en
-                            lavkarbohydratkost for utfall som
-                          </p>
-                          <ul>
-                            <li> Andel kvinner som trenger insulin</li>
-                            <li> Keisersnitt</li>
-                          </ul>
-                          <h3>Verdier og preferanser</h3>
-                          <p>
-                            <b>
-                              Alle utfallene som er vurdert for den samlede
-                              behandlingseffekt anses av helsepersonell som
-                              kritiske eller viktige.
-                            </b>
-                          </p>
-                          <p>
-                            De fleste kvinner ønsker i utgangspunktet å gjøre
-                            det som vil være best for barnet hun venter.
-                            Behandlingen kan oppleves belastende for noen mødre.
-                            Noen kvinner kan bli motivert av å se positiv effekt
-                            av kostholdet på blodsukkeret. Det kan være enklere
-                            å endre kosten dersom behandler tar utangspunkt i
-                            kvinnens kultur og matpreferanser. Sunne matvarer og
-                            matvarer med lav glykemisk indeks er ofte dyrere.
-                            For noen kan økonomiske problemer gjøre det
-                            vanskelig å følge kostrådene. Regelemssig oppfølging
-                            og støtte fra helsepersonell kan være avgjørende for
-                            at kvinnen mestrer den samlede behandlingen best
-                            mulig.
-                          </p>
-                          <h3>Ressurshensyn</h3>
-                          <p>
-                            Det er viktig at helsepersonell som gir kostråd til
-                            gravide, gjør seg kjent med de spesifikke kostråd
-                            som gjelder for kvinner med svangerskapsdiabetes.
-                            Disse ligger nær Helsedirektoratet generelle kostråd
-                            for gravide. Helsepersonell bør ha god kompetanse om
-                            kost og ulike matkulturer. Gode ferdigheter i
-                            kommunikasjon og endringsfokusert veiledning en
-                            forutsetning for en god dialog med den gravide og
-                            for å oppnå de ønskede effektene av tiltakene.
-                          </p>
-                          <p>
-                            Enkel tilgang på skriftlig materiale, informasjon på
-                            nett eller apper av god kvalitet for kvinner med
-                            svangerskapsdiabetes på relevante språk, er viktig
-                            for både den gravide og behandlere.
-                            Spesialkompetanse og god tid er særllig viktig der
-                            kvinnen ikke oppnår behandlingsmål for glukose.
-                          </p>{' '}
-                          <p>
-                            Det er grunn til å anta at innholdet i tilbudet til
-                            kvinner med svangerskapsdiabetes varierer mellom
-                            sykehusene, avhengig av ressurser, rutiner og
-                            tilgang på helsepersonell med spesiell kompetanse
-                            innenfor ernæring og endringsfokusert veiledning
-                            (klinisk ernæringsfysiolog, jordmor,
-                            diabetessykepleier, andre). Internasjonale
-                            retningslinjer (NICE 2015, CDA 2013, ADA 2012)
-                            anbefaler at kvinner med svangerskapsdiabetes
-                            henvises til klinisk ernæringsfysiolog for
-                            kostråd/kostveiledning. I dag er det liten eller
-                            ingen tilgang på denne ressursen/kompetansen i
-                            svangerskapsomsorgen i Norge.
-                          </p>
-                        </Collapsible>
-                      </div>
-                      <div className="l-mb-1">
-                        <Collapsible
-                          h="h3"
-                          heading="Forskningsgrunnlag"
-                          size="small"
-                        >
-                          <div className="row l-mt-2">
-                            <strong className="col-xs-12 col-md-3 top-xs">
-                              Populasjon
-                            </strong>
-                            <div className="col-xs-12 col-md-9">
-                              Kvinner med svangerskapsdiabetes
-                            </div>
-                          </div>
-                          <div className="row">
-                            <strong className="col-xs-12 col-md-3 top-xs">
-                              Intervensjon
-                            </strong>
-                            <div className="col-xs-12 col-md-9">
-                              Lav-GI kosthold
-                            </div>
-                          </div>
-                          <div className="row">
-                            <strong className="col-xs-12 col-md-3 top-xs">
-                              Komparator
-                            </strong>
-                            <div className="col-xs-12 col-md-9">
-                              Standard kostveiledning
-                            </div>
-                          </div>
-                          <div className="row">
-                            <strong className="col-xs-12 col-md-3 top-xs">
-                              Utfall
-                            </strong>
-                            <div className="col-xs-12 col-md-9">
-                              <div>
-                                Vektøkning (mor), Fødselsvekt (gram),
-                                Keisersnitt, Bruk av insulin, Makrosomi
-                                (fødselsvekt >4kg), Barn med fødselsvekt
-                              </div>
-                              <div>
-                                <a
-                                  href="https://app.magicapp.org/public/guideline/aEeerE/pico/nVXR6j/widget?openOnLoad=1"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Evidensprofil
-                                </a>
-
-                                <Collapsible
-                                  heading="Sammendrag av studie"
-                                  size="small"
-                                >
-                                  <div>
-                                    <p>
-                                      En systematisk oversikt er inkludert i
-                                      kunnskapsgrunnlaget, og belyser om
-                                      kognitiv atferdsterapi har bedre effekt
-                                      enn andre psykoterapier for voksne med
-                                      bulimi:
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Vist, G., Jung, S., Straumann, GH.,
-                                        Ding, KY., Reinar, LM. (2016). Cognitive
-                                        behavior therapy compared to other
-                                        psychotherapy for treatment of bulimia.
-                                        Report from the Norwegian Institute of
-                                        Public Health.
-                                      </li>
-                                    </ul>
-                                    <p>
-                                      Denne systematiske oversiktsartikkelen
-                                      vurderer også hvilken tillit vi kan ha til
-                                      resultatene ved hjelp av GRADE-metoden.
-                                      Oversikten ble bestilt fra
-                                      Kunnskapssenteret i Folkehelseinstituttet
-                                      for å oppdatere den systematiske
-                                      oversikten som ble funnet i opprinnelig
-                                      litteratursøk, på spørsmålet om kognitiv
-                                      atferdsterapi har bedre effekt enn andre
-                                      psykoterapier for voksne med bulimi. Den
-                                      systematiske oversikten som ble funnet i
-                                      opprinnelig litteratursøk var denne som er
-                                      fra 2009 (se flytdiagram og søkestrategi
-                                      nedenfor):
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Hay, PPJ., &amp; Stefano, S. (2009).
-                                        Psychological treatments for bulimia
-                                        nervosa and binging (Review). The
-                                        Cochrane Library.
-                                      </li>
-                                    </ul>
-                                    <p>
-                                      I den nye oppdaterte systematiske
-                                      oversikten av Vist at al., (2016) er bare
-                                      personer over 16 år inkludert.
-                                    </p>
-                                    <p>
-                                      Forfatterens konklusjon fra denne
-                                      oversikten (Vist et al., 2016): Kognitiv
-                                      atferdsterapi sammenlignet med annen
-                                      psykoterapi for personer med bulimi fører
-                                      trolig til at flere personer slutter med
-                                      overspisingsepisoder og kompenserende
-                                      atferd, og skårer bedre på skala for
-                                      bulimisymptomer ved avsluttet behandling.
-                                    </p>
-                                    <p>
-                                      <strong>
-                                        Resultat for primære utfallsmål:
-                                      </strong>
-                                    </p>
-                                    <p>
-                                      Kognitiv atferdsterapi sammenlignet med
-                                      annen psykoterapi til personer med bulimi
-                                      fører trolig til at flere personer slutter
-                                      med overspisingsepisoder og kompenserende
-                                      atferd (RR 0.84 (95% KI 0.72 to 0.97)), og
-                                      skårer bedre på skala for bulimisymptomer
-                                      (SMD -0.23 (95% KI -0.45 to -0.01))
-                                      (moderat kvalitet på dokumentasjonen
-                                      vurdert med GRADE).
-                                    </p>
-                                    <p>
-                                      <strong>
-                                        Resultat for sekundære utfallsmål:
-                                      </strong>
-                                    </p>
-                                    <p>
-                                      Kognitiv atferdsterapi sammenlignet med
-                                      annen psykoterapi til personer med bulimi
-                                      fører til at det er lignende antall
-                                      personer som slutter med begge
-                                      behandlingene (RR 1.11 (95% KI 0.88 to
-                                      1.39)) og lignende vekt/KMI etter endt
-                                      behandling for begge behandlingene (SMD
-                                      -0.04 (95% KI -0.13 to 0.22)) (moderat
-                                      kvalitet på dokumentasjonen vurdert med
-                                      GRADE).
-                                    </p>
-                                    <p>
-                                      Ved endt behandling med kognitiv
-                                      atferdsterapi er det 494 av 1000 som ikke
-                                      får remisjon.
-                                    </p>
-                                    <p>
-                                      Dokumentasjonen er målt til å ha moderat
-                                      kvalitet for fem av 11 utfallsmål og for
-                                      seks av 11 utfallsmål var det lav eller
-                                      veldig lav kvalitet.
-                                    </p>
-                                    <p>
-                                      Resultattabellen nedenfor viser
-                                      utfallsmål, resultater og
-                                      kvalitetsvurderinger, vurdert med GRADE
-                                      for de sammenligninger som er undersøkt i
-                                      den oppdaterte systematiske oversikten
-                                      (Vist et al., 2016).
-                                    </p>
-                                    <p>
-                                      <a href="https://helsedirektoratet.no/PublishingImages/retningslinjer/spiseforstyrrelse/Evidensprofil-Kognitiv%20atferdsterapi%20bulimi.pdf">
-                                        Resultattabell: Kognitiv atferdsterapi-
-                                        bulimi. Vist et al., (2016) (PDF)
-                                      </a>
-                                    </p>
-                                    <p>
-                                      <a href="https://helsedirektoratet.no/PublishingImages/retningslinjer/spiseforstyrrelse/Flytdiagram%20%204.2%20BN%20og%20kogn.pdf">
-                                        Flytdiagram og søkestrategi (PDF)
-                                      </a>
-                                    </p>
-                                  </div>
-                                </Collapsible>
-                              </div>
-                            </div>
-                          </div>
-                        </Collapsible>
-                      </div>
-                      <div className="l-mb-1">
-                        <Collapsible h="h3" heading="Referanser" size="small">
-                          <p>
-                            <b>Thangaratinam S, Rogozinska E, Jolly K et al</b>{' '}
-                            : Effects of interventions in pregnancy on maternal
-                            weight and obstetric outcomes: meta-analysis of
-                            randomised evidence.. BMJ (British Medical Journal)
-                            2012; Pubmed Journal
-                          </p>{' '}
-                          <p>
-                            <b>Hartling L, Dryden DM, Guthrie A et al</b> :
-                            Benefits and harms of treating gestational diabetes
-                            mellitus: a systematic review and meta-analysis for
-                            the U.S. Preventive Services Task Force and the
-                            National Institutes of Health Office of Medical
-                            Applications of Research.. Annals of Internal
-                            Medicine 2013; Pubmed Journal
-                          </p>
-                          <p>
-                            <b>Horvath K, Koch K, Jeitler K et al </b>: Effects
-                            of treatment in women with gestational diabetes
-                            mellitus: systematic review and meta-analysis.. BMJ
-                            (British Medical Journal) 2010; Pubmed Journal
-                          </p>
-                          <p>
-                            <b>Falavigna M, Schmidt MI, Trujillo J et al</b> :
-                            Effectiveness of gestational diabetes treatment: a
-                            systematic review with quality of evidence
-                            assessment.. Diabetes Research and Clinical Practice
-                            2012; Pubmed Journal
-                          </p>{' '}
-                          <p>
-                            <b>Prutsky GJ, Domecq JP, Wang Z et al </b>: Glucose
-                            targets in pregnant women with diabetes: a
-                            systematic review and meta-analysis.. JCEM (The
-                            Journal of Clinical Endocrinology & Metabolism)
-                            2013; Pubmed Journal
-                          </p>{' '}
-                          <p>
-                            <b>Porter H, Lookinland S, Belfort MA</b> :
-                            Evaluation of a new real-time blood continuous
-                            glucose monitoring system in pregnant women without
-                            gestational diabetes. A pilot study.. The Journal of
-                            Perinatal & Neonatal Nursing 2004; Pubmed
-                          </p>{' '}
-                          <p>
-                            <b>Crowther CA, Hiller JE, Moss JR et al</b> : Linn:
-                            slett! Effect of treatment of gestational diabetes
-                            mellitus on pregnancy outcomes.. NEJM (The New
-                            England Journal of Medicine) 2005; Pubmed
-                          </p>
-                        </Collapsible>
-                      </div>
-                    </Collapsible>
-                  </div>
-                  <Collapsible heading="Informasjon til pasienten" size="large">
-                    <p>Noe innhold</p>
-                  </Collapsible>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <div className="row">
-        <div className="col-xs-12 col-md-9">
-          <hr className="b-hr" />
-          <div className="l-mt-3 t-sm-right">
-            <Link href="#a" secondary small>
-              Sist faglig oppdatert: 11. august 2018
-            </Link>
-          </div>
-        </div>
-      </div>
+          </Collapsible>
+          <Collapsible
+            h="h5"
+            heading="Behandling ved penicillin straksallergi"
+            size="small"
+          >
+            <p>tekst</p>
+          </Collapsible>
+          <Collapsible
+            h="h5"
+            heading="Behandling ved pencillin ikke straksallergi"
+            size="small"
+          >
+            <p>tekst</p>
+          </Collapsible>
+        </Collapsible>
+        <Collapsible
+          h="h3"
+          heading="Praktisk - Slik kan anbefalingen følges"
+          size="small"
+          id="praktisk"
+        >
+        </Collapsible>
+        <Collapsible
+          h="h3"
+          heading="Begrunnelse - dette er anbefalingen basert på"
+          size="small"
+        >
+        </Collapsible>
+      </Collapsible>
+      <Collapsible
+        background
+        id="test2"
+        heading="Sekundær peritonitt"
+        date="Sist faglig oppdatert: 11. juni 2020"
+      >
+        <Collapsible
+          heading="Sterk anbefaling"
+          subtle
+          size="small"
+          smallContent
+        >
+          <p>...Hva er en sterk anbefaling...</p>
+        </Collapsible>
+        <p>Antibiotikabehandling erstatter ikke kirurgi (drenasje av abscess, revisjon ved anastomoselekkasje)</p>
+      </Collapsible>
+    </main>
     </div>
     <div className="l-mt-4">
       <Box color="grey" square noPadding>

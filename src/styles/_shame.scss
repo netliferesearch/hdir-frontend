@@ -19,11 +19,9 @@
 }
 
 table {
-  border: 1px solid $black;
   max-width: 100%;
+  border-collapse: collapse;
   border-spacing: 0;
-  border-left: none;
-  border-right: none;
   tr {
     display: table-row;
     &:last-child {
@@ -38,9 +36,10 @@ table {
   th,
   td {
     box-sizing: border-box;
-    padding: 1rem;
-    border-bottom: 1px solid $black;
+    padding: $space-sm;
     display: table-cell;
+    border: 0;
+    border-bottom: 1px solid $black;
     border-right: 1px solid $black;
     &:first-child{
       border-bottom: 1px solid $black;
@@ -59,8 +58,12 @@ table {
 .b-icon-with-text {
   display: flex;
   align-items: center;
+  @include mq($until: tablet) {
+    border-bottom: 1px solid $grey-light;
+    padding-bottom: $space-sm;
+  }
   &__image {
-    height: 2em;
+    height: 2.5em;
     width: auto;
     margin-right: 0.75em;
 
@@ -69,9 +72,35 @@ table {
       margin-right: 0.6em;
     }
   }
-  &__text {
-    text-transform: uppercase;
-    font-size: $meta-text;
-    font-weight: bold;
+  &__text-wrapper {
+    display: inline-block;
   }
+  &__text {
+    display: block;
+    font-size: $font-xs;
+  }
+  &--clean {
+    .b-icon-with-text__text {
+      text-transform: none;
+      font-size: $medium-large-text;
+    }
+  }
+}
+
+.u-right-sm {
+  margin-right: $space-sm;
+}
+
+.hide {
+  display: none;
+}
+
+.l-mb-2-mobile {
+  @include mq($until: $tablet) {
+    margin-bottom: 1.5em;
+  }
+}
+
+.frontpage-list {
+  columns: 2;
 }

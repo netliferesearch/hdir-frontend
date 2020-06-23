@@ -1,6 +1,22 @@
 .b-breadcrumbs {
+  padding-top: $space-xs;
+  padding-bottom: $space-xs;
+  @include mq($until: desktop) {
+    padding-top: 0;
+    padding-bottom: $space-xs;
+  }
+  &--border {
+    border-bottom: 1px solid $grey-light;
+    padding-top: 0;
+    padding-bottom: $space-lg;
+    @include mq($until: desktop) {
+      padding-top: 0;
+      padding-bottom: $space-md;
+    }
+  }
+  
   &__location {
-    font-size: 14px;
+    font-size: $font-xs;
     color: $grey;
     @include mq($until: desktop) {
       display: none;
@@ -10,31 +26,27 @@
     position: relative;
     display: inline-block;
     font-size: 14px;
-    @include link-init($grey, true, darken($grey-light, 15%));
-    margin-right: 1.5rem;
+    @include link-init($grey, true, $grey);
+    margin-right: 1.7rem;
 
     &:after {
       position: absolute;
       display: block;
-      content: ' ';
+      content: ' / ';
+      color: $grey;
       top: 0.25rem;
       right: -0.75rem;
       height: 1.2em;
       width: 1px;
-      border-right: 1px solid darken($grey-light, 15%);
     }
-
-    &:nth-child(1) {
-      font-size: 28px;
-      border-right: 2px;
-    }
-    &:nth-child(2) {
-      font-size: 1rem;
+    
+    &:hover {
+      @include link-init($primary-color, true, $primary-color);
     }
 
     &:last-child {
       &:after {
-        border-right: 0;
+        content: '';
       }
     }
 
@@ -42,7 +54,7 @@
       display: none;
       position: relative;
       margin-left: 1.5em;
-      &:nth-last-child(2) {
+      &:last-child {
         display: inline-block;
         &:after {
           display: none;

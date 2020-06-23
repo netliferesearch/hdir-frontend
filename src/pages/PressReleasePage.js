@@ -10,7 +10,7 @@ const PressReleasePage = () => (
     <div className="l-container">
       <div className="row l-mt-3">
         <div className="col-xs-12">
-          <h1>Trykksaker</h1>
+          <h1>Brosjyrer</h1>
         </div>
       </div>
       <div className="row l-mt-2">

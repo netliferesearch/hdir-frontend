@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import URLSearchParams from 'url-search-params';
 import useInterval from '../js/hooks/useInterval';
 import { debounce } from 'lodash';
+import uuidv4 from 'uuid/v4';
 
 import stripStringForHtmlUtil from './../utils/stripStringForHtmlUtil';
 
@@ -45,11 +46,10 @@ const InputSearch = props => {
   
   /* We are using callback to make throtte work in this component function */
   const delayedSuggestionsFetchRequested = useCallback(debounce((value) => onSuggestionsFetchRequested(value), 200), []);
-
+  
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchquery');
-
     setValue(searchQuery ? searchQuery : '')
   }, []);
 
@@ -60,19 +60,22 @@ const InputSearch = props => {
         : 0
     );
   }, 2000);
+  
+  const id = props.id || uuidv4();
 
   const renderInputComponent = inputProps => (
     <div className="b-input-search">
       {props.label && (
-        <div
+        <label
           id="search-input-label"
+          htmlFor={id}
           className={classNames({
             'b-input-search__label': true,
             'b-input-search__label--dark': props.dark
           })}
         >
           {props.label}
-        </div>
+        </label>
       )}
       <div className="b-input-search__inputs">
         {!value && (
@@ -85,6 +88,7 @@ const InputSearch = props => {
         <input
           title="Søk"
           aria-labelledby="search-input-label"
+          id={id}
           {...inputProps}
           autoFocus={props.autoFocus}
           role="search"
@@ -104,11 +108,17 @@ const InputSearch = props => {
   );
 
   function triggerSearch() {
+    if (!props.showSuggestions && props.fnChange) {
+      return;
+    }
     const encodedValue = encodeURI(value);
     window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
   }
 
   function onChange(event, { newValue }) {
+    if (!props.showSuggestions && props.fnChange) {
+      props.fnChange(newValue)
+    }
     setValue(newValue);
   }
   
@@ -130,6 +140,9 @@ const InputSearch = props => {
 
   // Autosuggest will call this function every time you need to update suggestions.
   const onSuggestionsFetchRequested = ({ value }) => {
+    if (!props.showSuggestions) {
+      return;
+    }
     if (value && value.length >= 3) {
       const encodedValue = encodeURI(value);
       fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)
@@ -229,16 +242,18 @@ const InputSearch = props => {
 };
 
 InputSearch.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string,
   dark: PropTypes.bool,
   showSuggestions: PropTypes.bool,
   autoFocus: PropTypes.bool,
+  fnChange: PropTypes.func,
   exampleSuggestions: PropTypes.arrayOf(PropTypes.string)
 };
 
 InputSearch.defaultProps = {
   showSuggestions: true,
-  exampleSuggestions: []
+  exampleSuggestions: [],
 };
 
 export default InputSearch;

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
-const Breadcrumbs = ({ paths }) => (
-  <nav className="b-breadcrumbs" aria-label="Brødsmulesti">
+const Breadcrumbs = ({ paths, border }) => (
+  <nav className={`b-breadcrumbs ${border ? 'b-breadcrumbs--border' : ''}`} aria-label="Brødsmulesti">
     {paths.map(path =>
       path.href ? (
         <a
@@ -28,7 +28,8 @@ Breadcrumbs.propTypes = {
       name: PropTypes.string,
       href: PropTypes.string
     })
-  )
+  ),
+  border: PropTypes.bool
 };
 
 export default Breadcrumbs;
