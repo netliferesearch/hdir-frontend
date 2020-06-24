@@ -13,34 +13,34 @@ const PrintPdfPreview = () => (
     role="presentation"
   />
   {/* Cover */}
-  <table data-portal-component-type="layout" className="cover-table print-page-break">
+  <table width="100%" data-portal-component-type="layout" className="cover-table print-page-break">
     <tbody>
       <tr>
-          <td width="100%" className="cover-left">
-            <h1>Brystkreft</h1>
-            <h4>Pakkeforløp</h4>
-            <hr />
-              <br />
-                <p>
-                  <span>Først publisert: 15. desember 2014</span><br />
-                    <span>Sist faglig oppdatert: 28. februar 2017</span>
-        </p>
-        <div className="l-mt-4">
-          <div className="l-mt-1 b-secondary-logos">
-            <div className="b-secondary-logos__logolist">
-              <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
-              <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
-
-            </div>
-            <div className="b-secondary-logos__text">
+        <td width="100%" className="cover-left">
+          <h1>Brystkreft</h1>
+          <h4>Pakkeforløp</h4>
+          <hr />
+          <br />
+          <p>
+            <span>Først publisert: 15. desember 2014</span><br />
+              <span>Sist faglig oppdatert: 28. februar 2017</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <br /><br />
+            <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+            <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+        </td>
+      </tr>
+      <tr>
+        <td>
               <p>
                 Veilederne er utgitt av Helsedirektoratet. <br />
               Faglig innhold levert av Folkehelseinstituttet
             </p>
-            </div>
-          </div>
-        </div>
-      </td>
+        </td>
       </tr>
     </tbody>
   </table>

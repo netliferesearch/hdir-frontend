@@ -176,42 +176,11 @@
   }
   table td {
     padding: 3px 6px;
-  }
 
-  // Secondary branding
-
-  .b-secondary-logos {
-    display: block;
-
-    &__logolist {
-      flex-basis: 100px;
-      display: flex;
-      margin-bottom: 1em;
-      align-items: flex-start;
-      @include mq($until: $tablet) {
-        flex-wrap: wrap;
-      }
-      
-      img {
-        margin-right: .5em;
-        width: 100px;
-
-        &:last-child {
-          margin-right: 1em;
-        }
-      }
-    }
-    
-    &__text {
-      font-size: $font-xs;
-      min-width: 300px;
-      margin-bottom: 1em;
-      
-      p {
-        margin: 0;
-        border: 0;
-        padding: 0;
-      }
+    img {
+      margin-right: 10px;
+      max-width: 150px;
+      width: 100%;
     }
   }
 
@@ -243,7 +212,7 @@
   margin-top: 20px;
 }
 
-.cover-table {
+.cover-table, .cover-table th, .cover-table td {
   border: none !important;
 }
 
