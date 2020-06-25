@@ -1,0 +1,42 @@
+.b-secondary-logos {
+  display: flex;
+  flex-wrap: wrap;
+  @include mq($until: $tablet) {
+    display: block;
+  }
+
+  &__logolist {
+    flex-basis: 100px;
+    display: flex;
+    margin-bottom: 1em;
+    align-items: flex-start;
+    @include mq($until: $tablet) {
+      flex-wrap: wrap;
+    }
+    
+    img {
+      margin-right: .5em;
+      width: 100px;
+
+      &:last-child {
+        margin-right: 1em;
+      }
+    }
+  }
+  
+  &__text {
+    font-size: $font-xs;
+    min-width: 300px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin-bottom: 1em;
+    border-left: 1px solid $grey;
+    align-items: center;
+    display: flex;
+    
+    p {
+      padding-left: 1em;
+      margin: 0;
+    }
+  }
+}

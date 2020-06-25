@@ -176,7 +176,14 @@
   }
   table td {
     padding: 3px 6px;
+
+    img {
+      margin-right: 10px;
+      max-width: 150px;
+      width: 100%;
+    }
   }
+
 }
 
 
@@ -205,7 +212,7 @@
   margin-top: 20px;
 }
 
-.cover-table {
+.cover-table, .cover-table th, .cover-table td {
   border: none !important;
 }
 
