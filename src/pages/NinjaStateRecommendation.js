@@ -9,10 +9,7 @@ const NinjaStateRecommendation = () => (
   <>
     <div className="l-container l-mt-3">
       <main id="main" className="row l-mt-4">
-        <aside className="col-md-3 col-xs-12 l-mb-4">
-          <SectionSidebar heading="Innhold på denne siden" />
-        </aside>
-        <article className="col-md-8 col-xs-12 col-md-offset-1 t-body-text">
+        <article className="col-md-12 col-xs-12 col-md-offset-1 t-body-text">
           <p>Ninja state av anbefaling:</p>
           <br /><br />
           <div className="b-collapsible b-collapsible--active b-collapsible--clean">
@@ -177,6 +174,23 @@ const NinjaStateRecommendation = () => (
                   </Collapsible>
                 </Collapsible>
               </Collapsible>
+
+                    <div className="l-mt-4">
+                      <hr className="b-hr b-hr--grey-light" />
+                      <div className="l-mt-1 b-secondary-logos">
+                        <div className="b-secondary-logos__logolist">
+                          <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+
+                        </div>
+                        <div className="b-secondary-logos__text">
+                          <p>
+                            Veilederne er utgitt av Helsedirektoratet. <br />
+                    Faglig innhold levert av Folkehelseinstituttet
+                  </p>
+                        </div>
+                      </div>
+                    </div>
+              
               <div class="b-collapsible__meta-date l-mt-4">Sist faglig oppdatert: 11. juni 2020</div>
             </div>
           </article>
