@@ -30,9 +30,11 @@
     flex-basis: 300px;
     flex-grow: 1;
     margin-bottom: 1em;
+    border-left: 1px solid $grey;
+    align-items: center;
+    display: flex;
     
     p {
-      border-left: 1px solid $grey;
       padding-left: 1em;
       margin: 0;
     }
