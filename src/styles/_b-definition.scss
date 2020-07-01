@@ -1,0 +1,73 @@
+.b-definition {
+  &__button {
+    background: none;
+    outline: 0;
+    border: 0;
+    font-size: $font-body;
+    cursor: help;
+    margin: 0 4px;
+    padding: 0 2px 0px 2px;
+    width: auto;
+    display: inline-block;
+    font-family: $base-font-family;
+    background-image: linear-gradient(to right, $primary-color 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 5px 2px;
+    background-repeat: repeat-x;
+    color: $primary-color;
+    position: relative;
+    background-color: $primary-color-lighter;
+    
+    &:hover {
+      background-color: $primary-color-lightest;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -15px;
+      width: 0; 
+      height: 0; 
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid $white;
+      z-index: 9;
+    }
+  }
+
+  &__item {
+    background: $primary-color-lighter;
+    padding: $space-sm;
+    margin: 0 0 $space-sm;
+    display: none;
+    z-index: 1;
+    font-size: $font-xs;
+  }
+}
+.b-definition__item.active {
+  display: block;
+  -webkit-animation: fadeIn .3s;
+  animation: fadeIn .3s;
+}
+.b-definition__button.active {
+  background: $white;
+  &:after {
+    opacity: 1;
+    -webkit-animation: fadeIn .5s;
+      animation: fadeIn .5s;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; }
+}
