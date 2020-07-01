@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import { default as LinkComp } from '../components/Link'; // It uses "default as" to avoid naming conflict in this file.
 
 const pages = [
-  {heading: 'Normerende produkter'},
-  {link: '/anbefaling', desc: 'Anbefaling'},
-  {link: '/anbefaling-antibiotika', desc: 'Anbefaling antibiotika'},
-  {link: '/ninja-state', desc: 'Ninja State'},
-  {link: '/produkt', desc: 'Produktforside'},
-  {link: '/produkt-malgruppevelger', desc: 'Produktforside med valgt målgruppe'},
-  {link: '/kapittel', desc: 'Kapittel'},
-  {link: '/kapittel-med-underkapitler', desc: 'Underkapittel'},
-  {link: '/normerende-innhold', desc: 'Normerende'},
+  { heading: 'Normerende produkter' },
+  { link: '/anbefaling', desc: 'Anbefaling' },
+  { link: '/anbefaling-antibiotika', desc: 'Anbefaling antibiotika' },
+  { link: '/ninja-state', desc: 'Ninja State' },
+  { link: '/produkt', desc: 'Produktforside' },
+  { link: '/produkt-malgruppevelger', desc: 'Produktforside med valgt målgruppe' },
+  { link: '/kapittel', desc: 'Kapittel' },
+  { link: '/kapittel-med-underkapitler', desc: 'Underkapittel' },
+  { link: '/normerende-innhold', desc: 'Normerende' },
 
   { heading: 'Pakkeforløp' },
   { link: '/pakkeforløp', desc: 'Pakkeforløp' },
@@ -103,7 +103,9 @@ const FrontPage = () => (
     </div>
     <div className="l-container l-mt-3 l-mb-5">
       <h1>Prototype</h1>
-      {renderPageItems(pages)}
+      <div className="frontpage-list">
+        {renderPageItems(pages)}
+      </div>
     </div>
   </div>
 );

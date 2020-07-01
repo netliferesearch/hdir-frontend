@@ -1,4 +1,11 @@
-.b-toggle-content__text {
+.b-toggle-content button {
+  display: none;
+}
+.b-toggle-content.toggle-mode button {
+  display: inline-block;
+}
+
+.toggle-mode .b-toggle-content__text {
   position: relative;
   height: 100px;
   overflow-y: hidden;

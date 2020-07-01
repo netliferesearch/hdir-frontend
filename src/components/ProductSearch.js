@@ -51,11 +51,11 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setSearchResults(data);
         setToggleMoreRecommendations(false);
         setToggleMoreChapters(false);
         setLoading(false);
+        updateInternalLinksToCollapsibles();
       });
 
   const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
@@ -79,6 +79,50 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
     },
     [doSearch],
   );
+
+  const updateInternalLinksToCollapsibles = () => {
+    // If internal link to collapsible (i.e. search results), we need to trigger target collapsible
+    // Checking if target exists before proceeding, in case the internal link is for something else
+
+    const collapsibleInternalLink = [
+      ...document.querySelectorAll(".results a[href]")
+    ];
+    collapsibleInternalLink.forEach(item => {
+      item.addEventListener("click", (event) => {
+        const target = item.getAttribute("href");
+
+        // No hash, exit
+        if (!target.includes('#')) {
+          return;
+        }
+
+        const targetUrl = target.split("#")[0];
+        const targetHash = target.split("#")[1];
+        const currentUrl = window.location.href.replace(window.location.hash, "");
+
+        // Another URL, exit
+        if (targetUrl !== currentUrl) {
+          return;
+        }
+        
+        if (document.getElementById(targetHash)) {
+          const targetCollapsible = document.getElementById(targetHash);
+          const targetCollapsibleTrigger = targetCollapsible.parentNode.querySelectorAll('button')[0];
+          const isActive = targetCollapsible.parentNode.classList.contains('b-collapsible--active');
+
+          // TOOD: If collapsible is already open, make sure the offset position is correct
+          if (isActive) {
+            targetCollapsibleTrigger.parentNode.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            event.preventDefault();
+            return
+          }
+          targetCollapsibleTrigger.click();
+          event.preventDefault();
+        }
+      }, false);
+    });
+
+  }
 
   const getHighlightedText = (text, highlight) => {
     if (highlight.length < 2) {
@@ -175,7 +219,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
       ) : null}
 
       {toggled && searchString.length > 0 && modifiedResult().total > 0 && (
-        <div className="l-mb-4">
+        <div className="l-mb-4 results">
             {
               searchString && modifiedResult().total > 0 ? (
               <h2 className="b-product-search__title">
@@ -248,6 +292,15 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
             }
         </div>
       )}
+      {
+        toggled && searchString.length > 0 && !loading && searchResults.total === 0 ? (
+          <div className="l-mb-4">
+            <div className="col-xs-12 l-mt-2 l-mb-3">
+              <p>0 treff på «{searchString}» i {label}</p>
+            </div>
+          </div>
+        ) : null
+      }
     </>
   );
 }

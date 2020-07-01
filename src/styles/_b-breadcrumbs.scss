@@ -1,7 +1,19 @@
 .b-breadcrumbs {
-  padding-bottom: $space-lg * 0.88; // 1.75 rem
-  border-bottom: 1px solid $grey-light;
-  align-items: center;
+  padding-top: $space-xs;
+  padding-bottom: $space-xs;
+  @include mq($until: desktop) {
+    padding-top: 0;
+    padding-bottom: $space-xs;
+  }
+  &--border {
+    border-bottom: 1px solid $grey-light;
+    padding-top: 0;
+    padding-bottom: $space-lg;
+    @include mq($until: desktop) {
+      padding-top: 0;
+      padding-bottom: $space-md;
+    }
+  }
   
   &__location {
     font-size: $font-xs;
@@ -15,7 +27,7 @@
     display: inline-block;
     font-size: 14px;
     @include link-init($grey, true, $grey);
-    margin-right: 1.5rem;
+    margin-right: 1.7rem;
 
     &:after {
       position: absolute;
@@ -42,7 +54,7 @@
       display: none;
       position: relative;
       margin-left: 1.5em;
-      &:nth-last-child(2) {
+      &:last-child {
         display: inline-block;
         &:after {
           display: none;

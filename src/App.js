@@ -12,6 +12,10 @@ import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 // Import pages
 import ArticlePage from './pages/ArticlePage';
+import ArticlePageSecondaryBranding from './pages/ArticlePageSecondaryBranding';
+import ArticlePageSecondaryBrandingTwo from './pages/ArticlePageSecondaryBranding-2';
+import ArticlePageSecondaryBrandingThree from './pages/ArticlePageSecondaryBranding-3';
+import ArticlePageSecondaryBrandingFour from './pages/ArticlePageSecondaryBranding-4';
 import ArticlePageNoH2 from './pages/ArticlePageNoH2';
 import ArticlePageWithForm from './pages/ArticlePageWithForm';
 import ArticlePageWithIframe from './pages/ArticlePageWithIframe';
@@ -104,6 +108,10 @@ class App extends Component {
               <Route path="/produkt-malgruppevelger" component={ProductPageMalgruppe} />
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/artikkel" component={ArticlePage} />
+              <Route path="/artikkel-sekundar-branding" component={ArticlePageSecondaryBranding} />
+              <Route path="/artikkel-sekundar-branding-2" component={ArticlePageSecondaryBrandingTwo} />
+              <Route path="/artikkel-sekundar-branding-3" component={ArticlePageSecondaryBrandingThree} />
+              <Route path="/artikkel-sekundar-branding-4" component={ArticlePageSecondaryBrandingFour} />
               <Route path="/artikkel-ingen-h2" component={ArticlePageNoH2} />
               <Route
                 path="/artikkel-med-skjema"

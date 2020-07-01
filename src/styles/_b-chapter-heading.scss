@@ -1,8 +1,27 @@
 .b-chapter-heading {
   display: block;
   position: relative;
-  padding: 0 $space-md $space-md 0;
+  padding: 0 $space-md $space-sm 0;
   @include underline(transparent);
+
+  &__main-heading {
+    display: block;
+    &:before {
+      visibility: hidden;
+      display: none;
+
+      content: '';
+      height: 1em;
+      flex: 0 0 30px;
+      margin-top: 0.15em;
+
+      position: absolute;
+      width: 1em;
+      background-image: url($arrow-right);
+      background-size: .8em;
+      background-repeat: no-repeat;
+    }
+  }
 
   &--link {
     position: relative;
@@ -15,34 +34,14 @@
       color: $link-color;
       background: $primary-color-lightest;
     }
-
     .b-chapter-heading__main-heading::before {
       visibility: visible;
       display: inline-block;
     }
     .h2 {
       padding-right: $space-sm;
-    }
-    .h2 {
-      padding-right: $space-sm;
-    }
-  }
-  
-
-  &__main-heading {
-    display: flex;
-    &:before {
-      visibility: hidden;
-      display: none;
-
-      content: '';
-      height: 1em;
-      flex: 0 0 30px;
-      margin-top: 0.15em;
-
-      background-image: url($arrow-right);
-      background-size: .8em;
-      background-repeat: no-repeat;
+      padding-left: $space-md*1.1;
+      display: block;
     }
   }
 
@@ -64,11 +63,12 @@
   &--clean {
     border: 0 !important;
     padding: $space-sm 0;
+    display: block;
     .b-chapter-heading__main-heading {
+      display: block;
       &:before {
         display: none;
       }
-      
     }
   }
   
@@ -76,4 +76,8 @@
     outline: 0;
     border-top: 4px solid $blue;
   }
+}
+
+.custom-lis .b-chapter-heading {
+  border-bottom: 4px solid #212121 !important;
 }

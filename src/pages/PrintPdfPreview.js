@@ -3,7 +3,7 @@
 import React from 'react';
 
 const PrintPdfPreview = () => (
-  <div className="print-pdf">
+  <div className="print-pdf page-secondary-branding">
   <main id="main">
   <img
     src="https://www.helsedirektoratet.no/_/asset/helsedirektoratet:1570538453/static/hdir_logo.png"
@@ -13,26 +13,34 @@ const PrintPdfPreview = () => (
     role="presentation"
   />
   {/* Cover */}
-  <table
-    data-portal-component-type="layout"
-    className="print-page-break cover-table"
-  >
+  <table width="100%" data-portal-component-type="layout" className="cover-table print-page-break">
     <tbody>
       <tr>
         <td width="100%" className="cover-left">
-          <h1>
-            Psykoselidelser, inkludert mistanke om psykoseutvikling – barn, unge
-            og voksne
-          </h1>
+          <h1>Brystkreft</h1>
           <h4>Pakkeforløp</h4>
           <hr />
+          <br />
           <p>
-            <span>Først publisert: 02. desember 2018</span>
-            <br />
-            <span>Sist faglig oppdatert: 29. mai 2019</span>
+            <span>Først publisert: 15. desember 2014</span><br />
+              <span>Sist faglig oppdatert: 28. februar 2017</span>
           </p>
         </td>
-        <td width="30%" className="cover-right"></td>
+      </tr>
+      <tr>
+        <td>
+          <br /><br />
+            <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+            <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+              <p>
+                Veilederne er utgitt av Helsedirektoratet. <br />
+              Faglig innhold levert av Folkehelseinstituttet
+            </p>
+        </td>
       </tr>
     </tbody>
   </table>
