@@ -36,4 +36,9 @@ body {
   font-size: $font-sm;
 }
 
+// Logo position fix for ie11
+.b-main-header__logo {
+  background-size: 6rem 2.1rem;
+}
+
 @import './print-pdf-helfo';
