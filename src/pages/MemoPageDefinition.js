@@ -124,7 +124,7 @@ const ChapterPage = () => {
                   Bestemmelsen pålegger helsepersonell å informere <button className="b-definition__button" data-target="hovedarbeidsgiver">hovedarbeidsgiver</button><div id="hovedarbeidsgiver" className="b-definition__item">
                     Her er definisjon av ordet
                     </div> 
-                   om bierverv, engasjement, eierinteresser mv. som kan komme i
+                   &nbsp;om bierverv, engasjement, eierinteresser mv. som kan komme i
                   konflikt med hovedarbeidsgivers interesser.
           </p>
                 <p>
