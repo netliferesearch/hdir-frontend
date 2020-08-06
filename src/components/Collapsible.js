@@ -83,7 +83,7 @@ const Collapsible = props => {
 
   useEffect(() => {
     if (collapsed && !props.collapsed) {
-      zenscroll.intoView(parentElement.current, 300);
+      // zenscroll.intoView(parentElement.current, 300);
       const newHash = `#${id}`;
 
 

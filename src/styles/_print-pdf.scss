@@ -8,6 +8,14 @@
     content: ""
   }
 }
+
+.page-secondary-branding {
+  page: secondary-branding;
+}
+@page secondary-branding:first {
+  padding-bottom: 500px;
+}
+
 @page frontpage-no-image:first {
   background: none;
   padding-bottom: 0;
@@ -168,7 +176,14 @@
   }
   table td {
     padding: 3px 6px;
+
+    img {
+      margin-right: 10px;
+      max-width: 150px;
+      width: 100%;
+    }
   }
+
 }
 
 
@@ -197,7 +212,7 @@
   margin-top: 20px;
 }
 
-.cover-table {
+.cover-table, .cover-table th, .cover-table td {
   border: none !important;
 }
 

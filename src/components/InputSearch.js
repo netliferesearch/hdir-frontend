@@ -140,6 +140,9 @@ const InputSearch = props => {
 
   // Autosuggest will call this function every time you need to update suggestions.
   const onSuggestionsFetchRequested = ({ value }) => {
+    if (!props.showSuggestions) {
+      return;
+    }
     if (value && value.length >= 3) {
       const encodedValue = encodeURI(value);
       fetch(`${searchSuggestionUrl}?searchQuery=${encodedValue.toLowerCase()}`)

@@ -4,6 +4,12 @@
   padding: $space-sm $space-md;
   border: 1px solid transparent;
 
+  &__button {
+    .b-collapsible__code {
+      float: right;
+    }
+  }
+
   .b-collapsible {
     background: none;
     border: none;
@@ -125,7 +131,7 @@
       }
     }
     >.b-collapsible__footer {
-      margin-left: $space-lg;
+      padding-left: $space-lg;
       padding-bottom: $space;
       width: 100%;
       justify-content: flex-start;
@@ -142,6 +148,9 @@
     background: white;
     border: 1px solid $grey-light;
     margin-left: -$space-lg;
+    @include mq($until: wide) {
+      margin-right: -$space-lg;
+    }
     margin-bottom: $space;
     padding-left: $space-xl*.88;
     padding-right: $space;
@@ -187,8 +196,8 @@
 
   &__button {
     position: relative;
-    display: inline-block;
-    width: auto;
+    display: block;
+    width: 100%;
     background: none;
     border: 0;
     text-align: left;
@@ -335,7 +344,7 @@
     h4 + div {
       margin-top: $spaceSmall;
     }
-    h3, h4 {
+    h2, h3, h4 {
       padding-top: $space;
       display: inline-block !important;
     }
@@ -374,11 +383,24 @@
     display: none;
     justify-content: space-between;
     align-items: center;
+
+    .b-collapsible__button {
+      display: inline-block;
+      width: auto;
+    }
   }
   &--active .b-collapsible__footer {
     display: flex;
   }
   &__meta-date {
-    font-size: $meta-text;
+    font-size: $font-xs;
+    margin-left: $spaceSmall;
   }
+}
+
+.custom-lis .b-collapsible {
+  border-top: 1px solid #212121;
+}
+.custom-list .b-collapsible .b-collapsible {
+  margin-left: 1.5em;
 }

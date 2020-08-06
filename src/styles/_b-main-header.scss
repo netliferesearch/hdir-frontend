@@ -14,8 +14,8 @@
   }
 
   &__logo {
-    height: 2rem;
-    width: 100%;
+    height: 2.1rem;
+    width: 18rem;
     background-image: url($logo);
     background-repeat: no-repeat;
     background-position-y: center;
@@ -78,4 +78,10 @@
     // animation-name: fadeInUp;
     // animation-duration: 0.3s;
   }
+}
+
+// Temp fix for wrongly used class
+.l-container h1.b-main-header {
+  border: 0;
+  padding: 0;
 }
