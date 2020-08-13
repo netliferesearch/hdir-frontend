@@ -4,6 +4,9 @@
 .b-toggle-content.toggle-mode button {
   display: inline-block;
 }
+.b-toggle-content .b-definition__button {
+  display: inline-block !important;
+}
 
 .toggle-mode .b-toggle-content__text {
   position: relative;
