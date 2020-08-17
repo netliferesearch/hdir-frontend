@@ -49,7 +49,7 @@
     font-size: $font-xs;
   }
 }
-.b-definition__item.active {
+.b-definition__button.active +.b-definition__item {
   display: block;
   -webkit-animation: fadeIn .3s;
   animation: fadeIn .3s;
