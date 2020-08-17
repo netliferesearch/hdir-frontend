@@ -90,17 +90,19 @@ const ChapterPageWithLead = () => {
               h="h1"
               line="none"
             />
-            <div className="b-lead">
-              <p>Hjerneslag er både en akuttmedisinsk tilstand og kronisk tilstand og derfor trengs en bred tilnærming og en helhetlig behandlingskjede for å ivareta de behov slagrammede trenger i de ulike faser i behandlingsforløpet. </p>
-            </div>
-            <div className="b-toggle-content l-mb-2" id="about-text">
-              <div className="b-toggle-content__text">
-                <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
-                <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
-                <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
-                <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+            <div className="l-mt-2">
+              <div className="b-lead">
+                <p>Hjerneslag er både en akuttmedisinsk tilstand og kronisk tilstand og derfor trengs en bred tilnærming og en helhetlig behandlingskjede for å ivareta de behov slagrammede trenger i de ulike faser i behandlingsforløpet. </p>
               </div>
-              <Button secondary onClick={() => document.getElementById('about-text').classList.toggle('show')}>Les hele</Button>
+              <div className="b-toggle-content l-mb-2" id="about-text">
+                <div className="b-toggle-content__text">
+                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                </div>
+                <Button secondary onClick={() => document.getElementById('about-text').classList.toggle('show')}>Les hele</Button>
+              </div>
             </div>
             <ChapterHeading
               heading="4.1 Veiing og måling"
