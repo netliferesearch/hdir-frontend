@@ -77,17 +77,19 @@ const ProductPage = () => {
               collapsed
             />
 
-            <div className="b-lead b-lead--reset-spacing">
-              <p>Hjerneslag er både en akuttmedisinsk tilstand og kronisk tilstand og derfor trengs en bred tilnærming og en helhetlig behandlingskjede for å ivareta de behov slagrammede trenger i de ulike faser i behandlingsforløpet. </p>
-            </div>
-            <div className="b-toggle-content l-mb-2" id="about-text">
-              <div className="b-toggle-content__text">
-                <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
-                <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
-                <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
-                <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+            <div className="l-mt-2">
+              <div className="b-lead b-lead--reset-spacing">
+                <p>Hjerneslag er både en akuttmedisinsk tilstand og kronisk tilstand og derfor trengs en bred tilnærming og en helhetlig behandlingskjede for å ivareta de behov slagrammede trenger i de ulike faser i behandlingsforløpet. </p>
               </div>
-              <Button secondary onClick={() => document.getElementById('about-text').classList.toggle('show')}>Les hele</Button>
+              <div className="b-toggle-content l-mb-2" id="about-text">
+                <div className="b-toggle-content__text">
+                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                </div>
+                <Button secondary onClick={() => document.getElementById('about-text').classList.toggle('show')}>Les hele</Button>
+              </div>
             </div>
 
             <div className="col-xs-12 l-mt-2">
