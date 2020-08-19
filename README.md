@@ -16,12 +16,11 @@ It can also be found published on Netlify: http://hdir-frontend.netlify.com
 
 ## Merge Flow
 
-Develop new features on separate feature-branches, using the following naming pattern: `HDF-123_name_of_task`. When ready for testing, merge into `develop` branch.
-Minor fixes can be committed directly to the `develop` branch.
+Develop new features on separate feature-branches, using the following naming pattern: `HDF-123_name_of_task`. When ready for testing, merge into `test` branch.
 
-The next step is a review branch called `test`. This is used to separate the `develop` stuff (where all kinds of features and fixes may be) from specific features being developed for a certain time period. 
+The next step is a staging/review branch called `develop`. This is used to separate the `test` stuff (where all kinds of features and fixes may be) from specific features being developed for a certain time period. 
 
-The final step is the `master` branch. This branch should always correspond to what is ready for production. 
+The final step is the `master` branch. This branch should always correspond to what is ready for, or in, production. 
 
 Always use Pull Requests to merge between the branches when developing new features.
 
@@ -68,7 +67,6 @@ Be careful not to run update when you want to run the test, because it will over
 ### Styling rules
 
 - Each component has 100% width. The grid decides the width of the component. The exception to this rule is `inline` and `inline-block` and `flex` elements, which has their width defined by their content or surroundings.
-- A component should not decide its spacing around itself. There are 5 spacing units to choose from i.e. `l-mt-5`. 5 Is the largest unit, and will give the biggest spacing. `m` stands for margin and `t` for top. The four sides are called `t` `r` `b` `l`. It is prefered to always use margin top, unless it complicates things, if it does, use `l-mb-#`.
 - An element can not contain an element. It always go Block -> Element -> Modifier. BEM shouldn't care about how the DOM/HTML is nested.
 
 ### SASS dependencies
@@ -125,6 +123,27 @@ The javascript is a collection of apps that can render, and read the data attrib
   - The objects in the array has the props: `value`, `label` and `checked` (this is a boolean).
   - The value should be url encoded.
   - The JSON string (data-options) decides which checkbox is currently filtering, not the URL.
+
+- `#product-search`
+  - Typically placed on product front pages and chapter pages.
+  - Works indenpendently as long as it has its attributes.
+  - `data-label` (string) label element for search field
+  - `data-content-id` (string) which content should the search be performed in
+  - `data-collapsed` (bool) Should be collapsed per default, when in chapter pages
+  - `data-malgruppe` (string) filter results by malgruppe attribute
+  - `data-flatTree` (string) JSON array of content structure
+  - `data-endpoint` (string) URL to search endpoint
+
+- `#list-search`
+  - For searching on list pages
+  - Works indenpendently as long as it has its attributes.
+  - `data-label` (string) label element for search field
+  - `data-content-id` (string) which content should the search be performed in
+  - `data-collapsed` (bool) Should be collapsed per default, when in chapter pages
+  - `data-malgruppe` (string) filter results by malgruppe attribute
+  - `data-flatTree` (string) JSON array of content structure
+  - `data-tema` (string) filter by theme
+  - `data-type` (string) filter by type
 
 ## Handoff to Enonic
 
