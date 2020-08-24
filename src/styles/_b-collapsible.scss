@@ -344,12 +344,9 @@
     h4 + div, h5 + div {
       margin-top: $spaceSmall;
     }
-    h2, h3, h4 {
+    h2, h3, h4, h5 {
       padding-top: $space;
       display: inline-block !important;
-    }
-    h5 {
-      padding-top: $spaceSmall;
     }
     h3:first-child, h4:first-child {
       padding-top: 0;
