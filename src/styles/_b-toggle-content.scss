@@ -5,6 +5,10 @@
   display: inline-block;
 }
 
+.b-toggle-content__text {
+  word-break: break-word;
+}
+
 .toggle-mode .b-toggle-content__text {
   position: relative;
   height: 100px;
@@ -30,7 +34,6 @@
   .b-toggle-content__text {
     height: auto;
     overflow-y: visible;
-    word-break: break-word;
 
     &:after {
       display: none;
