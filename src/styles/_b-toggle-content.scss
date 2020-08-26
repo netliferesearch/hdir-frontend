@@ -30,6 +30,7 @@
   .b-toggle-content__text {
     height: auto;
     overflow-y: visible;
+    word-break: break-word;
 
     &:after {
       display: none;
