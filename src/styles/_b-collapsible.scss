@@ -341,10 +341,10 @@
       margin-bottom: $space;
     }
     
-    h4 + div {
+    h4 + div, h5 + div {
       margin-top: $spaceSmall;
     }
-    h2, h3, h4 {
+    h2, h3, h4, h5 {
       padding-top: $space;
       display: inline-block !important;
     }
@@ -354,6 +354,9 @@
     .b-collapsible__heading {
       padding: 0;
       text-transform: none;
+    }
+    h5.b-collapsible__heading {
+      font-weight: normal;
     }
     button h4 {
       margin: 0;
