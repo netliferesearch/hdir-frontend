@@ -3,3 +3,9 @@
   margin-bottom: $space-lg;
   font-size: $font-l;
 }
+.b-lead--reset-spacing {
+  margin-top: $space-lg*1.5;
+  @include mq($until: tablet) {
+    margin-top: $space-lg;
+  }
+}
