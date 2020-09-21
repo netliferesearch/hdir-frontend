@@ -12,6 +12,7 @@ import MainHeader from './components/MainHeader';
 import Footer from './components/Footer';
 // Import pages
 import ArticlePage from './pages/ArticlePage';
+import ArticlePageNews from './pages/ArticlePageNews';
 import ArticlePageSecondaryBranding from './pages/ArticlePageSecondaryBranding';
 import ArticlePageSecondaryBrandingTwo from './pages/ArticlePageSecondaryBranding-2';
 import ArticlePageSecondaryBrandingThree from './pages/ArticlePageSecondaryBranding-3';
@@ -108,6 +109,7 @@ class App extends Component {
               <Route path="/produkt-malgruppevelger" component={ProductPageMalgruppe} />
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/artikkel" component={ArticlePage} />
+              <Route path="/nyhet" component={ArticlePageNews} />
               <Route path="/artikkel-sekundar-branding" component={ArticlePageSecondaryBranding} />
               <Route path="/artikkel-sekundar-branding-2" component={ArticlePageSecondaryBrandingTwo} />
               <Route path="/artikkel-sekundar-branding-3" component={ArticlePageSecondaryBrandingThree} />

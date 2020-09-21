@@ -36,10 +36,10 @@ const ArticlePageNews = () => (
             lead="Et nytt e-læringskurs skal gi helsepersonell i kommunale helse- og omsorgstjenester kompetanse i palliativ omsorg, pleie og behandling av eldre og alvorlig syke personer med covid-19, som behandles i kommunene."
             image="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG"
           />
+          <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
           <figure className="editor-align-justify"><img alt="Skjermbilde.PNG" src="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG" /><figcaption></figcaption></figure>
 
         </div>
-          <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
         <div className="row l-mt-3">
           <article className="col-md-8 col-xs-12 t-body-text">
             <p>
@@ -170,44 +170,6 @@ const ArticlePageNews = () => (
           </div>
         </div>
       </div>
-
-
-     
-
-
-      <div className="row">
-        <div className="col-xs-12 l-mt-4">
-          <h2>
-            <img
-              src="./icons/Statistikk.svg"
-              className="b-icon b-icon--heading"
-              alt=""
-              role="presentation"
-            />
-              Statistikk
-            </h2>
-          <div className="l-mt-1">
-            <hr className="b-hr b-hr--thick" />
-          </div>
-        </div>
-      </div>
-      
-      <div className="l-mt-2">
-        <List
-          list={[
-            {
-              type: 'generic',
-              url: '#7',
-              fields: {
-                category: 'Statistikk',
-                heading:
-                  'Covid-19 - antall innlagte pasienter på sykehus'
-              }
-            },
-          ]}
-        />
-      </div>
-
      
 
     </div>
