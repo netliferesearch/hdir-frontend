@@ -1,7 +1,6 @@
 .b-article-intro {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   position: relative;
 
   @include mq($until: $tablet) {
@@ -11,7 +10,6 @@
   &__image {
     // This applies both on a 'img' tag and a 'div' tag with background
     max-width: 100%;
-    height: 100%;
     &-wrapper--feature & {
       // This applies only on a 'div' tag with background
       width: 100%;
@@ -26,10 +24,11 @@
   }
   &__image-wrapper {
     // This wraps both a 'img' and a 'div' tag with background
-    width: calc(50% - 1.5rem);
+    // width: calc(50% - 1.5rem);
     margin-left: 1.5rem;
-    min-height: 12.5vw;
-    max-height: 220px;
+    // min-height: 12.5vw;
+    // max-height: 220px;
+    width: 50%;
     &--feature & {
       // This wraps only a 'div' tag with background
       max-height: auto;

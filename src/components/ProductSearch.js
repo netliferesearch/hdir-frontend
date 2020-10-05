@@ -51,6 +51,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
     })
       .then(res => res.json())
       .then(data => {
+        console.log('data', data)
         setSearchResults(data);
         setToggleMoreRecommendations(false);
         setToggleMoreChapters(false);
@@ -71,6 +72,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
         formData.append('malgruppe', malgruppe);
         formData.append('flatTree', flatTree);
         doSearch(formData);
+        console.log(flatTree)
       }
       if (value.length === 0) {
         setSearchResults('');

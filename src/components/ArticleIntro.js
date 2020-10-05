@@ -30,18 +30,20 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription }
       <div className={imageWrapperClasses(feature)}>
         {!feature ? (
           <>
-            <img
-              className="b-article-intro__image"
-              src={image}
-              alt={imageDescription}
-              aria-labelledby="intro-image-description"
-            />
-            <p
-              className="b-article-intro__image-text"
-              id="intro-image-description"
-            >
-              {imageDescription}
-            </p>
+          <div>
+              <img
+                className="b-article-intro__image"
+                src={image}
+                alt={imageDescription}
+                aria-labelledby="intro-image-description"
+              />
+              <p
+                className="b-article-intro__image-text"
+                id="intro-image-description"
+              >
+                {imageDescription}
+              </p>
+            </div>
           </>
         ) : (
           <>
