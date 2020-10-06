@@ -16,8 +16,14 @@ const imageWrapperClasses = feature =>
     'b-article-intro__image-wrapper--feature': feature
   });
 
-const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription }) => (
-  <div className="b-article-intro">
+const mainClasses = fullWidth =>
+  classNames({
+    'b-article-intro': true,
+    'b-article-intro--full': fullWidth
+  });
+
+const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, fullWidth }) => (
+  <div className={mainClasses(fullWidth)}>
     <div className={imageToggle(image, feature)}>
       <h1>
         { topic ? (
