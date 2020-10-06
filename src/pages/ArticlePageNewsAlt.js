@@ -123,16 +123,8 @@ const ArticlePageNews = () => (
       <div className="row">
         <div className="col-xs-12 l-mt-4">
           <h2>
-            <a href="#">
-            <img
-              src="./icons/Nyheter.svg"
-              className="b-icon b-icon--heading"
-              alt=""
-              role="presentation"
-            />
-                Andre relevante nyheter
-                </a>
-              </h2>
+            Andre relevante nyheter
+          </h2>
           <div className="l-mt-1">
             <hr className="b-hr b-hr--thick" />
           </div>
