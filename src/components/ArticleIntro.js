@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PageMeta from './PageMeta';
 
 const imageToggle = (image, feature) =>
   classNames({
@@ -25,6 +26,7 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription }
         {heading}
       </h1>
       <p className="b-article-intro__intro">{lead}</p>
+      <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
     </div>
     {image && (
       <div className={imageWrapperClasses(feature)}>

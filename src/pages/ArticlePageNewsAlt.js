@@ -34,12 +34,12 @@ const ArticlePageNews = () => (
           <ArticleIntro
             heading="Nytt e-læringskurs i palliativ behandling av eldre og alvorlig syke med covid-19"
             lead="Et nytt e-læringskurs skal gi helsepersonell i kommunale helse- og omsorgstjenester kompetanse i palliativ omsorg, pleie og behandling av eldre og alvorlig syke personer med covid-19, som behandles i kommunene."
-            image="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG"
           />
           
         </div>
         <div className="row l-mt-3">
           <article className="col-md-8 col-xs-12 col-md-offset-2 t-body-text">
+            <img src="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG" />
             <p>
               Eldre og mennesker med underliggende sykdommer er spesielt utsatt for å bli alvorlig syke av covid-19. Kommuner som har hatt utbrudd, melder om svingende og dramatiske sykdomsforløp. Samtidig har det manglet opplæring i covid-19-spesifikk palliasjon for helsepersonell i kommunale helse- og omsorgstjenester.
             </p>
