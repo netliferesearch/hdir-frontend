@@ -63,22 +63,11 @@
     padding: 0;
     display: block;
   }
-  &--subtle {
-    margin-left: 0;
-    padding-left: 0;
-    background: none;
-    border: none;
-    
-    &.b-collapsible {
-      padding-left: 0;
-    }
-    
-    h4.b-collapsible__heading {
-      font-size: $meta-text;
-      font-weight: normal;
-      text-transform: uppercase;
-      padding-top: 0;
-    }
+  &__tag {
+    display: none;
+  }
+  &__tag-content {
+    display: none;
   }
 
   &--no-border {
@@ -154,6 +143,68 @@
     margin-bottom: $space;
     padding-left: $space-xl*.88;
     padding-right: $space;
+
+    .b-collapsible__button {
+      display: inline-block;
+      width: auto;
+      margin-right: $spaceSmall;
+    }
+
+    .b-collapsible__tag {
+      font-size: $font-xs;
+      font-weight: normal;
+      display: inline-block;
+      transition: background .1s ease-out;
+      background: $yellow-light;
+      padding: $spaceSmall / 1.5 $spaceSmall * 1.75;
+      margin: $spaceSmall / 2 $spaceSmall $spaceSmall 0;
+      border: 0;
+      border-radius: 20px;
+      top: -2px;
+      position: relative;
+      cursor: help;
+
+      span {
+        border-bottom: 1px dashed $black;
+        padding-bottom: 0px;
+      }
+
+      &:hover {
+        background: $yellow;
+      }
+      &:focus, &:active {
+        outline: none;
+      }
+      
+      &.show {
+        background: $white;
+        &:after {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          bottom: -15px;
+          width: 0; 
+          height: 0; 
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-top: 15px solid $white;
+          z-index: 9;
+        }
+        
+      }
+
+    }
+    .b-collapsible__tag-content.show {
+      display: block;
+      padding: $spaceSmall;
+      margin-top: -$spaceSmall;
+      margin-bottom: $space;
+      background: $yellow-light;
+      font-size: $font-xs;
+    }
   }
 
   &__meta-content {
@@ -326,6 +377,7 @@
   }
   &__content {
     animation: fadeInUp 300ms ease;
+    padding-top: $spaceSmall;
     padding-bottom: $space;
 
     p {
@@ -346,7 +398,6 @@
     }
     h2, h3, h4, h5 {
       padding-top: $space;
-      display: inline-block !important;
     }
     h3:first-child, h4:first-child {
       padding-top: 0;
