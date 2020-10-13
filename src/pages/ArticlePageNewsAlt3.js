@@ -33,7 +33,7 @@ const ArticlePageNews = () => (
         <div className="row l-mt-3">
           <div className="col-md-8 col-xs-12 col-md-offset-2">
             <div className=" l-mb-3">
-            <img width="100%" src="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG" />
+              <img width="100%" src="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG" />
               <figcaption>Et nytt e-læringskurs skal gi helsepersonell i kommunale helse- og omsorgstjenester kompetanse i palliativ omsorg, pleie og behandling av eldre og alvorlig syke personer med covid-19. Foto: Illustrasjonsbilde</figcaption>
             </div>
             <ArticleIntro

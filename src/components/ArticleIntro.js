@@ -31,8 +31,7 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, 
         ) : null}
         {heading}
       </h1>
-      <p className="b-article-intro__intro">{lead}</p>
-      <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
+      
     </div>
     {image && (
       <div className={imageWrapperClasses(feature)}>
@@ -68,6 +67,8 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, 
         )}
       </div>
     )}
+    <p className="b-article-intro__intro">{lead}</p>
+    <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
   </div>
 );
 
