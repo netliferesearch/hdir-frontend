@@ -21,6 +21,9 @@
 
 // 'div' element, lives outside 'form'
 #xp-formbuilder-successmessage {
+  @extend .l-container;
+  @extend .l-mt-4;
+  @extend .l-mb-4;
   p {
   }
 }
