@@ -174,7 +174,7 @@ const ArticlePageNews = () => (
                       type: 'generic',
                       url: '#7',
                       fields: {
-                        category: 'Statistikk',
+                        category: 'Nyhet',
                         heading:
                           'Nasjonale forventninger til kommunenes håndtering ved utbrudd av covid-19'
                       }
