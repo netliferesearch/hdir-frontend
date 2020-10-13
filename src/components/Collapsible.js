@@ -132,12 +132,16 @@ const Collapsible = props => {
           )}
         </Heading>
       </button>
-      {props.tag && (
-        <button className="b-collapsible__tag"><span>{props.tag.title}</span></button>
-      )}
-      {props.tag && (
-        <div className="b-collapsible__tag-content">{props.tag.description}</div>
-      )}
+      { props.tag && (
+        props.tag.description ? (
+          <button className="b-collapsible__tag"><span>{props.tag.title}</span></button>
+          ) : (
+          <div className="b-collapsible__tag b-collapsible__tag--no-action"><span>{props.tag.title}</span></div>
+        )
+        )}
+      {props.tag && props.tag.description && (
+          <div className="b-collapsible__tag-content">{props.tag.description}</div>
+        )}
 
       {props.subheading && !props.subheadingContent && (
         <div className="b-collapsible__subheading l-mt-1">
