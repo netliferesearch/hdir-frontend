@@ -32,8 +32,9 @@ const ArticlePageNews = () => (
       <main id="main">
         <div className="row l-mt-3">
           <div className="col-md-8 col-xs-12 col-md-offset-2">
-            <div className=" l-mb-2">
-            <img src="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG" />
+            <div className=" l-mb-3">
+            <img width="100%" src="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG" />
+              <figcaption>Et nytt e-læringskurs skal gi helsepersonell i kommunale helse- og omsorgstjenester kompetanse i palliativ omsorg, pleie og behandling av eldre og alvorlig syke personer med covid-19. Foto: Illustrasjonsbilde</figcaption>
             </div>
             <ArticleIntro
               fullWidth
@@ -42,7 +43,7 @@ const ArticlePageNews = () => (
             />
           </div>
         </div>
-        <div className="row l-mt-3">
+        <div className="row l-mt-2">
           <article className="col-md-8 col-xs-12 col-md-offset-2 t-body-text">
             
             <p>
@@ -155,6 +156,31 @@ const ArticlePageNews = () => (
                 >
                   <img src="https://www.helsedirektoratet.no/nyheter/revidert-veileder-for-smittevern-i-kollektivtransport-buss-tog-trikk-mv./_/image/e557809a-25d5-4eb2-a67e-0baf848d9d90:023504bf88414ccf84dbd5e924def4fc82330a3b/width-768/33801691-city-bus-foto-Mostphotos.jpg" alt="antibiotika" />
                 </Card>
+              </div>
+
+              <div className="col-xs-12 l-mt-2">
+                <List
+                  list={[
+                    {
+                      type: 'generic',
+                      url: '#7',
+                      fields: {
+                        category: 'Nyhet',
+                        heading:
+                          'Ber kommunene legge til rette for besøk'
+                      }
+                    },
+                    {
+                      type: 'generic',
+                      url: '#7',
+                      fields: {
+                        category: 'Statistikk',
+                        heading:
+                          'Nasjonale forventninger til kommunenes håndtering ved utbrudd av covid-19'
+                      }
+                    },
+                  ]}
+                />
               </div>
               
             </div>
