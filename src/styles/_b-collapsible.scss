@@ -145,12 +145,20 @@
     padding-right: $space;
 
     .b-collapsible__button {
-      display: inline-block;
+      display: block;
       width: auto;
       margin-right: $spaceSmall;
     }
+  }
 
-    .b-collapsible__tag {
+  &__meta-content {
+    background: $grey-lighter;
+    display: none;
+    padding: $space;
+  }
+
+  &--active {
+     .b-collapsible__tag {
       font-size: $font-xs;
       font-weight: normal;
       display: inline-block;
@@ -160,7 +168,6 @@
       margin: $spaceSmall / 2 $spaceSmall $spaceSmall 0;
       border: 0;
       border-radius: 20px;
-      top: -2px;
       position: relative;
       cursor: help;
 
@@ -205,17 +212,11 @@
       background: $yellow-light;
       font-size: $font-xs;
     }
-  }
 
-  &__meta-content {
-    background: $grey-lighter;
-    display: none;
-    padding: $space;
-  }
-
-  &--active .b-collapsible__meta-content {
-    @include mq($from: wide) {
-      display: block;
+    .b-collapsible__meta-content {
+      @include mq($from: wide) {
+        display: block;
+      }
     }
   }
 

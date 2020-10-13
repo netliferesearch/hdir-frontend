@@ -62,7 +62,7 @@ const LisLearning = () => (
               <ChapterHeading heading="Nyfødtkirurgi" line="bottom" h="h2" />
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
-                subheading="LÆRINGSMÅL"
+                tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
                 size="medium"
                 code="BAK 001"
                 noBorder
@@ -86,7 +86,7 @@ const LisLearning = () => (
               <div className="l-mt-2">
                 <Collapsible
                   heading="Lyskebrokk hos nyfødte"
-                  subheading="LÆRINGSMÅL"
+                  tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
                   size="medium"
                   code="BAK 002"
                 >
