@@ -71,6 +71,20 @@ body {
   }
 }
 
+.l-card-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > *:first-child {
+    margin-bottom: $space-sm;
+  }
+  
+  @include mq($until: tablet) {
+    & > * {
+      margin-bottom: $space-sm;
+    }
+  }
+}
 .l-card-grid {
   display: flex;
   flex-wrap: wrap;

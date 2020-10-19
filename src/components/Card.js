@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const cardClasses = horizontal =>
+const cardClasses = ({ horizontal, verticalGrow}) =>
   classNames({
     'b-card': true,
-    'b-card--horizontal': horizontal
+    'b-card--horizontal': horizontal,
+    'b-card--grow': verticalGrow
   });
 
 const linkClasses = arrow =>
@@ -23,9 +24,10 @@ const Card = ({
   text, 
   content, 
   mainContent, 
+  verticalGrow,
   arrow 
 }) => (
-  <a href="#a" className={cardClasses(horizontal)}>
+  <a href="#a" className={cardClasses({horizontal, verticalGrow})}>
     {children && <div className="b-card__feature">{children}</div>}
     <div className={linkClasses(arrow)}>
       {heading && <h3 className="b-card__heading">{heading}</h3>}
