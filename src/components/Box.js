@@ -12,6 +12,7 @@ const boxClasses = (color, square, noPadding, tinyPadding) =>
     'b-box--white': color === 'white',
     'b-box--transparent': color === 'transparent',
     'b-box--blue': color === 'blue',
+    'b-box--blue-light': color === 'blueLight',
     'b-box--blue-dark': color === 'blueDark',
     'b-box--yellow': color === 'yellow'
   });
@@ -33,6 +34,7 @@ Box.propTypes = {
     'grey',
     'white',
     'blue',
+    'blueLight',
     'blueDark',
     'yellow',
     'transparent'

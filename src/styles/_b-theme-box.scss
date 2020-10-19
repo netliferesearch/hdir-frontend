@@ -1,0 +1,7 @@
+.b-theme-box {
+  padding: $space-md $space-sm;
+  
+  @include mq($from: $tablet) {
+    padding: $space-xl 0;
+  }
+}
