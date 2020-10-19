@@ -389,29 +389,26 @@ const ArticlePage = () => (
       heading="Siste om covid-19"
       cardsLeft={[
         {
-          title: 'Tittel',
-          description: 'Beskrivelse',
+          title: 'Helsepersonell og andre profesjonelle aktører',
           url: '#a',
           icon: '../icons/Nyheter.svg',
           category: 'Tema'
         },
         {
-          title: 'Tittel',
-          description: 'Beskrivelse',
+          title: 'Privatperson',
           url: '#b',
           icon: '../icons/Nyheter.svg',
-          category: 'Tema'
+          category: 'Helsenorge.no'
         },
       ]}
       cardsRight={[
         {
-          title: 'Tittel',
-          description: 'Beskrivelse',
+          title: 'Opp til kommunene å vurdere politianmeldelser',
           url: '#c',
-          image: './antibiotika.png',
+          image: 'https://via.placeholder.com/800x350',
           imageAlt: 'alt description',
           icon: '../icons/Nyheter.svg',
-          category: 'Tema'
+          category: 'Nyhet'
         },
       ]}
       bottomLinks={[
