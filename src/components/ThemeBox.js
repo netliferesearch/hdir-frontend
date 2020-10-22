@@ -2,9 +2,9 @@ import React from 'react';
 import Box from './Box';
 import Card from './Card';
 
-const ThemeBox = ({ heading, cardsLeft, cardsRight, bottomLinks }) => {
+const ThemeBox = ({ heading, cardsLeft, cardsRight, bottomLinks, clearTopPadding }) => {
   return (
-    <div className="l-mt-4">
+    <div className="b-theme-box-wrapper l-mt-4">
       <Box color="blueLight" square noPadding>
         <div className="l-container b-theme-box">
           <div className="row">
