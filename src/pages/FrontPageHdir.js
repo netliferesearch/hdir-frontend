@@ -29,7 +29,7 @@ const FrontPageHdir = () => (
           {
             title: 'Opp til kommunene å vurdere politianmeldelser',
             url: '#c',
-            image: 'https://via.placeholder.com/800x350',
+            image: 'https://via.placeholder.com/800x300',
             imageAlt: 'alt description',
             icon: '../icons/Nyheter.svg',
             category: 'Nyhet'
