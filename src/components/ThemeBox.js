@@ -4,7 +4,7 @@ import Card from './Card';
 
 const ThemeBox = ({ heading, cardsLeft, cardsRight, bottomLinks, clearTopPadding }) => {
   return (
-    <div className="b-theme-box-wrapper l-mt-4">
+    <div className="b-theme-box-wrapper l-mt-5">
       <Box color="blueLight" square noPadding>
         <div className="l-container b-theme-box">
           <div className="row">
