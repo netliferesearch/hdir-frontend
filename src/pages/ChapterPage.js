@@ -161,6 +161,7 @@ const ChapterPage = () => {
               </div>
               <ContentFooter
                 heading="Slik refererer du retningslinjen"
+                id="ContentFooter1"
                 content={[
                   <>
                     Helsedirektoratet (2020). Nasjonal faglig retningslinjer for
@@ -172,6 +173,7 @@ const ChapterPage = () => {
               />
               <ContentFooter
                 heading="Åpne data (API)"
+                id="ContentFooter2"
                 content={[
                   <>
                     Åpne data (API) <br />
