@@ -9,10 +9,14 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 center;
+
+    &--rotate90 {
+      transform: rotate(90deg);
+    }
   }
   &__link {
     position: relative;
-    transition: all .1s ease-out;
+    transition: all 0.1s ease-out;
 
     &--arrow {
       &:after {
