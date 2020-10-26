@@ -161,30 +161,38 @@ const ChapterPage = () => {
               </div>
               <ContentFooter
                 heading="Slik refererer du retningslinjen"
-                id="ContentFooter1"
+                id="contentFooter-1"
                 content={[
                   <>
-                    Helsedirektoratet (2020). Nasjonal faglig retningslinjer for
-                    ADHD. (IS-XXYY) Oslo: Helsedirektoratet. Hentet fra
+                    Helsedirektoratet (2020).{' '}
+                    <i>
+                      Nasjonal faglig retningslinjer for helsestasjons- og
+                      skolehelsetjenesten [nettdokument].
+                    </i>{' '}
+                    Oslo: Helsedirektoratet (oppdatert 12. mars 2019, lest 12.
+                    august 2020). Tilgjengelig fra:
                     https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten.
-                    [dato hentet]
                   </>
                 ]}
               />
               <ContentFooter
                 heading="Åpne data (API)"
-                id="ContentFooter2"
+                id="contentFooter-2"
                 content={[
                   <>
-                    Åpne data (API) <br />
-                    <a href="#">https://utvikler.helsedirektoratet.no/</a>
-                    Lenke til endepunkt for Utredning og diagnostikk av
-                    ADHD/Hyperkinetisk forstyrrelse
-                    <br />
-                    <br />
-                    <a href="#">
-                      https://api.helsedirektoratet.no/innhold/retningslinjer/0006-0001-0e87de78-2cb4-4a70-93a7-0d687443b71e
+                    Få tilgang til innhold fra Helsedirektoratet som åpne data
+                    her: <br />
+                    <a href="https://utvikler.helsedirektoratet.no/">
+                      https://utvikler.helsedirektoratet.no/
                     </a>
+                    <br />
+                    <br />
+                    [Tittel på innholdet] er tilgjengelig i vårt API fra denne
+                    adressen: https://xxxx
+                    <br />
+                    <br />
+                    Du kan også finne innhold basert på søk metadata som
+                    medisinskfaglige koder, målgrupper med mer.
                   </>
                 ]}
               />

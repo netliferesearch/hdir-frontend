@@ -13,7 +13,6 @@ const ContentFooter = props => (
     </Button>
     <div id={props.id} className="b-content-footer__text b-box-small l-mb-1">
       <p>{props.content}</p>
-      {props.id}
     </div>
   </div>
 );
