@@ -160,7 +160,7 @@ const ChapterPage = () => {
                 </Button>
               </div>
               <ContentFooter
-                heading="Slik refererer du retningslinjen"
+                heading="Slik refererer du [produkttype]"
                 id="contentFooter-1"
                 content={[
                   <>
@@ -169,8 +169,8 @@ const ChapterPage = () => {
                       Nasjonal faglig retningslinjer for helsestasjons- og
                       skolehelsetjenesten [nettdokument].
                     </i>{' '}
-                    Oslo: Helsedirektoratet (oppdatert 12. mars 2019, lest 12.
-                    august 2020). Tilgjengelig fra:
+                    Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars
+                    2019, lest 12. august 2020). Tilgjengelig fra:
                     https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten.
                   </>
                 ]}
@@ -180,18 +180,18 @@ const ChapterPage = () => {
                 id="contentFooter-2"
                 content={[
                   <>
-                    Få tilgang til innhold fra Helsedirektoratet som åpne data
-                    her: <br />
+                    Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
+                    <br />
                     <a href="https://utvikler.helsedirektoratet.no/">
                       https://utvikler.helsedirektoratet.no/
                     </a>
                     <br />
                     <br />
-                    [Tittel på innholdet] er tilgjengelig i vårt API fra denne
-                    adressen: https://xxxx
+                    [Fulltittel på innholdet] er tilgjengelig i vårt API
+                    https://xxxx
                     <br />
                     <br />
-                    Du kan også finne innhold basert på søk metadata som
+                    Du kan også finne innhold basert på søk i metadata som
                     medisinskfaglige koder, målgrupper med mer.
                   </>
                 ]}
