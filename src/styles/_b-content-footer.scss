@@ -1,0 +1,19 @@
+.b-content-footer__btn {
+  .b-link__icon {
+    transform: rotate(90deg);
+  }
+}
+
+.b-content-footer__btn--active {
+  .b-link__icon {
+    transform: rotate(180deg);
+  }
+}
+
+.b-content-footer__text {
+  display: none;
+}
+
+.b-content-footer__text--active {
+  display: block;
+}
