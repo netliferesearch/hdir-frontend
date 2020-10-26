@@ -32,7 +32,6 @@ const Button = ({
   secondaryDark,
   onClick,
   icon,
-  iconRotate90,
   children,
   ...rest
 }) => {
@@ -50,9 +49,7 @@ const Button = ({
     <button className={allClassNames} onClick={onClick} {...rest}>
       {icon && (
         <div
-          className={`b-link__icon ${
-            iconRotate90 ? 'b-link__icon--rotate90' : ''
-          }`}
+          className="b-link__icon"
           role="presentation"
           style={{ backgroundImage: `url(${icon})` }}
         />
@@ -74,8 +71,7 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   secondaryDark: PropTypes.bool,
   plain: PropTypes.bool,
-  clean: PropTypes.bool,
-  iconRotate90: PropTypes.bool
+  clean: PropTypes.bool
 };
 
 export default Button;
