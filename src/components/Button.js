@@ -22,7 +22,7 @@ const buttonClasses = (
     'b-button--secondary-dark': secondaryDark
   });
 
-const Button = ({ 
+const Button = ({
   arrow,
   download,
   small,
@@ -35,7 +35,6 @@ const Button = ({
   children,
   ...rest
 }) => {
-  
   const allClassNames = buttonClasses(
     arrow,
     download,
@@ -43,9 +42,9 @@ const Button = ({
     secondary,
     plain,
     clean,
-    secondaryDark,
+    secondaryDark
   );
-  
+
   return (
     <button className={allClassNames} onClick={onClick} {...rest}>
       {icon && (
@@ -55,9 +54,11 @@ const Button = ({
           style={{ backgroundImage: `url(${icon})` }}
         />
       )}
-      {icon ? 
-        (<span className="b-button__underline">{children}</span>) 
-      : children}
+      {icon ? (
+        <span className="b-button__underline">{children}</span>
+      ) : (
+        children
+      )}
     </button>
   );
 };
