@@ -187,7 +187,7 @@ const ChapterPage = () => {
                     </a>
                     <br />
                     <br />
-                    [Fulltittel på innholdet] er tilgjengelig i vårt API
+                    [Fulltittel på innholdet] er tilgjengelig i vårt API:
                     https://xxxx
                     <br />
                     <br />
