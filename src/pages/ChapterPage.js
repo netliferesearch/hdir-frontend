@@ -189,10 +189,6 @@ const ChapterPage = () => {
                     <br />
                     [Fulltittel på innholdet] er tilgjengelig i vårt API:
                     https://xxxx
-                    <br />
-                    <br />
-                    Du kan også finne innhold basert på søk i metadata som
-                    medisinskfaglige koder, målgrupper med mer.
                   </>
                 ]}
               />
