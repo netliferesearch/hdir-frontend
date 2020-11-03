@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import NavList from '../components/NavList';
+import ContentFooter from '../components/ContentFooter';
 import ChapterHeading from '../components/ChapterHeading';
 import Button from '../components/Button';
 import Box from '../components/Box';
@@ -460,8 +461,39 @@ const ProductPage = () => {
           Skriv ut / lag PDF
         </Button>
       </div>
+      <ContentFooter
+        heading="Slik refererer du [produkttype]"
+        id="contentFooter-1"
+        content={[
+          <>
+            Helsedirektoratet (2020).{' '}
+            <i>
+              Nasjonal faglig retningslinjer for svangerskapsdiabetes
+              [nettdokument].
+            </i>{' '}
+            Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars 2019, lest
+            12. august 2020). Tilgjengelig fra:
+            https://www.helsedirektoratet.no/retningslinjer/svangerskapsdiabetes
+          </>
+        ]}
+      />
+      <ContentFooter
+        heading="Åpne data (API)"
+        id="contentFooter-2"
+        content={[
+          <>
+            Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
+            <a href="https://utvikler.helsedirektoratet.no/">
+              https://utvikler.helsedirektoratet.no/
+            </a>
+            <br />
+            <br />
+            [Fulltittel på innholdet] er tilgjengelig i vårt API: https://xxxx
+          </>
+        ]}
+      />
     </div>
-  )
+  );
 };
 
 export default ProductPage;
