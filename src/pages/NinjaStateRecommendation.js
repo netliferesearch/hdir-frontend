@@ -1,5 +1,6 @@
 import React from 'react';
 import Collapsible from '../components/Collapsible';
+import ContentFooter from '../components/ContentFooter';
 import Link from '../components/Link';
 import Box from '../components/Box';
 import IconWithText from '../components/IconWithText';
@@ -192,8 +193,39 @@ const NinjaStateRecommendation = () => (
                     </div>
               
               <div class="b-collapsible__meta-date l-mt-4">Sist faglig oppdatert: 11. juni 2020</div>
+            <div className="l-mt-2">
+              <ContentFooter
+                heading="Slik refererer du [produkttype]"
+                id="contentFooter-1"
+                content={[
+                  <>
+                    Helsedirektoratet (2020).{' '}
+                    <i>Anbefaling for sekundær peritonitt [nettdokument].</i>{' '}
+                    Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars
+                    2019, lest 12. august 2020). Tilgjengelig fra:
+                    https://www.helsedirektoratet.no/retningslinjer/antibiotika-i-sykehus/abdomen/sekundaer-peritonitt
+                  </>
+                ]}
+              />
+              <ContentFooter
+                heading="Åpne data (API)"
+                id="contentFooter-2"
+                content={[
+                  <>
+                    Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
+                    <a href="https://utvikler.helsedirektoratet.no/">
+                      https://utvikler.helsedirektoratet.no/
+                    </a>
+                    <br />
+                    <br />
+                    [Fulltittel på innholdet] er tilgjengelig i vårt API:
+                    https://xxxx
+                  </>
+                ]}
+              />
             </div>
-          </article>
+          </div>
+        </article>
       </main>
     </div>
     <div className="l-mt-4">
