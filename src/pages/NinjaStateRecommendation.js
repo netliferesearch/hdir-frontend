@@ -218,8 +218,10 @@ const NinjaStateRecommendation = () => (
                     </a>
                     <br />
                     <br />
-                    [Fulltittel på innholdet] er tilgjengelig i vårt API:
-                    https://xxxx
+                    <span className="t--bold">
+                      [Fulltittel på innholdet]
+                    </span>{' '}
+                    er tilgjengelig i vårt API: https://xxxx
                   </>
                 ]}
               />
