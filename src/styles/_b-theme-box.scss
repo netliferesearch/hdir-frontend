@@ -1,0 +1,13 @@
+.b-theme-box {
+  @include mq($until: $tablet) {
+    padding: $space-md $space-sm;
+  }
+  @include mq($from: $tablet) {
+    padding-top: $space-xl;
+    padding-bottom: $space-xl;
+  }
+}
+
+.front .b-theme-box-wrapper {
+  margin-top: -$space-md !important;
+}
