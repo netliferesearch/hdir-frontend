@@ -1,4 +1,5 @@
 .b-link {
+  color: $primary-color;
   &__icon {
     display: inline-block;
     content: ' ';
@@ -9,6 +10,16 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 center;
+    
+    &.chevron {
+      @include chevron($chevron);
+      margin-bottom: -0.4em;
+      margin-left: -0.2em;
+      margin-right: 0.2em;
+      height: 17px;
+      width: 29px;
+      background-size: 22px 20px;
+    }
   }
   &__link {
     position: relative;
