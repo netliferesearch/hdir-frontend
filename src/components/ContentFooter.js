@@ -7,7 +7,7 @@ const ContentFooter = props => (
     <Button
       data-target={props.id}
       aria-expanded="false"
-      icon="../icons/chevron.svg"
+      iconClass="chevron"
       className="b-button b-button--small b-button--clean b-content-footer__btn"
     >
       {props.heading}

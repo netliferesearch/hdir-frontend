@@ -28,3 +28,14 @@
   background-size: 0.8em;
   background-repeat: no-repeat;
 }
+@mixin chevron($variant) {
+  display: inline-block;
+  height: 0.8em;
+  width: 0.8em;
+  margin-left: 0.4em;
+  content: '';
+  background-image: url($variant);
+  background-size: 0.8em;
+  background-repeat: no-repeat;
+  color: $primary-color;
+}

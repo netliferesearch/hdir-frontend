@@ -32,6 +32,7 @@ const Button = ({
   secondaryDark,
   onClick,
   icon,
+  iconClass,
   children,
   ...rest
 }) => {
@@ -52,6 +53,12 @@ const Button = ({
           className="b-link__icon"
           role="presentation"
           style={{ backgroundImage: `url(${icon})` }}
+        />
+      )}
+      {iconClass && (
+        <div
+          role="presentation"
+          className={`b-link__icon ${iconClass}`}
         />
       )}
       {icon ? (
