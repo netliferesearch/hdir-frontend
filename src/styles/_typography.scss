@@ -167,4 +167,7 @@ small {
     margin-left: 1em;
     font-size: $meta-text;
   }
+  &--bold {
+    font-weight: bold;
+  }
 }
