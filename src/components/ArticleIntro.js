@@ -67,8 +67,8 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, 
         )}
       </div>
     )}
-    <p className="b-article-intro__intro">{lead}</p>
     <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
+    <p className="b-article-intro__intro">{lead}</p>
   </div>
 );
 
