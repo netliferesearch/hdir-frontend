@@ -20,6 +20,8 @@ const pages = [
   {link: '/artikkel', desc: 'Artikkel'},
   {link: '/artikkel-med-skjema', desc: 'Artikkel med skjema'},
   {link: '/artikkel-med-iframe', desc: 'Artikkel med iframe'},
+  {link: '/nyhet', desc: 'Nyhetsmal (basert på artikkel)'},
+  {link: '/nyhet-2', desc: 'Nyhetsmal (basert på artikkel)'},
 
   { heading: 'Forsider' },
   {link: '/hdir-forside', desc: 'Helsedirektoratet forside'},
