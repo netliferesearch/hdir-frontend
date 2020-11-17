@@ -62,8 +62,8 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
         setSearchString(value);
         setLoading(true);
         let formData = new FormData();
-        productId && formData.append('contentId', productId);
-        // formData.append('contentId', '86eadeff-b6a8-4945-abe8-b1a098e5da24');
+        // productId && formData.append('contentId', productId);
+        formData.append('contentId', '86eadeff-b6a8-4945-abe8-b1a098e5da24');
         formData.append('searchQuery', value);
         malgruppe && formData.append('malgruppe', malgruppe);
         tema && formData.append('tema', tema);

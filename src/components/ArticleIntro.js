@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PageMeta from './PageMeta';
 
 const imageToggle = (image, feature) =>
   classNames({
@@ -15,8 +16,14 @@ const imageWrapperClasses = feature =>
     'b-article-intro__image-wrapper--feature': feature
   });
 
-const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription }) => (
-  <div className="b-article-intro">
+const mainClasses = fullWidth =>
+  classNames({
+    'b-article-intro': true,
+    'b-article-intro--full': fullWidth
+  });
+
+const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, fullWidth }) => (
+  <div className={mainClasses(fullWidth)}>
     <div className={imageToggle(image, feature)}>
       <h1>
         { topic ? (
@@ -24,24 +31,26 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription }
         ) : null}
         {heading}
       </h1>
-      <p className="b-article-intro__intro">{lead}</p>
+      
     </div>
     {image && (
       <div className={imageWrapperClasses(feature)}>
         {!feature ? (
           <>
-            <img
-              className="b-article-intro__image"
-              src={image}
-              alt={imageDescription}
-              aria-labelledby="intro-image-description"
-            />
-            <p
-              className="b-article-intro__image-text"
-              id="intro-image-description"
-            >
-              {imageDescription}
-            </p>
+          <div>
+              <img
+                className="b-article-intro__image"
+                src={image}
+                alt={imageDescription}
+                aria-labelledby="intro-image-description"
+              />
+              <p
+                className="b-article-intro__image-text"
+                id="intro-image-description"
+              >
+                {imageDescription}
+              </p>
+            </div>
           </>
         ) : (
           <>
@@ -58,6 +67,8 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription }
         )}
       </div>
     )}
+    <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
+    <p className="b-article-intro__intro">{lead}</p>
   </div>
 );
 

@@ -1,0 +1,24 @@
+.b-flex-links {
+  @include mq($from: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.b-flex-links__item {
+  display: block;
+  margin: $space-md 0;
+  @include mq($from: $tablet) {
+    display: inline-block;
+    margin: $space-lg 7% $space-sm $space-xs;
+    padding-right: 7%;
+    border-right: 1px solid $grey-light;
+  }
+
+  &:last-child {
+    border-right: 0;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
