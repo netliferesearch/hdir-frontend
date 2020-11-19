@@ -13,6 +13,12 @@
     }
   }
 
+  &--grow {
+    flex-basis: 50%;
+    flex-grow: 1;
+    height: auto;
+  }
+
   &--horizontal {
     @include mq($from: tablet) {
       flex-direction: row;

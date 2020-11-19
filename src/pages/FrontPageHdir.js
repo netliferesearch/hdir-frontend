@@ -1,13 +1,58 @@
 import React from 'react';
 import LinkList from '../components/LinkList';
 import Link from '../components/Link';
+import ThemeBox from '../components/ThemeBox';
 import InputSearch from '../components/InputSearch';
 import Card from '../components/Card';
 
 const FrontPageHdir = () => (
-  <main id="main">
+  <main id="main" className="front">
     <h1 className="visually-hidden">Helsedirektoratet</h1>
+      <ThemeBox
+        clearTopPadding
+        heading="Siste om covid-19"
+        cardsLeft={[
+          {
+            title: 'Helsepersonell og andre profesjonelle aktører',
+            url: '#a',
+            icon: '../icons/Nyheter.svg',
+            category: 'Tema'
+          },
+          {
+            title: 'Privatperson',
+            url: '#b',
+            icon: '../icons/Nyheter.svg',
+            category: 'Helsenorge.no'
+          },
+        ]}
+        cardsRight={[
+          {
+            title: 'Opp til kommunene å vurdere politianmeldelser',
+            url: '#c',
+            image: 'https://via.placeholder.com/800x300',
+            imageAlt: 'alt description',
+            icon: '../icons/Nyheter.svg',
+            category: 'Nyhet'
+          },
+        ]}
+        bottomLinks={[
+          {
+            title: 'Statistikk om covid-19',
+            url: '#a'
+          },
+          {
+            title: 'Kurs og konferanser',
+            url: '#a'
+          },
+          {
+            title: 'Alle nyheter om covid-19',
+            url: '#a'
+          },
+        ]}
+      />
     <div className="background-wrapper">
+
+
       <div className="l-container">
         <div className="row">
           <div className="col-xs-12 col-md-10 col-md-offset-1">
