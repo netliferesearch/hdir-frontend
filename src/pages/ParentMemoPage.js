@@ -85,7 +85,9 @@ const ProductPage = () => {
                 <div className="b-toggle-content__text">
                   <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
                   <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
-                  <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                  <p>I dette kapitlet presenteres <button className="b-definition__button" data-target="hovedarbeidsgiver">hovedarbeidsgiver</button><div id="hovedarbeidsgiver" className="b-definition__item">
+                    Her er definisjon av ordet
+                    </div>  Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
                   <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
                 </div>
                 <Button secondary onClick={() => document.getElementById('about-text').classList.toggle('show')}>Les hele</Button>
