@@ -35,7 +35,7 @@ const ArticlePageNews = () => (
             />
           </div>
         </div>
-        <div className="row l-mt-1">
+        <div className="row l-mt-2">
           <article className="col-md-8 col-xs-12 col-md-offset-2 t-body-text">
 
             <p>
