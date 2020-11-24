@@ -17,7 +17,7 @@
     }
 
     @include mq($until: $tablet) {
-      height: 33vh;
+      width: 100%;
     }
   }
   &--full {
