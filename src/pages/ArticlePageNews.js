@@ -159,7 +159,8 @@ const ArticlePageNews = () => (
                       fields: {
                         category: 'Nyhet',
                         heading:
-                          'Ber kommunene legge til rette for besøk'
+                          'Ber kommunene legge til rette for besøk',
+                        subheading: '11.11.2020'
                       }
                     },
                     {
@@ -168,7 +169,8 @@ const ArticlePageNews = () => (
                       fields: {
                         category: 'Nyhet',
                         heading:
-                          'Nasjonale forventninger til kommunenes håndtering ved utbrudd av covid-19'
+                          'Nasjonale forventninger til kommunenes håndtering ved utbrudd av covid-19',
+                        subheading: '12.11.2020'
                       }
                     },
                   ]}
