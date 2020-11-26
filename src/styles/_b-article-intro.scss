@@ -63,7 +63,7 @@
     }
   }
   &__image-text {
-    margin: 0rem 0 3rem 0;
+    margin: 0rem 0 1rem 0;
     color: $grey;
     font-size: $font-xs;
     @include mq($until: $tablet) {
@@ -109,4 +109,8 @@
       }
     }
   }
+}
+
+.b-article-intro .b-article-intro__image-text {
+  margin-bottom: 3rem;
 }
