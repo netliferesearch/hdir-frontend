@@ -127,7 +127,7 @@ const ArticlePageNews = () => (
           <div className="l-mt-1">
 
             <div className="row">
-              <div className="col-xs-12 col-md-6">
+              <div className="col-xs-12 col-md-6 l-mb-2">
                 <Card
                   heading="Revidert smittevernveileder for virksomheter med én-til-én-kontakt som frisører, kroppspleie mv."
                   url="#a"
@@ -138,7 +138,7 @@ const ArticlePageNews = () => (
                   <img src="https://www.helsedirektoratet.no/nyheter/revidert-smittevernveileder-for-virksomheter-med-en-til-en-kontakt-som-frisorer-kroppspleie-mv/_/image/d20e4c76-78e7-4fd1-b1d6-d8f4b0ad1163:9262411e44bbd3d1b8f98572d443a0ad5e05c8aa/width-768/37161620-hairdresser-cutting-hair-with-trimmer.jpg" alt="antibiotika" />
                 </Card>
               </div>
-              <div className="col-xs-12 col-md-6">
+              <div className="col-xs-12 col-md-6 l-mb-2">
                 <Card
                   heading="Revidert veileder for smittevern i kollektivtransport (buss, tog, trikk mv.)"
                   url="#a"
@@ -150,7 +150,7 @@ const ArticlePageNews = () => (
                 </Card>
               </div>
 
-              <div className="col-xs-12 l-mt-2">
+              <div className="col-xs-12">
                 <List
                   list={[
                     {
