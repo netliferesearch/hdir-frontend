@@ -32,6 +32,13 @@
   &--blue {
     background-color: $blue-lighter;
     border: 1px solid $blue-light;
+
+    @include mq($until: $tablet) {
+      padding: 1rem 1.5rem;
+    }
+  }
+  &--blue-light {
+    background-color: $blue-lightest;
   }
   &--blue-light {
     background-color: $blue-lightest;
