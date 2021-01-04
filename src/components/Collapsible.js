@@ -212,7 +212,10 @@ const Collapsible = props => {
           
             { props.date ? 
               <div className="b-collapsible__meta-date">
-                {props.date}
+              {props.date}<span className="hide-mobile">&nbsp; | &nbsp;</span>
+                <a href="#" className="b-page-meta__link">
+                  Se tidligere versjoner
+                </a>
               </div>
             : null}
           </div>
