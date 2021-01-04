@@ -4,6 +4,7 @@ import ContentFooter from '../components/ContentFooter';
 import Link from '../components/Link';
 import Box from '../components/Box';
 import IconWithText from '../components/IconWithText';
+import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
 
 const NinjaStateRecommendation = () => (
@@ -176,23 +177,29 @@ const NinjaStateRecommendation = () => (
                 </Collapsible>
               </Collapsible>
 
-                    <div className="l-mt-4">
-                      <hr className="b-hr b-hr--grey-light" />
-                      <div className="l-mt-1 b-secondary-logos">
-                        <div className="b-secondary-logos__logolist">
-                          <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
+              <div className="l-mt-4">
+                <hr className="b-hr b-hr--grey-light" />
+                <div className="l-mt-1 b-secondary-logos">
+                  <div className="b-secondary-logos__logolist">
+                    <img src="http://placehold.it/100x50" alt="Folkehelseinstituttet logo" />
 
-                        </div>
-                        <div className="b-secondary-logos__text">
-                          <p>
-                            Veilederne er utgitt av Helsedirektoratet. <br />
-                    Faglig innhold levert av Folkehelseinstituttet
-                  </p>
-                        </div>
-                      </div>
-                    </div>
-              
-              <div class="b-collapsible__meta-date l-mt-4">Sist faglig oppdatert: 11. juni 2020</div>
+                  </div>
+                  <div className="b-secondary-logos__text">
+                    <p>
+                      Veilederne er utgitt av Helsedirektoratet. <br />
+                      Faglig innhold levert av Folkehelseinstituttet
+                    </p>
+                  </div>
+                </div>
+              </div>
+        
+            <div className="l-mt-4">
+              <PageMeta
+                editDate="11. august 2018"
+                url="#a"
+              />
+            </div>
+
             <div className="l-mt-2">
               <ContentFooter
                 heading="Slik refererer du [produkttype]"
