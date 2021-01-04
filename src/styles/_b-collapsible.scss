@@ -100,6 +100,7 @@
       margin-bottom: $space-sm;
       margin-left: $space-xl;
       padding-right: $space-sm;
+      width: 80%;
       @include mq($from: wide) {
         width: 62%;
       }
@@ -131,6 +132,9 @@
       }
     }
     >.b-collapsible__footer {
+      @include mq($until: wide) {
+        width: 80%;
+      }
       padding-left: $space-lg;
       padding-bottom: $space;
       width: 100%;
@@ -346,9 +350,9 @@
     }
     h2, h3, h4, h5 {
       padding-top: $space;
-      display: inline-block !important;
+      // display: inline-block !important;
     }
-    h3:first-child, h4:first-child {
+    h3:first-child, h4:first-child, h2:first-child {
       padding-top: 0;
     }
     .b-collapsible__heading {
