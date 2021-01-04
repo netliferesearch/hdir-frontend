@@ -24,13 +24,13 @@
     margin-right: -1rem;
     padding-right: 1rem;
     flex-shrink: 0;
+    position: relative;
     
     &:after {
       position: absolute;
       top: 0.4em;
       right: 0;
       @include pseudo-arrow($arrow-down);
-      margin-right: -1rem;
 
       @include mq($until: $tablet) {
         top: 0;
