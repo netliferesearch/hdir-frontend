@@ -50,6 +50,15 @@
       }
     }
   }
+  &__current {
+    font-size: $font-xs;
+    font-weight: normal;
+    margin-left: $space-sm;
+    border: 0;
+    border-radius: 20px;
+    background-color: $yellow-light;
+    padding: $space-xs/2 $space-sm;
+  }
   &--link, &--link:link {
     text-decoration: none;
     color: $link-color;
