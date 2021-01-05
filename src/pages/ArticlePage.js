@@ -5,6 +5,8 @@ import NavList from '../components/NavList';
 // import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
+import Card from '../components/Card';
+import ThemeBox from '../components/ThemeBox';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SectionSidebar from '../components/SectionSidebar';
@@ -382,7 +384,50 @@ const ArticlePage = () => (
         </div>
       </div>
     </div>
-    <Box color="grey" square noPadding>
+
+    <ThemeBox
+      heading="Siste om covid-19"
+      cardsLeft={[
+        {
+          title: 'Helsepersonell og andre profesjonelle aktører',
+          url: '#a',
+          icon: '../icons/Nyheter.svg',
+          category: 'Tema'
+        },
+        {
+          title: 'Privatperson',
+          url: '#b',
+          icon: '../icons/Nyheter.svg',
+          category: 'Helsenorge.no'
+        },
+      ]}
+      cardsRight={[
+        {
+          title: 'Opp til kommunene å vurdere politianmeldelser',
+          url: '#c',
+          image: 'https://via.placeholder.com/800x300',
+          imageAlt: 'alt description',
+          icon: '../icons/Nyheter.svg',
+          category: 'Nyhet'
+        },
+      ]}
+      bottomLinks={[
+        {
+          title: 'Statistikk om covid-19',
+          url: '#a'
+        },
+        {
+          title: 'Kurs og konferanser',
+          url: '#a'
+        },
+        {
+          title: 'Alle nyheter om covid-19',
+          url: '#a'
+        },
+      ]}
+    />
+
+    <Box color="grey" square>
       <div className="l-container">
         <strong>Kontakt:</strong>
         <br />

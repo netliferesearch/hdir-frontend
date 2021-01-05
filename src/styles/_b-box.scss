@@ -5,7 +5,7 @@
   background-color: $grey-lighter;
 
   @include mq($until: $tablet) {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   &--square {
@@ -32,6 +32,13 @@
   &--blue {
     background-color: $blue-lighter;
     border: 1px solid $blue-light;
+
+    @include mq($until: $tablet) {
+      padding: 1rem 1.5rem;
+    }
+  }
+  &--blue-light {
+    background-color: $blue-lightest;
   }
   &--blue-dark {
     color: $purple !important;
