@@ -34,6 +34,7 @@ const ArticlePageNews = () => (
           <div className="col-md-8 col-xs-12 col-md-offset-2">
             <ArticleIntro
               fullWidth
+              showDate
               heading="Nytt e-læringskurs i palliativ behandling av eldre og alvorlig syke med covid-19"
               lead="Et nytt e-læringskurs skal gi helsepersonell i kommunale helse- og omsorgstjenester kompetanse i palliativ omsorg, pleie og behandling av eldre og alvorlig syke personer med covid-19, som behandles i kommunene."
             />
