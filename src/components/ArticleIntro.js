@@ -22,7 +22,7 @@ const mainClasses = fullWidth =>
     'b-article-intro--full': fullWidth
   });
 
-const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, fullWidth }) => (
+const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, fullWidth, showDate }) => (
   <div className={mainClasses(fullWidth)}>
     <div className={imageToggle(image, feature)}>
       <h1>
@@ -67,7 +67,12 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, 
         )}
       </div>
     )}
-    <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
+    {
+      showDate &&
+      (
+        <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
+      )
+    }
     <p className="b-article-intro__intro">{lead}</p>
   </div>
 );
@@ -78,7 +83,8 @@ ArticleIntro.propTypes = {
   image: PropTypes.string,
   feature: PropTypes.bool,
   imageDescription: PropTypes.string,
-  topic: PropTypes.string
+  topic: PropTypes.string,
+  showDate: PropTypes.bool
 };
 
 export default ArticleIntro;
