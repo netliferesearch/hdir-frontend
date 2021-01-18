@@ -530,7 +530,7 @@ const ThemePage = () => (
     </div>
 
     <div className="l-mt-5">
-      <Box square noPadding>
+      <Box square>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />

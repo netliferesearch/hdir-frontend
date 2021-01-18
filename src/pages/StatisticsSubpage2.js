@@ -184,7 +184,7 @@ const StatisticsSubpage = () => (
         </div>
       </div>
     </div>
-    <Box color="grey" square noPadding>
+    <Box color="grey" square>
       <div className="l-container">
         <strong>Kontakt:</strong>
         <br />
