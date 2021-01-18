@@ -235,7 +235,7 @@ const FrontPageHelfo = () => (
     </div>
 
     <div className="l-mt-4">
-      <Box color="yellow" square noPadding>
+      <Box color="yellow" square>
         <div className="l-container">
           <strong>Kontakt:</strong>
           <br />
