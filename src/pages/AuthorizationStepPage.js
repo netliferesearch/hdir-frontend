@@ -78,7 +78,7 @@ const AuthorizationStepPage = () => (
         </div>
       </main>
     </div>
-    <Box color="grey" square noPadding>
+    <Box color="grey" square>
       <div className="l-container">
         <div className="row">
           <div className="col-xs-12">
