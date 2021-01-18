@@ -33,6 +33,7 @@ const pages = [
   { link: '/tilskudd', desc: 'Tilskudd' },
   { link: '/horinger', desc: 'Høringer' },
   { link: '/konferanser-liste', desc: 'Konferanser' },
+  { link: '#', desc: '-' },
 
   { heading: 'Andre malsider' },
   {link: '/abonnement-tilpassing', desc: 'Abonnement Tilpassing'},
