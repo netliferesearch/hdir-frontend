@@ -36,9 +36,22 @@ const GrantsSubPage = () => (
           lead="Har du et prosjekt som kan bidra til at folk i ditt nærområde føler seg mindre ensomme? Er det mangler på helsesykepleiere i din kommune? Da kan du søke om tilskudd hos oss."
         />
 
-        <div className="l-mt-2">
-          <span>Søknadsfrist 1. mars</span>{' '}
-          <span>Beløp: 422 millioner kroner</span>
+        <div className="l-mt-2 b-grant-byline">
+          <div className="b-grant-byline__item">
+            {/*  Add class "b-grant-byline__status-icon--expired" for red icon. */}
+            <div className="b-grant-byline__status-icon" />
+            Søknadsfrist 1. mars
+          </div>
+          <div className="b-grant-byline__item">
+            <img
+              src="/icons/Tilskudd.svg"
+              role="presentation"
+              alt=""
+              aria-hidden="true"
+              className="b-grant-byline__amount-icon"
+            />
+            Beløp: 422 millioner kroner
+          </div>
         </div>
 
         <div className="l-mt-2">
