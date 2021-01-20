@@ -7,9 +7,28 @@ import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
 import Button from '../components/Button';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const GrantsSubPage = () => (
   <>
+    <div className="l-container">
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Tilskudd',
+            href: '#a'
+          },
+          {
+            name: 'Finn tilskudd',
+            href: '#a'
+          }
+        ]}
+      />
+    </div>
     <main id="main">
       <div className="l-container l-mt-3">
         <ArticleIntro
