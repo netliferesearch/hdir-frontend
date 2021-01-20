@@ -1,0 +1,46 @@
+.b-timeline {
+  border-left: 4px solid $blue-light;
+  margin-top: 40px;
+
+  @include mq($from: $tablet) {
+    border-left: 0;
+    border-top: 4px solid $blue-light;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include mq($from: $tablet) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include mq($from: $tablet) {
+      flex-direction: column;
+      margin-top: -12px;
+      text-align: center;
+    }
+  }
+  &__circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: $blue;
+    display: block;
+    margin-left: -12px;
+    margin-right: 20px;
+    @include mq($from: $tablet) {
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

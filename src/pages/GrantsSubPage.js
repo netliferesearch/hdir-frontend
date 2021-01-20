@@ -64,7 +64,42 @@ const GrantsSubPage = () => (
         <article className="t-body-text l-mt-4">
           <section>
             <h2>Slik blir prosessen</h2>
-            <div>Tidslinje</div>
+            <div className="b-timeline">
+              <ul className="b-timeline__list">
+                <li className="b-timeline__item">
+                  <span className="b-timeline__circle" />
+                  <div>
+                    Webinar:
+                    <br />
+                    15. februar 2021
+                  </div>
+                </li>
+                <li className="b-timeline__item">
+                  <span className="b-timeline__circle" />
+                  <div>
+                    Rapportering:
+                    <br />
+                    1. mars 2021
+                  </div>
+                </li>
+                <li className="b-timeline__item">
+                  <span className="b-timeline__circle" />
+                  <div>
+                    Forventet svar:
+                    <br />
+                    1. mai 2021
+                  </div>
+                </li>
+                <li className="b-timeline__item">
+                  <span className="b-timeline__circle" />
+                  <div>
+                    Rapportering:
+                    <br />
+                    1. april 2022
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
 
           <section className="l-mt-4 b-collapsible b-collapsible--active b-collapsible--clean">
