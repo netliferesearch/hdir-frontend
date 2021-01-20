@@ -111,7 +111,18 @@ const GrantsSubPage = () => (
 
           <section className="l-mt-4">
             <h2>Statistikk</h2>
-            <div> Embed</div>
+            <div className="l-mt-2">
+              <div className="videoWrapper__iframe" id="iframe">
+                <iframe
+                  title="Title here"
+                  width="100%"
+                  height="600"
+                  src="https://statistikk.helsedirektoratet.no/bi/Dashboard/71613538-62de-4ab2-8409-8638fc6c25db?e=false&vo=viewonly"
+                  frameBorder="0"
+                  allowFullScreen=""
+                />
+              </div>
+            </div>
           </section>
         </article>
       </div>
