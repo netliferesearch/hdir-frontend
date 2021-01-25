@@ -1,46 +1,76 @@
+// Vertical timeline mobile //
 .b-timeline {
-  border-left: 4px solid $blue-light;
-  margin-top: 40px;
-
-  @include mq($from: $tablet) {
-    border-left: 0;
-    border-top: 4px solid $blue-light;
-  }
-
   &__list {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    @include mq($from: $tablet) {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-    }
   }
 
   &__item {
     display: flex;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    @include mq($from: $tablet) {
-      flex-direction: column;
-      margin-top: -12px;
-      text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+
+    // Circle //
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: block;
+      background: $blue;
+      margin-right: 20px;
+    }
+    // Line //
+    &:after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 100%;
+      background-color: $blue-light;
+      top: -50%;
+      left: 8px;
+      z-index: -999;
+    }
+    // Remove line from first child //
+    &:first-child:after {
+      content: none;
     }
   }
-  &__circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background-color: $blue;
-    display: block;
-    margin-left: -12px;
-    margin-right: 20px;
-    @include mq($from: $tablet) {
-      margin-right: 0;
-      margin-left: 0;
-      margin-bottom: 20px;
+}
+
+// Horizontal timeline desktop //
+
+@include mq($from: $tablet) {
+  .b-timeline {
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      flex-grow: 1;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 50px;
+
+      // Circle //
+      &:before {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      // Line //
+      &:after {
+        width: 100%;
+        height: 4px;
+        top: 8px;
+        left: -50%;
+        z-index: -999;
+      }
     }
   }
 }

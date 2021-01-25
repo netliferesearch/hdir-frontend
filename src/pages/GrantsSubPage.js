@@ -62,48 +62,36 @@ const GrantsSubPage = () => (
         </div>
 
         <article className="t-body-text l-mt-4">
-          <section>
+          <section className="l-mb-2">
             <h2>Slik blir prosessen</h2>
             <div className="b-timeline">
               <ul className="b-timeline__list">
                 <li className="b-timeline__item">
-                  <span className="b-timeline__circle" />
-                  <div>
-                    Webinar:
-                    <br />
-                    15. februar 2021
-                  </div>
+                  Webinar:
+                  <br />
+                  15. februar 2021
                 </li>
                 <li className="b-timeline__item">
-                  <span className="b-timeline__circle" />
-                  <div>
-                    Rapportering:
-                    <br />
-                    1. mars 2021
-                  </div>
+                  Rapportering:
+                  <br />
+                  1. mars 2021
                 </li>
                 <li className="b-timeline__item">
-                  <span className="b-timeline__circle" />
-                  <div>
-                    Forventet svar:
-                    <br />
-                    1. mai 2021
-                  </div>
+                  Forventet svar:
+                  <br />
+                  1. mai 2021
                 </li>
                 <li className="b-timeline__item">
-                  <span className="b-timeline__circle" />
-                  <div>
-                    Rapportering:
-                    <br />
-                    1. april 2022
-                  </div>
+                  Rapportering:
+                  <br />
+                  1. april 2022
                 </li>
               </ul>
             </div>
           </section>
 
           <section className="l-mt-4 b-collapsible b-collapsible--active b-collapsible--clean">
-            <h2>Regelverk</h2>
+            <h2 className="l-mb-1">Regelverk</h2>
             <Collapsible h="h3" heading="Mål for ordningen" size="small">
               <p className="l-mt-1">
                 Målet for ordningen er å styrke og utvikle kommunens
