@@ -7,7 +7,7 @@ import CheckboxGroup from '../components/CheckboxGroup';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
-import ListSearch from '../components/ListSearch';
+import InputSearch from '../components/InputSearch';
 import RadioButtonGroup from '../components/RadioButtonGroup';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
@@ -48,8 +48,8 @@ const ListGrants = (props) => (
             </div>
           </div>
           <div className="l-mt-4 l-mb-2">
-            <ListSearch
-              label="tilskudd"
+            <InputSearch
+              label="Vet du hvilket tilskudd du vil søke på?"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
               flatTree={dummyFlatTree}
               malGruppe={''}
