@@ -35,9 +35,9 @@
       z-index: -999;
     }
     // Remove line from first child //
-    &:first-child:after {
-      content: none;
-    }
+    // &:first-child:after {
+    //   content: none;
+    // }
   }
 }
 
@@ -68,8 +68,14 @@
         width: 100%;
         height: 4px;
         top: 8px;
-        left: -50%;
         z-index: -999;
+      }
+
+      &:first-child {
+        align-items: flex-start;
+      }
+      &:last-child {
+        align-items: flex-end;
       }
     }
   }

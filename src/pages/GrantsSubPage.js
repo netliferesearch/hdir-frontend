@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '../components/Link';
 import Box from '../components/Box';
+import Timeline from '../components/Timeline';
 import Collapsible from '../components/Collapsible';
 import SectionSidebar from '../components/SectionSidebar';
 import Alert from '../components/Alert';
@@ -62,33 +63,27 @@ const GrantsSubPage = () => (
         </div>
 
         <article className="t-body-text l-mt-4">
-          <section className="l-mb-2">
-            <h2>Slik blir prosessen</h2>
-            <div className="b-timeline">
-              <ul className="b-timeline__list">
-                <li className="b-timeline__item">
-                  Webinar:
-                  <br />
-                  15. februar 2021
-                </li>
-                <li className="b-timeline__item">
-                  Rapportering:
-                  <br />
-                  1. mars 2021
-                </li>
-                <li className="b-timeline__item">
-                  Forventet svar:
-                  <br />
-                  1. mai 2021
-                </li>
-                <li className="b-timeline__item">
-                  Rapportering:
-                  <br />
-                  1. april 2022
-                </li>
-              </ul>
-            </div>
-          </section>
+          <Timeline
+            label="Slik blir prosessen"
+            items={[
+              {
+                label: 'Webinar:',
+                date: '15. februar 2021'
+              },
+              {
+                label: 'Rapportering:',
+                date: '1. mars 2021'
+              },
+              {
+                label: 'Forventet svar:',
+                date: '1. mai 2021'
+              },
+              {
+                label: 'Rapportering:',
+                date: '1. april 2022'
+              },
+            ]}
+          />
 
           <section className="l-mt-4 b-collapsible b-collapsible--active b-collapsible--clean">
             <h2 className="l-mb-1">Regelverk</h2>
