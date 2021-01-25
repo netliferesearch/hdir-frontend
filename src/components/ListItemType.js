@@ -186,6 +186,48 @@ const ListItemType = props => {
           {fields.topic && (
             <div className="b-list-item-type__topic">{fields.topic}</div>
           )}
+          {fields.tags && (
+            <div className="b-tags">
+              { fields.tags.map(tag => (
+                  <div className="b-tags__item">{tag.label}</div>
+                )
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {type === 'grant' && (
+        <div
+          className={classNames({
+            'b-list-item-type': true,
+            'b-list-item-type__flex-wrapper': true,
+            'b-list-item-type--no-arrow': fields.download || fields.openPdf,
+          })}
+        >
+          <div className="b-list-item-type__date-circle">
+          <span className="b-list-item-type__date-big">{fields.day}</span>
+            {fields.month}
+          </div>
+          <div className="">
+            <div className="b-list-item-type__text">
+              {fields.heading && <h3>{fields.heading}</h3>}
+            </div>
+            {fields.download && (
+              <div className="b-list-item-type__download" aria-label="Last ned PDF">PDF</div>
+            )}
+            {fields.openPdf && (
+              <div className="b-list-item-type__download b-list-item-type__download--open" aria-label="Åpne PDF">PDF</div>
+            )}
+            {fields.tags && (
+              <div className="b-tags">
+                { fields.tags.map(tag => (
+                    <div className="b-tags__item">{tag.label}</div>
+                  )
+                )}
+              </div>
+            )}
+          </div>
         </div>
       )}
       {type === 'archive' && (

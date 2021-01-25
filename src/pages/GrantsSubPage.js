@@ -20,10 +20,7 @@ const GrantsSubPage = () => (
           Søknadsfrist 20. februar 2019
         </Alert>
         <div className="row l-mt-3">
-          <aside className="col-md-3 col-xs-12 l-mb-4">
-            <SectionSidebar heading="Innhold på denne siden" />
-          </aside>
-          <div className="col-xs-12 col-md-7 col-md-offset-1 t-body-text">
+          <div className="col-xs-12 col-md-12 t-body-text">
             <Link href="#a" button>
               Søk på tilskudd (Altinn)
             </Link>
