@@ -75,6 +75,14 @@ const GrantsSubPage = () => (
                 date: '1. mars 2021'
               },
               {
+                label: 'Rapportering:',
+                date: '1. mars 2021'
+              },
+              {
+                label: 'Rapportering:',
+                date: '1. mars 2021'
+              },
+              {
                 label: 'Forventet svar:',
                 date: '1. mai 2021'
               },

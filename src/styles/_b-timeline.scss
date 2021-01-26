@@ -35,9 +35,10 @@
       z-index: -999;
     }
     // Remove line from first child //
-    // &:first-child:after {
-    //   content: none;
-    // }
+    &:first-child:after {
+      width: 100%;
+      height: 0;
+    }
   }
 }
 
@@ -52,7 +53,7 @@
     &__item {
       flex-grow: 1;
       flex-direction: column;
-      text-align: center;
+      text-align: left;
       padding-top: 0;
       padding-bottom: 0;
       margin-top: 50px;
@@ -71,12 +72,132 @@
         z-index: -999;
       }
 
+      // Left align first dot, right align the last one
       &:first-child {
         align-items: flex-start;
+        &:after {
+          width: 100%;
+          height: 4px;
+        }
       }
       &:last-child {
         align-items: flex-end;
+        text-align: right;
+        &:after {
+          left: 0;
+        }
       }
     }
+
+    // Positions when 4 dots
+    &--four {
+      .b-timeline__item {
+        &:first-child {
+          text-align: left;
+        }
+
+        &:nth-child(2) {
+          &:before {
+            margin-left: -32%;
+          }
+          .b-timeline__label {
+            margin-left: -32%;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            margin-right: -32%;
+          }
+          .b-timeline__label {
+            margin-right: -32%;
+          }
+        }
+        
+      }
+    }
+
+    // Positions when 5 dots
+    &--five {
+      .b-timeline__item {
+        &:first-child {
+          text-align: left;
+        }
+
+        &:nth-child(2) {
+          &:before {
+            margin-left: -58%;
+          }
+          .b-timeline__label {
+            margin-left: -58%;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            margin-left: -2%;
+          }
+          .b-timeline__label {
+            margin-left: -2%;
+          }
+        }
+
+        &:nth-child(4) {
+          &:before {
+            margin-right: -45%;
+          }
+          .b-timeline__label {
+            margin-right: -45%;
+          }
+        }
+      }
+    }
+
+    // Positions when 6 dots
+    &--six {
+      .b-timeline__item {
+        &:first-child {
+          text-align: left;
+        }
+
+        &:nth-child(2) {
+          &:before {
+            margin-left: -68%;
+          }
+          .b-timeline__label {
+            margin-left: -68%;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            margin-left: -25%;
+          }
+          .b-timeline__label {
+            margin-left: -25%;
+          }
+        }
+
+        &:nth-child(4) {
+          &:before {
+            margin-right: -10%;
+          }
+          .b-timeline__label {
+            margin-right: -10%;
+          }
+        }
+
+        &:nth-child(5) {
+          &:before {
+            margin-right: -40%;
+          }
+          .b-timeline__label {
+            margin-right: -40%;
+          }
+        }
+      }
+    }
+
+
   }
 }
