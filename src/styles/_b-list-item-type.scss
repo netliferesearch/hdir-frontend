@@ -16,6 +16,10 @@
     }
   }
 
+  &--flex {
+    display: flex;
+  }
+
   &__download {
     font-size: $meta-text;
     text-decoration: underline;
@@ -83,6 +87,22 @@
   }
   &__lead {
     margin-bottom: 0;
+  }
+  &__date-circle {
+    margin-right: $space-sm;
+    background: $green-light;
+    border-radius: 50%;
+    height: 66px;
+    width: 66px;
+    font-size: $font-xs;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__date-big {
+    font-size: $font-l;
   }
 
   &__flex-wrapper {
