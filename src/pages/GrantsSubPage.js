@@ -91,7 +91,7 @@ const GrantsSubPage = () => (
 
           <section className="l-mt-4 b-collapsible b-collapsible--active b-collapsible--clean">
             <h2 className="l-mb-1">Regelverk</h2>
-            <Collapsible h="h3" heading="Mål for ordningen" size="small">
+            <Collapsible h="h3" heading="Mål for ordningen" size="small" noScroll>
               <p className="l-mt-1">
                 Målet for ordningen er å styrke og utvikle kommunens
                 helsestasjons- og skolehelsetjeneste. Målgruppen for ordningen
@@ -109,7 +109,7 @@ const GrantsSubPage = () => (
                 <a href="#">les regelverket</a>
               </p>
             </Collapsible>
-            <Collapsible h="h3" heading="Hvem kan få tilskudd?" size="small">
+            <Collapsible h="h3" heading="Hvem kan få tilskudd?" size="small" noScroll>
               <p>x</p>
             </Collapsible>
             <Collapsible
@@ -119,13 +119,14 @@ const GrantsSubPage = () => (
             >
               <p>x</p>
             </Collapsible>
-            <Collapsible h="h3" heading="Tildelingskriterier" size="small">
+            <Collapsible h="h3" heading="Tildelingskriterier" size="small" noScroll>
               <p>x</p>
             </Collapsible>
             <Collapsible
               h="h3"
               heading="Dette må være med i rapporteringen"
               size="small"
+              noScroll
             >
               <p>x</p>
             </Collapsible>
