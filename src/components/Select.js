@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import classNames from 'classnames';
 
-const selectClasses = (stacked, simple, custompos) =>
+const selectClasses = (stacked, simple, custompos, zIndex) =>
   classNames({
     'b-select': true,
     'b-select--stacked': stacked,
     'b-select--custom-position': custompos,
-    'b-select--simple': simple
+    'b-select--simple': simple,
+    'b-select--positive-z-index': zIndex
   });
 
 const selectElementClasses = simple =>
@@ -17,21 +18,27 @@ const selectElementClasses = simple =>
     'b-select__select--simple': simple
   });
 
-const Select = ({ stacked, custompos, simple, label, placeholder, options }) => (
-  <div className={selectClasses(stacked, simple, custompos)}>
+const Select = ({
+  stacked,
+  custompos,
+  simple,
+  label,
+  placeholder,
+  placeholderSelected,
+  options,
+  zIndex
+}) => (
+  <div className={selectClasses(stacked, simple, custompos, zIndex)}>
     <label htmlFor="profession-selector" className="b-select__label">
       {label}
     </label>
-    <select
-      id="profession-selector"
-      className={selectElementClasses(simple)}
-    >
+    <select id="profession-selector" className={selectElementClasses(simple)}>
       {/* This value is suppose to be empty.
           It should also have the attribute selected. defaultValue should be value.
           JSX requires we write it this way.
       */}
       {placeholder && (
-        <option defaultValue="" disabled className="b-select__option">
+        <option defaultValue="" disabled selected={placeholderSelected} className="b-select__option" >
           {placeholder}
         </option>
       )}
@@ -47,10 +54,12 @@ const Select = ({ stacked, custompos, simple, label, placeholder, options }) => 
 Select.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
+  placeholderSelected: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.string),
   stacked: PropTypes.bool,
   custompos: PropTypes.bool,
-  simple: PropTypes.bool
+  simple: PropTypes.bool,
+  zIndex: PropTypes.bool
 };
 
 export default Select;
