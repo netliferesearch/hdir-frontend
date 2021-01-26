@@ -3,7 +3,7 @@ import Link from '../components/Link';
 import Box from '../components/Box';
 import Timeline from '../components/Timeline';
 import Collapsible from '../components/Collapsible';
-import SectionSidebar from '../components/SectionSidebar';
+import ContentFooter from '../components/ContentFooter';
 import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
@@ -170,6 +170,41 @@ const GrantsSubPage = () => (
             <Button clean small icon="../icons/print.svg">
               Skriv ut/lag PDF
             </Button>
+            <ContentFooter
+              heading="Slik refererer du [produkttype]"
+              id="contentFooter-1"
+              content={[
+                <>
+                  Helsedirektoratet (2020).{' '}
+                  <i>
+                    Nasjonal faglig retningslinjer for helsestasjons- og
+                    skolehelsetjenesten [nettdokument].
+                    </i>{' '}
+                    Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars
+                    2019, lest 12. august 2020). Tilgjengelig fra:
+                    https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten.
+                  </>
+              ]}
+            />
+            <ContentFooter
+              heading="Åpne data (API)"
+              id="contentFooter-2"
+              content={[
+                <>
+                  Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
+                  <br />
+                  <a href="https://utvikler.helsedirektoratet.no/">
+                    https://utvikler.helsedirektoratet.no/
+                    </a>
+                  <br />
+                  <br />
+                  <span className="t--bold">
+                    [Fulltittel på innholdet]
+                    </span>{' '}
+                    er tilgjengelig i vårt API: https://xxxx
+                  </>
+              ]}
+            />
           </div>
         </div>
       </div>
