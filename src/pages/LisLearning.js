@@ -62,10 +62,12 @@ const LisLearning = () => (
               <ChapterHeading heading="Nyfødtkirurgi" line="bottom" h="h2" />
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
-                subheading="LÆRINGSMÅL"
+                dateFrom="1.januar 2020"
+                dateTo="1.januar 2021"
                 size="medium"
                 code="BAK 001"
                 noBorder
+                archiveLink
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -86,9 +88,10 @@ const LisLearning = () => (
               <div className="l-mt-2">
                 <Collapsible
                   heading="Lyskebrokk hos nyfødte"
-                  subheading="LÆRINGSMÅL"
+                  dateFrom="1.januar 2020"
                   size="medium"
                   code="BAK 002"
+                  archiveLink
                 >
                   <p>
                     Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -112,10 +115,10 @@ const LisLearning = () => (
               <div className="l-mt-2 l-mb-2">
                 <Collapsible
                   heading="Vaskulære malformasjoner "
-                  subheading="LÆRINGSMÅL"
+                  dateTo="1.januar 2021"
                   size="medium"
-                  alert="Some alert"
                   code="BAK 003"
+                  archiveLink
                 >
                   <p>
                     Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -144,9 +147,11 @@ const LisLearning = () => (
               />
               <Collapsible
                 heading="Barnehelse og barnets plass i familien"
-                subheading="LÆRINGSMÅL"
+                dateFrom="1.januar 2020"
+                dateTo="1.januar 2021"
                 size="medium"
                 code="BAK 004"
+                archiveLink
               >
                 <p>
                   Kvinnen bør få kostveiledning og jevnlig oppfølging for å
@@ -164,51 +169,7 @@ const LisLearning = () => (
                   å nå behandlingsmålene for glukose
                 </p>
               </Collapsible>
-              <div className="l-mt-2">
-                <Collapsible heading="Utdypende tekst" size="medium">
-                  <p>
-                    Kvinnen bør få kostveiledning og jevnlig oppfølging for å
-                    oppnå tilfredsstillende blodsukker fastende og etter
-                    måltider, og for å forhindre for stor vektøkning i
-                    svangerskapet. Det anbefales at kostanamnese benyttes i
-                    dette arbeidet.
-                  </p>
-                  <p>
-                    Kostrådene baseres på kostanamnesen og styres etter
-                    glukoseverdier ved egenmåling. Mål: Fastende: {'<'}
-                    5.3 mmol/l, 2 timer etter måltid: {'<'}
-                    6.7 mmol/l (se anbefaling: Opplæring i egenmåling av
-                    glukose). Kvinnen kan rådes til å følge et kosthold med en
-                    karbohydratkvalitet og -mengde per måltid som gjør det
-                    enklere å nå behandlingsmålene for glukose
-                  </p>
-                </Collapsible>
-              </div>
-              <div className="l-mt-2">
-                <Collapsible
-                  heading="Anbefalte læringsaktiviteter"
-                  size="medium"
-                >
-                  <p>
-                    Example text: Kvinnen bør få kostveiledning og jevnlig
-                    oppfølging for å oppnå tilfredsstillende blodsukker fastende
-                    og etter måltider, og for å forhindre for stor vektøkning i
-                    svangerskapet. Det anbefales at kostanamnese benyttes i
-                    dette arbeidet.
-                  </p>
-                </Collapsible>
-              </div>
-              <div className="l-mt-2">
-                <Collapsible heading="Anbefalte vurderingsformer" size="medium">
-                  <p>
-                    Example text: Kvinnen bør få kostveiledning og jevnlig
-                    oppfølging for å oppnå tilfredsstillende blodsukker fastende
-                    og etter måltider, og for å forhindre for stor vektøkning i
-                    svangerskapet. Det anbefales at kostanamnese benyttes i
-                    dette arbeidet.
-                  </p>
-                </Collapsible>
-              </div>
+              
               <div className="l-mt-4">
                 <PageMeta
                   publishDate="11. august 2008"
