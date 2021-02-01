@@ -38,6 +38,7 @@ import FrontPageHdir from './pages/FrontPageHdir';
 import FrontPageHelfo from './pages/FrontPageHelfo';
 import ListGrants from './pages/ListGrants';
 import GrantsSubPage from './pages/GrantsSubPage';
+import GrantsWizard from './pages/GrantsWizard';
 import GrantsSubPageExpired from './pages/GrantsSubPageExpired';
 import HearingPage from './pages/HearingPage';
 import JobPostingPage from './pages/JobPostingPage';
@@ -226,6 +227,7 @@ class App extends Component {
                 path="/tilskudd-underside-utgått-søknadsfrist"
                 component={GrantsSubPageExpired}
               />
+              <Route path="/tilskudd-veiviser" component={GrantsWizard} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route
                 path="/skjemabygger-enonic"
