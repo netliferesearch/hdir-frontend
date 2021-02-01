@@ -60,6 +60,10 @@
         width: calc(100% + #{$container-large} + #{$container-large});
         margin-left: -$container-large;
       }
+
+      + .b-article-intro__intro {
+        margin-top: 6vw;
+      }
     }
   }
   &__image-text {
@@ -95,6 +99,7 @@
     &--feature {
       position: absolute;
       box-sizing: border-box;
+      margin-bottom: 4vw;
       bottom: 10%;
       width: 100%;
       padding: 2rem;
