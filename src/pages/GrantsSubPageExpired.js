@@ -10,7 +10,7 @@ import PageMeta from '../components/PageMeta';
 import Button from '../components/Button';
 import Breadcrumbs from '../components/Breadcrumbs';
 
-const GrantsSubPage = () => (
+const GrantsSubPageExpired = () => (
   <>
     <div className="l-container">
       <Breadcrumbs
@@ -39,9 +39,8 @@ const GrantsSubPage = () => (
 
         <div className="l-mt-2 b-grant-byline">
           <div className="b-grant-byline__item">
-            {/*  Add class "b-grant-byline__status-icon--expired" for red icon. */}
-            <div className="b-grant-byline__status-icon" />
-            Søknadsfrist 1. mars
+            <div className="b-grant-byline__status-icon b-grant-byline__status-icon--expired" />
+            Søknadsfrist utløpt 1. mars
           </div>
           <div className="b-grant-byline__item">
             <img
@@ -56,9 +55,6 @@ const GrantsSubPage = () => (
         </div>
 
         <div className="l-mt-2">
-          <Button>Søk på tilskuddet</Button>
-        </div>
-        <div className="l-mt-1">
           <Button secondary>Rapporter på tilskuddet</Button>
         </div>
 
@@ -85,13 +81,18 @@ const GrantsSubPage = () => (
               {
                 label: 'Rapportering:',
                 date: '1. april 2022'
-              },
+              }
             ]}
           />
 
           <section className="l-mt-4 b-collapsible b-collapsible--active b-collapsible--clean">
             <h2 className="l-mb-1">Regelverk</h2>
-            <Collapsible h="h3" heading="Mål for ordningen" size="small" noScroll>
+            <Collapsible
+              h="h3"
+              heading="Mål for ordningen"
+              size="small"
+              noScroll
+            >
               <p className="l-mt-1">
                 Målet for ordningen er å styrke og utvikle kommunens
                 helsestasjons- og skolehelsetjeneste. Målgruppen for ordningen
@@ -109,7 +110,12 @@ const GrantsSubPage = () => (
                 <a href="#">les regelverket</a>
               </p>
             </Collapsible>
-            <Collapsible h="h3" heading="Hvem kan få tilskudd?" size="small" noScroll>
+            <Collapsible
+              h="h3"
+              heading="Hvem kan få tilskudd?"
+              size="small"
+              noScroll
+            >
               <p>x</p>
             </Collapsible>
             <Collapsible
@@ -119,7 +125,12 @@ const GrantsSubPage = () => (
             >
               <p>x</p>
             </Collapsible>
-            <Collapsible h="h3" heading="Tildelingskriterier" size="small" noScroll>
+            <Collapsible
+              h="h3"
+              heading="Tildelingskriterier"
+              size="small"
+              noScroll
+            >
               <p>x</p>
             </Collapsible>
             <Collapsible
@@ -184,11 +195,11 @@ const GrantsSubPage = () => (
                   <i>
                     Nasjonal faglig retningslinjer for helsestasjons- og
                     skolehelsetjenesten [nettdokument].
-                    </i>{' '}
-                    Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars
-                    2019, lest 12. august 2020). Tilgjengelig fra:
-                    https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten.
-                  </>
+                  </i>{' '}
+                  Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars 2019,
+                  lest 12. august 2020). Tilgjengelig fra:
+                  https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten.
+                </>
               ]}
             />
             <ContentFooter
@@ -200,14 +211,12 @@ const GrantsSubPage = () => (
                   <br />
                   <a href="https://utvikler.helsedirektoratet.no/">
                     https://utvikler.helsedirektoratet.no/
-                    </a>
+                  </a>
                   <br />
                   <br />
-                  <span className="t--bold">
-                    [Fulltittel på innholdet]
-                    </span>{' '}
-                    er tilgjengelig i vårt API: https://xxxx
-                  </>
+                  <span className="t--bold">[Fulltittel på innholdet]</span> er
+                  tilgjengelig i vårt API: https://xxxx
+                </>
               ]}
             />
           </div>
@@ -230,4 +239,4 @@ const GrantsSubPage = () => (
   </>
 );
 
-export default GrantsSubPage;
+export default GrantsSubPageExpired;
