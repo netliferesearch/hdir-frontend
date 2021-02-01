@@ -104,17 +104,10 @@ const ChapterPage = () => {
               />
               <Collapsible
                 background
+                tag={{ title: 'Sterk anbefaling', description: 'Forklaring' }}
                 heading="Hodeomkrets: Helsestasjonen bør måle hodeomkrets på barn 0-2 år"
                 date="Sist faglig oppdatert: 11. juni 2020"
               >
-                <Collapsible
-                  heading="Sterk anbefaling"
-                  subtle
-                  size="small"
-                  smallContent
-                >
-                  <p>...Hva er en sterk anbefaling...</p>
-                </Collapsible>
                 <p>Alle barn bør få målt hodeomkrets regelmessig i løpet av første leveår, og på indikasjon frem til 2 års alder.</p>
                 <p>Måling av hodeomkrets bør gjennomføres ved de faste konsultasjonene på helsestasjonen, samtidig med måling av vekt og lengde ved:</p>
                 <ul>
@@ -144,6 +137,7 @@ const ChapterPage = () => {
 
               <Collapsible
                 background
+                tag={{ title: 'Sterk anbefaling', description: 'Forklaring' }}
                 heading="Veiing og måling: Helsestasjon bør måle vekt og lengde/høyde på barn 0-5 år"
                 date="Sist faglig oppdatert: 11. juni 2020"
               >

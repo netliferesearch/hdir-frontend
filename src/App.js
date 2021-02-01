@@ -27,6 +27,7 @@ import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import ChapterPage from './pages/ChapterPage';
+import ChapterPageTag from './pages/ChapterPageTag';
 import ChapterPageWithSubchapters from './pages/ChapterPageWithSubchapters';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ChapterPageWithLead from './pages/ChapterPageWithLead';
@@ -152,14 +153,9 @@ class App extends Component {
                 component={ReportPageWithoutImage}
               />
               <Route path="/kapittel" component={ChapterPage} />
-              <Route
-                path="/kapittel-med-ingress"
-                component={ChapterPageWithLead}
-              />
-              <Route
-                path="/kapittel-med-underkapitler"
-                component={ChapterPageWithSubchapters}
-              />
+              <Route path="/kapittel-tag" component={ChapterPageTag} />
+              <Route path="/kapittel-med-ingress" component={ChapterPageWithLead} />
+              <Route path="/kapittel-med-underkapitler" component={ChapterPageWithSubchapters} />
               <Route path="/høringer" component={HearingPage} />
               <Route path="/høringer-forside" component={ParentHearingPage} />
               <Route path="/anbefaling" component={RecommendationPage} />
