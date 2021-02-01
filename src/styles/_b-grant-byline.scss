@@ -1,0 +1,32 @@
+.b-grant-byline {
+  @include mq($from: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    @include mq($from: $tablet) {
+      margin-right: 4em;
+    }
+  }
+
+  &__status-icon {
+    display: inline-block;
+    background-color: $green;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 100%;
+    margin-right: 0.5em;
+    vertical-align: text-top;
+  }
+  &__status-icon--expired {
+    background-color: $red;
+  }
+  &__amount-icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+  }
+}

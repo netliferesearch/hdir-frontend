@@ -101,7 +101,7 @@ const ChapterPageTag = () => {
             <Collapsible
               background
               heading="Kortere tittel"
-              tag={{ title: 'Forskriftstekst med veiledning', description: '"Forskriftstekst med veiledning" inneholder fortolkning og veiledning til en forskriftsbestemmelse' }}
+              tag={{ title: 'Forskriftstekst med veiledning' }}
               date="Sist faglig oppdatert: 11. juni 2020"
             >
                 <h3>Forskriftstekst</h3>

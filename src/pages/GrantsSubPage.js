@@ -1,20 +1,40 @@
 import React from 'react';
 import Link from '../components/Link';
 import Box from '../components/Box';
+import Timeline from '../components/Timeline';
 import Collapsible from '../components/Collapsible';
-import SectionSidebar from '../components/SectionSidebar';
+import ContentFooter from '../components/ContentFooter';
 import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
 import Button from '../components/Button';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const GrantsSubPage = () => (
   <>
+    <div className="l-container">
+      <Breadcrumbs
+        paths={[
+          {
+            name: 'Forsiden',
+            href: '#a'
+          },
+          {
+            name: 'Tilskudd',
+            href: '#a'
+          },
+          {
+            name: 'Finn tilskudd',
+            href: '#a'
+          }
+        ]}
+      />
+    </div>
     <main id="main">
       <div className="l-container l-mt-3">
         <ArticleIntro
-          heading="Oppfølging av akuttmedisinforskriften"
-          lead="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          heading="Styrking og utvikling av helsestasjons- og skolehelsetjenesten"
+          lead="Har du et prosjekt som kan bidra til at folk i ditt nærområde føler seg mindre ensomme? Er det mangler på helsesykepleiere i din kommune? Da kan du søke om tilskudd hos oss."
         />
         <Alert status="success" inline hideIcon>
           Søknadsfrist 20. februar 2019
@@ -154,67 +174,117 @@ const GrantsSubPage = () => (
                 <strong>Tillegg og presiseringer:</strong>
               </p>
               <p>
-                Søknaden må inneholde informasjon om de
-                <a href="https://helsedirektoratet.no/Documents/Tilskudd/Oppfølging%20av%20akuttmedisinforskriften%20-%20regelverk.pdf">
-                  presiserte tildelingskriteriene i pkt. 7 i regelverket
-                </a>
-                .
+                Tilskudd skal benyttes for å gjennomføre en styrking av
+                tjenesten. Dersom det kommer fram at kommuner kutter i
+                eksisterende årsverk/ stillinger samtidig som de får
+                tilskuddsmidler, kan det føre til at tilskudd kreves tilbake.
               </p>
-              <h2 id="søknadsbehandling">Søknadsbehandling</h2>
-              <ul>
-                <li>
-                  <strong>
-                    Innstilling om avgjørelser/vedtak skal fremmes av:
-                  </strong>
-                  Helsedirektoratet
-                </li>
-                <li>
-                  <strong>Innstilling skal godkjennes av:</strong>
-                  Helsedirektoratet
-                </li>
-                <li>
-                  <strong>Avgjørelser/vedtak skal fattes av:</strong>
-                  Helsedirektoratet
-                </li>
-                <li>
-                  <strong>
-                    Hvordan søker skal opplyses om utfallet av
-                    søknadsbehandlingen:
-                  </strong>
-                  Tilskudds- eller avslagsbrev.
-                </li>
-              </ul>
               <p>
-                Søknader behandles fortløpende. Søknader som kommer inn etter
-                fristen kan avvises.
+                For nærmere informasjon om mål og målgruppe;{' '}
+                <a href="#">les regelverket</a>
               </p>
-            </article>
-            <div className="l-mt-3">
-              <Collapsible heading="Høringsinstanser">
-                <p>
-                  Nasjonal faglig retningslinje for svangerskapsdiabetes vil
-                  erstatte kapitlene 12.3–12.5 i IS-1674: «Nasjonal faglig
-                  retningslinje for forebygging, diagnostikk og behandling av
-                  diabetes» fra 2009 og foreligger kun i digitalt format.
-                </p>
-              </Collapsible>
+            </Collapsible>
+            <Collapsible h="h3" heading="Hvem kan få tilskudd?" size="small" noScroll>
+              <p>x</p>
+            </Collapsible>
+            <Collapsible
+              h="h3"
+              heading="Dette må være med i søknaden"
+              size="small"
+            >
+              <p>x</p>
+            </Collapsible>
+            <Collapsible h="h3" heading="Tildelingskriterier" size="small" noScroll>
+              <p>x</p>
+            </Collapsible>
+            <Collapsible
+              h="h3"
+              heading="Dette må være med i rapporteringen"
+              size="small"
+              noScroll
+            >
+              <p>x</p>
+            </Collapsible>
+          </section>
+
+          <section className="l-mt-4">
+            <h2>Statistikk</h2>
+            <div className="l-mt-2">
+              <div className="videoWrapper__iframe" id="iframe">
+                <iframe
+                  title="Title here"
+                  width="100%"
+                  height="600"
+                  src="https://statistikk.helsedirektoratet.no/bi/Dashboard/71613538-62de-4ab2-8409-8638fc6c25db?e=false&vo=viewonly"
+                  frameBorder="0"
+                  allowFullScreen=""
+                />
+              </div>
             </div>
-            
-          </div>
-        </div>
+          </section>
+        </article>
       </div>
     </main>
+    <div className="l-container l-mt-4">
+      <hr className="b-hr b-hr--grey-light" />
+      <div className="l-mt-1 b-secondary-logos">
+        <div className="b-secondary-logos__logolist">
+          <img
+            src="http://placehold.it/100x50"
+            alt="Folkehelseinstituttet logo"
+          />
+        </div>
+        <div className="b-secondary-logos__text">
+          <p>
+            Veilederne er utgitt av Helsedirektoratet. <br />
+            Faglig innhold levert av Folkehelseinstituttet
+          </p>
+        </div>
+      </div>
+    </div>
     <div className="l-container l-mt-3 l-mb-5">
       <div className="row">
-        <div className="col-md-8 col-xs-12 col-md-offset-4">
-          <PageMeta
-            publishDate="11. august 2008"
-            editDate="12. august 2018"
-          />
+        <div className="col-xs-12">
+          <PageMeta publishDate="11. august 2008" editDate="12. august 2018" />
           <div className="l-mt-1">
             <Button clean small icon="../icons/print.svg">
               Skriv ut/lag PDF
             </Button>
+            <ContentFooter
+              heading="Slik refererer du [produkttype]"
+              id="contentFooter-1"
+              content={[
+                <>
+                  Helsedirektoratet (2020).{' '}
+                  <i>
+                    Nasjonal faglig retningslinjer for helsestasjons- og
+                    skolehelsetjenesten [nettdokument].
+                    </i>{' '}
+                    Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars
+                    2019, lest 12. august 2020). Tilgjengelig fra:
+                    https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten.
+                  </>
+              ]}
+            />
+            <ContentFooter
+              heading="Åpne data (API)"
+              id="contentFooter-2"
+              content={[
+                <>
+                  Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
+                  <br />
+                  <a href="https://utvikler.helsedirektoratet.no/">
+                    https://utvikler.helsedirektoratet.no/
+                    </a>
+                  <br />
+                  <br />
+                  <span className="t--bold">
+                    [Fulltittel på innholdet]
+                    </span>{' '}
+                    er tilgjengelig i vårt API: https://xxxx
+                  </>
+              ]}
+            />
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
 import InputSearch from '../components/InputSearch';
+import GrantsSearch from '../components/GrantsSearch';
 import RadioButtonGroup from '../components/RadioButtonGroup';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
@@ -48,34 +49,16 @@ const ListGrants = (props) => (
             </div>
           </div>
           <div className="l-mt-4 l-mb-2">
-            <InputSearch
+            <GrantsSearch
               label="Vet du hvilket tilskudd du vil søke på?"
-              productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
               flatTree={dummyFlatTree}
-              malGruppe={''}
-              dummyData={
+              dummyData={[
                 {
-                  type: 'grantFunding',
+                  type: 'grant',
                   url: '#1',
                   fields: {
                     heading:
                       'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
-                    deadline: 'Søknadsfrist: 15. mai 2019'
-                  }
-                }
-              }
-              collapsed
-            />
-          </div>
-          <div>
-            <List
-              list={[
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading:
-                      'Styrking og utvikling av helsestasjons- og skolehelsetjenesten',
                     day: '16.',
                     month: 'jan',
                     tags: [
@@ -92,33 +75,21 @@ const ListGrants = (props) => (
                 },
                 {
                   type: 'grant',
-                  url: '#6',
+                  url: '#1',
                   fields: {
                     heading:
-                      'Psykisk helse i skolen',
-                    day: '13.',
-                    month: 'mar',
-                    tags: [
-                      {
-                        label: 'Tema 3',
-                        url: '#'
-                      }
-                    ]
-                  }
-                },
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading:
-                      'Seksuell helse',
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     day: '16.',
-                    month: 'sep',
+                    month: 'jan',
                     tags: [
                       {
-                        label: 'Tema 4',
+                        label: 'Tema 1',
                         url: '#'
-                      }
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
                     ]
                   }
                 },

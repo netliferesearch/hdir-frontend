@@ -70,6 +70,10 @@ const pages = [
   { link: '/tidligere-versjoner', desc: 'Tidligere versjoner' },
   { link: '/tilskudd-underside', desc: 'Tilskudd underside' },
   { link: '/tilskudd-veiviser', desc: 'Tilskudd veiviser' },
+  {
+    link: '/tilskudd-underside-utgått-søknadsfrist',
+    desc: 'Tilskudd underside utgått søknadsfrist'
+  },
   { link: '/transportside', desc: 'Transportside' },
   { link: '/yrke-velger', desc: 'Yrkesvelger' }
 ];
