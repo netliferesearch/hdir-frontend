@@ -11,6 +11,7 @@
     &-wrapper--feature & {
       // This applies only on a 'div' tag with background
       width: 100%;
+      height: 100%;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 50% 50%;
@@ -52,7 +53,7 @@
         margin-left: -$container-small;
       }
       @include mq($from: $desktop) {
-        min-height: 60vh;
+        height: 60vh;
         width: calc(100% + #{$container-medium} + #{$container-medium});
         margin-left: -$container-medium;
       }
