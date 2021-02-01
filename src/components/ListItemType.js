@@ -205,7 +205,7 @@ const ListItemType = props => {
             'b-list-item-type--no-arrow': fields.download || fields.openPdf,
           })}
         >
-          <div className="b-list-item-type__date-circle">
+          <div className={`b-list-item-type__date-circle ${fields.expired && 'b-list-item-type__date-circle--expired'}`}>
           <span className="b-list-item-type__date-big">{fields.day}</span>
             {fields.month}
           </div>

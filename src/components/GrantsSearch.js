@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { debounce } from 'lodash';
@@ -8,7 +9,7 @@ import List from './List'
 import Loading from './Loading'
 import Button from './Button'
 
-const GrantsSearch = ({ label, flatTree, endpoint, dummyData }) => {
+const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [toggleMore, setToggleMore] = useState(false);
@@ -59,6 +60,8 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData }) => {
   // Split arrays in two, so we can have "See all" toggle buttons
   const results = searchResults && searchResults.splice(0, 7);
   const resultsRest = searchResults.length > 7 ? searchResults.splice(7) : null;
+  const resultsActive = dummyData ? dummyData : searchResults && searchResults.filter(item => !item.fields.expired);
+  const resultsExpired = dummyDataExpired ? dummyDataExpired : searchResults && searchResults.filter(item => item.fields.expired);
   console.log('results', results)
 
   return (
@@ -101,7 +104,7 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData }) => {
                 ) : null
               }
             <List
-              list={searchResults || dummyData}
+              list={dummyData || searchResults}
             />
           </div>
       )}
@@ -118,11 +121,25 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData }) => {
 
       { // Default
         searchString.length === 0 && (
-          <List
-            list={searchResults || dummyData}
-          />
+        <Tabs>
+          <TabList>
+            <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{resultsActive.length}</span></Tab>
+            <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{resultsExpired.length}</span></Tab>
+          </TabList>
+          <TabPanel>
+            <List
+                list={resultsActive}
+              />
+          </TabPanel>
+          <TabPanel>
+            <List
+                list={resultsExpired}
+              />
+          </TabPanel>
+        </Tabs>
         ) 
       }
+      
 
       {
         resultsRest ? (
@@ -141,6 +158,8 @@ GrantsSearch.propTypes = {
   label: PropTypes.string,
   flatTree: PropTypes.string,
   endpoint: PropTypes.string,
+  dummyData: PropTypes.array,
+  dummyDataExpired: PropTypes.array,
 };
 
 export default GrantsSearch;
