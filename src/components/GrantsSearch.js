@@ -8,20 +8,6 @@ import List from './List'
 import Loading from './Loading'
 import Button from './Button'
 
-
-const mainClasses = (collapsed) =>
-  classNames({
-    'b-product-search': true,
-    'b-product-search--collapsed': collapsed,
-  });
-
-const contentClasses = (toggled) =>
-  classNames({
-    'b-product-search': true,
-    'b-product-search__content': toggled,
-    'b-product-search--hidden': !toggled
-  });
-
 const GrantsSearch = ({ label, flatTree, endpoint, dummyData }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -71,21 +57,20 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData }) => {
   );
 
   // Split arrays in two, so we can have "See all" toggle buttons
-  const results = searchResults.splice(0, 7);
+  const results = searchResults && searchResults.splice(0, 7);
   const resultsRest = searchResults.length > 7 ? searchResults.splice(7) : null;
   console.log('results', results)
+
   return (
     <>
-      <div className={mainClasses}>
-        <div className={contentClasses(true)}>
-          <InputSearch
-            id="tilskuddsok"
-            label={label}
-            autoFocus={true}
-            showSuggestions={false}
-            fnChange={debouncedChange}
-          />
-        </div>
+      <div className="b-product-search">
+        <InputSearch
+          id="tilskuddsok"
+          label={label}
+          autoFocus={true}
+          showSuggestions={false}
+          fnChange={debouncedChange}
+        />
       </div>
       
       {loading ? (
@@ -105,30 +90,49 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData }) => {
         </div>
       ) : null}
 
-      {toggled && searchString.length > 0 && searchResults.length > 0 && (
-        <div className="l-mb-4 results">
-            {
-              searchString && searchResults.length > 0 ? (
-              <h2 className="b-product-search__title">
-                {searchResults.length} treff på «{searchString}» i {label}
-              </h2>
-              ) : null
-            }
-        </div>
+      { // When there are search results
+        searchString.length > 0 && searchResults.length > 0 && (
+          <div className="l-mb-4 results">
+              {
+                searchString && searchResults.length > 0 ? (
+                <h2 className="b-product-search__title">
+                  {searchResults.length} treff på «{searchString}»
+                </h2>
+                ) : null
+              }
+            <List
+              list={searchResults || dummyData}
+            />
+          </div>
       )}
-      {
-        toggled && searchString.length > 0 && !loading && searchResults.length === 0 ? (
+
+      { // When NO search results
+        searchString.length > 0 && !loading && searchResults.length === 0 ? (
           <div className="l-mb-4">
             <div className="col-xs-12 l-mt-2 l-mb-3">
-              <p>0 treff på «{searchString}» i {label}</p>
+              <p>0 treff på «{searchString}»</p>
             </div>
           </div>
         ) : null
       }
 
-      <List
-        list={dummyData}
-      />
+      { // Default
+        searchString.length === 0 && (
+          <List
+            list={searchResults || dummyData}
+          />
+        ) 
+      }
+
+      {
+        resultsRest ? (
+          <div className="l-mt-1">
+            <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({searchResults.length})</Button>
+          </div>
+        ) : null
+      }
+
+     
     </>
   );
 }

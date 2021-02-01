@@ -316,7 +316,8 @@ ListItemType.propTypes = {
       'pressRelease',
       'grantFunding',
       'person',
-      'generic'
+      'generic',
+      'grant'
     ]),
     fields: PropTypes.object
   }).isRequired

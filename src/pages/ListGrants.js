@@ -72,19 +72,13 @@ const ListGrants = (props) => (
                       },
                     ]
                   }
-                }
-              ]}
-            />
-          </div>
-          {/* <div>
-            <List
-              list={[
+                },
                 {
                   type: 'grant',
-                  url: '#6',
+                  url: '#1',
                   fields: {
                     heading:
-                      'Styrking og utvikling av helsestasjons- og skolehelsetjenesten',
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     day: '16.',
                     month: 'jan',
                     tags: [
@@ -99,41 +93,9 @@ const ListGrants = (props) => (
                     ]
                   }
                 },
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading:
-                      'Psykisk helse i skolen',
-                    day: '13.',
-                    month: 'mar',
-                    tags: [
-                      {
-                        label: 'Tema 3',
-                        url: '#'
-                      }
-                    ]
-                  }
-                },
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading:
-                      'Seksuell helse',
-                    day: '16.',
-                    month: 'sep',
-                    tags: [
-                      {
-                        label: 'Tema 4',
-                        url: '#'
-                      }
-                    ]
-                  }
-                },
               ]}
             />
-          </div> */}
+          </div>
         </article>
       </div>
 
