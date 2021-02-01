@@ -5,6 +5,7 @@ import ListHeading from '../components/ListHeading';
 import Link from '../components/Link';
 import InputSearch from '../components/InputSearch';
 import CheckboxGroup from '../components/CheckboxGroup';
+import FilterList from '../components/FilterList';
 
 const SearchResultPage = () => (
   <main id="main">
@@ -13,16 +14,20 @@ const SearchResultPage = () => (
       <div className="row l-mt-3">
         <div className="col-xs-12 col-md-8 col-md-offset-4">
           <InputSearch label="Søk" />
-          <div className="l-mt-1 b-link t-right">{
-            // eslint-disable-next-line jsx-a11y/anchor-is-valid
-            }<a href="#"className="b-link__link b-link__link--arrow">
-              Søk i arkivert innhold
-            </a>
-          </div>
         </div>
       </div>
       <div className="row l-mt-4">
         <aside className="col-md-3 col-xs-12 l-mb-4" id="filterToggler">
+          <div className="l-mb-2">
+            <p>Vis innhold som er:</p>
+            <FilterList
+              list={[
+                'Publisert',
+                'Arkivert'
+              ]}
+            />
+          </div>
+
           <form>
             <CheckboxGroup
               name="søkefilter"

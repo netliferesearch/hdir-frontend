@@ -39,7 +39,8 @@ const EarlierVersionsPage = () => (
                       heading:
                         '3. desember 2018',
                       lead: 'Alle anbefalinger er oppdatert med henvisninger til ny forskrift om helsestasjons- og skolehelsetjenesten, som trådte i kraft 1. november 2018. ',
-                      download: '#'
+                      download: '#',
+                      current: true
                     }
                   },
                   {

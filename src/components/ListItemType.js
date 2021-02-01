@@ -242,7 +242,7 @@ const ListItemType = props => {
                 <a href="#pdf" className="b-list-item-type__download b-list-item-type--float b-list-item-type--link" aria-label="Last ned PDF">PDF</a>
               )}
               {fields.heading && 
-                <h3>{fields.heading}</h3>
+                <h3>{fields.heading} { fields.current && (<span className="b-list-item-type__current">Gjeldende versjon</span>)}</h3>
               }
               <div className="b-list-item-type__date">
                 {fields.publishDate && (

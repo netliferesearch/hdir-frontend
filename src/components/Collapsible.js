@@ -19,11 +19,11 @@ import uuidv4 from 'uuid/v4';
 import Alert from './Alert';
 import Heading from './Heading';
 
-const buttonClasses = (active, size, subtle, button, primary) =>
+const buttonClasses = (active, size, tag, button, primary) =>
   classNames({
     'b-collapsible__button': true,
     'b-collapsible__button--active': active,
-    'b-collapsible__button--subtle': subtle,
+    'b-collapsible__button--tag': tag,
     'b-collapsible__button--tiny': size === 'tiny',
     'b-collapsible__button--small': size === 'small',
     'b-collapsible__button--medium': size === 'medium',
@@ -47,10 +47,10 @@ const headingClasses = (size, bold) =>
     'h0--normal': bold === false
   });
 
-const collapsibleClasses = (size, subtle, noBorder, background, active, metaContent) =>
+const collapsibleClasses = (size, tag, noBorder, background, active, metaContent) =>
   classNames({
     'b-collapsible': true,
-    'b-collapsible--subtle': subtle,
+    'b-collapsible--tag': tag,
     'b-collapsible--active': active,
     'b-collapsible--background': background,
     'b-collapsible--medium': size === 'medium',
@@ -113,14 +113,14 @@ const Collapsible = props => {
   return (
     <div
       data-parent-id={id}
-      className={collapsibleClasses(props.size, props.subtle, props.noBorder, props.background, collapsed, props.metaContent)}
+      className={collapsibleClasses(props.size, props.tag, props.noBorder, props.background, collapsed, props.metaContent)}
       ref={parentElement}
     >
       {props.category && (
         <div className="b-collapsible__category">{props.category}</div>
       )}
       <button
-        className={buttonClasses(collapsed, props.size, props.subtle)}
+        className={buttonClasses(collapsed, props.size, props.tag)}
         aria-expanded={collapsed}
         aria-controls={id}
         onClick={e => setCollapsed(!collapsed)}
@@ -132,6 +132,16 @@ const Collapsible = props => {
           )}
         </Heading>
       </button>
+      { props.tag && (
+        props.tag.description ? (
+          <button className="b-collapsible__tag"><span>{props.tag.title}</span></button>
+          ) : (
+          <div className="b-collapsible__tag b-collapsible__tag--no-action"><span>{props.tag.title}</span></div>
+        )
+        )}
+      {props.tag && props.tag.description && (
+          <div className="b-collapsible__tag-content">{props.tag.description}</div>
+        )}
 
       {props.subheading && !props.subheadingContent && (
         <div className="b-collapsible__subheading l-mt-1">
@@ -146,7 +156,7 @@ const Collapsible = props => {
           ?
           <Collapsible
             heading={props.subheading}
-            subtle={Boolean(props.subheadingContent)}
+            tag={Boolean(props.subheadingContent)}
             size="small"
             bold={props.bold}
             smallContent
@@ -212,7 +222,10 @@ const Collapsible = props => {
           
             { props.date ? 
               <div className="b-collapsible__meta-date">
-                {props.date}
+              {props.date}<span className="hide-mobile">&nbsp; | &nbsp;</span>
+                <a href="#" className="b-page-meta__link">
+                  Se tidligere versjoner
+                </a>
               </div>
             : null}
           </div>
@@ -231,7 +244,7 @@ Collapsible.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'tiny']),
   h: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   smallContent: PropTypes.bool,
-  subtle: PropTypes.bool,
+  tag: PropTypes.object,
   category: PropTypes.string,
   noBorder: PropTypes.bool,
   alert: PropTypes.string,
