@@ -64,6 +64,7 @@ const LisLearning = () => (
                 heading="Urogenitale tilstander hos nyfødte"
                 dateFrom="1.januar 2020"
                 dateTo="1.januar 2021"
+                id="test1"
                 tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
                 size="medium"
                 code="BAK 001"
@@ -92,6 +93,7 @@ const LisLearning = () => (
                   dateFrom="1.januar 2020"
                   tag={{ title: 'Læringsmål' }}
                   size="medium"
+                  id="test2"
                   code="BAK 002"
                   archiveLink
                 >
@@ -118,6 +120,7 @@ const LisLearning = () => (
                 <Collapsible
                   heading="Vaskulære malformasjoner "
                   dateTo="1.januar 2021"
+                  id="test3"
                   tag={{ title: 'Læringsmål' }}
                   size="medium"
                   code="BAK 003"
@@ -151,6 +154,7 @@ const LisLearning = () => (
               <Collapsible
                 heading="Barnehelse og barnets plass i familien"
                 dateFrom="1.januar 2020"
+                id="test4"
                 dateTo="1.januar 2021"
                 tag={{ title: 'Læringsmål' }}
                 size="medium"
