@@ -106,9 +106,16 @@
     font-size: $font-xs;
     line-height: 1.2;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    
+    @include mq($from: tablet) {
+      
+      display: flex;
+    }
 
     &--expired {
       background: $red-light;
