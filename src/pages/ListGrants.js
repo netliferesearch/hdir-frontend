@@ -53,6 +53,7 @@ const ListGrants = (props) => (
               label="Vet du hvilket tilskudd du vil søke på?"
               flatTree={dummyFlatTree}
               dummyData={[
+                
                 {
                   type: 'grant',
                   url: '#1',
@@ -60,7 +61,7 @@ const ListGrants = (props) => (
                     heading:
                       'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     day: '16.',
-                    month: 'jan',
+                    month: 'mar',
                     tags: [
                       {
                         label: 'Tema 1',
@@ -80,7 +81,26 @@ const ListGrants = (props) => (
                     heading:
                       'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     day: '16.',
-                    month: 'jan',
+                    month: 'mar',
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
+                {
+                  type: 'grant',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    month: 'Løpende',
                     tags: [
                       {
                         label: 'Tema 1',
@@ -94,6 +114,50 @@ const ListGrants = (props) => (
                   }
                 },
               ]}
+                dummyDataExpired={[
+                  {
+                    type: 'grant',
+                    url: '#1',
+                    fields: {
+                      heading:
+                        'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                      day: '1.',
+                      month: 'jan',
+                      expired: true,
+                      tags: [
+                        {
+                          label: 'Tema 1',
+                          url: '#'
+                        },
+                        {
+                          label: 'Tema 2',
+                          url: '#'
+                        },
+                      ]
+                    }
+                  },
+                  {
+                    type: 'grant',
+                    url: '#1',
+                    fields: {
+                      heading:
+                        'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                      day: '1.',
+                      month: 'jan',
+                      expired: true,
+                      tags: [
+                        {
+                          label: 'Tema 1',
+                          url: '#'
+                        },
+                        {
+                          label: 'Tema 2',
+                          url: '#'
+                        },
+                      ]
+                    }
+                  },
+                ]}
             />
           </div>
         </article>
