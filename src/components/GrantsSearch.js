@@ -13,15 +13,18 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [toggleMore, setToggleMore] = useState(false);
+  const [toggleMore2, setToggleMore2] = useState(false);
+  const [activeResults, setActiveResults] = useState([]);
+  const [activeResultsLimited, setActiveResultsLimited] = useState([]);
+  const [activeResultsRest, setActiveResultsRest] = useState([]);
+  const [expiredResults, setExpiredResults] = useState([]);
+  const [expiredResultsLimited, setExpiredResultsLimited] = useState([]);
+  const [expiredResultsRest, setExpiredResultsRest] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
   const liveSearchUrl = endpoint
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
-
-  function toggle() {
-    setToggled(!toggled);
-  }
 
   // const doSearch = (formData) =>
   const fetchResults = (formData) => 
@@ -57,12 +60,38 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
     [doSearch],
   );
 
-  // Split arrays in two, so we can have "See all" toggle buttons
-  const results = searchResults && searchResults.splice(0, 7);
-  const resultsRest = searchResults.length > 7 ? searchResults.splice(7) : null;
-  const resultsActive = dummyData ? dummyData : searchResults && searchResults.filter(item => !item.fields.expired);
-  const resultsExpired = dummyDataExpired ? dummyDataExpired : searchResults && searchResults.filter(item => item.fields.expired);
-  console.log('results', results)
+  useEffect(() => {
+    if (dummyData) {
+      setSearchResults(dummyData)
+    }
+    setActiveResults(
+      searchResults && searchResults.filter(item => !item.fields.expired)
+    );
+    // Split arrays in two, so we can have "See all" toggle buttons
+    setActiveResultsLimited(
+      searchResults && searchResults.filter(item => !item.fields.expired).splice(0, 7)
+    );
+    setActiveResultsRest(
+      searchResults && searchResults.filter(item => !item.fields.expired).splice(7)
+    );
+    setExpiredResults(
+      searchResults && searchResults.filter(item => item.fields.expired)
+    );
+    setExpiredResultsLimited(
+      searchResults && searchResults.filter(item => item.fields.expired).splice(0, 7)
+    );
+    setExpiredResultsRest(
+      searchResults && searchResults.filter(item => item.fields.expired).splice(7)
+    );
+    
+    console.log('dummyData 1', dummyData)
+    console.log('activeResults', activeResults)
+    console.log('resultsActiveModified', activeResultsLimited)
+    console.log('expiredResults', expiredResults)
+
+  }, [searchResults]);
+
+  console.log('dummyData 2', dummyData)
 
   return (
     <>
@@ -104,7 +133,7 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
                 ) : null
               }
             <List
-              list={dummyData || searchResults}
+              list={activeResults}
             />
           </div>
       )}
@@ -123,31 +152,35 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
         searchString.length === 0 && (
         <Tabs>
           <TabList>
-            <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{resultsActive.length}</span></Tab>
-            <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{resultsExpired.length}</span></Tab>
+            <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span></Tab>
+            <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span></Tab>
           </TabList>
           <TabPanel>
             <List
-                list={resultsActive}
+                list={toggleMore ? activeResults : activeResultsLimited}
               />
+              { activeResultsRest.length > 0 && !toggleMore ? (
+                <div className="l-mt-1">
+                  <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({activeResults.length})</Button>
+                </div>
+              ) : null }
           </TabPanel>
           <TabPanel>
             <List
-                list={resultsExpired}
+                list={toggleMore2 ? expiredResults : expiredResultsLimited}
               />
+              {expiredResultsRest.length > 0 && !toggleMore ? (
+              <div className="l-mt-1">
+                <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
+              </div>
+            ) : null}
           </TabPanel>
         </Tabs>
         ) 
       }
       
 
-      {
-        resultsRest ? (
-          <div className="l-mt-1">
-            <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({searchResults.length})</Button>
-          </div>
-        ) : null
-      }
+    
 
      
     </>

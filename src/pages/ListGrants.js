@@ -100,6 +100,26 @@ const ListGrants = (props) => (
                   fields: {
                     heading:
                       'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    day: '16.',
+                    month: 'mar',
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
+                {
+                  type: 'grant',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     month: 'Løpende',
                     tags: [
                       {
@@ -113,51 +133,49 @@ const ListGrants = (props) => (
                     ]
                   }
                 },
+                {
+                  type: 'grant',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    day: '1.',
+                    month: 'jan',
+                    expired: true,
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
+                {
+                  type: 'grant',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    day: '1.',
+                    month: 'jan',
+                    expired: true,
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
               ]}
-                dummyDataExpired={[
-                  {
-                    type: 'grant',
-                    url: '#1',
-                    fields: {
-                      heading:
-                        'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
-                      day: '1.',
-                      month: 'jan',
-                      expired: true,
-                      tags: [
-                        {
-                          label: 'Tema 1',
-                          url: '#'
-                        },
-                        {
-                          label: 'Tema 2',
-                          url: '#'
-                        },
-                      ]
-                    }
-                  },
-                  {
-                    type: 'grant',
-                    url: '#1',
-                    fields: {
-                      heading:
-                        'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
-                      day: '1.',
-                      month: 'jan',
-                      expired: true,
-                      tags: [
-                        {
-                          label: 'Tema 1',
-                          url: '#'
-                        },
-                        {
-                          label: 'Tema 2',
-                          url: '#'
-                        },
-                      ]
-                    }
-                  },
-                ]}
             />
           </div>
         </article>
