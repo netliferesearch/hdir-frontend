@@ -60,28 +60,33 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
     [doSearch],
   );
 
+  const isExpired = (date) => {
+    const today = new Date();
+    
+  }
+
   useEffect(() => {
     if (dummyData) {
       setSearchResults(dummyData)
     }
     setActiveResults(
-      searchResults && searchResults.filter(item => !item.fields.expired)
+      searchResults ? searchResults.filter(item => !item.fields.expired) : []
     );
     // Split arrays in two, so we can have "See all" toggle buttons
     setActiveResultsLimited(
-      searchResults && searchResults.filter(item => !item.fields.expired).splice(0, 7)
+      searchResults ? searchResults.filter(item => !item.fields.expired).splice(0, 7) : []
     );
     setActiveResultsRest(
-      searchResults && searchResults.filter(item => !item.fields.expired).splice(7)
+      searchResults ? searchResults.filter(item => !item.fields.expired).splice(7) : []
     );
     setExpiredResults(
-      searchResults && searchResults.filter(item => item.fields.expired)
+      searchResults ? searchResults.filter(item => item.fields.expired) : []
     );
     setExpiredResultsLimited(
-      searchResults && searchResults.filter(item => item.fields.expired).splice(0, 7)
+      searchResults ? searchResults.filter(item => item.fields.expired).splice(0, 7) : []
     );
     setExpiredResultsRest(
-      searchResults && searchResults.filter(item => item.fields.expired).splice(7)
+      searchResults ? searchResults.filter(item => item.fields.expired).splice(7) : []
     );
     
     console.log('dummyData 1', dummyData)
@@ -132,9 +137,32 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
                 </h2>
                 ) : null
               }
-            <List
-              list={activeResults}
-            />
+            <Tabs>
+              <TabList>
+                <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span></Tab>
+                <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span></Tab>
+              </TabList>
+              <TabPanel>
+                <List
+                  list={toggleMore ? activeResults : activeResultsLimited}
+                />
+                {activeResultsRest.length > 0 && !toggleMore ? (
+                  <div className="l-mt-1">
+                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({activeResults.length})</Button>
+                  </div>
+                ) : null}
+              </TabPanel>
+              <TabPanel>
+                <List
+                  list={toggleMore2 ? expiredResults : expiredResultsLimited}
+                />
+                {expiredResultsRest.length > 0 && !toggleMore ? (
+                  <div className="l-mt-1">
+                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
+                  </div>
+                ) : null}
+              </TabPanel>
+            </Tabs>
           </div>
       )}
 
