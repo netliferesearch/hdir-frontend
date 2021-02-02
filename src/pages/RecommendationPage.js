@@ -10,6 +10,8 @@ const RecommendationPage = () => (
       <main id="main">
       <Collapsible
         background
+        dateFrom="1.januar 2020"
+        dateTo="1.januar 2021"
         id="test"
         heading="Sekundær peritonitt"
         date="Sist faglig oppdatert: 11. juni 2020"
@@ -142,6 +144,8 @@ const RecommendationPage = () => (
       </Collapsible>
       <Collapsible
         background
+        dateFrom="1.januar 2020"
+        dateTo="1.januar 2021"
         id="test2"
         heading="Sekundær peritonitt"
         date="Sist faglig oppdatert: 11. juni 2020"

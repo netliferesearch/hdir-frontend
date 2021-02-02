@@ -1,0 +1,16 @@
+.b-tags {
+  display: flex;
+  margin-top: $space-xs;
+}
+.b-tags__item {
+  margin-right: $space-xs;
+  font-size: $font-xs;
+  line-height: $font-sm;
+  font-weight: normal;
+  display: inline-block;
+  transition: background .1s ease-out;
+  background: $yellow-light;
+  padding: $space-xs $space-md * 0.8;
+  border: 0;
+  border-radius: 20px;
+}

@@ -43,6 +43,7 @@ import SectionSidebar from '../components/SectionSidebar';
 import Select from '../components/Select';
 import Statistics from '../components/Statistics';
 import TableExample from '../components/TableExample';
+import Timeline from '../components/Timeline';
 import TransportBlock from '../components/TransportBlock';
 import Wrapper from './components/Wrapper.js'
 import IconWithText from '../components/IconWithText';
@@ -1669,6 +1670,41 @@ storiesOf('Komponenter/Knapp', module)
     .add('Tabell', () => 
       <Wrapper title="Tabell">
         <TableExample />
+      </Wrapper>
+  );
+
+
+  
+  storiesOf('Komponenter', module)
+    .addDecorator(withKnobs)
+    .addDecorator(checkA11y)
+    .add('Tidslinje', () => 
+      <Wrapper title="Tidslinje">
+        <Timeline
+          label="Slik blir prosessen"
+          items={[
+            {
+              label: 'Webinar:',
+              date: '15. februar 2021'
+            },
+            {
+              label: 'Rapportering:',
+              date: '1. mars 2021'
+            },
+            {
+              label: 'Et punkt:',
+              date: '1. april 2021'
+            },
+            {
+              label: 'Forventet svar:',
+              date: '1. mai 2021'
+            },
+            {
+              label: 'Rapportering:',
+              date: '1. april 2022'
+            },
+          ]}
+        />
       </Wrapper>
   );
 
