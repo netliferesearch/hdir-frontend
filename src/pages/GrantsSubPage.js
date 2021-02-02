@@ -36,142 +36,67 @@ const GrantsSubPage = () => (
           heading="Styrking og utvikling av helsestasjons- og skolehelsetjenesten"
           lead="Har du et prosjekt som kan bidra til at folk i ditt nærområde føler seg mindre ensomme? Er det mangler på helsesykepleiere i din kommune? Da kan du søke om tilskudd hos oss."
         />
-        <Alert status="success" inline hideIcon>
-          Søknadsfrist 20. februar 2019
-        </Alert>
-        <div className="row l-mt-3">
-          <div className="col-xs-12 col-md-12 t-body-text">
-            <Link href="#a" button>
-              Søk på tilskudd (Altinn)
-            </Link>
-            <article className="t-body-text l-mt-2">
-              <h2 id="m%C3%A5l-for-ordningen">Mål for ordningen</h2>
-              <p>Brukerne skal få bedre kvalitet på legevakttjenesten:</p>
-              <ul>
-                <li>
-                  kurs i akuttmedisin for leger og annet helsepersonell i
-                  legevakt
-                </li>
-                <li>
-                  kurs i volds- og overgrepshåndtering for leger og annet
-                  helsepersonell i legevakt
-                </li>
-                <li>kompensasjon for bakvakt</li>
-                <li>
-                  styrke kompetansen ved ansettelse av nye operatører i
-                  legevaktsentrale
-                </li>
-              </ul>
-              <p>
-                <a href="https://helsedirektoratet.no/akuttmedisin/akuttmedisinforskriften">
-                  Se kurskrav og liste over godkjente kurstilbydere
-                </a>
-              </p>
-              <h2 id="m%C3%A5lgruppe">Målgruppe</h2>
-              <p>Tilskuddet er rettet mot kommuner.</p>
-              <h2 id="tildelingskriterier">Tildelingskriterier</h2>
-              <ul>
-                <li>Kvantifiserbare tildelingskriterier.</li>
-                <li>Skjønnsmessig vurdering.</li>
-              </ul>
-              <h3>Presisering av tildelingskriterier:</h3>
-              <p>
-                <strong>Det gis tilskudd til:</strong>
-              </p>
-              <ol>
-                <li>
-                  Nettkurs og kurs i akuttmedisin for leger (ikke turnusleger)
-                  og annet helsepersonell i legevakt som ikke har gjennomgått
-                  slikt kurs.
-                </li>
-                <li>
-                  Nettkurs i volds- og overgrepshåndtering for leger og annet
-                  helsepersonell i legevakt.
-                </li>
-                <li>
-                  Kompensasjon for bakvakt der vaktlegen ikke oppfyller
-                  kompetansekravene som stilles i akuttmedisinforskriften.
-                </li>
-                <li>
-                  Lønnsdifferanse ved ansettelse av nye operatører i
-                  legevaktsentral, som oppfyller kravene i
-                  <a href="https://lovdata.no/forskrift/2015-03-20-231/%c2%a713">
-                    akuttmedisinforskriften §13f
-                  </a>
-                  .
-                </li>
-              </ol>
-              <p>
-                <strong>Tilskuddsutmåling:</strong>
-              </p>
-              <ol>
-                <li>
-                  Kurs i akuttmedisin for leger og annet helsepersonell i
-                  legevakt, inkludert fastlegekontor som har legevaktsansvar på
-                  dagtid: kr 5000 i kursavgift per deltaker og kr 250 per
-                  deltaker for nettkurs dekkes. For fast ansatte fastleger og
-                  annet helsepersonell dekkes også kr 4000 i
-                  reise/oppholdsutgifter per deltaker.
-                </li>
-                <li>
-                  Nettkurs i volds- og overgrepshåndtering for leger og annet
-                  helsepersonell inkludert turnusleger og fastlegekontor som har
-                  legevaktansvar på dagtid: kr 250 i kursavgift per deltaker
-                  dekkes. For selvstendig næringsdrivende fastleger og
-                  vikarleger gis også kr4000 i lønnskompensasjon per deltaker.
-                </li>
-                <li>
-                  Merutgifter til bakvakt der vaktlegen ikke oppfyller
-                  kompetansekravene som stilles i akuttedisinforskriften,
-                  avgenset til kr 2000 per vakt. En bakvakt beregnes fra kl.
-                  15.30 – 08. dagen etter (en vakt per døgn). Det gis ikke
-                  tilskudd til daglegevakt. Tilskuddet gis kun fram til 1.
-                  august 2018.
-                </li>
-                <li>
-                  Lønnsdifferanse mellom operatører som har avsluttet
-                  arbeidsforholdet og den nyansatte operatøren som tilsettes i
-                  henhold til kravet i forskriften §13 f, om "relevant
-                  helsefaglig utdanning på bachelornivå" (f.eks.
-                  sykepleiere/vernepleiere). Differansen dekkes med inntil
-                  kr5000 per måned per sykepleier/vernepleier.
-                </li>
-              </ol>
-              <h2 id="søknadens-form-og-innhold">Søknadens form og innhold</h2>
-              <p>
-                Søknaden skal undertegnes av styreleder eller den som har
-                prokura.
-                <br />
-                For kommuner og fylkeskommuner skal søknaden undertegnes av
-                rådmannen eller den vedkommende har delegert myndigheten til.
-              </p>
-              <p>
-                <strong>Søknaden skal inneholde:</strong>
-              </p>
-              <ul>
-                <li>
-                  informasjon om søker, adresse, organisasjonsnummer,
-                  kontonummer, kontaktperson
-                </li>
-                <li>søkerens formål med tilskuddet</li>
-                <li>prosjektbeskrivelse/beskrivelse av tiltak</li>
-                <li>søknadsbeløp</li>
-                <li>
-                  budsjett -
-                  <a href="https://helsedirektoratet.no/Documents/Tilskudd/Tabell%20for%20søknad.xlsx">
-                    bruk dette oppsettet (excel)
-                  </a>
-                </li>
-                <li>
-                  redegjørelse for de interne og eksterne kontrolltiltak som
-                  skal sikre korrekt rapportering og måloppnåelse (for eksempel
-                  interne kontrollaktiviteter, internrevisjon, autorisert
-                  revisor / ikke autorisert revisor, andre offentlige tilsyn og
-                  Riksrevisjonen).
-                </li>
-              </ul>
-              <p>
-                <strong>Tillegg og presiseringer:</strong>
+
+        <div className="l-mt-2 b-grant-byline">
+          <div className="b-grant-byline__item">
+            {/*  Add class "b-grant-byline__status-icon--expired" for red icon. */}
+            <div className="b-grant-byline__status-icon" />
+            Søknadsfrist 1. mars
+          </div>
+          <div className="b-grant-byline__item">
+            <img
+              src="/icons/Tilskudd.svg"
+              role="presentation"
+              alt=""
+              aria-hidden="true"
+              className="b-grant-byline__amount-icon"
+            />
+            Beløp: 422 millioner kroner
+          </div>
+        </div>
+
+        <div className="l-mt-2">
+          <Button>Søk på tilskuddet</Button>
+        </div>
+        <div className="l-mt-1">
+          <Button secondary>Rapporter på tilskuddet</Button>
+        </div>
+
+        <article className="t-body-text l-mt-4">
+          <Timeline
+            label="Slik blir prosessen"
+            items={[
+              {
+                label: 'Webinar:',
+                date: '15. februar 2021'
+              },
+              {
+                label: 'Rapportering:',
+                date: '1. mars 2021'
+              },
+              {
+                label: 'Et punkt:',
+                date: '1. april 2021'
+              },
+              {
+                label: 'Forventet svar:',
+                date: '1. mai 2021'
+              },
+              {
+                label: 'Rapportering:',
+                date: '1. april 2022'
+              },
+            ]}
+          />
+
+          <section className="l-mt-4 b-collapsible b-collapsible--active b-collapsible--clean">
+            <h2 className="l-mb-1">Regelverk</h2>
+            <Collapsible h="h3" heading="Mål for ordningen" size="small" noScroll>
+              <p className="l-mt-1">
+                Målet for ordningen er å styrke og utvikle kommunens
+                helsestasjons- og skolehelsetjeneste. Målgruppen for ordningen
+                er gravide og deres partnere, barselfamilier, barn og unge og
+                deres familier.
               </p>
               <p>
                 Tilskudd skal benyttes for å gjennomføre en styrking av
