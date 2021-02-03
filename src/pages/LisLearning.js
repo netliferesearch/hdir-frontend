@@ -62,6 +62,7 @@ const LisLearning = () => (
               <ChapterHeading heading="Nyfødtkirurgi" line="bottom" h="h2" />
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
+                tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
                 dateFrom="1.januar 2020"
                 dateTo="1.januar 2021"
                 size="medium"
@@ -88,6 +89,7 @@ const LisLearning = () => (
               <div className="l-mt-2">
                 <Collapsible
                   heading="Lyskebrokk hos nyfødte"
+                  tag={{ title: 'Læringsmål' }}
                   dateFrom="1.januar 2020"
                   size="medium"
                   code="BAK 002"
