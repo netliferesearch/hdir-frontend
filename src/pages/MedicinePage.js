@@ -262,7 +262,7 @@ const MedicinePage = () => (
       </main>
 
       <div className="l-mt-3 l-mb-5 t-sm-center">
-        <PageMeta publishDate="11. august 2008" editDate="12. august 2018" />
+        <PageMeta publishDate="11. august 2008" editDate="12. august 2018" url="#a" />
         <small>
           <img
             src="../icons/print.svg"
@@ -279,7 +279,7 @@ const MedicinePage = () => (
         </small>
       </div>
     </div>
-    <Box color="grey" square noPadding>
+    <Box color="grey" square>
       <div className="l-container">
         <strong>Kontakt:</strong>
         <br />

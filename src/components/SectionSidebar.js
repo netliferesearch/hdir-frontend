@@ -159,9 +159,6 @@ const SectionSidebar = props => {
       const headings1 = [...document.querySelectorAll('.t-body-text h2')];
       const headings2 = [...document.querySelectorAll('.l-article h2')];
       const elements = headings1.concat(headings2);
-      console.log('headings1', headings1);
-      console.log('headings2', headings2);
-      console.log('elements', elements);
       setHeadings(elements);
     }
     // Gives all headings a url-safe id based on its text
