@@ -1,0 +1,203 @@
+// Vertical timeline mobile //
+.b-timeline {
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+
+    // Circle //
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: block;
+      background: $blue;
+      margin-right: 20px;
+    }
+    // Line //
+    &:after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 100%;
+      background-color: $blue-light;
+      top: -50%;
+      left: 8px;
+      z-index: -999;
+    }
+    // Remove line from first child //
+    &:first-child:after {
+      width: 100%;
+      height: 0;
+    }
+  }
+}
+
+// Horizontal timeline desktop //
+
+@include mq($from: $tablet) {
+  .b-timeline {
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      flex-grow: 1;
+      flex-direction: column;
+      text-align: left;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 50px;
+
+      // Circle //
+      &:before {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      // Line //
+      &:after {
+        width: 100%;
+        height: 4px;
+        top: 8px;
+        z-index: -999;
+      }
+
+      // Left align first dot, right align the last one
+      &:first-child {
+        align-items: flex-start;
+        &:after {
+          width: 100%;
+          height: 4px;
+        }
+      }
+      &:last-child {
+        align-items: flex-end;
+        text-align: right;
+        &:after {
+          left: 0;
+        }
+      }
+    }
+
+    // Positions when 4 dots
+    &--four {
+      .b-timeline__item {
+        &:first-child {
+          text-align: left;
+        }
+
+        &:nth-child(2) {
+          &:before {
+            margin-left: -32%;
+          }
+          .b-timeline__label {
+            margin-left: -32%;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            margin-right: -32%;
+          }
+          .b-timeline__label {
+            margin-right: -32%;
+          }
+        }
+        
+      }
+    }
+
+    // Positions when 5 dots
+    &--five {
+      .b-timeline__item {
+        &:first-child {
+          text-align: left;
+        }
+
+        &:nth-child(2) {
+          &:before {
+            margin-left: -58%;
+          }
+          .b-timeline__label {
+            margin-left: -58%;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            margin-left: -2%;
+          }
+          .b-timeline__label {
+            margin-left: -2%;
+          }
+        }
+
+        &:nth-child(4) {
+          &:before {
+            margin-right: -45%;
+          }
+          .b-timeline__label {
+            margin-right: -45%;
+          }
+        }
+      }
+    }
+
+    // Positions when 6 dots
+    &--six {
+      .b-timeline__item {
+        &:first-child {
+          text-align: left;
+        }
+
+        &:nth-child(2) {
+          &:before {
+            margin-left: -68%;
+          }
+          .b-timeline__label {
+            margin-left: -68%;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            margin-left: -25%;
+          }
+          .b-timeline__label {
+            margin-left: -25%;
+          }
+        }
+
+        &:nth-child(4) {
+          &:before {
+            margin-right: -10%;
+          }
+          .b-timeline__label {
+            margin-right: -10%;
+          }
+        }
+
+        &:nth-child(5) {
+          &:before {
+            margin-right: -40%;
+          }
+          .b-timeline__label {
+            margin-right: -40%;
+          }
+        }
+      }
+    }
+
+
+  }
+}

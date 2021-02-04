@@ -62,9 +62,10 @@ const LisLearning = () => (
               <ChapterHeading heading="Nyfødtkirurgi" line="bottom" h="h2" />
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
-                tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
                 dateFrom="1.januar 2020"
                 dateTo="1.januar 2021"
+                id="test1"
+                tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
                 size="medium"
                 code="BAK 001"
                 noBorder
@@ -89,9 +90,10 @@ const LisLearning = () => (
               <div className="l-mt-2">
                 <Collapsible
                   heading="Lyskebrokk hos nyfødte"
-                  tag={{ title: 'Læringsmål' }}
                   dateFrom="1.januar 2020"
+                  tag={{ title: 'Læringsmål' }}
                   size="medium"
+                  id="test2"
                   code="BAK 002"
                   archiveLink
                 >
@@ -118,6 +120,8 @@ const LisLearning = () => (
                 <Collapsible
                   heading="Vaskulære malformasjoner "
                   dateTo="1.januar 2021"
+                  id="test3"
+                  tag={{ title: 'Læringsmål' }}
                   size="medium"
                   code="BAK 003"
                   archiveLink
@@ -150,7 +154,9 @@ const LisLearning = () => (
               <Collapsible
                 heading="Barnehelse og barnets plass i familien"
                 dateFrom="1.januar 2020"
+                id="test4"
                 dateTo="1.januar 2021"
+                tag={{ title: 'Læringsmål' }}
                 size="medium"
                 code="BAK 004"
                 archiveLink
