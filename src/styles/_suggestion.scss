@@ -1,5 +1,6 @@
 // Styles for the auto suggest component.
 // The auto suggest is a react component from a package, which does not use BEM.
+$spaceSmall: 0.75em;
 
 .suggestion-title {
   display: inline-block;
@@ -23,10 +24,12 @@
 }
 .suggestion-category {
   display: inline-block;
-  padding: 0.25em;
   margin-left: 0.5em;
   font-size: $meta-text;
   background-color: $yellow-light;
+  padding: $space-xs/2 $space-sm;
+  border: 0;
+  border-radius: 20px;
 }
 .suggestion-download {
   display: inline-block;
