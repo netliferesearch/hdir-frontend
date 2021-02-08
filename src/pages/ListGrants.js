@@ -85,7 +85,7 @@ const ListGrants = (props) => (
                     heading:
                       'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     frist: {
-                      day: '10',
+                      day: '03',
                       month: 'mar',
                       year: '2021'
                     },
@@ -154,7 +154,7 @@ const ListGrants = (props) => (
                     heading:
                       'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     frist: {
-                      day: '02',
+                      day: '04',
                       month: 'mar',
                       year: '2021'
                     },
@@ -218,7 +218,7 @@ const ListGrants = (props) => (
                     heading:
                       'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     frist: {
-                      day: '02',
+                      day: '04',
                       month: 'mar',
                       year: '2020'
                     },
@@ -241,7 +241,7 @@ const ListGrants = (props) => (
                     heading:
                       'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
                     frist: {
-                      day: '02',
+                      day: '03',
                       month: 'mar',
                       year: '2020'
                     },

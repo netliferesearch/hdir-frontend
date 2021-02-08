@@ -74,10 +74,28 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
     return false
   }
 
-  // Check if frist object is present. When it doesn't exists, this means it is "løpende" and should be placed at bottom.
-  const orderByPropertyExists = (arr) => {
-    return arr.sort(function (left, right) {
-      return left.fields.hasOwnProperty("frist") ? -1 : right.fields.hasOwnProperty("frist") ? 1 : 0
+  const orderByComingDate = (arr) => {
+    return arr.sort(function (a, b) {
+      // Check if frist object is present. When it doesn't exists, this means it is "løpende" and should be placed at bottom.
+      if (!a.fields.hasOwnProperty("frist")) { return 0; }
+      if (!b.fields.hasOwnProperty("frist")) { return 0; }
+
+      // Order the rest by date
+      const { day, month, year } = b.fields.frist;
+      const { day: aDay, month: aMonth, year: aYear } = a.fields.frist;
+      const aDate = new Date(`${aDay}/${aMonth}/${aYear}`);
+      const bDate = new Date(`${day}/${month}/${year}`);
+      return Number(aDate) - Number(bDate);
+    });
+  }
+
+  const orderByExpiredDate = (arr) => {
+    return arr.sort(function (a, b) {
+      const { day, month, year } = b.fields.frist;
+      const { day: aDay, month: aMonth, year: aYear } = a.fields.frist;
+      const aDate = new Date(`${aDay}/${aMonth}/${aYear}`);
+      const bDate = new Date(`${day}/${month}/${year}`);
+      return Number(bDate) - Number(aDate);
     });
   }
 
@@ -86,17 +104,17 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
       setSearchResults(dummyData)
     }
     setActiveResults(
-      searchResults ? orderByPropertyExists(searchResults.filter(item => !isExpired(item.fields.frist))) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
     );
     // Split arrays in two, so we can have "See all" toggle buttons
     setActiveResultsLimited(
-      searchResults ? orderByPropertyExists(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
     );
     setActiveResultsRest(
-      searchResults ? orderByPropertyExists(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
     );
     setExpiredResults(
-      searchResults ? searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -104,10 +122,10 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
             ...item.fields
           },
         }
-      }) : []
+      })) : []
       );
     setExpiredResultsLimited(
-      searchResults ? searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -115,10 +133,10 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
             ...item.fields
           },
         }
-      }).splice(0, 7) : []
+      })).splice(0, 7) : []
     );
     setExpiredResultsRest(
-      searchResults ? searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -126,7 +144,7 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
             ...item.fields
           },
         }
-      }).splice(7) : []
+      })).splice(7) : []
     );
   }, [searchResults]);
 
