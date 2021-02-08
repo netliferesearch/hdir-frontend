@@ -317,7 +317,8 @@ ListItemType.propTypes = {
       'grantFunding',
       'person',
       'generic',
-      'grant'
+      'grant',
+      'tilskudd',
     ]),
     fields: PropTypes.object
   }).isRequired

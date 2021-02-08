@@ -51,7 +51,7 @@ const ListGrants = (props) => (
           <div className="l-mt-4 l-mb-2">
             <GrantsSearch
               label="Vet du hvilket tilskudd du vil søke på?"
-                // endpoint="https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/tilskuddSearch"
+              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/tilskuddSearch"
               flatTree={dummyFlatTree}
               dummyData={[
                 
