@@ -61,8 +61,24 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
   );
 
   const isExpired = (date) => {
+    // If no date, it is "løpende"
+    if (!date) { return false; }
+
+    const { day, month, year } = date;
     const today = new Date();
-    
+
+    // Return true if older than today
+    if (today > new Date(`${day}/${month}/${year}`)) {
+      return true
+    }
+    return false
+  }
+
+  // Check if frist object is present. When it doesn't exists, this means it is "løpende" and should be placed at bottom.
+  const orderByPropertyExists = (arr) => {
+    return arr.sort(function (left, right) {
+      return left.fields.hasOwnProperty("frist") ? -1 : right.fields.hasOwnProperty("frist") ? 1 : 0
+    });
   }
 
   useEffect(() => {
@@ -70,33 +86,49 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
       setSearchResults(dummyData)
     }
     setActiveResults(
-      searchResults ? searchResults.filter(item => !item.fields.expired) : []
+      searchResults ? orderByPropertyExists(searchResults.filter(item => !isExpired(item.fields.frist))) : []
     );
     // Split arrays in two, so we can have "See all" toggle buttons
     setActiveResultsLimited(
-      searchResults ? searchResults.filter(item => !item.fields.expired).splice(0, 7) : []
+      searchResults ? orderByPropertyExists(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
     );
     setActiveResultsRest(
-      searchResults ? searchResults.filter(item => !item.fields.expired).splice(7) : []
+      searchResults ? orderByPropertyExists(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
     );
     setExpiredResults(
-      searchResults ? searchResults.filter(item => item.fields.expired) : []
-    );
+      searchResults ? searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      }) : []
+      );
     setExpiredResultsLimited(
-      searchResults ? searchResults.filter(item => item.fields.expired).splice(0, 7) : []
+      searchResults ? searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      }).splice(0, 7) : []
     );
     setExpiredResultsRest(
-      searchResults ? searchResults.filter(item => item.fields.expired).splice(7) : []
+      searchResults ? searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      }).splice(7) : []
     );
-    
-    console.log('dummyData 1', dummyData)
-    console.log('activeResults', activeResults)
-    console.log('resultsActiveModified', activeResultsLimited)
-    console.log('expiredResults', expiredResults)
-
   }, [searchResults]);
-
-  console.log('dummyData 2', dummyData)
 
   return (
     <>
