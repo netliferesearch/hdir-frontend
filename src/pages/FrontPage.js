@@ -7,6 +7,7 @@ const pages = [
   { link: '/anbefaling', desc: 'Anbefaling' },
   { link: '/anbefaling-antibiotika', desc: 'Anbefaling antibiotika' },
   { link: '/ninja-state', desc: 'Ninja State' },
+  { link: '/ninja-state-tilskudd', desc: 'Ninja State tilskudd' },
   { link: '/produkt', desc: 'Produktforside' },
   { link: '/produkt-malgruppevelger', desc: 'Produktforside med valgt målgruppe' },
   { link: '/kapittel', desc: 'Kapittel' },
