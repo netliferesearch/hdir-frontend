@@ -9,7 +9,7 @@ import List from './List'
 import Loading from './Loading'
 import Button from './Button'
 
-const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }) => {
+const GrantsSearch = ({ label, flatTree, endpoint, initial }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [toggleMore, setToggleMore] = useState(false);
@@ -28,7 +28,7 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
 
   // const doSearch = (formData) =>
   const fetchResults = (formData) => 
-    fetch(`${liveSearchUrl}`, {
+    fetch(liveSearchUrl, {
       method: 'POST',
       body: formData
     })
@@ -100,8 +100,8 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
   }
 
   useEffect(() => {
-    if (dummyData) {
-      setSearchResults(dummyData)
+    if (initial && searchResults.length === 0) {
+      setSearchResults(initial)
     }
     setActiveResults(
       searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []

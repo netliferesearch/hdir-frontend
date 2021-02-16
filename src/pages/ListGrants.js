@@ -53,7 +53,7 @@ const ListGrants = (props) => (
               label="Vet du hvilket tilskudd du vil søke på?"
               endpoint="https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/tilskuddSearch"
               flatTree={dummyFlatTree}
-              dummyData={[
+              initial={[
                 
                 {
                   type: 'tilskudd',
