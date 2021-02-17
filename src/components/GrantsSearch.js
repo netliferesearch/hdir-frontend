@@ -76,6 +76,8 @@ const GrantsSearch = ({
 
     const { day, month, year } = date;
     const today = new Date();
+    console.log('today', today)
+    console.log('compared date', new Date(`${day}/${month}/${year}`))
 
     // Return true if older than today
     if (today > new Date(`${day}/${month}/${year}`)) {
@@ -191,7 +193,7 @@ const GrantsSearch = ({
         searchString.length > 0 && searchResults.length > 0 && (
           <div className="l-mb-4 results">
               {
-                searchString && searchResults.length > 0 ? (
+                searchString && searchResults.length > 0 && !loading ? (
                 <h2 className="b-product-search__title">
                   {searchResults.length} treff på «{searchString}»
                 </h2>
