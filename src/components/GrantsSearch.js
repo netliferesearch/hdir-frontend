@@ -9,7 +9,17 @@ import List from './List'
 import Loading from './Loading'
 import Button from './Button'
 
-const GrantsSearch = ({ label, flatTree, endpoint, initial }) => {
+const GrantsSearch = ({ 
+  id, 
+  label, 
+  flatTree,
+  endpoint, 
+  initial, 
+  contentId,
+  malgruppe,
+  categories,
+  collapsed
+  }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [toggleMore, setToggleMore] = useState(false);
@@ -150,7 +160,7 @@ const GrantsSearch = ({ label, flatTree, endpoint, initial }) => {
 
   return (
     <>
-      <div className="b-product-search">
+      <div id={id || 'grantsSearch'} className="b-product-search">
         <InputSearch
           id="tilskuddsok"
           label={label}
@@ -257,20 +267,20 @@ const GrantsSearch = ({ label, flatTree, endpoint, initial }) => {
         ) 
       }
       
-
-    
-
-     
     </>
   );
 }
 
 GrantsSearch.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string,
   flatTree: PropTypes.string,
   endpoint: PropTypes.string,
-  dummyData: PropTypes.array,
-  dummyDataExpired: PropTypes.array,
+  initial: PropTypes.array,
+  contentId: PropTypes.string,
+  malgruppe: PropTypes.string,
+  categories: PropTypes.array,
+  collapsed: PropTypes.bool
 };
 
 export default GrantsSearch;
