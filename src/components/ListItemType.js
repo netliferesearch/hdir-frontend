@@ -197,7 +197,7 @@ const ListItemType = props => {
         </div>
       )}
 
-      {type === 'grant' && (
+      {type === 'tilskudd' && (
         <div
           className={classNames({
             'b-list-item-type': true,
@@ -206,8 +206,8 @@ const ListItemType = props => {
           })}
         >
           <div className={`b-list-item-type__date-circle ${fields.expired && 'b-list-item-type__date-circle--expired'}`}>
-          <span className="b-list-item-type__date-big">{fields.day}</span>
-            {fields.month}
+            <span className="b-list-item-type__date-big">{fields.frist && fields.frist.day && fields.frist.day}</span>
+            {fields.frist && fields.frist.month ? fields.frist.month : 'Løpende'}
           </div>
           <div className="">
             <div className="b-list-item-type__text">
@@ -317,7 +317,8 @@ ListItemType.propTypes = {
       'grantFunding',
       'person',
       'generic',
-      'grant'
+      'grant',
+      'tilskudd',
     ]),
     fields: PropTypes.object
   }).isRequired

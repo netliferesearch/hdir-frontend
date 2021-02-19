@@ -9,23 +9,36 @@ import List from './List'
 import Loading from './Loading'
 import Button from './Button'
 
-const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }) => {
+const GrantsSearch = ({ 
+  id, 
+  label, 
+  flatTree,
+  endpoint, 
+  initial, 
+  contentId,
+  malgruppe,
+  categories,
+  collapsed
+  }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [toggleMore, setToggleMore] = useState(false);
+  const [toggleMore2, setToggleMore2] = useState(false);
+  const [activeResults, setActiveResults] = useState([]);
+  const [activeResultsLimited, setActiveResultsLimited] = useState([]);
+  const [activeResultsRest, setActiveResultsRest] = useState([]);
+  const [expiredResults, setExpiredResults] = useState([]);
+  const [expiredResultsLimited, setExpiredResultsLimited] = useState([]);
+  const [expiredResultsRest, setExpiredResultsRest] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
   const liveSearchUrl = endpoint
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
 
-  function toggle() {
-    setToggled(!toggled);
-  }
-
   // const doSearch = (formData) =>
   const fetchResults = (formData) => 
-    fetch(`${liveSearchUrl}`, {
+    fetch(liveSearchUrl, {
       method: 'POST',
       body: formData
     })
@@ -57,16 +70,99 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
     [doSearch],
   );
 
-  // Split arrays in two, so we can have "See all" toggle buttons
-  const results = searchResults && searchResults.splice(0, 7);
-  const resultsRest = searchResults.length > 7 ? searchResults.splice(7) : null;
-  const resultsActive = dummyData ? dummyData : searchResults && searchResults.filter(item => !item.fields.expired);
-  const resultsExpired = dummyDataExpired ? dummyDataExpired : searchResults && searchResults.filter(item => item.fields.expired);
-  console.log('results', results)
+  const isExpired = (date) => {
+    // If no date, it is "løpende"
+    if (!date) { return false; }
+
+    const { day, month, year } = date;
+    const today = new Date();
+    console.log('today', today)
+    console.log('compared date', new Date(`${day}/${month}/${year}`))
+
+    // Return true if older than today
+    if (today > new Date(`${day}/${month}/${year}`)) {
+      return true
+    }
+    return false
+  }
+
+  const orderByComingDate = (arr) => {
+    return arr.sort(function (a, b) {
+      // Check if frist object is present. When it doesn't exists, this means it is "løpende" and should be placed at bottom.
+      if (!a.fields.hasOwnProperty("frist")) { return 0; }
+      if (!b.fields.hasOwnProperty("frist")) { return 0; }
+
+      // Order the rest by date
+      const { day, month, year } = b.fields.frist;
+      const { day: aDay, month: aMonth, year: aYear } = a.fields.frist;
+      const aDate = new Date(`${aDay}/${aMonth}/${aYear}`);
+      const bDate = new Date(`${day}/${month}/${year}`);
+      return Number(aDate) - Number(bDate);
+    });
+  }
+
+  const orderByExpiredDate = (arr) => {
+    return arr.sort(function (a, b) {
+      const { day, month, year } = b.fields.frist;
+      const { day: aDay, month: aMonth, year: aYear } = a.fields.frist;
+      const aDate = new Date(`${aDay}/${aMonth}/${aYear}`);
+      const bDate = new Date(`${day}/${month}/${year}`);
+      return Number(bDate) - Number(aDate);
+    });
+  }
+
+  useEffect(() => {
+    if (initial && searchResults.length === 0) {
+      setSearchResults(initial)
+    }
+    setActiveResults(
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
+    );
+    // Split arrays in two, so we can have "See all" toggle buttons
+    setActiveResultsLimited(
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
+    );
+    setActiveResultsRest(
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
+    );
+    setExpiredResults(
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      })) : []
+      );
+    setExpiredResultsLimited(
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      })).splice(0, 7) : []
+    );
+    setExpiredResultsRest(
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      })).splice(7) : []
+    );
+  }, [searchResults]);
 
   return (
     <>
-      <div className="b-product-search">
+      <div id={id || 'grantsSearch'} className="b-product-search">
         <InputSearch
           id="tilskuddsok"
           label={label}
@@ -97,15 +193,38 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
         searchString.length > 0 && searchResults.length > 0 && (
           <div className="l-mb-4 results">
               {
-                searchString && searchResults.length > 0 ? (
+                searchString && searchResults.length > 0 && !loading ? (
                 <h2 className="b-product-search__title">
                   {searchResults.length} treff på «{searchString}»
                 </h2>
                 ) : null
               }
-            <List
-              list={dummyData || searchResults}
-            />
+            <Tabs>
+              <TabList>
+                <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span></Tab>
+                <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span></Tab>
+              </TabList>
+              <TabPanel>
+                <List
+                  list={toggleMore ? activeResults : activeResultsLimited}
+                />
+                {activeResultsRest.length > 0 && !toggleMore ? (
+                  <div className="l-mt-1">
+                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({activeResults.length})</Button>
+                  </div>
+                ) : null}
+              </TabPanel>
+              <TabPanel>
+                <List
+                  list={toggleMore2 ? expiredResults : expiredResultsLimited}
+                />
+                {expiredResultsRest.length > 0 && !toggleMore ? (
+                  <div className="l-mt-1">
+                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
+                  </div>
+                ) : null}
+              </TabPanel>
+            </Tabs>
           </div>
       )}
 
@@ -123,43 +242,47 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
         searchString.length === 0 && (
         <Tabs>
           <TabList>
-            <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{resultsActive.length}</span></Tab>
-            <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{resultsExpired.length}</span></Tab>
+            <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span></Tab>
+            <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span></Tab>
           </TabList>
           <TabPanel>
             <List
-                list={resultsActive}
+                list={toggleMore ? activeResults : activeResultsLimited}
               />
+              { activeResultsRest.length > 0 && !toggleMore ? (
+                <div className="l-mt-1">
+                  <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({activeResults.length})</Button>
+                </div>
+              ) : null }
           </TabPanel>
           <TabPanel>
             <List
-                list={resultsExpired}
+                list={toggleMore2 ? expiredResults : expiredResultsLimited}
               />
+              {expiredResultsRest.length > 0 && !toggleMore ? (
+              <div className="l-mt-1">
+                <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
+              </div>
+            ) : null}
           </TabPanel>
         </Tabs>
         ) 
       }
       
-
-      {
-        resultsRest ? (
-          <div className="l-mt-1">
-            <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({searchResults.length})</Button>
-          </div>
-        ) : null
-      }
-
-     
     </>
   );
 }
 
 GrantsSearch.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string,
   flatTree: PropTypes.string,
   endpoint: PropTypes.string,
-  dummyData: PropTypes.array,
-  dummyDataExpired: PropTypes.array,
+  initial: PropTypes.array,
+  contentId: PropTypes.string,
+  malgruppe: PropTypes.string,
+  categories: PropTypes.array,
+  collapsed: PropTypes.bool
 };
 
 export default GrantsSearch;
