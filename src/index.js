@@ -181,14 +181,14 @@ if (listSearchElement) {
 }
 if (grantsSearchElement) {
   const id = grantsSearchElement.getAttribute('data-content-id') || '';
-  const flatTree = grantsSearchElement.getAttribute('data-flatTree') || [];
+  const flatTree = grantsSearchElement.getAttribute('data-flattree') || [];
   const type = grantsSearchElement.getAttribute('data-type') || '';
   const contentId = grantsSearchElement.getAttribute('data-content-id') || '';
   const malgruppe = grantsSearchElement.getAttribute('data-malgruppe') || '';
   const categories = grantsSearchElement.getAttribute('data-categories') || [];
   const initial = grantsSearchElement.getAttribute('data-initial') || [];
-  const collapsed = listSearchElement.getAttribute('data-collapsed') || false;
-  const endpoint = productSearchElement.getAttribute('data-endpoint') || '';
+  const collapsed = grantsSearchElement.getAttribute('data-collapsed') || false;
+  const endpoint = grantsSearchElement.getAttribute('data-endpoint') || '';
 
   render(
     <GrantsSearch
