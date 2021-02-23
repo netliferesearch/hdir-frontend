@@ -183,6 +183,7 @@ if (grantsSearchElement) {
   const id = grantsSearchElement.getAttribute('data-content-id') || '';
   const flatTree = grantsSearchElement.getAttribute('data-flattree') || [];
   const type = grantsSearchElement.getAttribute('data-type') || '';
+  const label = grantsSearchElement.getAttribute('data-label') || '';
   const contentId = grantsSearchElement.getAttribute('data-content-id') || '';
   const malgruppe = grantsSearchElement.getAttribute('data-malgruppe') || '';
   const categories = grantsSearchElement.getAttribute('data-categories') || [];
@@ -193,7 +194,7 @@ if (grantsSearchElement) {
   render(
     <GrantsSearch
       id={id}
-      label="Vet du hvilket tilskudd du vil søke på?"
+      label={label}
       flatTree={flatTree}
       type={type}
       contentId={contentId}
