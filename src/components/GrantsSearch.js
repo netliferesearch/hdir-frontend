@@ -113,7 +113,7 @@ const GrantsSearch = ({
 
   useEffect(() => {
     if (initial && searchResults.length === 0) {
-      setSearchResults(initial)
+      setSearchResults(JSON.parse(initial.replace(/\\"/g, '"')))
     }
     setActiveResults(
       searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
