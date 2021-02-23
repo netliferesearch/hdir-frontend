@@ -76,8 +76,8 @@ const GrantsSearch = ({
 
     const { day, month, year } = date;
     const today = new Date();
-    console.log('today', today)
-    console.log('compared date', new Date(`${day}/${month}/${year}`))
+    // console.log('today', today)
+    // console.log('compared date', new Date(`${day}/${month}/${year}`))
 
     // Return true if older than today
     if (today > new Date(`${day}/${month}/${year}`)) {
@@ -163,13 +163,15 @@ const GrantsSearch = ({
   return (
     <>
       <div id={id || 'grantsSearch'} className="b-product-search">
-        <InputSearch
-          id="tilskuddsok"
-          label={label}
-          autoFocus={true}
-          showSuggestions={false}
-          fnChange={debouncedChange}
-        />
+        {!collapsed ? (
+          <InputSearch
+            id="tilskuddsok"
+            label={label}
+            autoFocus={true}
+            showSuggestions={false}
+            fnChange={debouncedChange}
+          />
+        ) : null }
       </div>
       
       {loading ? (
