@@ -6,6 +6,7 @@ import App from './App';
 import MainHeader from '../src/components/MainHeader';
 import InputSearch from '../src/components/InputSearch';
 import ProductSearch from '../src/components/ProductSearch';
+import GrantsSearch from '../src/components/GrantsSearch';
 import ListSearch from '../src/components/ListSearch';
 import SectionSidebar from '../src/components/SectionSidebar';
 import MultiSelector from './components/MultiSelector';
@@ -17,6 +18,7 @@ const rootElement = document.getElementById('root');
 const headerElement = document.getElementById('header');
 const searchElement = document.getElementById('search');
 const listSearchElement = document.getElementById('list-search');
+const grantsSearchElement = document.getElementById('grants-search');
 const productSearchElement = document.getElementById('product-search');
 const sectionSidebarElement = document.getElementById('sectionSidebar');
 const multiSelectElements = document.querySelectorAll('.js-multi-selector');
@@ -175,6 +177,34 @@ if (listSearchElement) {
       type={type}
     />,
     listSearchElement
+  );
+}
+if (grantsSearchElement) {
+  const id = grantsSearchElement.getAttribute('data-content-id') || '';
+  const flatTree = grantsSearchElement.getAttribute('data-flattree') || [];
+  const type = grantsSearchElement.getAttribute('data-type') || '';
+  const label = grantsSearchElement.getAttribute('data-label') || '';
+  const contentId = grantsSearchElement.getAttribute('data-content-id') || '';
+  const malgruppe = grantsSearchElement.getAttribute('data-malgruppe') || '';
+  const categories = grantsSearchElement.getAttribute('data-categories') || [];
+  const initial = grantsSearchElement.getAttribute('data-initial') || [];
+  const collapsed = grantsSearchElement.getAttribute('data-collapsed') || false;
+  const endpoint = grantsSearchElement.getAttribute('data-endpoint') || '';
+
+  render(
+    <GrantsSearch
+      id={id}
+      label={label}
+      flatTree={flatTree}
+      type={type}
+      contentId={contentId}
+      malgruppe={malgruppe}
+      categories={categories}
+      collapsed={collapsed}
+      initial={initial}
+      endpoint={endpoint}
+    />,
+    grantsSearchElement
   );
 }
 

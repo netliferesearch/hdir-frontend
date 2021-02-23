@@ -19,14 +19,8 @@ const NinjaStateRecommendation = () => (
               <span className="js-copy-icon">#</span>
               <span className="js-copy-icon-text">Sekundær peritonitt</span>
             </h2>
-              <Collapsible
-                heading="Sterk anbefaling"
-                subtle
-                size="small"
-                smallContent
-              >
-                <p>...Hva er en sterk anbefaling...</p>
-              </Collapsible>
+            <button className="b-collapsible__tag"><span>Sterk anbefaling</span></button>
+            <div className="b-collapsible__tag-content">Forklaring</div>
               <Collapsible
                 h="h3"
                 heading="Behandling"

@@ -28,13 +28,13 @@
     margin-right: -1rem;
     padding-right: 1rem;
     flex-shrink: 0;
+    position: relative;
     
     &:after {
       position: absolute;
       top: 0.4em;
       right: 0;
       @include pseudo-arrow($arrow-down);
-      margin-right: -1rem;
 
       @include mq($until: $tablet) {
         top: 0;
@@ -53,6 +53,15 @@
         position: relative;
       }
     }
+  }
+  &__current {
+    font-size: $font-xs;
+    font-weight: normal;
+    margin-left: $space-sm;
+    border: 0;
+    border-radius: 20px;
+    background-color: $yellow-light;
+    padding: $space-xs/2 $space-sm;
   }
   &--link, &--link:link {
     text-decoration: none;
@@ -97,9 +106,15 @@
     font-size: $font-xs;
     line-height: 1.2;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+
+    &--expired {
+      background: $red-light;
+    }
   }
   &__date-big {
     font-size: $font-l;

@@ -27,6 +27,7 @@ import AuthorizationFrontPage from './pages/AuthorizationFrontPage';
 import AuthorizationStepPage from './pages/AuthorizationStepPage';
 import AuthorizationStepPage2 from './pages/AuthorizationStepPage2';
 import ChapterPage from './pages/ChapterPage';
+import ChapterPageTag from './pages/ChapterPageTag';
 import ChapterPageWithSubchapters from './pages/ChapterPageWithSubchapters';
 import ChapterPageReport from './pages/ChapterPageReport';
 import ChapterPageWithLead from './pages/ChapterPageWithLead';
@@ -38,6 +39,7 @@ import FrontPageHelfo from './pages/FrontPageHelfo';
 import ListGrants from './pages/ListGrants';
 import GrantsSubPage from './pages/GrantsSubPage';
 import GrantsWizard from './pages/GrantsWizard';
+import GrantsSubPageExpired from './pages/GrantsSubPageExpired';
 import HearingPage from './pages/HearingPage';
 import JobPostingPage from './pages/JobPostingPage';
 import LisFrontPage from './pages/LisFrontPage';
@@ -152,14 +154,9 @@ class App extends Component {
                 component={ReportPageWithoutImage}
               />
               <Route path="/kapittel" component={ChapterPage} />
-              <Route
-                path="/kapittel-med-ingress"
-                component={ChapterPageWithLead}
-              />
-              <Route
-                path="/kapittel-med-underkapitler"
-                component={ChapterPageWithSubchapters}
-              />
+              <Route path="/kapittel-tag" component={ChapterPageTag} />
+              <Route path="/kapittel-med-ingress" component={ChapterPageWithLead} />
+              <Route path="/kapittel-med-underkapitler" component={ChapterPageWithSubchapters} />
               <Route path="/høringer" component={HearingPage} />
               <Route path="/høringer-forside" component={ParentHearingPage} />
               <Route path="/anbefaling" component={RecommendationPage} />
@@ -227,6 +224,10 @@ class App extends Component {
               <Route path="/konferanser-liste" component={ListConferences} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
               <Route path="/tilskudd-veiviser" component={GrantsWizard} />
+              <Route
+                path="/tilskudd-underside-utgått-søknadsfrist"
+                component={GrantsSubPageExpired}
+              />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route
                 path="/skjemabygger-enonic"

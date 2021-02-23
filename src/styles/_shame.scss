@@ -94,6 +94,11 @@ table {
 .hide {
   display: none;
 }
+.hide-mobile {
+  @include mq($until: tablet) {
+    display: none;
+  }
+}
 
 .l-mb-2-mobile {
   @include mq($until: $tablet) {
