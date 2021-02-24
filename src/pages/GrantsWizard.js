@@ -4,6 +4,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import CheckboxGroup from '../components/CheckboxGroup';
 import Collapsible from '../components/Collapsible';
 import Select from '../components/Select';
+import GrantsSearch from '../components/GrantsSearch';
 import SelectInline from '../components/Select';
 import List from '../components/List';
 
@@ -24,10 +25,10 @@ const GrantsWizard = () => (
         <ArticleIntro heading="Finn tilskudd" />
       </div>
       <article>
-        <section className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border ">
+        <section data-step="1" data-step-type="collapsible" data-key="malgruppe" data-input-type="select" data-type="string" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
-              id="aktør"
+              id="aktor"
               heading="Hvem søker du på vegne av?"
               collapsed
             >
@@ -54,7 +55,7 @@ const GrantsWizard = () => (
           </div>
         </section>
 
-        <section className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="2" data-step-type="collapsible" data-key="categories" data-input-type="checkboxes" data-type="array" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="tema"
@@ -119,19 +120,26 @@ const GrantsWizard = () => (
           </div>
         </section>
 
-        <section className="l-container l-mt-3 l-mb-3">
+        <section data-step="3" data-step-type="result" className="l-container l-mt-3 l-mb-3">
           <h2>Disse tilskuddene kan være relevante for deg</h2>
           <div className="l-mt-3">
-            <List
-              list={[
+            <GrantsSearch
+              label="Vet du hvilket tilskudd du vil søke på?"
+              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/tilskuddSearch"
+              collapsed
+              initial={[
+
                 {
-                  type: 'grant',
-                  url: '#6',
+                  type: 'tilskudd',
+                  url: '#1',
                   fields: {
                     heading:
-                      'Styrking og utvikling av helsestasjons- og skolehelsetjenesten',
-                    day: '16.',
-                    month: 'jan',
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    frist: {
+                      day: '02',
+                      month: 'mar',
+                      year: '2021'
+                    },
                     tags: [
                       {
                         label: 'Tema 1',
@@ -140,40 +148,189 @@ const GrantsWizard = () => (
                       {
                         label: 'Tema 2',
                         url: '#'
-                      }
+                      },
                     ]
                   }
                 },
                 {
-                  type: 'grant',
-                  url: '#6',
+                  type: 'tilskudd',
+                  url: '#1',
                   fields: {
-                    heading: 'Psykisk helse i skolen',
-                    day: '13.',
-                    month: 'mar',
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    frist: {
+                      day: '03',
+                      month: 'mar',
+                      year: '2021'
+                    },
                     tags: [
                       {
-                        label: 'Tema 3',
+                        label: 'Tema 1',
                         url: '#'
-                      }
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
                     ]
                   }
                 },
                 {
-                  type: 'grant',
-                  url: '#6',
+                  type: 'tilskudd',
+                  url: '#1',
                   fields: {
-                    heading: 'Seksuell helse',
-                    day: '16.',
-                    month: 'sep',
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    frist: {
+                      day: '02',
+                      month: 'jan',
+                      year: '2021'
+                    },
                     tags: [
                       {
-                        label: 'Tema 4',
+                        label: 'Tema 1',
                         url: '#'
-                      }
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
                     ]
                   }
-                }
+                },
+                {
+                  type: 'tilskudd',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    frist: {
+                      day: '02',
+                      month: 'apr',
+                      year: '2021'
+                    },
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
+                {
+                  type: 'tilskudd',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    frist: {
+                      day: '04',
+                      month: 'mar',
+                      year: '2021'
+                    },
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
+                {
+                  type: 'tilskudd',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
+                {
+                  type: 'tilskudd',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    frist: {
+                      day: '02',
+                      month: 'mar',
+                      year: '2021'
+                    },
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
+                {
+                  type: 'tilskudd',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    frist: {
+                      day: '04',
+                      month: 'mar',
+                      year: '2020'
+                    },
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
+                {
+                  type: 'tilskudd',
+                  url: '#1',
+                  fields: {
+                    heading:
+                      'Etablering og utvikling av kommunale frisklivslærings- og mestringstilbud',
+                    frist: {
+                      day: '03',
+                      month: 'mar',
+                      year: '2020'
+                    },
+                    tags: [
+                      {
+                        label: 'Tema 1',
+                        url: '#'
+                      },
+                      {
+                        label: 'Tema 2',
+                        url: '#'
+                      },
+                    ]
+                  }
+                },
               ]}
             />
           </div>

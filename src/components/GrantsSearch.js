@@ -32,10 +32,12 @@ const GrantsSearch = ({
   const [expiredResultsRest, setExpiredResultsRest] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
+  const [formMalgruppe, setFormMalgruppe] = useState('');
+  const [formCategories, setFormCategories] = useState('');
   const liveSearchUrl = endpoint
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
-
+  
   // const doSearch = (formData) =>
   const fetchResults = (formData) => 
     fetch(liveSearchUrl, {
@@ -60,6 +62,9 @@ const GrantsSearch = ({
         let formData = new FormData();
         formData.append('searchQuery', value);
         formData.append('flatTree', flatTree);
+        formData.append('malgruppe', formMalgruppe);
+        formData.append('categories', formCategories);
+        console.log('searching');
         doSearch(formData);
       }
       if (value.length === 0) {
@@ -67,8 +72,55 @@ const GrantsSearch = ({
         setSearchString('');
       }
     },
-    [doSearch],
+    [doSearch, formMalgruppe, formCategories],
   );
+
+  const steps = [
+    ...document.querySelectorAll("section[data-step]")
+  ];
+  steps.forEach(step => {
+    const totalSteps = steps.length;
+    const stepType = step.dataset.stepType;
+    const inputType = step.dataset.inputType;
+    const key = step.dataset.key;
+
+    if (inputType === 'select') {
+      const input = step.querySelector('select');
+      console.log('input', input);
+      console.log('key', key);
+
+      input.onchange = (e) => {
+        console.log(e);
+        // Get the values
+        if (key) {
+          setFormMalgruppe(e.target.value);
+          console.log('setting malgruppe', formMalgruppe)
+        }
+
+      }
+    }
+
+    if (inputType === 'checkboxes') {
+      const inputs = step.querySelectorAll('input[type="checkbox"]');
+      let values = [];
+      // let values = [];
+      inputs.forEach(input => {
+
+        input.onchange = () => {
+          if (input.checked) {
+            values.push(input.value);
+          } 
+          if (!input.checked) {
+            values = values.filter(value => value !== input.value);
+          }
+
+          if (key) {
+            setFormCategories(JSON.stringify(values));
+          }
+        }
+      });
+    }
+  });
 
   const isExpired = (date) => {
     // If no date, it is "løpende"
@@ -113,6 +165,11 @@ const GrantsSearch = ({
 
   useEffect(() => {
     if (initial && searchResults.length === 0) {
+      if (typeof initial === 'string' || initial instanceof String) {
+        const data = initial.toString().replace(/\\"/g, '"')
+        setSearchResults(JSON.parse(data))
+        return
+      }
       setSearchResults(initial)
     }
     setActiveResults(
@@ -162,7 +219,7 @@ const GrantsSearch = ({
 
   return (
     <>
-      <div id={id || 'grantsSearch'} className="b-product-search">
+      <div id={id || 'grants-search'} className="b-product-search">
         {!collapsed ? (
           <InputSearch
             id="tilskuddsok"
@@ -280,7 +337,7 @@ GrantsSearch.propTypes = {
   label: PropTypes.string,
   flatTree: PropTypes.string,
   endpoint: PropTypes.string,
-  initial: PropTypes.array,
+  initial: PropTypes.string,
   contentId: PropTypes.string,
   malgruppe: PropTypes.string,
   categories: PropTypes.array,

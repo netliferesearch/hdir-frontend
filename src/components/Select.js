@@ -38,7 +38,7 @@ const Select = ({
           JSX requires we write it this way.
       */}
       {placeholder && (
-        <option defaultValue="" disabled selected={placeholderSelected} className="b-select__option" >
+        <option defaultValue="" disabled defaultValue={placeholderSelected} className="b-select__option" >
           {placeholder}
         </option>
       )}
