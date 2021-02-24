@@ -33,7 +33,7 @@ const GrantsSearch = ({
   const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
   const [formMalgruppe, setFormMalgruppe] = useState('');
-  const [formCategories, setFormCategories] = useState('');
+  const [formCategories, setFormCategories] = useState([]);
   const liveSearchUrl = endpoint
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
@@ -52,7 +52,7 @@ const GrantsSearch = ({
         setLoading(false);
       });
 
-  const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
+  const doSearch = useMemo(() => debounce(fetchResults, 500, true), []);
   
   const debouncedChange = useCallback(
     (value) => {
@@ -63,8 +63,8 @@ const GrantsSearch = ({
         formData.append('searchQuery', value);
         formData.append('flatTree', flatTree);
         formData.append('malgruppe', formMalgruppe);
-        formData.append('categories', formCategories);
-        console.log('searching');
+        formData.append('categories', JSON.stringify(formCategories));
+        console.log('searching', formData);
         doSearch(formData);
       }
       if (value.length === 0) {
@@ -72,55 +72,74 @@ const GrantsSearch = ({
         setSearchString('');
       }
     },
-    [doSearch, formMalgruppe, formCategories],
+    [doSearch],
   );
 
-  const steps = [
-    ...document.querySelectorAll("section[data-step]")
-  ];
-  steps.forEach(step => {
-    const totalSteps = steps.length;
-    const stepType = step.dataset.stepType;
-    const inputType = step.dataset.inputType;
-    const key = step.dataset.key;
+  useEffect(() => {
+    // When used on the wizard page, trigger new search when changes are made on the steps
+    const steps = [
+      ...document.querySelectorAll("section[data-step]")
+    ];
+    steps.forEach(step => {
+      const inputType = step.dataset.inputType;
+      const key = step.dataset.key;
 
-    if (inputType === 'select') {
-      const input = step.querySelector('select');
-      console.log('input', input);
-      console.log('key', key);
+      if (inputType === 'select') {
+        const input = step.querySelector('select');
 
-      input.onchange = (e) => {
-        console.log(e);
-        // Get the values
-        if (key) {
-          setFormMalgruppe(e.target.value);
-          console.log('setting malgruppe', formMalgruppe)
-        }
-
-      }
-    }
-
-    if (inputType === 'checkboxes') {
-      const inputs = step.querySelectorAll('input[type="checkbox"]');
-      let values = [];
-      // let values = [];
-      inputs.forEach(input => {
-
-        input.onchange = () => {
-          if (input.checked) {
-            values.push(input.value);
-          } 
-          if (!input.checked) {
-            values = values.filter(value => value !== input.value);
-          }
-
+        input.addEventListener("change", function (e) {
+          // Get the values
           if (key) {
-            setFormCategories(JSON.stringify(values));
+            setFormMalgruppe(e.target.value);
+            console.log('setting malgruppe', formMalgruppe)
           }
-        }
-      });
-    }
-  });
+
+        });
+      }
+
+      if (inputType === 'checkboxes') {
+        const inputs = step.querySelectorAll('input[type="checkbox"]');
+        // let values = [];
+        inputs.forEach(input => {
+
+          input.addEventListener("click", function (e) {
+            if (e.target.checked) {
+              setFormCategories((cats) => {
+                return [
+                  ...cats.filter(value => value !== e.target.value),
+                  e.target.value,
+                ]
+              })
+            } 
+            if (!e.target.checked) {
+              setFormCategories((cats) => {
+                return [
+                  ...cats.filter(value => value !== e.target.value)
+                ]
+              })
+            }
+
+            // if (key) {
+            //   console.log(values);
+            //   setFormCategories(JSON.stringify(values));
+            // }
+          });
+        });
+        console.log('formCategories', formCategories)
+      }
+    });
+  }, [formMalgruppe, formCategories]);
+  
+  useEffect(() => {
+    setLoading(true);
+    let formData = new FormData();
+    formData.append('searchQuery', '');
+    formData.append('flatTree', flatTree);
+    formData.append('malgruppe', formMalgruppe);
+    formData.append('categories', formCategories);
+    console.log('searching', formData);
+    doSearch(formData);
+  }, [formMalgruppe, formCategories]);
 
   const isExpired = (date) => {
     // If no date, it is "løpende"
@@ -230,6 +249,8 @@ const GrantsSearch = ({
           />
         ) : null }
       </div>
+
+      
       
       {loading ? (
         <div>
