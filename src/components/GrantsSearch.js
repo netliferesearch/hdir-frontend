@@ -99,45 +99,36 @@ const GrantsSearch = ({
 
       if (inputType === 'checkboxes') {
         const inputs = step.querySelectorAll('input[type="checkbox"]');
-        // let values = [];
-        inputs.forEach(input => {
+        const submit = step.querySelector('button[data-submit]');
 
-          input.addEventListener("click", function (e) {
-            if (e.target.checked) {
+        submit.addEventListener("click", function (e) {
+          inputs.forEach(input => {
+            if (input.checked) {
               setFormCategories((cats) => {
                 return [
-                  ...cats.filter(value => value !== e.target.value),
-                  e.target.value,
+                  ...cats.filter(value => value !== input.value),
+                  input.value,
                 ]
               })
             } 
-            if (!e.target.checked) {
+            if (!input.checked && formCategories.find(cat => cat === input.value)) {
               setFormCategories((cats) => {
                 return [
-                  ...cats.filter(value => value !== e.target.value)
+                  ...cats.filter(value => value !== input.value)
                 ]
               })
             }
-
-            // if (key) {
-            //   console.log(values);
-            //   setFormCategories(JSON.stringify(values));
-            // }
           });
         });
-        console.log('formCategories', formCategories)
       }
     });
-  }, [formMalgruppe, formCategories]);
-  
-  useEffect(() => {
+    
     setLoading(true);
     let formData = new FormData();
     formData.append('searchQuery', '');
     formData.append('flatTree', flatTree);
     formData.append('malgruppe', formMalgruppe);
     formData.append('categories', formCategories);
-    console.log('searching', formData);
     doSearch(formData);
   }, [formMalgruppe, formCategories]);
 

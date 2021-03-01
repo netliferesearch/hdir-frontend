@@ -29,7 +29,7 @@ const GrantsWizard = () => (
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="aktor"
-              heading="Hvem søker du på vegne av?"
+              heading="1. Hvem søker du på vegne av?"
               collapsed
             >
               <Select
