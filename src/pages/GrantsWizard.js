@@ -5,7 +5,7 @@ import CheckboxGroup from '../components/CheckboxGroup';
 import Collapsible from '../components/Collapsible';
 import Select from '../components/Select';
 import GrantsSearch from '../components/GrantsSearch';
-import SelectInline from '../components/Select';
+import Button from '../components/Button';
 import List from '../components/List';
 
 const GrantsWizard = () => (
@@ -62,6 +62,7 @@ const GrantsWizard = () => (
               heading="2. Velg tema for aktiviteten du ønsker å få støtte/tilskudd til"
             >
               <div className="l-mt-1">
+                <div>
                 <CheckboxGroup
                   name="tema"
                   options={[
@@ -115,6 +116,10 @@ const GrantsWizard = () => (
                     }
                   ]}
                 />
+                </div>
+                <div className="l-mt-1">
+                  <button className="b-button" data-submit>Vis resultat</button>
+                </div>
               </div>
             </Collapsible>
           </div>
