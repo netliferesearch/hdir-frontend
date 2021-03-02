@@ -63,7 +63,7 @@ const GrantsSearch = ({
         doSearch(formData);
       }
       if (value.length === 0) {
-        setSearchResults('');
+        setSearchResults([]);
         setSearchString('');
       }
     },
