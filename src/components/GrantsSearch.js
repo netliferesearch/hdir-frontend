@@ -44,9 +44,10 @@ const GrantsSearch = ({
     })
       .then(res => res.json())
       .then(data => {
-        console.log('data', data)
+        console.log('data', data.length)
         setSearchResults(data);
         setToggleMore(false);
+        setToggleMore2(false);
         setLoading(false);
       });
 
@@ -76,8 +77,8 @@ const GrantsSearch = ({
 
     const { day, month, year } = date;
     const today = new Date();
-    console.log('today', today)
-    console.log('compared date', new Date(`${day}/${month}/${year}`))
+    // console.log('today', today)
+    // console.log('compared date', new Date(`${day}/${month}/${year}`))
 
     // Return true if older than today
     if (today > new Date(`${day}/${month}/${year}`)) {
@@ -112,8 +113,8 @@ const GrantsSearch = ({
   }
 
   useEffect(() => {
-    if (initial && searchResults.length === 0) {
-      setSearchResults(JSON.parse(initial.replace(/\\"/g, '"')))
+    if (initial && searchResults.length === 0 && searchString.length === 0) {
+      setSearchResults(initial)
     }
     setActiveResults(
       searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
