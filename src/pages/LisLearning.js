@@ -66,6 +66,8 @@ const LisLearning = () => (
                 dateTo="1.januar 2021"
                 id="test1"
                 tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
+                dateFrom="1.januar 2020"
+                dateTo="1.januar 2021"
                 size="medium"
                 code="BAK 001"
                 noBorder
@@ -92,6 +94,7 @@ const LisLearning = () => (
                   heading="Lyskebrokk hos nyfødte"
                   dateFrom="1.januar 2020"
                   tag={{ title: 'Læringsmål' }}
+                  dateFrom="1.januar 2020"
                   size="medium"
                   id="test2"
                   code="BAK 002"
