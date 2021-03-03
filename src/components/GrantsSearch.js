@@ -117,17 +117,17 @@ const GrantsSearch = ({
       setSearchResults(JSON.parse(initial.replace(/\\"/g, '"')))
     }
     setActiveResults(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist.date))) : []
     );
     // Split arrays in two, so we can have "See all" toggle buttons
     setActiveResultsLimited(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist.date))).splice(0, 7) : []
     );
     setActiveResultsRest(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist.date))).splice(7) : []
     );
     setExpiredResults(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist.date)).map(item => {
         return {
           ...item,
           fields: {
@@ -138,7 +138,7 @@ const GrantsSearch = ({
       })) : []
       );
     setExpiredResultsLimited(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist.date)).map(item => {
         return {
           ...item,
           fields: {
@@ -149,7 +149,7 @@ const GrantsSearch = ({
       })).splice(0, 7) : []
     );
     setExpiredResultsRest(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist.date)).map(item => {
         return {
           ...item,
           fields: {
