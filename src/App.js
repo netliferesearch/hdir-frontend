@@ -38,6 +38,8 @@ import FrontPageHdir from './pages/FrontPageHdir';
 import FrontPageHelfo from './pages/FrontPageHelfo';
 import ListGrants from './pages/ListGrants';
 import GrantsSubPage from './pages/GrantsSubPage';
+import GrantsWizard from './pages/GrantsWizard';
+import GrantsSubPageExpired from './pages/GrantsSubPageExpired';
 import HearingPage from './pages/HearingPage';
 import JobPostingPage from './pages/JobPostingPage';
 import LisFrontPage from './pages/LisFrontPage';
@@ -77,15 +79,14 @@ import ThemePage from './pages/ThemePage';
 import TransportPage from './pages/TransportPage';
 import TreatmentPageNew from './pages/TreatmentPageNew';
 
-
 class App extends Component {
   render() {
     return (
       <div className="App">
         <BrowserRouter>
           <ScrollToTop>
-            <GlobalScopeScripts/>
-            <Loading message="PDF-versjon opprettes. Dette kan ta litt tid."/>
+            <GlobalScopeScripts />
+            <Loading message="PDF-versjon opprettes. Dette kan ta litt tid." />
             <MainHeader
               name={this.props.name}
               links={this.props.links}
@@ -111,17 +112,32 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={FrontPage} />
               <Route path="/produkt" component={ProductPage} />
-              <Route path="/produkt-malgruppevelger" component={ProductPageMalgruppe} />
+              <Route
+                path="/produkt-malgruppevelger"
+                component={ProductPageMalgruppe}
+              />
               <Route path="/søkeresultat" component={SearchResultPage} />
               <Route path="/artikkel" component={ArticlePage} />
               <Route path="/nyhet" component={ArticlePageNews} />
               <Route path="/nyhet-2" component={ArticlePageNewsAlt} />
               <Route path="/nyhet-3" component={ArticlePageNewsAlt3} />
               <Route path="/nyhet-4" component={ArticlePageNewsAlt4} />
-              <Route path="/artikkel-sekundar-branding" component={ArticlePageSecondaryBranding} />
-              <Route path="/artikkel-sekundar-branding-2" component={ArticlePageSecondaryBrandingTwo} />
-              <Route path="/artikkel-sekundar-branding-3" component={ArticlePageSecondaryBrandingThree} />
-              <Route path="/artikkel-sekundar-branding-4" component={ArticlePageSecondaryBrandingFour} />
+              <Route
+                path="/artikkel-sekundar-branding"
+                component={ArticlePageSecondaryBranding}
+              />
+              <Route
+                path="/artikkel-sekundar-branding-2"
+                component={ArticlePageSecondaryBrandingTwo}
+              />
+              <Route
+                path="/artikkel-sekundar-branding-3"
+                component={ArticlePageSecondaryBrandingThree}
+              />
+              <Route
+                path="/artikkel-sekundar-branding-4"
+                component={ArticlePageSecondaryBrandingFour}
+              />
               <Route path="/artikkel-ingen-h2" component={ArticlePageNoH2} />
               <Route
                 path="/artikkel-med-skjema"
@@ -145,12 +161,18 @@ class App extends Component {
               <Route path="/høringer" component={HearingPage} />
               <Route path="/høringer-forside" component={ParentHearingPage} />
               <Route path="/anbefaling" component={RecommendationPage} />
-              <Route path="/anbefaling-antibiotika" component={RecommendationPageAntibiotics} />
+              <Route
+                path="/anbefaling-antibiotika"
+                component={RecommendationPageAntibiotics}
+              />
               <Route path="/ninja-state" component={NinjaStateRecommendation} />
               <Route path="/ninja-state-tilskudd" component={NinjaStateGrant} />
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-edit" component={MemoPageEdit} />
-              <Route path="/rundskriv-definisjon" component={MemoPageDefinition} />
+              <Route
+                path="/rundskriv-definisjon"
+                component={MemoPageDefinition}
+              />
               <Route path="/rundskriv-forside" component={ParentMemoPage} />
               <Route path="/rapport" component={ReportPage} />
               <Route path="/horinger" component={ListHearings} />
@@ -166,7 +188,10 @@ class App extends Component {
                 component={LisLearningActivities}
               />
               <Route path="/rapport-kapittel" component={ChapterPageReport} />
-              <Route path="/tidligere-versjoner" component={EarlierVersionsPage} />
+              <Route
+                path="/tidligere-versjoner"
+                component={EarlierVersionsPage}
+              />
               <Route path="/yrke-velger" component={ProfessionSelector} />
               <Route
                 path="/autorisasjon-forside"
@@ -200,6 +225,11 @@ class App extends Component {
               <Route path="/brosjyrer-liste" component={ListBrochures} />
               <Route path="/konferanser-liste" component={ListConferences} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
+              <Route
+                path="/tilskudd-underside-utgått-søknadsfrist"
+                component={GrantsSubPageExpired}
+              />
+              <Route path="/tilskudd-veiviser" component={GrantsWizard} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route
                 path="/skjemabygger-enonic"

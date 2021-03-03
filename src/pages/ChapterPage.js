@@ -114,21 +114,25 @@ const ChapterPage = () => {
               <ChapterHeading heading="4.2 Hørsel, syn og språk" url="#a" />
               <Collapsible
                 background
+                tag={{ title: 'Sterk anbefaling', description: 'Forklaring' }}
                 heading="Helsestasjonsprogrammet: Alle barn 0–5 år bør få tilbud om regelmessige konsultasjoner på helsestasjonen"
                 date="Sist faglig oppdatert: 11. juni 2020"
               />
               <Collapsible
                 background
+                tag={{ title: 'Sterk anbefaling', description: 'Forklaring' }}
                 heading="Lege: Helsestasjonen skal tilby barn helseundersøkelser med lege"
                 date="Sist faglig oppdatert: 11. juni 2020"
               />
               <Collapsible
                 background
+                tag={{ title: 'Sterk anbefaling', description: 'Forklaring' }}
                 heading="Hjemmebesøk: Hjemmebesøk av helsesykepleier bør være den første konsultasjonen i helsestasjonsprogrammet"
                 date="Sist faglig oppdatert: 11. juni 2020"
               />
               <Collapsible
                 background
+                tag={{ title: 'Sterk anbefaling', description: 'Forklaring' }}
                 heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
                 date="Sist faglig oppdatert: 11. juni 2020"
               />
