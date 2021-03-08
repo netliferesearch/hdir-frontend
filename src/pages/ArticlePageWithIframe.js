@@ -54,7 +54,7 @@ const ArticlePageWithIframe = () => (
             <div className="videoWrapper__close">
               <Button secondary data-id="iframe-close" data-target="iframe" aria-controls="iframe" aria-label="Lukk fullskjerm">Lukk</Button>
             </div>
-            <iframe title="Title here" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOWU4ZjE4MjQtOWNmZC00ODllLWI3YzktZWNiYTUxMDViYTU2IiwidCI6IjZiYTFiZDVjLTc1MGYtNGFkNi1hYmEzLTBmOTU1ODViYzIxZiIsImMiOjh9" frameBorder="0" allowFullScreen=""></iframe>
+            <iframe title="Title here" width="100%" height="600" src="https://statistikk.helsedirektoratet.no/bi/Dashboard/71613538-62de-4ab2-8409-8638fc6c25db?e=false&vo=viewonly" allowFullScreen=""></iframe>
           </div>
         </div>
         <div className="row l-mt-4">
