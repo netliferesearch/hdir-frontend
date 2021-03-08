@@ -18,10 +18,13 @@
 }
 
 .videoWrapper__close {
-	position: fixed;
-	width: 100px;
+	background: $blue-lightest;
+	border-bottom: 1px solid $blue;
+	position: absolute;
+	width: 100%;
 	margin: auto;
-	top: 7px;
+	padding: $space-xs;
+	top: 0;
 	left: 0;
 	right: 0;
 	text-align: center;
@@ -41,5 +44,6 @@
 	}
 	iframe {
 		height: 100vh !important;
+		margin-top: 60px;
 	}
 }
