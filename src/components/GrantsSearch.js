@@ -49,7 +49,6 @@ const GrantsSearch = ({
         console.log('data', data)
         setSearchResults(data);
         setToggleMore(false);
-        setToggleMore2(false);
         setLoading(false);
       });
 
@@ -187,17 +186,17 @@ const GrantsSearch = ({
     }
 
     setActiveResults(
-      searchResults && searchString.length > 0 ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
     );
     // Split arrays in two, so we can have "See all" toggle buttons
     setActiveResultsLimited(
-      searchResults && searchString.length > 0 ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
     );
     setActiveResultsRest(
-      searchResults && searchString.length > 0 ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
     );
     setExpiredResults(
-      searchResults && searchString.length > 0 ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -208,7 +207,7 @@ const GrantsSearch = ({
       })) : []
       );
     setExpiredResultsLimited(
-      searchResults && searchString.length > 0 ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -219,7 +218,7 @@ const GrantsSearch = ({
       })).splice(0, 7) : []
     );
     setExpiredResultsRest(
-      searchResults && searchString.length > 0 ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -293,9 +292,9 @@ const GrantsSearch = ({
                 <List
                   list={toggleMore2 ? expiredResults : expiredResultsLimited}
                 />
-                {expiredResultsRest.length > 0 && !toggleMore2 ? (
+                {expiredResultsRest.length > 0 && !toggleMore ? (
                   <div className="l-mt-1">
-                    <Button onClick={() => setToggleMore2(!toggleMore2)} secondary>Vis alle ({expiredResults.length})</Button>
+                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
                   </div>
                 ) : null}
               </TabPanel>
@@ -334,9 +333,9 @@ const GrantsSearch = ({
             <List
                 list={toggleMore2 ? expiredResults : expiredResultsLimited}
               />
-              {expiredResultsRest.length > 0 && !toggleMore2 ? (
+              {expiredResultsRest.length > 0 && !toggleMore ? (
               <div className="l-mt-1">
-                <Button onClick={() => setToggleMore2(!toggleMore2)} secondary>Vis alle ({expiredResults.length})</Button>
+                <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
               </div>
             ) : null}
           </TabPanel>
