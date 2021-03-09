@@ -61,7 +61,7 @@ const GrantsSearch = ({
         setLoading(true);
         let formData = new FormData();
         formData.append('searchQuery', value);
-        formData.append('flatTree', flatTree);
+        formData.append('id', id);
         formData.append('malgruppe', formMalgruppe);
         formData.append('categories', JSON.stringify(formCategories));
         console.log('searching', formData);
@@ -123,16 +123,18 @@ const GrantsSearch = ({
       }
     });
     
-    setLoading(true);
-    let formData = new FormData();
-    formData.append('searchQuery', '');
-    formData.append('flatTree', flatTree);
-    formData.append('malgruppe', formMalgruppe);
-    formData.append('categories', formCategories);
-    doSearch(formData);
+    if (!initial) {
+      setLoading(true);
+      let formData = new FormData();
+      formData.append('searchQuery', '');
+      formData.append('flatTree', flatTree);
+      formData.append('malgruppe', formMalgruppe);
+      formData.append('categories', formCategories);
+      doSearch(formData);
+    }
   }, [formMalgruppe, formCategories]);
 
-  const isExpired = (date) => {
+  const isExpired = (fields) => {
     // If no date, it is "løpende"
     if (!date) { return false; }
 
@@ -174,7 +176,7 @@ const GrantsSearch = ({
   }
 
   useEffect(() => {
-    if (initial && searchResults.length === 0) {
+    if (initial && searchString.length === 0 && searchResults.length === 0) {
       if (typeof initial === 'string' || initial instanceof String) {
         const data = initial.toString().replace(/\\"/g, '"')
         setSearchResults(JSON.parse(data))
@@ -182,6 +184,7 @@ const GrantsSearch = ({
       }
       setSearchResults(initial)
     }
+
     setActiveResults(
       searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
     );
