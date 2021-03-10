@@ -49,6 +49,7 @@ const GrantsSearch = ({
         console.log('data', data)
         setSearchResults(data);
         setToggleMore(false);
+        setToggleMore2(false);
         setLoading(false);
       });
 
@@ -333,9 +334,9 @@ const GrantsSearch = ({
             <List
                 list={toggleMore2 ? expiredResults : expiredResultsLimited}
               />
-              {expiredResultsRest.length > 0 && !toggleMore ? (
+              {expiredResultsRest.length > 0 && !toggleMore2 ? (
               <div className="l-mt-1">
-                <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
+                <Button onClick={() => setToggleMore2(!toggleMore2)} secondary>Vis alle ({expiredResults.length})</Button>
               </div>
             ) : null}
           </TabPanel>
