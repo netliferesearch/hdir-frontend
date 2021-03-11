@@ -68,11 +68,11 @@ const GrantsSearch = ({
         doSearch(formData);
       }
       if (value.length === 0) {
-        setSearchResults('');
+        setSearchResults([]);
         setSearchString('');
       }
     },
-    [doSearch],
+    [doSearch, searchResults],
   );
 
   useEffect(() => {
@@ -176,15 +176,18 @@ const GrantsSearch = ({
   }
 
   useEffect(() => {
-    if (initial && searchString.length === 0 && searchResults.length === 0) {
+    if (initial && searchString.length === 0) {
       if (typeof initial === 'string' || initial instanceof String) {
         const data = initial.toString().replace(/\\"/g, '"')
         setSearchResults(JSON.parse(data))
+        console.log('results', searchResults, data)
         return
       }
       setSearchResults(initial)
     }
+  },[searchString]);
 
+  useEffect(() => {
     setActiveResults(
       searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
     );
