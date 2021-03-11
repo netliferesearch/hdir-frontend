@@ -181,7 +181,6 @@ const GrantsSearch = ({
       if (typeof initial === 'string' || initial instanceof String) {
         const data = initial.toString().replace(/\\"/g, '"')
         setSearchResults(JSON.parse(data))
-        console.log('results', searchResults, data)
         return
       }
       setSearchResults(initial)
