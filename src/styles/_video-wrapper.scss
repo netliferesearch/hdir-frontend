@@ -12,6 +12,9 @@
 	border: 0;
 	height: 100%;
 	border: 0;
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // IE 11
+		max-width: 88vw;
+	}
 }
 .t-body-text .videoWrapper iframe {
 	height: auto;
@@ -20,7 +23,6 @@
 .videoWrapper__close {
 	background: $primary-color-lightest;
 	border-bottom: 1px solid $primary-color;
-	position: absolute;
 	width: 100%;
 	margin: auto;
 	padding: $space-xs;
@@ -30,6 +32,7 @@
 	text-align: center;
 	z-index: 999;
 	display: none;
+	position: absolute;
 }
 
 .videoWrapper__fullscreen {
