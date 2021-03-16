@@ -230,40 +230,6 @@ const ListItemType = props => {
           </div>
         </div>
       )}
-      {type === 'archive' && (
-        <div
-          className={classNames({
-            'b-list-item-type': true,
-          })}
-        >
-          <div className="b-list-item">
-            <div className="b-list-item-type__text">
-              {fields.download && (
-                <a href="#pdf" className="b-list-item-type__download b-list-item-type--float b-list-item-type--link" aria-label="Last ned PDF">PDF</a>
-              )}
-              {fields.heading && 
-                <h3>{fields.heading} { fields.current && (<span className="b-list-item-type__current">Gjeldende versjon</span>)}</h3>
-              }
-              <div className="b-list-item-type__date">
-                {fields.publishDate && (
-                    fields.publishDate
-                )}
-              </div>
-            </div>
-            {fields.lead && (
-              <div className="b-list-item-type__subheading">
-                <Collapsible
-                  heading="Endringer i denne versjonen"
-                  size="small"
-                >
-                    <p className="b-list-item-type__lead" dangerouslySetInnerHTML={{__html: fields.lead}} />
-                </Collapsible>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
       {type === 'person' && (
         <div className="b-list-item-type b-list-item-type--no-arrow">
           {fields.name && <strong>{fields.name}</strong>}
