@@ -184,6 +184,20 @@
     }
   }
 
+  .b-timeline__list {
+    display: block;
+  }
+  .b-timeline__item {
+    margin-top: 10px;
+    text-align: left;
+  }
+  .b-timeline__item:before, .b-timeline__item:after {
+    display: none;
+  }
+  .b-timeline__item:last-child {
+    text-align: left;
+  }
+
 }
 
 

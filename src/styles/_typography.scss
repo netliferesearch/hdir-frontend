@@ -140,9 +140,16 @@ small {
       margin-top: 0;
     }
   }
+
+  // Use max width on any paragraphs. Even less so inside any collapsibles.
   p {
     margin: 1em 0;
+    max-width: 860px;
   }
+  .b-collapsible {
+    max-width: 840px;
+  }
+
   // Removes the top margin from the first heading
   > :first-child {
     margin-top: 0;

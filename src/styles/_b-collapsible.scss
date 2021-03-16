@@ -36,6 +36,7 @@
   &--medium {
     border-width: 1px;
     .b-collapsible__content {
+      padding-top: $space-sm;
       padding-left: 0 !important;
     }
   }
@@ -466,6 +467,25 @@
   &__meta-date {
     font-size: $font-xs;
     margin-left: $spaceSmall;
+    
+    &--from-to {
+      display: flex;
+      margin-top: $space-xs;
+      margin-left: 0;
+      color: $grey;
+    }
+    &-from {
+      margin-right: $space;
+    }
+  }
+  &__link {
+    display: inline-block;
+    float: right;
+    @include link-init($black, true, $link-color);
+
+    &:after {
+      @include pseudo-arrow($arrow-right);
+    }
   }
 }
 
