@@ -4,7 +4,8 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import CheckboxGroup from '../components/CheckboxGroup';
 import Collapsible from '../components/Collapsible';
 import Select from '../components/Select';
-import SelectInline from '../components/Select';
+import GrantsSearch from '../components/GrantsSearch';
+import Button from '../components/Button';
 import List from '../components/List';
 
 const GrantsWizard = () => (
@@ -24,11 +25,11 @@ const GrantsWizard = () => (
         <ArticleIntro heading="Finn tilskudd" />
       </div>
       <article>
-        <section className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border ">
+        <section data-step="1" data-step-type="collapsible" data-key="malgruppe" data-input-type="select" data-type="string" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
-              id="aktør"
-              heading="Hvem søker du på vegne av?"
+              id="aktor"
+              heading="1. Hvem søker du på vegne av?"
               collapsed
             >
               <Select
@@ -54,13 +55,14 @@ const GrantsWizard = () => (
           </div>
         </section>
 
-        <section className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="2" data-step-type="collapsible" data-key="categories" data-input-type="checkboxes" data-type="array" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="tema"
               heading="2. Velg tema for aktiviteten du ønsker å få støtte/tilskudd til"
             >
               <div className="l-mt-1">
+                <div>
                 <CheckboxGroup
                   name="tema"
                   options={[
@@ -114,67 +116,23 @@ const GrantsWizard = () => (
                     }
                   ]}
                 />
+                </div>
+                <div className="l-mt-1">
+                  <button className="b-button" data-submit>Vis resultat</button>
+                </div>
               </div>
             </Collapsible>
           </div>
         </section>
 
-        <section className="l-container l-mt-3 l-mb-3">
+        <section data-step="3" data-step-type="result" className="l-container l-mt-3 l-mb-3">
           <h2>Disse tilskuddene kan være relevante for deg</h2>
           <div className="l-mt-3">
-            <List
-              list={[
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading:
-                      'Styrking og utvikling av helsestasjons- og skolehelsetjenesten',
-                    day: '16.',
-                    month: 'jan',
-                    tags: [
-                      {
-                        label: 'Tema 1',
-                        url: '#'
-                      },
-                      {
-                        label: 'Tema 2',
-                        url: '#'
-                      }
-                    ]
-                  }
-                },
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading: 'Psykisk helse i skolen',
-                    day: '13.',
-                    month: 'mar',
-                    tags: [
-                      {
-                        label: 'Tema 3',
-                        url: '#'
-                      }
-                    ]
-                  }
-                },
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading: 'Seksuell helse',
-                    day: '16.',
-                    month: 'sep',
-                    tags: [
-                      {
-                        label: 'Tema 4',
-                        url: '#'
-                      }
-                    ]
-                  }
-                }
-              ]}
+            <GrantsSearch
+              label="Vet du hvilket tilskudd du vil søke på?"
+              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/tilskuddSearch"
+              collapsed
+              initial='[{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Tiltaksutvikling innen program for folkehelsearbeid i kommunene\",\"frist\":{\"day\":\"01\",\"month\":\"mar\",\"year\":\"2018\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Medisinsk avstandsoppfølging av kronisk syke\",\"frist\":{\"day\":\"01\",\"month\":\"mai\",\"year\":\"2018\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Pilotprosjekt på legevaktfeltet\",\"frist\":{\"day\":\"01\",\"month\":\"jun\",\"year\":\"2018\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Styrking av habilitering og rehabilitering i kommunene 2017-2019\",\"frist\":{\"day\":\"31\",\"month\":\"jan\",\"year\":\"2019\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Rekruttering av fastleger i kommuner som har rekrutteringsvansker\",\"frist\":{\"day\":\"15\",\"month\":\"mai\",\"year\":\"2019\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Pilot for strukturert tverrfaglig oppfølging - Oppfølgingsteam\",\"frist\":{\"day\":\"25\",\"month\":\"mai\",\"year\":\"2019\"},\"tags\":[]}}]'
             />
           </div>
         </section>

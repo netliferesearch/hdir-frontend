@@ -32,13 +32,13 @@ const Select = ({
     <label htmlFor="profession-selector" className="b-select__label">
       {label}
     </label>
-    <select id="profession-selector" className={selectElementClasses(simple)}>
+    <select id="profession-selector" defaultValue={placeholderSelected ? 'default' : ''} className={selectElementClasses(simple)}>
       {/* This value is suppose to be empty.
           It should also have the attribute selected. defaultValue should be value.
           JSX requires we write it this way.
       */}
       {placeholder && (
-        <option defaultValue="" disabled selected={placeholderSelected} className="b-select__option" >
+        <option defaultValue="" disabled value="default" className="b-select__option" >
           {placeholder}
         </option>
       )}

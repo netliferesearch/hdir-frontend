@@ -51,6 +51,7 @@ const GrantsSearch = ({
         setLoading(false);
       });
 
+  
   const debouncedChange = useCallback(
     (value) => {
       if (value.length > 2) {
