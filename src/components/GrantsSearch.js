@@ -1,8 +1,9 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import InputSearch from './InputSearch'
+import { debounce } from 'lodash';
 import ChapterHeading from './ChapterHeading'
 import List from './List'
 import Loading from './Loading'
@@ -51,6 +52,7 @@ const GrantsSearch = ({
         setLoading(false);
       });
 
+  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
   
   const debouncedChange = useCallback(
     (value) => {
@@ -63,7 +65,7 @@ const GrantsSearch = ({
         formData.append('malgruppe', formMalgruppe);
         formData.append('categories', JSON.stringify(formCategories));
         console.log('searching', formData);
-        fetchResults(formData);
+        doSearch(formData);
       }
       if (value.length === 0) {
         setSearchResults([]);
@@ -100,6 +102,7 @@ const GrantsSearch = ({
         const submit = step.querySelector('button[data-submit]');
 
         submit.addEventListener("click", function (e) {
+          console.log('submitting', [formMalgruppe, formCategories])
           inputs.forEach(input => {
             if (input.checked) {
               setFormCategories((cats) => {
@@ -117,6 +120,14 @@ const GrantsSearch = ({
               })
             }
           });
+
+          setLoading(true);
+          let formData = new FormData();
+          formData.append('searchQuery', '');
+          formData.append('flatTree', flatTree);
+          formData.append('malgruppe', formMalgruppe);
+          formData.append('categories', formCategories);
+          doSearch(formData);
         });
       }
     });
@@ -128,7 +139,7 @@ const GrantsSearch = ({
       formData.append('flatTree', flatTree);
       formData.append('malgruppe', formMalgruppe);
       formData.append('categories', formCategories);
-      fetchResults(formData);
+      doSearch(formData);
     }
   }, [formMalgruppe, formCategories]);
 
