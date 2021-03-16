@@ -122,14 +122,6 @@ const GrantsSearch = ({
               })
             }
           });
-
-          setLoading(true);
-          let formData = new FormData();
-          formData.append('searchQuery', '');
-          formData.append('flatTree', flatTree);
-          formData.append('malgruppe', formMalgruppe);
-          formData.append('categories', formCategories);
-          doSearch(formData);
         });
       }
     });
