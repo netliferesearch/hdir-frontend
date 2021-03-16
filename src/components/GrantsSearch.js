@@ -22,6 +22,7 @@ const GrantsSearch = ({
   }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
   const [toggleMore, setToggleMore] = useState(false);
   const [toggleMore2, setToggleMore2] = useState(false);
   const [activeResults, setActiveResults] = useState([]);
@@ -185,7 +186,8 @@ const GrantsSearch = ({
       }
       setSearchResults(initial)
     }
-  },[searchString]);
+
+  },[searchString, searchResults]);
 
   useEffect(() => {
     setActiveResults(
@@ -233,6 +235,21 @@ const GrantsSearch = ({
     );
   }, [searchResults]);
 
+  useEffect(() => {
+    if (expiredResults.length > 0 && activeResults.length === 0) {
+      setTabIndex(1);
+      console.log('1', activeResults.length);
+    }
+    if (expiredResults.length === 0 && activeResults.length > 0) {
+      setTabIndex(0);
+      console.log('2', activeResults.length, expiredResults.length);
+    }
+    if (expiredResults.length > 0 && activeResults.length > 0) {
+      setTabIndex(0);
+      console.log('3', activeResults.length);
+    }
+  }, [activeResults, expiredResults]);
+
   return (
     <>
       <div id={id || 'grants-search'} className="b-product-search">
@@ -276,10 +293,14 @@ const GrantsSearch = ({
                 </h2>
                 ) : null
               }
-            <Tabs>
+            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
               <TabList>
-                <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span></Tab>
-                <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span></Tab>
+                <Tab disabled={activeResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+                  Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span>
+                </Tab>
+                <Tab disabled={expiredResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+                  Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span>
+                </Tab>
               </TabList>
               <TabPanel>
                 <List
@@ -317,10 +338,14 @@ const GrantsSearch = ({
 
       { // Default
         searchString.length === 0 && (
-        <Tabs>
+        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
           <TabList>
-            <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span></Tab>
-            <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span></Tab>
+            <Tab disabled={activeResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+              Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span>
+            </Tab>
+            <Tab disabled={expiredResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+              Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span>
+            </Tab>
           </TabList>
           <TabPanel>
             <List
