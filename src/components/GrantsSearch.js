@@ -111,7 +111,7 @@ const GrantsSearch = ({
                   input.value,
                 ]
               })
-            } 
+            }
             if (!input.checked && formCategories.find(cat => cat === input.value)) {
               setFormCategories((cats) => {
                 return [
@@ -120,19 +120,15 @@ const GrantsSearch = ({
               })
             }
           });
-
-          setLoading(true);
-          let formData = new FormData();
-          formData.append('searchQuery', '');
-          formData.append('flatTree', flatTree);
-          formData.append('malgruppe', formMalgruppe);
-          formData.append('categories', formCategories);
-          doSearch(formData);
         });
       }
     });
-    
-    if (!initial) {
+
+  }, []);
+
+  useEffect(() => {
+    // Wizard mode, trigger search on category/malgruppe changes
+    if (!initial && formMalgruppe && formCategories.length > 0) {
       setLoading(true);
       let formData = new FormData();
       formData.append('searchQuery', '');
@@ -149,8 +145,6 @@ const GrantsSearch = ({
 
     const { date } = fields;
     const today = new Date();
-    // console.log('today', today)
-    // console.log('compared date', new Date(`${day}/${month}/${year}`))
 
     // Return true if older than today
     if (today > new Date(date)) {
