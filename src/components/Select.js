@@ -43,8 +43,8 @@ const Select = ({
         </option>
       )}
       {options.map(option => (
-        <option key={shortid.generate()} className="b-select__option">
-          {option}
+        <option key={shortid.generate()} className="b-select__option" value={option.id}>
+          {option.title}
         </option>
       ))}
     </select>
@@ -55,7 +55,7 @@ Select.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   placeholderSelected: PropTypes.bool,
-  options: PropTypes.arrayOf(PropTypes.string),
+  options: PropTypes.array,
   stacked: PropTypes.bool,
   custompos: PropTypes.bool,
   simple: PropTypes.bool,

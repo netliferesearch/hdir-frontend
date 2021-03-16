@@ -92,7 +92,7 @@ const GrantsSearch = ({
           // Get the values
           if (key) {
             setFormMalgruppe(e.target.value);
-            console.log('setting malgruppe', formMalgruppe)
+            console.log('setting malgruppe', e.target.value)
           }
 
         });
