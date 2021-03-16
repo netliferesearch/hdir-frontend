@@ -197,7 +197,7 @@ const ListItemType = props => {
         </div>
       )}
 
-      {type === 'tilskudd' && (
+      {(type === 'tilskudd' || type === 'grant') && (
         <div
           className={classNames({
             'b-list-item-type': true,
