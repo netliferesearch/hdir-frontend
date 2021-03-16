@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { debounce } from 'lodash';
 import InputSearch from './InputSearch'
-import { debounce } from 'lodash';
 import ChapterHeading from './ChapterHeading'
 import List from './List'
 import Loading from './Loading'
