@@ -143,11 +143,27 @@ const Collapsible = props => {
           <div className="b-collapsible__tag-content">{props.tag.description}</div>
         )}
 
+      { props.dateFrom || props.dateTo ?
+        <div className="b-collapsible__meta-date b-collapsible__meta-date--from-to">
+          {props.dateFrom && (
+            <div className="b-collapsible__meta-date-from">
+              Gyldig fra: {props.dateFrom}
+            </div>
+          )}
+          {props.dateTo && (
+            <div className="b-collapsible__meta-date-to">
+              Gyldig til: {props.dateTo}
+            </div>
+          )}
+        </div>
+        : null}
+
       {props.subheading && !props.subheadingContent && (
         <div className="b-collapsible__subheading l-mt-1">
           {props.subheading}
         </div>
       )}
+      
       {!props.subheading && props.subheadingContent && (
         <div className="l-mt-1"> {props.subheadingContent}</div>
       )}
@@ -188,6 +204,14 @@ const Collapsible = props => {
       >
 
         {props.children}
+
+        {props.archiveLink && (
+          <p>
+            <a href="#" className="b-collapsible__link">
+              Se tidligere utgaver
+            </a>
+          </p>
+        )}
       </div>
 
       {props.metaContent ? (

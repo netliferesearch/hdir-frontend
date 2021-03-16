@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { debounce } from 'lodash';
 import InputSearch from './InputSearch'
 import ChapterHeading from './ChapterHeading'
 import List from './List'
@@ -39,7 +38,6 @@ const GrantsSearch = ({
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
   
-  // const doSearch = (formData) =>
   const fetchResults = (formData) => 
     fetch(liveSearchUrl, {
       method: 'POST',
@@ -50,6 +48,7 @@ const GrantsSearch = ({
         console.log('data', data)
         setSearchResults(data);
         setToggleMore(false);
+        setToggleMore2(false);
         setLoading(false);
       });
 
@@ -66,14 +65,14 @@ const GrantsSearch = ({
         formData.append('malgruppe', formMalgruppe);
         formData.append('categories', JSON.stringify(formCategories));
         console.log('searching', formData);
-        doSearch(formData);
+        fetchResults(formData);
       }
       if (value.length === 0) {
         setSearchResults([]);
         setSearchString('');
       }
     },
-    [doSearch, searchResults],
+    [searchResults],
   );
 
   useEffect(() => {
@@ -136,7 +135,7 @@ const GrantsSearch = ({
       formData.append('flatTree', flatTree);
       formData.append('malgruppe', formMalgruppe);
       formData.append('categories', formCategories);
-      doSearch(formData);
+      fetchResults(formData);
     }
   }, [formMalgruppe, formCategories]);
 
@@ -183,13 +182,13 @@ const GrantsSearch = ({
     if (initial && searchString.length === 0) {
       if (typeof initial === 'string' || initial instanceof String) {
         const data = initial.toString().replace(/\\"/g, '"')
-        setSearchResults(JSON.parse(data))
-        console.log('results', searchResults, data)
+        setTimeout(() => {
+          setSearchResults(JSON.parse(data))
+        }, 400)
         return
       }
       setSearchResults(initial)
     }
-
   },[searchString, searchResults]);
 
   useEffect(() => {
@@ -364,9 +363,9 @@ const GrantsSearch = ({
             <List
                 list={toggleMore2 ? expiredResults : expiredResultsLimited}
               />
-              {expiredResultsRest.length > 0 && !toggleMore ? (
+              {expiredResultsRest.length > 0 && !toggleMore2 ? (
               <div className="l-mt-1">
-                <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
+                <Button onClick={() => setToggleMore2(!toggleMore2)} secondary>Vis alle ({expiredResults.length})</Button>
               </div>
             ) : null}
           </TabPanel>

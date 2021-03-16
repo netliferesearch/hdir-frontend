@@ -66,6 +66,7 @@ import ProfessionSelector from './pages/ProfessionSelector';
 import RecommendationPage from './pages/RecommendationPage';
 import RecommendationPageAntibiotics from './pages/RecommendationPageAntibiotics';
 import NinjaStateRecommendation from './pages/NinjaStateRecommendation';
+import NinjaStateGrant from './pages/NinjaStateGrant';
 import ReportListPage from './pages/ReportListPage';
 import ReportPage from './pages/ReportPage';
 import ReportPageWithoutImage from './pages/ReportPageWithoutImage';
@@ -165,6 +166,7 @@ class App extends Component {
                 component={RecommendationPageAntibiotics}
               />
               <Route path="/ninja-state" component={NinjaStateRecommendation} />
+              <Route path="/ninja-state-tilskudd" component={NinjaStateGrant} />
               <Route path="/rundskriv" component={MemoPage} />
               <Route path="/rundskriv-edit" component={MemoPageEdit} />
               <Route
@@ -228,6 +230,7 @@ class App extends Component {
                 path="/tilskudd-underside-utgått-søknadsfrist"
                 component={GrantsSubPageExpired}
               />
+              <Route path="/tilskudd-veiviser" component={GrantsWizard} />
               <Route path="/ledig-stilling" component={JobPostingPage} />
               <Route
                 path="/skjemabygger-enonic"
