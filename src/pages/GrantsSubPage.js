@@ -67,23 +67,23 @@ const GrantsSubPage = () => (
             label="Slik blir prosessen"
             items={[
               {
-                label: 'Webinar:',
-                date: '15. februar 2021'
-              },
-              {
-                label: 'Rapportering:',
-                date: '1. mars 2021'
-              },
-              {
-                label: 'Et punkt:',
-                date: '1. april 2021'
-              },
-              {
-                label: 'Forventet svar:',
+                label: 'Rapporteringfrist for 2020:',
                 date: '1. mai 2021'
               },
               {
-                label: 'Rapportering:',
+                label: 'Rapporteringfrist for 2020:',
+                date: '1. mai 2021'
+              },
+              {
+                label: 'Rapporteringfrist for 2020:',
+                date: '1. mai 2021'
+              },
+              {
+                label: 'Rapporteringfrist for 2020:',
+                date: '1. mai 2021'
+              },
+              {
+                label: 'Rapporteringfrist for 2021:',
                 date: '1. april 2022'
               },
             ]}

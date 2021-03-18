@@ -374,7 +374,6 @@ const GrantsSearch = ({
         </Tabs>
         ) 
       }
-      
     </>
   );
 }
