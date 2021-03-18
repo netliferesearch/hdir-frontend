@@ -66,6 +66,10 @@ const LisLearning = () => (
                 dateTo="1.januar 2021"
                 id="test1"
                 tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
+                dateFrom="1.januar 2020"
+                dateTo="1.januar 2021"
+                id="test1"
+                tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
                 size="medium"
                 code="BAK 001"
                 noBorder
@@ -90,6 +94,8 @@ const LisLearning = () => (
               <div className="l-mt-2">
                 <Collapsible
                   heading="Lyskebrokk hos nyfødte"
+                  dateFrom="1.januar 2020"
+                  tag={{ title: 'Læringsmål' }}
                   dateFrom="1.januar 2020"
                   tag={{ title: 'Læringsmål' }}
                   size="medium"

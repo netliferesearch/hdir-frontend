@@ -4,7 +4,8 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import CheckboxGroup from '../components/CheckboxGroup';
 import Collapsible from '../components/Collapsible';
 import Select from '../components/Select';
-import SelectInline from '../components/Select';
+import GrantsSearch from '../components/GrantsSearch';
+import Button from '../components/Button';
 import List from '../components/List';
 
 const GrantsWizard = () => (
@@ -24,11 +25,11 @@ const GrantsWizard = () => (
         <ArticleIntro heading="Finn tilskudd" />
       </div>
       <article>
-        <section className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border ">
+        <section data-step="1" data-step-type="collapsible" data-key="malgruppe" data-input-type="select" data-type="string" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
-              id="aktør"
-              heading="Hvem søker du på vegne av?"
+              id="aktor"
+              heading="1. Hvem søker du på vegne av?"
               collapsed
             >
               <Select
@@ -37,144 +38,133 @@ const GrantsWizard = () => (
                 stacked
                 zIndex
                 options={[
-                  'Kommune',
-                  'Fylkeskommune',
-                  'Interkommunalt selskap',
-                  'Statlig foretak (f.eks RHF, HF)',
-                  'Frivillig/ideell organisasjon',
-                  'Universitet eller høyskole',
-                  'Bedrift',
-                  'Søker utenfor Norge (f.eks internasjonal org, EU)',
-                  'Privatperson',
-                  'Privat tjenesteyter med avtale med kommunen',
-                  'Andre'
+                  {
+                    title: 'Kommune',
+                    id: 'id1'
+                  },
+                  {
+                    title: 'Fylkeskommune',
+                    id: 'id2'
+                  },
+                  {
+                    title: 'Interkommunalt selskap',
+                    id: 'id3'
+                  },
+                  {
+                    title: 'Statlig foretak (f.eks RHF, HF)',
+                    id: 'id4'
+                  },
+                  {
+                    title: 'Frivillig/ideell organisasjon',
+                    id: 'id5'
+                  },
+                  {
+                    title: 'Universitet eller høyskole',
+                    id: 'id6'
+                  },
+                  {
+                    title: 'Bedrift',
+                    id: 'id7'
+                  },
+                  {
+                    title: 'Søker utenfor Norge (f.eks internasjonal org, EU)',
+                    id: 'id8'
+                  },
+                  {
+                    title: 'Privatperson',
+                    id: 'id9'
+                  },
+                  {
+                    title: 'Privat tjenesteyter med avtale med kommunen',
+                    id: 'id10'
+                  },
+                  {
+                    title: 'Andre',
+                    id: 'id11'
+                  },
                 ]}
               />
             </Collapsible>
           </div>
         </section>
 
-        <section className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="2" data-step-type="collapsible" data-key="categories" data-input-type="checkboxes" data-type="array" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="tema"
               heading="2. Velg tema for aktiviteten du ønsker å få støtte/tilskudd til"
             >
               <div className="l-mt-1">
+                <div>
                 <CheckboxGroup
                   name="tema"
                   options={[
                     {
-                      value: 'Særskilte behov',
+                      value: 'id1',
                       label: 'Særskilte behov'
                     },
                     {
-                      value: 'Pilotprosjekt',
+                      value: 'id2',
                       label: 'Pilotprosjekt'
                     },
                     {
-                      value: 'Psykisk helse',
+                      value: 'id3',
                       label: 'Psykisk helse'
                     },
                     {
-                      value: 'Barn og unge',
+                      value: 'id4',
                       label: 'Barn og unge'
                     },
                     {
-                      value: 'Rus og avhengighet',
+                      value: 'id5',
                       label: 'Rus og avhengighet'
                     },
                     {
-                      value: 'Eldre',
+                      value: 'id6',
                       label: 'Eldre'
                     },
                     {
-                      value: 'Kompetanse og personell',
+                      value: 'id7',
                       label: 'Kompetanse og personell'
                     },
                     {
-                      value: 'Velferdsteknologi',
+                      value: 'id8',
                       label: 'Velferdsteknologi'
                     },
                     {
-                      value: 'Tannhelse',
+                      value: 'id9',
                       label: 'Tannhelse'
                     },
                     {
-                      value: 'Vold og overgrep',
+                      value: 'id10',
                       label: 'Vold og overgrep'
                     },
                     {
-                      value: 'Refusjon',
+                      value: 'id11',
                       label: 'Refusjon'
                     },
                     {
-                      value: 'Seksuell helse',
+                      value: 'id12',
                       label: 'Seksuell helse'
                     }
                   ]}
                 />
+                </div>
+                <div className="l-mt-1">
+                  <button className="b-button" data-submit>Vis resultat</button>
+                </div>
               </div>
             </Collapsible>
           </div>
         </section>
 
-        <section className="l-container l-mt-3 l-mb-3">
+        <section data-step="3" data-step-type="result" className="l-container l-mt-3 l-mb-3">
           <h2>Disse tilskuddene kan være relevante for deg</h2>
           <div className="l-mt-3">
-            <List
-              list={[
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading:
-                      'Styrking og utvikling av helsestasjons- og skolehelsetjenesten',
-                    day: '16.',
-                    month: 'jan',
-                    tags: [
-                      {
-                        label: 'Tema 1',
-                        url: '#'
-                      },
-                      {
-                        label: 'Tema 2',
-                        url: '#'
-                      }
-                    ]
-                  }
-                },
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading: 'Psykisk helse i skolen',
-                    day: '13.',
-                    month: 'mar',
-                    tags: [
-                      {
-                        label: 'Tema 3',
-                        url: '#'
-                      }
-                    ]
-                  }
-                },
-                {
-                  type: 'grant',
-                  url: '#6',
-                  fields: {
-                    heading: 'Seksuell helse',
-                    day: '16.',
-                    month: 'sep',
-                    tags: [
-                      {
-                        label: 'Tema 4',
-                        url: '#'
-                      }
-                    ]
-                  }
-                }
-              ]}
+            <GrantsSearch
+              label="Vet du hvilket tilskudd du vil søke på?"
+              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/tilskuddSearch"
+              collapsed
             />
           </div>
         </section>

@@ -1,31 +1,46 @@
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { debounce } from 'lodash';
 import InputSearch from './InputSearch'
+import { debounce } from 'lodash';
 import ChapterHeading from './ChapterHeading'
 import List from './List'
 import Loading from './Loading'
 import Button from './Button'
 
-const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }) => {
+const GrantsSearch = ({ 
+  id, 
+  label, 
+  flatTree,
+  endpoint, 
+  initial, 
+  contentId,
+  malgruppe,
+  categories,
+  collapsed
+  }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
   const [toggleMore, setToggleMore] = useState(false);
+  const [toggleMore2, setToggleMore2] = useState(false);
+  const [activeResults, setActiveResults] = useState([]);
+  const [activeResultsLimited, setActiveResultsLimited] = useState([]);
+  const [activeResultsRest, setActiveResultsRest] = useState([]);
+  const [expiredResults, setExpiredResults] = useState([]);
+  const [expiredResultsLimited, setExpiredResultsLimited] = useState([]);
+  const [expiredResultsRest, setExpiredResultsRest] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
+  const [formMalgruppe, setFormMalgruppe] = useState('');
+  const [formCategories, setFormCategories] = useState([]);
   const liveSearchUrl = endpoint
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
-
-  function toggle() {
-    setToggled(!toggled);
-  }
-
-  // const doSearch = (formData) =>
+  
   const fetchResults = (formData) => 
-    fetch(`${liveSearchUrl}`, {
+    fetch(liveSearchUrl, {
       method: 'POST',
       body: formData
     })
@@ -34,10 +49,11 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
         console.log('data', data)
         setSearchResults(data);
         setToggleMore(false);
+        setToggleMore2(false);
         setLoading(false);
       });
 
-  const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
+  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
   
   const debouncedChange = useCallback(
     (value) => {
@@ -46,35 +62,213 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
         setLoading(true);
         let formData = new FormData();
         formData.append('searchQuery', value);
-        formData.append('flatTree', flatTree);
+        formData.append('id', id);
+        formData.append('malgruppe', formMalgruppe);
+        formData.append('categories', JSON.stringify(formCategories));
+        console.log('searching', formData);
         doSearch(formData);
       }
       if (value.length === 0) {
-        setSearchResults('');
+        setSearchResults([]);
         setSearchString('');
       }
     },
-    [doSearch],
+    [searchResults],
   );
 
-  // Split arrays in two, so we can have "See all" toggle buttons
-  const results = searchResults && searchResults.splice(0, 7);
-  const resultsRest = searchResults.length > 7 ? searchResults.splice(7) : null;
-  const resultsActive = dummyData ? dummyData : searchResults && searchResults.filter(item => !item.fields.expired);
-  const resultsExpired = dummyDataExpired ? dummyDataExpired : searchResults && searchResults.filter(item => item.fields.expired);
-  console.log('results', results)
+  useEffect(() => {
+    // When used on the wizard page, trigger new search when changes are made on the steps
+    const steps = [
+      ...document.querySelectorAll("section[data-step]")
+    ];
+    steps.forEach(step => {
+      const inputType = step.dataset.inputType;
+      const key = step.dataset.key;
+
+      if (inputType === 'select') {
+        const input = step.querySelector('select');
+
+        input.addEventListener("change", function (e) {
+          // Get the values
+          if (key) {
+            setFormMalgruppe(e.target.value);
+            console.log('setting malgruppe', e.target.value)
+          }
+
+        });
+      }
+
+      if (inputType === 'checkboxes') {
+        const inputs = step.querySelectorAll('input[type="checkbox"]');
+        const submit = step.querySelector('button[data-submit]');
+
+        submit.addEventListener("click", function (e) {
+          console.log('submitting', [formMalgruppe, formCategories])
+          inputs.forEach(input => {
+            if (input.checked) {
+              setFormCategories((cats) => {
+                return [
+                  ...cats.filter(value => value !== input.value),
+                  input.value,
+                ]
+              })
+            }
+            if (!input.checked && formCategories.find(cat => cat === input.value)) {
+              setFormCategories((cats) => {
+                return [
+                  ...cats.filter(value => value !== input.value)
+                ]
+              })
+            }
+          });
+        });
+      }
+    });
+
+  }, []);
+
+  useEffect(() => {
+    // Wizard mode, trigger search on category/malgruppe changes
+    if (!initial && formMalgruppe && formCategories.length > 0) {
+      setLoading(true);
+      let formData = new FormData();
+      formData.append('searchQuery', '');
+      formData.append('flatTree', flatTree);
+      formData.append('malgruppe', formMalgruppe);
+      formData.append('categories', formCategories);
+      doSearch(formData);
+    }
+  }, [formMalgruppe, formCategories]);
+
+  const isExpired = (fields) => {
+    // If no date, it is "løpende"
+    if (!fields) { return false; }
+
+    const { date } = fields;
+    const today = new Date();
+
+    // Return true if older than today
+    if (today > new Date(date)) {
+      return true
+    }
+    return false
+  }
+
+  const orderByComingDate = (arr) => {
+    return arr.sort(function (a, b) {
+      // Check if frist object is present. When it doesn't exists, this means it is "løpende" and should be placed at bottom.
+      if (!a.fields.hasOwnProperty("frist")) { return 0; }
+      if (!b.fields.hasOwnProperty("frist")) { return 0; }
+
+      // Order the rest by date
+      const { day, month, year } = b.fields.frist;
+      const { day: aDay, month: aMonth, year: aYear } = a.fields.frist;
+      const aDate = new Date(`${aDay}/${aMonth}/${aYear}`);
+      const bDate = new Date(`${day}/${month}/${year}`);
+      return Number(aDate) - Number(bDate);
+    });
+  }
+
+  const orderByExpiredDate = (arr) => {
+    return arr.sort(function (a, b) {
+      const { day, month, year } = b.fields.frist;
+      const { day: aDay, month: aMonth, year: aYear } = a.fields.frist;
+      const aDate = new Date(`${aDay}/${aMonth}/${aYear}`);
+      const bDate = new Date(`${day}/${month}/${year}`);
+      return Number(bDate) - Number(aDate);
+    });
+  }
+
+  useEffect(() => {
+    if (initial && searchString.length === 0) {
+      if (typeof initial === 'string' || initial instanceof String) {
+        const data = initial.toString().replace(/\\"/g, '"')
+        setTimeout(() => {
+          setSearchResults(JSON.parse(data))
+        }, 400)
+        return
+      }
+      setSearchResults(initial)
+    }
+
+  },[searchString, searchResults]);
+
+  useEffect(() => {
+    setActiveResults(
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
+    );
+    // Split arrays in two, so we can have "See all" toggle buttons
+    setActiveResultsLimited(
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
+    );
+    setActiveResultsRest(
+      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
+    );
+    setExpiredResults(
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      })) : []
+      );
+    setExpiredResultsLimited(
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      })).splice(0, 7) : []
+    );
+    setExpiredResultsRest(
+      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+        return {
+          ...item,
+          fields: {
+            expired: true,
+            ...item.fields
+          },
+        }
+      })).splice(7) : []
+    );
+  }, [searchResults]);
+
+  useEffect(() => {
+    if (expiredResults.length > 0 && activeResults.length === 0) {
+      setTabIndex(1);
+      console.log('1', activeResults.length);
+    }
+    if (expiredResults.length === 0 && activeResults.length > 0) {
+      setTabIndex(0);
+      console.log('2', activeResults.length, expiredResults.length);
+    }
+    if (expiredResults.length > 0 && activeResults.length > 0) {
+      setTabIndex(0);
+      console.log('3', activeResults.length);
+    }
+  }, [activeResults, expiredResults]);
 
   return (
     <>
-      <div className="b-product-search">
-        <InputSearch
-          id="tilskuddsok"
-          label={label}
-          autoFocus={true}
-          showSuggestions={false}
-          fnChange={debouncedChange}
-        />
+      <div id={id || 'grants-search'} className="b-product-search">
+        {!collapsed ? (
+          <InputSearch
+            id="tilskuddsok"
+            label={label}
+            autoFocus={true}
+            showSuggestions={false}
+            fnChange={debouncedChange}
+          />
+        ) : null }
       </div>
+
+      
       
       {loading ? (
         <div>
@@ -97,15 +291,42 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
         searchString.length > 0 && searchResults.length > 0 && (
           <div className="l-mb-4 results">
               {
-                searchString && searchResults.length > 0 ? (
+                searchString && searchResults.length > 0 && !loading ? (
                 <h2 className="b-product-search__title">
                   {searchResults.length} treff på «{searchString}»
                 </h2>
                 ) : null
               }
-            <List
-              list={dummyData || searchResults}
-            />
+            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+              <TabList>
+                <Tab disabled={activeResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+                  Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span>
+                </Tab>
+                <Tab disabled={expiredResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+                  Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span>
+                </Tab>
+              </TabList>
+              <TabPanel>
+                <List
+                  list={toggleMore ? activeResults : activeResultsLimited}
+                />
+                {activeResultsRest.length > 0 && !toggleMore ? (
+                  <div className="l-mt-1">
+                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({activeResults.length})</Button>
+                  </div>
+                ) : null}
+              </TabPanel>
+              <TabPanel>
+                <List
+                  list={toggleMore2 ? expiredResults : expiredResultsLimited}
+                />
+                {expiredResultsRest.length > 0 && !toggleMore ? (
+                  <div className="l-mt-1">
+                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
+                  </div>
+                ) : null}
+              </TabPanel>
+            </Tabs>
           </div>
       )}
 
@@ -121,45 +342,52 @@ const GrantsSearch = ({ label, flatTree, endpoint, dummyData, dummyDataExpired }
 
       { // Default
         searchString.length === 0 && (
-        <Tabs>
+        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
           <TabList>
-            <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{resultsActive.length}</span></Tab>
-            <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{resultsExpired.length}</span></Tab>
+            <Tab disabled={activeResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+              Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span>
+            </Tab>
+            <Tab disabled={expiredResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+              Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span>
+            </Tab>
           </TabList>
           <TabPanel>
             <List
-                list={resultsActive}
+                list={toggleMore ? activeResults : activeResultsLimited}
               />
+              { activeResultsRest.length > 0 && !toggleMore ? (
+                <div className="l-mt-1">
+                  <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({activeResults.length})</Button>
+                </div>
+              ) : null }
           </TabPanel>
           <TabPanel>
             <List
-                list={resultsExpired}
+                list={toggleMore2 ? expiredResults : expiredResultsLimited}
               />
+              {expiredResultsRest.length > 0 && !toggleMore2 ? (
+              <div className="l-mt-1">
+                <Button onClick={() => setToggleMore2(!toggleMore2)} secondary>Vis alle ({expiredResults.length})</Button>
+              </div>
+            ) : null}
           </TabPanel>
         </Tabs>
         ) 
       }
-      
-
-      {
-        resultsRest ? (
-          <div className="l-mt-1">
-            <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({searchResults.length})</Button>
-          </div>
-        ) : null
-      }
-
-     
     </>
   );
 }
 
 GrantsSearch.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string,
   flatTree: PropTypes.string,
   endpoint: PropTypes.string,
-  dummyData: PropTypes.array,
-  dummyDataExpired: PropTypes.array,
+  initial: PropTypes.string,
+  contentId: PropTypes.string,
+  malgruppe: PropTypes.string,
+  categories: PropTypes.array,
+  collapsed: PropTypes.bool
 };
 
 export default GrantsSearch;

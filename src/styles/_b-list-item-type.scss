@@ -113,7 +113,6 @@
     flex-shrink: 0;
     
     @include mq($from: tablet) {
-      
       display: flex;
     }
 
@@ -127,6 +126,7 @@
 
   &__flex-wrapper {
     display: flex;
+    align-items: center;
   }
 
   &__image {
