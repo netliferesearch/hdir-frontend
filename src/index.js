@@ -160,7 +160,7 @@ if (productSearchElement) {
 if (listSearchElement) {
   const label = listSearchElement.getAttribute('data-label') || '';
   const productId = listSearchElement.getAttribute('data-content-id') || '';
-  const collapsed = listSearchElement.getAttribute('data-collapsed') || '';
+  const collapsed = Boolean(listSearchElement.getAttribute('data-collapsed') === "true" || false);
   const malgruppe = listSearchElement.getAttribute('data-malgruppe') || '';
   const flatTree = listSearchElement.getAttribute('data-flatTree') || '';
   const tema = listSearchElement.getAttribute('data-type') || '';
@@ -188,7 +188,7 @@ if (grantsSearchElement) {
   const malgruppe = grantsSearchElement.getAttribute('data-malgruppe') || '';
   const categories = grantsSearchElement.getAttribute('data-categories') || [];
   const initial = grantsSearchElement.getAttribute('data-initial') || [];
-  const collapsed = grantsSearchElement.getAttribute('data-collapsed') || false;
+  const collapsed = Boolean(grantsSearchElement.getAttribute('data-collapsed') === "true" || false);
   const endpoint = grantsSearchElement.getAttribute('data-endpoint') || '';
 
   render(
