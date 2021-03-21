@@ -37,7 +37,6 @@ const ArticlePage = () => (
           <ArticleIntro
             heading="Arbeid og psykisk helse"
             lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
-            image="./photo.jpg"
             imageDescription="Bildetekst"
           />
         </div>
