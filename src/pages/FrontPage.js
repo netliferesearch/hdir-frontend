@@ -38,6 +38,7 @@ const pages = [
   { link: '/horinger', desc: 'Høringer' },
   { link: '/konferanser-liste', desc: 'Konferanser' },
   { link: '#', desc: '-' },
+  { link: '#', desc: '-' },
 
   { heading: 'Andre malsider' },
   { link: '/abonnement-tilpassing', desc: 'Abonnement Tilpassing' },

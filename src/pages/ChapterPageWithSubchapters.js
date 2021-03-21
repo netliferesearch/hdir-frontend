@@ -9,6 +9,7 @@ import Box from '../components/Box';
 import Link from '../components/Link';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ProductSearch from '../components/ProductSearch';
+import ProfessionPicker from '../components/ProfessionPicker';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ChapterPage = () => {
@@ -82,15 +83,7 @@ const ChapterPage = () => {
               />
             </aside>
             <div className="l-article">
-              <div className="b-profession-picker b-profession-picker--negative-margin">
-                <label htmlFor="profession-selector" className="b-profession-picker__label"><button className="b-button--clean b-profession-picker__button" id="profession-picker">Tilpass innholdet til meg</button></label>
-                <div className="b-select l-mt-1 l-mb-3 col-md-6 hide" id="profession-picker__content" hidden>
-                  <select id="profession-selector" className="b-select__select" aria-hidden="true">
-                    <option disabled="" className="b-select__option">Velg målgruppe</option>
-                    <option className="b-select__option">Lege</option>
-                  </select>
-                </div>
-              </div>
+              <ProfessionPicker />
               <ProductSearch
                 label="retningslinjen"
                 productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
