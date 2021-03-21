@@ -1,9 +1,9 @@
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { debounce } from 'lodash';
 import InputSearch from './InputSearch'
+import { debounce } from 'lodash';
 import ChapterHeading from './ChapterHeading'
 import List from './List'
 import Loading from './Loading'
@@ -22,6 +22,7 @@ const GrantsSearch = ({
   }) => {
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
   const [toggleMore, setToggleMore] = useState(false);
   const [toggleMore2, setToggleMore2] = useState(false);
   const [activeResults, setActiveResults] = useState([]);
@@ -32,11 +33,12 @@ const GrantsSearch = ({
   const [expiredResultsRest, setExpiredResultsRest] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [searchString, setSearchString] = useState('');
+  const [formMalgruppe, setFormMalgruppe] = useState('');
+  const [formCategories, setFormCategories] = useState([]);
   const liveSearchUrl = endpoint
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
-
-  // const doSearch = (formData) =>
+  
   const fetchResults = (formData) => 
     fetch(liveSearchUrl, {
       method: 'POST',
@@ -44,14 +46,14 @@ const GrantsSearch = ({
     })
       .then(res => res.json())
       .then(data => {
-        console.log('data', data.length)
+        console.log('data', data)
         setSearchResults(data);
         setToggleMore(false);
         setToggleMore2(false);
         setLoading(false);
       });
 
-  const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
+  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
   
   const debouncedChange = useCallback(
     (value) => {
@@ -60,7 +62,10 @@ const GrantsSearch = ({
         setLoading(true);
         let formData = new FormData();
         formData.append('searchQuery', value);
-        formData.append('flatTree', flatTree);
+        formData.append('id', id);
+        formData.append('malgruppe', formMalgruppe);
+        formData.append('categories', JSON.stringify(formCategories));
+        console.log('searching', formData);
         doSearch(formData);
       }
       if (value.length === 0) {
@@ -68,8 +73,72 @@ const GrantsSearch = ({
         setSearchString('');
       }
     },
-    [doSearch],
+    [searchResults],
   );
+
+  useEffect(() => {
+    // When used on the wizard page, trigger new search when changes are made on the steps
+    const steps = [
+      ...document.querySelectorAll("section[data-step]")
+    ];
+    steps.forEach(step => {
+      const inputType = step.dataset.inputType;
+      const key = step.dataset.key;
+
+      if (inputType === 'select') {
+        const input = step.querySelector('select');
+
+        input.addEventListener("change", function (e) {
+          // Get the values
+          if (key) {
+            setFormMalgruppe(e.target.value);
+            console.log('setting malgruppe', e.target.value)
+          }
+
+        });
+      }
+
+      if (inputType === 'checkboxes') {
+        const inputs = step.querySelectorAll('input[type="checkbox"]');
+        const submit = step.querySelector('button[data-submit]');
+
+        submit.addEventListener("click", function (e) {
+          console.log('submitting', [formMalgruppe, formCategories])
+          inputs.forEach(input => {
+            if (input.checked) {
+              setFormCategories((cats) => {
+                return [
+                  ...cats.filter(value => value !== input.value),
+                  input.value,
+                ]
+              })
+            }
+            if (!input.checked && formCategories.find(cat => cat === input.value)) {
+              setFormCategories((cats) => {
+                return [
+                  ...cats.filter(value => value !== input.value)
+                ]
+              })
+            }
+          });
+        });
+      }
+    });
+
+  }, []);
+
+  useEffect(() => {
+    // Wizard mode, trigger search on category/malgruppe changes
+    if (!initial && formMalgruppe && formCategories.length > 0) {
+      setLoading(true);
+      let formData = new FormData();
+      formData.append('searchQuery', '');
+      formData.append('flatTree', flatTree);
+      formData.append('malgruppe', formMalgruppe);
+      formData.append('categories', formCategories);
+      doSearch(formData);
+    }
+  }, [formMalgruppe, formCategories]);
 
   const isExpired = (fields) => {
     // If no date, it is "løpende"
@@ -77,8 +146,6 @@ const GrantsSearch = ({
 
     const { date } = fields;
     const today = new Date();
-    // console.log('today', today)
-    // console.log('compared date', new Date(`${day}/${month}/${year}`))
 
     // Return true if older than today
     if (today > new Date(date)) {
@@ -113,9 +180,20 @@ const GrantsSearch = ({
   }
 
   useEffect(() => {
-    if (initial && searchResults.length === 0 && searchString.length === 0) {
-      setSearchResults(JSON.parse(initial.replace(/\\"/g, '"')))
+    if (initial && searchString.length === 0) {
+      if (typeof initial === 'string' || initial instanceof String) {
+        const data = initial.toString().replace(/\\"/g, '"')
+        setTimeout(() => {
+          setSearchResults(JSON.parse(data))
+        }, 400)
+        return
+      }
+      setSearchResults(initial)
     }
+
+  },[searchString, searchResults]);
+
+  useEffect(() => {
     setActiveResults(
       searchResults && searchString.length > 0 ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
     );
@@ -161,17 +239,36 @@ const GrantsSearch = ({
     );
   }, [searchResults]);
 
+  useEffect(() => {
+    if (expiredResults.length > 0 && activeResults.length === 0) {
+      setTabIndex(1);
+      console.log('1', activeResults.length);
+    }
+    if (expiredResults.length === 0 && activeResults.length > 0) {
+      setTabIndex(0);
+      console.log('2', activeResults.length, expiredResults.length);
+    }
+    if (expiredResults.length > 0 && activeResults.length > 0) {
+      setTabIndex(0);
+      console.log('3', activeResults.length);
+    }
+  }, [activeResults, expiredResults]);
+
   return (
     <>
-      <div id={id || 'grantsSearch'} className="b-product-search">
-        <InputSearch
-          id="tilskuddsok"
-          label={label}
-          autoFocus={true}
-          showSuggestions={false}
-          fnChange={debouncedChange}
-        />
+      <div id={id || 'grants-search'} className="b-product-search">
+        {!collapsed ? (
+          <InputSearch
+            id="tilskuddsok"
+            label={label}
+            autoFocus={true}
+            showSuggestions={false}
+            fnChange={debouncedChange}
+          />
+        ) : null }
       </div>
+
+      
       
       {loading ? (
         <div>
@@ -200,10 +297,14 @@ const GrantsSearch = ({
                 </h2>
                 ) : null
               }
-            <Tabs>
+            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
               <TabList>
-                <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span></Tab>
-                <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span></Tab>
+                <Tab disabled={activeResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+                  Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span>
+                </Tab>
+                <Tab disabled={expiredResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+                  Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span>
+                </Tab>
               </TabList>
               <TabPanel>
                 <List
@@ -241,10 +342,14 @@ const GrantsSearch = ({
 
       { // Default
         searchString.length === 0 && (
-        <Tabs>
+        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
           <TabList>
-            <Tab>Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span></Tab>
-            <Tab>Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span></Tab>
+            <Tab disabled={activeResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+              Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span>
+            </Tab>
+            <Tab disabled={expiredResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
+              Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span>
+            </Tab>
           </TabList>
           <TabPanel>
             <List
@@ -269,7 +374,6 @@ const GrantsSearch = ({
         </Tabs>
         ) 
       }
-      
     </>
   );
 }
@@ -279,7 +383,7 @@ GrantsSearch.propTypes = {
   label: PropTypes.string,
   flatTree: PropTypes.string,
   endpoint: PropTypes.string,
-  initial: PropTypes.array,
+  initial: PropTypes.string,
   contentId: PropTypes.string,
   malgruppe: PropTypes.string,
   categories: PropTypes.array,
