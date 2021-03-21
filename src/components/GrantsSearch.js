@@ -195,17 +195,17 @@ const GrantsSearch = ({
 
   useEffect(() => {
     setActiveResults(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
+      searchResults && searchString.length > 0 ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
     );
     // Split arrays in two, so we can have "See all" toggle buttons
     setActiveResultsLimited(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
+      searchResults && searchString.length > 0 ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
     );
     setActiveResultsRest(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
+      searchResults && searchString.length > 0 ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
     );
     setExpiredResults(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults && searchString.length > 0 ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -216,7 +216,7 @@ const GrantsSearch = ({
       })) : []
       );
     setExpiredResultsLimited(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults && searchString.length > 0 ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -227,7 +227,7 @@ const GrantsSearch = ({
       })).splice(0, 7) : []
     );
     setExpiredResultsRest(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+      searchResults && searchString.length > 0 ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
         return {
           ...item,
           fields: {
@@ -320,9 +320,9 @@ const GrantsSearch = ({
                 <List
                   list={toggleMore2 ? expiredResults : expiredResultsLimited}
                 />
-                {expiredResultsRest.length > 0 && !toggleMore ? (
+                {expiredResultsRest.length > 0 && !toggleMore2 ? (
                   <div className="l-mt-1">
-                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
+                    <Button onClick={() => setToggleMore2(!toggleMore2)} secondary>Vis alle ({expiredResults.length})</Button>
                   </div>
                 ) : null}
               </TabPanel>
