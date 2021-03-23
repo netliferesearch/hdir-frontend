@@ -1,11 +1,8 @@
 import React from 'react';
 import Collapsible from '../components/Collapsible';
 import ContentFooter from '../components/ContentFooter';
-import Link from '../components/Link';
 import Box from '../components/Box';
-import IconWithText from '../components/IconWithText';
 import PageMeta from '../components/PageMeta';
-import SectionSidebar from '../components/SectionSidebar';
 
 const NinjaStateGrant = () => (
   <>
@@ -15,16 +12,16 @@ const NinjaStateGrant = () => (
           <p>Ninja state av tilskudd:</p>
           <br /><br />
           <div className="b-collapsible b-collapsible--active b-collapsible--clean">
-            <div class="b-collapsible__code">AMM 017</div>
+            <div className="b-collapsible__code">AMM 017</div>
             <h2 className="b-collapsible__heading h2" id="sekundaer-peritonitt">
               <span className="js-copy-icon">#</span>
               <span className="js-copy-icon-text">Beredskap og beskyttelsestiltak ved CBRNE-medisin</span>
             </h2>
             <button className="b-collapsible__tag"><span>Læringsmål</span></button>
             <div className="b-collapsible__tag-content">Læringsmål beskriver hva en lege skal forstå, kunne og være i stand til å utføre og gjennomføre etter endt læringsprosess og spesialistutdanning. Læringsmålene er en del av spesialistforskriften.</div>
-            <div class="b-collapsible__meta-date b-collapsible__meta-date--from-to">
-              <div class="b-collapsible__meta-date-from">Gyldig fra: 23. oktober 2020</div>
-              <div class="b-collapsible__meta-date-to">Gyldig til: 23. oktober 2020</div>
+            <div className="b-collapsible__meta-date b-collapsible__meta-date--from-to">
+              <div className="b-collapsible__meta-date-from">Gyldig fra: 23. oktober 2020</div>
+              <div className="b-collapsible__meta-date-to">Gyldig til: 23. oktober 2020</div>
             </div>
 
               <p>
@@ -72,7 +69,7 @@ const NinjaStateGrant = () => (
                   </div>
                 </div>
               </div>
-        
+
             <div className="l-mt-4">
               <PageMeta
                 editDate="11. august 2018"

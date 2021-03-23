@@ -1,26 +1,19 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import InputSearch from './InputSearch'
 import { debounce } from 'lodash';
-import ChapterHeading from './ChapterHeading'
 import List from './List'
-import Loading from './Loading'
 import Button from './Button'
 
-const GrantsSearch = ({ 
-  id, 
-  label, 
+const GrantsSearch = ({
+  id,
+  label,
   flatTree,
-  endpoint, 
-  initial, 
-  contentId,
-  malgruppe,
-  categories,
+  endpoint,
+  initial,
   collapsed
   }) => {
-  const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [tabIndex, setTabIndex] = useState(0);
   const [toggleMore, setToggleMore] = useState(false);
@@ -38,8 +31,8 @@ const GrantsSearch = ({
   const liveSearchUrl = endpoint
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
-  
-  const fetchResults = (formData) => 
+
+  const fetchResults = (formData) =>
     fetch(liveSearchUrl, {
       method: 'POST',
       body: formData
@@ -53,8 +46,6 @@ const GrantsSearch = ({
         setLoading(false);
       });
 
-  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
-  
   const debouncedChange = useCallback(
     (value) => {
       if (value.length > 2) {
@@ -73,8 +64,12 @@ const GrantsSearch = ({
         setSearchString('');
       }
     },
+    // eslint-disable-next-line
     [searchResults],
   );
+  // eslint-disable-next-line
+  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
+
 
   useEffect(() => {
     // When used on the wizard page, trigger new search when changes are made on the steps
@@ -124,7 +119,7 @@ const GrantsSearch = ({
         });
       }
     });
-
+  // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -138,6 +133,7 @@ const GrantsSearch = ({
       formData.append('categories', formCategories);
       doSearch(formData);
     }
+  // eslint-disable-next-line
   }, [formMalgruppe, formCategories]);
 
   const isExpired = (fields) => {
@@ -190,7 +186,7 @@ const GrantsSearch = ({
       }
       setSearchResults(initial)
     }
-
+  // eslint-disable-next-line
   },[searchString, searchResults]);
 
   useEffect(() => {
@@ -237,6 +233,7 @@ const GrantsSearch = ({
         }
       })).splice(7) : []
     );
+  // eslint-disable-next-line
   }, [searchResults]);
 
   useEffect(() => {
@@ -268,8 +265,8 @@ const GrantsSearch = ({
         ) : null }
       </div>
 
-      
-      
+
+
       {loading ? (
         <div>
           <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50">
@@ -372,7 +369,7 @@ const GrantsSearch = ({
             ) : null}
           </TabPanel>
         </Tabs>
-        ) 
+        )
       }
     </>
   );

@@ -1,22 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavList from '../components/NavList';
 import ContentFooter from '../components/ContentFooter';
 import ChapterHeading from '../components/ChapterHeading';
 import Button from '../components/Button';
-import Box from '../components/Box';
-import Link from '../components/Link';
 import PageMeta from '../components/PageMeta';
 import LongShortHeading from '../components/LongShortHeading';
 import SectionSidebar from '../components/SectionSidebar';
 import ProductSearch from '../components/ProductSearch';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Select from '../components/Select';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 import ProfessionPicker from '../components/ProfessionPicker';
 
 const ProductPage = () => {
-  const [toggle, setToggle] = useState(false);
-  
   return (
     <div className="l-container l-mb-2">
       <Breadcrumbs
@@ -82,7 +77,7 @@ const ProductPage = () => {
               malGruppe={''}
               collapsed
             />
-            
+
             <div className="col-xs-12 l-mt-2">
               <ChapterHeading
                 heading="1. Fellesdel: Ledelse, styring og brukermedvirkning"
@@ -129,7 +124,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-          
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="2. Fellesdel: Samhandling og samarbeid"
@@ -179,7 +174,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="3. Fellesdel: Opplysningsplikt"
@@ -213,8 +208,8 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
-            
+
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="4. Helsestasjon 0–5 år"
@@ -320,7 +315,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="5. Skolehelsetjenesten 5–20 år"
@@ -358,8 +353,8 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
-            
+
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="6. Helsestasjon for ungdom"
@@ -429,7 +424,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="7. Metode og prosess"
@@ -438,7 +433,7 @@ const ProductPage = () => {
               />
               <hr className="b-hr b-hr--blue" />
             </div>
-            
+
           </div>
         </div>
       </main>

@@ -12,7 +12,7 @@ import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ChapterPage = () => {
   const [toggle, setToggle] = useState(false);
-  
+
   return (
     <>
       <main id="main">
@@ -50,7 +50,7 @@ const ChapterPage = () => {
             </aside>
             <div className="l-article">
               <div className="b-profession-picker  b-profession-picker--negative-margin">
-                { // onclick="document.getElementById('profession-picker').classList.toggle('hide');" 
+                { // onclick="document.getElementById('profession-picker').classList.toggle('hide');"
                 }
                 <label for="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
                 {
@@ -75,7 +75,7 @@ const ChapterPage = () => {
               h="h1"
               clean
             />
-            
+
 
             <Collapsible
               background
@@ -158,14 +158,14 @@ const ChapterPage = () => {
                 bestemmelser om meldeplikten etter første ledd. Det er ikke gitt
                 slik forskrift.
           </p>
-         
+
             </Collapsible >
-            
+
               <Collapsible
                 background
                 heading="§ 19. Melding til arbeidsgiver om bierverv og andre engasjement i annen virksomhet"
                 date="Sist faglig oppdatert: 11. juni 2020"
-              > 
+              >
                 <br />
                 <h3>Lovtekst</h3>
                 <Quote>
@@ -223,7 +223,7 @@ const ChapterPage = () => {
                   arbeidsbelastningen ikke går ut over hovedstillingen.
           </p>
               </Collapsible>
-            
+
               <div className="l-mt-4">
                 <PageMeta
                   editDate="11. august 2018"
@@ -254,7 +254,7 @@ const ChapterPage = () => {
       </div>
     </>
   )
-  
+
 };
 
 export default ChapterPage;

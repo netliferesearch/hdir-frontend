@@ -1,9 +1,7 @@
 import React from 'react';
-import Box from '../components/Box';
 import Button from '../components/Button';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ContentFooter from '../components/ContentFooter';
-import Link from '../components/Link';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 

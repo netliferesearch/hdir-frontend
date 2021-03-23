@@ -8,7 +8,6 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
 import ListSearch from '../components/ListSearch';
 import RadioButtonGroup from '../components/RadioButtonGroup';
-import { dummyFlatTree } from '../components/dummyFlatTree';
 
 const ListNews = (props) => (
   <>

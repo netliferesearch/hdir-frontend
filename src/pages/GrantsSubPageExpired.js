@@ -1,10 +1,8 @@
 import React from 'react';
-import Link from '../components/Link';
 import Box from '../components/Box';
 import Timeline from '../components/Timeline';
 import Collapsible from '../components/Collapsible';
 import ContentFooter from '../components/ContentFooter';
-import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
 import Button from '../components/Button';
@@ -107,7 +105,7 @@ const GrantsSubPageExpired = () => (
               </p>
               <p>
                 For nærmere informasjon om mål og målgruppe;{' '}
-                <a href="#">les regelverket</a>
+                <a href="#!">les regelverket</a>
               </p>
             </Collapsible>
             <Collapsible

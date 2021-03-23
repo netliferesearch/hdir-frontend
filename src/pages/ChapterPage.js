@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Collapsible from '../components/Collapsible';
 import ContentFooter from '../components/ContentFooter';
 import ChapterHeading from '../components/ChapterHeading';
@@ -12,8 +12,6 @@ import ProductSearch from '../components/ProductSearch';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
 const ChapterPage = () => {
-  const [toggle, setToggle] = useState(false);
-
   return (
     <>
       <main id="main">

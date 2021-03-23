@@ -5,8 +5,6 @@ import CheckboxGroup from '../components/CheckboxGroup';
 import Collapsible from '../components/Collapsible';
 import Select from '../components/Select';
 import GrantsSearch from '../components/GrantsSearch';
-import Button from '../components/Button';
-import List from '../components/List';
 
 const GrantsWizard = () => (
   <>
