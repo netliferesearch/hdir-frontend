@@ -192,15 +192,9 @@ const GrantsSearch = ({
   }
 
   const tabs = (data) => {
-    console.log('data', data)
-    console.log('isArray', Array.isArray(data))
-    if (Array.isArray(data)) {
-      return false
-    }
     const keys = data ? Object.keys(data) : []
     // setKeys(data ? Object.keys(data) : [])
     return keys.map(key => {
-      console.log('key', key)
 
       /*
       ** If the current items are of type "Utgått", add expired property,
@@ -222,7 +216,6 @@ const GrantsSearch = ({
       ** If there are less than 8 results, display all. Otherwise, add a toggle all button.
       */
       const splicedData = allData.length > 7 ? allData.slice(0, 7) : null
-      console.log('allData', allData)
       return (
         <TabPanel>
           <List
