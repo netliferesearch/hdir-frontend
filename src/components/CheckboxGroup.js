@@ -26,7 +26,7 @@ const CheckboxGroup = ({ heading, border, options, name, handleChange }) => (
             name={name}
             type="checkbox"
             className="b-checkbox-group__input"
-            value={option.value}
+            value={option.label}
             checked={option.checked}
             onChange={() =>
               // Returns an updates list with the item toggeled

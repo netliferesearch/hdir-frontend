@@ -32,25 +32,25 @@ const GrantsSearch = ({
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
 
-  const fetchResultsBySearch = (formData) =>
-    fetch(liveSearchUrl, {
-      method: 'POST',
-      body: formData
-    })
-      .then(res => res.json())
-      .then(data => {
-        // Transform array of objects, to object
-        console.log('data', data)
-        const results = data.reduce(
-          (obj, item) => Object.assign(obj, item), {});
+  // const fetchResultsBySearch = (formData) =>
+  //   fetch(liveSearchUrl, {
+  //     method: 'POST',
+  //     body: formData
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       // Transform array of objects, to object
+  //       console.log('data', data)
+  //       const results = data.reduce(
+  //         (obj, item) => Object.assign(obj, item), {});
 
-        setSearchResults(results);
-        setToggleMore(false);
-        setLoading(false);
-      });
+  //       setSearchResults(results);
+  //       setToggleMore(false);
+  //       setLoading(false);
+  //     });
 
-  const fetchResultsWizard = (formData) => {
-    fetch(liveSearchUrl + '?length=50' + '&dropValue=' + formDropValue + '&checkValue=' + formCheckValue + '&id=' + id)
+  const fetchResultsBySeach = () => {
+    fetch(liveSearchUrl + '?length=100' + '&searchQuery=' + searchString + '&id=' + id)
       .then(res => res.json())
       .then(data => {
 
@@ -64,18 +64,29 @@ const GrantsSearch = ({
       });
   }
 
-  const doSearch = useMemo(() => debounce(fetchResultsBySearch, 350, true), [debouncedChange]);
+  const fetchResultsWizard = () => {
+    fetch(liveSearchUrl + '?length=100' + '&dropValue=' + formDropValue + '&checkValue=' + formCheckValue + '&id=' + id)
+      .then(res => res.json())
+      .then(data => {
+
+        // Transform array of objects, to object
+        const results = data.reduce(
+          (obj, item) => Object.assign(obj, item), {});
+        console.log('results', results)
+        setSearchResults(results);
+        setToggleMore(false);
+        setLoading(false);
+      });
+  }
+
+  // const doSearch = useMemo(() => debounce(fetchResultsBySeach, 350, true), [debouncedChange]);
 
   const debouncedChange = useCallback(
     (value) => {
       if (value.length > 2) {
         setSearchString(value);
         setLoading(true);
-        let formData = new FormData();
-        formData.append('searchQuery', value);
-        formData.append('id', id);
-        console.log('searching', formData);
-        fetchResultsBySearch(formData);
+        fetchResultsBySeach();
       }
       if (value.length === 0) {
         setSearchResults(null);
@@ -101,7 +112,6 @@ const GrantsSearch = ({
           // Get the values
           if (key) {
             setFormDropValue(e.target.value);
-            console.log('setting malgruppe', e.target.value)
           }
 
         });
@@ -112,24 +122,16 @@ const GrantsSearch = ({
         const submit = step.querySelector('button[data-submit]');
 
         submit.addEventListener("click", function (e) {
-          console.log('submitting', [formDropValue, formCheckValue])
+          let values = []
           inputs.forEach(input => {
             if (input.checked) {
-              setFormCheckValue((cats) => {
-                return [
-                  ...cats.filter(value => value !== input.value),
-                  input.value,
-                ]
-              })
+              values.push(input.value)
             }
-            if (!input.checked && formCheckValue.find(cat => cat === input.value)) {
-              setFormCheckValue((cats) => {
-                return [
-                  ...cats.filter(value => value !== input.value)
-                ]
-              })
+            if (!input.checked && values.find(cat => cat === input.value)) {
+              values.filter(value => !input.value)
             }
           });
+          setFormCheckValue(values)
         });
       }
     });
@@ -138,7 +140,7 @@ const GrantsSearch = ({
 
   useEffect(() => {
     // Wizard mode, trigger search on category/malgruppe changes
-    if (!initial && formDropValue && formCheckValue.length > 0) {
+    if (!initial && (formDropValue || formCheckValue.length > 0)) {
       setLoading(true);
       // let formData = new FormData();
       // formData.append('searchQuery', '');
@@ -186,6 +188,10 @@ const GrantsSearch = ({
 
   const tabs = (data) => {
     console.log('data', data)
+    console.log('isArray', Array.isArray(data))
+    if (Array.isArray(data)) {
+      return false
+    }
     const keys = data ? Object.keys(data) : []
     // setKeys(data ? Object.keys(data) : [])
     return keys.map(key => {

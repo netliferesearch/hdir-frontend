@@ -43,7 +43,7 @@ const Select = ({
         </option>
       )}
       {options.map(option => (
-        <option key={shortid.generate()} className="b-select__option" value={option.id}>
+        <option key={shortid.generate()} className="b-select__option" value={option.title}>
           {option.title}
         </option>
       ))}

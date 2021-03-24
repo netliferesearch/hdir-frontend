@@ -55,7 +55,7 @@ const ListGrants = (props) => (
                 endpoint="https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/_/service/helsedirektoratet/wizardSearch"
               flatTree={dummyFlatTree}
                 initial={{
-                  "pågående": [
+                  "Pågående": [
                     {
                       "url": "http://...",
                       "type": "tilskudd",
@@ -169,7 +169,7 @@ const ListGrants = (props) => (
                       }
                     }
                   ],
-                  "utgått": [
+                  "Utløpt": [
                     {
                       "url": "http://...",
                       "type": "tilskudd",
