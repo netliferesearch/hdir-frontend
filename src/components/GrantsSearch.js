@@ -200,13 +200,15 @@ const GrantsSearch = ({
       /*
       ** If the current items are of type "Utgått", add expired property,
       ** so it will be displayed with a red color in the list.
+      ** Fallback is a generic modifier.
       */
       const allData = data ? data[key].map(item => {
         return {
           ...item,
           fields: {
             ...item.fields,
-            expired: key === 'Utløpt'
+            expired: key === 'Utløpt',
+            generic: key !== 'Utløpt' && key !== 'Pågående'
           }
         }
       }) : []
