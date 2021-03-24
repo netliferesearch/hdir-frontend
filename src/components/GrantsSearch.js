@@ -186,6 +186,11 @@ const GrantsSearch = ({
     
   }, [])
 
+  const getTotal = (results) => {
+    const numbers = Object.entries(results).map(cat => cat[1].length)
+    return numbers.reduce((a, b) => a + b, 0)
+  }
+
   const tabs = (data) => {
     console.log('data', data)
     console.log('isArray', Array.isArray(data))
@@ -298,7 +303,7 @@ const GrantsSearch = ({
           <div className="l-mb-4 results">
             { searchString.length > 2 && searchResults && !loading ? (
               <h2 className="b-product-search__title">
-                {searchResults.length} treff på «{searchString}»
+                {getTotal(searchResults)} treff på «{searchString}»
               </h2>
             ) : null}
             <Tabs>
@@ -323,7 +328,7 @@ const GrantsSearch = ({
 
 
       { // NO SEARCH RESULTS
-        searchString.length > 0 && !loading && searchResults.length === 0 ? (
+        searchString.length > 0 && !loading && !searchResults ? (
           <div className="l-mb-4">
             <div className="col-xs-12 l-mt-2 l-mb-3">
               <p>0 treff på «{searchString}»</p>
