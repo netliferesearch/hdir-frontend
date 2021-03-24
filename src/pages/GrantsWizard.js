@@ -40,7 +40,7 @@ const GrantsWizard = () => (
                 options={[
                   {
                     title: 'Kommune',
-                    id: 'id1'
+                    id: 'Kommune'
                   },
                   {
                     title: 'Fylkeskommune',
@@ -163,8 +163,9 @@ const GrantsWizard = () => (
           <div className="l-mt-3">
             <GrantsSearch
               label="Vet du hvilket tilskudd du vil søke på?"
-              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/_/service/helsedirektoratet/tilskuddSearch"
+              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/_/service/helsedirektoratet/wizardSearch"
               collapsed
+              id="b36c6805-1cf8-4928-92fa-0ad071b2e76a"
             />
           </div>
         </section>

@@ -54,7 +54,182 @@ const ListGrants = (props) => (
                 id="705432b2-4db4-41d5-974d-26955cc74e0c"
                 endpoint="https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/_/service/helsedirektoratet/wizardSearch"
               flatTree={dummyFlatTree}
-                initial='[{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Tiltaksutvikling innen program for folkehelsearbeid i kommunene\",\"frist\":{\"day\":\"01\",\"month\":\"mar\",\"year\":\"2018\",\"date\":\"2021-06-08\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Medisinsk avstandsoppfølging av kronisk syke\",\"frist\":{\"day\":\"01\",\"month\":\"mai\",\"year\":\"2018\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Pilotprosjekt på legevaktfeltet\",\"frist\":{\"day\":\"01\",\"month\":\"jun\",\"year\":\"2018\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Styrking av habilitering og rehabilitering i kommunene 2017-2019\",\"frist\":{\"day\":\"31\",\"month\":\"jan\",\"year\":\"2019\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Rekruttering av fastleger i kommuner som har rekrutteringsvansker\",\"frist\":{\"day\":\"15\",\"month\":\"mai\",\"year\":\"2019\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Pilot for strukturert tverrfaglig oppfølging - Oppfølgingsteam\",\"frist\":{\"day\":\"25\",\"month\":\"mai\",\"year\":\"2019\"},\"tags\":[]}}]'
+                initial={{
+                  "pågående": [
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 0",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 1",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 1",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 1",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 1",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 1",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 1",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 2",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    }
+                  ],
+                  "utgått": [
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 3",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 4",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    }
+                  ],
+                  "Alle": [
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 5",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    },
+                    {
+                      "url": "http://...",
+                      "type": "tilskudd",
+                      "fields": {
+                        "heading": "Aktivitetstiltak for å motvirke ensomhet og passivitet 6",
+                        "frist": {
+                          "day": "20",
+                          "month": "apr",
+                          "year": "2020",
+                          "date": "2020-04-20"
+                        },
+                        "tags": []
+                      }
+                    }
+                  ]
+                }}
             />
           </div>
         </article>

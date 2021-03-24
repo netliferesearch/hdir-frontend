@@ -9,52 +9,63 @@ import List from './List'
 import Loading from './Loading'
 import Button from './Button'
 
-const GrantsSearch = ({ 
-  id, 
-  label, 
+const GrantsSearch = ({
+  id,
+  label,
   flatTree,
-  endpoint, 
-  initial, 
+  endpoint,
+  initial = null,
   contentId,
   malgruppe,
   categories,
   collapsed
-  }) => {
-  const [toggled, setToggled] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [tabIndex, setTabIndex] = useState(0);
-  const [toggleMore, setToggleMore] = useState(false);
-  const [toggleMore2, setToggleMore2] = useState(false);
-  const [activeResults, setActiveResults] = useState([]);
-  const [activeResultsLimited, setActiveResultsLimited] = useState([]);
-  const [activeResultsRest, setActiveResultsRest] = useState([]);
-  const [expiredResults, setExpiredResults] = useState([]);
-  const [expiredResultsLimited, setExpiredResultsLimited] = useState([]);
-  const [expiredResultsRest, setExpiredResultsRest] = useState([]);
-  const [searchResults, setSearchResults] = useState([]);
+}) => {
+  const [searchResults, setSearchResults] = useState(null);
   const [searchString, setSearchString] = useState('');
-  const [formMalgruppe, setFormMalgruppe] = useState('');
-  const [formCategories, setFormCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [tabContent, setTabContent] = useState(null);
+  const [toggleMore, setToggleMore] = useState([]);
+  // const [data, setData] = useState(initial);
+  const [formDropValue, setFormDropValue] = useState(malgruppe || '');
+  const [formCheckValue, setFormCheckValue] = useState(categories || []);
   const liveSearchUrl = endpoint
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
-  
-  const fetchResults = (formData) => 
+
+  const fetchResultsBySearch = (formData) =>
     fetch(liveSearchUrl, {
       method: 'POST',
       body: formData
     })
       .then(res => res.json())
       .then(data => {
+        // Transform array of objects, to object
         console.log('data', data)
-        setSearchResults(data);
+        const results = data.reduce(
+          (obj, item) => Object.assign(obj, item), {});
+
+        setSearchResults(results);
         setToggleMore(false);
-        setToggleMore2(false);
         setLoading(false);
       });
 
-  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
-  
+  const fetchResultsWizard = (formData) => {
+    fetch(liveSearchUrl + '?length=50' + '&dropValue=' + formDropValue + '&checkValue=' + formCheckValue + '&id=' + id)
+      .then(res => res.json())
+      .then(data => {
+
+        // Transform array of objects, to object
+        const results = data.reduce(
+          (obj, item) => Object.assign(obj, item), {});
+        console.log('results', results)
+        setSearchResults(results);
+        setToggleMore(false);
+        setLoading(false);
+      });
+  }
+
+  const doSearch = useMemo(() => debounce(fetchResultsBySearch, 350, true), [debouncedChange]);
+
   const debouncedChange = useCallback(
     (value) => {
       if (value.length > 2) {
@@ -63,13 +74,11 @@ const GrantsSearch = ({
         let formData = new FormData();
         formData.append('searchQuery', value);
         formData.append('id', id);
-        formData.append('malgruppe', formMalgruppe);
-        formData.append('categories', JSON.stringify(formCategories));
         console.log('searching', formData);
-        fetchResults(formData);
+        fetchResultsBySearch(formData);
       }
       if (value.length === 0) {
-        setSearchResults([]);
+        setSearchResults(null);
         setSearchString('');
       }
     },
@@ -91,7 +100,7 @@ const GrantsSearch = ({
         input.addEventListener("change", function (e) {
           // Get the values
           if (key) {
-            setFormMalgruppe(e.target.value);
+            setFormDropValue(e.target.value);
             console.log('setting malgruppe', e.target.value)
           }
 
@@ -103,18 +112,18 @@ const GrantsSearch = ({
         const submit = step.querySelector('button[data-submit]');
 
         submit.addEventListener("click", function (e) {
-          console.log('submitting', [formMalgruppe, formCategories])
+          console.log('submitting', [formDropValue, formCheckValue])
           inputs.forEach(input => {
             if (input.checked) {
-              setFormCategories((cats) => {
+              setFormCheckValue((cats) => {
                 return [
                   ...cats.filter(value => value !== input.value),
                   input.value,
                 ]
               })
             }
-            if (!input.checked && formCategories.find(cat => cat === input.value)) {
-              setFormCategories((cats) => {
+            if (!input.checked && formCheckValue.find(cat => cat === input.value)) {
+              setFormCheckValue((cats) => {
                 return [
                   ...cats.filter(value => value !== input.value)
                 ]
@@ -129,129 +138,97 @@ const GrantsSearch = ({
 
   useEffect(() => {
     // Wizard mode, trigger search on category/malgruppe changes
-    if (!initial && formMalgruppe && formCategories.length > 0) {
+    if (!initial && formDropValue && formCheckValue.length > 0) {
       setLoading(true);
-      let formData = new FormData();
-      formData.append('searchQuery', '');
-      formData.append('flatTree', flatTree);
-      formData.append('malgruppe', formMalgruppe);
-      formData.append('categories', formCategories);
-      fetchResults(formData);
+      // let formData = new FormData();
+      // formData.append('searchQuery', '');
+      // formData.append('flatTree', flatTree);
+      // formData.append('radioValue', formDropValue);
+      // formData.append('checkValue', formCheckValue);
+      fetchResultsWizard();
     }
-  }, [formMalgruppe, formCategories]);
+  }, [formDropValue, formCheckValue]);
 
-  const isExpired = (fields) => {
-    // If no date, it is "løpende"
-    if (!fields) { return false; }
+  // useEffect(() => {
+  //   if (initial && searchString.length === 0) {
+  //     if (typeof initial === 'string' || initial instanceof String) {
+  //       const data = initial.toString().replace(/\\"/g, '"')
+  //       setTimeout(() => {
+  //         // setSearchResults(JSON.parse(data))
+  //       }, 400)
+  //       return
+  //     }
+  //   }
+  // },[searchString, searchResults]);
 
-    const { date } = fields;
-    const today = new Date();
-
-    // Return true if older than today
-    if (today > new Date(date)) {
-      return true
-    }
-    return false
-  }
-
-  const orderByComingDate = (arr) => {
-    return arr.sort(function (a, b) {
-      // Check if frist object is present. When it doesn't exists, this means it is "løpende" and should be placed at bottom.
-      if (!a.fields.hasOwnProperty("frist")) { return 0; }
-      if (!b.fields.hasOwnProperty("frist")) { return 0; }
-
-      // Order the rest by date
-      const { day, month, year } = b.fields.frist;
-      const { day: aDay, month: aMonth, year: aYear } = a.fields.frist;
-      const aDate = new Date(`${aDay}/${aMonth}/${aYear}`);
-      const bDate = new Date(`${day}/${month}/${year}`);
-      return Number(aDate) - Number(bDate);
-    });
-  }
-
-  const orderByExpiredDate = (arr) => {
-    return arr.sort(function (a, b) {
-      const { day, month, year } = b.fields.frist;
-      const { day: aDay, month: aMonth, year: aYear } = a.fields.frist;
-      const aDate = new Date(`${aDay}/${aMonth}/${aYear}`);
-      const bDate = new Date(`${day}/${month}/${year}`);
-      return Number(bDate) - Number(aDate);
-    });
-  }
-
-  useEffect(() => {
-    if (initial && searchString.length === 0) {
-      if (typeof initial === 'string' || initial instanceof String) {
-        const data = initial.toString().replace(/\\"/g, '"')
-        setTimeout(() => {
-          setSearchResults(JSON.parse(data))
-        }, 400)
-        return
+  const changeToggleMore = (name, value) => {
+    setToggleMore(prevObj => {
+      return {
+        ...prevObj,
+        [name]: value
       }
-      setSearchResults(initial)
-    }
-  },[searchString, searchResults]);
+    })
+  }
 
   useEffect(() => {
-    setActiveResults(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))) : []
-    );
-    // Split arrays in two, so we can have "See all" toggle buttons
-    setActiveResultsLimited(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(0, 7) : []
-    );
-    setActiveResultsRest(
-      searchResults ? orderByComingDate(searchResults.filter(item => !isExpired(item.fields.frist))).splice(7) : []
-    );
-    setExpiredResults(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
+    const data = searchResults ? searchResults : initial
+    const keys = data ? Object.keys(data) : []
+
+    setToggleMore(keys.map(key => {
+      return (
+        {
+          [key]: false
+        }
+      )
+    }))
+    
+  }, [])
+
+  const tabs = (data) => {
+    console.log('data', data)
+    const keys = data ? Object.keys(data) : []
+    // setKeys(data ? Object.keys(data) : [])
+    return keys.map(key => {
+      console.log('key', key)
+
+      /*
+      ** If the current items are of type "Utgått", add expired property,
+      ** so it will be displayed with a red color in the list.
+      */
+      const allData = data ? data[key].map(item => {
         return {
           ...item,
           fields: {
-            expired: true,
-            ...item.fields
-          },
+            ...item.fields,
+            expired: key === 'Utløpt'
+          }
         }
-      })) : []
-      );
-    setExpiredResultsLimited(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
-        return {
-          ...item,
-          fields: {
-            expired: true,
-            ...item.fields
-          },
-        }
-      })).splice(0, 7) : []
-    );
-    setExpiredResultsRest(
-      searchResults ? orderByExpiredDate(searchResults.filter(item => isExpired(item.fields.frist)).map(item => {
-        return {
-          ...item,
-          fields: {
-            expired: true,
-            ...item.fields
-          },
-        }
-      })).splice(7) : []
-    );
-  }, [searchResults]);
+      }) : []
+
+      /*
+      ** If there are less than 8 results, display all. Otherwise, add a toggle all button.
+      */
+      const splicedData = allData.length > 7 ? allData.slice(0, 7) : null
+      console.log('allData', allData)
+      return (
+        <TabPanel>
+          <List
+            list={toggleMore[key] || allData.length < 8 ? allData : splicedData}
+          />
+          {!toggleMore[key] && allData.length > 7 ? (
+            <div className="l-mt-1">
+              <Button onClick={() => changeToggleMore(key, true)} secondary>Vis alle</Button>
+            </div>
+          ) : null}
+        </TabPanel>
+      )
+    })
+  }
 
   useEffect(() => {
-    if (expiredResults.length > 0 && activeResults.length === 0) {
-      setTabIndex(1);
-      console.log('1', activeResults.length);
-    }
-    if (expiredResults.length === 0 && activeResults.length > 0) {
-      setTabIndex(0);
-      console.log('2', activeResults.length, expiredResults.length);
-    }
-    if (expiredResults.length > 0 && activeResults.length > 0) {
-      setTabIndex(0);
-      console.log('3', activeResults.length);
-    }
-  }, [activeResults, expiredResults]);
+
+   
+  }, [searchResults, toggleMore])
 
   return (
     <>
@@ -264,11 +241,11 @@ const GrantsSearch = ({
             showSuggestions={false}
             fnChange={debouncedChange}
           />
-        ) : null }
+        ) : null}
       </div>
 
-      
-      
+
+
       {loading ? (
         <div>
           <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50">
@@ -286,50 +263,58 @@ const GrantsSearch = ({
         </div>
       ) : null}
 
-      { // When there are search results
-        searchString.length > 0 && searchResults.length > 0 && (
+
+      { // INITIAL RESULTS / DEFAULT
+        searchString.length < 3 && initial && !searchResults ? (
+          <Tabs>
+            <TabList>
+              {Object.keys(initial).map(key => (
+                <Tab>
+                  {key.charAt(0).toUpperCase() + key.slice(1)}
+                  { key === 'Pågående' ? (
+                    <span className="react-tabs__tab-count react-tabs__tab-count--green">{initial[key].length}</span>
+                  ) : null}
+                  { key === 'Utløpt' ? (
+                    <span className="react-tabs__tab-count react-tabs__tab-count--red">{initial[key].length}</span>
+                  ) : null}
+                </Tab>
+              ))}
+            </TabList>
+            {tabs(initial)}
+          </Tabs>
+        ) : null}
+
+
+      { // SEARCH RESULTS
+        searchResults ? (
           <div className="l-mb-4 results">
-              {
-                searchString && searchResults.length > 0 && !loading ? (
-                <h2 className="b-product-search__title">
-                  {searchResults.length} treff på «{searchString}»
-                </h2>
-                ) : null
-              }
-            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+            { searchString.length > 2 && searchResults && !loading ? (
+              <h2 className="b-product-search__title">
+                {searchResults.length} treff på «{searchString}»
+              </h2>
+            ) : null}
+            <Tabs>
               <TabList>
-                <Tab disabled={activeResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
-                  Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span>
-                </Tab>
-                <Tab disabled={expiredResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
-                  Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span>
-                </Tab>
+                {Object.keys(searchResults).map(key => (
+                  <Tab>
+                    {key.charAt(0).toUpperCase() + key.slice(1)}
+                    { key === 'Pågående' ? (
+                      <span className="react-tabs__tab-count react-tabs__tab-count--green">{searchResults[key].length}</span>
+                    ) : null}
+                    { key === 'Utløpt' ? (
+                      <span className="react-tabs__tab-count react-tabs__tab-count--red">{searchResults[key].length}</span>
+                    ) : null}
+                  </Tab>
+                ))}
               </TabList>
-              <TabPanel>
-                <List
-                  list={toggleMore ? activeResults : activeResultsLimited}
-                />
-                {activeResultsRest.length > 0 && !toggleMore ? (
-                  <div className="l-mt-1">
-                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({activeResults.length})</Button>
-                  </div>
-                ) : null}
-              </TabPanel>
-              <TabPanel>
-                <List
-                  list={toggleMore2 ? expiredResults : expiredResultsLimited}
-                />
-                {expiredResultsRest.length > 0 && !toggleMore ? (
-                  <div className="l-mt-1">
-                    <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({expiredResults.length})</Button>
-                  </div>
-                ) : null}
-              </TabPanel>
+              {tabs(searchResults)}
             </Tabs>
           </div>
-      )}
+        ) : null}
 
-      { // When NO search results
+
+
+      { // NO SEARCH RESULTS
         searchString.length > 0 && !loading && searchResults.length === 0 ? (
           <div className="l-mb-4">
             <div className="col-xs-12 l-mt-2 l-mb-3">
@@ -339,41 +324,6 @@ const GrantsSearch = ({
         ) : null
       }
 
-      { // Default
-        searchString.length === 0 && (
-        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-          <TabList>
-            <Tab disabled={activeResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
-              Pågående <span className="react-tabs__tab-count react-tabs__tab-count--green">{activeResults.length}</span>
-            </Tab>
-            <Tab disabled={expiredResults.length > 0 ? false : true} disabledClassName="react-tabs__tab--disabled hide">
-              Utløpt <span className="react-tabs__tab-count react-tabs__tab-count--red">{expiredResults.length}</span>
-            </Tab>
-          </TabList>
-          <TabPanel>
-            <List
-                list={toggleMore ? activeResults : activeResultsLimited}
-              />
-              { activeResultsRest.length > 0 && !toggleMore ? (
-                <div className="l-mt-1">
-                  <Button onClick={() => setToggleMore(!toggleMore)} secondary>Vis alle ({activeResults.length})</Button>
-                </div>
-              ) : null }
-          </TabPanel>
-          <TabPanel>
-            <List
-                list={toggleMore2 ? expiredResults : expiredResultsLimited}
-              />
-              {expiredResultsRest.length > 0 && !toggleMore2 ? (
-              <div className="l-mt-1">
-                <Button onClick={() => setToggleMore2(!toggleMore2)} secondary>Vis alle ({expiredResults.length})</Button>
-              </div>
-            ) : null}
-          </TabPanel>
-        </Tabs>
-        ) 
-      }
-      
     </>
   );
 }
