@@ -24,6 +24,7 @@ const GrantsSearch = ({
   const [searchString, setSearchString] = useState('');
   const [loading, setLoading] = useState(false);
   const [tabContent, setTabContent] = useState(null);
+  const [tabIndex, setTabIndex] = useState(0);
   const [toggleMore, setToggleMore] = useState([]);
   // const [data, setData] = useState(initial);
   const [formDropValue, setFormDropValue] = useState(malgruppe || '');
@@ -322,10 +323,10 @@ const GrantsSearch = ({
                 {getTotal(searchResults)} treff på «{searchString}»
               </h2>
             ) : null}
-            <Tabs>
+            <Tabs selectedIndex={0} onSelect={index => setTabIndex(index)}>
               <TabList>
                 {Object.keys(searchResults).map(key => (
-                  <Tab>
+                  <Tab key={key}>
                     {key.charAt(0).toUpperCase() + key.slice(1)}
                     { key === 'Pågående' ? (
                       <span className="react-tabs__tab-count react-tabs__tab-count--green">{searchResults[key].length}</span>
