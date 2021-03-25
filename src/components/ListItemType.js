@@ -319,6 +319,7 @@ ListItemType.propTypes = {
       'generic',
       'grant',
       'tilskudd',
+      'archive',
     ]),
     fields: PropTypes.object
   }).isRequired

@@ -14,8 +14,8 @@ const Timeline = ({ label, items }) => {
       <h2>{label}</h2>
       <div className="b-timeline">
         <ul className="b-timeline__list">
-          { items ? items.map(item => (
-              <li className="b-timeline__item">
+          { items ? items.map((item,i) => (
+              <li className="b-timeline__item" key={`${item.date}_${i}`}>
                 <span className="b-timeline__label">
                   {item.label}
                   <br />
