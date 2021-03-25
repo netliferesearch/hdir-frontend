@@ -59,7 +59,7 @@ const GrantsSearch = ({
         // Transform array of objects, to object
         const results = data.reduce(
           (obj, item) => Object.assign(obj, item), {});
-        console.log('results', results)
+        console.log('data', data)
         setSearchResults(results);
         setToggleMore(false);
         setLoading(false);
@@ -74,7 +74,7 @@ const GrantsSearch = ({
     fetch(liveSearchUrl + '?length=100' + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
-
+        console.log('data', data)
         // Transform array of objects, to object
         const results = data.reduce(
           (obj, item) => Object.assign(obj, item), {});
@@ -175,17 +175,17 @@ const GrantsSearch = ({
     }
   }, [formDropValue, formCheckValue, formRadioValue]);
 
-  // useEffect(() => {
-  //   if (initial && searchString.length === 0) {
-  //     if (typeof initial === 'string' || initial instanceof String) {
-  //       const data = initial.toString().replace(/\\"/g, '"')
-  //       setTimeout(() => {
-  //         // setSearchResults(JSON.parse(data))
-  //       }, 400)
-  //       return
-  //     }
-  //   }
-  // },[searchString, searchResults]);
+  useEffect(() => {
+    // console.log('test', initial)
+    // if (initial) {
+    //   console.log('has initial')
+    //   if (typeof initial === 'string' || initial instanceof String) {
+    //     // const data = initial.toString().replace(/\\"/g, '"')
+    //     initial = JSON.parse(initial)
+    //     console.log('test', initial)
+    //   }
+    // }
+  },[]);
 
   const changeToggleMore = (name, value) => {
     setToggleMore(prevObj => {
@@ -215,8 +215,23 @@ const GrantsSearch = ({
     return numbers.reduce((a, b) => a + b, 0)
   }
 
+  const transformInitial = (data) => {
+    let parsedData = ''
+    if (typeof data === 'string' || data instanceof String) {
+      parsedData = JSON.parse(data)
+      parsedData = parsedData.reduce(
+        (obj, item) => Object.assign(obj, item), {});
+      console.log('parsedData', parsedData)
+
+      return parsedData
+    }
+    return data
+  }
+
   const tabs = (data) => {
-    const keys = data ? Object.keys(data) : []
+    let parsedData = transformInitial(data)
+    const keys = parsedData ? Object.keys(parsedData) : []
+    console.log('keys', keys)
     return keys.map(key => {
       
       /*
@@ -224,7 +239,10 @@ const GrantsSearch = ({
       ** so it will be displayed with a red color in the list.
       ** Fallback is a generic modifier.
       */
-     const allData = data ? data[key].map(item => {
+     console.log('key', key)
+    //  let allData = isParsed ? parsedData.filter(item => item.hasOwnProperty(key)) : parsedData[key]
+     
+     const allData = parsedData ? parsedData[key].map(item => {
        return {
          ...item,
          fields: {
@@ -298,19 +316,19 @@ const GrantsSearch = ({
         searchString.length < 3 && initial && !searchResults ? (
           <Tabs>
             <TabList>
-              {Object.keys(initial).map(key => (
+              {Object.keys(transformInitial(initial)).map(key => (
                 <Tab>
                   {key.charAt(0).toUpperCase() + key.slice(1)}
                   { key === 'Pågående' ? (
-                    <span className="react-tabs__tab-count react-tabs__tab-count--green">{initial[key].length}</span>
+                    <span className="react-tabs__tab-count react-tabs__tab-count--green">{transformInitial(initial)[key].length}</span>
                   ) : null}
                   { key === 'Utløpt' ? (
-                    <span className="react-tabs__tab-count react-tabs__tab-count--red">{initial[key].length}</span>
+                    <span className="react-tabs__tab-count react-tabs__tab-count--red">{transformInitial(initial)[key].length}</span>
                   ) : null}
                 </Tab>
               ))}
             </TabList>
-            {tabs(initial)}
+            {tabs(transformInitial(initial))}
           </Tabs>
         ) : null}
 

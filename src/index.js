@@ -187,7 +187,7 @@ if (grantsSearchElement) {
   const contentId = grantsSearchElement.getAttribute('data-content-id') || '';
   const malgruppe = grantsSearchElement.getAttribute('data-malgruppe') || '';
   const categories = grantsSearchElement.getAttribute('data-categories') || [];
-  const initial = grantsSearchElement.getAttribute('data-initial') || '';
+  const initial = grantsSearchElement.getAttribute('data-initial') || Boolean(false);
   const collapsed = Boolean(grantsSearchElement.getAttribute('data-collapsed') === "true" || false);
   const endpoint = grantsSearchElement.getAttribute('data-endpoint') || '';
 
