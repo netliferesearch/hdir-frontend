@@ -27,6 +27,7 @@ const GrantsSearch = ({
   const [toggleMore, setToggleMore] = useState([]);
   // const [data, setData] = useState(initial);
   const [formDropValue, setFormDropValue] = useState(malgruppe || '');
+  const [formRadioValue, setFormRadioValue] = useState('');
   const [formCheckValue, setFormCheckValue] = useState(categories || []);
   const liveSearchUrl = endpoint
     ? endpoint
@@ -65,7 +66,10 @@ const GrantsSearch = ({
   }
 
   const fetchResultsWizard = () => {
-    fetch(liveSearchUrl + '?length=100' + '&dropValue=' + formDropValue + '&checkValue=' + formCheckValue + '&id=' + id)
+    const dropValueQuery = formDropValue ? '&dropValue=' + formDropValue : ''
+    const checkValueQuery = formCheckValue ? '&checkValue=' + formCheckValue : ''
+    const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
+    fetch(liveSearchUrl + '?length=100' + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
 
@@ -97,7 +101,11 @@ const GrantsSearch = ({
   );
 
   useEffect(() => {
-    // When used on the wizard page, trigger new search when changes are made on the steps
+    /*
+    ** WIZARD MODE
+    ** When used on wizard page, collect values from the form inputs, update state,
+    ** then trigger new search.
+    */
     const steps = [
       ...document.querySelectorAll("section[data-step]")
     ];
@@ -105,7 +113,7 @@ const GrantsSearch = ({
       const inputType = step.dataset.inputType;
       const key = step.dataset.key;
 
-      if (inputType === 'select') {
+      if (inputType === 'dropValue') {
         const input = step.querySelector('select');
 
         input.addEventListener("change", function (e) {
@@ -117,11 +125,11 @@ const GrantsSearch = ({
         });
       }
 
-      if (inputType === 'checkboxes') {
+      if (inputType === 'checkValue') {
         const inputs = step.querySelectorAll('input[type="checkbox"]');
         const submit = step.querySelector('button[data-submit]');
-
-        submit.addEventListener("click", function (e) {
+        
+        submit && submit.addEventListener("click", function (e) {
           let values = []
           inputs.forEach(input => {
             if (input.checked) {
@@ -133,6 +141,18 @@ const GrantsSearch = ({
           });
           setFormCheckValue(values)
         });
+      }
+
+      if (inputType === 'radioValue') {
+        const radios = step.querySelectorAll('input[type="radio"]');
+
+        radios.forEach(input => {
+          input.addEventListener("change", function (e) {
+            console.log(e.target.value)
+            setFormRadioValue(e.target.value);
+          });
+        })
+        
       }
     });
 
@@ -149,7 +169,7 @@ const GrantsSearch = ({
       // formData.append('checkValue', formCheckValue);
       fetchResultsWizard();
     }
-  }, [formDropValue, formCheckValue]);
+  }, [formDropValue, formCheckValue, formRadioValue]);
 
   // useEffect(() => {
   //   if (initial && searchString.length === 0) {
@@ -193,24 +213,24 @@ const GrantsSearch = ({
 
   const tabs = (data) => {
     const keys = data ? Object.keys(data) : []
-    // setKeys(data ? Object.keys(data) : [])
     return keys.map(key => {
-
+      
       /*
       ** If the current items are of type "Utgått", add expired property,
       ** so it will be displayed with a red color in the list.
       ** Fallback is a generic modifier.
       */
-      const allData = data ? data[key].map(item => {
-        return {
-          ...item,
-          fields: {
-            ...item.fields,
-            expired: key === 'Utløpt',
-            generic: key !== 'Utløpt' && key !== 'Pågående'
+     const allData = data ? data[key].map(item => {
+       return {
+         ...item,
+         fields: {
+           ...item.fields,
+           expired: key === 'Utløpt',
+           generic: key !== 'Utløpt' && key !== 'Pågående'
           }
         }
       }) : []
+      console.log('allData', allData)
 
       /*
       ** If there are less than 8 results, display all. Otherwise, add a toggle all button.
@@ -243,6 +263,7 @@ const GrantsSearch = ({
           <InputSearch
             id="tilskuddsok"
             label={label}
+            autoFocus={true}
             showSuggestions={false}
             fnChange={debouncedChange}
           />
