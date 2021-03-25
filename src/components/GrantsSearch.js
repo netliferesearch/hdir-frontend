@@ -50,7 +50,7 @@ const GrantsSearch = ({
   //       setLoading(false);
   //     });
 
-  const fetchResultsBySeach = () => {
+  const fetchResultsBySearch = () => {
     fetch(liveSearchUrl + '?length=100' + '&searchQuery=' + searchString + '&id=' + id)
       .then(res => res.json())
       .then(data => {
@@ -69,6 +69,7 @@ const GrantsSearch = ({
     const dropValueQuery = formDropValue ? '&dropValue=' + formDropValue : ''
     const checkValueQuery = formCheckValue ? '&checkValue=' + formCheckValue : ''
     const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
+    console.log(dropValueQuery, checkValueQuery, radioValueQuery)
     fetch(liveSearchUrl + '?length=100' + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
@@ -83,14 +84,14 @@ const GrantsSearch = ({
       });
   }
 
-  // const doSearch = useMemo(() => debounce(fetchResultsBySeach, 350, true), [debouncedChange]);
+  // const doSearch = useMemo(() => debounce(fetchResultsBySearch, 350, true), [debouncedChange]);
 
   const debouncedChange = useCallback(
     (value) => {
       if (value.length > 2) {
         setSearchString(value);
         setLoading(true);
-        fetchResultsBySeach();
+        fetchResultsBySearch();
       }
       if (value.length === 0) {
         setSearchResults(null);
@@ -120,6 +121,7 @@ const GrantsSearch = ({
           // Get the values
           if (key) {
             setFormDropValue(e.target.value);
+            // fetchResultsWizard();
           }
 
         });
@@ -140,6 +142,7 @@ const GrantsSearch = ({
             }
           });
           setFormCheckValue(values)
+          // fetchResultsWizard();
         });
       }
 
@@ -148,8 +151,8 @@ const GrantsSearch = ({
 
         radios.forEach(input => {
           input.addEventListener("change", function (e) {
-            console.log(e.target.value)
             setFormRadioValue(e.target.value);
+            // fetchResultsWizard();
           });
         })
         
@@ -160,7 +163,7 @@ const GrantsSearch = ({
 
   useEffect(() => {
     // Wizard mode, trigger search on category/malgruppe changes
-    if (!initial && (formDropValue || formCheckValue.length > 0)) {
+    if (!initial) {
       setLoading(true);
       // let formData = new FormData();
       // formData.append('searchQuery', '');

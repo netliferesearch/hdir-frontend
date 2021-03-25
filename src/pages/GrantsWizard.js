@@ -31,7 +31,7 @@ const GrantsWizard = () => (
         <section data-step="1" data-step-type="collapsible" data-key="test" data-input-type="radioValue" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
-              id="tema"
+              id="test"
               heading="1. Test av radiobuttons"
               collapsed
             >
