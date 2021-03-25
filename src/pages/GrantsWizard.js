@@ -197,6 +197,7 @@ const GrantsWizard = () => (
               endpoint="https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/_/service/helsedirektoratet/wizardSearch"
               collapsed
               id="b36c6805-1cf8-4928-92fa-0ad071b2e76a"
+              pageLength={100}
             />
           </div>
         </section>

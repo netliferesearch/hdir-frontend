@@ -190,6 +190,7 @@ if (grantsSearchElement) {
   const initial = grantsSearchElement.getAttribute('data-initial') || Boolean(false);
   const collapsed = Boolean(grantsSearchElement.getAttribute('data-collapsed') === "true" || false);
   const endpoint = grantsSearchElement.getAttribute('data-endpoint') || '';
+  const pageLength = grantsSearchElement.getAttribute('data-page-length') || '';
 
   render(
     <GrantsSearch
@@ -203,6 +204,7 @@ if (grantsSearchElement) {
       collapsed={collapsed}
       initial={initial}
       endpoint={endpoint}
+      pageLength={pageLength}
     />,
     grantsSearchElement
   );

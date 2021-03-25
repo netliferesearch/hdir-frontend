@@ -18,7 +18,8 @@ const GrantsSearch = ({
   contentId,
   malgruppe,
   categories,
-  collapsed
+  collapsed,
+  pageLength
 }) => {
   const [searchResults, setSearchResults] = useState(null);
   const [searchString, setSearchString] = useState('');
@@ -52,7 +53,7 @@ const GrantsSearch = ({
   //     });
 
   const fetchResultsBySearch = () => {
-    fetch(liveSearchUrl + '?length=100' + '&searchQuery=' + searchString + '&id=' + id)
+    fetch(liveSearchUrl + '?length=' + pageLength + '&searchQuery=' + searchString + '&id=' + id)
       .then(res => res.json())
       .then(data => {
 
@@ -71,7 +72,7 @@ const GrantsSearch = ({
     const checkValueQuery = formCheckValue ? '&checkValue=' + formCheckValue : ''
     const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
     console.log(dropValueQuery, checkValueQuery, radioValueQuery)
-    fetch(liveSearchUrl + '?length=100' + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
+    fetch(liveSearchUrl + '?length=' + pageLength + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
         console.log('data', data)
@@ -385,7 +386,8 @@ GrantsSearch.propTypes = {
   contentId: PropTypes.string,
   malgruppe: PropTypes.string,
   categories: PropTypes.array,
-  collapsed: PropTypes.bool
+  collapsed: PropTypes.bool,
+  pageLength: PropTypes.string
 };
 
 export default GrantsSearch;
