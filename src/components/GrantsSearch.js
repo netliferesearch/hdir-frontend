@@ -323,7 +323,7 @@ const GrantsSearch = ({
                 {getTotal(searchResults)} treff på «{searchString}»
               </h2>
             ) : null}
-            <Tabs selectedIndex={0} onSelect={index => setTabIndex(index)}>
+            <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
               <TabList>
                 {Object.keys(searchResults).map(key => (
                   <Tab key={key}>
