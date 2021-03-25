@@ -1,13 +1,14 @@
+/*
+  Credit: https://stackoverflow.com/questions/49986720/how-to-detect-internet-explorer-11-and-below-versions/49986758
+*/
+
 import React, { useEffect } from 'react';
 import Alert from './Alert';
-
-const style = {
-  display:'none',
-}
 
 const IeBrowserWarning = () => {
 
   useEffect(()=>{
+    // This code can be copied into a main.js at seeds. It should work out of the box. Just remember to change className to class in the html :)
     // Get elements
     const ieWarninElement = document.getElementById('js_ie-warning');
     const ieWarninElementText = document.getElementById('js_ie_warning_text');
@@ -18,28 +19,27 @@ const IeBrowserWarning = () => {
     const trident = ua.indexOf('Trident/'); // IE 11
     // IF ie 10 or older, set text accordingly
     if (msie !== -1) {
-      ieWarninElementText.innerHTML ="Din nettleser <strong> Microsoft Internet Explorer versjon 10 eller eldre</strong> er gammel. Du bør oppgradere til en nyere nettleser for en raskere, tryggere og bedre brukeropplevelse."
-
+      ieWarninElementText.innerHTML = "Din nettleser: Microsoft Internet Explorer v.10 eller eldre"
     }
     // IF ie 11, set text accordingly
     if (trident !== -1) {
-      ieWarninElementText.innerHTML ="Din nettleser <strong> Microsoft Internet Explorer versjon 11</strong> er gammel. Du bør oppgradere til en nyere nettleser for en raskere, tryggere og bedre brukeropplevelse."
+      ieWarninElementText.innerHTML ="Din nettleser: Microsoft Internet Explorer v.11"
     }
     // Set display to block IF using IE 11 or older
-    if (isIeBrowser) ieWarninElement.style.display = "block";
+    if (isIeBrowser) ieWarninElement.classList.toggle('hide');
   }, [])
 
-
   return(
-    <div id="js_ie-warning" style={style}>
-    <div className="l-container">
-        <Alert status="danger">
-            <p>
-              <span id="js_ie_warning_text"></span>
-            </p>
-        </Alert>
-      </div>
-  </div>
+    <div id="js_ie-warning" className="hide">
+      <div className="l-container">
+          <Alert status="warning">
+            <div>
+              <p> <b> Du benytter en nettleser vi ikke støtter.<a href="#!">Se informasjon om nettlesere</a></b></p>
+              <div id="js_ie_warning_text"></div>
+            </div>
+          </Alert>
+        </div>
+    </div>
   )
 };
 
