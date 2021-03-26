@@ -35,32 +35,14 @@ const GrantsSearch = ({
     ? endpoint
     : 'https://helsedir-helsenett-xptest.enonic.cloud/retningslinjer/adhd/_/service/helsedirektoratet/realtimesearch';
 
-  // const fetchResultsBySearch = (formData) =>
-  //   fetch(liveSearchUrl, {
-  //     method: 'POST',
-  //     body: formData
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       // Transform array of objects, to object
-  //       console.log('data', data)
-  //       const results = data.reduce(
-  //         (obj, item) => Object.assign(obj, item), {});
-
-  //       setSearchResults(results);
-  //       setToggleMore(false);
-  //       setLoading(false);
-  //     });
-
-  const fetchResultsBySearch = () => {
-    fetch(liveSearchUrl + '?length=' + pageLength + '&searchQuery=' + searchString + '&id=' + id)
+  const fetchResultsBySearch = (value) => {
+    fetch(liveSearchUrl + '?length=' + pageLength + '&searchQuery=' + value + '&id=' + id)
       .then(res => res.json())
       .then(data => {
 
         // Transform array of objects, to object
         const results = data.reduce(
           (obj, item) => Object.assign(obj, item), {});
-        console.log('data', data)
         setSearchResults(results);
         setToggleMore(false);
         setLoading(false);
@@ -71,31 +53,32 @@ const GrantsSearch = ({
     const dropValueQuery = formDropValue ? '&dropValue=' + formDropValue : ''
     const checkValueQuery = formCheckValue ? '&checkValue=' + formCheckValue : ''
     const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
-    console.log(dropValueQuery, checkValueQuery, radioValueQuery)
     fetch(liveSearchUrl + '?length=' + pageLength + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
-        console.log('data', data)
+
         // Transform array of objects, to object
         const results = data.reduce(
           (obj, item) => Object.assign(obj, item), {});
-        console.log('results', results)
         setSearchResults(results);
         setToggleMore(false);
         setLoading(false);
       });
   }
 
-  // const doSearch = useMemo(() => debounce(fetchResultsBySearch, 350, true), [debouncedChange]);
+  const doSearch = useMemo(() => debounce(fetchResultsBySearch, 350, true), [debouncedChange]);
 
   const debouncedChange = useCallback(
     (value) => {
+      console.log(value)
       if (value.length > 2) {
         setSearchString(value);
         setLoading(true);
-        fetchResultsBySearch();
+        // fetchResultsBySearch();
+        doSearch(value);
       }
       if (value.length === 0) {
+        console.log('reset')
         setSearchResults(null);
         setSearchString('');
       }
@@ -123,7 +106,6 @@ const GrantsSearch = ({
           // Get the values
           if (key) {
             setFormDropValue(e.target.value);
-            // fetchResultsWizard();
           }
 
         });
@@ -144,7 +126,6 @@ const GrantsSearch = ({
             }
           });
           setFormCheckValue(values)
-          // fetchResultsWizard();
         });
       }
 
@@ -154,7 +135,6 @@ const GrantsSearch = ({
         radios.forEach(input => {
           input.addEventListener("change", function (e) {
             setFormRadioValue(e.target.value);
-            // fetchResultsWizard();
           });
         })
         
@@ -167,26 +147,9 @@ const GrantsSearch = ({
     // Wizard mode, trigger search on category/malgruppe changes
     if (!initial) {
       setLoading(true);
-      // let formData = new FormData();
-      // formData.append('searchQuery', '');
-      // formData.append('flatTree', flatTree);
-      // formData.append('radioValue', formDropValue);
-      // formData.append('checkValue', formCheckValue);
       fetchResultsWizard();
     }
   }, [formDropValue, formCheckValue, formRadioValue]);
-
-  useEffect(() => {
-    // console.log('test', initial)
-    // if (initial) {
-    //   console.log('has initial')
-    //   if (typeof initial === 'string' || initial instanceof String) {
-    //     // const data = initial.toString().replace(/\\"/g, '"')
-    //     initial = JSON.parse(initial)
-    //     console.log('test', initial)
-    //   }
-    // }
-  },[]);
 
   const changeToggleMore = (name, value) => {
     setToggleMore(prevObj => {
@@ -232,7 +195,6 @@ const GrantsSearch = ({
   const tabs = (data) => {
     let parsedData = transformInitial(data)
     const keys = parsedData ? Object.keys(parsedData) : []
-    console.log('keys', keys)
     return keys.map(key => {
       
       /*
@@ -241,7 +203,6 @@ const GrantsSearch = ({
       ** Fallback is a generic modifier.
       */
      console.log('key', key)
-    //  let allData = isParsed ? parsedData.filter(item => item.hasOwnProperty(key)) : parsedData[key]
      
      const allData = parsedData ? parsedData[key].map(item => {
        return {
@@ -292,8 +253,6 @@ const GrantsSearch = ({
           />
         ) : null}
       </div>
-
-
 
       {loading ? (
         <div>
@@ -360,7 +319,6 @@ const GrantsSearch = ({
             </Tabs>
           </div>
         ) : null}
-
 
 
       { // NO SEARCH RESULTS
