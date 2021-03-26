@@ -38,6 +38,7 @@ const pages = [
   { link: '/horinger', desc: 'Høringer' },
   { link: '/konferanser-liste', desc: 'Konferanser' },
   { link: '#', desc: '-' },
+  { link: '#', desc: '-' },
 
   { heading: 'Andre malsider' },
   { link: '/abonnement-tilpassing', desc: 'Abonnement Tilpassing' },
@@ -85,9 +86,9 @@ const renderPageItems = pages => {
     const { link = '', desc = '', heading = '' } = pages[p];
     if (heading) {
       thePages.push(
-        <div>
+        <div  key={`page-${p}`}>
           <br />
-          <h3 key={`page-${p}`}>{heading}</h3>
+          <h3>{heading}</h3>
         </div>
       );
     } else {

@@ -5,7 +5,6 @@ import { debounce } from 'lodash';
 import InputSearch from './InputSearch'
 import ChapterHeading from './ChapterHeading'
 import NavList from './NavList'
-import Loading from './Loading'
 import Button from './Button'
 
 
@@ -37,6 +36,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
     if (collapsed === true && toggled === false) {
       setToggled(true);
     }
+    // eslint-disable-next-line
   }, [collapsed]);
 
   function toggle() {
@@ -44,7 +44,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
   }
 
   // const doSearch = (formData) =>
-  const fetchResults = (formData) => 
+  const fetchResults = (formData) =>
     fetch(`${liveSearchUrl}`, {
       method: 'POST',
       body: formData
@@ -59,8 +59,6 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
         updateInternalLinksToCollapsibles();
       });
 
-  const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
-  
   const debouncedChange = useCallback(
     (value) => {
       if (value.length > 2) {
@@ -79,8 +77,11 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
         setSearchString('');
       }
     },
+    // eslint-disable-next-line
     [doSearch],
   );
+  // eslint-disable-next-line
+  const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
 
   const updateInternalLinksToCollapsibles = () => {
     // If internal link to collapsible (i.e. search results), we need to trigger target collapsible
@@ -106,7 +107,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
         if (targetUrl !== currentUrl) {
           return;
         }
-        
+
         if (document.getElementById(targetHash)) {
           const targetCollapsible = document.getElementById(targetHash);
           const targetCollapsibleTrigger = targetCollapsible.parentNode.querySelectorAll('button')[0];
@@ -134,13 +135,13 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
     const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
     return [
       parts.map(part => part.toLowerCase() === highlight.toLowerCase() ? <strong>{part}</strong> : part)
-    ] 
+    ]
   }
 
   // Construct an object containing all results/data
   const modifiedResult = () => ({
     total: searchResults.total || null,
-    anbefaling: 
+    anbefaling:
       searchResults.anbefaling && searchResults.anbefaling.length > 0 ? searchResults.anbefaling.map(result => {
         return {
           title: getHighlightedText(result.title, searchString),
@@ -184,7 +185,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
         <Button
           onClick={toggle}
           clean
-          icon={!toggled ? `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjEgKDcyNjMxKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5zZWFyY2g8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJzZWFyY2giIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMDAwMDAwLCAxLjAwMDAwMCkiIHN0cm9rZT0iIzAyNTE2OSI+CiAgICAgICAgICAgIDxnIGlkPSJJbnRlcmZhY2UtRXNzZW50aWFsX194MkZfX1NlYXJjaF9feDJGX19zZWFyY2giIHN0cm9rZS13aWR0aD0iMS4wNDM0Ij4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cF8zNzIiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJzZWFyY2giPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOC4zLDE2LjcgQzEyLjksMTYuNyAxNi42LDEzIDE2LjYsOC40IEMxNi42LDMuOCAxMywwIDguMywwIEMzLjcsMCAwLDMuNyAwLDguMyBDMCwxMi45IDMuNywxNi43IDguMywxNi43IFoiIGlkPSJPdmFsXzI4OCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQuMiwxNC4zIEwyNCwyNCIgaWQ9IlNoYXBlXzE4NzIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTguNSwzIEM1LjUsMyAzLDUuNSAzLDguNSIgaWQ9Ik92YWxfMjg4XzJfIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=` 
+          icon={!toggled ? `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjEgKDcyNjMxKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5zZWFyY2g8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJzZWFyY2giIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMDAwMDAwLCAxLjAwMDAwMCkiIHN0cm9rZT0iIzAyNTE2OSI+CiAgICAgICAgICAgIDxnIGlkPSJJbnRlcmZhY2UtRXNzZW50aWFsX194MkZfX1NlYXJjaF9feDJGX19zZWFyY2giIHN0cm9rZS13aWR0aD0iMS4wNDM0Ij4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cF8zNzIiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJzZWFyY2giPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOC4zLDE2LjcgQzEyLjksMTYuNyAxNi42LDEzIDE2LjYsOC40IEMxNi42LDMuOCAxMywwIDguMywwIEMzLjcsMCAwLDMuNyAwLDguMyBDMCwxMi45IDMuNywxNi43IDguMywxNi43IFoiIGlkPSJPdmFsXzI4OCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQuMiwxNC4zIEwyNCwyNCIgaWQ9IlNoYXBlXzE4NzIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTguNSwzIEM1LjUsMyAzLDUuNSAzLDguNSIgaWQ9Ik92YWxfMjg4XzJfIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=`
           : `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHBhdGggZD0iTTM3LjMwNCAxMS4yODJsMS40MTQgMS40MTQtMjYuMDIyIDI2LjAyLTEuNDE0LTEuNDEzeiIgZmlsbD0iMDY2N0M2IiAvPjxwYXRoIGQ9Ik0xMi42OTYgMTEuMjgybDI2LjAyMiAyNi4wMi0xLjQxNCAxLjQxNS0yNi4wMjItMjYuMDJ6IiBmaWxsPSIwNjY3QzYiIC8+PC9zdmc+`}>
           {
             toggled ? 'Skjul søk' : `Søk i ${label}`
@@ -202,7 +203,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
         </div>
       </div>
     )}
-      
+
       {loading ? (
         <div>
           <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50">
@@ -249,7 +250,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
                     </div>
                     ) : null
                   }
-                  
+
                   {
                     toggleMoreRecommendations ? (
                     <NavList

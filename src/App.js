@@ -225,7 +225,6 @@ class App extends Component {
               <Route path="/brosjyrer-liste" component={ListBrochures} />
               <Route path="/konferanser-liste" component={ListConferences} />
               <Route path="/tilskudd-underside" component={GrantsSubPage} />
-              <Route path="/tilskudd-veiviser" component={GrantsWizard} />
               <Route
                 path="/tilskudd-underside-utgått-søknadsfrist"
                 component={GrantsSubPageExpired}

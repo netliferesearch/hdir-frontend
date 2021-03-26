@@ -6,8 +6,6 @@ import RadioButtonGroup from '../components/RadioButtonGroup';
 import Collapsible from '../components/Collapsible';
 import Select from '../components/Select';
 import GrantsSearch from '../components/GrantsSearch';
-import Button from '../components/Button';
-import List from '../components/List';
 
 const GrantsWizard = () => (
   <>

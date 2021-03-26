@@ -111,6 +111,10 @@
     flex-direction: column;
     flex-wrap: nowrap;
     flex-shrink: 0;
+    
+    @include mq($from: tablet) {
+      display: flex;
+    }
 
     &--expired {
       background: $red-light;

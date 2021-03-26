@@ -1,12 +1,9 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import InputSearch from './InputSearch'
 import { debounce } from 'lodash';
-import ChapterHeading from './ChapterHeading'
 import List from './List'
-import Loading from './Loading'
 import Button from './Button'
 
 const GrantsSearch = ({
@@ -83,8 +80,12 @@ const GrantsSearch = ({
         setSearchString('');
       }
     },
+    // eslint-disable-next-line
     [searchResults],
   );
+  // eslint-disable-next-line
+  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
+
 
   useEffect(() => {
     /*
@@ -140,7 +141,7 @@ const GrantsSearch = ({
         
       }
     });
-
+  // eslint-disable-next-line
   }, []);
 
   useEffect(() => {

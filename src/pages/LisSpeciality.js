@@ -1,9 +1,7 @@
 import React from 'react';
-import Box from '../components/Box';
 import Button from '../components/Button';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ContentFooter from '../components/ContentFooter';
-import Link from '../components/Link';
 import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 
@@ -52,19 +50,19 @@ const LisSpeciality = () => (
           heading="Slik refererer du [produkttype]"
           id="contentFooter-1"
           content={[
-            <>
+            <React.Fragment key={'contentFooter-1'}>
               Helsedirektoratet (2020). <i>Barnekirurgi [nettdokument].</i>{' '}
               Oslo: Helsedirektoratet (oppdatert 31. oktober 2020, lest 11.
               november 2020). Tilgjengelig fra:
               https://www.helsedirektoratet.no/documaster/barnekirurgi
-            </>
+            </React.Fragment>
           ]}
         />
         <ContentFooter
           heading="Åpne data (API)"
           id="contentFooter-2"
           content={[
-            <>
+            <React.Fragment key={'contentFooter-2'}>
               Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
               <a href="https://utvikler.helsedirektoratet.no/">
                 https://utvikler.helsedirektoratet.no/
@@ -73,7 +71,7 @@ const LisSpeciality = () => (
               <br />
               <span className="t--bold">[Fulltittel på innholdet]</span> er
               tilgjengelig i vårt API: https://xxxx
-            </>
+            </React.Fragment>
           ]}
         />
       </main>

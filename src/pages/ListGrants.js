@@ -1,18 +1,12 @@
 import React from 'react';
-import List from '../components/List';
-import Button from '../components/Button';
-import Alert from '../components/Alert';
 import Card from '../components/Card';
-import CheckboxGroup from '../components/CheckboxGroup';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
-import InputSearch from '../components/InputSearch';
 import GrantsSearch from '../components/GrantsSearch';
-import RadioButtonGroup from '../components/RadioButtonGroup';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
-const ListGrants = (props) => (
+const ListGrants = () => (
   <>
   <div className="l-container">
     <Breadcrumbs

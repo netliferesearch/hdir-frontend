@@ -1,5 +1,4 @@
 import React from 'react';
-import shortid from 'shortid';
 import Button from '../components/Button';
 import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
@@ -9,12 +8,11 @@ import SectionSidebar from '../components/SectionSidebar';
 import FilterList from '../components/FilterList';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Link from '../components/Link';
 import ProductSearch from '../components/ProductSearch';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const TreatmentPageNew = () => {
-  
+
   return (
     <>
       <main id="main">
@@ -152,9 +150,6 @@ const TreatmentPageNew = () => {
                 heading="Om pakkeforløpet"
                 url="#a"
               />
-
-            
-              
 
             </div>
           </div>

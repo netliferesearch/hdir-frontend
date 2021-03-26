@@ -1,10 +1,8 @@
 import React from 'react';
-import Link from '../components/Link';
 import Box from '../components/Box';
 import Timeline from '../components/Timeline';
 import Collapsible from '../components/Collapsible';
 import ContentFooter from '../components/ContentFooter';
-import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
 import Button from '../components/Button';
@@ -67,23 +65,23 @@ const GrantsSubPage = () => (
             label="Slik blir prosessen"
             items={[
               {
-                label: 'Webinar:',
-                date: '15. februar 2021'
-              },
-              {
-                label: 'Rapportering:',
-                date: '1. mars 2021'
-              },
-              {
-                label: 'Et punkt:',
-                date: '1. april 2021'
-              },
-              {
-                label: 'Forventet svar:',
+                label: 'Rapporteringfrist for 2020:',
                 date: '1. mai 2021'
               },
               {
-                label: 'Rapportering:',
+                label: 'Rapporteringfrist for 2020:',
+                date: '1. mai 2021'
+              },
+              {
+                label: 'Rapporteringfrist for 2020:',
+                date: '1. mai 2021'
+              },
+              {
+                label: 'Rapporteringfrist for 2020:',
+                date: '1. mai 2021'
+              },
+              {
+                label: 'Rapporteringfrist for 2021:',
                 date: '1. april 2022'
               },
             ]}
@@ -106,7 +104,7 @@ const GrantsSubPage = () => (
               </p>
               <p>
                 For nærmere informasjon om mål og målgruppe;{' '}
-                <a href="#">les regelverket</a>
+                <a href="#!">les regelverket</a>
               </p>
             </Collapsible>
             <Collapsible h="h3" heading="Hvem kan få tilskudd?" size="small" noScroll>
@@ -179,7 +177,7 @@ const GrantsSubPage = () => (
               heading="Slik refererer du [produkttype]"
               id="contentFooter-1"
               content={[
-                <>
+                <React.Fragment key={'contentFooter-1'}>
                   Helsedirektoratet (2020).{' '}
                   <i>
                     Nasjonal faglig retningslinjer for helsestasjons- og
@@ -188,14 +186,14 @@ const GrantsSubPage = () => (
                     Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars
                     2019, lest 12. august 2020). Tilgjengelig fra:
                     https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten.
-                  </>
+                  </React.Fragment>
               ]}
             />
             <ContentFooter
               heading="Åpne data (API)"
               id="contentFooter-2"
               content={[
-                <>
+                <React.Fragment key={'contentFooter-1'}>
                   Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
                   <br />
                   <a href="https://utvikler.helsedirektoratet.no/">
@@ -207,7 +205,7 @@ const GrantsSubPage = () => (
                     [Fulltittel på innholdet]
                     </span>{' '}
                     er tilgjengelig i vårt API: https://xxxx
-                  </>
+                  </React.Fragment>
               ]}
             />
           </div>

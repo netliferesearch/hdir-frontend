@@ -1,5 +1,6 @@
 const buildId = text => {
   // Regex for special characters
+  // eslint-disable-next-line
   const rgx = /[;\\/:.*!%#?"()<>|&'_]|[0-9\-]/g;
   // If first character is a number add a string to the start
   if (!isNaN(text.charAt(0))) { text = `h-${text}` }

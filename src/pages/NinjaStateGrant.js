@@ -1,11 +1,8 @@
 import React from 'react';
 import Collapsible from '../components/Collapsible';
 import ContentFooter from '../components/ContentFooter';
-import Link from '../components/Link';
 import Box from '../components/Box';
-import IconWithText from '../components/IconWithText';
 import PageMeta from '../components/PageMeta';
-import SectionSidebar from '../components/SectionSidebar';
 
 const NinjaStateGrant = () => (
   <>
@@ -15,16 +12,16 @@ const NinjaStateGrant = () => (
           <p>Ninja state av tilskudd:</p>
           <br /><br />
           <div className="b-collapsible b-collapsible--active b-collapsible--clean">
-            <div class="b-collapsible__code">AMM 017</div>
+            <div className="b-collapsible__code">AMM 017</div>
             <h2 className="b-collapsible__heading h2" id="sekundaer-peritonitt">
               <span className="js-copy-icon">#</span>
               <span className="js-copy-icon-text">Beredskap og beskyttelsestiltak ved CBRNE-medisin</span>
             </h2>
             <button className="b-collapsible__tag"><span>Læringsmål</span></button>
             <div className="b-collapsible__tag-content">Læringsmål beskriver hva en lege skal forstå, kunne og være i stand til å utføre og gjennomføre etter endt læringsprosess og spesialistutdanning. Læringsmålene er en del av spesialistforskriften.</div>
-            <div class="b-collapsible__meta-date b-collapsible__meta-date--from-to">
-              <div class="b-collapsible__meta-date-from">Gyldig fra: 23. oktober 2020</div>
-              <div class="b-collapsible__meta-date-to">Gyldig til: 23. oktober 2020</div>
+            <div className="b-collapsible__meta-date b-collapsible__meta-date--from-to">
+              <div className="b-collapsible__meta-date-from">Gyldig fra: 23. oktober 2020</div>
+              <div className="b-collapsible__meta-date-to">Gyldig til: 23. oktober 2020</div>
             </div>
 
               <p>
@@ -72,7 +69,7 @@ const NinjaStateGrant = () => (
                   </div>
                 </div>
               </div>
-        
+
             <div className="l-mt-4">
               <PageMeta
                 editDate="11. august 2018"
@@ -85,20 +82,20 @@ const NinjaStateGrant = () => (
                 heading="Slik refererer du [produkttype]"
                 id="contentFooter-1"
                 content={[
-                  <>
+                  <React.Fragment key={'contentFooter-1'}>
                     Helsedirektoratet (2020).{' '}
                     <i>Anbefaling for sekundær peritonitt [nettdokument].</i>{' '}
                     Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars
                     2019, lest 12. august 2020). Tilgjengelig fra:
                     https://www.helsedirektoratet.no/retningslinjer/antibiotika-i-sykehus/abdomen/sekundaer-peritonitt
-                  </>
+                  </React.Fragment>
                 ]}
               />
               <ContentFooter
                 heading="Åpne data (API)"
                 id="contentFooter-2"
                 content={[
-                  <>
+                  <React.Fragment key={'contentFooter-2'}>
                     Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
                     <a href="https://utvikler.helsedirektoratet.no/">
                       https://utvikler.helsedirektoratet.no/
@@ -109,7 +106,7 @@ const NinjaStateGrant = () => (
                       [Fulltittel på innholdet]
                     </span>{' '}
                     er tilgjengelig i vårt API: https://xxxx
-                  </>
+                  </React.Fragment>
                 ]}
               />
             </div>
