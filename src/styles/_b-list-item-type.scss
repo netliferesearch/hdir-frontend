@@ -119,6 +119,9 @@
     &--expired {
       background: $red-light;
     }
+    &--generic {
+      background: $grey-light;
+    }
   }
   &__date-big {
     font-size: $font-l;
