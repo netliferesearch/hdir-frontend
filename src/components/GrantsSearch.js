@@ -67,24 +67,18 @@ const GrantsSearch = ({
 
   const debouncedChange = useCallback(
     (value) => {
-      console.log(value)
       if (value.length > 2) {
         setSearchString(value);
         setLoading(true);
-        // fetchResultsBySearch();
         doSearch(value);
       }
       if (value.length === 0) {
-        console.log('reset')
         setSearchResults(null);
         setSearchString('');
       }
     },
-    // eslint-disable-next-line
     [searchResults],
   );
-  // eslint-disable-next-line
-  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
 
 
   useEffect(() => {
@@ -186,7 +180,6 @@ const GrantsSearch = ({
       parsedData = JSON.parse(data)
       parsedData = parsedData.reduce(
         (obj, item) => Object.assign(obj, item), {});
-      console.log('parsedData', parsedData)
 
       return parsedData
     }
@@ -203,7 +196,6 @@ const GrantsSearch = ({
       ** so it will be displayed with a red color in the list.
       ** Fallback is a generic modifier.
       */
-     console.log('key', key)
      
      const allData = parsedData ? parsedData[key].map(item => {
        return {
@@ -215,7 +207,6 @@ const GrantsSearch = ({
           }
         }
       }) : []
-      console.log('allData', allData)
 
       /*
       ** If there are less than 8 results, display all. Otherwise, add a toggle all button.
