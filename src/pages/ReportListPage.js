@@ -1,7 +1,6 @@
 import React from 'react';
 import List from '../components/List';
 import Button from '../components/Button';
-import CheckboxGroup from '../components/CheckboxGroup';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
 import ListSearch from '../components/ListSearch';
