@@ -186,7 +186,22 @@ const GrantsSearch = ({
     return data
   }
 
-  const tabs = (data) => {
+  const orderByDate = (arr, reverse) => {
+    return arr.sort(function (a, b) {
+      // Check if frist object is present. When it doesn't exists, this means it is "løpende" and should be placed at bottom.
+      if (!a.fields.hasOwnProperty("frist")) { return 1; }
+      if (!b.fields.hasOwnProperty("frist")) { return -1; }
+
+      // Order the rest by date
+      const { date: dateB } = b.fields.frist;
+      const { date } = a.fields.frist;
+      const aDate = new Date(date);
+      const bDate = new Date(dateB);
+      return reverse ? Number(bDate) - Number(aDate) : Number(aDate) - Number(bDate);
+    });
+  }
+
+  const tabPanels = (data) => {
     let parsedData = transformInitial(data)
     const keys = parsedData ? Object.keys(parsedData) : []
     return keys.map(key => {
@@ -197,7 +212,7 @@ const GrantsSearch = ({
       ** Fallback is a generic modifier.
       */
      
-     const allData = parsedData ? parsedData[key].map(item => {
+     let allData = parsedData ? parsedData[key].map(item => {
        return {
          ...item,
          fields: {
@@ -207,13 +222,15 @@ const GrantsSearch = ({
           }
         }
       }) : []
+      const reverseOrder = key === 'Utløpt'
+      allData = orderByDate(allData, reverseOrder)
 
       /*
       ** If there are less than 8 results, display all. Otherwise, add a toggle all button.
       */
       const splicedData = allData.length > 7 ? allData.slice(0, 7) : null
       return (
-        <TabPanel>
+        <TabPanel key={key}>
           <List
             list={toggleMore[key] || allData.length < 8 ? allData : splicedData}
           />
@@ -269,7 +286,7 @@ const GrantsSearch = ({
           <Tabs>
             <TabList>
               {Object.keys(transformInitial(initial)).map(key => (
-                <Tab>
+                <Tab key={key}>
                   {key.charAt(0).toUpperCase() + key.slice(1)}
                   { key === 'Pågående' ? (
                     <span className="react-tabs__tab-count react-tabs__tab-count--green">{transformInitial(initial)[key].length}</span>
@@ -280,7 +297,7 @@ const GrantsSearch = ({
                 </Tab>
               ))}
             </TabList>
-            {tabs(transformInitial(initial))}
+            {tabPanels(transformInitial(initial))}
           </Tabs>
         ) : null}
 
@@ -307,7 +324,7 @@ const GrantsSearch = ({
                   </Tab>
                 ))}
               </TabList>
-              {tabs(searchResults)}
+              {tabPanels(searchResults)}
             </Tabs>
           </div>
         ) : null}

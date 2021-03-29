@@ -199,6 +199,7 @@ const ListItemType = props => {
 
       {(type === 'tilskudd' || type === 'grant') && (
         <div
+          key={fields.heading}
           className={classNames({
             'b-list-item-type': true,
             'b-list-item-type__flex-wrapper': true,
