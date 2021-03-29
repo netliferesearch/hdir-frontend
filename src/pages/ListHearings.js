@@ -36,7 +36,7 @@ const ListHearings = () => (
           </div>
         </div>
         <div className="l-layout l-mt-1 l-mb-3">
-          <article className="l-article l-article--full-width">
+          <article className="l-article l-article--topline l-article--full-width">
             <div className="js-expand-list">
               <h2 className=" l-mb-1 l-mt-1">Ute på høring</h2>
               <hr className="b-hr b-hr--thick" />
