@@ -6,6 +6,7 @@ import shortid from 'shortid';
 import searchIcon from '../static/base64/search';
 import MainHeaderMobileNav from './MainHeaderMobileNav';
 import BrowserWarning from './BrowserWarning';
+import IeBrowserWarning from './IeBrowserWarning';
 
 const MainHeader = props => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -45,6 +46,7 @@ const MainHeader = props => {
   return (
     <>
       <BrowserWarning/>
+      <IeBrowserWarning />
       {searchOpen && (
         <SearchTray
           open={searchOpen}

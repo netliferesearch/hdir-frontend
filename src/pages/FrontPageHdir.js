@@ -4,14 +4,9 @@ import Link from '../components/Link';
 import ThemeBox from '../components/ThemeBox';
 import InputSearch from '../components/InputSearch';
 import Card from '../components/Card';
-import IeBrowserWarning from '../components/IeBrowserWarning';
-
-
 
 const FrontPageHdir = () => (
   <main id="main" className="front">
-    <IeBrowserWarning/>
-
     <h1 className="visually-hidden">Helsedirektoratet</h1>
       <ThemeBox
         clearTopPadding
