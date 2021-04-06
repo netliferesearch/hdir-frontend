@@ -197,20 +197,20 @@ const NinjaStateRecommendation = () => (
                 heading="Slik refererer du [produkttype]"
                 id="contentFooter-1"
                 content={[
-                  <>
+                  <React.Fragment key={'contentFooter-1'}>
                     Helsedirektoratet (2020).{' '}
                     <i>Anbefaling for sekundær peritonitt [nettdokument].</i>{' '}
                     Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars
                     2019, lest 12. august 2020). Tilgjengelig fra:
                     https://www.helsedirektoratet.no/retningslinjer/antibiotika-i-sykehus/abdomen/sekundaer-peritonitt
-                  </>
+                  </React.Fragment>
                 ]}
               />
               <ContentFooter
                 heading="Åpne data (API)"
                 id="contentFooter-2"
                 content={[
-                  <>
+                  <React.Fragment  key={'contentFooter-2'}>
                     Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
                     <a href="https://utvikler.helsedirektoratet.no/">
                       https://utvikler.helsedirektoratet.no/
@@ -221,7 +221,7 @@ const NinjaStateRecommendation = () => (
                       [Fulltittel på innholdet]
                     </span>{' '}
                     er tilgjengelig i vårt API: https://xxxx
-                  </>
+                  </React.Fragment>
                 ]}
               />
             </div>

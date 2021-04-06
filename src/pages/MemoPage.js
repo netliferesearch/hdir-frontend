@@ -52,13 +52,13 @@ const ChapterPage = () => {
               <div className="b-profession-picker  b-profession-picker--negative-margin">
                 { // onclick="document.getElementById('profession-picker').classList.toggle('hide');"
                 }
-                <label for="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
+                <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
                 {
                   toggle ? (
-                    <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
-                      <select id="profession-selector" class="b-select__select">
-                        <option disabled="" class="b-select__option">Velg målgruppe</option>
-                        <option class="b-select__option">Lege</option>
+                    <div className="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
+                      <select id="profession-selector" className="b-select__select">
+                        <option disabled="" className="b-select__option">Velg målgruppe</option>
+                        <option className="b-select__option">Lege</option>
                       </select>
                     </div>
                   ) : null

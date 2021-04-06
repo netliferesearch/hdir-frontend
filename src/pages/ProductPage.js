@@ -453,7 +453,7 @@ const ProductPage = () => {
         heading="Slik refererer du [produkttype]"
         id="contentFooter-1"
         content={[
-          <>
+          <React.Fragment key={'contentFooter-1'}>
             Helsedirektoratet (2020).{' '}
             <i>
               Nasjonal faglig retningslinjer for svangerskapsdiabetes
@@ -462,14 +462,14 @@ const ProductPage = () => {
             Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars 2019, lest
             12. august 2020). Tilgjengelig fra:
             https://www.helsedirektoratet.no/retningslinjer/svangerskapsdiabetes
-          </>
+          </React.Fragment>
         ]}
       />
       <ContentFooter
         heading="Åpne data (API)"
         id="contentFooter-2"
         content={[
-          <>
+          <React.Fragment key={'contentFooter-2'}>
             Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
             <a href="https://utvikler.helsedirektoratet.no/">
               https://utvikler.helsedirektoratet.no/
@@ -477,7 +477,7 @@ const ProductPage = () => {
             <br />
             <br />
             [Fulltittel på innholdet] er tilgjengelig i vårt API: https://xxxx
-          </>
+          </React.Fragment >
         ]}
       />
     </div>
