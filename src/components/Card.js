@@ -16,16 +16,16 @@ const linkClasses = arrow =>
     'b-card__link--right-arrow': arrow === 'right'
   });
 
-const Card = ({ 
-  horizontal, 
-  children, 
-  heading, 
-  topic, 
-  text, 
-  content, 
-  mainContent, 
+const Card = ({
+  horizontal,
+  children,
+  heading,
+  topic,
+  text,
+  content,
+  mainContent,
   verticalGrow,
-  arrow 
+  arrow
 }) => (
   <a href="#a" className={cardClasses({horizontal, verticalGrow})}>
     {children && <div className="b-card__feature">{children}</div>}
