@@ -42,4 +42,9 @@ body {
   background-size: 6rem 2.1rem;
 }
 
+// Color fix for colapsibles
+.b-collapsible__button:before {
+  background-image: url(../static/icons/chevron_helfo.svg);
+}
+
 @import './print-pdf-helfo';

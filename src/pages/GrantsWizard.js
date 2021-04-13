@@ -23,10 +23,10 @@ const GrantsWizard = () => (
       <div className="l-container l-mt-3 l-mb-3">
         <ArticleIntro heading="Finn tilskudd" />
       </div>
-      <article>
+      <article className="l-container">
 
 
-        <section data-step="1" data-step-type="collapsible" data-key="test" data-input-type="radioValue" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="1" data-step-type="collapsible" data-key="test" data-input-type="radioValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="test"
@@ -54,7 +54,7 @@ const GrantsWizard = () => (
         </section>
 
 
-        <section data-step="2" data-step-type="collapsible" data-key="malgruppe" data-input-type="dropValue" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="2" data-step-type="collapsible" data-key="malgruppe" data-input-type="dropValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="aktor"
@@ -117,7 +117,7 @@ const GrantsWizard = () => (
         </section>
 
 
-        <section data-step="3" data-step-type="collapsible" data-key="categories" data-input-type="checkValue" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="3" data-step-type="collapsible" data-key="categories" data-input-type="checkValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="tema"
