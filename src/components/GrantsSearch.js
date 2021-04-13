@@ -63,7 +63,7 @@ const GrantsSearch = ({
       });
   }
 
-  const doSearch = useMemo(() => debounce(fetchResultsBySearch, 350, true), [debouncedChange]);
+  const doSearch = useMemo(() => debounce(fetchResultsBySearch, 1000, true), [debouncedChange]);
 
   const debouncedChange = useCallback(
     (value) => {
