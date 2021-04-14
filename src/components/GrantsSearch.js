@@ -48,7 +48,7 @@ const GrantsSearch = ({
 
   const fetchResultsWizard = () => {
     const dropValueQuery = formDropValue ? '&dropValue=' + formDropValue : ''
-    const checkValueQuery = formCheckValue ? '&checkValue=' + formCheckValue : ''
+    const checkValueQuery = formCheckValue && formCheckValue !== '[]' ? '&checkValue=' + formCheckValue : ''
     const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
     fetch(liveSearchUrl + '?length=' + pageLength + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
