@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 // Styles
-import './styles/App.scss';
+import './styles/Helfo.scss';
 // Import components
 import GlobalScopeScripts from './components/GlobalScopeScripts';
 import Loading from './components/Loading';
