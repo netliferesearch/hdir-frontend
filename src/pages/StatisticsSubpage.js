@@ -36,7 +36,7 @@ const StatisticsSubpage = () => (
               width="100%"
               height="600"
               src="https://app.powerbi.com/view?r=eyJrIjoiYTllNGYyOTMtNGQyMy00M2QyLTg3MTUtZmJjZTVjYTkwODczIiwidCI6IjZiYTFiZDVjLTc1MGYtNGFkNi1hYmEzLTBmOTU1ODViYzIxZiIsImMiOjh9"
-              frameborder="0"
+              frameBorder="0"
               allowFullScreen="true"
             />
           </div>

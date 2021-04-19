@@ -33,9 +33,6 @@ function findActiveHeading(headings, scrollPos, setActiveHeading) {
 
 const hasItems = arr => (arr && arr.length) ? true : false;
 
-const activeChild = children =>
-  children ? children.some(x => x.active) : false;
-
 const linkClasses = ({small = false, active = false, children = false, parent = false} = {}) =>
   classNames({
     'b-section-sidebar__link': parent,
@@ -49,6 +46,10 @@ const subLinkClasses = ({active = false} = {}) =>
     'b-section-sidebar__sub-link': true,
     'b-section-sidebar__sub-link--active': active
   });
+
+
+
+
 
 const sectionSidebarClasses = bottom =>
   classNames({

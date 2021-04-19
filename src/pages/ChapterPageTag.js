@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';

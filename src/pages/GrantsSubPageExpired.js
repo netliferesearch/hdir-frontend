@@ -1,10 +1,8 @@
 import React from 'react';
-import Link from '../components/Link';
 import Box from '../components/Box';
 import Timeline from '../components/Timeline';
 import Collapsible from '../components/Collapsible';
 import ContentFooter from '../components/ContentFooter';
-import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import PageMeta from '../components/PageMeta';
 import Button from '../components/Button';
@@ -107,7 +105,7 @@ const GrantsSubPageExpired = () => (
               </p>
               <p>
                 For nærmere informasjon om mål og målgruppe;{' '}
-                <a href="#">les regelverket</a>
+                <a href="#!">les regelverket</a>
               </p>
             </Collapsible>
             <Collapsible
@@ -190,7 +188,7 @@ const GrantsSubPageExpired = () => (
               heading="Slik refererer du [produkttype]"
               id="contentFooter-1"
               content={[
-                <>
+                <React.Fragment key={'contentFooter-1'}>
                   Helsedirektoratet (2020).{' '}
                   <i>
                     Nasjonal faglig retningslinjer for helsestasjons- og
@@ -199,14 +197,14 @@ const GrantsSubPageExpired = () => (
                   Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars 2019,
                   lest 12. august 2020). Tilgjengelig fra:
                   https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten.
-                </>
+                </React.Fragment>
               ]}
             />
             <ContentFooter
               heading="Åpne data (API)"
               id="contentFooter-2"
               content={[
-                <>
+                <React.Fragment key={'contentFooter-1'}>
                   Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
                   <br />
                   <a href="https://utvikler.helsedirektoratet.no/">
@@ -216,7 +214,7 @@ const GrantsSubPageExpired = () => (
                   <br />
                   <span className="t--bold">[Fulltittel på innholdet]</span> er
                   tilgjengelig i vårt API: https://xxxx
-                </>
+                </React.Fragment>
               ]}
             />
           </div>

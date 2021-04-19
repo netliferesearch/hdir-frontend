@@ -36,14 +36,14 @@ const listLinkClasses = (noArrow, active, ordered, file, url) =>
     'b-nav-list__link--ordered': ordered
   });
 
-const NavList = ({ 
+const NavList = ({
   id,
-  small, 
-  heading, 
-  columns, 
-  noArrow, 
-  ordered, 
-  list: list = [] 
+  small,
+  heading,
+  columns,
+  noArrow,
+  ordered,
+  list: list = []
 }) => (
   <nav
     className={listClasses(small)}
@@ -81,7 +81,7 @@ const NavList = ({
                 <div className="b-nav-list__item-meta">
                   {item.meta.map((x, i) => {
                     if (i === 0) return item.meta[0];
-                    return <div className="t--tab-left">{x}</div>;
+                    return <div key={`meta_${i}`} className="t--tab-left">{x}</div>;
                   })}
                 </div>
               ) : (

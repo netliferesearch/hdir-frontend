@@ -45,6 +45,10 @@ body {
 // Override blue bg color on theme box/boxes
 .b-box--blue-light {
   background: none;
+
+// Color fix for colapsibles
+.b-collapsible__button:before {
+  background-image: url(../static/icons/chevron_helfo.svg);
 }
 
 @import './print-pdf-helfo';
