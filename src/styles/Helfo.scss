@@ -42,4 +42,9 @@ body {
   background-size: 6rem 2.1rem;
 }
 
+// Override blue bg color on theme box/boxes
+.b-box--blue-light {
+  background: none;
+}
+
 @import './print-pdf-helfo';
