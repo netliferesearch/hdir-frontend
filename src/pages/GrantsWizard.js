@@ -39,8 +39,8 @@ const GrantsWizard = () => (
                   name="test"
                   options={[
                     {
-                      value: 'Kiropraktor',
-                      label: 'Kiropraktor'
+                      value: 'Robert Herland',
+                      label: 'Robert Herland'
                     },
                     {
                       value: 'Innbygger',
@@ -48,8 +48,12 @@ const GrantsWizard = () => (
                     },
                   ]}
                 />
+                <div className="l-mt-1">
+                  <button className="b-button" data-next>Neste</button>
+                </div>
               </div>
             </Collapsible>
+            
           </div>
         </section>
 
@@ -112,6 +116,9 @@ const GrantsWizard = () => (
                   },
                 ]}
               />
+              <div className="l-mt-1">
+                <button className="b-button" data-next>Neste</button>
+              </div>
             </Collapsible>
           </div>
         </section>
@@ -180,7 +187,7 @@ const GrantsWizard = () => (
                   />
                 </div>
                 <div className="l-mt-1">
-                  <button className="b-button" data-submit>Vis resultat</button>
+                  <button className="b-button" data-next>Neste</button>
                 </div>
               </div>
             </Collapsible>
@@ -192,10 +199,10 @@ const GrantsWizard = () => (
           <div className="l-mt-3">
             <GrantsSearch
               label="Vet du hvilket tilskudd du vil søke på?"
-              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/_/service/helsedirektoratet/wizardSearch"
+              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/horinger/_/service/helsedirektoratet/wizardSearch"
               collapsed
-              id="b36c6805-1cf8-4928-92fa-0ad071b2e76a"
-              pageLength={100}
+              id="6f9905ef-bf8f-4875-8508-d9fb583ef7ef"
+              pageLength="100"
             />
           </div>
         </section>

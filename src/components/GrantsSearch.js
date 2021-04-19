@@ -93,33 +93,42 @@ const GrantsSearch = ({
     steps.forEach(step => {
       const inputType = step.dataset.inputType;
       const key = step.dataset.key;
+      const nextBtn = step.querySelector('button[data-next]');
+      console.log(inputType)
 
       if (inputType === 'dropValue') {
         const input = step.querySelector('select');
 
         input.addEventListener("change", function (e) {
+          console.log('change drop', e.target.value)
           // Get the values
           if (key) {
+            console.log(e.target.value)
             setFormDropValue(e.target.value);
           }
-
         });
+
+        // nextBtn && nextBtn.addEventListener("click", function (e) {
+        //   fetchResultsWizard();
+        // });
       }
 
       if (inputType === 'checkValue') {
         const inputs = step.querySelectorAll('input[type="checkbox"]');
-        const submit = step.querySelector('button[data-submit]');
         
-        submit && submit.addEventListener("click", function (e) {
+        nextBtn && nextBtn.addEventListener("click", function (e) {
+          console.log('check')
           let values = []
           inputs.forEach(input => {
             if (input.checked) {
+              console.log(input)
               values.push(input.value)
             }
             if (!input.checked && values.find(cat => cat === input.value)) {
               values.filter(value => !input.value)
             }
           });
+          console.log(values)
           setFormCheckValue(values)
         });
       }
@@ -129,11 +138,17 @@ const GrantsSearch = ({
 
         radios.forEach(input => {
           input.addEventListener("change", function (e) {
+            console.log('radio', e.target.value)
             setFormRadioValue(e.target.value);
           });
         })
+
+        // nextBtn && nextBtn.addEventListener("click", function (e) {
+        //   fetchResultsWizard();
+        // });
         
       }
+      
     });
   // eslint-disable-next-line
   }, []);
@@ -215,6 +230,7 @@ const GrantsSearch = ({
      let allData = parsedData ? parsedData[key].map(item => {
        return {
          ...item,
+         type: item.type === 'tilskudd' || 'horing' ? 'grant' : 'generic', 
          fields: {
            ...item.fields,
            expired: key === 'Utløpt',
