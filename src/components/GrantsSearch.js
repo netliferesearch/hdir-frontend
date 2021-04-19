@@ -265,7 +265,7 @@ const GrantsSearch = ({
           <InputSearch
             id="tilskuddsok"
             label={label}
-            autoFocus={true}
+            autoFocus={false}
             showSuggestions={false}
             fnChange={debouncedChange}
           />
