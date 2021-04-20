@@ -48,7 +48,7 @@ const GrantsSearch = ({
 
   const fetchResultsWizard = () => {
     const dropValueQuery = formDropValue ? '&dropValue=' + formDropValue : ''
-    const checkValueQuery = formCheckValue && formCheckValue !== '[]' ? '&checkValue=' + formCheckValue : ''
+    const checkValueQuery = formCheckValue ? '&checkValue=' + formCheckValue : ''
     const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
     // console.log('formRadioValue', formRadioValue)
     // console.log('dropValueQuery', dropValueQuery)
@@ -84,15 +84,15 @@ const GrantsSearch = ({
     [searchResults],
   );
 
-  const getValuesFromSelected = (group) => {
+  const getValuesFromSelected = (group, query) => {
     /*
     * HELPER
     * Sort out which values are selected and not.
     * We do this because there may be multiple field groups on the page,
     * so we need to sort out which ones to keep and not.
     */
-    const allNodes = group.querySelectorAll('option')
-    const selectedNodes = group.querySelectorAll('option:checked')
+    const allNodes = group.querySelectorAll(query)
+    const selectedNodes = group.querySelectorAll(query + ':checked')
     let selected = []
     let notSelected = []
     selectedNodes.forEach(node => {
@@ -129,12 +129,15 @@ const GrantsSearch = ({
         input.addEventListener("change", function (e) {
           nextBtn && nextBtn.addEventListener("click", function () {
             const group = e.target.parentNode.parentNode
-            const { selected, notSelected } = getValuesFromSelected(group)
+            const { selected, notSelected } = getValuesFromSelected(group, 'option')
             setFormDropValue((existingValues) => {
               return [
                 ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
                 e.target.value.replace(',', '')
-              ]
+              ].filter(function (item, pos, self) {
+                // Make sure array has unique items
+                return self.indexOf(item) == pos;
+              })
             })
           });
 
@@ -155,10 +158,22 @@ const GrantsSearch = ({
             }
           });
           setFormCheckValue((existingValues) => {
-            return [
-              ...existingValues.filter(value => !values.includes(value)),
-              ...values
-            ]
+            if (existingValues.length > 0 && Array.isArray(existingValues)) {
+              return [
+                ...existingValues
+                  .filter(value => !values.includes(value))
+                  .filter(el => el != null),
+                ...values
+              ].filter(function (item, pos, self) {
+                // Make sure array has unique items
+                return self.indexOf(item) == pos;
+              })
+            } else {
+              return [
+                ...values
+              ]
+            }
+            
           })
         });
       }
@@ -170,12 +185,17 @@ const GrantsSearch = ({
           input.addEventListener("change", function (e) {
             nextBtn && nextBtn.addEventListener("click", function () {
               const group = e.target.parentNode.parentNode
-              const { notSelected } = getValuesFromSelected(group)
+              const { notSelected, selected } = getValuesFromSelected(group, 'input[type="radio"]')
               setFormRadioValue((existingValues) => {
                 return [
-                  ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
+                  ...existingValues
+                      .filter(el => !notSelected.includes(el))
+                      .filter(el => el != null),
                   e.target.value
-                ]
+                ].filter(function (item, pos, self) {
+                  // Make sure array has unique items
+                  return self.indexOf(item) == pos;
+                })
               })
 
             });
@@ -183,8 +203,6 @@ const GrantsSearch = ({
           });
         })
 
-        
-        
       }
       
     });
