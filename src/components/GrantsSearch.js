@@ -25,8 +25,8 @@ const GrantsSearch = ({
   const [tabIndex, setTabIndex] = useState(0);
   const [toggleMore, setToggleMore] = useState([]);
   // const [data, setData] = useState(initial);
-  const [formDropValue, setFormDropValue] = useState(malgruppe || '');
-  const [formRadioValue, setFormRadioValue] = useState('');
+  const [formDropValue, setFormDropValue] = useState(malgruppe || []);
+  const [formRadioValue, setFormRadioValue] = useState([]);
   const [formCheckValue, setFormCheckValue] = useState(categories || []);
   const liveSearchUrl = endpoint
     ? endpoint
@@ -50,6 +50,9 @@ const GrantsSearch = ({
     const dropValueQuery = formDropValue ? '&dropValue=' + formDropValue : ''
     const checkValueQuery = formCheckValue && formCheckValue !== '[]' ? '&checkValue=' + formCheckValue : ''
     const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
+    // console.log('formRadioValue', formRadioValue)
+    // console.log('dropValueQuery', dropValueQuery)
+    // console.log('formCheckValue', formCheckValue)
     fetch(liveSearchUrl + '?length=' + pageLength + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
@@ -58,6 +61,7 @@ const GrantsSearch = ({
         const results = data.reduce(
           (obj, item) => Object.assign(obj, item), {});
         setSearchResults(results);
+        console.log(results)
         setToggleMore(false);
         setLoading(false);
       });
@@ -80,6 +84,30 @@ const GrantsSearch = ({
     [searchResults],
   );
 
+  const getValuesFromSelected = (group) => {
+    /*
+    * HELPER
+    * Sort out which values are selected and not.
+    * We do this because there may be multiple field groups on the page,
+    * so we need to sort out which ones to keep and not.
+    */
+    const allNodes = group.querySelectorAll('option')
+    const selectedNodes = group.querySelectorAll('option:checked')
+    let selected = []
+    let notSelected = []
+    selectedNodes.forEach(node => {
+      selected.push(node.value.replace(',', ''))
+    })
+    allNodes.forEach(node => {
+      if (!selected.includes(node.value)) {
+        notSelected.push(node.value.replace(',', ''))
+      }
+    })
+    return {
+      selected, notSelected
+    }
+  }
+
 
   useEffect(() => {
     /*
@@ -99,15 +127,16 @@ const GrantsSearch = ({
         const input = step.querySelector('select');
 
         input.addEventListener("change", function (e) {
-          // Get the values
-          if (key) {
-            setFormDropValue(e.target.value);
-          }
-        });
+          const group = e.target.parentNode.parentNode
+          const { selected, notSelected } = getValuesFromSelected(group)
+          setFormDropValue((existingValues) => {
+            return [
+              ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
+              e.target.value.replace(',', '')
+            ]
+          })
 
-        // nextBtn && nextBtn.addEventListener("click", function (e) {
-        //   fetchResultsWizard();
-        // });
+        });
       }
 
       if (inputType === 'checkValue') {
@@ -123,7 +152,12 @@ const GrantsSearch = ({
               values.filter(value => !input.value)
             }
           });
-          setFormCheckValue(values)
+          setFormCheckValue((existingValues) => {
+            return [
+              ...existingValues.filter(value => !values.includes(value)),
+              ...values
+            ]
+          })
         });
       }
 
@@ -132,13 +166,17 @@ const GrantsSearch = ({
 
         radios.forEach(input => {
           input.addEventListener("change", function (e) {
-            setFormRadioValue(e.target.value);
+            const group = e.target.parentNode.parentNode
+            const { notSelected } = getValuesFromSelected(group)
+            setFormRadioValue((existingValues) => {
+              return [
+                ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
+                e.target.value
+              ]
+            })
+
           });
         })
-
-        // nextBtn && nextBtn.addEventListener("click", function (e) {
-        //   fetchResultsWizard();
-        // });
         
       }
       
@@ -207,6 +245,11 @@ const GrantsSearch = ({
       const bDate = new Date(dateB);
       return reverse ? Number(bDate) - Number(aDate) : Number(aDate) - Number(bDate);
     });
+  }
+
+  const isEmpty = (obj) => {
+    if (!obj) { return true }
+    return Object.keys(obj).length === 0
   }
 
   const tabPanels = (data) => {
@@ -339,11 +382,11 @@ const GrantsSearch = ({
         ) : null}
 
 
-      { // NO SEARCH RESULTS
-        searchString.length > 0 && !loading && !searchResults ? (
+      { // NO SEARCH RESULTS: WIZARD MODE
+        !initial && !loading && isEmpty(searchResults) ? (
           <div className="l-mb-4">
             <div className="col-xs-12 l-mt-2 l-mb-3">
-              <p>0 treff på «{searchString}»</p>
+              <p>Fant ingen resultater. Prøv å endre noen av valgene dine.</p>
             </div>
           </div>
         ) : null
