@@ -61,7 +61,7 @@ const GrantsWizard = () => (
         <section data-step="2" data-step-type="collapsible" data-key="test2" data-input-type="radioValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
-              id="test"
+              id="test33"
               heading="1. Test av radiobuttons"
             >
               <div className="l-mt-1">
@@ -157,7 +157,7 @@ const GrantsWizard = () => (
         <section data-step="4" data-step-type="collapsible" data-key="malgruppe2" data-input-type="dropValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
-              id="aktor"
+              id="aktor2"
               heading="2b. Hvem søker du på vegne av?"
             >
               <Select

@@ -127,14 +127,16 @@ const GrantsSearch = ({
         const input = step.querySelector('select');
 
         input.addEventListener("change", function (e) {
-          const group = e.target.parentNode.parentNode
-          const { selected, notSelected } = getValuesFromSelected(group)
-          setFormDropValue((existingValues) => {
-            return [
-              ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
-              e.target.value.replace(',', '')
-            ]
-          })
+          nextBtn && nextBtn.addEventListener("click", function () {
+            const group = e.target.parentNode.parentNode
+            const { selected, notSelected } = getValuesFromSelected(group)
+            setFormDropValue((existingValues) => {
+              return [
+                ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
+                e.target.value.replace(',', '')
+              ]
+            })
+          });
 
         });
       }
@@ -166,17 +168,22 @@ const GrantsSearch = ({
 
         radios.forEach(input => {
           input.addEventListener("change", function (e) {
-            const group = e.target.parentNode.parentNode
-            const { notSelected } = getValuesFromSelected(group)
-            setFormRadioValue((existingValues) => {
-              return [
-                ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
-                e.target.value
-              ]
-            })
+            nextBtn && nextBtn.addEventListener("click", function () {
+              const group = e.target.parentNode.parentNode
+              const { notSelected } = getValuesFromSelected(group)
+              setFormRadioValue((existingValues) => {
+                return [
+                  ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
+                  e.target.value
+                ]
+              })
+
+            });
 
           });
         })
+
+        
         
       }
       
@@ -185,7 +192,7 @@ const GrantsSearch = ({
   }, []);
 
   useEffect(() => {
-    // Wizard mode, trigger search on category/malgruppe changes
+    // Wizard mode, trigger search on input changes
     if (!initial) {
       setLoading(true);
       fetchResultsWizard();
