@@ -199,13 +199,14 @@ const ListItemType = props => {
 
       {(type === 'tilskudd' || type === 'grant') && (
         <div
+          key={fields.heading}
           className={classNames({
             'b-list-item-type': true,
             'b-list-item-type__flex-wrapper': true,
             'b-list-item-type--no-arrow': fields.download || fields.openPdf,
           })}
         >
-          <div className={`b-list-item-type__date-circle ${fields.expired && 'b-list-item-type__date-circle--expired'}`}>
+          <div className={`b-list-item-type__date-circle ${fields.expired && 'b-list-item-type__date-circle--expired'} ${fields.generic && 'b-list-item-type__date-circle--generic'}`}>
             <span className="b-list-item-type__date-big">{fields.frist && fields.frist.day && fields.frist.day}</span>
             {fields.frist && fields.frist.month ? fields.frist.month : 'Løpende'}
           </div>
@@ -319,6 +320,7 @@ ListItemType.propTypes = {
       'generic',
       'grant',
       'tilskudd',
+      'archive',
     ]),
     fields: PropTypes.object
   }).isRequired

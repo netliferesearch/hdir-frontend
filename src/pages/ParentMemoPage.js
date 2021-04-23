@@ -60,10 +60,10 @@ const ProductPage = () => {
               <label htmlFor="profession-selector" className="b-profession-picker__label"><button onClick={() => setToggle(!toggle)} className="b-button--clean b-profession-picker__button">Tilpass innholdet til meg</button></label>
               {
                 toggle ? (
-                  <div class="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
-                    <select id="profession-selector" class="b-select__select">
-                      <option disabled="" class="b-select__option">Velg målgruppe</option>
-                      <option class="b-select__option">Lege</option>
+                  <div className="b-select l-mt-1 l-mb-3 col-md-6" id="profession-picker">
+                    <select id="profession-selector" className="b-select__select">
+                      <option disabled="" className="b-select__option">Velg målgruppe</option>
+                      <option className="b-select__option">Lege</option>
                     </select>
                   </div>
                 ) : null
@@ -85,9 +85,9 @@ const ProductPage = () => {
                 <div className="b-toggle-content__text">
                   <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
                   <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
-                  <p>I dette kapitlet presenteres <button className="b-definition__button" data-target="hovedarbeidsgiver">hovedarbeidsgiver</button><div id="hovedarbeidsgiver" className="b-definition__item">
+                  <p>I dette kapitlet presenteres <button className="b-definition__button" data-target="hovedarbeidsgiver">hovedarbeidsgiver</button><span id="hovedarbeidsgiver" className="b-definition__item">
                     Her er definisjon av ordet
-                    </div>  Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
+                    </span>  Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
                   <p>I dette kapitlet presenteres Helsedirektoratets anbefalinger for å sikre en effektiv behandling til riktig tid i alle faser av behandlingsforløpet .</p>
                 </div>
                 <Button secondary onClick={() => document.getElementById('about-text').classList.toggle('show')}>Les hele</Button>
