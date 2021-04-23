@@ -46,7 +46,6 @@ const MainHeader = props => {
   return (
     <>
       <BrowserWarning/>
-      <IeBrowserWarning />
       {searchOpen && (
         <SearchTray
           open={searchOpen}
