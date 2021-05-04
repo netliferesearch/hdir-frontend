@@ -15,6 +15,13 @@ import PropTypes from 'prop-types';
 ** dots in the timeline are placed with equal spacing.  
 */
 
+/*
+** Timeline: A script in the vanilla-js repo checks for number of items, and adds a 
+** class corresponding to that number. The CSS then places the items accordingly.
+** Yes it uses flexbox, but it also needs some custom placement to make sure all the 
+** dots in the timeline are placed with equal spacing.  
+*/
+
 const Timeline = ({ label, items }) => {
   return (
     <section className="l-mb-2">
