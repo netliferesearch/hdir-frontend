@@ -3,6 +3,7 @@
   border-left: 4px solid $grey;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &--small {
     font-size: $meta-text;
@@ -84,5 +85,9 @@
     margin-top: 0.25em;
     text-align: left;
     flex-grow: 1;
+    
+    p {
+      display: inline;
+    }
   }
 }
