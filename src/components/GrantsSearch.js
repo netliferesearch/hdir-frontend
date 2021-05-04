@@ -62,7 +62,6 @@ const GrantsSearch = ({
         setSearchResults(results);
         console.log(results)
         setToggleMore(false);
-        setToggleMore2(false);
         setLoading(false);
       });
   }
