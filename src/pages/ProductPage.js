@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavList from '../components/NavList';
 import ContentFooter from '../components/ContentFooter';
 import ChapterHeading from '../components/ChapterHeading';
 import Button from '../components/Button';
-import Box from '../components/Box';
-import Link from '../components/Link';
 import PageMeta from '../components/PageMeta';
 import LongShortHeading from '../components/LongShortHeading';
 import SectionSidebar from '../components/SectionSidebar';
 import ProductSearch from '../components/ProductSearch';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Select from '../components/Select';
 import { dummyFlatTree } from '../components/dummyFlatTree'
+import ProfessionPicker from '../components/ProfessionPicker';
 
 const ProductPage = () => {
-  const [toggle, setToggle] = useState(false);
-  
   return (
     <div className="l-container l-mb-2">
       <Breadcrumbs
@@ -73,15 +69,7 @@ const ProductPage = () => {
             />
           </aside>
           <div className="l-article l-article--topline">
-            <div className="b-profession-picker">
-              <label htmlFor="profession-selector" className="b-profession-picker__label"><button className="b-button--clean b-profession-picker__button" id="profession-picker">Tilpass innholdet til meg</button></label>
-              <div className="b-select l-mt-1 l-mb-3 col-md-6 hide" id="profession-picker__content" hidden>
-                <select id="profession-selector" className="b-select__select" aria-hidden="true">
-                  <option disabled="" className="b-select__option">Velg målgruppe</option>
-                  <option className="b-select__option">Lege</option>
-                </select>
-              </div>
-            </div>
+            <ProfessionPicker frontPage />
             <ProductSearch
               label="retningslinjen"
               productId="0e87de78-2cb4-4a70-93a7-0d687443b71e"
@@ -89,7 +77,7 @@ const ProductPage = () => {
               malGruppe={''}
               collapsed
             />
-            
+
             <div className="col-xs-12 l-mt-2">
               <ChapterHeading
                 heading="1. Fellesdel: Ledelse, styring og brukermedvirkning"
@@ -136,7 +124,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-          
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="2. Fellesdel: Samhandling og samarbeid"
@@ -186,7 +174,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="3. Fellesdel: Opplysningsplikt"
@@ -220,8 +208,8 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
-            
+
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="4. Helsestasjon 0–5 år"
@@ -327,7 +315,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="5. Skolehelsetjenesten 5–20 år"
@@ -365,8 +353,8 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
-            
+
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="6. Helsestasjon for ungdom"
@@ -436,7 +424,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="7. Metode og prosess"
@@ -445,7 +433,7 @@ const ProductPage = () => {
               />
               <hr className="b-hr b-hr--blue" />
             </div>
-            
+
           </div>
         </div>
       </main>
@@ -465,7 +453,7 @@ const ProductPage = () => {
         heading="Slik refererer du [produkttype]"
         id="contentFooter-1"
         content={[
-          <>
+          <React.Fragment key={'contentFooter-1'}>
             Helsedirektoratet (2020).{' '}
             <i>
               Nasjonal faglig retningslinjer for svangerskapsdiabetes
@@ -474,14 +462,14 @@ const ProductPage = () => {
             Oslo: Helsedirektoratet (sist faglig oppdatert 12. mars 2019, lest
             12. august 2020). Tilgjengelig fra:
             https://www.helsedirektoratet.no/retningslinjer/svangerskapsdiabetes
-          </>
+          </React.Fragment>
         ]}
       />
       <ContentFooter
         heading="Åpne data (API)"
         id="contentFooter-2"
         content={[
-          <>
+          <React.Fragment key={'contentFooter-2'}>
             Få tilgang til innhold fra Helsedirektoratet som åpne data:{' '}
             <a href="https://utvikler.helsedirektoratet.no/">
               https://utvikler.helsedirektoratet.no/
@@ -489,7 +477,7 @@ const ProductPage = () => {
             <br />
             <br />
             [Fulltittel på innholdet] er tilgjengelig i vårt API: https://xxxx
-          </>
+          </React.Fragment >
         ]}
       />
     </div>

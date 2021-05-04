@@ -1,20 +1,13 @@
 import React from 'react';
 
 import List from '../components/List';
-import NavList from '../components/NavList';
 import Card from '../components/Card';
-import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
-import Link from '../components/Link';
 import Button from '../components/Button';
-import Alert from '../components/Alert';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
-import SectionSidebar from '../components/SectionSidebar';
-import Statistics from '../components/Statistics';
 
 const ArticlePageNews = () => (
-
   <>
     <div className="l-container">
       <Breadcrumbs
@@ -33,7 +26,7 @@ const ArticlePageNews = () => (
         <div className="row l-mt-3">
           <div className="col-md-8 col-xs-12 col-md-offset-2">
             <div className=" l-mb-3">
-              <img width="100%" src="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG" />
+              <img width="100%" alt="" src="https://www.helsedirektoratet.no/nyheter/nytt-e-laeringskurs-i-palliativ-behandling-av-eldre-og-alvorlig-syke-med-covid-19/_/image/4a4f7079-f4ef-4d98-bace-581dc6145b92:e9a2766fad874433e0f60f63d912d36488c53559/width-768/Skjermbilde.PNG" />
               <figcaption>Et nytt e-læringskurs skal gi helsepersonell i kommunale helse- og omsorgstjenester kompetanse i palliativ omsorg, pleie og behandling av eldre og alvorlig syke personer med covid-19. Foto: Illustrasjonsbilde</figcaption>
             </div>
             <ArticleIntro
@@ -45,7 +38,7 @@ const ArticlePageNews = () => (
         </div>
         <div className="row l-mt-2">
           <article className="col-md-8 col-xs-12 col-md-offset-2 t-body-text">
-            
+
             <p>
               Eldre og mennesker med underliggende sykdommer er spesielt utsatt for å bli alvorlig syke av covid-19. Kommuner som har hatt utbrudd, melder om svingende og dramatiske sykdomsforløp. Samtidig har det manglet opplæring i covid-19-spesifikk palliasjon for helsepersonell i kommunale helse- og omsorgstjenester.
             </p>
@@ -61,11 +54,11 @@ const ArticlePageNews = () => (
             <p>Kurset retter seg spesielt mot kommunale helse- og omsorgstjenester, og ansatte der som trenger kompetanseheving innenfor palliativ omsorg, pleie og behandling ved covid-19. Kurset vil også være interessant for helsepersonell i spesialisthelsetjenesten. E-læringskurset består av seks moduler og tar 2-3 timer å gjennomføre. </p>
 
             <h2>Praktisk opplæring</h2>
-            <p>Kurset gir opplæring i symptomstøttende behandling i en fase hvor pasienten klarer seg bra og kanskje blir frisk igjen. Det inkluderer også opplæring i kliniske observasjoner, slik at helsepersonellet raskt kan identifisere forverring, og til slutt omhandler kurset palliativ pleie, omsorg og behandling i livets sluttfase når pasienten blir svært syk. E-læringskurset er gratis og åpent for alle. For å gjennomføre kurset trengs kun PC eller iPad med internettilkobling. 
+            <p>Kurset gir opplæring i symptomstøttende behandling i en fase hvor pasienten klarer seg bra og kanskje blir frisk igjen. Det inkluderer også opplæring i kliniske observasjoner, slik at helsepersonellet raskt kan identifisere forverring, og til slutt omhandler kurset palliativ pleie, omsorg og behandling i livets sluttfase når pasienten blir svært syk. E-læringskurset er gratis og åpent for alle. For å gjennomføre kurset trengs kun PC eller iPad med internettilkobling.
 
             </p>
 
-            <p>Kurset finner du på nettsidene til <a>Nasjonal kompetansetjeneste for aldring og helse</a>. </p>
+            <p>Kurset finner du på nettsidene til <a href="#!">Nasjonal kompetansetjeneste for aldring og helse</a>. </p>
 
 
             <div className="l-mt-3">
@@ -133,7 +126,7 @@ const ArticlePageNews = () => (
             <hr className="b-hr b-hr--thick" />
           </div>
           <div className="l-mt-1">
-            
+
             <div className="row">
               <div className="col-xs-12 col-md-6">
                 <Card
@@ -182,12 +175,12 @@ const ArticlePageNews = () => (
                   ]}
                 />
               </div>
-              
+
             </div>
           </div>
         </div>
       </div>
-     
+
 
     </div>
   </>

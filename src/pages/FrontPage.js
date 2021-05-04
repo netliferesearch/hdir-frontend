@@ -7,6 +7,7 @@ const pages = [
   { link: '/anbefaling', desc: 'Anbefaling' },
   { link: '/anbefaling-antibiotika', desc: 'Anbefaling antibiotika' },
   { link: '/ninja-state', desc: 'Ninja State' },
+  { link: '/ninja-state-tilskudd', desc: 'Ninja State tilskudd' },
   { link: '/produkt', desc: 'Produktforside' },
   {
     link: '/produkt-malgruppevelger',
@@ -36,6 +37,7 @@ const pages = [
   { link: '/tilskudd', desc: 'Tilskudd' },
   { link: '/horinger', desc: 'Høringer' },
   { link: '/konferanser-liste', desc: 'Konferanser' },
+  { link: '#', desc: '-' },
   { link: '#', desc: '-' },
 
   { heading: 'Andre malsider' },
@@ -69,6 +71,7 @@ const pages = [
   { link: '/søkeresultat', desc: 'Søkeresultat' },
   { link: '/tidligere-versjoner', desc: 'Tidligere versjoner' },
   { link: '/tilskudd-underside', desc: 'Tilskudd underside' },
+  { link: '/tilskudd-veiviser', desc: 'Tilskudd veiviser' },
   {
     link: '/tilskudd-underside-utgått-søknadsfrist',
     desc: 'Tilskudd underside utgått søknadsfrist'
@@ -83,9 +86,9 @@ const renderPageItems = pages => {
     const { link = '', desc = '', heading = '' } = pages[p];
     if (heading) {
       thePages.push(
-        <div>
+        <div  key={`page-${p}`}>
           <br />
-          <h3 key={`page-${p}`}>{heading}</h3>
+          <h3>{heading}</h3>
         </div>
       );
     } else {

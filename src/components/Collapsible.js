@@ -12,7 +12,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import zenscroll from 'zenscroll';
 
 import uuidv4 from 'uuid/v4';
 
@@ -37,8 +36,7 @@ const headingClasses = (size, bold) =>
     'b-collapsible__heading': true,
     h2: size === 'large',
     h3: size === 'medium',
-    normal: size === 'small',
-    normal: size === 'tiny',
+    normal: size === 'small' || size === 'tiny',
     // These additional 'bold' classes are here because HDIR wants to keep semantic choices whilst
     //  still having control over 'bold' styles on headings.
     //  Note that one has to explicitly specify if the 'bold' prop is false. Leaving it undefined
@@ -93,12 +91,14 @@ const Collapsible = props => {
     }
     // Clean hash
     // window.history.replaceState(null, null, window.location.pathname);
+    // eslint-disable-next-line
   }, [collapsed, props.collapsed]);
 
   useEffect(() => {
     setCollapsed(props.collapsed);
+  // eslint-disable-next-line
   }, [props.collapsed]);
-  
+
   const headingSelector = () => {
     if (props.h) {
       return props.h;
@@ -143,11 +143,27 @@ const Collapsible = props => {
           <div className="b-collapsible__tag-content">{props.tag.description}</div>
         )}
 
+      { props.dateFrom || props.dateTo ?
+        <div className="b-collapsible__meta-date b-collapsible__meta-date--from-to">
+          {props.dateFrom && (
+            <div className="b-collapsible__meta-date-from">
+              Gyldig fra: {props.dateFrom}
+            </div>
+          )}
+          {props.dateTo && (
+            <div className="b-collapsible__meta-date-to">
+              Gyldig til: {props.dateTo}
+            </div>
+          )}
+        </div>
+        : null}
+
       {props.subheading && !props.subheadingContent && (
         <div className="b-collapsible__subheading l-mt-1">
           {props.subheading}
         </div>
       )}
+
       {!props.subheading && props.subheadingContent && (
         <div className="l-mt-1"> {props.subheadingContent}</div>
       )}
@@ -188,6 +204,14 @@ const Collapsible = props => {
       >
 
         {props.children}
+
+        {props.archiveLink && (
+          <p>
+            <a href="#!" className="b-collapsible__link">
+              Se tidligere utgaver
+            </a>
+          </p>
+        )}
       </div>
 
       {props.metaContent ? (
@@ -219,11 +243,11 @@ const Collapsible = props => {
               >
               Lukk
             </button>
-          
-            { props.date ? 
+
+            { props.date ?
               <div className="b-collapsible__meta-date">
               {props.date}<span className="hide-mobile">&nbsp; | &nbsp;</span>
-                <a href="#" className="b-page-meta__link">
+                <a href="#!" className="b-page-meta__link">
                   Se tidligere versjoner
                 </a>
               </div>

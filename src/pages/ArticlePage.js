@@ -5,7 +5,6 @@ import NavList from '../components/NavList';
 // import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
-import Card from '../components/Card';
 import ThemeBox from '../components/ThemeBox';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -37,7 +36,6 @@ const ArticlePage = () => (
           <ArticleIntro
             heading="Arbeid og psykisk helse"
             lead="Arbeidslivet bidrar til mange helsefremmende faktorer for de fleste. Arbeid er med på å sikre personlig økonomi, gi struktur i hverdagen, skape tilhørighet og gi økt selvfølelse."
-            image="./photo.jpg"
             imageDescription="Bildetekst"
           />
         </div>
