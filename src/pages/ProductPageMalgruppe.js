@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavList from '../components/NavList';
 import ChapterHeading from '../components/ChapterHeading';
 import Button from '../components/Button';
-import Link from '../components/Link';
 import PageMeta from '../components/PageMeta';
 import LongShortHeading from '../components/LongShortHeading';
 import SectionSidebar from '../components/SectionSidebar';
@@ -11,8 +10,6 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ProductPageMalgruppe = () => {
-  const [toggle, setToggle] = useState(false);
-  
   return (
     <div className="l-container l-mb-2">
       <Breadcrumbs
@@ -86,7 +83,7 @@ const ProductPageMalgruppe = () => {
               malGruppe={''}
               collapsed
             />
-            
+
             <div className="col-xs-12 l-mt-2">
               <ChapterHeading
                 heading="1. Fellesdel: Ledelse, styring og brukermedvirkning"
@@ -133,7 +130,7 @@ const ProductPageMalgruppe = () => {
                 </div>
               </div>
             </div>
-          
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="2. Fellesdel: Samhandling og samarbeid"
@@ -183,7 +180,7 @@ const ProductPageMalgruppe = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="3. Fellesdel: Opplysningsplikt"
@@ -217,8 +214,7 @@ const ProductPageMalgruppe = () => {
                 </div>
               </div>
             </div>
-            
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="4. Helsestasjon 0–5 år"
@@ -324,8 +320,7 @@ const ProductPageMalgruppe = () => {
                 </div>
               </div>
             </div>
-            
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="5. Skolehelsetjenesten 5–20 år"
@@ -363,8 +358,8 @@ const ProductPageMalgruppe = () => {
                 </div>
               </div>
             </div>
-            
-            
+
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="6. Helsestasjon for ungdom"
@@ -434,7 +429,7 @@ const ProductPageMalgruppe = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-12 l-mt-3">
               <ChapterHeading
                 heading="7. Metode og prosess"
@@ -443,7 +438,7 @@ const ProductPageMalgruppe = () => {
               />
               <hr className="b-hr b-hr--blue" />
             </div>
-            
+
           </div>
         </div>
       </main>
