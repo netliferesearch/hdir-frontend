@@ -1,5 +1,3 @@
-// IN USE ANYMORE??
-
 import React, { useState } from 'react';
 import Alert from './Alert';
 import Button from './Button';
