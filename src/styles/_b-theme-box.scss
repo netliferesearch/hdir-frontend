@@ -8,6 +8,6 @@
   }
 }
 
-.front .b-theme-box-wrapper {
+.front .b-theme-box-wrapper:first-child {
   margin-top: -$space-md !important;
 }

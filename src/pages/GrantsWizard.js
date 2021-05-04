@@ -23,10 +23,10 @@ const GrantsWizard = () => (
       <div className="l-container l-mt-3 l-mb-3">
         <ArticleIntro heading="Finn tilskudd" />
       </div>
-      <article>
+      <article className="l-container">
 
 
-        <section data-step="1" data-step-type="collapsible" data-key="test" data-input-type="radioValue" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="1" data-step-type="collapsible" data-key="test" data-input-type="radioValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="test"
@@ -36,11 +36,11 @@ const GrantsWizard = () => (
               <div className="l-mt-1">
                 <RadioButtonGroup
                   heading="Velg type"
-                  name="test"
+                  name="test8"
                   options={[
                     {
-                      value: 'Kiropraktor',
-                      label: 'Kiropraktor'
+                      value: 'Robert Herland',
+                      label: 'Robert Herland'
                     },
                     {
                       value: 'Innbygger',
@@ -48,17 +48,117 @@ const GrantsWizard = () => (
                     },
                   ]}
                 />
+                <div className="l-mt-1">
+                  <button className="b-button" data-next>Neste</button>
+                </div>
+              </div>
+            </Collapsible>
+            
+          </div>
+        </section>
+
+
+        <section data-step="2" data-step-type="collapsible" data-key="test2" data-input-type="radioValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
+          <div className="l-container l-mt-2 l-mb-2">
+            <Collapsible
+              id="test33"
+              heading="1. Test av radiobuttons"
+            >
+              <div className="l-mt-1">
+                <RadioButtonGroup
+                  heading="Velg type"
+                  name="test"
+                  options={[
+                    {
+                      value: 'Test1',
+                      label: 'Test1'
+                    },
+                    {
+                      value: 'Test2',
+                      label: 'Test2'
+                    },
+                  ]}
+                />
+                <div className="l-mt-1">
+                  <button className="b-button" data-next>Neste</button>
+                </div>
+              </div>
+            </Collapsible>
+            
+          </div>
+        </section>
+
+
+        <section data-step="3" data-step-type="collapsible" data-key="malgruppe" data-input-type="dropValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
+          <div className="l-container l-mt-2 l-mb-2">
+            <Collapsible
+              id="aktor"
+              heading="2. Hvem søker du på vegne av?"
+            >
+              <Select
+                placeholder="Velg"
+                placeholderSelected
+                stacked
+                zIndex
+                options={[
+                  {
+                    title: 'Test1',
+                    id: 'test1'
+                  },
+                  {
+                    title: 'test2',
+                    id: 'test2'
+                  },
+                  {
+                    title: 'test selskap',
+                    id: 'test3'
+                  },
+                  {
+                    title: 'test foretak (f.eks RHF, HF)',
+                    id: 'test4'
+                  },
+                  {
+                    title: 'test/ideell organisasjon',
+                    id: 'test5'
+                  },
+                  {
+                    title: 'test eller høyskole',
+                    id: 'test6'
+                  },
+                  {
+                    title: 'testestet',
+                    id: 'test7'
+                  },
+                  {
+                    title: 'test utenfor Norge (f.eks internasjonal org, EU)',
+                    id: 'test8'
+                  },
+                  {
+                    title: 'ssesetetset',
+                    id: 'test9'
+                  },
+                  {
+                    title: 'test tjenesteyter med avtale med kommunen',
+                    id: 'test10'
+                  },
+                  {
+                    title: 'Andre test',
+                    id: 'test11'
+                  },
+                ]}
+              />
+              <div className="l-mt-1">
+                <button className="b-button" data-next>Neste</button>
               </div>
             </Collapsible>
           </div>
         </section>
 
-
-        <section data-step="2" data-step-type="collapsible" data-key="malgruppe" data-input-type="dropValue" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="4" data-step-type="collapsible" data-key="malgruppe2" data-input-type="dropValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
-              id="aktor"
-              heading="2. Hvem søker du på vegne av?"
+              id="aktor2"
+              heading="2b. Hvem søker du på vegne av?"
             >
               <Select
                 placeholder="Velg"
@@ -112,12 +212,15 @@ const GrantsWizard = () => (
                   },
                 ]}
               />
+              <div className="l-mt-1">
+                <button className="b-button" data-next>Neste</button>
+              </div>
             </Collapsible>
           </div>
         </section>
 
 
-        <section data-step="3" data-step-type="collapsible" data-key="categories" data-input-type="checkValue" className="b-box b-box--no-padding b-box--no-border-radius b-box--blue-border b-box--stacked">
+        <section data-step="5" data-step-type="collapsible" data-key="categories" data-input-type="checkValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
           <div className="l-container l-mt-2 l-mb-2">
             <Collapsible
               id="tema"
@@ -180,22 +283,92 @@ const GrantsWizard = () => (
                   />
                 </div>
                 <div className="l-mt-1">
-                  <button className="b-button" data-submit>Vis resultat</button>
+                  <button className="b-button" data-next>Neste</button>
                 </div>
               </div>
             </Collapsible>
           </div>
         </section>
 
-        <section data-step="4" data-step-type="result" className="l-container l-mt-3 l-mb-3">
+        <section data-step="6" data-step-type="collapsible" data-key="categories2" data-input-type="checkValue" className="b-box b-box--no-border-radius b-box--blue-border b-box--stacked">
+          <div className="l-container l-mt-2 l-mb-2">
+            <Collapsible
+              id="tema2"
+              heading="3b. Velg tema for aktiviteten du ønsker å få støtte/tilskudd til"
+            >
+              <div className="l-mt-1">
+                <div>
+                  <CheckboxGroup
+                    name="tema"
+                    options={[
+                      {
+                        value: 'id21',
+                        label: 'Særskilte behov'
+                      },
+                      {
+                        value: 'id22',
+                        label: 'Pilotprosjekt'
+                      },
+                      {
+                        value: 'id23',
+                        label: 'Psykisk helse'
+                      },
+                      {
+                        value: 'id24',
+                        label: 'Barn og unge'
+                      },
+                      {
+                        value: 'id25',
+                        label: 'Rus og avhengighet'
+                      },
+                      {
+                        value: 'id26',
+                        label: 'Eldre'
+                      },
+                      {
+                        value: 'id27',
+                        label: 'Kompetanse og personell'
+                      },
+                      {
+                        value: 'id28',
+                        label: 'Velferdsteknologi'
+                      },
+                      {
+                        value: 'id29',
+                        label: 'Tannhelse'
+                      },
+                      {
+                        value: 'id210',
+                        label: 'Vold og overgrep'
+                      },
+                      {
+                        value: 'id211',
+                        label: 'Refusjon'
+                      },
+                      {
+                        value: 'id212',
+                        label: 'Seksuell helse'
+                      }
+                    ]}
+                  />
+                </div>
+                <div className="l-mt-1">
+                  <button className="b-button" data-next>Neste</button>
+                </div>
+              </div>
+            </Collapsible>
+          </div>
+        </section>
+
+        <section data-step="7" data-step-type="result" className="l-container l-mt-3 l-mb-3">
           <h2>Disse tilskuddene kan være relevante for deg</h2>
           <div className="l-mt-3">
             <GrantsSearch
               label="Vet du hvilket tilskudd du vil søke på?"
-              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/_/service/helsedirektoratet/wizardSearch"
+              endpoint="https://helsedir-helsenett-xptest.enonic.cloud/horinger/_/service/helsedirektoratet/wizardSearch"
               collapsed
-              id="b36c6805-1cf8-4928-92fa-0ad071b2e76a"
-              pageLength={100}
+              id="6f9905ef-bf8f-4875-8508-d9fb583ef7ef"
+              pageLength="100"
             />
           </div>
         </section>

@@ -25,8 +25,8 @@ const GrantsSearch = ({
   const [tabIndex, setTabIndex] = useState(0);
   const [toggleMore, setToggleMore] = useState([]);
   // const [data, setData] = useState(initial);
-  const [formDropValue, setFormDropValue] = useState(malgruppe || '');
-  const [formRadioValue, setFormRadioValue] = useState('');
+  const [formDropValue, setFormDropValue] = useState(malgruppe || []);
+  const [formRadioValue, setFormRadioValue] = useState([]);
   const [formCheckValue, setFormCheckValue] = useState(categories || []);
   const liveSearchUrl = endpoint
     ? endpoint
@@ -50,6 +50,9 @@ const GrantsSearch = ({
     const dropValueQuery = formDropValue ? '&dropValue=' + formDropValue : ''
     const checkValueQuery = formCheckValue ? '&checkValue=' + formCheckValue : ''
     const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
+    // console.log('formRadioValue', formRadioValue)
+    // console.log('dropValueQuery', dropValueQuery)
+    // console.log('formCheckValue', formCheckValue)
     fetch(liveSearchUrl + '?length=' + pageLength + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
@@ -57,34 +60,53 @@ const GrantsSearch = ({
         const results = data.reduce(
           (obj, item) => Object.assign(obj, item), {});
         setSearchResults(results);
+        console.log(results)
         setToggleMore(false);
         setToggleMore2(false);
         setLoading(false);
       });
   }
 
-  const doSearch = useMemo(() => debounce(fetchResultsBySearch, 350, true), [debouncedChange]);
+  const doSearch = useMemo(() => debounce(fetchResultsBySearch, 1000, true), [debouncedChange]);
 
   const debouncedChange = useCallback(
     (value) => {
-      console.log(value)
       if (value.length > 2) {
         setSearchString(value);
         setLoading(true);
-        // fetchResultsBySearch();
         doSearch(value);
       }
       if (value.length === 0) {
-        console.log('reset')
         setSearchResults(null);
         setSearchString('');
       }
     },
-    // eslint-disable-next-line
     [searchResults],
   );
-  // eslint-disable-next-line
-  const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
+
+  const getValuesFromSelected = (group, query) => {
+    /*
+    * HELPER
+    * Sort out which values are selected and not.
+    * We do this because there may be multiple field groups on the page,
+    * so we need to sort out which ones to keep and not.
+    */
+    const allNodes = group.querySelectorAll(query)
+    const selectedNodes = group.querySelectorAll(query + ':checked')
+    let selected = []
+    let notSelected = []
+    selectedNodes.forEach(node => {
+      selected.push(node.value.replace(',', ''))
+    })
+    allNodes.forEach(node => {
+      if (!selected.includes(node.value)) {
+        notSelected.push(node.value.replace(',', ''))
+      }
+    })
+    return {
+      selected, notSelected
+    }
+  }
 
   useEffect(() => {
     /*
@@ -98,24 +120,33 @@ const GrantsSearch = ({
     steps.forEach(step => {
       const inputType = step.dataset.inputType;
       const key = step.dataset.key;
+      const nextBtn = step.querySelector('button[data-next]');
 
       if (inputType === 'dropValue') {
         const input = step.querySelector('select');
 
         input.addEventListener("change", function (e) {
-          // Get the values
-          if (key) {
-            setFormDropValue(e.target.value);
-          }
+          nextBtn && nextBtn.addEventListener("click", function () {
+            const group = e.target.parentNode.parentNode
+            const { selected, notSelected } = getValuesFromSelected(group, 'option')
+            setFormDropValue((existingValues) => {
+              return [
+                ...existingValues.filter(value => !notSelected.includes(value)).filter(el => el != null),
+                e.target.value.replace(',', '')
+              ].filter(function (item, pos, self) {
+                // Make sure array has unique items
+                return self.indexOf(item) == pos;
+              })
+            })
+          });
 
         });
       }
 
       if (inputType === 'checkValue') {
         const inputs = step.querySelectorAll('input[type="checkbox"]');
-        const submit = step.querySelector('button[data-submit]');
         
-        submit && submit.addEventListener("click", function (e) {
+        nextBtn && nextBtn.addEventListener("click", function (e) {
           let values = []
           inputs.forEach(input => {
             if (input.checked) {
@@ -125,7 +156,24 @@ const GrantsSearch = ({
               values.filter(value => !input.value)
             }
           });
-          setFormCheckValue(values)
+          setFormCheckValue((existingValues) => {
+            if (existingValues.length > 0 && Array.isArray(existingValues)) {
+              return [
+                ...existingValues
+                  .filter(value => !values.includes(value))
+                  .filter(el => el != null),
+                ...values
+              ].filter(function (item, pos, self) {
+                // Make sure array has unique items
+                return self.indexOf(item) == pos;
+              })
+            } else {
+              return [
+                ...values
+              ]
+            }
+            
+          })
         });
       }
 
@@ -134,17 +182,34 @@ const GrantsSearch = ({
 
         radios.forEach(input => {
           input.addEventListener("change", function (e) {
-            setFormRadioValue(e.target.value);
+            nextBtn && nextBtn.addEventListener("click", function () {
+              const group = e.target.parentNode.parentNode
+              const { notSelected, selected } = getValuesFromSelected(group, 'input[type="radio"]')
+              setFormRadioValue((existingValues) => {
+                return [
+                  ...existingValues
+                      .filter(el => !notSelected.includes(el))
+                      .filter(el => el != null),
+                  e.target.value
+                ].filter(function (item, pos, self) {
+                  // Make sure array has unique items
+                  return self.indexOf(item) == pos;
+                })
+              })
+
+            });
+
           });
         })
-        
+
       }
+      
     });
   // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
-    // Wizard mode, trigger search on category/malgruppe changes
+    // Wizard mode, trigger search on input changes
     if (!initial) {
       setLoading(true);
       fetchResultsWizard();
@@ -185,14 +250,33 @@ const GrantsSearch = ({
       parsedData = JSON.parse(data)
       parsedData = parsedData.reduce(
         (obj, item) => Object.assign(obj, item), {});
-      console.log('parsedData', parsedData)
 
       return parsedData
     }
     return data
   }
 
-  const tabs = (data) => {
+  const orderByDate = (arr, reverse) => {
+    return arr.sort(function (a, b) {
+      // Check if frist object is present. When it doesn't exists, this means it is "løpende" and should be placed at bottom.
+      if (!a.fields.hasOwnProperty("frist")) { return 1; }
+      if (!b.fields.hasOwnProperty("frist")) { return -1; }
+
+      // Order the rest by date
+      const { date: dateB } = b.fields.frist;
+      const { date } = a.fields.frist;
+      const aDate = new Date(date);
+      const bDate = new Date(dateB);
+      return reverse ? Number(bDate) - Number(aDate) : Number(aDate) - Number(bDate);
+    });
+  }
+
+  const isEmpty = (obj) => {
+    if (!obj) { return true }
+    return Object.keys(obj).length === 0
+  }
+
+  const tabPanels = (data) => {
     let parsedData = transformInitial(data)
     const keys = parsedData ? Object.keys(parsedData) : []
     return keys.map(key => {
@@ -202,11 +286,11 @@ const GrantsSearch = ({
       ** so it will be displayed with a red color in the list.
       ** Fallback is a generic modifier.
       */
-     console.log('key', key)
      
-     const allData = parsedData ? parsedData[key].map(item => {
+     let allData = parsedData ? parsedData[key].map(item => {
        return {
          ...item,
+         type: item.type === 'tilskudd' || 'horing' ? 'grant' : 'generic', 
          fields: {
            ...item.fields,
            expired: key === 'Utløpt',
@@ -214,14 +298,15 @@ const GrantsSearch = ({
           }
         }
       }) : []
-      console.log('allData', allData)
+      const reverseOrder = key === 'Utløpt'
+      allData = orderByDate(allData, reverseOrder)
 
       /*
       ** If there are less than 8 results, display all. Otherwise, add a toggle all button.
       */
       const splicedData = allData.length > 7 ? allData.slice(0, 7) : null
       return (
-        <TabPanel>
+        <TabPanel key={key}>
           <List
             list={toggleMore[key] || allData.length < 8 ? allData : splicedData}
           />
@@ -247,7 +332,7 @@ const GrantsSearch = ({
           <InputSearch
             id="tilskuddsok"
             label={label}
-            autoFocus={true}
+            autoFocus={false}
             showSuggestions={false}
             fnChange={debouncedChange}
           />
@@ -277,7 +362,7 @@ const GrantsSearch = ({
           <Tabs>
             <TabList>
               {Object.keys(transformInitial(initial)).map(key => (
-                <Tab>
+                <Tab key={key}>
                   {key.charAt(0).toUpperCase() + key.slice(1)}
                   { key === 'Pågående' ? (
                     <span className="react-tabs__tab-count react-tabs__tab-count--green">{transformInitial(initial)[key].length}</span>
@@ -288,7 +373,7 @@ const GrantsSearch = ({
                 </Tab>
               ))}
             </TabList>
-            {tabs(transformInitial(initial))}
+            {tabPanels(transformInitial(initial))}
           </Tabs>
         ) : null}
 
@@ -315,17 +400,17 @@ const GrantsSearch = ({
                   </Tab>
                 ))}
               </TabList>
-              {tabs(searchResults)}
+              {tabPanels(searchResults)}
             </Tabs>
           </div>
         ) : null}
 
 
-      { // NO SEARCH RESULTS
-        searchString.length > 0 && !loading && !searchResults ? (
+      { // NO SEARCH RESULTS: WIZARD MODE
+        !initial && !loading && isEmpty(searchResults) ? (
           <div className="l-mb-4">
             <div className="col-xs-12 l-mt-2 l-mb-3">
-              <p>0 treff på «{searchString}»</p>
+              <p>Fant ingen resultater. Prøv å endre noen av valgene dine.</p>
             </div>
           </div>
         ) : null
