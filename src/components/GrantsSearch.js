@@ -53,12 +53,12 @@ const GrantsSearch = ({
     fetch(liveSearchUrl + '?length=' + pageLength + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
-
         // Transform array of objects, to object
         const results = data.reduce(
           (obj, item) => Object.assign(obj, item), {});
         setSearchResults(results);
         setToggleMore(false);
+        setToggleMore2(false);
         setLoading(false);
       });
   }
@@ -85,7 +85,6 @@ const GrantsSearch = ({
   );
   // eslint-disable-next-line
   const doSearch = useMemo(() => debounce(fetchResults, 350, true), [debouncedChange]);
-
 
   useEffect(() => {
     /*
