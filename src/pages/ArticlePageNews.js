@@ -58,7 +58,7 @@ const ArticlePageNews = () => (
 
             </p>
 
-            <p>Kurset finner du på nettsidene til <a>Nasjonal kompetansetjeneste for aldring og helse</a>. </p>
+            <p>Kurset finner du på nettsidene til <a href="#!">Nasjonal kompetansetjeneste for aldring og helse</a>. </p>
 
 
             <div className="l-mt-3">

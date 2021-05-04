@@ -117,7 +117,7 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          {" "}
+
           Henviser skal gjøre en tidlig kartlegging og vurdering av varseltegn
           og symptomer hos pasienten. De samlede symptomene avgjør om pasienten
           skal henvises til Pakkeforløp ved mistanke om psykoseutvikling og
@@ -125,13 +125,13 @@ const PrintPdfPreview = () => (
           psykisk helsevern for barn og unge eller voksne.
         </p>
         <p>
-          {" "}
+
           Pasienten henvises til psykisk helsevern. Når henvisningen blir
           vurdert i spesialisthelsetjenesten, vil det bli tatt stilling til
           hvilket pakkeforløp pasienten bør følge.
         </p>
         <p>
-          {" "}
+
           Pakkeforløpet gjelder for pasienter i alle aldre. Derfor benyttes
           pasient og/eller foreldre for å sikre ivaretakelse av barn og unge som
           pasienter. For voksne pasienter benyttes pasient og ev. pårørende.
@@ -146,25 +146,25 @@ const PrintPdfPreview = () => (
         </p>
         <p> Følgende kan være tegn på psykose:</p>
         <ul>
-          {" "}
-          <li>forvirring og tankeforstyrrelser </li>{" "}
-          <li>betydelig endret atferd/påfallende atferd </li>{" "}
-          <li>sosial isolering</li>{" "}
-          <li>uvanlige eller avflatede følelsesmessige reaksjoner </li>{" "}
-          <li>markert svikt i personlig hygiene</li>{" "}
-          <li>uvanlige overbevisninger eller magisk tenkning </li>{" "}
-          <li>uttalt mistenksomhet/forfølgelsesideer</li>{" "}
-          <li>tror at ens tanker kan høres av andre</li>{" "}
+
+          <li>forvirring og tankeforstyrrelser </li>
+          <li>betydelig endret atferd/påfallende atferd </li>
+          <li>sosial isolering</li>
+          <li>uvanlige eller avflatede følelsesmessige reaksjoner </li>
+          <li>markert svikt i personlig hygiene</li>
+          <li>uvanlige overbevisninger eller magisk tenkning </li>
+          <li>uttalt mistenksomhet/forfølgelsesideer</li>
+          <li>tror at ens tanker kan høres av andre</li>
           <li>
-            uvanlige sanseopplevelser/ hallusinasjoner (f. eks. hører stemmer){" "}
-          </li>{" "}
-          <li>endret opplevelse av seg selv eller omgivelsene</li>{" "}
+            uvanlige sanseopplevelser/ hallusinasjoner (f. eks. hører stemmer)
+          </li>
+          <li>endret opplevelse av seg selv eller omgivelsene</li>
           <li>storhetsideer</li>
         </ul>
         <p>
-          {" "}
+
           Ved behov for å drøfte om pasienten bør henvises, kan henviser
-          kontakte spesialisthelsetjenesten for å få veiledning.{" "}
+          kontakte spesialisthelsetjenesten for å få veiledning.
           <a href="https://www.regjeringen.no/globalassets/upload/hod/hoeringer_kta/dokumenter/rundskriv_i-3_2013.pdf">
             For mer informasjon og eksempler på hvordan veiledning i praksis kan
             gjøres, se rundskriv (PDF, regjeringen.no).
@@ -230,7 +230,7 @@ const PrintPdfPreview = () => (
           koordineres, og kommunens kontaktperson oppgis i henvisningen.
         </p>
         <p>
-          Uavhengig av alder, bør henviser ha en egen samtale med pasienten.{" "}
+          Uavhengig av alder, bør henviser ha en egen samtale med pasienten.
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/barn-foreldre-og-andre-parorende-pakkeforlop-for-psykisk-helse-og-rus">
             Når barn eller unge er pasienter, må henviser også avklare
             foreldreansvar og samtykke til henvisning
@@ -251,42 +251,42 @@ const PrintPdfPreview = () => (
           <strong>Aktuelt</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             Pasientens og/eller foreldrenes, ev. pårørendes opplevelse av egen
             situasjon og ønske om hjelp
-          </li>{" "}
+          </li>
           <li>
             Mulige utløsende årsaker til problemene, som f.eks. belastende
             livshendelser
-          </li>{" "}
-          <li>Pasientens og/eller foreldrenes ressurser</li>{" "}
+          </li>
+          <li>Pasientens og/eller foreldrenes ressurser</li>
           <li>
             Tidligere behandlingserfaring og effekt av dette
             samt&nbsp;eventuelle uheldige reaksjoner på tidligere behandling
-          </li>{" "}
-          <li>Symptomutvikling og funksjonsnivå</li>{" "}
-          <li>Iverksatt behandling og effekt av denne</li>{" "}
-          <li>Rusmiddelbruk</li> <li>Psykiatrisk status</li>{" "}
-          <li>Somatisk status</li>{" "}
+          </li>
+          <li>Symptomutvikling og funksjonsnivå</li>
+          <li>Iverksatt behandling og effekt av denne</li>
+          <li>Rusmiddelbruk</li> <li>Psykiatrisk status</li>
+          <li>Somatisk status</li>
           <li>Tilleggsundersøkelser med eventuelle funn</li>
         </ul>
         <p>
           <strong>Familie/sosialt</strong>
         </p>
         <ul>
-          {" "}
-          <li>Familiesituasjon</li>{" "}
-          <li>Mindreårige barn eller mindreårige søsken</li>{" "}
-          <li>Skole/arbeid</li> <li>Tolkebehov og aktuelt språk</li>{" "}
-          <li>Interesser og nære støttepersoner</li>{" "}
+
+          <li>Familiesituasjon</li>
+          <li>Mindreårige barn eller mindreårige søsken</li>
+          <li>Skole/arbeid</li> <li>Tolkebehov og aktuelt språk</li>
+          <li>Interesser og nære støttepersoner</li>
           <li>
-            Har pasienten førerkort? Se{" "}
+            Har pasienten førerkort? Se
             <a href="https://www.helsedirektoratet.no/veiledere/forerkortveilederen">
               Førerkortveilederen
             </a>
             <strong> </strong>
-          </li>{" "}
+          </li>
           <li>
             Har pasienten blitt utsatt for trusler/vold eller utsatt andre for
             trusler/vold?
@@ -296,15 +296,15 @@ const PrintPdfPreview = () => (
           <strong>Tidligere sykdommer</strong>
         </p>
         <ul>
-          {" "}
-          <li>Tidligere psykiske problemer eller lidelser</li>{" "}
+
+          <li>Tidligere psykiske problemer eller lidelser</li>
           <li>Tidligere og nåværende somatiske sykdommer</li>
         </ul>
         <p>
           <strong>Forventet utredning/behandling </strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             Begrunnelse for henvisningen og forventet nytte av
             utredning/behandling
@@ -314,15 +314,15 @@ const PrintPdfPreview = () => (
           <strong>Relatert helsepersonell / andre aktuelle instanser</strong>
         </p>
         <ul>
-          {" "}
-          <li>Nåværende tilbud fra andre tjenestesteder</li>{" "}
+
+          <li>Nåværende tilbud fra andre tjenestesteder</li>
           <li>Har pasienten Individuell plan?</li>
         </ul>
         <p>
           <strong>Legemidler </strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             Legemidler i bruk (LIB), og relevante tidligere legemiddelbruk
           </li>
@@ -347,28 +347,28 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          {" "}
+
           For å sikre god informasjon og dialog må henviser sikre at
           henvisningen tar utgangspunkt i pasientens og/eller foreldrenes, ev.
           pårørendes beskrivelse av situasjonen.
         </p>
         <p>
-          {" "}
+
           Henviser skal informere og drøfte følgende med pasient og/eller
           foreldre, ev. pårørende:
         </p>
         <ul>
-          {" "}
+
           <li>
             bakgrunnen for henvisningen og hva henvisningen innebærer
-          </li>{" "}
-          <li>innholdet i henvisningen</li>{" "}
+          </li>
+          <li>innholdet i henvisningen</li>
           <li>hva som vil skje når henvisningen er sendt</li>
         </ul>
         <p>
-          {" "}
+
           Dialogen og informasjonen må være tilpasset pasientens alder og språk,
-          og det bør undersøkes om informasjonen er forstått, se{" "}
+          og det bør undersøkes om informasjonen er forstått, se
           <a href="https://lovdata.no/NL/lov/1999-07-02-63/§3-5">
             Pasient- og brukerrettighetsloven § 3–5 (lovdata.no)
           </a>
@@ -381,13 +381,13 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Pasienten og/eller foreldre/ev. pårørende skal informeres om rett til
-          å{" "}
+          å
           <a href="https://helsenorge.no/velg-behandlingssted">
             velge behandlingssted (helsenorge.no).
           </a>
         </p>
         <p>
-          {" "}
+
           <a href="https://helsenorge.no/psykisk-helse/pakkeforlop-for-psykisk-helse-og-rus">
             Informasjon til pasient og/eller foreldre om pakkeforløp for psykisk
             helse og rus er tilgjengelig på helsenorge.no.
@@ -405,13 +405,13 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          {" "}
+
           Pakkeforløpet gjelder for pasienter i alle aldre. Derfor benyttes
           pasient og/eller foreldre for å sikre ivaretakelse av barn og unge som
           pasienter. For voksne pasienter benyttes pasient og ev. pårørende.
         </p>
         <p>
-          {" "}
+
           Pakkeforløpet starter i kommunen/hos fastlege eller annen henviser,
           men registreres og måles først når spesialisthelsetjenesten mottar
           henvisningen. Ved samtidige tjenester skal kommunens kontaktperson
@@ -420,21 +420,21 @@ const PrintPdfPreview = () => (
           samarbeid.
         </p>
         <p>
-          {" "}
+
           Når en pasient er henvist til spesialisthelsetjenesten, skal det
           vurderes om pasienten har rett til helsehjelp. Denne vurderingen
           gjøres på bakgrunn av informasjon i henvisningen. Ved behov for
           supplerende informasjon, kontaktes henviser. Ved mistanke om
           psykoseutvikling eller ved psykose har pasienten rett til helsehjelp,
           og første konsultasjon bør skje så raskt som mulig, helst innen 7
-          kalenderdager etter mottatt henvisning.{" "}
+          kalenderdager etter mottatt henvisning.
         </p>
         <p>
           Pasienter som får helsehjelp etter en øyeblikkelig-hjelp-vurdering og
           under tvunget psykisk helsevern inkluderes også i pakkeforløp.
         </p>
         <p>
-          {" "}
+
           Møte med spesialist i psykiatri/psykologi skal skje tidlig i forløpet
           slik at mest mulig spesialisert kompetanse er involvert når plan for
           utredning og behandling blir utarbeidet. Spesialist i
@@ -442,7 +442,7 @@ const PrintPdfPreview = () => (
           behandlingsmessige vurderinger som gjøres i forløpet.
         </p>
         <p>
-          {" "}
+
           Pasienter i psykisk helsevern vil som hovedregel være i ett
           pakkeforløp. Ved behov må behandlingsansvarlig sørge for å konferere
           med annen nødvendig kompetanse. Etter en utredning som viser at
@@ -508,31 +508,31 @@ const PrintPdfPreview = () => (
         <p>
           <strong>
             Ansvar og oppgaver for forløpskoordinator i
-            spesialisthelsetjenesten:{" "}
+            spesialisthelsetjenesten:
           </strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             være tilgjengelig for pasient og/eller foreldre, eventuelt pårørende
             samt involverte instanser til pasienten har fått tildelt egen
             behandler i spesialisthelsetjenesten, eventuelt
             kontaktlege/-psykolog
-          </li>{" "}
-          <li>koordinere hele forløpet, også ved uteblivelse fra avtaler</li>{" "}
+          </li>
+          <li>koordinere hele forløpet, også ved uteblivelse fra avtaler</li>
           <li>
             ha et overordnet ansvar for at forløpstider følges og at målepunkter
             blir kodet
-          </li>{" "}
+          </li>
           <li>
             informere, veilede og gi råd til pasient og/eller foreldre, ev.
             pårørende om pakkeforløp for psykisk helse og rus
-          </li>{" "}
-          <li>ved behov, koordinere avtaler og samarbeidsmøter</li>{" "}
+          </li>
+          <li>ved behov, koordinere avtaler og samarbeidsmøter</li>
           <li>samarbeid med forløpskoordinator i kommunen</li>
         </ul>
         <p>
-          For mer informasjon om forholdet mellom koordinator og kontaktlege, se{" "}
+          For mer informasjon om forholdet mellom koordinator og kontaktlege, se
           <a href="https://www.helsedirektoratet.no/veiledere/kontaktlege-i-spesialisthelsetjenesten/Kontaktlege%20i%20spesialisthelsetjenesten%20%E2%80%93%20Veileder.pdf">
             Veileder om kontaktlege i spesialisthelsetjenesten
           </a>
@@ -548,7 +548,7 @@ const PrintPdfPreview = () => (
         <p>
           Koordinerende enhet er en lovpålagt enhet som har et overordnet ansvar
           for individuell plan og koordinator til pasienter/brukere med behov
-          for langvarige og koordinerte tjenester, jf.{" "}
+          for langvarige og koordinerte tjenester, jf.
           <a href="https://lovdata.no/dokument/NL/lov/2011-06-24-30/KAPITTEL_7#§7-3">
             <u>helse- og omsorgstjenesteloven § 7-3 (lovdata.no)</u>
           </a>
@@ -579,7 +579,7 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Selv om pasienten ikke ønsker å få utarbeidet en individuell plan,
-          skal kommunen likevel tilby koordinator, jf.{" "}
+          skal kommunen likevel tilby koordinator, jf.
           <a href="https://lovdata.no/dokument/SF/forskrift/2011-12-16-1256/KAPITTEL_5#§21">
             <u>
               Forskrift om habilitering, rehabilitering, individuell plan og
@@ -594,26 +594,26 @@ const PrintPdfPreview = () => (
           </strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             informere, veilede og gi råd til pasient og/eller foreldre, ev.
             pårørende om pakkeforløp psykisk helse og rus
-          </li>{" "}
-          <li>samarbeide med forløpskoordinator i spesialisthelsetjenesten</li>{" "}
+          </li>
+          <li>samarbeide med forløpskoordinator i spesialisthelsetjenesten</li>
           <li>
             sikre helhetlig oppfølging med utgangspunkt i pasientens mål,
             ressurser og behov
-          </li>{" "}
+          </li>
           <li>
             sikre god samhandling mellom aktørene i helsetjenesten, samt andre
             relevante tjenesteytere
-          </li>{" "}
-          <li>sikre samordning av tjenestetilbudet</li>{" "}
+          </li>
+          <li>sikre samordning av tjenestetilbudet</li>
           <li>
             initiere, innkalle og eventuelt lede møter knyttet til koordinering
             og ev. individuell plan
-          </li>{" "}
-          <li>følge opp, evaluere og oppdatere individuell plan</li>{" "}
+          </li>
+          <li>følge opp, evaluere og oppdatere individuell plan</li>
           <li>
             forberede og koordinere aktuelle tiltak/tilbud i kommunen i god tid
             før utskrivning, mellom planlagte opphold og under poliklinisk
@@ -622,12 +622,12 @@ const PrintPdfPreview = () => (
         </ul>
         <p>For utfyllende informasjon, se:</p>
         <ul>
-          {" "}
+
           <li>
             <a href="https://www.helsedirektoratet.no/veiledere/oppfolging-av-personer-med-store-og-sammensatte-behov">
               Veileder for oppfølging av personer med store og sammensatte behov
             </a>
-          </li>{" "}
+          </li>
           <li>
             <a href="https://www.helsedirektoratet.no/veiledere/rehabilitering-habilitering-individuell-plan-og-koordinator">
               Veileder for rehabilitering, habilitering, individuell plan og
@@ -660,20 +660,18 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>D06</td>{" "}
-                <td>Psykoselidelser inkludert mistanke om psykoseutvikling</td>{" "}
-                <td>Forløp</td> <td>9321</td>{" "}
-              </tr>{" "}
+                <td>D06</td>
+                <td>Psykoselidelser inkludert mistanke om psykoseutvikling</td>
+                <td>Forløp</td> <td>9321</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -686,12 +684,12 @@ const PrintPdfPreview = () => (
           <strong>Kode for Pakkeforløp start skal registreres:</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             når henvisning til psykisk helsevern er mottatt. Dato for
             pakkeforløp start er mottaksdato for henvisningen. Dette gjelder
             også pasienter som får helsehjelp under tvunget psykisk helsevern.
-          </li>{" "}
+          </li>
           <li>
             etter en øyeblikkelig-hjelp-vurdering, dersom det vurderes behov for
             videre utredning og behandling i psykisk
@@ -701,13 +699,13 @@ const PrintPdfPreview = () => (
             senest innen 2 uker etter en øyeblikkelig-hjelp vurdering. Koden
             settes på dato for når beslutning om behov for videre utredning og
             behandling er tatt.
-          </li>{" "}
+          </li>
           <li>
             når det i sykehuset eller private institusjoner påvises psykisk
             lidelse under utredning eller behandling av annen sykdom. Dato for
             pakkeforløp start er dato for mottaksdato for viderehenvisning.
             Dette gjelder også ved viderehenvising fra et annet pakkeforløp.
-          </li>{" "}
+          </li>
           <li>
             når en pasient i pakkeforløp blir overført fra et helseforetak eller
             privat institusjon (hf1) til nytt helseforetak eller institusjon
@@ -719,19 +717,17 @@ const PrintPdfPreview = () => (
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>A</td> <td>Pakkeforløp start</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>A</td> <td>Pakkeforløp start</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -780,21 +776,21 @@ const PrintPdfPreview = () => (
           viktig for dem og få informasjon om hva som vil skje videre.
           Informasjonen skal være tilpasset mottakerens individuelle
           forutsetninger, som alder, modenhet, erfaring og kultur- og
-          språkbakgrunn.{" "}
+          språkbakgrunn.
           <a href="https://helsenorge.no/psykisk-helse/pakkeforlop-for-psykisk-helse-og-rus">
             Informasjon til pasient og/eller foreldre/ev. pårørende om
             pakkeforløp for psykisk helse og rus er tilgjengelig på
             helsenorge.no.
-          </a>{" "}
+          </a>
           Hvis kommunikasjonsbarrierer/-utfordringer ikke er avklart i
-          henvisningen, må disse og behov for tolk kartlegges. Se også{" "}
+          henvisningen, må disse og behov for tolk kartlegges. Se også
           <a href="https://rop.no/kartleggingsverktoey/kulturformuleringsintervjuet-kfi/">
             Kulturformuleringsintervjuet (rop.no).
           </a>
         </p>
         <p>
           For mer informasjon om regelverk knyttet til barn og unges medvirkning
-          og samtykke og foreldreansvar, se kapittelet{" "}
+          og samtykke og foreldreansvar, se kapittelet
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/barn-foreldre-og-andre-parorende-pakkeforlop-for-psykisk-helse-og-rus">
             Barn, foreldre og andre pårørende
           </a>
@@ -802,31 +798,31 @@ const PrintPdfPreview = () => (
         </p>
         <p>Følgende bør, hvis mulig, kartlegges i første samtale:</p>
         <ul>
-          {" "}
+
           <li>
             pasientens mål, ønsker, behov og forventinger til utredning og
             behandling og oppfølging
-          </li>{" "}
-          <li>bakgrunn for og gjennomgang av henvisningen</li>{" "}
+          </li>
+          <li>bakgrunn for og gjennomgang av henvisningen</li>
           <li>
             involvering av foreldre, ev. pårørende og ev. andre i pasientens
             nettverk
-          </li>{" "}
+          </li>
           <li>
             pasients og/eller foreldres, ev. pårørendes opplevelse av
             utfordringer/vansker og årsaker til dette
-          </li>{" "}
+          </li>
           <li>
             informasjon og dialog om utredning og behandlingstilbud og rammene
             for samarbeidet
-          </li>{" "}
-          <li>psykiatrisk status</li>{" "}
+          </li>
+          <li>psykiatrisk status</li>
           <li>
-            behov for umiddelbare tiltak, eventuelt behov for kriseplan. Se også{" "}
+            behov for umiddelbare tiltak, eventuelt behov for kriseplan. Se også
             <a href="http://www.helsebiblioteket.no/psykisk-helse/aktuelt/min-plan-norsk-app-for-kriseplan">
               Min plan (helsebiblioteket.no)
-            </a>{" "}
-            og{" "}
+            </a>
+            og
             <a href="http://www.helsebiblioteket.no/retningslinjer/psykoselidelser/vedlegg/forslag-til-mal-for-kriseplan">
               Forslag til mal for kriseplan
             </a>
@@ -841,7 +837,7 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Der det er behov for vurdering av selvmordsrisiko, må behandler sikre
-          at dette gjøres av kvalifisert helsepersonell (se retningslinjen{" "}
+          at dette gjøres av kvalifisert helsepersonell (se retningslinjen
           <a href="https://www.helsedirektoratet.no/retningslinjer/forebygging-av-selvmord-i-psykisk-helsevern/Forebygging%20av%20selvmord%20i%20psykisk%20helsevern%20%E2%80%93%20Nasjonal%20faglig%20retningslinje.pdf">
             Forebygging av selvmord i psykisk helsevern
           </a>
@@ -849,7 +845,7 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Ved risiko for selvmord, ved pågående voldsutsatthet eller
-          voldsutøvelse må det iverksettes tiltak med en gang, se{" "}
+          voldsutøvelse må det iverksettes tiltak med en gang, se
           <a href="https://voldsveileder.nkvts.no/">
             <u>
               Veileder for helse- og omsorgstjenestens arbeid med vold i nære
@@ -910,7 +906,7 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Behandler må orientere pasient og/eller foreldre, ev. pårørende om
-          rettigheter og gi nødvendig informasjon, se kapittelet{" "}
+          rettigheter og gi nødvendig informasjon, se kapittelet
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/barn-foreldre-og-andre-parorende-pakkeforlop-for-psykisk-helse-og-rus">
             Barn, foreldre og andre pårørende
           </a>
@@ -918,22 +914,22 @@ const PrintPdfPreview = () => (
         </p>
         <p>I utredningen av barn og unge må det tas særlig hensyn til:</p>
         <ul>
-          {" "}
+
           <li>
             utviklings- og evnenivå, variasjonen i symptom- og funksjonsnivå er
             større enn hos voksne
-          </li>{" "}
+          </li>
           <li>
             at det kliniske bildet er mindre tydelig og at psykosesymptomer er
             vanlig ved flere tilstander
-          </li>{" "}
+          </li>
           <li>
             å inkludere kartlegging av ressurser og mestringsstrategier som kan
             brukes aktivt i behandlingen
-          </li>{" "}
+          </li>
           <li>
             sosial, faglig og motorisk utvikling og kroppslige stressreaksjoner
-          </li>{" "}
+          </li>
           <li>omsorgssituasjon, ev. kontakt med barnevernet</li>
         </ul>
         <h3>
@@ -945,43 +941,43 @@ const PrintPdfPreview = () => (
           <strong>Livssituasjon</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             pasientens og/eller foreldres mål, ressurser, interesser og
             mestringsevne
-          </li>{" "}
-          <li>familieforhold og sosialt nettverk</li>{" "}
-          <li>bosituasjon, økonomi</li>{" "}
+          </li>
+          <li>familieforhold og sosialt nettverk</li>
+          <li>bosituasjon, økonomi</li>
           <li>
             skole/utdanning/arbeidserfaring. Ved sykemelding bør pasientens
             forventninger om å vende tilbake til skole/arbeid kartlegges, og ev.
             barrierer for en slik tilbakevending
-          </li>{" "}
-          <li>opplevd livskvalitet</li> <li>traumeerfaringer</li>{" "}
+          </li>
+          <li>opplevd livskvalitet</li> <li>traumeerfaringer</li>
           <li>
             foreldres, ev. pårørendes behov for råd og veiledning, avklaring av
             forventninger rundt kommunikasjon og samarbeid
-          </li>{" "}
+          </li>
           <li>
             kulturbakgrunn og religion, ev. migrasjonserfaring og oppholdsstatus
-            (kartleggingsverktøy:{" "}
+            (kartleggingsverktøy:
             <a href="https://rop.no/kartleggingsverktoey/kulturformuleringsintervjuet-kfi/">
               Kulturformuleringsintervjuet (rop.no)
             </a>
             )
-          </li>{" "}
-          <li>nettvaner, ev. nettmobbing</li>{" "}
+          </li>
+          <li>nettvaner, ev. nettmobbing</li>
           <li>eventuelle tiltak ved manglende oppmøte</li>
         </ul>
         <p>
           <strong>Psykisk helsetilstand</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             eventuelle tidligere psykiske vansker/lidelser hos pasienten
-          </li>{" "}
-          <li>når oppsto de første tegnene på psykose?</li>{" "}
+          </li>
+          <li>når oppsto de første tegnene på psykose?</li>
           <li>
             <a href="https://www.helsebiblioteket.no/retningslinjer/psykoselidelser/utredning">
               symptomutredning (helsebiblioteket.no)
@@ -997,12 +993,12 @@ const PrintPdfPreview = () => (
           <strong>Selvskading og selvmordsrisiko</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             erfaringer med selvskading, selvmordsforsøk og vurdering av
             selvmordsrisiko. Der det er behov for vurdering av selvmordsrisiko,
             må behandler sikre at dette gjøres av kvalifisert helsepersonell (se
-            retningslinjen{" "}
+            retningslinjen
             <a href="https://www.helsedirektoratet.no/retningslinjer/forebygging-av-selvmord-i-psykisk-helsevern/Forebygging%20av%20selvmord%20i%20psykisk%20helsevern%20%E2%80%93%20Nasjonal%20faglig%20retningslinje.pdf">
               Forebygging av selvmord i psykisk helsevern
             </a>
@@ -1016,21 +1012,21 @@ const PrintPdfPreview = () => (
           <strong>Rusmiddelbruk</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             aktuell og tidligere rusmiddelbruk, omfang av både illegale og
             legale rusmidler, inkl. alkohol
-          </li>{" "}
+          </li>
           <li>legemiddelavhengighet</li>
         </ul>
         <p>Kartleggingsverktøy:</p>
         <ul>
-          {" "}
+
           <li>
             <a href="https://www.helsebiblioteket.no/retningslinjer/psykoselidelser/utredning/utredning-av-tilleggsproblemer/rusmiddelbruk">
               Rusmiddelbruk hos pasienter med psykose (helsebiblioteket.no)
             </a>
-          </li>{" "}
+          </li>
           <li>
             <a href="https://rop.no/snakkomrus/kartleggingsverktoy/">
               Kartleggingsverktøy (snakkomrus.no)
@@ -1051,14 +1047,14 @@ const PrintPdfPreview = () => (
         </p>
         <p>Nevropsykologisk kartlegging:</p>
         <ul>
-          {" "}
+
           <li>
             bør ikke gjøres i akuttfasen ved psykose, det gir usikre resultater
-          </li>{" "}
+          </li>
           <li>
             bør vurderes som «ferskvare», og eventuelle vansker som blir
             avdekket må revurderes når pasienten er friskere
-          </li>{" "}
+          </li>
           <li>
             må tilpasses den enkelte pasient, slik at testen(e) fanger opp flest
             mulig av de relevante kognitive vanskene
@@ -1068,12 +1064,12 @@ const PrintPdfPreview = () => (
           <strong>Levevaner</strong>
         </p>
         <ul>
-          {" "}
-          <li>kosthold</li> <li>fysisk aktivitet</li> <li>røyking</li>{" "}
+
+          <li>kosthold</li> <li>fysisk aktivitet</li> <li>røyking</li>
           <li>søvn</li>
         </ul>
         <p>
-          For nærmere kartlegging, se{" "}
+          For nærmere kartlegging, se
           <a href="https://www.helsedirektoratet.no/pakkeforlop/somatisk-helse-og-levevaner-ved-psykiske-lidelser-og-eller-rusmiddelproblemer">
             somatisk helse og levevaner
           </a>
@@ -1083,7 +1079,7 @@ const PrintPdfPreview = () => (
           <strong>Vold, overgrep og andre traumatiske erfaringer</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             tidligere og nåværende belastende livshendelser som mobbing, vold,
             overgrep eller andre traumeerfaringer og om hendelsene kan ha
@@ -1092,17 +1088,17 @@ const PrintPdfPreview = () => (
               se Kartleggingsverktøy (nkvts.no)
             </a>
             .
-          </li>{" "}
+          </li>
           <li>
             <a href="https://www.helsedirektoratet.no/faglige-rad/voldsrisikoutredning-ved-alvorlig-psykisk-lidelse">
               risikofaktorer for utøvelse av vold. Der det er behov for
               vurdering av voldsrisiko, må behandler sikre at dette gjøres av
               kvalifisert helsepersonell
             </a>
-          </li>{" "}
+          </li>
           <li>
             ved mistanke om voldsutsatthet eller ved avdekking av pågående vold,
-            se{" "}
+            se
             <a href="https://voldsveileder.nkvts.no/">
               <u>
                 Veileder for helse- og omsorgstjenestens arbeid med vold i nære
@@ -1116,17 +1112,17 @@ const PrintPdfPreview = () => (
           <strong>Somatisk status, </strong>inkludert
         </p>
         <ul>
-          {" "}
-          <li>tidligere og nåværende somatiske sykdommer</li>{" "}
-          <li>tenner og munnhule</li>{" "}
-          <li>ernæringsstatus, inkludert ev. vektendringer</li>{" "}
+
+          <li>tidligere og nåværende somatiske sykdommer</li>
+          <li>tenner og munnhule</li>
+          <li>ernæringsstatus, inkludert ev. vektendringer</li>
           <li>
             ev. risikofaktorer som høyt blodsukker, høyt blodtrykk, høyt
-            kolesterol, økt livvidde. Ved risikofaktorer, se{" "}
+            kolesterol, økt livvidde. Ved risikofaktorer, se
             <a href="https://www.helsedirektoratet.no/pakkeforlop/somatisk-helse-og-levevaner-ved-psykiske-lidelser-og-eller-rusmiddelproblemer/kardiometabolske-risikofaktorer-pakkeforlop-for-psykisk-helse-og-rus/kardiometabolske-risikofaktorer">
               tiltakspakke Kardiometabolske risikofaktorer
             </a>
-          </li>{" "}
+          </li>
           <li>somatisk undersøkelse og blodprøver</li>
         </ul>
         <p>Somatisk status bør som hovedregel avklares hos fastlege.</p>
@@ -1134,24 +1130,24 @@ const PrintPdfPreview = () => (
           <strong>Legemiddelbruk</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             oppdatert legemiddelliste, inkl. ev. legemiddelallergi, må foreligge
-          </li>{" "}
+          </li>
           <li>
             pasientens erfaring med nåværende og eventuell tidligere
             legemiddelbruk
-          </li>{" "}
+          </li>
           <li>
             vurdering av ev. nåværende legemiddelbehandling mot indikasjon,
             effekt, bivirkninger
-          </li>{" "}
+          </li>
           <li>
-            ved bruk av antipsykotika, se{" "}
+            ved bruk av antipsykotika, se
             <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/planlegging-av-behandling">
               Legemiddelbehandling
-            </a>{" "}
-            (under «Planlegging av behandling»)<strong> </strong>og{" "}
+            </a>
+            (under «Planlegging av behandling»)<strong> </strong>og
             <a href="https://oslo-universitetssykehus.no/avdelinger/klinikk-psykisk-helse-og-avhengighet/hjertefrisk-hjelpemiddel-for-oppfolging-og-tiltak-hos-pasienter-med-psykiske-lidelser-eller-rusmiddelproblemer-i-kardiometabolsk-risikogruppe">
               «Hjertefrisk» (oslo-universitetssykehus.no)
             </a>
@@ -1165,7 +1161,7 @@ const PrintPdfPreview = () => (
           <strong>Vurdering av førerkort</strong>
         </p>
         <p>
-          Se{" "}
+          Se
           <a href="https://www.helsedirektoratet.no/veiledere/forerkortveilederen">
             Førerkortveilederen
           </a>
@@ -1186,11 +1182,11 @@ const PrintPdfPreview = () => (
           bivirkninger av legemidler, er spesielt viktige å vurdere.
         </p>
         <p>
-          Se{" "}
+          Se
           <a href="https://www.helsebiblioteket.no/retningslinjer/psykoselidelser/utredning/diagnostisk-utredning">
             Diagnostisk utredning (helsebiblioteket.no)
-          </a>{" "}
-          og{" "}
+          </a>
+          og
           <a href="https://www.helsebiblioteket.no/retningslinjer/psykoselidelser/12.hva-er-en-psykose/andre-psykoselidelser/rusutl%C3%B8ste-psykoser">
             Rusutløste psykoser (helsebiblioteket.no)
           </a>
@@ -1243,7 +1239,7 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          {" "}
+
           Ved tilbakevendende psykoseepisode kartlegges pasientens og/eller
           foreldres, ev. pårørendes erfaringer fra den første episoden og ev.
           flere episoder. Det er viktig å identifisere mulige hendelser som kan
@@ -1298,8 +1294,8 @@ const PrintPdfPreview = () => (
           <strong>Det skal tas en klinisk beslutning om det:</strong>
         </p>
         <ul>
-          {" "}
-          <li>er behov for behandling innen psykisk helsevern</li>{" "}
+
+          <li>er behov for behandling innen psykisk helsevern</li>
           <li>
             er behov for behandling og oppfølging fra annen instans enn psykisk
             helsevern
@@ -1313,35 +1309,35 @@ const PrintPdfPreview = () => (
           <strong>Videre skal det tas stilling til om det er behov for:</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             tiltak for pasientens mindreårige barn eller mindreårige søsken
-          </li>{" "}
-          <li>videre tiltak til pårørende, familie eller andre</li>{" "}
-          <li>koordinerte tjenester, inkl. rett til individuell plan</li>{" "}
-          <li>kriseplan</li>{" "}
-          <li>tiltak knyttet til somatisk helse og levevaner</li>{" "}
+          </li>
+          <li>videre tiltak til pårørende, familie eller andre</li>
+          <li>koordinerte tjenester, inkl. rett til individuell plan</li>
+          <li>kriseplan</li>
+          <li>tiltak knyttet til somatisk helse og levevaner</li>
           <li>
             tiltak knyttet til sosial aktivitet og inkludering, lærings- og
             mestringstilbud
-          </li>{" "}
-          <li>samarbeid med skole/arbeidsliv</li>{" "}
+          </li>
+          <li>samarbeid med skole/arbeidsliv</li>
           <li>
-            samarbeid med NAV om arbeidsrettet rehabilitering som f.eks.{" "}
+            samarbeid med NAV om arbeidsrettet rehabilitering som f.eks.
             <a href="https://www.napha.no/content/20131/Individuell-jobbstotte-IPS">
               individuell jobbstøtte (napha.no)
-            </a>{" "}
-            eller{" "}
+            </a>
+            eller
             <a href="https://www.helsedirektoratet.no/rapporter/effektevaluering-av-jobbmestrende-oppfolging/Effektevaluering%20av%20jobbmestrende%20oppf%C3%B8lging.pdf">
               jobbmestrende oppfølging
             </a>
-          </li>{" "}
-          <li>samarbeid med andre aktører som f.eks. familievern, barnevern</li>{" "}
+          </li>
+          <li>samarbeid med andre aktører som f.eks. familievern, barnevern</li>
           <li>
             iverksettelse av forebyggende tiltak på grunn av voldsutsatthet
             eller økt voldsrisiko. Ved økt risiko, må det gjøres en løpende
             vurdeirng gjennom hele forløpet.
-          </li>{" "}
+          </li>
           <li>
             iverksettelse av forebyggende tiltak på grunn av selvmordsrisiko
           </li>
@@ -1349,25 +1345,22 @@ const PrintPdfPreview = () => (
         <h3>Forløpstider</h3>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Forløpstider</td> <td>&nbsp;</td> <td>&nbsp;</td>{" "}
-              </tr>{" "}
+                <td>Forløpstider</td> <td>&nbsp;</td> <td>&nbsp;</td>
+              </tr>
               <tr>
-                {" "}
-                <td>Poliklinikk</td>{" "}
-                <td>Fra første fremmøte til klinisk beslutning</td>{" "}
-                <td>Inntil 42 kalenderdager (6 uker)</td>{" "}
-              </tr>{" "}
+                <td>Poliklinikk</td>
+                <td>Fra første fremmøte til klinisk beslutning</td>
+                <td>Inntil 42 kalenderdager (6 uker)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>Døgnenhet</td>{" "}
-                <td>Fra første fremmøte til klinisk beslutning</td>{" "}
-                <td>Inntil 14 kalenderdager (2 uker)</td>{" "}
-              </tr>{" "}
+                <td>Døgnenhet</td>
+                <td>Fra første fremmøte til klinisk beslutning</td>
+                <td>Inntil 14 kalenderdager (2 uker)</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1393,19 +1386,17 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>M</td> <td>Første fremmøte i pakkeforløpet</td>{" "}
-                <td>Hendelse</td> <td>9322</td>{" "}
-              </tr>{" "}
+                <td>M</td> <td>Første fremmøte i pakkeforløpet</td>
+                <td>Hendelse</td> <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1424,7 +1415,7 @@ const PrintPdfPreview = () => (
         </p>
         <p />
         <p>
-          {" "}
+
           Koden registreres på dato for når standardisert verktøy for måling av
           symptom og/eller funksjon benyttes. Slike verktøy bør benyttes tidlig
           i utredningen, ved evaluering og ved avslutning i
@@ -1434,30 +1425,27 @@ const PrintPdfPreview = () => (
           <table>
             <tbody>
               <tr>
-                {" "}
-                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>{" "}
+                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>
                 <td> Kodeverk (OID) </td>
               </tr>
               <tr>
-                {" "}
-                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>{" "}
+                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>
                 <td> 9322 </td>
               </tr>
               <tr>
-                {" "}
-                <td> V </td>{" "}
+                <td> V </td>
                 <td>
-                  {" "}
+
                   Brukt standardisert verktøy for måling av symptom og/eller
-                  funksjon{" "}
-                </td>{" "}
+                  funksjon
+                </td>
                 <td> Utfall </td> <td> 9325 </td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
-          {" "}
+
           I systemer som ikke har forløpsmodul registreres dette som en
           prosedyrekode med kode D06UV - Mistanke om psykoseutvikling og
           psykoselidelser - Utført aktivitet - Brukt standardisert verktøy for
@@ -1484,62 +1472,54 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>C</td> <td>Klinisk beslutning</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>C</td> <td>Klinisk beslutning</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>P</td> <td>Behov for behandling innen psykisk helsevern</td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                <td>P</td> <td>Behov for behandling innen psykisk helsevern</td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>T</td> <td>Behov for behandling innen TSB</td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                <td>T</td> <td>Behov for behandling innen TSB</td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>S</td>{" "}
+                <td>S</td>
                 <td>
                   Behov for behandling fra annen spesialisthelsetjeneste (ikke
                   psykisk helsevern eller TSB)
-                </td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>K</td>{" "}
+                <td>K</td>
                 <td>
                   Behov for behandling og/eller oppfølging fra fastlege,
                   kommunal helse- og omsorgstjeneste
-                </td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>A</td>{" "}
+                <td>A</td>
                 <td>
                   Behov for oppfølging fra andre instanser som NAV, PPT,
                   arbeidsgiver, skole, barnevern m.m.
-                </td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>I</td>{" "}
-                <td>Ikke behov for videre behandling og/eller oppfølging</td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                <td>I</td>
+                <td>Ikke behov for videre behandling og/eller oppfølging</td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1555,30 +1535,30 @@ const PrintPdfPreview = () => (
           som prosedyrekoder med kodene:
         </p>
         <ul>
-          {" "}
+
           <li>
             D06CP - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for behandling innen psykisk helsevern
-          </li>{" "}
+          </li>
           <li>
             D06CT - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for behandling innen TSB
-          </li>{" "}
+          </li>
           <li>
             D06CS - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for behandling fra annen spesialisthelsetjeneste
             (ikke psykisk helsevern eller TSB)
-          </li>{" "}
+          </li>
           <li>
             D06CK - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for behandling og/eller oppfølging fra fastlege,
             kommunal helse- og omsorgstjeneste
-          </li>{" "}
+          </li>
           <li>
             D06CA - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for oppfølging fra andre instanser som NAV, PPT,
             arbeidsgiver, skole, barnevern m.m.
-          </li>{" "}
+          </li>
           <li>
             D06CI - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Ikke behov for videre behandling og/eller oppfølging
@@ -1641,12 +1621,12 @@ const PrintPdfPreview = () => (
           Behandling og oppfølging av barn og unge skal ha et familieperspektiv
           som også sikrer at søsken blir godt ivaretatt. Foreldre som har barn
           med psykiske lidelser kan ha behov for støtte for å kunne følge opp
-          barnet sitt mens det er til behandling. Det{" "}
+          barnet sitt mens det er til behandling. Det
           <a href="https://helsenorge.no/parorende/parorendes-rettigheter">
             finnes flere ulike støtteordninger (helsenorge.no).
-          </a>{" "}
+          </a>
           Dersom foreldre ikke er aktuelle som samarbeidsparter, kan andre
-          pårørende eller barneverntjenesten bli involvert. Se{" "}
+          pårørende eller barneverntjenesten bli involvert. Se
           <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder/avklare-hvem-som-er-parorende-deres-rolle-og-fore-journal/voksne-parorende/avklar-hvem-som-har-foreldreansvar-for-barn-og-unge-med-sykdom-nedsatt-funksjonsevne">
             Pårørendeveileder
           </a>
@@ -1659,9 +1639,9 @@ const PrintPdfPreview = () => (
           vurdere om:
         </p>
         <ul>
-          {" "}
-          <li>pasienten har rett til individuell plan (IP)</li>{" "}
-          <li>pasienten har behov for kriseplan</li>{" "}
+
+          <li>pasienten har rett til individuell plan (IP)</li>
+          <li>pasienten har behov for kriseplan</li>
           <li>tilstanden tilsier at det bør etableres en ansvarsgruppe</li>
         </ul>
         <p>
@@ -1682,7 +1662,7 @@ const PrintPdfPreview = () => (
           pårørende på en systematisk måte kan gi tilbakemelding til behandleren
           om hvordan han/hun opplever behandlingseffekt og relasjon til
           behandler. Erfaringer tilsier at bruken av feedbackverktøy gir
-          pasientene økt medvirkning i behandlingen.{" "}
+          pasientene økt medvirkning i behandlingen.
           <a href="https://www.napha.no/fit/">
             For mer informasjon om brukerevaluering og bruk av feedbackverktøy,
             se napha.no.
@@ -1711,22 +1691,22 @@ const PrintPdfPreview = () => (
         </p>
         <p>En behandlingsplan bør minimum inneholde:</p>
         <ul>
-          {" "}
-          <li>behandlingsmål</li>{" "}
-          <li>rammer for behandlingen (hyppighet, varighet)</li>{" "}
-          <li>behandlingstilnærminger og tiltak</li>{" "}
-          <li>eventuelle tiltak utenfor psykisk helsevern</li>{" "}
+
+          <li>behandlingsmål</li>
+          <li>rammer for behandlingen (hyppighet, varighet)</li>
+          <li>behandlingstilnærminger og tiltak</li>
+          <li>eventuelle tiltak utenfor psykisk helsevern</li>
           <li>
             plan for å fortsette i skole/arbeid eller for tilbakevending til
             skole/arbeid
-          </li>{" "}
-          <li>ansvarlige for de ulike tiltakene</li>{" "}
+          </li>
+          <li>ansvarlige for de ulike tiltakene</li>
           <li>
             pasient og/eller foreldres ansvar for å følge opp behandlingen
-          </li>{" "}
-          <li>kriterier for avslutning</li>{" "}
+          </li>
+          <li>kriterier for avslutning</li>
           <li>
-            plan for evaluering av tiltakene (Se:{" "}
+            plan for evaluering av tiltakene (Se:
             <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/evalueringspunkter">
               Evalueringspunkter
             </a>
@@ -1742,7 +1722,7 @@ const PrintPdfPreview = () => (
           For pasienter i psykisk helsevern for barn og unge som er over 16 år,
           bør det ved planlegging av behandling vurderes om det kan være behov
           for behandling utover 18 år. Dette bør omtales i behandlingsplanen. Se
-          også kapittel om{" "}
+          også kapittel om
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/samhandling-i-forlopet">
             Samhandling i forløpet
           </a>
@@ -1765,7 +1745,7 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Oppfølgingen bør skje i et samarbeid mellom fastlege,
-          kommunehelsetjeneste og spesialisthelsetjeneste.{" "}
+          kommunehelsetjeneste og spesialisthelsetjeneste.
           <a href="https://legeforeningen.no/PageFiles/329211/Anbefalinger%20om%20samarbeid%20mellom%20fastleger%20og%20sykehus%20Faggruppe%20samhandling.pdf">
             Se mer utdypende beskrivelse av samhandling hos Legeforeningen
             (PDF).
@@ -1779,13 +1759,13 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Dersom pasienten er innlagt i spesialisthelsetjenesten, er det
-          institusjonen som har ansvar for oppfølging av pasientens helse. Se{" "}
+          institusjonen som har ansvar for oppfølging av pasientens helse. Se
           <a href="https://lovdata.no/dokument/SF/forskrift/2012-08-29-842">
             Forskrift om fastlegeordning i kommunene (lovdata.no).
-          </a>{" "}
+          </a>
           Dersom legen ved institusjonen ikke har kompetanse på sykdomsområdet,
           har legen et ansvar for å konferere med relevant spesialistkollega og
-          eventuelt med pasientens fastlege. Se{" "}
+          eventuelt med pasientens fastlege. Se
           <a href="https://www.helsedirektoratet.no/pakkeforlop/somatisk-helse-og-levevaner-ved-psykiske-lidelser-og-eller-rusmiddelproblemer">
             Ivaretakelse av somatisk helse og levevaner ved psykiske lidelser
             og/eller rusmiddelproblemer.
@@ -1811,12 +1791,12 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Før oppstart med legemidler, bør det lages en plan for
-          behandlingslengde og vurdering av effekt av legemiddelet. Ved hvert{" "}
+          behandlingslengde og vurdering av effekt av legemiddelet. Ved hvert
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/evalueringspunkter">
             evalueringspunkt
           </a>
           skal lege/psykiater vurdere om det er behov for en ny gjennomgang av
-          legemidler.{" "}
+          legemidler.
           <a href="https://legemiddelverket.no/bivirkninger-og-sikkerhet/rad-til-helsepersonell/legemiddelgjennomgang#sjekkliste-for-legemiddelgjennomgang">
             Sjekkliste for legemiddelgjennomgang (legemiddelverket.no)
           </a>
@@ -1838,7 +1818,7 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Pasienten bør få mulighet til behandling uten antipsykotiske
-          legemidler.{" "}
+          legemidler.
           <a href="https://www.helsedirektoratet.no/rundskriv/psykisk-helsevernforskriften-med-kommentarer/skjerming-undersokelse-og-behandling-uten-eget-samtykke-og-tvangsmidler/21-vedtak-om-behandling-uten-eget-samtykke">
             Behandling uten pasientens samtykke, krever vedtak hjemlet i Lov om
             etablering og gjennomføring av tvungent psykisk helsevern.
@@ -1849,28 +1829,28 @@ const PrintPdfPreview = () => (
           følges:
         </p>
         <ul>
-          {" "}
+
           <li>
             regelmessig vurdering av begrunnelse for bruk, dosering, virkning og
             bivirkninger
-          </li>{" "}
+          </li>
           <li>
             regelmessig vurdering av pasientens almenntilstand og opplevelse av
             behandlingseffekt
-          </li>{" "}
+          </li>
           <li>
             samtidig bruk av flere antipsykotika bør kun skje i perioder hvor en
             går over fra ett legemiddel til et annet (i henholdsvis opptrappende
             og nedtrappende doser)
-          </li>{" "}
+          </li>
           <li>
             vedlikeholdsdosen bør være den lavest mulige effektive doseringen
-          </li>{" "}
+          </li>
           <li>
             ved manglende effekt må det vurderes om pasienten best kan behandles
             uten antipsykotika, eller om et annet antipsykotisk legemiddel med
             annen virkningsmekanisme bør forsøkes.
-          </li>{" "}
+          </li>
           <li>
             ved avslutning av behandling med antipsykotiske legemidler, må det
             skje en gradvis nedtrapping.
@@ -1922,7 +1902,7 @@ const PrintPdfPreview = () => (
           Hvis behandlingen avbrytes fra pasientens og/eller foreldrenes side,
           må henviser, fastlege og ev. foreldre/pårørende bli varslet. For barn
           og unge må det også vurderes om det er grunnlag for bekymringsmelding
-          til barneverntjenesten, se{" "}
+          til barneverntjenesten, se
           <a href="https://www.helsedirektoratet.no/rundskriv/helsepersonelloven-med-kommentarer/opplysningsplikt-m.v/-33.opplysningsplikt-til-barnevernet">
             helsepersonelloven med kommentarer § 33
           </a>
@@ -1946,7 +1926,7 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          {" "}
+
           <a href="https://www.helsebiblioteket.no/retningslinjer/psykoselidelser/12.hva-er-en-psykose/psykiske-lidelser-utvikler-seg/varselfasen-prodromalfasen">
             Behandling i denne fasen retter seg mot de plagene som pasienten
             og/eller foreldre, ev. pårørende beskriver (helsebiblioteket.no).
@@ -1956,35 +1936,35 @@ const PrintPdfPreview = () => (
           Antipsykotiske legemidler er ikke anbefalt i denne fasen.
         </p>
         <p>
-          {" "}
+
           <strong>Behandlingen består av:</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             strukturerte psykologiske behandlingsmetoder, vanligvis kognitiv
             atferdsterapi og utforsking og bearbeiding av eventuell endret
-            selvopplevelse. Varighet tilpasses den enkeltes behov.{" "}
-          </li>{" "}
+            selvopplevelse. Varighet tilpasses den enkeltes behov.
+          </li>
           <li>
             familiesamarbeid med vekt på formidling av kunnskap og støtte til å
             mestre hverdagen
-          </li>{" "}
+          </li>
           <li>
             psykososiale støttetiltak, stressreduserende tiltak og sosial
             ferdighetstrening
-          </li>{" "}
+          </li>
           <li>
             nødvendige tiltak rettet mot bolig, økonomi, skole/utdanning/arbeid,
-            nettverk og fritid{" "}
-          </li>{" "}
+            nettverk og fritid
+          </li>
           <li>
             annen behandling og oppfølging tilpasses pasientens og familiens
             behov
           </li>
         </ul>
         <p>
-          {" "}
+
           Pasienter som får diagnostisert en psykose fortsetter med behandling
           som beskrevet ved første psykoseepisode.
         </p>
@@ -2003,11 +1983,11 @@ const PrintPdfPreview = () => (
           symptomer, sosial situasjon og andre individuelle faktorer.
           Behandlingen skal evalueres ved hjelp av kliniske vurderinger,
           pasientens og/eller foreldres, ev. pårørendes tilbakemeldinger og
-          standardiserte verktøy. Se:{" "}
+          standardiserte verktøy. Se:
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/planlegging-av-behandling">
             Planlegging av behandling
-          </a>{" "}
-          og{" "}
+          </a>
+          og
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/evalueringspunkter">
             Evalueringspunkter
           </a>
@@ -2026,7 +2006,7 @@ const PrintPdfPreview = () => (
           behandlingsalternativer skal inngå i dialogen.
         </p>
         <p>
-          De ulike behandlingsalternativene ved psykose er beskrevet i{" "}
+          De ulike behandlingsalternativene ved psykose er beskrevet i
           <a href="http://www.helsebiblioteket.no/retningslinjer/psykoselidelser/forord%3Bjsessionid%3D13C9D20493DD4F0230CE03A4C90B5457">
             Nasjonal faglig retningslinje for utredning, behandling og
             oppfølging av personer med psykoselidelser (helsebiblioteket.no)
@@ -2048,7 +2028,7 @@ const PrintPdfPreview = () => (
         <p>
           Behandling ved nye psykoseepisoder skal følge de samme anbefalingene
           som ved første psykoseepisode. Behandlingsansvarlig må vurdere hvordan
-          resultatene av innledende kartlegging (Se:{" "}
+          resultatene av innledende kartlegging (Se:
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/kartlegging-og-utredning-psykose-pakkeforlop/kartlegging-og-utredning-ved-tilbakevendende-psykoseepisoder">
             Kartlegging og utredning ved tilbakevendende psykoseepisode(r)
           </a>
@@ -2087,7 +2067,7 @@ const PrintPdfPreview = () => (
         <p>
           Målet med tiltakene er å bedre evnen til å fungere og gjenvinne tapte
           ferdigheter, men også, om nødvendig, tilpasse seg en ny situasjon og
-          legge forholdene best mulig til rette for et godt liv.{" "}
+          legge forholdene best mulig til rette for et godt liv.
         </p>
         <p>
           Behandlingen ved langvarig psykoselidelse skal følge de samme
@@ -2116,14 +2096,14 @@ const PrintPdfPreview = () => (
           tjenestetilbudet, får tilbud om behandling og oppfølging i et aktivt
           oppsøkende behandlingsteam. Teamet gir både kommunale tjenester og
           spesialisthelsetjenester (ACT-, FACT- eller andre oppsøkende
-          behandlingsteam med personell fra kommune og spesialisthelsetjeneste).{" "}
+          behandlingsteam med personell fra kommune og spesialisthelsetjeneste).
           <a href="https://www.napha.no/content/13543/Ny-ACT--og-FACT-handbok">
             Se ACT- og FACT-håndbok (napha.no).
-          </a>{" "}
+          </a>
           Hvis det ikke er etablert ACT-team, FACT-team eller tilsvarende
           oppsøkende behandlingsteam i pasientens bostedskommune, skal det
           etableres samarbeid som sikrer oppfølging fra både kommune og
-          spesialisthelsetjeneste for denne målgruppen.{" "}
+          spesialisthelsetjeneste for denne målgruppen.
         </p>
         <h3>Behov for akutte tjenester</h3>
         <p>
@@ -2164,11 +2144,11 @@ const PrintPdfPreview = () => (
         </p>
         <p>I alle pasientforløp skal det sikres:</p>
         <ul>
-          {" "}
+
           <li>
             samarbeid med foreldre, ev. pårørende og/eller andre instanser ut
             fra pasientens ønsker og behov
-          </li>{" "}
+          </li>
           <li>
             tilbakemelding til henviser og fastlege når behandlingsplan er
             utarbeidet og hvis større endringer i pasientens tilstand eller
@@ -2195,7 +2175,7 @@ const PrintPdfPreview = () => (
           om tiltak.
         </p>
         <p>
-          Se også:{" "}
+          Se også:
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/behandling-ved-langvarig-psykoselidelse-med-behov-for-samtidige-og-sammensatte-tjenester">
             Behandling ved langvarig psykoselidelse med behov for samtidige og
             sammensatte tjenester
@@ -2204,18 +2184,18 @@ const PrintPdfPreview = () => (
         </p>
         <p>
           Ved innleggelse i døgnenhet må kommunen varsles innen 24 timer eller
-          så snart det lar seg gjøre. Se{" "}
+          så snart det lar seg gjøre. Se
           <a href="https://lovdata.no/dokument/SF/forskrift/2011-11-18-1115">
             Forskrift om utskrivningsklare pasienter (lovdata.no).
           </a>
         </p>
         <p>Ved innleggelse bør også:</p>
         <ul>
-          {" "}
+
           <li>
             samarbeid mellom involverte parter avtales innen én uke etter
             innleggelse
-          </li>{" "}
+          </li>
           <li>behandling og oppfølging i tiden før innleggelse evalueres</li>
         </ul>
         <p>
@@ -2226,14 +2206,14 @@ const PrintPdfPreview = () => (
         <p>
           <a href="http://legeforeningen.no/Fagmed/Norsk-forening-for-allmennmedisin/Faggrupper/Samhandling/">
             Se også Norsk forening for allmennmedisin sine anbefalinger om
-            samhandling mellom fastleger og sykehus (legeforeningen.no).{" "}
+            samhandling mellom fastleger og sykehus (legeforeningen.no).
           </a>
         </p>
         <p>
           Helsestasjonen og skolehelsetjenesten skal ha rutiner for samarbeid
           med barn og ungdommers fastleger for å sikre tydelig ansvars- og
           oppgavefordeling og god rolleforståelse. Det er kommunenes ansvar å
-          tilrettelegge slik at tjenestene samarbeider. Se{" "}
+          tilrettelegge slik at tjenestene samarbeider. Se
           <a href="https://www.helsedirektoratet.no/retningslinjer/helsestasjons-og-skolehelsetjenesten/fellesdel-samhandling-og-samarbeid">
             anbefaling om samarbeid med fastlege
           </a>
@@ -2260,7 +2240,7 @@ const PrintPdfPreview = () => (
           samarbeidsmøtene skal det tas utgangspunkt i pasientens
           behandlingsplan og eventuell individuell plan, og dette skal bidra til
           å sikre koordinering av de tiltakene som skal gjennomføres. Se også
-          veileder{" "}
+          veileder
           <a href="https://www.helsedirektoratet.no/veiledere/sammen-om-mestring-lokalt-psykisk-helsearbeid-og-rusarbeid-for-voksne/Lokalt%20psykisk%20helsearbeid%20og%20rusarbeid%20for%20voksne%20%E2%80%93%20Veileder.pdf">
             Sammen om mestring
           </a>
@@ -2359,38 +2339,38 @@ const PrintPdfPreview = () => (
           pårørende, behandler og involverte tjenester, i fellesskap vurdere:
         </p>
         <ul>
-          {" "}
+
           <li>
             pasientens og/eller foreldrenes, ev. pårørendes opplevelse av
             behandlingen, om den oppleves nyttig og om mål eller delmål i
             behandlingsplanen oppnås
-          </li>{" "}
+          </li>
           <li>
             status – endring i tilstand/symptomer, pasientens opplevelse av
             bedring, ev. behov for revurdering av diagnose
-          </li>{" "}
-          <li>behandlingseffekt ved bruk av strukturerte verktøy</li>{" "}
-          <li>hvordan mindreårige barn og søsken følges opp</li>{" "}
+          </li>
+          <li>behandlingseffekt ved bruk av strukturerte verktøy</li>
+          <li>hvordan mindreårige barn og søsken følges opp</li>
           <li>
             behovet for å involvere pårørende, flere i familien/nettverket eller
             andre tjenester
-          </li>{" "}
+          </li>
           <li>
             pasienten og/eller foreldres, ev. pårørendes tilfredshet med
             behandlingen
-          </li>{" "}
-          <li>om somatisk helse er ivaretatt</li>{" "}
+          </li>
+          <li>om somatisk helse er ivaretatt</li>
           <li>
             plan for å forbli i skole/arbeid eller tilbakevending til skole
             eller arbeid
-          </li>{" "}
+          </li>
           <li>
             legemiddelgjennomgang, inkludert indikasjon, effekt, bivirkninger
-          </li>{" "}
+          </li>
           <li>evaluere behandlingsplanen</li>
         </ul>
         <p>
-          For legemiddelgjennomgang, se{" "}
+          For legemiddelgjennomgang, se
           <a href="https://www.helsedirektoratet.no/veiledere/legemiddelgjennomganger/Legemiddelgjennomganger%20%E2%80%93%20Veileder.pdf">
             veileder om legemiddelgjennomganger
           </a>
@@ -2423,36 +2403,31 @@ const PrintPdfPreview = () => (
         <h3>Forløpstider</h3>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Forløpstider evalueringspunkt</td> <td>&nbsp;</td>{" "}
-                <td>&nbsp;</td>{" "}
-              </tr>{" "}
+                <td>Forløpstider evalueringspunkt</td> <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
               <tr>
-                {" "}
-                <td>Poliklinikk</td>{" "}
-                <td>Fra klinisk beslutning til første evaluering</td>{" "}
-                <td>Inntil 42 kalenderdager (6 uker)</td>{" "}
-              </tr>{" "}
+                <td>Poliklinikk</td>
+                <td>Fra klinisk beslutning til første evaluering</td>
+                <td>Inntil 42 kalenderdager (6 uker)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>&nbsp;</td> <td>Tid mellom hver evaluering</td>{" "}
-                <td>Inntil 84 kalenderdager (12 uker)</td>{" "}
-              </tr>{" "}
+                <td>&nbsp;</td> <td>Tid mellom hver evaluering</td>
+                <td>Inntil 84 kalenderdager (12 uker)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>Døgnenhet</td>{" "}
-                <td>Fra klinisk beslutning til første evaluering</td>{" "}
-                <td>Inntil 14 kalenderdager (2 uker)</td>{" "}
-              </tr>{" "}
+                <td>Døgnenhet</td>
+                <td>Fra klinisk beslutning til første evaluering</td>
+                <td>Inntil 14 kalenderdager (2 uker)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>&nbsp;</td> <td>Tid mellom hver evaluering</td>{" "}
-                <td>Inntil 42 kalenderdager (6 uker)</td>{" "}
-              </tr>{" "}
+                <td>&nbsp;</td> <td>Tid mellom hver evaluering</td>
+                <td>Inntil 42 kalenderdager (6 uker)</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2492,29 +2467,26 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>U</td> <td>Utført aktivitet</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>U</td> <td>Utført aktivitet</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>B</td>{" "}
+                <td>B</td>
                 <td>
                   Pasient og/eller foreldre og eventuelt pårørende er informert
                   om de ulike behandlingsformer enheten tilbyr for aktuell
                   lidelse
-                </td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2540,39 +2512,36 @@ const PrintPdfPreview = () => (
         </p>
         <p>Behandlingsplanen bør inneholde minimum:</p>
         <ul>
-          {" "}
-          <li>behandlingsmål</li>{" "}
-          <li>rammer for behandlingen (hyppighet, varighet)</li>{" "}
-          <li>behandlingstilnærminger og tiltak</li>{" "}
-          <li>eventuelle tiltak utenfor psykisk helsevern</li>{" "}
-          <li>ansvarlige for de ulike tiltakene</li>{" "}
-          <li>kriterier for avslutning</li>{" "}
+
+          <li>behandlingsmål</li>
+          <li>rammer for behandlingen (hyppighet, varighet)</li>
+          <li>behandlingstilnærminger og tiltak</li>
+          <li>eventuelle tiltak utenfor psykisk helsevern</li>
+          <li>ansvarlige for de ulike tiltakene</li>
+          <li>kriterier for avslutning</li>
           <li>plan for evaluering av tiltakene</li>
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>U</td> <td>Utført aktivitet</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>U</td> <td>Utført aktivitet</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>U</td>{" "}
+                <td>U</td>
                 <td>
                   Pasient og/eller foreldre og eventuelt pårørende er involvert
                   i utarbeidelse av utredningsplan og/eller behandlingsplan
-                </td>{" "}
-                <td>Utfall</td> <td>9325</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9325</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2606,8 +2575,8 @@ const PrintPdfPreview = () => (
           Når behandlingsplanen er utarbeidet bør tilbakemeldingen inneholde:
         </p>
         <ul>
-          {" "}
-          <li>konklusjon av utredning</li>{" "}
+
+          <li>konklusjon av utredning</li>
           <li>sentrale elementer i behandlingsplanen</li>
         </ul>
         <p>
@@ -2615,29 +2584,27 @@ const PrintPdfPreview = () => (
           bør tilbakemeldingen inneholde:
         </p>
         <ul>
-          {" "}
-          <li>en oppsummering av evalueringspunktet</li>{" "}
+
+          <li>en oppsummering av evalueringspunktet</li>
           <li>endringene i behandlingsplanen</li>
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>F</td>{" "}
+                <td>F</td>
                 <td>
                   Tilbakemelding til henviser og fastlege sendt underveis i
                   pakkeforløpet
-                </td>{" "}
-                <td>Hendelse</td> <td>9322</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Hendelse</td> <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2653,7 +2620,7 @@ const PrintPdfPreview = () => (
         </p>
         <p />
         <ul>
-          {" "}
+
           <li>
             Hver gang det blir gjennomført et samarbeidsmøte/ansvarsgruppemøte
             hvor pasient og/eller foreldre og ev. pårørende, aktuelle kommunale
@@ -2661,14 +2628,14 @@ const PrintPdfPreview = () => (
             pakkeforløpet, skal kode for samarbeidsmøte med relevante instanser
             registreres på dato for samarbeidsmøtet. Aktuelle deltakere avtales
             individuelt. Det skal også registreres at møtet er gjennomført.
-          </li>{" "}
+          </li>
           <li>
             Hvis det ikke er behov for samarbeidsmøter med relevante instanser i
             løpet av pakkeforløpet, eller pasienten ikke ønsker samarbeidsmøter,
             skal kode for Samarbeidsmøte med utfall -Vurdert ikke behov for
             møte, registreres på den dato man tar beslutning om at det ikke er
             behov.
-          </li>{" "}
+          </li>
           <li>
             Ved behov for samarbeidsmøte bør dette avholdes kort tid etter
             oppstart av utredning og behandling.<strong> </strong>
@@ -2676,29 +2643,25 @@ const PrintPdfPreview = () => (
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>S</td> <td>Samarbeidsmøte med relevante instanser</td>{" "}
-                <td>Hendelse</td> <td>9322</td>{" "}
-              </tr>{" "}
+                <td>S</td> <td>Samarbeidsmøte med relevante instanser</td>
+                <td>Hendelse</td> <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>M</td> <td>Gjennomført møte</td> <td>Utfall</td>{" "}
-                <td>9324</td>{" "}
-              </tr>{" "}
+                <td>M</td> <td>Gjennomført møte</td> <td>Utfall</td>
+                <td>9324</td>
+              </tr>
               <tr>
-                {" "}
-                <td>I</td> <td>Vurdert ikke behov for møte</td> <td>Utfall</td>{" "}
-                <td>9324</td>{" "}
-              </tr>{" "}
+                <td>I</td> <td>Vurdert ikke behov for møte</td> <td>Utfall</td>
+                <td>9324</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2707,11 +2670,11 @@ const PrintPdfPreview = () => (
           som prosedyrekoder med kodene:
         </p>
         <ul>
-          {" "}
+
           <li>
             D06SM - Mistanke om psykoseutvikling og psykoselidelser -
             Samarbeidsmøte med relevante instanser - Gjennomført møte
-          </li>{" "}
+          </li>
           <li>
             D06SI - Mistanke om psykoseutvikling og psykoselidelser -
             Samarbeidsmøte med relevante instanser - Vurdert ikke behov for møte
@@ -2723,7 +2686,7 @@ const PrintPdfPreview = () => (
         </p>
         <p />
         <p>
-          Hver gang en evaluering er fullført,{" "}
+          Hver gang en evaluering er fullført,
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/evalueringspunkter">
             slik den er beskrevet i pakkeforløpet
           </a>
@@ -2736,19 +2699,17 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>E</td> <td>Evalueringspunkt</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>E</td> <td>Evalueringspunkt</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2789,7 +2750,7 @@ const PrintPdfPreview = () => (
           foreligge en konkret, skriftlig plan. Ev. videre samarbeid med
           spesialisthelsetjenesten skal inngå i planen. Når denne beslutningen
           er tatt skal koden Hjelpebehov ved avslutning av pakkeforløp i
-          spesialisthelsetjenesten registreres.{" "}
+          spesialisthelsetjenesten registreres.
         </p>
         <p>
           Kriseplanen bør være oppdatert og virksom, og hvis pasienten har IP
@@ -2816,7 +2777,7 @@ const PrintPdfPreview = () => (
           <li>Pasienten har en egnet bolig og trygg økonomisk situasjon</li>
           <li>
             Pasienten har tilbud om skole, arbeid eller meningsfull aktivitet
-            eller en plan for videre tiltak{" "}
+            eller en plan for videre tiltak
           </li>
           <li>
             Det er informert om hvor pasienten og/eller foreldre, ev. pårørende
@@ -2832,7 +2793,7 @@ const PrintPdfPreview = () => (
             Kontaktperson/forløpskoordinator i kommunen har en koordinerende og
             sentral rolle etter at pasienten har avsluttet behandling i psykisk
             helsevern. Tilrettelegging og samarbeid i forbindelse med utskriving
-            må sees i sammenheng med{" "}
+            må sees i sammenheng med
             <a href="https://lovdata.no/dokument/SF/forskrift/2011-11-18-1115">
               Forskrift om utskrivningsklare pasienter (lovdata.no).
             </a>
@@ -2849,7 +2810,7 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          {" "}
+
           I avsluttende samtale i spesialisthelsetjenesten skal tilbakemelding
           fra pasient og/eller foreldre, ev. pårørende om hvordan de har opplevd
           tilbudet de har fått gjennomgås. Behandler, og ev. andre som har vært
@@ -2864,7 +2825,7 @@ const PrintPdfPreview = () => (
         <ul>
           <li>
             Plan for videre tiltak og ansvar for dem, inkl. ivaretakelse av
-            somatisk helse{" "}
+            somatisk helse
           </li>
           <li>Kriseplan som er forankret hos involverte aktører</li>
           <li>Aktuelle avtaler, henvisninger og søknader</li>
@@ -2877,7 +2838,7 @@ const PrintPdfPreview = () => (
         </ul>
         <p>
           Dersom pasienten og/eller foreldre, eventuelt andre pårørende ønsker
-          det bør kontaktinformasjon til{" "}
+          det bør kontaktinformasjon til
           <a href="https://helsenorge.no/parorende/tilbud-for-parorende-innen-psykisk-helse-og-rus">
             relevante bruker- og pårørendeorganisasjoner gis (se oversikt på
             helsenorge.no)
@@ -2887,10 +2848,10 @@ const PrintPdfPreview = () => (
         <p>
           Pasienten bør ikke skrives ut fra spesialisthelsetjenesten før det er
           sendt epikrise. Hvis fastlege ikke er henviser, sendes både til
-          henviser og fastlege.{" "}
+          henviser og fastlege.
         </p>
         <p>
-          Se{" "}
+          Se
           <a href="http://www.pasientsikkerhetsprogrammet.no/om-oss/innsatsomr%C3%A5der/_attachment/4433?_download=false&_ts=15e9edfb955">
             Tiltakspakke for trygg utskrivning med pasienten som likeverdig part
             (pasientsikkerhetsprogrammet.no).
@@ -2914,7 +2875,7 @@ const PrintPdfPreview = () => (
         </p>
         <p />
         <p>
-          {" "}
+
           Koden registreres på dato for når standardisert verktøy for måling av
           symptom og/eller funksjon benyttes. Slike verktøy bør benyttes tidlig
           i utredningen, ved evaluering og ved avslutning i
@@ -2924,30 +2885,27 @@ const PrintPdfPreview = () => (
           <table>
             <tbody>
               <tr>
-                {" "}
-                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>{" "}
+                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>
                 <td> Kodeverk (OID) </td>
               </tr>
               <tr>
-                {" "}
-                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>{" "}
+                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>
                 <td> 9322 </td>
               </tr>
               <tr>
-                {" "}
-                <td> V </td>{" "}
+                <td> V </td>
                 <td>
-                  {" "}
+
                   Brukt standardisert verktøy for måling av symptom og/eller
-                  funksjon{" "}
-                </td>{" "}
+                  funksjon
+                </td>
                 <td> Utfall </td> <td> 9325 </td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
-          {" "}
+
           I systemer som ikke har forløpsmodul registreres dette som en
           prosedyrekode med kode D06UV - Mistanke om psykoseutvikling og
           psykoselidelser - Utført aktivitet - Brukt standardisert verktøy for
@@ -2960,7 +2918,7 @@ const PrintPdfPreview = () => (
         </p>
         <p />
         <p>
-          Hver gang en evaluering er fullført,{" "}
+          Hver gang en evaluering er fullført,
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/evalueringspunkter">
             slik den er beskrevet i pakkeforløpet
           </a>
@@ -2973,19 +2931,17 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>E</td> <td>Evalueringspunkt</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>E</td> <td>Evalueringspunkt</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -3000,7 +2956,7 @@ const PrintPdfPreview = () => (
         </p>
         <p />
         <p>
-          {" "}
+
           Med feedbackverktøy menes gjennomgang av et skjema der pasienten på en
           systematisk måte kan gi tilbakemelding til behandleren om hvordan
           pasienten opplever behandlingen. Hvis det regelmessig er benyttet
@@ -3012,25 +2968,22 @@ const PrintPdfPreview = () => (
           <table>
             <tbody>
               <tr>
-                {" "}
-                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>{" "}
+                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>
                 <td> Kodeverk (OID) </td>
               </tr>
               <tr>
-                {" "}
-                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>{" "}
+                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>
                 <td> 9322 </td>
               </tr>
               <tr>
-                {" "}
-                <td> F </td> <td> Brukt feedbackverktøy </td> <td> Utfall </td>{" "}
+                <td> F </td> <td> Brukt feedbackverktøy </td> <td> Utfall </td>
                 <td> 9325 </td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
-          {" "}
+
           Ved rapportering i system som ikke har forløpsmodul registreres dette
           som en prosedyrekode med kode D06UF - Mistanke om psykoseutvikling og
           psykoselidelser - Utført aktivitet - Brukt feedbackverktøy <br />
@@ -3052,7 +3005,7 @@ const PrintPdfPreview = () => (
         </p>
         <p>Det kan være ulike årsaker til avslutning:</p>
         <ul>
-          {" "}
+
           <li>
             Avslutning av gjennomført pakkeforløp. Registrering av kode for
             avslutning av pakkeforløp og kode for avslutning av gjennomført
@@ -3061,14 +3014,14 @@ const PrintPdfPreview = () => (
             tatt en klinisk beslutning om at pasienten ikke trenger behandling i
             psykisk helsevern eller når behandlingen i psykisk helsevern er
             gjennomført etter planen.
-          </li>{" "}
+          </li>
           <li>
             Pasienten overføres til annet helseforetak eller privat institusjon
             for å videreføre pakkeforløpet der. Dato for avslutning av
             pakkeforløpet og kode for overføring til annet helseforetak / privat
             behandlingssted for videreføring av pågående pakkeforløp registreres
             på den dato overføringen skjer.
-          </li>{" "}
+          </li>
           <li>
             Avbrudd etter pasientens eget ønske. Når behandler ikke anser
             pakkeforløpet som fullført, men det brytes av etter pasientens
@@ -3076,13 +3029,13 @@ const PrintPdfPreview = () => (
             pakkeforløp og kode for avbrudd etter pasientens/foresattes eget
             ønske registreres på den dato behandlingsstedet får informasjon om
             avbruddet.
-          </li>{" "}
+          </li>
           <li>
             Avslutning av andre årsaker. Dato for avslutning av pakkeforløp og
             kode for avslutning av andre årsaker registreres på den dato
             behandlingsstedet får informasjon om avslutningen. Dette kan f.eks.
             være ved dødsfall.
-          </li>{" "}
+          </li>
           <li>
             Overført til annet pakkeforløp innen psykisk helse og rus. Dato for
             avslutning av pakkeforløpet og kode for overføring til annet
@@ -3094,52 +3047,45 @@ const PrintPdfPreview = () => (
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>X</td> <td>Avslutning av pakkeforløp</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>X</td> <td>Avslutning av pakkeforløp</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>G</td> <td>Avslutning av gjennomført pakkeforløp</td>{" "}
-                <td>Utfall</td> <td>9326</td>{" "}
-              </tr>{" "}
+                <td>G</td> <td>Avslutning av gjennomført pakkeforløp</td>
+                <td>Utfall</td> <td>9326</td>
+              </tr>
               <tr>
-                {" "}
-                <td>P</td>{" "}
-                <td>Avbrudd etter pasientens/foresattes eget ønske</td>{" "}
-                <td>Utfall</td> <td>9326</td>{" "}
-              </tr>{" "}
+                <td>P</td>
+                <td>Avbrudd etter pasientens/foresattes eget ønske</td>
+                <td>Utfall</td> <td>9326</td>
+              </tr>
               <tr>
-                {" "}
-                <td>A</td> <td>Avslutning av andre årsaker</td> <td>Utfall</td>{" "}
-                <td>9326</td>{" "}
-              </tr>{" "}
+                <td>A</td> <td>Avslutning av andre årsaker</td> <td>Utfall</td>
+                <td>9326</td>
+              </tr>
               <tr>
-                {" "}
-                <td>O</td>{" "}
+                <td>O</td>
                 <td>
                   Overført til annet helseforetak / privat behandlingssted for
                   videreføring av pågående pakkeforløp
-                </td>{" "}
-                <td>Utfall</td> <td>9326</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9326</td>
+              </tr>
               <tr>
-                {" "}
-                <td>N</td>{" "}
+                <td>N</td>
                 <td>
                   Overført til annet pakkeforløp innen psykisk helse eller rus
-                </td>{" "}
-                <td>Utfall</td> <td>9326</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9326</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -3152,24 +3098,24 @@ const PrintPdfPreview = () => (
           som prosedyrekoder med kodene:
         </p>
         <ul>
-          {" "}
+
           <li>
             D06XG - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Avslutning av gjennomført pakkeforløp
-          </li>{" "}
+          </li>
           <li>
             D06XP - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Avbrudd etter pasientens/foresattes eget ønske
-          </li>{" "}
+          </li>
           <li>
             D06XA - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Avslutning av andre årsaker
-          </li>{" "}
+          </li>
           <li>
             D06XO - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Overført til annet helseforetak / privat
             behandlingssted for videreføring av pågående pakkeforløp
-          </li>{" "}
+          </li>
           <li>
             D06XN - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Overført til annet pakkeforløp innen psykisk helse
@@ -3192,60 +3138,54 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>H</td>{" "}
+                <td>H</td>
                 <td>
                   Hjelpebehov ved avslutning av pakkeforløp i
                   spesialisthelsetjenesten
-                </td>{" "}
-                <td>Hendelse</td> <td>9322</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Hendelse</td> <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>S</td>{" "}
+                <td>S</td>
                 <td>
                   Behov for behandling fra annen spesialisthelsetjeneste (ikke
                   psykisk helsevern eller TSB)
-                </td>{" "}
-                <td>Utfall</td> <td>9328</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9328</td>
+              </tr>
               <tr>
-                {" "}
-                <td>K</td>{" "}
+                <td>K</td>
                 <td>
                   Behov for behandling og/eller oppfølging fra fastlege,
                   kommunal helse- og omsorgstjeneste
-                </td>{" "}
-                <td>Utfall</td> <td>9328</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9328</td>
+              </tr>
               <tr>
-                {" "}
-                <td>A</td>{" "}
+                <td>A</td>
                 <td>
                   Behov for oppfølging fra andre instanser som NAV, PPT,
                   arbeidsgiver, skole, barnevern mm.
-                </td>{" "}
-                <td>Utfall</td> <td>9328</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9328</td>
+              </tr>
               <tr>
-                {" "}
-                <td>I</td>{" "}
-                <td>Ikke behov for videre behandling og/eller oppfølging</td>{" "}
-                <td>Utfall</td>{" "}
+                <td>I</td>
+                <td>Ikke behov for videre behandling og/eller oppfølging</td>
+                <td>Utfall</td>
                 <td>
-                  {" "}
-                  <p>9328</p>{" "}
-                </td>{" "}
-              </tr>{" "}
+
+                  <p>9328</p>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -3254,25 +3194,25 @@ const PrintPdfPreview = () => (
           som prosedyrekoder med kodene:
         </p>
         <ul>
-          {" "}
+
           <li>
             D06HS - Mistanke om psykoseutvikling og psykoselidelser -
             Hjelpebehov ved avslutning av pakkeforløp i spesialisthelsetjenesten
             - Behov for behandling fra annen spesialisthelsetjeneste (ikke
             Psykisk helsevern eller TSB)
-          </li>{" "}
+          </li>
           <li>
             D06HK - Mistanke om psykoseutvikling og psykoselidelser -
             Hjelpebehov ved avslutning av pakkeforløp i spesialisthelsetjenesten
             - Behov for behandling og/eller oppfølging fra fastlege, kommunal
             helse- og omsorgstjeneste
-          </li>{" "}
+          </li>
           <li>
             D06HA - Mistanke om psykoseutvikling og psykoselidelser -
             Hjelpebehov ved avslutning av pakkeforløp i spesialisthelsetjenesten
             - Behov for oppfølging fra andre instanser som NAV, PPT,
             arbeidsgiver, skole, barnevern mm.
-          </li>{" "}
+          </li>
           <li>
             D06HI - Mistanke om psykoseutvikling og psykoselidelser -
             Hjelpebehov ved avslutning av pakkeforløp i spesialisthelsetjenesten
@@ -3382,7 +3322,7 @@ const PrintPdfPreview = () => (
         </p>
         <h3>Mer informasjonsmateriell om samtykke og informasjon</h3>
         <ul>
-          {" "}
+
           <li>
             Informasjon til pasientene:&nbsp;
             <a href="https://helsedirektoratet-helsenett-xpprod.enonic.cloud/pakkeforlop/psykiske-lidelser-barn-og-unge/barn-foreldre-og-andre-prrende-pakkeforlp-for-psykisk-helse-og-rus/_/attachment/download/bb8e21af-d5e6-4b75-88cf-3f35e1488117:a098b916f420374098c7736056e52fabb0396607/Rettigheter%20i%20psykisk%20helsevern%20for%20deg%20under%2016%20%C3%A5r.pdf">
@@ -3392,14 +3332,14 @@ const PrintPdfPreview = () => (
             <a href="https://helsedirektoratet-helsenett-xpprod.enonic.cloud/pakkeforlop/psykiske-lidelser-barn-og-unge/barn-foreldre-og-andre-prrende-pakkeforlp-for-psykisk-helse-og-rus/_/attachment/download/caae3a72-eeaf-4044-ad05-ac7bcd850f09:39d378f0f782e1b692881253fbb2766c5fddb2fd/Rettigheter%20i%20psykisk%20helsevern%20for%20deg%20mellom%2016%20og%2018%20%C3%A5r.pdf">
               Rettigheter i psykisk helsevern for deg mellom 16 og 18 år
             </a>
-          </li>{" "}
+          </li>
           <li>
             Informasjon til foreldrene:&nbsp;
             <a href="https://helsedirektoratet-helsenett-xpprod.enonic.cloud/pakkeforlop/psykiske-lidelser-barn-og-unge/barn-foreldre-og-andre-prrende-pakkeforlp-for-psykisk-helse-og-rus/_/attachment/download/a6d88122-e0ba-4995-b44d-3ef6906a6e3f:977decc49164b65172f8e5241db78ba83348668c/P%C3%A5r%C3%B8rendes%20rettigheter%20%E2%80%93%20Informasjon%20til%20p%C3%A5r%C3%B8rende%20av%20pasienter%20med%20psykiske%20lidelser%20og%20rusmiddelproblemer.pdf">
               Pårørendes rettigheter – Informasjon til pårørende av pasienter
               med psykiske lidelser og rusmiddelproblemer
             </a>
-          </li>{" "}
+          </li>
           <li>
             Informasjon til helsepersonell:
             <a href="https://helsedirektoratet-helsenett-xpprod.enonic.cloud/pakkeforlop/psykiske-lidelser-barn-og-unge/barn-foreldre-og-andre-prrende-pakkeforlp-for-psykisk-helse-og-rus/_/attachment/download/4bb0602e-7cd7-482d-a03b-4b4a5351d0a7:8774b2e575c8b205d89449117e9b1a9951109b90/P%C3%A5r%C3%B8rendes%20rettigheter%20%E2%80%93%20En%20oversikt%20for%20helsepersonell%20i%20den%20psykiske%20helsetjenesten%20og%20rustiltak.pdf">
@@ -3427,7 +3367,7 @@ const PrintPdfPreview = () => (
           et barn blir mishandlet i hjemmet eller det foreligger andre former
           for alvorlig omsorgssvikt, eller barnet har vist vedvarende og
           alvorlige atferdsvansker har behandler opplysningsplikt til
-          barneverntjenesten. Se mer om opplysningsplikt til barnevernet i{" "}
+          barneverntjenesten. Se mer om opplysningsplikt til barnevernet i
           <a href="https://www.helsedirektoratet.no/rundskriv/helsepersonelloven-med-kommentarer/opplysningsplikt-m.v/-33.opplysningsplikt-til-barnevernet">
             rundskriv til helsepersonelloven og kommentaren til § 33
           </a>
@@ -3484,25 +3424,25 @@ const PrintPdfPreview = () => (
         </p>
         <h3>Mer informasjonsmateriell om samtykke og informasjon</h3>
         <ul>
-          {" "}
+
           <li>
-            Informasjon til pasientene:{" "}
+            Informasjon til pasientene:
             <a
               href="https://www.helsedirektoratet.no/brosjyrer/rettigheter-i-psykisk-helsevern-for-deg-under-16-ar/Rettigheter%20i%20psykisk%20helsevern%20for%20deg%20under%2016%20%C3%A5r.pdf?download=false"
               target="_blank"
             >
               Rettigheter i psykisk helsevern for deg under 16 år
             </a>
-            ,{" "}
+            ,
             <a
               href="https://www.helsedirektoratet.no/brosjyrer/rettigheter-i-psykisk-helsevern-for-deg-mellom-16-og-18-ar/Rettigheter%20i%20psykisk%20helsevern%20for%20deg%20mellom%2016%20og%2018%20%C3%A5r.pdf?download=false"
               target="_blank"
             >
               Rettigheter i psykisk helsevern for deg mellom 16 og 18 år
             </a>
-          </li>{" "}
+          </li>
           <li>
-            Informasjon til foreldrene:{" "}
+            Informasjon til foreldrene:
             <a
               href="https://www.helsedirektoratet.no/brosjyrer/parorendes-rettigheter-informasjon-til-parorende-av-pasienter-med-psykiske-lidelser-og-rusmiddelproblemer/P%C3%A5r%C3%B8rendes%20rettigheter%20%E2%80%93%20Informasjon%20til%20p%C3%A5r%C3%B8rende%20av%20pasienter%20med%20psykiske%20lidelser%20og%20rusmiddelproblemer.pdf?download=false"
               target="_blank"
@@ -3510,7 +3450,7 @@ const PrintPdfPreview = () => (
               Pårørendes rettigheter – Informasjon til pårørende av pasienter
               med psykiske lidelser og rusmiddelproblemer
             </a>
-          </li>{" "}
+          </li>
           <li>
             Informasjon til helsepersonell:
             <a
@@ -3541,7 +3481,7 @@ const PrintPdfPreview = () => (
           behov for informasjon og oppfølging som følge av pasientens tilstand.
         </p>
         <p>
-          Se mer informasjon om plikten til å ivareta barn som er pårørende i{" "}
+          Se mer informasjon om plikten til å ivareta barn som er pårørende i
           <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder/informasjon-og-stotte-til-barn-som-parorende">
             Veileder om pårørende i helse- og omsorgstjenesten
           </a>
@@ -3584,7 +3524,7 @@ const PrintPdfPreview = () => (
           .
         </p>
         <p>
-          Se også{" "}
+          Se også
           <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder/informasjon-og-stotte-til-barn-som-parorende">
             Veileder om pårørende i helse- og omsorgstjenesten
           </a>
@@ -3613,55 +3553,55 @@ const PrintPdfPreview = () => (
         <table>
           <tbody>
             <tr>
-              {" "}
+
               <td> Forløpstider </td> <td> </td> <td> </td>
             </tr>
             <tr>
-              {" "}
+
               <td>
-                {" "}
+
                 Fra henvisning er mottatt til første fremmøte ved
-                spesialisthelsetjenesten{" "}
-              </td>{" "}
+                spesialisthelsetjenesten
+              </td>
               <td> Poliklinikk </td> <td> Inntil 7 kalenderdager (1 uke) </td>
             </tr>
             <tr>
-              {" "}
+
               <td>
-                {" "}
+
                 Fra henvisning er mottatt til første fremmøte ved
-                spesialisthelsetjenesten{" "}
-              </td>{" "}
+                spesialisthelsetjenesten
+              </td>
               <td> Døgnenhet </td> <td> Innen 24 timer </td>
             </tr>
             <tr>
-              {" "}
-              <td> Fra første fremmøte til klinisk beslutning </td>{" "}
+
+              <td> Fra første fremmøte til klinisk beslutning </td>
               <td> Poliklinikk </td> <td> Inntil 42 kalenderdager (6 uker) </td>
             </tr>
             <tr>
-              {" "}
-              <td> Fra første fremmøte til klinisk beslutning </td>{" "}
+
+              <td> Fra første fremmøte til klinisk beslutning </td>
               <td> Døgnenhet </td> <td> Inntil 14 kalenderdager (2 uker) </td>
             </tr>
             <tr>
-              {" "}
-              <td> Fra klinisk beslutning til første evaluering </td>{" "}
+
+              <td> Fra klinisk beslutning til første evaluering </td>
               <td> Poliklinikk </td> <td> Inntil 42 kalenderdager (6 uker) </td>
             </tr>
             <tr>
-              {" "}
-              <td> Fra klinisk beslutning til første evaluering </td>{" "}
+
+              <td> Fra klinisk beslutning til første evaluering </td>
               <td> Døgnenhet </td> <td> Inntil 14 kalenderdager (2 uker) </td>
             </tr>
             <tr>
-              {" "}
-              <td> Tid mellom hver evaluering </td> <td> Poliklinikk </td>{" "}
+
+              <td> Tid mellom hver evaluering </td> <td> Poliklinikk </td>
               <td> Inntil 84 kalenderdager (12uker) </td>
             </tr>
             <tr>
-              {" "}
-              <td> Tid mellom hver evaluering </td> <td> Døgnenhet </td>{" "}
+
+              <td> Tid mellom hver evaluering </td> <td> Døgnenhet </td>
               <td> Inntil 42 kalenderdager (6 uker) </td>
             </tr>
           </tbody>
@@ -3717,7 +3657,7 @@ const PrintPdfPreview = () => (
           Pakkeforløpskodene beskrevet nedenfor skal benyttes i dette
           pakkeforløpet. Kodene finnes også på Volven.no. Disse
           pakkeforløpskodene eies og administreres av Helsedirektoratet.
-          Henvendelser om spørsmål eller ønsker for koder gjøres per{" "}
+          Henvendelser om spørsmål eller ønsker for koder gjøres per
           <a href="mailto:pakkeforlop.psykiskhelse.rus@helsedir.no">
             e-post til Helsedirektoratet
           </a>
@@ -3730,15 +3670,15 @@ const PrintPdfPreview = () => (
           finnes i seks kodeverk:
         </p>
         <ul>
-          {" "}
+
           <li>
             Ett kodeverk angir hvilken type pakkeforløp pasienten er i.
-          </li>{" "}
+          </li>
           <li>
             Ett kodeverk angir hendelser i pakkeforløpet. Koder fra dette
             kodeverket benyttes gjennom hele pakkeforløpet for å dokumentere hva
             som blir gjort. Hendelsene rapporteres med tidspunkt
-          </li>{" "}
+          </li>
           <li>
             Fire kodeverk inneholder koder som angir utfall for, eller
             beskrivelse av hendelser. Disse kodene benyttes gjennom hele
@@ -3750,12 +3690,12 @@ const PrintPdfPreview = () => (
           er publisert på Volven.no):
         </p>
         <ul>
-          {" "}
-          <li>9321 – koder for type pakkeforløp</li>{" "}
-          <li>9322 – koder for typer hendelser i pakkeforløpet</li>{" "}
-          <li>9323 – koder for utfall av klinisk beslutning</li>{" "}
-          <li>9324 – koder for utfall av samarbeidsmøte</li>{" "}
-          <li>9325 – koder for utfall av utførte aktiviteter</li>{" "}
+
+          <li>9321 – koder for type pakkeforløp</li>
+          <li>9322 – koder for typer hendelser i pakkeforløpet</li>
+          <li>9323 – koder for utfall av klinisk beslutning</li>
+          <li>9324 – koder for utfall av samarbeidsmøte</li>
+          <li>9325 – koder for utfall av utførte aktiviteter</li>
           <li>9326 – koder for utfall av avslutning av pakkeforløp</li>
         </ul>
         <h3>Hvordan er kodene beskrevet i pakkeforløpet?</h3>
@@ -3848,20 +3788,18 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>D06</td>{" "}
-                <td>Psykoselidelser inkludert mistanke om psykoseutvikling</td>{" "}
-                <td>Forløp</td> <td>9321</td>{" "}
-              </tr>{" "}
+                <td>D06</td>
+                <td>Psykoselidelser inkludert mistanke om psykoseutvikling</td>
+                <td>Forløp</td> <td>9321</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -3874,12 +3812,12 @@ const PrintPdfPreview = () => (
           <strong>Kode for Pakkeforløp start skal registreres:</strong>
         </p>
         <ul>
-          {" "}
+
           <li>
             når henvisning til psykisk helsevern er mottatt. Dato for
             pakkeforløp start er mottaksdato for henvisningen. Dette gjelder
             også pasienter som får helsehjelp under tvunget psykisk helsevern.
-          </li>{" "}
+          </li>
           <li>
             etter en øyeblikkelig-hjelp-vurdering, dersom det vurderes behov for
             videre utredning og behandling i psykisk
@@ -3889,13 +3827,13 @@ const PrintPdfPreview = () => (
             senest innen 2 uker etter en øyeblikkelig-hjelp vurdering. Koden
             settes på dato for når beslutning om behov for videre utredning og
             behandling er tatt.
-          </li>{" "}
+          </li>
           <li>
             når det i sykehuset eller private institusjoner påvises psykisk
             lidelse under utredning eller behandling av annen sykdom. Dato for
             pakkeforløp start er dato for mottaksdato for viderehenvisning.
             Dette gjelder også ved viderehenvising fra et annet pakkeforløp.
-          </li>{" "}
+          </li>
           <li>
             når en pasient i pakkeforløp blir overført fra et helseforetak eller
             privat institusjon (hf1) til nytt helseforetak eller institusjon
@@ -3907,19 +3845,17 @@ const PrintPdfPreview = () => (
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>A</td> <td>Pakkeforløp start</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>A</td> <td>Pakkeforløp start</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -3946,19 +3882,17 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>M</td> <td>Første fremmøte i pakkeforløpet</td>{" "}
-                <td>Hendelse</td> <td>9322</td>{" "}
-              </tr>{" "}
+                <td>M</td> <td>Første fremmøte i pakkeforløpet</td>
+                <td>Hendelse</td> <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -3981,7 +3915,7 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          {" "}
+
           Koden registreres på dato for når standardisert verktøy for måling av
           symptom og/eller funksjon benyttes. Slike verktøy bør benyttes tidlig
           i utredningen, ved evaluering og ved avslutning i
@@ -3991,30 +3925,27 @@ const PrintPdfPreview = () => (
           <table>
             <tbody>
               <tr>
-                {" "}
-                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>{" "}
+                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>
                 <td> Kodeverk (OID) </td>
               </tr>
               <tr>
-                {" "}
-                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>{" "}
+                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>
                 <td> 9322 </td>
               </tr>
               <tr>
-                {" "}
-                <td> V </td>{" "}
+                <td> V </td>
                 <td>
-                  {" "}
+
                   Brukt standardisert verktøy for måling av symptom og/eller
-                  funksjon{" "}
-                </td>{" "}
+                  funksjon
+                </td>
                 <td> Utfall </td> <td> 9325 </td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
-          {" "}
+
           I systemer som ikke har forløpsmodul registreres dette som en
           prosedyrekode med kode D06UV - Mistanke om psykoseutvikling og
           psykoselidelser - Utført aktivitet - Brukt standardisert verktøy for
@@ -4046,62 +3977,54 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>C</td> <td>Klinisk beslutning</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>C</td> <td>Klinisk beslutning</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>P</td> <td>Behov for behandling innen psykisk helsevern</td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                <td>P</td> <td>Behov for behandling innen psykisk helsevern</td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>T</td> <td>Behov for behandling innen TSB</td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                <td>T</td> <td>Behov for behandling innen TSB</td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>S</td>{" "}
+                <td>S</td>
                 <td>
                   Behov for behandling fra annen spesialisthelsetjeneste (ikke
                   psykisk helsevern eller TSB)
-                </td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>K</td>{" "}
+                <td>K</td>
                 <td>
                   Behov for behandling og/eller oppfølging fra fastlege,
                   kommunal helse- og omsorgstjeneste
-                </td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>A</td>{" "}
+                <td>A</td>
                 <td>
                   Behov for oppfølging fra andre instanser som NAV, PPT,
                   arbeidsgiver, skole, barnevern m.m.
-                </td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
               <tr>
-                {" "}
-                <td>I</td>{" "}
-                <td>Ikke behov for videre behandling og/eller oppfølging</td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                <td>I</td>
+                <td>Ikke behov for videre behandling og/eller oppfølging</td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -4117,30 +4040,30 @@ const PrintPdfPreview = () => (
           som prosedyrekoder med kodene:
         </p>
         <ul>
-          {" "}
+
           <li>
             D06CP - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for behandling innen psykisk helsevern
-          </li>{" "}
+          </li>
           <li>
             D06CT - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for behandling innen TSB
-          </li>{" "}
+          </li>
           <li>
             D06CS - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for behandling fra annen spesialisthelsetjeneste
             (ikke psykisk helsevern eller TSB)
-          </li>{" "}
+          </li>
           <li>
             D06CK - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for behandling og/eller oppfølging fra fastlege,
             kommunal helse- og omsorgstjeneste
-          </li>{" "}
+          </li>
           <li>
             D06CA - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Behov for oppfølging fra andre instanser som NAV, PPT,
             arbeidsgiver, skole, barnevern m.m.
-          </li>{" "}
+          </li>
           <li>
             D06CI - Mistanke om psykoseutvikling og psykoselidelser - Klinisk
             beslutning - Ikke behov for videre behandling og/eller oppfølging
@@ -4178,29 +4101,26 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>U</td> <td>Utført aktivitet</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>U</td> <td>Utført aktivitet</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>B</td>{" "}
+                <td>B</td>
                 <td>
                   Pasient og/eller foreldre og eventuelt pårørende er informert
                   om de ulike behandlingsformer enheten tilbyr for aktuell
                   lidelse
-                </td>{" "}
-                <td>Utfall</td> <td>9323</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9323</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -4233,39 +4153,36 @@ const PrintPdfPreview = () => (
         </p>
         <p>Behandlingsplanen bør inneholde minimum:</p>
         <ul>
-          {" "}
-          <li>behandlingsmål</li>{" "}
-          <li>rammer for behandlingen (hyppighet, varighet)</li>{" "}
-          <li>behandlingstilnærminger og tiltak</li>{" "}
-          <li>eventuelle tiltak utenfor psykisk helsevern</li>{" "}
-          <li>ansvarlige for de ulike tiltakene</li>{" "}
-          <li>kriterier for avslutning</li>{" "}
+
+          <li>behandlingsmål</li>
+          <li>rammer for behandlingen (hyppighet, varighet)</li>
+          <li>behandlingstilnærminger og tiltak</li>
+          <li>eventuelle tiltak utenfor psykisk helsevern</li>
+          <li>ansvarlige for de ulike tiltakene</li>
+          <li>kriterier for avslutning</li>
           <li>plan for evaluering av tiltakene</li>
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>U</td> <td>Utført aktivitet</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>U</td> <td>Utført aktivitet</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>U</td>{" "}
+                <td>U</td>
                 <td>
                   Pasient og/eller foreldre og eventuelt pårørende er involvert
                   i utarbeidelse av utredningsplan og/eller behandlingsplan
-                </td>{" "}
-                <td>Utfall</td> <td>9325</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9325</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -4304,8 +4221,8 @@ const PrintPdfPreview = () => (
           Når behandlingsplanen er utarbeidet bør tilbakemeldingen inneholde:
         </p>
         <ul>
-          {" "}
-          <li>konklusjon av utredning</li>{" "}
+
+          <li>konklusjon av utredning</li>
           <li>sentrale elementer i behandlingsplanen</li>
         </ul>
         <p>
@@ -4313,29 +4230,27 @@ const PrintPdfPreview = () => (
           bør tilbakemeldingen inneholde:
         </p>
         <ul>
-          {" "}
-          <li>en oppsummering av evalueringspunktet</li>{" "}
+
+          <li>en oppsummering av evalueringspunktet</li>
           <li>endringene i behandlingsplanen</li>
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>F</td>{" "}
+                <td>F</td>
                 <td>
                   Tilbakemelding til henviser og fastlege sendt underveis i
                   pakkeforløpet
-                </td>{" "}
-                <td>Hendelse</td> <td>9322</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Hendelse</td> <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -4356,7 +4271,7 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <ul>
-          {" "}
+
           <li>
             Hver gang det blir gjennomført et samarbeidsmøte/ansvarsgruppemøte
             hvor pasient og/eller foreldre og ev. pårørende, aktuelle kommunale
@@ -4364,14 +4279,14 @@ const PrintPdfPreview = () => (
             pakkeforløpet, skal kode for samarbeidsmøte med relevante instanser
             registreres på dato for samarbeidsmøtet. Aktuelle deltakere avtales
             individuelt. Det skal også registreres at møtet er gjennomført.
-          </li>{" "}
+          </li>
           <li>
             Hvis det ikke er behov for samarbeidsmøter med relevante instanser i
             løpet av pakkeforløpet, eller pasienten ikke ønsker samarbeidsmøter,
             skal kode for Samarbeidsmøte med utfall -Vurdert ikke behov for
             møte, registreres på den dato man tar beslutning om at det ikke er
             behov.
-          </li>{" "}
+          </li>
           <li>
             Ved behov for samarbeidsmøte bør dette avholdes kort tid etter
             oppstart av utredning og behandling.<strong> </strong>
@@ -4379,29 +4294,25 @@ const PrintPdfPreview = () => (
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>S</td> <td>Samarbeidsmøte med relevante instanser</td>{" "}
-                <td>Hendelse</td> <td>9322</td>{" "}
-              </tr>{" "}
+                <td>S</td> <td>Samarbeidsmøte med relevante instanser</td>
+                <td>Hendelse</td> <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>M</td> <td>Gjennomført møte</td> <td>Utfall</td>{" "}
-                <td>9324</td>{" "}
-              </tr>{" "}
+                <td>M</td> <td>Gjennomført møte</td> <td>Utfall</td>
+                <td>9324</td>
+              </tr>
               <tr>
-                {" "}
-                <td>I</td> <td>Vurdert ikke behov for møte</td> <td>Utfall</td>{" "}
-                <td>9324</td>{" "}
-              </tr>{" "}
+                <td>I</td> <td>Vurdert ikke behov for møte</td> <td>Utfall</td>
+                <td>9324</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -4410,11 +4321,11 @@ const PrintPdfPreview = () => (
           som prosedyrekoder med kodene:
         </p>
         <ul>
-          {" "}
+
           <li>
             D06SM - Mistanke om psykoseutvikling og psykoselidelser -
             Samarbeidsmøte med relevante instanser - Gjennomført møte
-          </li>{" "}
+          </li>
           <li>
             D06SI - Mistanke om psykoseutvikling og psykoselidelser -
             Samarbeidsmøte med relevante instanser - Vurdert ikke behov for møte
@@ -4431,7 +4342,7 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          Hver gang en evaluering er fullført,{" "}
+          Hver gang en evaluering er fullført,
           <a href="https://www.helsedirektoratet.no/pakkeforlop/psykoselidelser-inkludert-mistanke-om-psykoseutvikling-barn-unge-og-voksne/behandling-og-oppfolging-psykose-pakkeforlop/evalueringspunkter">
             slik den er beskrevet i pakkeforløpet
           </a>
@@ -4444,19 +4355,17 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>E</td> <td>Evalueringspunkt</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>E</td> <td>Evalueringspunkt</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -4476,7 +4385,7 @@ const PrintPdfPreview = () => (
         {/* Tekst Anbefaling */}
         <p />
         <p>
-          {" "}
+
           Med feedbackverktøy menes gjennomgang av et skjema der pasienten på en
           systematisk måte kan gi tilbakemelding til behandleren om hvordan
           pasienten opplever behandlingen. Hvis det regelmessig er benyttet
@@ -4488,25 +4397,22 @@ const PrintPdfPreview = () => (
           <table>
             <tbody>
               <tr>
-                {" "}
-                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>{" "}
+                <td> Kode </td> <td> Kodetekst </td> <td> Type kode </td>
                 <td> Kodeverk (OID) </td>
               </tr>
               <tr>
-                {" "}
-                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>{" "}
+                <td> U </td> <td> Utført aktivitet </td> <td> Hendelse </td>
                 <td> 9322 </td>
               </tr>
               <tr>
-                {" "}
-                <td> F </td> <td> Brukt feedbackverktøy </td> <td> Utfall </td>{" "}
+                <td> F </td> <td> Brukt feedbackverktøy </td> <td> Utfall </td>
                 <td> 9325 </td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
-          {" "}
+
           Ved rapportering i system som ikke har forløpsmodul registreres dette
           som en prosedyrekode med kode D06UF - Mistanke om psykoseutvikling og
           psykoselidelser - Utført aktivitet - Brukt feedbackverktøy <br />
@@ -4532,7 +4438,7 @@ const PrintPdfPreview = () => (
         </p>
         <p>Det kan være ulike årsaker til avslutning:</p>
         <ul>
-          {" "}
+
           <li>
             Avslutning av gjennomført pakkeforløp. Registrering av kode for
             avslutning av pakkeforløp og kode for avslutning av gjennomført
@@ -4541,14 +4447,14 @@ const PrintPdfPreview = () => (
             tatt en klinisk beslutning om at pasienten ikke trenger behandling i
             psykisk helsevern eller når behandlingen i psykisk helsevern er
             gjennomført etter planen.
-          </li>{" "}
+          </li>
           <li>
             Pasienten overføres til annet helseforetak eller privat institusjon
             for å videreføre pakkeforløpet der. Dato for avslutning av
             pakkeforløpet og kode for overføring til annet helseforetak / privat
             behandlingssted for videreføring av pågående pakkeforløp registreres
             på den dato overføringen skjer.
-          </li>{" "}
+          </li>
           <li>
             Avbrudd etter pasientens eget ønske. Når behandler ikke anser
             pakkeforløpet som fullført, men det brytes av etter pasientens
@@ -4556,13 +4462,13 @@ const PrintPdfPreview = () => (
             pakkeforløp og kode for avbrudd etter pasientens/foresattes eget
             ønske registreres på den dato behandlingsstedet får informasjon om
             avbruddet.
-          </li>{" "}
+          </li>
           <li>
             Avslutning av andre årsaker. Dato for avslutning av pakkeforløp og
             kode for avslutning av andre årsaker registreres på den dato
             behandlingsstedet får informasjon om avslutningen. Dette kan f.eks.
             være ved dødsfall.
-          </li>{" "}
+          </li>
           <li>
             Overført til annet pakkeforløp innen psykisk helse og rus. Dato for
             avslutning av pakkeforløpet og kode for overføring til annet
@@ -4574,52 +4480,45 @@ const PrintPdfPreview = () => (
         </ul>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>X</td> <td>Avslutning av pakkeforløp</td> <td>Hendelse</td>{" "}
-                <td>9322</td>{" "}
-              </tr>{" "}
+                <td>X</td> <td>Avslutning av pakkeforløp</td> <td>Hendelse</td>
+                <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>G</td> <td>Avslutning av gjennomført pakkeforløp</td>{" "}
-                <td>Utfall</td> <td>9326</td>{" "}
-              </tr>{" "}
+                <td>G</td> <td>Avslutning av gjennomført pakkeforløp</td>
+                <td>Utfall</td> <td>9326</td>
+              </tr>
               <tr>
-                {" "}
-                <td>P</td>{" "}
-                <td>Avbrudd etter pasientens/foresattes eget ønske</td>{" "}
-                <td>Utfall</td> <td>9326</td>{" "}
-              </tr>{" "}
+                <td>P</td>
+                <td>Avbrudd etter pasientens/foresattes eget ønske</td>
+                <td>Utfall</td> <td>9326</td>
+              </tr>
               <tr>
-                {" "}
-                <td>A</td> <td>Avslutning av andre årsaker</td> <td>Utfall</td>{" "}
-                <td>9326</td>{" "}
-              </tr>{" "}
+                <td>A</td> <td>Avslutning av andre årsaker</td> <td>Utfall</td>
+                <td>9326</td>
+              </tr>
               <tr>
-                {" "}
-                <td>O</td>{" "}
+                <td>O</td>
                 <td>
                   Overført til annet helseforetak / privat behandlingssted for
                   videreføring av pågående pakkeforløp
-                </td>{" "}
-                <td>Utfall</td> <td>9326</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9326</td>
+              </tr>
               <tr>
-                {" "}
-                <td>N</td>{" "}
+                <td>N</td>
                 <td>
                   Overført til annet pakkeforløp innen psykisk helse eller rus
-                </td>{" "}
-                <td>Utfall</td> <td>9326</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9326</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -4632,24 +4531,24 @@ const PrintPdfPreview = () => (
           som prosedyrekoder med kodene:
         </p>
         <ul>
-          {" "}
+
           <li>
             D06XG - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Avslutning av gjennomført pakkeforløp
-          </li>{" "}
+          </li>
           <li>
             D06XP - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Avbrudd etter pasientens/foresattes eget ønske
-          </li>{" "}
+          </li>
           <li>
             D06XA - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Avslutning av andre årsaker
-          </li>{" "}
+          </li>
           <li>
             D06XO - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Overført til annet helseforetak / privat
             behandlingssted for videreføring av pågående pakkeforløp
-          </li>{" "}
+          </li>
           <li>
             D06XN - Mistanke om psykoseutvikling og psykoselidelser - Avslutning
             av pakkeforløp - Overført til annet pakkeforløp innen psykisk helse
@@ -4672,60 +4571,54 @@ const PrintPdfPreview = () => (
         </p>
         <div className="b-table__wrapper">
           <table>
-            {" "}
+
             <tbody>
-              {" "}
+
               <tr>
-                {" "}
-                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>{" "}
-                <td>Kodeverk (OID)</td>{" "}
-              </tr>{" "}
+                <td>Kode</td> <td>Kodetekst</td> <td>Type kode</td>
+                <td>Kodeverk (OID)</td>
+              </tr>
               <tr>
-                {" "}
-                <td>H</td>{" "}
+                <td>H</td>
                 <td>
                   Hjelpebehov ved avslutning av pakkeforløp i
                   spesialisthelsetjenesten
-                </td>{" "}
-                <td>Hendelse</td> <td>9322</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Hendelse</td> <td>9322</td>
+              </tr>
               <tr>
-                {" "}
-                <td>S</td>{" "}
+                <td>S</td>
                 <td>
                   Behov for behandling fra annen spesialisthelsetjeneste (ikke
                   psykisk helsevern eller TSB)
-                </td>{" "}
-                <td>Utfall</td> <td>9328</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9328</td>
+              </tr>
               <tr>
-                {" "}
-                <td>K</td>{" "}
+                <td>K</td>
                 <td>
                   Behov for behandling og/eller oppfølging fra fastlege,
                   kommunal helse- og omsorgstjeneste
-                </td>{" "}
-                <td>Utfall</td> <td>9328</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9328</td>
+              </tr>
               <tr>
-                {" "}
-                <td>A</td>{" "}
+                <td>A</td>
                 <td>
                   Behov for oppfølging fra andre instanser som NAV, PPT,
                   arbeidsgiver, skole, barnevern mm.
-                </td>{" "}
-                <td>Utfall</td> <td>9328</td>{" "}
-              </tr>{" "}
+                </td>
+                <td>Utfall</td> <td>9328</td>
+              </tr>
               <tr>
-                {" "}
-                <td>I</td>{" "}
-                <td>Ikke behov for videre behandling og/eller oppfølging</td>{" "}
-                <td>Utfall</td>{" "}
+                <td>I</td>
+                <td>Ikke behov for videre behandling og/eller oppfølging</td>
+                <td>Utfall</td>
                 <td>
-                  {" "}
-                  <p>9328</p>{" "}
-                </td>{" "}
-              </tr>{" "}
+
+                  <p>9328</p>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -4734,25 +4627,25 @@ const PrintPdfPreview = () => (
           som prosedyrekoder med kodene:
         </p>
         <ul>
-          {" "}
+
           <li>
             D06HS - Mistanke om psykoseutvikling og psykoselidelser -
             Hjelpebehov ved avslutning av pakkeforløp i spesialisthelsetjenesten
             - Behov for behandling fra annen spesialisthelsetjeneste (ikke
             Psykisk helsevern eller TSB)
-          </li>{" "}
+          </li>
           <li>
             D06HK - Mistanke om psykoseutvikling og psykoselidelser -
             Hjelpebehov ved avslutning av pakkeforløp i spesialisthelsetjenesten
             - Behov for behandling og/eller oppfølging fra fastlege, kommunal
             helse- og omsorgstjeneste
-          </li>{" "}
+          </li>
           <li>
             D06HA - Mistanke om psykoseutvikling og psykoselidelser -
             Hjelpebehov ved avslutning av pakkeforløp i spesialisthelsetjenesten
             - Behov for oppfølging fra andre instanser som NAV, PPT,
             arbeidsgiver, skole, barnevern mm.
-          </li>{" "}
+          </li>
           <li>
             D06HI - Mistanke om psykoseutvikling og psykoselidelser -
             Hjelpebehov ved avslutning av pakkeforløp i spesialisthelsetjenesten
@@ -4774,7 +4667,7 @@ const PrintPdfPreview = () => (
     <h2>Implementering og verktøy – pakkeforløp for psykisk helse og rus</h2>
     <div>
       <p>
-        Se{" "}
+        Se
         <a href="https://www.helsedirektoratet.no/pakkeforlop/dokumenter-pakkeforlop%20psykisk%20helse%20og%20rus/Pakkeforl%C3%B8p%20for%20psykisk%20helse%20og%20rus%20-%20nasjonal%20plan%20for%20implementering%202018-2020.pdf">
           Nasjonal plan for implementering av pakkeforløp for psykisk helse og
           rus
@@ -4783,7 +4676,7 @@ const PrintPdfPreview = () => (
       </p>
       <h3>Statuskartlegging</h3>
       <p>
-        Det har blitt utviklet et statuskartleggingsskjema for{" "}
+        Det har blitt utviklet et statuskartleggingsskjema for
         <a
           href="https://www.helsedirektoratet.no/pakkeforlop/dokumenter-pakkeforlop%20psykisk%20helse%20og%20rus/Pakkeforl%C3%B8p%20for%20psykisk%20helse%20og%20rus%20-%20statuskartlegging%20Psykose.xls?download=true"
           target="_blank"
@@ -4795,14 +4688,14 @@ const PrintPdfPreview = () => (
         pakkeforløp drøftes. Verktøyet:
       </p>
       <ul>
-        {" "}
+
         <li>
           er ment som et hjelpemiddel til å kartlegge status på aktuell praksis
-        </li>{" "}
+        </li>
         <li>
           gir en oversikt over i hvilken grad aktuelle målepunkter følges opp
           som beskrevet i pakkeforløpet
-        </li>{" "}
+        </li>
         <li>
           gir mulighet til å planlegge tiltak for økt måloppnåelse, og å vurdere
           risiko for mangelfull gjennomføring
@@ -4848,7 +4741,7 @@ const PrintPdfPreview = () => (
         vil bli integrert i pakkeforløpene ved neste oppdatering.
       </p>
       <p>
-        I tillegg har vi samlet noen{" "}
+        I tillegg har vi samlet noen
         <a
           href="https://www.helsedirektoratet.no/pakkeforlop/dokumenter-pakkeforlop%20psykisk%20helse%20og%20rus/Pakkeforl%C3%B8p%20for%20psykisk%20helse%20og%20rus%20-%20ofte%20stilte%20sp%C3%B8rsm%C3%A5l.pdf?download=false"
           target="_blank"
@@ -4876,7 +4769,7 @@ const PrintPdfPreview = () => (
       </p>
       <h3>Brukererfaringer</h3>
       <p>
-        Kunnskapssenteret har utviklet ulike{" "}
+        Kunnskapssenteret har utviklet ulike
         <a href="https://www.fhi.no/kk/brukererfaringer/sporreskjemabanken2/">
           spørreskjema for å måle pasienters erfaringer med bl.a.
           spesialisthelsetjenesten (fhi.no)
@@ -4896,14 +4789,14 @@ const PrintPdfPreview = () => (
       <h2>Målsetning</h2>
       <p>Målsetningen med Pakkeforløp for psykisk helse og rus er:</p>
       <ul>
-        {" "}
-        <li>økt brukermedvirkning og brukertilfredshet</li>{" "}
-        <li>sammenhengende og koordinerte pasientforløp</li>{" "}
-        <li>unngå unødig ventetid for utredning, behandling og oppfølging</li>{" "}
+
+        <li>økt brukermedvirkning og brukertilfredshet</li>
+        <li>sammenhengende og koordinerte pasientforløp</li>
+        <li>unngå unødig ventetid for utredning, behandling og oppfølging</li>
         <li>
           likeverdig tilbud til pasienter og pårørende uavhengig av hvor i
           landet de bor
-        </li>{" "}
+        </li>
         <li>bedre ivaretakelse av somatisk helse og gode levevaner</li>
       </ul>
       <p>
@@ -4940,7 +4833,7 @@ const PrintPdfPreview = () => (
       <h2>Pårørende</h2>
       <p>
         Behandling og oppfølging av pasienten bør ha et familieperspektiv som
-        sikrer god ivaretakelse av{" "}
+        sikrer god ivaretakelse av
         <a href="https://lovdata.no/NL/lov/1999-07-02-64/%C2%A710a">
           mindreårige barn og søsken som pårørende (lovdata.no)
         </a>
@@ -4951,10 +4844,10 @@ const PrintPdfPreview = () => (
         være samarbeidspartnere og være en støtte for pasienten gjennom
         forløpet. Samtidig skal helsepersonellet være oppmerksomme på at
         pårørende kan ha egne informasjons- og hjelpebehov som skal ivaretas. Se
-        også{" "}
+        også
         <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder">
           Pårørendeveileder
-        </a>{" "}
+        </a>
         som handler om involvering av og støtte til pårørende i hele helse- og
         omsorgstjenesten.
       </p>
@@ -4972,7 +4865,7 @@ const PrintPdfPreview = () => (
       <p>
         Det er arbeidet systematisk med innhenting av kunnskap på flere områder,
         inkludert kunnskap om hva som er viktig for brukere og pårørende.
-        Pakkeforløpet bygger i hovedsak på{" "}
+        Pakkeforløpet bygger i hovedsak på
         <a href="http://www.helsebiblioteket.no/retningslinjer/psykoselidelser/forord">
           Nasjonal faglig retningslinje for utredning, behandling og oppfølging
           av personer med psykoselidelser (IS-1957) (helsebiblioteket.no)
@@ -4992,7 +4885,7 @@ const PrintPdfPreview = () => (
       </p>
       <p>Noen sentrale publikasjoner som ligger til grunn for arbeidet:</p>
       <ul>
-        {" "}
+
         <li>
           <a href="http://www.helsebiblioteket.no/retningslinjer/psykoselidelser/forord">
             <u>
@@ -5000,56 +4893,56 @@ const PrintPdfPreview = () => (
               oppfølging av personer med psykoselidelser (helsebiblioteket.no)
             </u>
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="http://www.helsebiblioteket.no/retningslinjer/rop/forside">
             Nasjonal faglig retningslinje for utredning, behandling og
             oppfølging av personer med samtidig ruslidelse og psykisk lidelser
             (helsebiblioteket.no)
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="https://www.helsedirektoratet.no/veiledere/sammen-om-mestring-lokalt-psykisk-helsearbeid-og-rusarbeid-for-voksne">
             Sammen om mestring
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder">
             Veileder om pårørende i helse- og omsorgstjenesten
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="https://www.helsedirektoratet.no/veiledere/rehabilitering-habilitering-individuell-plan-og-koordinator">
             Veileder om rehabilitering, habilitering, individuell plan og
             koordinator
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="https://www.helsedirektoratet.no/veiledere/kommunikasjon-via-tolk-for-ledere-og-personell-i-helse-og-omsorgstjenestene/God%20kommunikasjon%20via%20tolk%20%E2%80%93%20Veileder%20for%20ledere%20og%20personell%20i%20helse-%20og%20omsorgstjenestene%20(fullversjon).pdf">
             Veileder om kommunikasjon via tolk for ledere og personell i helse-
             og omsorgstjenestene
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="https://www.nice.org.uk/guidance/cg155">
             National Collaborating Centre for Mental Health (2013). Psychosis
             and schizophrenia in children and young people: Recognition and
             management. National Clinical Guideline Number 155 (nice.org)
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="https://www.ncbi.nlm.nih.gov/pubmed/25340235">
             National Collaborating Centre for Mental Health (2014). Psychosis
             and schizophrenia in adults: Treatment and management. National
             Clinical Guideline Number 178 (nice.org)
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="https://www.fhi.no/publ/2017/pasienters-erfaringer-med-dognopphold-innen-psykisk-helsevern-2016/">
             Pasienters erfaringer med døgnopphold innen psykisk helsevern i 2016
             (PasOpp-rapport) (fhi.no)
           </a>
-        </li>{" "}
+        </li>
         <li>
           <a href="http://www.kunnskapssenteret.no/publikasjoner/pasienters-erfaringer-med-dognopphold-innen-psykisk-helsevern-resultater-etter-en-landsdekkende-undersokelse-i-2014">
             Pasienters erfaringer med døgnopphold innen psykisk helsevern.
@@ -5072,40 +4965,40 @@ const PrintPdfPreview = () => (
         <strong>Deltakere:</strong>
       </p>
       <ul>
-        {" "}
+
         <li>
           Arnhild G. Ottesen, brukerrepresentant, Landsforeningen for Pårørende
           innen Psykisk Helse (LPP)
-        </li>{" "}
+        </li>
         <li>
           Bjørn Stensrud, psykiatrisk sykepleier, Ph.D, Sykehuset Innlandet HF
-        </li>{" "}
-        <li>Fredrik Eriksen, teamleder, NAV – Gamle Oslo</li>{" "}
+        </li>
+        <li>Fredrik Eriksen, teamleder, NAV – Gamle Oslo</li>
         <li>
           Geir Dunseth, fastlege, Holmestrand kommune og praksiskonsulent,
           Sykehuset i Vestfold HF
-        </li>{" "}
-        <li>Geir Nyvoll, psykologspesialist, Vestre Viken HF</li>{" "}
+        </li>
+        <li>Geir Nyvoll, psykologspesialist, Vestre Viken HF</li>
         <li>
           Håkon Rian Ueland, brukerrepresentant/barnevernspedagog, We Shall
           Overcome (WSO)
-        </li>{" "}
-        <li>Jan-Magne Sørensen, brukerrepresentant, Hvite Ørn</li>{" "}
-        <li>Kenneth Haugjord, psykolog, Kristiansand kommune</li>{" "}
+        </li>
+        <li>Jan-Magne Sørensen, brukerrepresentant, Hvite Ørn</li>
+        <li>Kenneth Haugjord, psykolog, Kristiansand kommune</li>
         <li>
           Kjersti Karlsen, psykologspesialist m/klinisk fordypning barn og
           ungdom, Vestre Viken HF
-        </li>{" "}
-        <li>Pål Sandvik, avdelingssjef, psykiater, St. Olavs Hospital HF</li>{" "}
+        </li>
+        <li>Pål Sandvik, avdelingssjef, psykiater, St. Olavs Hospital HF</li>
         <li>
           Randi-Luise Møgster, klinikkdirektør, psykiater, Helse Bergen HF,
           Haukeland Universitetssjukehus, Kronstad DPS
-        </li>{" "}
+        </li>
         <li>
           Randi Røed Andersen, ergoterapeut / master i helsefremmende arbeid /
           seniorrådgiver, avdeling psykisk helse og rus, Helsedirektoratet
-        </li>{" "}
-        <li>Roger Hagen, psykologspesialist/professor, NTNU</li>{" "}
+        </li>
+        <li>Roger Hagen, psykologspesialist/professor, NTNU</li>
         <li>Siv-Anja Øyen, klinisk sosionom, Helgelandssykehuset HF</li>
       </ul>
     </div>

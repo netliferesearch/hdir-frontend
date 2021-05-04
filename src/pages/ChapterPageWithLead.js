@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Collapsible from '../components/Collapsible';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
@@ -12,8 +12,6 @@ import ProfessionPicker from '../components/ProfessionPicker';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ChapterPageWithLead = () => {
-  const [toggle, setToggle] = useState(false);
-  
   return (
     <>
       <main id="main">
@@ -131,7 +129,7 @@ const ChapterPageWithLead = () => {
               heading="Munnundersøkelse: Helsestasjonen bør foreta munnundersøkelse på barn"
             >
             </Collapsible >
-            
+
               <div className="l-mt-4">
                 <Link wideButton arrow color="purple">
                   Henvis pasienten til helsenorge.no for mer informasjon

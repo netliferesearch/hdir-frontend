@@ -5,7 +5,6 @@ import NavList from '../components/NavList';
 // import NavList from '../components/NavList';
 import PageMeta from '../components/PageMeta';
 import Box from '../components/Box';
-import Card from '../components/Card';
 import ThemeBox from '../components/ThemeBox';
 import ArticleIntro from '../components/ArticleIntro';
 import Breadcrumbs from '../components/Breadcrumbs';

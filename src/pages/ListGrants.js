@@ -1,18 +1,12 @@
 import React from 'react';
-import List from '../components/List';
-import Button from '../components/Button';
-import Alert from '../components/Alert';
 import Card from '../components/Card';
-import CheckboxGroup from '../components/CheckboxGroup';
 import Box from '../components/Box';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleIntro from '../components/ArticleIntro';
-import InputSearch from '../components/InputSearch';
 import GrantsSearch from '../components/GrantsSearch';
-import RadioButtonGroup from '../components/RadioButtonGroup';
 import { dummyFlatTree } from '../components/dummyFlatTree';
 
-const ListGrants = (props) => (
+const ListGrants = () => (
   <>
   <div className="l-container">
     <Breadcrumbs
@@ -54,7 +48,9 @@ const ListGrants = (props) => (
                 id="705432b2-4db4-41d5-974d-26955cc74e0c"
                 endpoint="https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/_/service/helsedirektoratet/wizardSearch"
               flatTree={dummyFlatTree}
-                initial='[{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Tiltaksutvikling innen program for folkehelsearbeid i kommunene\",\"frist\":{\"day\":\"01\",\"month\":\"mar\",\"year\":\"2018\",\"date\":\"2021-06-08\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Medisinsk avstandsoppfølging av kronisk syke\",\"frist\":{\"day\":\"01\",\"month\":\"mai\",\"year\":\"2018\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Pilotprosjekt på legevaktfeltet\",\"frist\":{\"day\":\"01\",\"month\":\"jun\",\"year\":\"2018\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Styrking av habilitering og rehabilitering i kommunene 2017-2019\",\"frist\":{\"day\":\"31\",\"month\":\"jan\",\"year\":\"2019\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Rekruttering av fastleger i kommuner som har rekrutteringsvansker\",\"frist\":{\"day\":\"15\",\"month\":\"mai\",\"year\":\"2019\"},\"tags\":[]}},{\"url\":\"http://localhost:8080/admin/site/preview/default/draft/helsedirektoratet/tilskudd\", \"type\": \"tilskudd\",\"fields\":{\"heading\":\"Pilot for strukturert tverrfaglig oppfølging - Oppfølgingsteam\",\"frist\":{\"day\":\"25\",\"month\":\"mai\",\"year\":\"2019\"},\"tags\":[]}}]'
+              pageLength={100}
+                initial='[{"Pågående":[{"url":"https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/aktivitetstilbud-rettet-mot-personer-med-psykiske-problemer-rusmiddelproblemer-eller-prostitusjonserfaring","type":"tilskudd","fields":{"heading":"Aktivitetstilbud rettet mot personer med psykiske problemer, rusmiddelproblemer eller prostitusjonserfaring","frist":{"day":"31","month":"mar","year":"2021","date":"2021-03-31"},"tags":[]}}]},{"Utløpt":[{"url":"https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/tilskudd-til-arbeid-innen-feltet-hiv-og-seksuelt-overforbare-infeksjoner","type":"tilskudd","fields":{"heading":"Arbeid innen feltet hiv og seksuelt overførbare infeksjoner","frist":{"day":"31","month":"jan","year":"2020","date":"2020-01-31"},"tags":[]}},{"url":"https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/bruker-parorendearbeid-innen-rus-psykisk-helse-og-voldsfeltet","type":"tilskudd","fields":{"heading":"Bruker- og pårørendearbeid innen rus, psykisk helse og voldsfeltet","frist":{"day":"01","month":"mar","year":"2021","date":"2021-03-01"},"tags":[]}},{"url":"https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/etablering-og-drift-av-regionale-odontologiske-kompetansesentre","type":"tilskudd","fields":{"heading":"Etablering og drift av regionale odontologiske kompetansesentre","frist":{"day":"14","month":"feb","year":"2020","date":"2020-02-14"},"tags":[]}}]},{"Alle":[{"url":"https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/tilskudd-til-arbeid-innen-feltet-hiv-og-seksuelt-overforbare-infeksjoner","type":"tilskudd","fields":{"heading":"Arbeid innen feltet hiv og seksuelt overførbare infeksjoner","frist":{"day":"31","month":"jan","year":"2020","date":"2020-01-31"},"tags":[]}},{"url":"https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/aktivitetstilbud-rettet-mot-personer-med-psykiske-problemer-rusmiddelproblemer-eller-prostitusjonserfaring","type":"tilskudd","fields":{"heading":"Aktivitetstilbud rettet mot personer med psykiske problemer, rusmiddelproblemer eller prostitusjonserfaring","frist":{"day":"31","month":"mar","year":"2021","date":"2021-03-31"},"tags":[]}},{"url":"https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/bruker-parorendearbeid-innen-rus-psykisk-helse-og-voldsfeltet","type":"tilskudd","fields":{"heading":"Bruker- og pårørendearbeid innen rus, psykisk helse og voldsfeltet","frist":{"day":"01","month":"mar","year":"2021","date":"2021-03-01"},"tags":[]}},{"url":"https://helsedir-helsenett-xptest.enonic.cloud/admin/site/preview/default/draft/helsedirektoratet/tilskudd/etablering-og-drift-av-regionale-odontologiske-kompetansesentre","type":"tilskudd","fields":{"heading":"Etablering og drift av regionale odontologiske kompetansesentre","frist":{"day":"14","month":"feb","year":"2020","date":"2020-02-14"},"tags":[]}}]}]
+                '
             />
           </div>
         </article>
