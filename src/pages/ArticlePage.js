@@ -56,12 +56,57 @@ const ArticlePage = () => (
                 <caption>Tittel her</caption>
                 <thead>
                   <tr>
-                    <td>Overskriftskol 1</td>
-                    <td>Overskriftskol 2</td>
-                    <td>Overskriftskol 3</td>
+                    <td>Overskrift 1</td>
+                    <td>Overskrift 2</td>
+                    <td>Overskrift 3</td>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <td>Kol 1</td>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                  </tr>
                   <tr>
                     <td>Kol 1</td>
                     <td>Kol 2</td>
@@ -100,30 +145,45 @@ const ArticlePage = () => (
                     <td>Kol 2</td>
                     <td>Kol 3</td>
                     <td>Kol 4</td>
+                    <td>Kol 5</td>
+                    <td>Kol 6</td>
+                    <td>Kol 7</td>
                   </tr>
                   <tr>
                     <th scope="col">Kol 1</th>
                     <td>Kol 2</td>
                     <td>Kol 3</td>
                     <td>Kol 4</td>
+                    <td>Kol 5</td>
+                    <td>Kol 6</td>
+                    <td>Kol 7</td>
                   </tr>
                   <tr>
                     <th scope="col">Kol 1</th>
                     <td>Kol 2</td>
                     <td>Kol 3</td>
                     <td>Kol 4</td>
+                    <td>Kol 5</td>
+                    <td>Kol 6</td>
+                    <td>Kol 7</td>
                   </tr>
                   <tr>
                     <th scope="col">Kol 1</th>
                     <td>Kol 2</td>
                     <td>Kol 3</td>
                     <td>Kol 4</td>
+                    <td>Kol 5</td>
+                    <td>Kol 6</td>
+                    <td>Kol 7</td>
                   </tr>
                   <tr>
                     <th scope="col">Kol 1</th>
                     <td>Kol 2</td>
                     <td>Kol 3</td>
                     <td>Kol 4</td>
+                    <td>Kol 5</td>
+                    <td>Kol 6</td>
+                    <td>Kol 7</td>
                   </tr>
                 </tbody>
               </table>
@@ -134,9 +194,10 @@ const ArticlePage = () => (
                 <caption>Tittel her</caption>
                 <thead>
                   <tr>
-                    <td>Overskriftskol 1</td>
+                    <td>Overskrif 1</td>
                     <td>Overskriftskol 2</td>
                     <td>Overskriftskol 3</td>
+                    <td>Overskriftskol 4</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -144,25 +205,48 @@ const ArticlePage = () => (
                     <th scope="col">Kol 1</th>
                     <td>Kol 2</td>
                     <td>Kol 3</td>
-                  </tr>
-                  <tr>
-                    <th scope="col">Kol 1</th>
-                    <td>Kol 2</td>
                     <td>Kol 3</td>
                   </tr>
                   <tr>
                     <th scope="col">Kol 1</th>
                     <td>Kol 2</td>
                     <td>Kol 3</td>
-                  </tr>
-                  <tr>
-                    <th scope="col">Kol 1</th>
-                    <td>Kol 2</td>
                     <td>Kol 3</td>
                   </tr>
                   <tr>
                     <th scope="col">Kol 1</th>
                     <td>Kol 2</td>
+                    <td>Kol 3</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Kol 1</th>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Kol 1</th>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Kol 1</th>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Kol 1</th>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
+                    <td>Kol 3</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Kol 1</th>
+                    <td>Kol 2</td>
+                    <td>Kol 3</td>
                     <td>Kol 3</td>
                   </tr>
                 </tbody>
