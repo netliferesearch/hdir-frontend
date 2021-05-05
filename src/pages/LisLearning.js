@@ -62,10 +62,10 @@ const LisLearning = () => (
               <ChapterHeading heading="Nyfødtkirurgi" line="bottom" h="h2" />
               <Collapsible
                 heading="Urogenitale tilstander hos nyfødte"
-                dateFrom="1.januar 2020"
-                dateTo="1.januar 2021"
                 id="test1"
                 tag={{ title: 'Læringsmål', description: 'Beskrivelse' }}
+                dateFrom="1.januar 2020"
+                dateTo="1.januar 2021"
                 size="medium"
                 code="BAK 001"
                 noBorder
@@ -90,8 +90,8 @@ const LisLearning = () => (
               <div className="l-mt-2">
                 <Collapsible
                   heading="Lyskebrokk hos nyfødte"
-                  dateFrom="1.januar 2020"
                   tag={{ title: 'Læringsmål' }}
+                  dateFrom="1.januar 2020"
                   size="medium"
                   id="test2"
                   code="BAK 002"
@@ -177,7 +177,7 @@ const LisLearning = () => (
                   å nå behandlingsmålene for glukose
                 </p>
               </Collapsible>
-              
+
               <div className="l-mt-4">
                 <PageMeta
                   publishDate="11. august 2008"
@@ -193,7 +193,7 @@ const LisLearning = () => (
         </div>
       </main>
 
-      
+
     </div>
 
     <Box color="grey" square>

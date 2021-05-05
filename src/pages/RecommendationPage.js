@@ -1,6 +1,5 @@
 import React from 'react';
 import Collapsible from '../components/Collapsible';
-import Link from '../components/Link';
 import Box from '../components/Box';
 import IconWithText from '../components/IconWithText';
 
@@ -35,7 +34,7 @@ const RecommendationPage = () => (
         <h4>Standard behandlingregime</h4>
         <p>Vanlig behandlingsvarighet: 5 dager</p>
         <p>Ampicillin iv 1,2 g x 4 iv<br />
-         + Gentamicin 5 mg/kg x 1 iv  <br />
+        + Gentamicin 5 mg/kg x 1 iv <br />
         + Metronidazol 1g x 1 iv</p>
           <Collapsible
             h="h5"
@@ -50,21 +49,21 @@ const RecommendationPage = () => (
                 Ampicillin <br />
                 Skal ikke gis til pasienter med penicillinallergi
               </p>
-              
+
               <p>
                 <IconWithText text="Graviditet" size="clean" icon="../icons/warning_high.svg" />
                 Gentamicin: <br />
-                Aminoglykosider bør unngås i andre og tredje trimester. <a href="#">Les mer.</a><br />
+                Aminoglykosider bør unngås i andre og tredje trimester. <a href="#!">Les mer.</a><br />
                 Metronidazol:<br />
-                Tilbakeholden med bruk av høye doser i første trimester. <a href="#">Les mer.</a>
+                Tilbakeholden med bruk av høye doser i første trimester. <a href="/#!">Les mer.</a>
               </p>
-              
+
               <p>
                 <IconWithText text="Ammende" size="clean" icon="../icons/warning_high.svg" />
                 Metronidazol<br />
                 Overgang til morsmelk er moderat til høy. Andre midler bør benyttes om det finnes alternativer.
               </p>
-              
+
             </Box>
           </Collapsible>
           <Collapsible
@@ -74,14 +73,14 @@ const RecommendationPage = () => (
             size="tiny"
           >
           <p>
-          <strong>Ved overvekt</strong><br />
-          Ampicillin<br />
-          TBW > 100: 2g x 4
+            <strong>Ved overvekt</strong><br />
+            Ampicillin<br />
+            TBW &gt; 100: 2 g x 4
           </p>
           <p>
           <strong>Ved redusert nyrefunksjon</strong><br />
           Ampicillin<br />
-          GFR 20-10: 0.25 -2 g x 4 <br />
+          GFR 20-10: 0.25 -2 g x 4<br />
           GFR &lt; 10: 0.25-1 g x 4
           </p>
           </Collapsible>
@@ -92,8 +91,8 @@ const RecommendationPage = () => (
           >
             <p>Vanlig behandlingsvarighet: 5-7 dager etter iv behandling</p>
             <p>
-            Ciprofloksacin 500 mg x 2 oral  
-            <br />+ metronidazol 400 mg x 3 oral 
+            Ciprofloksacin 500 mg x 2 oral
+            <br />+ metronidazol 400 mg x 3 oral
             </p>
           </Collapsible>
           <h4>Alternative behandlingsregimer </h4>

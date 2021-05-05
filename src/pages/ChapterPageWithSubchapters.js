@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Collapsible from '../components/Collapsible';
 import Button from '../components/Button';
 import ChapterHeading from '../components/ChapterHeading';
 import PageMeta from '../components/PageMeta';
 import SectionSidebar from '../components/SectionSidebar';
-import Alert from '../components/Alert';
 import Box from '../components/Box';
-import Link from '../components/Link';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ProductSearch from '../components/ProductSearch';
 import ProfessionPicker from '../components/ProfessionPicker';
 import { dummyFlatTree } from '../components/dummyFlatTree'
 
 const ChapterPage = () => {
-  const [toggle, setToggle] = useState(false);
-
   return (
     <>
       <main id="main">

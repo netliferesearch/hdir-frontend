@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 /*
   Reload the js so the external vanilla-js can find the elements after router change
 */

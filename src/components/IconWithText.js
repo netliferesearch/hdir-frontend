@@ -14,7 +14,7 @@ const wrapperClasses = size =>
   });
 
 const IconWithText = ({size, icon, text, link, subtext}) => (
-  <div className={wrapperClasses(size)}>
+  <span className={wrapperClasses(size)}>
     <img
       src={icon}
       alt=""
@@ -22,11 +22,11 @@ const IconWithText = ({size, icon, text, link, subtext}) => (
       className={imageClasses(size)}
       aria-hidden
     />
-    <div className="b-icon-with-text__text-wrapper">
+    <span className="b-icon-with-text__text-wrapper">
       <span className="b-icon-with-text__text">{text}</span>
       <a className="b-icon-with-text__text" href={link}>{subtext}</a>
-    </div>
-  </div>
+    </span>
+  </span>
 );
 
 IconWithText.propTypes = {
@@ -34,7 +34,7 @@ IconWithText.propTypes = {
   text: PropTypes.string.isRequired,
   subtext: PropTypes.string,
   link: PropTypes.string,
-  size: PropTypes.oneOf(['medium', 'small'])
+  size: PropTypes.oneOf(['medium', 'small', 'clean'])
 };
 
 IconWithText.defaultProps = {

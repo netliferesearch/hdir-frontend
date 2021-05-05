@@ -35,6 +35,7 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
     if (collapsed === true && toggled === false) {
       setToggled(true);
     }
+  // eslint-disable-next-line
   }, [collapsed]);
 
   function toggle() {
@@ -53,7 +54,7 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
         setToggleMoreResults(false);
         setLoading(false);
       });
-
+  // eslint-disable-next-line
   const doSearch = useMemo(() => debounce(fetchResults, 500, true), [debouncedChange]);
   
   const debouncedChange = useCallback(
@@ -76,9 +77,10 @@ const ListSearch = ({ label, productId, collapsed, flatTree, malgruppe, dummyDat
         setSearchString('');
       }
     },
+    // eslint-disable-next-line
     [doSearch],
   );
-
+  // eslint-disable-next-line
   const getHighlightedText = (text, highlight) => {
     if (highlight.length < 2) {
       return text;

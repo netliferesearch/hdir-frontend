@@ -27,6 +27,7 @@ const MedicineListPage = () => (
       <div className="l-mt-3">
         <LongShortHeading
           short="Legemidler og virkestoff"
+          long=""
         />
       </div>
       <div className="l-mt-3">

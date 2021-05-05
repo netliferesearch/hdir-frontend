@@ -113,12 +113,14 @@
     flex-shrink: 0;
     
     @include mq($from: tablet) {
-      
       display: flex;
     }
 
     &--expired {
       background: $red-light;
+    }
+    &--generic {
+      background: $grey-light;
     }
   }
   &__date-big {
@@ -127,6 +129,7 @@
 
   &__flex-wrapper {
     display: flex;
+    align-items: center;
   }
 
   &__image {
