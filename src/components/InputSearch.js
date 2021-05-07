@@ -130,7 +130,7 @@ const InputSearch = props => {
     if (!props.fnClear) {
       return;
     }
-    props.fnClear();
+    props.fnClear('');
   }
 
   function onChange(event, { newValue }) {
