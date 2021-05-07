@@ -15,9 +15,7 @@ const ThemeBox = ({ heading, cardsLeft, cardsRight, bottomLinks, clearTopPadding
           <div className="row">
             <div className="col-md-6 col-xs-12 l-card-flex">
               { cardsLeft.map(card => (
-                <React.Fragment key={card.title}>
                   <Card
-                    key={card.title}
                     verticalGrow
                     url={card.url}
                     arrow="right"
@@ -44,40 +42,36 @@ const ThemeBox = ({ heading, cardsLeft, cardsRight, bottomLinks, clearTopPadding
                     }
                   >
                   </Card>
-                </React.Fragment>
-
                 ))}
             </div>
             <div className="col-md-6 col-xs-12">
               {cardsRight.map(card => (
-                <React.Fragment key={card.title}>
-                  <Card
-                    url={card.url}
-                    arrow="right"
-                    mainContent={
-                      <>
-                        <h3>{card.title}</h3>
-                        <p>{card.description}</p>
-                        <div className="b-flex l-mt-1">
-                          <img
-                            src={card.icon}
-                            alt=""
-                            role="presentation"
-                            style={{
-                              height: '1.4em',
-                              width: 'auto',
-                              marginRight: '0.5em',
-                              marginBottom: '-0.2em'
-                            }}
-                          />
-                          <span className="b-icon__category">{card.category}</span>
-                        </div>
-                      </>
-                    }
-                  >
-                    <img src={card.image} alt={card.imageAlt} />
-                  </Card>
-                </React.Fragment>
+                <Card
+                  url={card.url}
+                  arrow="right"
+                  mainContent={
+                    <>
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                      <div className="b-flex l-mt-1">
+                        <img
+                          src={card.icon}
+                          alt=""
+                          role="presentation"
+                          style={{
+                            height: '1.4em',
+                            width: 'auto',
+                            marginRight: '0.5em',
+                            marginBottom: '-0.2em'
+                          }}
+                        />
+                        <span className="b-icon__category">{card.category}</span>
+                      </div>
+                    </>
+                  }
+                >
+                  <img src={card.image} alt={card.imageAlt} />
+                </Card>
               ))}
             </div>
           </div>
@@ -87,7 +81,7 @@ const ThemeBox = ({ heading, cardsLeft, cardsRight, bottomLinks, clearTopPadding
                 <div className="b-flex-links col-xs-12">
                   {
                     bottomLinks.map(link => (
-                      <div className="b-flex-links__item" key={link.title}>
+                      <div className="b-flex-links__item">
                         <a href={link.url}>{link.title}</a>
                       </div>
                     ))
