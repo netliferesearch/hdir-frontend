@@ -12,6 +12,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
+    font-size: $font-body;
 
     // Circle //
     &:before {
@@ -59,6 +60,7 @@
       margin-top: 50px;
       word-wrap: break-word;
       word-break: break-all;
+      font-size: $font-xs;
 
       // Circle //
       &:before {
@@ -224,5 +226,13 @@
     }
 
 
+  }
+
+  @include mq($from: $wide) {
+    .b-timeline {
+      &__item {
+        font-size: $font-body;
+      }
+    }
   }
 }
