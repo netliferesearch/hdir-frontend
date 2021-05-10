@@ -147,19 +147,23 @@ const GrantsSearch = ({
         
         nextBtn && nextBtn.addEventListener("click", function (e) {
           let values = []
+          let availableValues = []
           inputs.forEach(input => {
             if (input.checked) {
               values.push(input.value)
             }
             if (!input.checked && values.find(cat => cat === input.value)) {
+              console.log(input.value)
               values.filter(value => !input.value)
             }
+            availableValues.push(input.value)
           });
           setFormCheckValue((existingValues) => {
             if (existingValues.length > 0 && Array.isArray(existingValues)) {
               return [
                 ...existingValues
                   .filter(value => !values.includes(value))
+                  .filter(value => !availableValues.includes(value))
                   .filter(el => el != null),
                 ...values
               ].filter(function (item, pos, self) {
