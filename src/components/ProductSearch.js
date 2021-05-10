@@ -73,7 +73,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
         console.log(flatTree)
       }
       if (value.length === 0) {
-        setSearchResults('');
+        setSearchResults([]);
         setSearchString('');
       }
     },
@@ -159,6 +159,13 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
       }) :[]
   })
 
+  const clearResults = () => {
+    setSearchResults([])
+    setSearchString('')
+    console.log('clear')
+  }
+  console.log('update')
+
   // Split arrays in two, so we can have "See all" toggle buttons
   const recommendations = modifiedResult().anbefaling.splice(0, 7);
   const recommendationsRest = modifiedResult().anbefaling.length > 7 ? modifiedResult().anbefaling.splice(7) : null;
@@ -176,6 +183,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
             autoFocus={toggled}
             showSuggestions={false}
             fnChange={toggled ? debouncedChange : null}
+            fnClear={() => toggled && clearResults()}
             productId={productId}
           />
         </div>
@@ -198,6 +206,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
             autoFocus={toggled}
             showSuggestions={false}
             fnChange={toggled ? debouncedChange : null}
+            fnClear={() => toggled && clearResults()}
             productId={productId}
           />
         </div>

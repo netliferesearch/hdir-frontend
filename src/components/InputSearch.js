@@ -97,6 +97,16 @@ const InputSearch = props => {
             'b-input-search__field--dark': props.dark
           })}
         />
+        {
+          value && (
+            <button
+              className="b-input-search__button b-input-search__clear"
+              type="button"
+              onClick={triggerClear}
+            >
+            </button>
+          )
+        }
         <button
           className="b-input-search__button"
           type="button"
@@ -113,6 +123,14 @@ const InputSearch = props => {
     }
     const encodedValue = encodeURI(value);
     window.location = `${searchPageUrl}?searchquery=${encodedValue}`;
+  }
+
+  function triggerClear() {
+    setValue('')
+    if (!props.fnClear) {
+      return;
+    }
+    props.fnClear('');
   }
 
   function onChange(event, { newValue }) {
