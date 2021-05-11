@@ -56,7 +56,6 @@ const GrantsSearch = ({
     fetch(liveSearchUrl + '?length=' + pageLength + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
-
         // Transform array of objects, to object
         const results = data.reduce(
           (obj, item) => Object.assign(obj, item), {});
@@ -107,7 +106,6 @@ const GrantsSearch = ({
       selected, notSelected
     }
   }
-
 
   useEffect(() => {
     /*
