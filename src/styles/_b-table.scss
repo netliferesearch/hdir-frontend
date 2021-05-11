@@ -45,8 +45,6 @@
 
   caption {
     text-align: left;
-    font-size: $font-l;
-    font-weight: 700;
     padding: $space-sm 0;
     @include mq($until: $tablet) {
       padding: $space-sm 0 $space-sm $space-sm;
