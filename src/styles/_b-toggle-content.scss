@@ -10,6 +10,10 @@
 
 .b-toggle-content__text {
   word-break: break-word;
+
+  table {
+    word-break: normal;
+  }
 }
 
 .toggle-mode .b-toggle-content__text {
