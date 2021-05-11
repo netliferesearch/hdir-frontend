@@ -168,6 +168,25 @@
   .b-collapsible--subtle {
     margin-left: 0;
   }
+
+  // Tables
+  .b-table__wrapper {
+    overflow-x: visible;
+    background: none;
+    clear:both;
+    margin-bottom: $space-lg;
+
+    table {
+      border: 1px solid $grey-light !important;
+    }
+    td {
+      border: 1px solid $grey-light !important;
+    }
+    thead td, table th {
+      border: 1px solid $grey-light !important;
+      box-shadow: none;
+    }
+  }
   
   // Override other stuff
   table {
