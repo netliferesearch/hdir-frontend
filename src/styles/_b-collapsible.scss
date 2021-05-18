@@ -176,6 +176,11 @@
       position: relative;
       cursor: help;
 
+      // If first element is a div without any spacing class, add some top spacing
+      + div:not([class]) { 
+        margin-top: $spaceSmall;
+      }
+
       span {
         border-bottom: 1px dashed $black;
         padding-bottom: 0px;
