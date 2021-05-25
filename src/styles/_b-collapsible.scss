@@ -180,6 +180,11 @@
       + div:not([class]) { 
         margin-top: $spaceSmall;
       }
+      
+      // If first element is a heading use less top spacing
+      + h2, + h3, + h4 {
+        margin-top: $spaceSmall;
+      }
 
       span {
         border-bottom: 1px dashed $black;
