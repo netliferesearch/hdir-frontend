@@ -176,6 +176,11 @@
       position: relative;
       cursor: help;
 
+      // If first element is a div without any spacing class, add some top spacing
+      + div:not([class]) { 
+        margin-top: $spaceSmall;
+      }
+
       span {
         border-bottom: 1px dashed $black;
         padding-bottom: 0px;
@@ -415,13 +420,13 @@
       margin-top: $spaceSmall;
     }
     h2, h3, h4, h5 {
-      padding-top: $space;
+      margin-top: $space;
     }
     h3:first-child, h4:first-child, h2:first-child {
-      padding-top: 0;
+      margin-top: 0;
     }
     .b-collapsible__heading {
-      padding: 0;
+      margin: 0;
       text-transform: none;
     }
     h5.b-collapsible__heading {
