@@ -6,13 +6,22 @@ import { debounce } from 'lodash';
 import List from './List'
 import Button from './Button'
 
+/*
+** This component is used for: 
+** - search field + results
+** - only results (when used in a wizard)
+**
+** Uses API search (either by search word or wizard options), fetches results, displays them divided into tab groups.
+** 
+** TODO: Rename from GrantsSearch to something more generic, as it will be used for
+**       multiple content types.
+*/
+
 const GrantsSearch = ({
   id,
   label,
-  flatTree,
   endpoint,
   initial = null,
-  contentId,
   malgruppe,
   categories,
   collapsed,
@@ -24,7 +33,6 @@ const GrantsSearch = ({
   const [tabContent, setTabContent] = useState(null);
   const [tabIndex, setTabIndex] = useState(0);
   const [toggleMore, setToggleMore] = useState([]);
-  // const [data, setData] = useState(initial);
   const [formDropValue, setFormDropValue] = useState(malgruppe || []);
   const [formRadioValue, setFormRadioValue] = useState([]);
   const [formCheckValue, setFormCheckValue] = useState(categories || []);
@@ -50,9 +58,6 @@ const GrantsSearch = ({
     const dropValueQuery = formDropValue ? '&dropValue=' + formDropValue : ''
     const checkValueQuery = formCheckValue ? '&checkValue=' + formCheckValue : ''
     const radioValueQuery = formRadioValue ? '&radioValue=' + formRadioValue : ''
-    // console.log('formRadioValue', formRadioValue)
-    // console.log('dropValueQuery', dropValueQuery)
-    // console.log('formCheckValue', formCheckValue)
     fetch(liveSearchUrl + '?length=' + pageLength + dropValueQuery + checkValueQuery + radioValueQuery + '&id=' + id)
       .then(res => res.json())
       .then(data => {
@@ -208,7 +213,6 @@ const GrantsSearch = ({
       }
       
     });
-  // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -323,11 +327,6 @@ const GrantsSearch = ({
     })
   }
 
-  useEffect(() => {
-
-   
-  }, [searchResults, toggleMore])
-
   return (
     <>
       <div id={id || 'grants-search'} className="b-product-search">
@@ -426,10 +425,8 @@ const GrantsSearch = ({
 GrantsSearch.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string,
-  flatTree: PropTypes.string,
   endpoint: PropTypes.string,
   initial: PropTypes.string,
-  contentId: PropTypes.string,
   malgruppe: PropTypes.string,
   categories: PropTypes.array,
   collapsed: PropTypes.bool,
