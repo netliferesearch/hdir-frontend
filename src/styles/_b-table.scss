@@ -23,6 +23,11 @@
   
   /* Opera doesn't support this in the shorthand */
   background-attachment: local, local, scroll, scroll;
+
+  margin: $space-md 0;
+
+  // Add vertical scroll when tall table
+  max-height: 80vh;
   
   table {
     min-width: 100%;
@@ -32,12 +37,8 @@
       margin: 0;
     }
   }
-  margin: $space-md 0;
 
-  @include mq($until: $tablet) {
-    max-height: 80vh;
-  }
-
+  // Class is added via vanilla-js
   .is-number {
     word-break:keep-all;
     white-space: nowrap;
@@ -45,10 +46,10 @@
 
   caption {
     text-align: left;
-    padding: $space-sm 0;
+    padding: $space-sm;
+    background: white;
     @include mq($until: $tablet) {
       padding: $space-sm 0 $space-sm $space-sm;
-      background: white;
     }
   }
 
@@ -66,28 +67,24 @@
     border-bottom: 1px solid $grey-light;
     z-index: 1;
   }
-
-  thead {
-    @include mq($until: $tablet) {
-    }
-  }
   
   thead td {
     @include mq($until: $tablet) {
       box-shadow: 0 3px 5px rgba(gray, .3);
-      background: white;
-      position: sticky;
-      top: 0;
     }
+    background: #f6f6f6;
+    position: sticky;
+    top: 0;
+    left: 0;
   }
   
   table th {
     left: 0;
     z-index: 2;
+    position: sticky;
+    background: #f6f6f6;
     @include mq($until: $tablet) {
-      background: white;
-      position: sticky;
-      box-shadow: 5px 0 5px rgba(gray, .3);
+      box-shadow: 0 3px 5px rgba(gray, .3);
     }
   }
   
