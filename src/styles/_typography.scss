@@ -178,3 +178,12 @@ small {
     font-weight: bold;
   }
 }
+
+.t-ninja {
+  h1, h2, h3, h4, h5 {
+    margin-top: $space-lg;
+  }
+  .b-collapsible__heading {
+    margin: 0;
+  }
+}
