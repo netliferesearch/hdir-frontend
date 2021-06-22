@@ -18,6 +18,7 @@
 
     .b-collapsible__content {
       padding-left: $space;
+      word-break: break-word;
     }
     
     &--tiny {
