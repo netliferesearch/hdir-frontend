@@ -46,7 +46,8 @@
 		display: inline-block;
 	}
 	iframe {
-		height: 100vh !important;
+		height: 93vh !important;
+		height: calc(100vh - 60px) !important;
 		margin-top: 60px;
 	}
 }
