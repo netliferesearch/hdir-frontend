@@ -252,13 +252,6 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
                     noArrow
                   list={recommendations}
                   />
-                  {
-                    recommendationsRest ? (
-                    <div className="l-mt-1">
-                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>Vis alle ({modifiedResult().anbefaling.length})</Button>
-                    </div>
-                    ) : null
-                  }
 
                   {
                     toggleMoreRecommendations ? (
@@ -268,6 +261,16 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
                     />
                     ) : null
                   }
+
+                {
+                  recommendationsRest ? (
+                    <div className="l-mt-1">
+                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>
+                        {toggleMoreRecommendations ? 'Se færre' : `Vis alle (${modifiedResult().anbefaling.length})`}
+                      </Button>
+                    </div>
+                  ) : null
+                }
                 </div>
               ) : null
             }
@@ -284,19 +287,23 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
                     noArrow
                     list={chapters}
                   />
-                  {
-                    chaptersRest ? (
-                      <div className="l-mt-1">
-                      <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>Vis alle ({modifiedResult().kapittel.length})</Button>
-                      </div>
-                    ) : null
-                  }
+                  
                   {
                     toggleMoreChapters === true ? (
                       <NavList
                         noArrow
                         list={chaptersRest}
                       />
+                    ) : null
+                  }
+
+                  {
+                    chaptersRest ? (
+                      <div className="l-mt-1">
+                        <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>
+                          {toggleMoreChapters ? 'Se færre' : `Vis alle (${modifiedResult().kapittel.length})`}
+                        </Button>
+                      </div>
                     ) : null
                   }
                 </div>
