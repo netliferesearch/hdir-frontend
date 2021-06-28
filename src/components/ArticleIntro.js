@@ -16,23 +16,25 @@ const imageWrapperClasses = feature =>
     'b-article-intro__image-wrapper--feature': feature
   });
 
-const mainClasses = fullWidth =>
+const mainClasses = (fullWidth, inlineImage) =>
   classNames({
     'b-article-intro': true,
-    'b-article-intro--full': fullWidth
+    'b-article-intro--full': fullWidth,
+    'b-article-intro--inline-image': inlineImage
   });
 
-const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, fullWidth, showDate }) => (
-  <div className={mainClasses(fullWidth)}>
-    <div className={imageToggle(image, feature)}>
-      <h1>
-        { topic ? (
-          <div className="b-article-intro__topic">{topic}</div>
-        ) : null}
-        {heading}
-      </h1>
-      
-    </div>
+const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, fullWidth, showDate, inlineImage }) => (
+  <div className={mainClasses(fullWidth, inlineImage)}>
+    {!inlineImage && (
+      <div className={imageToggle(image, feature)}>
+          <h1>
+            { topic ? (
+              <div className="b-article-intro__topic">{topic}</div>
+            ) : null}
+            {heading}
+          </h1>
+      </div>
+    )}
     {image && (
       <div className={imageWrapperClasses(feature)}>
         {!feature ? (
@@ -73,7 +75,21 @@ const ArticleIntro = ({ image, feature, topic, heading, lead, imageDescription, 
         <PageMeta publishDate="16.09.2020" editDate="16.09.2020" />
       )
     }
-    <p className="b-article-intro__intro">{lead}</p>
+      {inlineImage && (
+        <div class="b-article-intro__content-wrapper">
+          <h1>
+            { topic ? (
+              <div className="b-article-intro__topic">{topic}</div>
+            ) : null}
+            {heading}
+          </h1>
+          <p className="b-article-intro__intro">{lead}</p>
+        </div>
+      )}
+
+    {!inlineImage && (
+      <p className="b-article-intro__intro">{lead}</p>
+    )}
   </div>
 );
 
@@ -84,7 +100,8 @@ ArticleIntro.propTypes = {
   feature: PropTypes.bool,
   imageDescription: PropTypes.string,
   topic: PropTypes.string,
-  showDate: PropTypes.bool
+  showDate: PropTypes.bool,
+  inlineImage: PropTypes.bool
 };
 
 export default ArticleIntro;

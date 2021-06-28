@@ -26,6 +26,23 @@
       width: 100%;
     }
   }
+
+  // When used on theme pages etc. we want the image to float to the right of the title/intro
+  &--inline-image {
+    @include mq($from: $wide) {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .b-article-intro__image-wrapper{
+        flex-basis: 40%;
+      }
+      .b-article-intro__content-wrapper {
+        flex-basis: 60%;
+        padding-right: 3em;
+        flex-grow: 1;
+      }
+    }
+  }
   &__image-wrapper {
     // This wraps both a 'img' and a 'div' tag with background
     // width: calc(50% - 1.5rem);

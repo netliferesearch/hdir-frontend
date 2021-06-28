@@ -73,7 +73,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
         console.log(flatTree)
       }
       if (value.length === 0) {
-        setSearchResults('');
+        setSearchResults([]);
         setSearchString('');
       }
     },
@@ -159,6 +159,13 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
       }) :[]
   })
 
+  const clearResults = () => {
+    setSearchResults([])
+    setSearchString('')
+    console.log('clear')
+  }
+  console.log('update')
+
   // Split arrays in two, so we can have "See all" toggle buttons
   const recommendations = modifiedResult().anbefaling.splice(0, 7);
   const recommendationsRest = modifiedResult().anbefaling.length > 7 ? modifiedResult().anbefaling.splice(7) : null;
@@ -176,6 +183,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
             autoFocus={toggled}
             showSuggestions={false}
             fnChange={toggled ? debouncedChange : null}
+            fnClear={() => toggled && clearResults()}
             productId={productId}
           />
         </div>
@@ -198,6 +206,7 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
             autoFocus={toggled}
             showSuggestions={false}
             fnChange={toggled ? debouncedChange : null}
+            fnClear={() => toggled && clearResults()}
             productId={productId}
           />
         </div>
@@ -243,13 +252,6 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
                     noArrow
                   list={recommendations}
                   />
-                  {
-                    recommendationsRest ? (
-                    <div className="l-mt-1">
-                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>Vis alle ({modifiedResult().anbefaling.length})</Button>
-                    </div>
-                    ) : null
-                  }
 
                   {
                     toggleMoreRecommendations ? (
@@ -259,6 +261,16 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
                     />
                     ) : null
                   }
+
+                {
+                  recommendationsRest ? (
+                    <div className="l-mt-1">
+                      <Button onClick={() => setToggleMoreRecommendations(!toggleMoreRecommendations)} secondary>
+                        {toggleMoreRecommendations ? 'Se færre' : `Vis alle (${modifiedResult().anbefaling.length})`}
+                      </Button>
+                    </div>
+                  ) : null
+                }
                 </div>
               ) : null
             }
@@ -275,19 +287,23 @@ const ProductSearch = ({ label, productId, collapsed, flatTree, malgruppe, endpo
                     noArrow
                     list={chapters}
                   />
-                  {
-                    chaptersRest ? (
-                      <div className="l-mt-1">
-                      <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>Vis alle ({modifiedResult().kapittel.length})</Button>
-                      </div>
-                    ) : null
-                  }
+                  
                   {
                     toggleMoreChapters === true ? (
                       <NavList
                         noArrow
                         list={chaptersRest}
                       />
+                    ) : null
+                  }
+
+                  {
+                    chaptersRest ? (
+                      <div className="l-mt-1">
+                        <Button onClick={() => setToggleMoreChapters(!toggleMoreChapters)} secondary>
+                          {toggleMoreChapters ? 'Se færre' : `Vis alle (${modifiedResult().kapittel.length})`}
+                        </Button>
+                      </div>
                     ) : null
                   }
                 </div>

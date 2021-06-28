@@ -91,7 +91,7 @@ const ThemePage = () => (
           ]}
         />
         <div className="row">
-          <div className="col-xs-11 col-xs-offset-1 col-md-10 col-md-offset-1">
+          <div className="col-xs-12">
             <NavList
               list={[
                 {

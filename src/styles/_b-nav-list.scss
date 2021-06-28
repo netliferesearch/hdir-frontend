@@ -201,7 +201,7 @@
   }
   //
   &__item-description {
-    width: 30%;
+    min-width: 15%;
     text-transform: uppercase;
     flex-shrink: 0;
     @include mq($until: $tablet) {

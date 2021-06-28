@@ -337,6 +337,7 @@ const GrantsSearch = ({
             autoFocus={false}
             showSuggestions={false}
             fnChange={debouncedChange}
+            fnClear={debouncedChange}
           />
         ) : null}
       </div>
