@@ -11,9 +11,27 @@
 .b-toggle-content__text {
   word-break: break-word;
 
-  table {
-    word-break: normal;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5em;
+    
+    &:focus {
+      outline: 0;
+      color: $primary-color;
+    }
   }
+  // Removes the top margin from the first heading
+  > :first-child {
+    margin-top: 0;
+ }
+  
+ table {
+    word-break: normal;
+ }
 }
 
 .toggle-mode .b-toggle-content__text {
